@@ -46,7 +46,7 @@ El equipo cree que da tiempo a hacerlo todo. Si nos retrasamos, se recorta por e
 **Etapa 1: cierre de datos y repositorio (martes 14, noche)**
 - [x] 1. `etl/descargar_ckan.py`: centros, natalidad y población por municipio.
 - [x] 2. `etl/descargar_idem.py`, `etl/procesar_idem.py` y `etl/verificar.py`: capas ligeras de suelo y planeamiento, ponderadas por superficie.
-- [ ] 3. Git y GitHub: `git init`, `.gitignore` (sin `data/raw`, `.venv` ni `node_modules`), primer commit, repositorio en GitHub y push.
+- [x] 3. Git y GitHub (hecho el 14 oct): repositorio `https://github.com/ClaudiaAgromayor/cuna-y-canas`, rama `main`, primer commit `f453ab9` con los scripts, `data/processed` y la documentación. `.gitignore` excluye `data/raw`, `.venv` y `node_modules`. La compañera de equipo está invitada como colaboradora.
 - [ ] 3b. `etl/pipeline.py MUNICIPIO`: encadena CKAN, IDEM y verificación, y regenera `data/processed/municipios.json` (índice con código INE, nombre, centro del mapa y qué datos tiene cada municipio).
 
 **Etapa 2: demanda y accesibilidad (miércoles 15)**
@@ -342,6 +342,7 @@ Un Ampere A1 (hasta 4 núcleos y 24 GB de RAM), 200 GB de disco, 10 GB de Object
 ---
 
 ## 9. Bitácora
+- **14 oct (noche, 3):** repositorio creado en GitHub, primer commit subido e invitada la compañera de equipo. Paso 3 hecho.
 - **14 oct (noche, 2):** paso 2 hecho: `descargar_idem.py` genérico por código INE, `procesar_idem.py` y `verificar.py`. Getafe 818 KB y Navalcarnero 624 KB de capas ligeras. Hallazgos: parcelas con geometría inválida, 52 candidatas sin superficie, y el estado "prevista" no sale de las redes.
 - **14 oct (noche):** paso 1 hecho: `etl/comun.py` y `etl/descargar_ckan.py`, probados con Getafe y Navalcarnero; se detectaron y descartaron 3 coordenadas erróneas.
 - **14 oct (tarde, 2):** comprobamos que el texto de los 50.000 habitantes está oculto (blanco sobre blanco) en el PDF; el apartado 3 no pone límites. Getafe se queda. Decidido también: HTTPS, los 5 servicios y extracción con Claude Code.

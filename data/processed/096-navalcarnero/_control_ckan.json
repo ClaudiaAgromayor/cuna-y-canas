@@ -1,0 +1,25 @@
+{
+ "municipio": {
+  "cod": "096",
+  "nombre": "Navalcarnero",
+  "nombre_ckan": "Navalcarnero",
+  "slug": "navalcarnero"
+ },
+ "educativos_municipio": 32,
+ "educativos_en_alta": 23,
+ "educativos_guardados": 23,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 231,
+ "sanitarios_centros": 67,
+ "sanitarios_guardados": 65,
+ "sanitarios_sin_coordenadas": 2,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 19,
+ "sociales_guardados": 17,
+ "sociales_sin_coordenadas": 2,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 33352
+}

@@ -1,0 +1,25 @@
+{
+ "municipio": {
+  "cod": "065",
+  "nombre": "Getafe",
+  "nombre_ckan": "Getafe",
+  "slug": "getafe"
+ },
+ "educativos_municipio": 187,
+ "educativos_en_alta": 105,
+ "educativos_guardados": 104,
+ "educativos_sin_coordenadas": 1,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 1008,
+ "sanitarios_centros": 358,
+ "sanitarios_guardados": 350,
+ "sanitarios_sin_coordenadas": 5,
+ "sanitarios_coordenadas_fuera_del_municipio": 3,
+ "sociales_municipio": 55,
+ "sociales_guardados": 54,
+ "sociales_sin_coordenadas": 1,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 195628
+}

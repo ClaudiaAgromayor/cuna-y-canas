@@ -1,0 +1,67 @@
+{
+ "municipio": {
+  "cod": "065",
+  "nombre": "Getafe",
+  "nombre_ckan": "Getafe",
+  "slug": "getafe"
+ },
+ "ambitos_poligonos_brutos": 44,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 31,
+ "ambitos_sin_viviendas": 9,
+ "ambitos_guardados": 31,
+ "redes_brutas": 1566,
+ "redes_dotacionales": 726,
+ "redes_por_tipo_y_estado": {
+  "asistencial/existente": 14,
+  "asistencial/sin_dato": 1,
+  "cultural/existente": 11,
+  "cultural/sin_dato": 3,
+  "deportivo/existente": 32,
+  "deportivo/sin_dato": 6,
+  "educativo/existente": 46,
+  "educativo/sin_dato": 20,
+  "sanitario/existente": 11,
+  "zona_verde/existente": 392,
+  "zona_verde/prevista": 26,
+  "zona_verde/sin_dato": 164
+ },
+ "redes_guardadas": 726,
+ "suelo_parcelas_brutas": 24765,
+ "suelo_geometrias_invalidas_reparadas": 10340,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 30,
+ "candidatas_vacantes_equipamiento": 371,
+ "candidatas_sin_superficie_en_origen": 52,
+ "candidatas_descartadas_menores_de_50_m2": 77,
+ "candidatas_duplicadas_por_referencia_catastral": 1,
+ "candidatas_guardadas": 294,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 239,
+  ">=2000": 187,
+  ">=5000": 84,
+  ">=10000": 38
+ },
+ "portal_suelo_parcelas": 41,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Industrial": 34,
+  "Terciario": 3,
+  "Comercial": 2,
+  "Otros": 1,
+  "Residencial": 1
+ },
+ "portal_suelo_guardadas": 41,
+ "tamanos_kb": {
+  "ambitos.geojson": 62,
+  "centros_educativos.geojson": 35,
+  "centros_sanitarios.geojson": 130,
+  "centros_sociales.geojson": 22,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 144,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 23,
+  "redes.geojson": 387,
+  "resumen_ambitos.json": 10
+ }
+}

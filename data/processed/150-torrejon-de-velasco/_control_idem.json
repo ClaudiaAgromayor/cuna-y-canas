@@ -1,0 +1,55 @@
+{
+ "municipio": {
+  "cod": "150",
+  "nombre": "Torrejón de Velasco",
+  "nombre_ckan": "Torrejón de Velasco",
+  "slug": "torrejon-de-velasco"
+ },
+ "ambitos_poligonos_brutos": 57,
+ "ambitos_geometrias_invalidas_reparadas": 8,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 37,
+ "ambitos_sin_viviendas": 11,
+ "ambitos_guardados": 37,
+ "redes_geometrias_invalidas_reparadas": 49,
+ "redes_brutas": 156,
+ "redes_dotacionales": 47,
+ "redes_por_tipo_y_estado": {
+  "educativo/sin_dato": 1,
+  "zona_verde/sin_dato": 46
+ },
+ "redes_guardadas": 47,
+ "suelo_parcelas_brutas": 4312,
+ "suelo_geometrias_invalidas_reparadas": 1619,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 35,
+ "candidatas_vacantes_equipamiento": 53,
+ "candidatas_sin_superficie_en_origen": 5,
+ "candidatas_descartadas_menores_de_50_m2": 11,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 42,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 23,
+  ">=2000": 15,
+  ">=5000": 9,
+  ">=10000": 2
+ },
+ "portal_suelo_parcelas": 1,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Residencial": 1
+ },
+ "portal_suelo_guardadas": 1,
+ "tamanos_kb": {
+  "ambitos.geojson": 44,
+  "centros_educativos.geojson": 1,
+  "centros_sanitarios.geojson": 2,
+  "centros_sociales.geojson": 0,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 18,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 1,
+  "redes.geojson": 24,
+  "resumen_ambitos.json": 11
+ }
+}

@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"codigo": "28048750", "nombre": "VILLAVIEJA DE LOZOYA", "tipo": "EEI-CN", "tipo_largo": "ESCUELA  INFANTIL-CASA DE NIÑOS", "titularidad": "PÚBLICO", "direccion": "de la Fragua", "cp": "28739", "distrito": "", "cod_ine": "182"}, "geometry": {"type": "Point", "coordinates": [-3.67054, 41.005409]}}]}

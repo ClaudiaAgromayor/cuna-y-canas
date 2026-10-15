@@ -1,0 +1,53 @@
+{
+ "municipio": {
+  "cod": "072",
+  "nombre": "Hoyo de Manzanares",
+  "nombre_ckan": "Hoyo de Manzanares",
+  "slug": "hoyo-de-manzanares"
+ },
+ "ambitos_poligonos_brutos": 31,
+ "ambitos_geometrias_invalidas_reparadas": 4,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 30,
+ "ambitos_sin_viviendas": 1,
+ "ambitos_guardados": 30,
+ "redes_geometrias_invalidas_reparadas": 88,
+ "redes_brutas": 192,
+ "redes_dotacionales": 25,
+ "redes_por_tipo_y_estado": {
+  "cultural/sin_dato": 6,
+  "deportivo/sin_dato": 5,
+  "educativo/sin_dato": 5,
+  "sanitario/sin_dato": 3,
+  "zona_verde/sin_dato": 6
+ },
+ "redes_guardadas": 25,
+ "suelo_parcelas_brutas": 4611,
+ "suelo_geometrias_invalidas_reparadas": 1700,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 30,
+ "candidatas_vacantes_equipamiento": 50,
+ "candidatas_sin_superficie_en_origen": 6,
+ "candidatas_descartadas_menores_de_50_m2": 11,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 39,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 17,
+  ">=2000": 10,
+  ">=5000": 4,
+  ">=10000": 1
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 41,
+  "centros_educativos.geojson": 2,
+  "centros_sanitarios.geojson": 2,
+  "centros_sociales.geojson": 0,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 16,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 13,
+  "resumen_ambitos.json": 10
+ }
+}

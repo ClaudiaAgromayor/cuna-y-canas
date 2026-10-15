@@ -1,0 +1,193 @@
+{
+ "cod_ine": "901",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "SAU-2 PRADOS DEL SANTO",
+   "viviendas_previstas": 64,
+   "residencial_ocupado_m2": 4299,
+   "residencial_vacante_m2": 58180,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 93.1,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-1 EL ESPINAR",
+   "viviendas_previstas": 61,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 48139,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-3 ANGOSTINOS-1",
+   "viviendas_previstas": 43,
+   "residencial_ocupado_m2": 8366,
+   "residencial_vacante_m2": 35519,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 80.9,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-4 EL PALANCAR 4",
+   "viviendas_previstas": 41,
+   "residencial_ocupado_m2": 296,
+   "residencial_vacante_m2": 9861,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 1355,
+   "pct_residencial_vacante": 97.1,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "UE-1 EL PALANCAR 1",
+   "viviendas_previstas": 31,
+   "residencial_ocupado_m2": 47,
+   "residencial_vacante_m2": 11823,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 99.6,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-8 COLONIA DE LOZOYUELA",
+   "viviendas_previstas": 25,
+   "residencial_ocupado_m2": 26077,
+   "residencial_vacante_m2": 2383,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 8.4,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-5 CERCA DE LA HOYA",
+   "viviendas_previstas": 24,
+   "residencial_ocupado_m2": 981,
+   "residencial_vacante_m2": 26716,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 96.5,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-9 PRADO EMPEÑADO",
+   "viviendas_previstas": 24,
+   "residencial_ocupado_m2": 20656,
+   "residencial_vacante_m2": 7462,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 26.5,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-2B EL PALANCAR 2",
+   "viviendas_previstas": 23,
+   "residencial_ocupado_m2": 2991,
+   "residencial_vacante_m2": 5748,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 65.8,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-6 ANGOSTINOS-2",
+   "viviendas_previstas": 20,
+   "residencial_ocupado_m2": 10516,
+   "residencial_vacante_m2": 10936,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 51.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-3 EL PALANCAR 3",
+   "viviendas_previstas": 17,
+   "residencial_ocupado_m2": 6776,
+   "residencial_vacante_m2": 327,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 4.6,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-5 FRESNEDILLA SUR",
+   "viviendas_previstas": 15,
+   "residencial_ocupado_m2": 2804,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-6 FRESNEDILLA NORTE",
+   "viviendas_previstas": 13,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 5514,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-7 LAS CERCAS DEL PARRAL",
+   "viviendas_previstas": 13,
+   "residencial_ocupado_m2": 981,
+   "residencial_vacante_m2": 5748,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 85.4,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-2A EL PALANCAR 2",
+   "viviendas_previstas": 3,
+   "residencial_ocupado_m2": 2009,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "PG LA LAGUNA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-4 P.I. EL TOMILLAR",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 93,
+   "equipamiento_vacante_m2": 8318,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 98.9,
+   "parcelas_equipamiento_vacantes": 4
+  }
+ ]
+}

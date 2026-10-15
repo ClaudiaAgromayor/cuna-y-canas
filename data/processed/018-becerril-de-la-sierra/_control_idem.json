@@ -1,0 +1,54 @@
+{
+ "municipio": {
+  "cod": "018",
+  "nombre": "Becerril de la Sierra",
+  "nombre_ckan": "Becerril de la Sierra",
+  "slug": "becerril-de-la-sierra"
+ },
+ "ambitos_poligonos_brutos": 32,
+ "ambitos_geometrias_invalidas_reparadas": 13,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [
+  "P-1 LAS HUERTAS",
+  "P-6 CARMONA"
+ ],
+ "ambitos": 26,
+ "ambitos_sin_viviendas": 12,
+ "ambitos_guardados": 26,
+ "redes_geometrias_invalidas_reparadas": 70,
+ "redes_brutas": 153,
+ "redes_dotacionales": 31,
+ "redes_por_tipo_y_estado": {
+  "deportivo/sin_dato": 1,
+  "educativo/sin_dato": 5,
+  "zona_verde/sin_dato": 25
+ },
+ "redes_guardadas": 31,
+ "suelo_parcelas_brutas": 5300,
+ "suelo_geometrias_invalidas_reparadas": 1778,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 26,
+ "candidatas_vacantes_equipamiento": 14,
+ "candidatas_sin_superficie_en_origen": 2,
+ "candidatas_descartadas_menores_de_50_m2": 2,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 12,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 5,
+  ">=2000": 2,
+  ">=5000": 0,
+  ">=10000": 0
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 36,
+  "centros_educativos.geojson": 1,
+  "centros_sanitarios.geojson": 2,
+  "centros_sociales.geojson": 1,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 5,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 15,
+  "resumen_ambitos.json": 9
+ }
+}

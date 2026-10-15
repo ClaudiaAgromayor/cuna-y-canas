@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"codigo": "28073136", "nombre": "RIO TAJUÑA", "tipo": "EEI-CN", "tipo_largo": "ESCUELA  INFANTIL-CASA DE NIÑOS", "titularidad": "PÚBLICO", "direccion": "Benito Torres", "cp": "28580", "distrito": "", "cod_ine": "011"}, "geometry": {"type": "Point", "coordinates": [-3.183236, 40.327296]}}]}

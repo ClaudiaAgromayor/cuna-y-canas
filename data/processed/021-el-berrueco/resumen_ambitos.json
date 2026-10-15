@@ -1,0 +1,171 @@
+{
+ "cod_ine": "021",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "UE-1 PRADERA DEL AMOR",
+   "viviendas_previstas": 267,
+   "residencial_ocupado_m2": 189766,
+   "residencial_vacante_m2": 184400,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 49.3,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-9 LAS ERAS",
+   "viviendas_previstas": 90,
+   "residencial_ocupado_m2": 11597,
+   "residencial_vacante_m2": 22305,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 65.8,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-5 LAS ERAS",
+   "viviendas_previstas": 54,
+   "residencial_ocupado_m2": 9227,
+   "residencial_vacante_m2": 22538,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 71.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-2 CEMENTERIO",
+   "viviendas_previstas": 47,
+   "residencial_ocupado_m2": 2213,
+   "residencial_vacante_m2": 18470,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 89.3,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-10 EL EGIO",
+   "viviendas_previstas": 31,
+   "residencial_ocupado_m2": 327,
+   "residencial_vacante_m2": 7154,
+   "equipamiento_ocupado_m2": 94,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 95.6,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-4 LAS ERAS",
+   "viviendas_previstas": 31,
+   "residencial_ocupado_m2": 6032,
+   "residencial_vacante_m2": 10942,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 64.5,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-3 LAS ERAS",
+   "viviendas_previstas": 29,
+   "residencial_ocupado_m2": 3039,
+   "residencial_vacante_m2": 16880,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 84.7,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-11 PEÑA AGUILA",
+   "viviendas_previstas": 27,
+   "residencial_ocupado_m2": 28755,
+   "residencial_vacante_m2": 3460,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 10.7,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-6 LAS ERAS",
+   "viviendas_previstas": 21,
+   "residencial_ocupado_m2": 7365,
+   "residencial_vacante_m2": 5533,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 42.9,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-7 LAS ERAS",
+   "viviendas_previstas": 17,
+   "residencial_ocupado_m2": 795,
+   "residencial_vacante_m2": 10895,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 93.2,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-8 LAS ERAS",
+   "viviendas_previstas": 14,
+   "residencial_ocupado_m2": 2245,
+   "residencial_vacante_m2": 7529,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 77.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-12 CALLE REAL",
+   "viviendas_previstas": 9,
+   "residencial_ocupado_m2": 982,
+   "residencial_vacante_m2": 1309,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 57.1,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-14 CEMENTERIO",
+   "viviendas_previstas": 7,
+   "residencial_ocupado_m2": 1169,
+   "residencial_vacante_m2": 701,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 37.5,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-13 CTRA. TORRELAGUNA",
+   "viviendas_previstas": 6,
+   "residencial_ocupado_m2": 1076,
+   "residencial_vacante_m2": 2151,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 66.7,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-15 DEHESA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 8324,
+   "equipamiento_vacante_m2": 468,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 5.3,
+   "parcelas_equipamiento_vacantes": 4
+  }
+ ]
+}

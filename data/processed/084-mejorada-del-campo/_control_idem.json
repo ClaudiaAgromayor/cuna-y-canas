@@ -1,0 +1,51 @@
+{
+ "municipio": {
+  "cod": "084",
+  "nombre": "Mejorada del Campo",
+  "nombre_ckan": "Mejorada del Campo",
+  "slug": "mejorada-del-campo"
+ },
+ "ambitos_poligonos_brutos": 31,
+ "ambitos_geometrias_invalidas_reparadas": 7,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 26,
+ "ambitos_sin_viviendas": 6,
+ "ambitos_guardados": 26,
+ "redes_geometrias_invalidas_reparadas": 100,
+ "redes_brutas": 338,
+ "redes_dotacionales": 41,
+ "redes_por_tipo_y_estado": {
+  "deportivo/sin_dato": 9,
+  "educativo/sin_dato": 5,
+  "zona_verde/sin_dato": 27
+ },
+ "redes_guardadas": 41,
+ "suelo_parcelas_brutas": 7310,
+ "suelo_geometrias_invalidas_reparadas": 2849,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 26,
+ "candidatas_vacantes_equipamiento": 88,
+ "candidatas_sin_superficie_en_origen": 11,
+ "candidatas_descartadas_menores_de_50_m2": 15,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 73,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 57,
+  ">=2000": 38,
+  ">=5000": 19,
+  ">=10000": 8
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 39,
+  "centros_educativos.geojson": 4,
+  "centros_sanitarios.geojson": 11,
+  "centros_sociales.geojson": 1,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 33,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 20,
+  "resumen_ambitos.json": 9
+ }
+}

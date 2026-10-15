@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "106",
+  "nombre": "Parla",
+  "nombre_ckan": "Parla",
+  "slug": "parla"
+ },
+ "educativos_municipio": 107,
+ "educativos_en_alta": 63,
+ "educativos_guardados": 62,
+ "educativos_sin_coordenadas": 1,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 427,
+ "sanitarios_centros": 143,
+ "sanitarios_guardados": 143,
+ "sanitarios_sin_coordenadas": 0,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 28,
+ "sociales_guardados": 24,
+ "sociales_sin_coordenadas": 4,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 28,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 138012
+}

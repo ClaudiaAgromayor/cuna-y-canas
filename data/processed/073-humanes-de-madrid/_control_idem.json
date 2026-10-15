@@ -1,0 +1,54 @@
+{
+ "municipio": {
+  "cod": "073",
+  "nombre": "Humanes de Madrid",
+  "nombre_ckan": "Humanes de Madrid",
+  "slug": "humanes-de-madrid"
+ },
+ "ambitos_poligonos_brutos": 53,
+ "ambitos_geometrias_invalidas_reparadas": 2,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 52,
+ "ambitos_sin_viviendas": 32,
+ "ambitos_guardados": 52,
+ "redes_geometrias_invalidas_reparadas": 50,
+ "redes_brutas": 368,
+ "redes_dotacionales": 73,
+ "redes_por_tipo_y_estado": {
+  "asistencial/sin_dato": 1,
+  "cultural/sin_dato": 1,
+  "deportivo/sin_dato": 4,
+  "educativo/sin_dato": 3,
+  "sanitario/sin_dato": 1,
+  "zona_verde/sin_dato": 63
+ },
+ "redes_guardadas": 73,
+ "suelo_parcelas_brutas": 6781,
+ "suelo_geometrias_invalidas_reparadas": 2314,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 52,
+ "candidatas_vacantes_equipamiento": 67,
+ "candidatas_sin_superficie_en_origen": 3,
+ "candidatas_descartadas_menores_de_50_m2": 7,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 60,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 34,
+  ">=2000": 23,
+  ">=5000": 9,
+  ">=10000": 6
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 49,
+  "centros_educativos.geojson": 5,
+  "centros_sanitarios.geojson": 8,
+  "centros_sociales.geojson": 1,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 28,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 32,
+  "resumen_ambitos.json": 18
+ }
+}

@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"codigo": "28047204", "nombre": "MONTEJO DE LA SIERRA", "tipo": "EEI-CN", "tipo_largo": "ESCUELA  INFANTIL-CASA DE NIÑOS", "titularidad": "PÚBLICO", "direccion": "del Soto", "cp": "28190", "distrito": "", "cod_ine": "088"}, "geometry": {"type": "Point", "coordinates": [-3.533766, 41.05838]}}]}

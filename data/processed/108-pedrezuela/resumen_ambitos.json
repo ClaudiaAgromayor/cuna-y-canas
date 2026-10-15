@@ -1,0 +1,127 @@
+{
+ "cod_ine": "108",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "SAU-1 COREPO",
+   "viviendas_previstas": 745,
+   "residencial_ocupado_m2": 645994,
+   "residencial_vacante_m2": 57320,
+   "equipamiento_ocupado_m2": 14248,
+   "equipamiento_vacante_m2": 13451,
+   "pct_residencial_vacante": 8.1,
+   "pct_equipamiento_vacante": 48.6,
+   "parcelas_equipamiento_vacantes": 3
+  },
+  {
+   "ambito": "SAU-2 ATALAYA REAL",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 111031,
+   "residencial_vacante_m2": 10026,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 8.3,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-3 INDUSTRIAL EL CALLEJON",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 773,
+   "equipamiento_vacante_m2": 1125,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 59.3,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "UA-1 LA LOBERA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 11622,
+   "residencial_vacante_m2": 3983,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 25.5,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-2 LA CALLEJUELA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 18526,
+   "residencial_vacante_m2": 1031,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 5.3,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-3 LAS ERAS A",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 10763,
+   "residencial_vacante_m2": 4733,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 30.5,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-4 LAS ERAS B",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 5623,
+   "residencial_vacante_m2": 4358,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 43.7,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-5 LAS ERAS C",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 24040,
+   "residencial_vacante_m2": 10357,
+   "equipamiento_ocupado_m2": 750,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 30.1,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-6 LAS ERAS DEL CABRERO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 12137,
+   "residencial_vacante_m2": 4217,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 25.8,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-7 LA FUENTE GRANDE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 13074,
+   "residencial_vacante_m2": 3140,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 19.4,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-8",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 8341,
+   "residencial_vacante_m2": 890,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 9.6,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

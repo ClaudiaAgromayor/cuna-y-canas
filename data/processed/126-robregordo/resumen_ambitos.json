@@ -1,0 +1,28 @@
+{
+ "cod_ine": "126",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "UE-1 SUR CLÍNICA MUNICIPAL",
+   "viviendas_previstas": 14,
+   "residencial_ocupado_m2": 7621,
+   "residencial_vacante_m2": 7830,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 50.7,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-2",
+   "viviendas_previstas": 6,
+   "residencial_ocupado_m2": 1165,
+   "residencial_vacante_m2": 1212,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 51.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

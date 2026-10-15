@@ -19,6 +19,9 @@
  "sociales_guardados": 17,
  "sociales_sin_coordenadas": 2,
  "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 10,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
  "natalidad_anios": 40,
  "poblacion_anios": 5,
  "poblacion_total_ultimo_anio": 33352

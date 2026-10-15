@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"codigo": "28050631", "nombre": "EL BERRUECO", "tipo": "EEI-CN", "tipo_largo": "ESCUELA  INFANTIL-CASA DE NIÑOS", "titularidad": "PÚBLICO", "direccion": "Real", "cp": "28192", "distrito": "", "cod_ine": "021"}, "geometry": {"type": "Point", "coordinates": [-3.561335, 40.88811]}}]}

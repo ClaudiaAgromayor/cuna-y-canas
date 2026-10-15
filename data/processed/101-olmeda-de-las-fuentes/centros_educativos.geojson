@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"codigo": "28067690", "nombre": "LA ENCINA", "tipo": "EEI-CN", "tipo_largo": "ESCUELA  INFANTIL-CASA DE NIÑOS", "titularidad": "PÚBLICO", "direccion": "del Pintor Álvaro Delgado", "cp": "28515", "distrito": "", "cod_ine": "101"}, "geometry": {"type": "Point", "coordinates": [-3.22024, 40.369106]}}]}

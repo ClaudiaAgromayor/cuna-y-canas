@@ -1,0 +1,56 @@
+{
+ "municipio": {
+  "cod": "132",
+  "nombre": "San Martín de la Vega",
+  "nombre_ckan": "San Martín de la Vega",
+  "slug": "san-martin-de-la-vega"
+ },
+ "ambitos_poligonos_brutos": 31,
+ "ambitos_geometrias_invalidas_reparadas": 7,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 24,
+ "ambitos_sin_viviendas": 16,
+ "ambitos_guardados": 24,
+ "redes_geometrias_invalidas_reparadas": 67,
+ "redes_brutas": 257,
+ "redes_dotacionales": 86,
+ "redes_por_tipo_y_estado": {
+  "deportivo/sin_dato": 4,
+  "educativo/sin_dato": 7,
+  "zona_verde/sin_dato": 75
+ },
+ "redes_guardadas": 86,
+ "suelo_parcelas_brutas": 6084,
+ "suelo_geometrias_invalidas_reparadas": 2326,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 23,
+ "candidatas_vacantes_equipamiento": 72,
+ "candidatas_sin_superficie_en_origen": 2,
+ "candidatas_descartadas_menores_de_50_m2": 5,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 67,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 48,
+  ">=2000": 39,
+  ">=5000": 31,
+  ">=10000": 16
+ },
+ "portal_suelo_parcelas": 2,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Terciario": 2
+ },
+ "portal_suelo_guardadas": 2,
+ "tamanos_kb": {
+  "ambitos.geojson": 30,
+  "centros_educativos.geojson": 5,
+  "centros_sanitarios.geojson": 8,
+  "centros_sociales.geojson": 2,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 77,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 3,
+  "redes.geojson": 36,
+  "resumen_ambitos.json": 8
+ }
+}

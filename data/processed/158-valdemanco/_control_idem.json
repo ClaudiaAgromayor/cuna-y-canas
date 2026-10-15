@@ -1,0 +1,49 @@
+{
+ "municipio": {
+  "cod": "158",
+  "nombre": "Valdemanco",
+  "nombre_ckan": "Valdemanco",
+  "slug": "valdemanco"
+ },
+ "ambitos_poligonos_brutos": 21,
+ "ambitos_geometrias_invalidas_reparadas": 6,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 21,
+ "ambitos_sin_viviendas": 9,
+ "ambitos_guardados": 21,
+ "redes_geometrias_invalidas_reparadas": 28,
+ "redes_brutas": 57,
+ "redes_dotacionales": 4,
+ "redes_por_tipo_y_estado": {
+  "deportivo/sin_dato": 4
+ },
+ "redes_guardadas": 4,
+ "suelo_parcelas_brutas": 1645,
+ "suelo_geometrias_invalidas_reparadas": 802,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 21,
+ "candidatas_vacantes_equipamiento": 14,
+ "candidatas_sin_superficie_en_origen": 0,
+ "candidatas_descartadas_menores_de_50_m2": 0,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 14,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 7,
+  ">=2000": 2,
+  ">=5000": 1,
+  ">=10000": 0
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 22,
+  "centros_educativos.geojson": 0,
+  "centros_sanitarios.geojson": 0,
+  "centros_sociales.geojson": 0,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 6,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 3,
+  "resumen_ambitos.json": 7
+ }
+}

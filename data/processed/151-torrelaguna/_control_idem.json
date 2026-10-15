@@ -1,0 +1,54 @@
+{
+ "municipio": {
+  "cod": "151",
+  "nombre": "Torrelaguna",
+  "nombre_ckan": "Torrelaguna",
+  "slug": "torrelaguna"
+ },
+ "ambitos_poligonos_brutos": 37,
+ "ambitos_geometrias_invalidas_reparadas": 6,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 37,
+ "ambitos_sin_viviendas": 6,
+ "ambitos_guardados": 37,
+ "redes_geometrias_invalidas_reparadas": 40,
+ "redes_brutas": 133,
+ "redes_dotacionales": 37,
+ "redes_por_tipo_y_estado": {
+  "zona_verde/sin_dato": 37
+ },
+ "redes_guardadas": 37,
+ "suelo_parcelas_brutas": 3848,
+ "suelo_geometrias_invalidas_reparadas": 1599,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 37,
+ "candidatas_vacantes_equipamiento": 94,
+ "candidatas_sin_superficie_en_origen": 1,
+ "candidatas_descartadas_menores_de_50_m2": 7,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 87,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 54,
+  ">=2000": 39,
+  ">=5000": 20,
+  ">=10000": 10
+ },
+ "portal_suelo_parcelas": 1,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Residencial": 1
+ },
+ "portal_suelo_guardadas": 1,
+ "tamanos_kb": {
+  "ambitos.geojson": 36,
+  "centros_educativos.geojson": 2,
+  "centros_sanitarios.geojson": 3,
+  "centros_sociales.geojson": 1,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 46,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 1,
+  "redes.geojson": 19,
+  "resumen_ambitos.json": 12
+ }
+}

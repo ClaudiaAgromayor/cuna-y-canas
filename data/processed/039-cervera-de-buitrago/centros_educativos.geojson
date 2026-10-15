@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"codigo": "28066272", "nombre": "CERVATILLO DORMILON", "tipo": "EEI-CN", "tipo_largo": "ESCUELA  INFANTIL-CASA DE NIÑOS", "titularidad": "PÚBLICO", "direccion": "de la Iglesia", "cp": "28193", "distrito": "", "cod_ine": "039"}, "geometry": {"type": "Point", "coordinates": [-3.530246, 40.922219]}}]}

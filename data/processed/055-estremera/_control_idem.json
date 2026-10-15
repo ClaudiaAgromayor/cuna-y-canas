@@ -1,0 +1,49 @@
+{
+ "municipio": {
+  "cod": "055",
+  "nombre": "Estremera",
+  "nombre_ckan": "Estremera",
+  "slug": "estremera"
+ },
+ "ambitos_poligonos_brutos": 14,
+ "ambitos_geometrias_invalidas_reparadas": 1,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 10,
+ "ambitos_sin_viviendas": 10,
+ "ambitos_guardados": 10,
+ "redes_geometrias_invalidas_reparadas": 33,
+ "redes_brutas": 148,
+ "redes_dotacionales": 30,
+ "redes_por_tipo_y_estado": {
+  "zona_verde/sin_dato": 30
+ },
+ "redes_guardadas": 30,
+ "suelo_parcelas_brutas": 3776,
+ "suelo_geometrias_invalidas_reparadas": 1561,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 10,
+ "candidatas_vacantes_equipamiento": 503,
+ "candidatas_sin_superficie_en_origen": 9,
+ "candidatas_descartadas_menores_de_50_m2": 30,
+ "candidatas_duplicadas_por_referencia_catastral": 1,
+ "candidatas_guardadas": 473,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 292,
+  ">=2000": 242,
+  ">=5000": 123,
+  ">=10000": 54
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 15,
+  "centros_educativos.geojson": 1,
+  "centros_sanitarios.geojson": 2,
+  "centros_sociales.geojson": 1,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 232,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 18,
+  "resumen_ambitos.json": 3
+ }
+}

@@ -1,0 +1,53 @@
+{
+ "municipio": {
+  "cod": "120",
+  "nombre": "Rascafría",
+  "nombre_ckan": "Rascafría",
+  "slug": "rascafria"
+ },
+ "ambitos_poligonos_brutos": 15,
+ "ambitos_geometrias_invalidas_reparadas": 4,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 13,
+ "ambitos_sin_viviendas": 7,
+ "ambitos_guardados": 13,
+ "redes_geometrias_invalidas_reparadas": 21,
+ "redes_brutas": 69,
+ "redes_dotacionales": 33,
+ "redes_por_tipo_y_estado": {
+  "asistencial/sin_dato": 1,
+  "deportivo/sin_dato": 3,
+  "educativo/sin_dato": 2,
+  "sanitario/sin_dato": 3,
+  "zona_verde/sin_dato": 24
+ },
+ "redes_guardadas": 33,
+ "suelo_parcelas_brutas": 3014,
+ "suelo_geometrias_invalidas_reparadas": 1510,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 13,
+ "candidatas_vacantes_equipamiento": 20,
+ "candidatas_sin_superficie_en_origen": 0,
+ "candidatas_descartadas_menores_de_50_m2": 3,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 17,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 2,
+  ">=2000": 1,
+  ">=5000": 1,
+  ">=10000": 0
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 12,
+  "centros_educativos.geojson": 1,
+  "centros_sanitarios.geojson": 2,
+  "centros_sociales.geojson": 0,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 7,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 18,
+  "resumen_ambitos.json": 4
+ }
+}

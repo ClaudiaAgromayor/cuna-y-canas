@@ -1,0 +1,1785 @@
+{
+ "cod_ine": "148",
+ "modelo": "población al completarse = viviendas previstas × habitantes por vivienda prevista; resultados en [mínimo, central, máximo]",
+ "calibracion": {
+  "municipio": "Getafe",
+  "fuente": "INE (Atlas de Distribución de Renta de los Hogares) + IDEM (ámbitos y suelo vacante)",
+  "criterio": "barrios con al menos 1000 viviendas previstas, menos del 15 % de suelo residencial vacante y al menos 1 sección censal entera dentro",
+  "barrios": [
+   {
+    "ambito": "SUI-05 PAU-2 EL BERCIAL-UNIVERSIDAD",
+    "viviendas": 5950,
+    "anio": 2023,
+    "poblacion": 12931,
+    "hab_por_vivienda": 2.173,
+    "tam_hogar": 2.96,
+    "pct_menores18": 28.7,
+    "pct_mayores65": 7.9,
+    "serie": {
+     "2015": 10740,
+     "2016": 11242,
+     "2017": 11709,
+     "2018": 12016,
+     "2019": 12172,
+     "2020": 12126,
+     "2021": 12291,
+     "2022": 12618,
+     "2023": 12931
+    }
+   },
+   {
+    "ambito": "SUI-07 PAU-3 PERALES DEL RÍO",
+    "viviendas": 1750,
+    "anio": 2023,
+    "poblacion": 3807,
+    "hab_por_vivienda": 2.175,
+    "tam_hogar": 3.22,
+    "pct_menores18": 25.6,
+    "pct_mayores65": 9.0,
+    "serie": {
+     "2015": 1699,
+     "2016": 1701,
+     "2017": 3289,
+     "2018": 3363,
+     "2019": 3392,
+     "2020": 3396,
+     "2021": 3744,
+     "2022": 3784,
+     "2023": 3807
+    }
+   },
+   {
+    "ambito": "SUS-PP-2 LOS MOLINOS",
+    "viviendas": 6276,
+    "anio": 2023,
+    "poblacion": 11473,
+    "hab_por_vivienda": 1.828,
+    "tam_hogar": 2.58,
+    "pct_menores18": 30.5,
+    "pct_mayores65": 2.4,
+    "serie": {
+     "2015": 5983,
+     "2016": 6554,
+     "2017": 7712,
+     "2018": 8369,
+     "2019": 8895,
+     "2020": 9741,
+     "2021": 10345,
+     "2022": 10832,
+     "2023": 11473
+    }
+   },
+   {
+    "ambito": "SUS-PP-3 BUENAVISTA",
+    "viviendas": 5958,
+    "anio": 2023,
+    "poblacion": 8854,
+    "hab_por_vivienda": 1.486,
+    "tam_hogar": 2.47,
+    "pct_menores18": 30.2,
+    "pct_mayores65": 3.1,
+    "serie": {
+     "2015": 6027,
+     "2016": 6823,
+     "2017": 5857,
+     "2018": 6623,
+     "2019": 7122,
+     "2020": 7565,
+     "2021": 8067,
+     "2022": 8374,
+     "2023": 8854
+    }
+   }
+  ],
+  "parametros": {
+   "hab_por_vivienda": [
+    1.486,
+    2.001,
+    2.175
+   ],
+   "pct_menores18": [
+    25.6,
+    29.45,
+    30.5
+   ],
+   "pct_mayores65": [
+    2.4,
+    5.5,
+    9.0
+   ]
+  },
+  "reparto_menores": {
+   "g0_2": 0.1302,
+   "g3_5": 0.1423,
+   "g6_11": 0.3493,
+   "g12_17": 0.3781
+  },
+  "tam_hogar_mediano_municipio": 2.6
+ },
+ "prueba_con_el_pasado": [
+  {
+   "ambito": "SUI-05 PAU-2 EL BERCIAL-UNIVERSIDAD",
+   "anio": 2023,
+   "real": 12931,
+   "prediccion": 10887,
+   "error_pct": -15.8,
+   "prediccion_ingenua": 15470,
+   "error_ingenua_pct": 19.6,
+   "rango": [
+    8842,
+    12941
+   ],
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "SUI-07 PAU-3 PERALES DEL RÍO",
+   "anio": 2023,
+   "real": 3807,
+   "prediccion": 3201,
+   "error_pct": -15.9,
+   "prediccion_ingenua": 4550,
+   "error_ingenua_pct": 19.5,
+   "rango": [
+    2600,
+    3803
+   ],
+   "dentro_del_rango": false
+  },
+  {
+   "ambito": "SUS-PP-2 LOS MOLINOS",
+   "anio": 2023,
+   "real": 11473,
+   "prediccion": 12205,
+   "error_pct": 6.4,
+   "prediccion_ingenua": 16318,
+   "error_ingenua_pct": 42.2,
+   "rango": [
+    9326,
+    13650
+   ],
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "SUS-PP-3 BUENAVISTA",
+   "anio": 2023,
+   "real": 8854,
+   "prediccion": 12266,
+   "error_pct": 38.5,
+   "prediccion_ingenua": 15491,
+   "error_ingenua_pct": 75.0,
+   "rango": [
+    10891,
+    12959
+   ],
+   "dentro_del_rango": false
+  }
+ ],
+ "ambitos": [
+  {
+   "ambito": "SUNP-R1 SOTO DEL HENARES",
+   "clase_suelo": "Suelo Urbanizable Programado",
+   "viviendas": 6585,
+   "estado": "habitado",
+   "pct_residencial_vacante": 11.8,
+   "poblacion_actual": 11402,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    9785,
+    13177,
+    14322
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     326,
+     505,
+     569
+    ],
+    "g3_5": [
+     356,
+     552,
+     622
+    ],
+    "g6_11": [
+     875,
+     1356,
+     1526
+    ],
+    "g12_17": [
+     947,
+     1467,
+     1652
+    ],
+    "g65": [
+     235,
+     725,
+     1289
+    ]
+   }
+  },
+  {
+   "ambito": "UE-SUP-CE1 LA ZARZUELA",
+   "clase_suelo": "Suelo Urbanizable Programado",
+   "viviendas": 1741,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 4792,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    2587,
+    3484,
+    3787
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     86,
+     134,
+     150
+    ],
+    "g3_5": [
+     94,
+     146,
+     164
+    ],
+    "g6_11": [
+     231,
+     358,
+     403
+    ],
+    "g12_17": [
+     250,
+     388,
+     437
+    ],
+    "g65": [
+     62,
+     192,
+     341
+    ]
+   }
+  },
+  {
+   "ambito": "SUP-R2 ALDOVEA",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 1702,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 37.7,
+   "poblacion_actual": 738,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    2529,
+    3406,
+    3702
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     84,
+     131,
+     147
+    ],
+    "g3_5": [
+     92,
+     143,
+     161
+    ],
+    "g6_11": [
+     226,
+     350,
+     394
+    ],
+    "g12_17": [
+     245,
+     379,
+     427
+    ],
+    "g65": [
+     61,
+     187,
+     333
+    ]
+   }
+  },
+  {
+   "ambito": "FINCA REGISTRAL 20.426",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": 1586,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 1786,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    2357,
+    3174,
+    3450
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     79,
+     122,
+     137
+    ],
+    "g3_5": [
+     86,
+     133,
+     150
+    ],
+    "g6_11": [
+     211,
+     327,
+     368
+    ],
+    "g12_17": [
+     228,
+     353,
+     398
+    ],
+    "g65": [
+     57,
+     175,
+     310
+    ]
+   }
+  },
+  {
+   "ambito": "UE-DB-22 LOS GIRASOLES",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 1560,
+   "estado": "habitado",
+   "pct_residencial_vacante": 6.6,
+   "poblacion_actual": 2400,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    2318,
+    3122,
+    3393
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     77,
+     120,
+     135
+    ],
+    "g3_5": [
+     84,
+     131,
+     147
+    ],
+    "g6_11": [
+     207,
+     321,
+     361
+    ],
+    "g12_17": [
+     224,
+     348,
+     391
+    ],
+    "g65": [
+     56,
+     172,
+     305
+    ]
+   }
+  },
+  {
+   "ambito": "UE-DB-19 MANCHA AMARILLA",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 1302,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 2906,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    1935,
+    2605,
+    2832
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     64,
+     100,
+     112
+    ],
+    "g3_5": [
+     70,
+     109,
+     123
+    ],
+    "g6_11": [
+     173,
+     268,
+     302
+    ],
+    "g12_17": [
+     187,
+     290,
+     327
+    ],
+    "g65": [
+     46,
+     143,
+     255
+    ]
+   }
+  },
+  {
+   "ambito": "UE-SUP-CE3 FRESNOS II",
+   "clase_suelo": "Suelo Urbanizable Programado",
+   "viviendas": 1277,
+   "estado": "habitado",
+   "pct_residencial_vacante": 2.3,
+   "poblacion_actual": 4146,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    1898,
+    2555,
+    2777
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     63,
+     98,
+     110
+    ],
+    "g3_5": [
+     69,
+     107,
+     121
+    ],
+    "g6_11": [
+     170,
+     263,
+     296
+    ],
+    "g12_17": [
+     184,
+     285,
+     320
+    ],
+    "g65": [
+     46,
+     141,
+     250
+    ]
+   }
+  },
+  {
+   "ambito": "SUP-R4 SUR DE LOS FRESNOS",
+   "clase_suelo": "Suelo Urbanizable Programado",
+   "viviendas": 1143,
+   "estado": "futuro",
+   "pct_residencial_vacante": 100.0,
+   "poblacion_actual": 394,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    1698,
+    2287,
+    2486
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     57,
+     88,
+     99
+    ],
+    "g3_5": [
+     62,
+     96,
+     108
+    ],
+    "g6_11": [
+     152,
+     235,
+     265
+    ],
+    "g12_17": [
+     164,
+     255,
+     287
+    ],
+    "g65": [
+     41,
+     126,
+     224
+    ]
+   }
+  },
+  {
+   "ambito": "SUP-R5 CONEXIÓN DE ALCALÁ",
+   "clase_suelo": "Suelo Urbanizable Programado",
+   "viviendas": 1091,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 24.9,
+   "poblacion_actual": 1266,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    1621,
+    2183,
+    2373
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     54,
+     84,
+     94
+    ],
+    "g3_5": [
+     59,
+     91,
+     103
+    ],
+    "g6_11": [
+     145,
+     225,
+     253
+    ],
+    "g12_17": [
+     157,
+     243,
+     274
+    ],
+    "g65": [
+     39,
+     120,
+     214
+    ]
+   }
+  },
+  {
+   "ambito": "AE-OD2 AUTOMOVILISMO",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 1069,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 40.3,
+   "poblacion_actual": 408,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    1589,
+    2139,
+    2325
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     53,
+     82,
+     92
+    ],
+    "g3_5": [
+     58,
+     90,
+     101
+    ],
+    "g6_11": [
+     142,
+     220,
+     248
+    ],
+    "g12_17": [
+     154,
+     238,
+     268
+    ],
+    "g65": [
+     38,
+     118,
+     209
+    ]
+   }
+  },
+  {
+   "ambito": "UE-SUP-CE2 FRESNOS I",
+   "clase_suelo": "Suelo Urbanizable Programado",
+   "viviendas": 1029,
+   "estado": "habitado",
+   "pct_residencial_vacante": 5.4,
+   "poblacion_actual": 1755,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    1529,
+    2059,
+    2238
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     51,
+     79,
+     89
+    ],
+    "g3_5": [
+     56,
+     86,
+     97
+    ],
+    "g6_11": [
+     137,
+     212,
+     238
+    ],
+    "g12_17": [
+     148,
+     229,
+     258
+    ],
+    "g65": [
+     37,
+     113,
+     201
+    ]
+   }
+  },
+  {
+   "ambito": "UE-CE3 AGROMAN",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 945,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 750,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    1404,
+    1891,
+    2055
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     47,
+     73,
+     82
+    ],
+    "g3_5": [
+     51,
+     79,
+     89
+    ],
+    "g6_11": [
+     126,
+     195,
+     219
+    ],
+    "g12_17": [
+     136,
+     211,
+     237
+    ],
+    "g65": [
+     34,
+     104,
+     185
+    ]
+   }
+  },
+  {
+   "ambito": "SUP-R3 ESTE DE LOS FRESNOS",
+   "clase_suelo": "Suelo Urbanizable Programado",
+   "viviendas": 858,
+   "estado": "habitado",
+   "pct_residencial_vacante": 13.2,
+   "poblacion_actual": 462,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    1275,
+    1717,
+    1866
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     42,
+     66,
+     74
+    ],
+    "g3_5": [
+     46,
+     72,
+     81
+    ],
+    "g6_11": [
+     114,
+     177,
+     199
+    ],
+    "g12_17": [
+     123,
+     191,
+     215
+    ],
+    "g65": [
+     31,
+     94,
+     168
+    ]
+   }
+  },
+  {
+   "ambito": "UE-SUP-CE5 LAS NIEVES",
+   "clase_suelo": "Suelo Urbanizable Programado",
+   "viviendas": 803,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.2,
+   "poblacion_actual": 1454,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    1193,
+    1607,
+    1747
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     40,
+     62,
+     69
+    ],
+    "g3_5": [
+     43,
+     67,
+     76
+    ],
+    "g6_11": [
+     107,
+     165,
+     186
+    ],
+    "g12_17": [
+     115,
+     179,
+     201
+    ],
+    "g65": [
+     29,
+     88,
+     157
+    ]
+   }
+  },
+  {
+   "ambito": "UE DB-15 MANZANA DE LA CALLE FORJA",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 600,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 1236,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    892,
+    1201,
+    1305
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     30,
+     46,
+     52
+    ],
+    "g3_5": [
+     32,
+     50,
+     57
+    ],
+    "g6_11": [
+     80,
+     124,
+     139
+    ],
+    "g12_17": [
+     86,
+     134,
+     150
+    ],
+    "g65": [
+     21,
+     66,
+     117
+    ]
+   }
+  },
+  {
+   "ambito": "PERI SAN BENITO",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 491,
+   "estado": "futuro",
+   "pct_residencial_vacante": 94.8,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    730,
+    982,
+    1068
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     24,
+     38,
+     42
+    ],
+    "g3_5": [
+     27,
+     41,
+     46
+    ],
+    "g6_11": [
+     65,
+     101,
+     114
+    ],
+    "g12_17": [
+     71,
+     109,
+     123
+    ],
+    "g65": [
+     18,
+     54,
+     96
+    ]
+   }
+  },
+  {
+   "ambito": "UE-DB-12 PASO ELEVADO SUR",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 480,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 148,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    713,
+    960,
+    1044
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     24,
+     37,
+     41
+    ],
+    "g3_5": [
+     26,
+     40,
+     45
+    ],
+    "g6_11": [
+     64,
+     99,
+     111
+    ],
+    "g12_17": [
+     69,
+     107,
+     120
+    ],
+    "g65": [
+     17,
+     53,
+     94
+    ]
+   }
+  },
+  {
+   "ambito": "UE-CE5 CARRETERA DE LOECHES",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 475,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 893,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    706,
+    950,
+    1033
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     24,
+     36,
+     41
+    ],
+    "g3_5": [
+     26,
+     40,
+     45
+    ],
+    "g6_11": [
+     63,
+     98,
+     110
+    ],
+    "g12_17": [
+     68,
+     106,
+     119
+    ],
+    "g65": [
+     17,
+     52,
+     93
+    ]
+   }
+  },
+  {
+   "ambito": "SUP-R1 NORTE DEL BARRIO VERDE",
+   "clase_suelo": "Suelo Urbanizable Programado",
+   "viviendas": 419,
+   "estado": "habitado",
+   "pct_residencial_vacante": 5.9,
+   "poblacion_actual": 1597,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    623,
+    838,
+    911
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     21,
+     32,
+     36
+    ],
+    "g3_5": [
+     23,
+     35,
+     40
+    ],
+    "g6_11": [
+     56,
+     86,
+     97
+    ],
+    "g12_17": [
+     60,
+     93,
+     105
+    ],
+    "g65": [
+     15,
+     46,
+     82
+    ]
+   }
+  },
+  {
+   "ambito": "UE-CE6 EL JUNCAL",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 353,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 563,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    525,
+    706,
+    768
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     17,
+     27,
+     30
+    ],
+    "g3_5": [
+     19,
+     30,
+     33
+    ],
+    "g6_11": [
+     47,
+     73,
+     82
+    ],
+    "g12_17": [
+     51,
+     79,
+     89
+    ],
+    "g65": [
+     13,
+     39,
+     69
+    ]
+   }
+  },
+  {
+   "ambito": "UE-CE4 AVDA DE LORETO",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 273,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 989,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    406,
+    546,
+    594
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     14,
+     21,
+     24
+    ],
+    "g3_5": [
+     15,
+     23,
+     26
+    ],
+    "g6_11": [
+     36,
+     56,
+     63
+    ],
+    "g12_17": [
+     39,
+     61,
+     69
+    ],
+    "g65": [
+     10,
+     30,
+     53
+    ]
+   }
+  },
+  {
+   "ambito": "UE-DB-20 ESTE DE LA AVDA DE LA CONSTITUCIÓN",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 229,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 280,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    340,
+    458,
+    498
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     11,
+     18,
+     20
+    ],
+    "g3_5": [
+     12,
+     19,
+     22
+    ],
+    "g6_11": [
+     30,
+     47,
+     53
+    ],
+    "g12_17": [
+     33,
+     51,
+     57
+    ],
+    "g65": [
+     8,
+     25,
+     45
+    ]
+   }
+  },
+  {
+   "ambito": "UE-DB-8 AVDA DE LA CONSTITUCIÓN",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 215,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    319,
+    430,
+    468
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     11,
+     16,
+     19
+    ],
+    "g3_5": [
+     12,
+     18,
+     20
+    ],
+    "g6_11": [
+     29,
+     44,
+     50
+    ],
+    "g12_17": [
+     31,
+     48,
+     54
+    ],
+    "g65": [
+     8,
+     24,
+     42
+    ]
+   }
+  },
+  {
+   "ambito": "UE-DB-5 MANZANA DE LA CALLE LIBERTAD",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 186,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 420,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    276,
+    372,
+    405
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     9,
+     14,
+     16
+    ],
+    "g3_5": [
+     10,
+     16,
+     18
+    ],
+    "g6_11": [
+     25,
+     38,
+     43
+    ],
+    "g12_17": [
+     27,
+     41,
+     47
+    ],
+    "g65": [
+     7,
+     20,
+     36
+    ]
+   }
+  },
+  {
+   "ambito": "UE-CE2 LA ESTACIÓN",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 180,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 670,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    267,
+    360,
+    391
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     9,
+     14,
+     16
+    ],
+    "g3_5": [
+     10,
+     15,
+     17
+    ],
+    "g6_11": [
+     24,
+     37,
+     42
+    ],
+    "g12_17": [
+     26,
+     40,
+     45
+    ],
+    "g65": [
+     6,
+     20,
+     35
+    ]
+   }
+  },
+  {
+   "ambito": "UE-DB-1 PLAZA DE LOS COLEGIOS",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 147,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 270,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    218,
+    294,
+    320
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     7,
+     11,
+     13
+    ],
+    "g3_5": [
+     8,
+     12,
+     14
+    ],
+    "g6_11": [
+     19,
+     30,
+     34
+    ],
+    "g12_17": [
+     21,
+     33,
+     37
+    ],
+    "g65": [
+     5,
+     16,
+     29
+    ]
+   }
+  },
+  {
+   "ambito": "UE-DB-16 CALLE DEL HIERRO",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 120,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    178,
+    240,
+    261
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     6,
+     9,
+     10
+    ],
+    "g3_5": [
+     6,
+     10,
+     11
+    ],
+    "g6_11": [
+     16,
+     25,
+     28
+    ],
+    "g12_17": [
+     17,
+     27,
+     30
+    ],
+    "g65": [
+     4,
+     13,
+     23
+    ]
+   }
+  },
+  {
+   "ambito": "UE-DB-10 BARRIO DE LOS AMERICANOS",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 103,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 17.8,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    153,
+    206,
+    224
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     5,
+     8,
+     9
+    ],
+    "g3_5": [
+     6,
+     9,
+     10
+    ],
+    "g6_11": [
+     14,
+     21,
+     24
+    ],
+    "g12_17": [
+     15,
+     23,
+     26
+    ],
+    "g65": [
+     4,
+     11,
+     20
+    ]
+   }
+  },
+  {
+   "ambito": "UE-DB-18 CALLE DE LA PLATA",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 92,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 401,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    137,
+    184,
+    200
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     5,
+     7,
+     8
+    ],
+    "g3_5": [
+     5,
+     8,
+     9
+    ],
+    "g6_11": [
+     12,
+     19,
+     21
+    ],
+    "g12_17": [
+     13,
+     20,
+     23
+    ],
+    "g65": [
+     3,
+     10,
+     18
+    ]
+   }
+  },
+  {
+   "ambito": "AE-OD-4 Bº DE LA ZAPATERÍA",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": 87,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    129,
+    174,
+    189
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     4,
+     7,
+     8
+    ],
+    "g3_5": [
+     5,
+     7,
+     8
+    ],
+    "g6_11": [
+     12,
+     18,
+     20
+    ],
+    "g12_17": [
+     12,
+     19,
+     22
+    ],
+    "g65": [
+     3,
+     10,
+     17
+    ]
+   }
+  },
+  {
+   "ambito": "UE-DB-7 BARRIO DE SAN JOSÉ",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 77,
+   "estado": "futuro",
+   "pct_residencial_vacante": 100.0,
+   "poblacion_actual": 350,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    114,
+    154,
+    167
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     4,
+     6,
+     7
+    ],
+    "g3_5": [
+     4,
+     6,
+     7
+    ],
+    "g6_11": [
+     10,
+     16,
+     18
+    ],
+    "g12_17": [
+     11,
+     17,
+     19
+    ],
+    "g65": [
+     3,
+     8,
+     15
+    ]
+   }
+  },
+  {
+   "ambito": "UE-DB-13 NORTE DE LA CALLE DEL RÍO",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 48,
+   "estado": "habitado",
+   "pct_residencial_vacante": 14.3,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    71,
+    96,
+    104
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     2,
+     4,
+     4
+    ],
+    "g3_5": [
+     3,
+     4,
+     5
+    ],
+    "g6_11": [
+     6,
+     10,
+     11
+    ],
+    "g12_17": [
+     7,
+     11,
+     12
+    ],
+    "g65": [
+     2,
+     5,
+     9
+    ]
+   }
+  },
+  {
+   "ambito": "UE-DB-9 CALLE DE LA VEREDILLA",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 32,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 75,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    48,
+    64,
+    70
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     2,
+     2,
+     3
+    ],
+    "g3_5": [
+     2,
+     3,
+     3
+    ],
+    "g6_11": [
+     4,
+     7,
+     7
+    ],
+    "g12_17": [
+     5,
+     7,
+     8
+    ],
+    "g65": [
+     1,
+     4,
+     6
+    ]
+   }
+  },
+  {
+   "ambito": "UE-DB-21 CASA DEL PUEBLO",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 28,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    42,
+    56,
+    61
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     2,
+     2
+    ],
+    "g3_5": [
+     2,
+     2,
+     3
+    ],
+    "g6_11": [
+     4,
+     6,
+     6
+    ],
+    "g12_17": [
+     4,
+     6,
+     7
+    ],
+    "g65": [
+     1,
+     3,
+     5
+    ]
+   }
+  },
+  {
+   "ambito": "UE-DB-2 OESTE DE LA CALLE MADRID",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 20,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    30,
+    40,
+    44
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     2,
+     2
+    ],
+    "g3_5": [
+     1,
+     2,
+     2
+    ],
+    "g6_11": [
+     3,
+     4,
+     5
+    ],
+    "g12_17": [
+     3,
+     4,
+     5
+    ],
+    "g65": [
+     1,
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "ambito": "AM-1 CALLE DE TORREJÓN",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 284,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "AM-2 CARRETERA DE LOECHES",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 399,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "AOS-R3.1",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 82.4,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "AS-00",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "CALLE PLATA, ZARZA, PINO Y PASEO CONVIVENCIA",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 24.2,
+   "poblacion_actual": 676,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "ESPONJAMIENTO CASCO ANTIGUO",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 38.2,
+   "poblacion_actual": 874,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "S-8 UE-SUP-CE4",
+   "clase_suelo": "Suelo Urbanizable Programado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 670,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "SUNP-I1 LOS ALMENDROS",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 891,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "SUNP-T1 NOROESTE",
+   "clase_suelo": "Suelo Urbanizable No Programado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 913,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "SUNP-T2 NORESTE",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 172,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "UE-CE1 PARQUE CORREDOR",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 111,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "UE-DB-11 PASO ELEVADO NORTE",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "UE-DB-14 ACCESO A LAS MONJAS",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "UE-DB-17 CALLE DE LA ORFEBRERÍA",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "UE-DB-4 ESTE DE LA CALLE CIRCUNVALACIÓN",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "UE-DB-6 NORTE DE LA LOMA",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "UE-H LA HERRERIA",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 10.3,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "UG-DB-1 OESTE DE LA CALLE SAN FERNANDO",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "UG-DB-2 PROLONGACIÓN DE LA CALLE CANTO",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 223,
+   "anio_poblacion_actual": 2023
+  }
+ ]
+}

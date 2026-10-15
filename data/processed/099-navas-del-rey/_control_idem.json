@@ -1,0 +1,47 @@
+{
+ "municipio": {
+  "cod": "099",
+  "nombre": "Navas del Rey",
+  "nombre_ckan": "Navas del Rey",
+  "slug": "navas-del-rey"
+ },
+ "ambitos_poligonos_brutos": 3,
+ "ambitos_geometrias_invalidas_reparadas": 0,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 3,
+ "ambitos_sin_viviendas": 3,
+ "ambitos_guardados": 3,
+ "redes_geometrias_invalidas_reparadas": 10,
+ "redes_brutas": 41,
+ "redes_dotacionales": 0,
+ "redes_por_tipo_y_estado": {},
+ "redes_guardadas": 0,
+ "suelo_parcelas_brutas": 2934,
+ "suelo_geometrias_invalidas_reparadas": 1207,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 3,
+ "candidatas_vacantes_equipamiento": 28,
+ "candidatas_sin_superficie_en_origen": 2,
+ "candidatas_descartadas_menores_de_50_m2": 3,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 25,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 9,
+  ">=2000": 5,
+  ">=5000": 1,
+  ">=10000": 0
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 6,
+  "centros_educativos.geojson": 1,
+  "centros_sanitarios.geojson": 3,
+  "centros_sociales.geojson": 1,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 9,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 0,
+  "resumen_ambitos.json": 1
+ }
+}

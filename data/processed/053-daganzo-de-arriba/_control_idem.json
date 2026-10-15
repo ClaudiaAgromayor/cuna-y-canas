@@ -1,0 +1,56 @@
+{
+ "municipio": {
+  "cod": "053",
+  "nombre": "Daganzo de Arriba",
+  "nombre_ckan": "Daganzo de Arriba",
+  "slug": "daganzo-de-arriba"
+ },
+ "ambitos_poligonos_brutos": 35,
+ "ambitos_geometrias_invalidas_reparadas": 3,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 31,
+ "ambitos_sin_viviendas": 24,
+ "ambitos_guardados": 31,
+ "redes_geometrias_invalidas_reparadas": 60,
+ "redes_brutas": 176,
+ "redes_dotacionales": 17,
+ "redes_por_tipo_y_estado": {
+  "deportivo/sin_dato": 4,
+  "educativo/sin_dato": 3,
+  "zona_verde/sin_dato": 10
+ },
+ "redes_guardadas": 17,
+ "suelo_parcelas_brutas": 3814,
+ "suelo_geometrias_invalidas_reparadas": 1684,
+ "suelo_parcelas_en_ambitos_solapados": 1,
+ "resumen_ambitos": 31,
+ "candidatas_vacantes_equipamiento": 25,
+ "candidatas_sin_superficie_en_origen": 2,
+ "candidatas_descartadas_menores_de_50_m2": 2,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 23,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 15,
+  ">=2000": 9,
+  ">=5000": 4,
+  ">=10000": 0
+ },
+ "portal_suelo_parcelas": 1,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Otros": 1
+ },
+ "portal_suelo_guardadas": 1,
+ "tamanos_kb": {
+  "ambitos.geojson": 28,
+  "centros_educativos.geojson": 2,
+  "centros_sanitarios.geojson": 6,
+  "centros_sociales.geojson": 1,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 9,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 1,
+  "redes.geojson": 8,
+  "resumen_ambitos.json": 10
+ }
+}

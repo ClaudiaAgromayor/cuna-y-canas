@@ -1,0 +1,51 @@
+{
+ "municipio": {
+  "cod": "052",
+  "nombre": "Chinchón",
+  "nombre_ckan": "Chinchón",
+  "slug": "chinchon"
+ },
+ "ambitos_poligonos_brutos": 8,
+ "ambitos_geometrias_invalidas_reparadas": 3,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 8,
+ "ambitos_sin_viviendas": 6,
+ "ambitos_guardados": 8,
+ "redes_geometrias_invalidas_reparadas": 39,
+ "redes_brutas": 130,
+ "redes_dotacionales": 94,
+ "redes_por_tipo_y_estado": {
+  "cultural/sin_dato": 2,
+  "deportivo/sin_dato": 1,
+  "zona_verde/sin_dato": 91
+ },
+ "redes_guardadas": 94,
+ "suelo_parcelas_brutas": 4004,
+ "suelo_geometrias_invalidas_reparadas": 2029,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 8,
+ "candidatas_vacantes_equipamiento": 49,
+ "candidatas_sin_superficie_en_origen": 8,
+ "candidatas_descartadas_menores_de_50_m2": 15,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 34,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 15,
+  ">=2000": 15,
+  ">=5000": 13,
+  ">=10000": 3
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 26,
+  "centros_educativos.geojson": 2,
+  "centros_sanitarios.geojson": 3,
+  "centros_sociales.geojson": 1,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 15,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 45,
+  "resumen_ambitos.json": 3
+ }
+}

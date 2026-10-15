@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"codigo": "28058895", "nombre": "EL CANCIONERO", "tipo": "EEI-CN", "tipo_largo": "ESCUELA  INFANTIL-CASA DE NIÑOS", "titularidad": "PÚBLICO", "direccion": "de las Eras", "cp": "28729", "distrito": "", "cod_ine": "158"}, "geometry": {"type": "Point", "coordinates": [-3.66151, 40.8704]}}]}

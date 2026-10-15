@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "058",
+  "nombre": "Fuenlabrada",
+  "nombre_ckan": "Fuenlabrada",
+  "slug": "fuenlabrada"
+ },
+ "educativos_municipio": 193,
+ "educativos_en_alta": 106,
+ "educativos_guardados": 105,
+ "educativos_sin_coordenadas": 1,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 781,
+ "sanitarios_centros": 269,
+ "sanitarios_guardados": 265,
+ "sanitarios_sin_coordenadas": 3,
+ "sanitarios_coordenadas_fuera_del_municipio": 1,
+ "sociales_municipio": 41,
+ "sociales_guardados": 40,
+ "sociales_sin_coordenadas": 1,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 66,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 189814
+}

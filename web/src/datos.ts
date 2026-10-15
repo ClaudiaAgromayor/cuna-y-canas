@@ -13,7 +13,7 @@ async function json<T>(ruta: string): Promise<T> {
 
 /** Si una capa no existe para el municipio, se devuelve vacía: la interfaz muestra "sin datos" en vez de fallar. */
 async function capa<T = FeatureCollection>(m: MunicipioIndice, nombre: string): Promise<T> {
-  if (m.capas[nombre] === false) return vacia() as T
+  if (m.capas[nombre] === false && nombre !== 'farmacias') return vacia() as T
   try {
     return await json<T>(`${m.carpeta}/${nombre}.geojson`)
   } catch {
@@ -34,15 +34,15 @@ const cache = new Map<string, Promise<DatosMunicipio>>()
 export function cargarMunicipio(m: MunicipioIndice): Promise<DatosMunicipio> {
   if (!cache.has(m.cod_ine)) {
     cache.set(m.cod_ine, (async () => {
-      const [ambitos, parcelas, demandaPuntos, educativos, sanitarios, sociales, paradas, zonasSalud, redes, demanda] = await Promise.all([
+      const [ambitos, parcelas, demandaPuntos, educativos, sanitarios, sociales, paradas, zonasSalud, redes, farmacias, demanda] = await Promise.all([
         capa(m, 'ambitos'), capa(m, 'parcelas_vacantes'), capa(m, 'demanda_puntos'), capa(m, 'centros_educativos'),
-        capa(m, 'centros_sanitarios'), capa(m, 'centros_sociales'), capa(m, 'paradas'), capa(m, 'zonas_salud'), capa(m, 'redes'),
+        capa(m, 'centros_sanitarios'), capa(m, 'centros_sociales'), capa(m, 'paradas'), capa(m, 'zonas_salud'), capa(m, 'redes'), capa(m, 'farmacias'),
         m.tablas.demanda ? json<Demanda>(`${m.carpeta}/demanda.json`).catch(() => null) : Promise.resolve(null),
       ])
       const pts = (demandaPuntos as FeatureCollection<Point>).features
       const xs = pts.map((f) => f.geometry.coordinates[0]), ys = pts.map((f) => f.geometry.coordinates[1])
       const encuadre: [number, number, number, number] = xs.length ? [Math.min(...xs), Math.min(...ys), Math.max(...xs), Math.max(...ys)] : m.bbox
-      const datos = { indice: m, encuadre, ambitos, parcelas, demandaPuntos, educativos, sanitarios, sociales, paradas, zonasSalud, redes, demanda } as DatosMunicipio
+      const datos = { indice: m, encuadre, ambitos, parcelas, demandaPuntos, educativos, sanitarios, sociales, farmacias, paradas, zonasSalud, redes, demanda } as DatosMunicipio
       comprobarMunicipio(datos)
       return datos
     })())
@@ -54,7 +54,7 @@ export function cargarMunicipio(m: MunicipioIndice): Promise<DatosMunicipio> {
 function comprobarMunicipio(d: DatosMunicipio) {
   const cod = d.indice.cod_ine
   const capas = { ambitos: d.ambitos, parcelas: d.parcelas, demanda: d.demandaPuntos, educativos: d.educativos, sanitarios: d.sanitarios,
-    sociales: d.sociales, paradas: d.paradas, zonas: d.zonasSalud, redes: d.redes }
+    sociales: d.sociales, farmacias: d.farmacias, paradas: d.paradas, zonas: d.zonasSalud, redes: d.redes }
   for (const [nombre, fc] of Object.entries(capas)) {
     const ajenos = fc.features.filter((f) => (f.properties as { cod_ine?: string } | null)?.cod_ine !== cod)
     if (ajenos.length) throw new Error(`La capa ${nombre} trae ${ajenos.length} elementos que no son de ${d.indice.nombre}`)

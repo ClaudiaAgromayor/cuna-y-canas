@@ -1,0 +1,52 @@
+{
+ "municipio": {
+  "cod": "144",
+  "nombre": "Soto del Real",
+  "nombre_ckan": "Soto del Real",
+  "slug": "soto-del-real"
+ },
+ "ambitos_poligonos_brutos": 42,
+ "ambitos_geometrias_invalidas_reparadas": 10,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 42,
+ "ambitos_sin_viviendas": 6,
+ "ambitos_guardados": 42,
+ "redes_geometrias_invalidas_reparadas": 191,
+ "redes_brutas": 489,
+ "redes_dotacionales": 120,
+ "redes_por_tipo_y_estado": {
+  "deportivo/sin_dato": 10,
+  "educativo/sin_dato": 6,
+  "sanitario/sin_dato": 1,
+  "zona_verde/sin_dato": 103
+ },
+ "redes_guardadas": 120,
+ "suelo_parcelas_brutas": 6985,
+ "suelo_geometrias_invalidas_reparadas": 2379,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 42,
+ "candidatas_vacantes_equipamiento": 27,
+ "candidatas_sin_superficie_en_origen": 1,
+ "candidatas_descartadas_menores_de_50_m2": 2,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 25,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 15,
+  ">=2000": 11,
+  ">=5000": 6,
+  ">=10000": 3
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 58,
+  "centros_educativos.geojson": 4,
+  "centros_sanitarios.geojson": 9,
+  "centros_sociales.geojson": 2,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 12,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 53,
+  "resumen_ambitos.json": 14
+ }
+}

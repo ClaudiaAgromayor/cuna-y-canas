@@ -1,0 +1,127 @@
+{
+ "cod_ine": "122",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "PARAJE DEL ARZOBISPO",
+   "viviendas_previstas": 170,
+   "residencial_ocupado_m2": 368001,
+   "residencial_vacante_m2": 127689,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 4646,
+   "pct_residencial_vacante": 25.8,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "UA-3 TRAVESÍA DEL PALACIO",
+   "viviendas_previstas": 36,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 10884,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 1501,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "UA-4 CERRO DE LOS SANTOS",
+   "viviendas_previstas": 36,
+   "residencial_ocupado_m2": 1220,
+   "residencial_vacante_m2": 17452,
+   "equipamiento_ocupado_m2": 47,
+   "equipamiento_vacante_m2": 5301,
+   "pct_residencial_vacante": 93.5,
+   "pct_equipamiento_vacante": 99.1,
+   "parcelas_equipamiento_vacantes": 9
+  },
+  {
+   "ambito": "UA-9 URBANIZACIÓN LOS CERRRILLOS",
+   "viviendas_previstas": 30,
+   "residencial_ocupado_m2": 44799,
+   "residencial_vacante_m2": 17544,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 28.1,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-8 CAÑADA",
+   "viviendas_previstas": 26,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 4879,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-2 PALACIO",
+   "viviendas_previstas": 21,
+   "residencial_ocupado_m2": 9898,
+   "residencial_vacante_m2": 516,
+   "equipamiento_ocupado_m2": 2580,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 5.0,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-5 PASEO DEL PINAR-OESTE",
+   "viviendas_previstas": 18,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 9758,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-7 LAS POZAS",
+   "viviendas_previstas": 17,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 2815,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-6 CALLE RIBAPINADA",
+   "viviendas_previstas": 16,
+   "residencial_ocupado_m2": 8725,
+   "residencial_vacante_m2": 6942,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 44.3,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-1 PASEO DEL PINAR-ESTE",
+   "viviendas_previstas": 9,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 5019,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 1032,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "UA-10 POLÍGONO INDUSTRIAL",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

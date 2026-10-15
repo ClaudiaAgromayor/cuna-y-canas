@@ -1,0 +1,59 @@
+{
+ "municipio": {
+  "cod": "005",
+  "nombre": "Alcalá de Henares",
+  "nombre_ckan": "Alcalá de Henares",
+  "slug": "alcala-de-henares"
+ },
+ "ambitos_poligonos_brutos": 128,
+ "ambitos_geometrias_invalidas_reparadas": 28,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 108,
+ "ambitos_sin_viviendas": 64,
+ "ambitos_guardados": 108,
+ "redes_geometrias_invalidas_reparadas": 272,
+ "redes_brutas": 1009,
+ "redes_dotacionales": 331,
+ "redes_por_tipo_y_estado": {
+  "asistencial/sin_dato": 1,
+  "cultural/sin_dato": 1,
+  "deportivo/sin_dato": 46,
+  "educativo/sin_dato": 43,
+  "sanitario/sin_dato": 1,
+  "zona_verde/sin_dato": 239
+ },
+ "redes_guardadas": 331,
+ "suelo_parcelas_brutas": 19011,
+ "suelo_geometrias_invalidas_reparadas": 8526,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 106,
+ "candidatas_vacantes_equipamiento": 186,
+ "candidatas_sin_superficie_en_origen": 17,
+ "candidatas_descartadas_menores_de_50_m2": 23,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 163,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 138,
+  ">=2000": 110,
+  ">=5000": 61,
+  ">=10000": 34
+ },
+ "portal_suelo_parcelas": 1,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Terciario": 1
+ },
+ "portal_suelo_guardadas": 1,
+ "tamanos_kb": {
+  "ambitos.geojson": 171,
+  "centros_educativos.geojson": 38,
+  "centros_sanitarios.geojson": 166,
+  "centros_sociales.geojson": 23,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 78,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 1,
+  "redes.geojson": 183,
+  "resumen_ambitos.json": 35
+ }
+}

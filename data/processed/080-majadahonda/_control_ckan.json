@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "080",
+  "nombre": "Majadahonda",
+  "nombre_ckan": "Majadahonda",
+  "slug": "majadahonda"
+ },
+ "educativos_municipio": 61,
+ "educativos_en_alta": 43,
+ "educativos_guardados": 43,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 748,
+ "sanitarios_centros": 237,
+ "sanitarios_guardados": 237,
+ "sanitarios_sin_coordenadas": 0,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 19,
+ "sociales_guardados": 18,
+ "sociales_sin_coordenadas": 1,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 25,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 73662
+}

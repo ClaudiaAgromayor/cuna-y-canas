@@ -1,0 +1,116 @@
+{
+ "cod_ine": "038",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "SAU-2 NAVALCABALLO",
+   "viviendas_previstas": 125,
+   "residencial_ocupado_m2": 19502,
+   "residencial_vacante_m2": 77094,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 79.8,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-1 LAS FUENTES",
+   "viviendas_previstas": 56,
+   "residencial_ocupado_m2": 1703,
+   "residencial_vacante_m2": 27322,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 94.1,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-3 LOS ARROYUELOS",
+   "viviendas_previstas": 41,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 48567,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-8",
+   "viviendas_previstas": 16,
+   "residencial_ocupado_m2": 7079,
+   "residencial_vacante_m2": 2719,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 27.8,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-SU-1",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 6749,
+   "residencial_vacante_m2": 7827,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 53.7,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-SU-2 MATALAVIEJA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 7125,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-SU-3",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 8110,
+   "residencial_vacante_m2": 5110,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 38.7,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-SU-4 LOS QUIÑONES",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 15611,
+   "residencial_vacante_m2": 1266,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 7.5,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-SU-5",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 7454,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-SU-6 LA FUENFRIA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 7433,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

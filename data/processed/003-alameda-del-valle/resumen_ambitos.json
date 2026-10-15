@@ -1,0 +1,17 @@
+{
+ "cod_ine": "003",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "CERCA DE LA FRAGUA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 11826,
+   "residencial_vacante_m2": 888,
+   "equipamiento_ocupado_m2": 374,
+   "equipamiento_vacante_m2": 2384,
+   "pct_residencial_vacante": 7.0,
+   "pct_equipamiento_vacante": 86.4,
+   "parcelas_equipamiento_vacantes": 1
+  }
+ ]
+}

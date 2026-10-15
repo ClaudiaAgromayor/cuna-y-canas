@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"id": "8_12096", "modo": "interurbano", "modos": "interurbano", "nombre": "EL ATAZAR-CTRA.DE PATONES", "situacion": "S", "accesibilidad": "T", "lineas": "interurbano: 913", "n_lineas": 1, "fecha_dato": "20260529", "cod_ine": "016"}, "geometry": {"type": "Point", "coordinates": [-3.472382, 40.933228]}}]}

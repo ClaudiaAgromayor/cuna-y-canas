@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "038",
+  "nombre": "Cercedilla",
+  "nombre_ckan": "Cercedilla",
+  "slug": "cercedilla"
+ },
+ "educativos_municipio": 9,
+ "educativos_en_alta": 5,
+ "educativos_guardados": 5,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 44,
+ "sanitarios_centros": 13,
+ "sanitarios_guardados": 13,
+ "sanitarios_sin_coordenadas": 0,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 7,
+ "sociales_guardados": 5,
+ "sociales_sin_coordenadas": 2,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 3,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 7782
+}

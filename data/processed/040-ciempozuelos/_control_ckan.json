@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "040",
+  "nombre": "Ciempozuelos",
+  "nombre_ckan": "Ciempozuelos",
+  "slug": "ciempozuelos"
+ },
+ "educativos_municipio": 25,
+ "educativos_en_alta": 14,
+ "educativos_guardados": 14,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 108,
+ "sanitarios_centros": 30,
+ "sanitarios_guardados": 29,
+ "sanitarios_sin_coordenadas": 0,
+ "sanitarios_coordenadas_fuera_del_municipio": 1,
+ "sociales_municipio": 37,
+ "sociales_guardados": 37,
+ "sociales_sin_coordenadas": 0,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 8,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 26254
+}

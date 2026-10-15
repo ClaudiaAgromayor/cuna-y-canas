@@ -1,0 +1,105 @@
+{
+ "cod_ine": "183",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "UE-3 LAS ERAS",
+   "viviendas_previstas": 16,
+   "residencial_ocupado_m2": 893,
+   "residencial_vacante_m2": 5547,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 86.1,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA COLONIA PEÑA ROSAL",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 34324,
+   "residencial_vacante_m2": 5360,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 13.5,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-1.1 EL GUIJO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 4403,
+   "residencial_vacante_m2": 1034,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 19.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-1.2 LA CRUZ DE LA HORCA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 1645,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-2 LOS CORRALES DE PERICON",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-4 PRADOS DEL PIOJAL",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 10201,
+   "residencial_vacante_m2": 13586,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 5688,
+   "pct_residencial_vacante": 57.1,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 3
+  },
+  {
+   "ambito": "UA-5",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 2539,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-6",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 6394,
+   "residencial_vacante_m2": 2210,
+   "equipamiento_ocupado_m2": 4137,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 25.7,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-7",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 752,
+   "residencial_vacante_m2": 8227,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 91.6,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

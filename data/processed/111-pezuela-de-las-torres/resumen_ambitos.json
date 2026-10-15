@@ -1,0 +1,94 @@
+{
+ "cod_ine": "111",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "UA-8M",
+   "viviendas_previstas": 160,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 18645,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 5603,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "UA-5M",
+   "viviendas_previstas": 77,
+   "residencial_ocupado_m2": 565,
+   "residencial_vacante_m2": 8523,
+   "equipamiento_ocupado_m2": 47,
+   "equipamiento_vacante_m2": 283,
+   "pct_residencial_vacante": 93.8,
+   "pct_equipamiento_vacante": 85.7,
+   "parcelas_equipamiento_vacantes": 5
+  },
+  {
+   "ambito": "UA-2M",
+   "viviendas_previstas": 56,
+   "residencial_ocupado_m2": 47,
+   "residencial_vacante_m2": 6545,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 99.3,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-7",
+   "viviendas_previstas": 45,
+   "residencial_ocupado_m2": 30594,
+   "residencial_vacante_m2": 7863,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 20.4,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-4M",
+   "viviendas_previstas": 37,
+   "residencial_ocupado_m2": 2307,
+   "residencial_vacante_m2": 1224,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 34.7,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-3",
+   "viviendas_previstas": 26,
+   "residencial_ocupado_m2": 5556,
+   "residencial_vacante_m2": 1789,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 24.4,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-1 C/MAYOR Y C/NUEVA",
+   "viviendas_previstas": 19,
+   "residencial_ocupado_m2": 9369,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-6 C/CAMINO DEL LLANO",
+   "viviendas_previstas": 18,
+   "residencial_ocupado_m2": 4567,
+   "residencial_vacante_m2": 4756,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 2072,
+   "pct_residencial_vacante": 51.0,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 2
+  }
+ ]
+}

@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"codigo": "28067276", "nombre": "GALOPINES", "tipo": "EEI-CN", "tipo_largo": "ESCUELA  INFANTIL-CASA DE NIÑOS", "titularidad": "PÚBLICO", "direccion": "de Sergio Caballero", "cp": "28812", "distrito": "", "cod_ine": "111"}, "geometry": {"type": "Point", "coordinates": [-3.177036, 40.418938]}}]}

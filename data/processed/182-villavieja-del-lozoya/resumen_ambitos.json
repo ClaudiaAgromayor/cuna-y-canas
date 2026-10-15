@@ -1,0 +1,105 @@
+{
+ "cod_ine": "182",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "EL MOLINILLO",
+   "viviendas_previstas": 116,
+   "residencial_ocupado_m2": 117528,
+   "residencial_vacante_m2": 72533,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 18810,
+   "pct_residencial_vacante": 38.2,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 5
+  },
+  {
+   "ambito": "LAS CABEZAS",
+   "viviendas_previstas": 97,
+   "residencial_ocupado_m2": 97548,
+   "residencial_vacante_m2": 53301,
+   "equipamiento_ocupado_m2": 793,
+   "equipamiento_vacante_m2": 12229,
+   "pct_residencial_vacante": 35.3,
+   "pct_equipamiento_vacante": 93.9,
+   "parcelas_equipamiento_vacantes": 4
+  },
+  {
+   "ambito": "LA CAÑADA",
+   "viviendas_previstas": 78,
+   "residencial_ocupado_m2": 72738,
+   "residencial_vacante_m2": 60403,
+   "equipamiento_ocupado_m2": 47,
+   "equipamiento_vacante_m2": 12976,
+   "pct_residencial_vacante": 45.4,
+   "pct_equipamiento_vacante": 99.6,
+   "parcelas_equipamiento_vacantes": 8
+  },
+  {
+   "ambito": "TERCIO DE LA LAGUNA",
+   "viviendas_previstas": 72,
+   "residencial_ocupado_m2": 85848,
+   "residencial_vacante_m2": 17739,
+   "equipamiento_ocupado_m2": 327,
+   "equipamiento_vacante_m2": 3034,
+   "pct_residencial_vacante": 17.1,
+   "pct_equipamiento_vacante": 90.3,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "UE-A-1",
+   "viviendas_previstas": 16,
+   "residencial_ocupado_m2": 327,
+   "residencial_vacante_m2": 4108,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 92.6,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-A-2",
+   "viviendas_previstas": 15,
+   "residencial_ocupado_m2": 47,
+   "residencial_vacante_m2": 2661,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 98.3,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-A-3",
+   "viviendas_previstas": 12,
+   "residencial_ocupado_m2": 47,
+   "residencial_vacante_m2": 3408,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 98.6,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-B",
+   "viviendas_previstas": 12,
+   "residencial_ocupado_m2": 3734,
+   "residencial_vacante_m2": 840,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 18.4,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "ACTUACIÓN AISLADA 1",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

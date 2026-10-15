@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "005",
+  "nombre": "Alcalá de Henares",
+  "nombre_ckan": "Alcalá de Henares",
+  "slug": "alcala-de-henares"
+ },
+ "educativos_municipio": 205,
+ "educativos_en_alta": 112,
+ "educativos_guardados": 109,
+ "educativos_sin_coordenadas": 3,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 1250,
+ "sanitarios_centros": 463,
+ "sanitarios_guardados": 452,
+ "sanitarios_sin_coordenadas": 8,
+ "sanitarios_coordenadas_fuera_del_municipio": 3,
+ "sociales_municipio": 58,
+ "sociales_guardados": 56,
+ "sociales_sin_coordenadas": 2,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 69,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 202549
+}

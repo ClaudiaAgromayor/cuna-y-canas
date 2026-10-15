@@ -1,0 +1,935 @@
+{
+ "cod_ine": "017",
+ "modelo": "población al completarse = viviendas previstas × habitantes por vivienda prevista; resultados en [mínimo, central, máximo]",
+ "calibracion": {
+  "municipio": "Getafe",
+  "fuente": "INE (Atlas de Distribución de Renta de los Hogares) + IDEM (ámbitos y suelo vacante)",
+  "criterio": "barrios con al menos 1000 viviendas previstas, menos del 15 % de suelo residencial vacante y al menos 1 sección censal entera dentro",
+  "barrios": [
+   {
+    "ambito": "SUI-05 PAU-2 EL BERCIAL-UNIVERSIDAD",
+    "viviendas": 5950,
+    "anio": 2023,
+    "poblacion": 12931,
+    "hab_por_vivienda": 2.173,
+    "tam_hogar": 2.96,
+    "pct_menores18": 28.7,
+    "pct_mayores65": 7.9,
+    "serie": {
+     "2015": 10740,
+     "2016": 11242,
+     "2017": 11709,
+     "2018": 12016,
+     "2019": 12172,
+     "2020": 12126,
+     "2021": 12291,
+     "2022": 12618,
+     "2023": 12931
+    }
+   },
+   {
+    "ambito": "SUI-07 PAU-3 PERALES DEL RÍO",
+    "viviendas": 1750,
+    "anio": 2023,
+    "poblacion": 3807,
+    "hab_por_vivienda": 2.175,
+    "tam_hogar": 3.22,
+    "pct_menores18": 25.6,
+    "pct_mayores65": 9.0,
+    "serie": {
+     "2015": 1699,
+     "2016": 1701,
+     "2017": 3289,
+     "2018": 3363,
+     "2019": 3392,
+     "2020": 3396,
+     "2021": 3744,
+     "2022": 3784,
+     "2023": 3807
+    }
+   },
+   {
+    "ambito": "SUS-PP-2 LOS MOLINOS",
+    "viviendas": 6276,
+    "anio": 2023,
+    "poblacion": 11473,
+    "hab_por_vivienda": 1.828,
+    "tam_hogar": 2.58,
+    "pct_menores18": 30.5,
+    "pct_mayores65": 2.4,
+    "serie": {
+     "2015": 5983,
+     "2016": 6554,
+     "2017": 7712,
+     "2018": 8369,
+     "2019": 8895,
+     "2020": 9741,
+     "2021": 10345,
+     "2022": 10832,
+     "2023": 11473
+    }
+   },
+   {
+    "ambito": "SUS-PP-3 BUENAVISTA",
+    "viviendas": 5958,
+    "anio": 2023,
+    "poblacion": 8854,
+    "hab_por_vivienda": 1.486,
+    "tam_hogar": 2.47,
+    "pct_menores18": 30.2,
+    "pct_mayores65": 3.1,
+    "serie": {
+     "2015": 6027,
+     "2016": 6823,
+     "2017": 5857,
+     "2018": 6623,
+     "2019": 7122,
+     "2020": 7565,
+     "2021": 8067,
+     "2022": 8374,
+     "2023": 8854
+    }
+   }
+  ],
+  "parametros": {
+   "hab_por_vivienda": [
+    1.486,
+    2.001,
+    2.175
+   ],
+   "pct_menores18": [
+    25.6,
+    29.45,
+    30.5
+   ],
+   "pct_mayores65": [
+    2.4,
+    5.5,
+    9.0
+   ]
+  },
+  "reparto_menores": {
+   "g0_2": 0.1071,
+   "g3_5": 0.1244,
+   "g6_11": 0.3362,
+   "g12_17": 0.4323
+  },
+  "tam_hogar_mediano_municipio": 2.6
+ },
+ "prueba_con_el_pasado": [
+  {
+   "ambito": "SUI-05 PAU-2 EL BERCIAL-UNIVERSIDAD",
+   "anio": 2023,
+   "real": 12931,
+   "prediccion": 10887,
+   "error_pct": -15.8,
+   "prediccion_ingenua": 15470,
+   "error_ingenua_pct": 19.6,
+   "rango": [
+    8842,
+    12941
+   ],
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "SUI-07 PAU-3 PERALES DEL RÍO",
+   "anio": 2023,
+   "real": 3807,
+   "prediccion": 3201,
+   "error_pct": -15.9,
+   "prediccion_ingenua": 4550,
+   "error_ingenua_pct": 19.5,
+   "rango": [
+    2600,
+    3803
+   ],
+   "dentro_del_rango": false
+  },
+  {
+   "ambito": "SUS-PP-2 LOS MOLINOS",
+   "anio": 2023,
+   "real": 11473,
+   "prediccion": 12205,
+   "error_pct": 6.4,
+   "prediccion_ingenua": 16318,
+   "error_ingenua_pct": 42.2,
+   "rango": [
+    9326,
+    13650
+   ],
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "SUS-PP-3 BUENAVISTA",
+   "anio": 2023,
+   "real": 8854,
+   "prediccion": 12266,
+   "error_pct": 38.5,
+   "prediccion_ingenua": 15491,
+   "error_ingenua_pct": 75.0,
+   "rango": [
+    10891,
+    12959
+   ],
+   "dentro_del_rango": false
+  }
+ ],
+ "ambitos": [
+  {
+   "ambito": "APD-1 COTORREDONDO",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 357,
+   "estado": "habitado",
+   "pct_residencial_vacante": 7.1,
+   "poblacion_actual": 98,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    531,
+    714,
+    776
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     15,
+     23,
+     25
+    ],
+    "g3_5": [
+     17,
+     26,
+     29
+    ],
+    "g6_11": [
+     46,
+     71,
+     80
+    ],
+    "g12_17": [
+     59,
+     91,
+     102
+    ],
+    "g65": [
+     13,
+     39,
+     70
+    ]
+   }
+  },
+  {
+   "ambito": "APD-2 MONTEBATRES",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 103,
+   "estado": "habitado",
+   "pct_residencial_vacante": 6.4,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    153,
+    206,
+    224
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     4,
+     6,
+     7
+    ],
+    "g3_5": [
+     5,
+     8,
+     8
+    ],
+    "g6_11": [
+     13,
+     20,
+     23
+    ],
+    "g12_17": [
+     17,
+     26,
+     30
+    ],
+    "g65": [
+     4,
+     11,
+     20
+    ]
+   }
+  },
+  {
+   "ambito": "UE-9 COOPERATIVA LOS ANDES",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 66,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.5,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    98,
+    132,
+    144
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     3,
+     4,
+     5
+    ],
+    "g3_5": [
+     3,
+     5,
+     5
+    ],
+    "g6_11": [
+     8,
+     13,
+     15
+    ],
+    "g12_17": [
+     11,
+     17,
+     19
+    ],
+    "g65": [
+     2,
+     7,
+     13
+    ]
+   }
+  },
+  {
+   "ambito": "SAU-2 BALLESTA ESTE RESIDENCIAL",
+   "clase_suelo": "Suelo Apto Para Urbanizar",
+   "viviendas": 59,
+   "estado": "futuro",
+   "pct_residencial_vacante": 99.4,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    88,
+    118,
+    128
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     2,
+     4,
+     4
+    ],
+    "g3_5": [
+     3,
+     4,
+     5
+    ],
+    "g6_11": [
+     8,
+     12,
+     13
+    ],
+    "g12_17": [
+     10,
+     15,
+     17
+    ],
+    "g65": [
+     2,
+     6,
+     12
+    ]
+   }
+  },
+  {
+   "ambito": "SAU-1 BALLESTA OESTE RESIDENCIAL",
+   "clase_suelo": "Suelo Apto Para Urbanizar",
+   "viviendas": 56,
+   "estado": "futuro",
+   "pct_residencial_vacante": 97.6,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    83,
+    112,
+    122
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     2,
+     4,
+     4
+    ],
+    "g3_5": [
+     3,
+     4,
+     5
+    ],
+    "g6_11": [
+     7,
+     11,
+     13
+    ],
+    "g12_17": [
+     9,
+     14,
+     16
+    ],
+    "g65": [
+     2,
+     6,
+     11
+    ]
+   }
+  },
+  {
+   "ambito": "UE-11 CAMINO ALTO DE SERRANILLOS RESIDENCIAL",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 44,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    65,
+    88,
+    96
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     2,
+     3,
+     3
+    ],
+    "g3_5": [
+     2,
+     3,
+     4
+    ],
+    "g6_11": [
+     6,
+     9,
+     10
+    ],
+    "g12_17": [
+     7,
+     11,
+     13
+    ],
+    "g65": [
+     2,
+     5,
+     9
+    ]
+   }
+  },
+  {
+   "ambito": "APD-3 OLIVARES",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 36,
+   "estado": "habitado",
+   "pct_residencial_vacante": 1.9,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    53,
+    72,
+    78
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     2,
+     3
+    ],
+    "g3_5": [
+     2,
+     3,
+     3
+    ],
+    "g6_11": [
+     5,
+     7,
+     8
+    ],
+    "g12_17": [
+     6,
+     9,
+     10
+    ],
+    "g65": [
+     1,
+     4,
+     7
+    ]
+   }
+  },
+  {
+   "ambito": "UE-10 ALTOS DE CARRANQUE NORTE",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 32,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 76.7,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    48,
+    64,
+    70
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     2,
+     2
+    ],
+    "g3_5": [
+     2,
+     2,
+     3
+    ],
+    "g6_11": [
+     4,
+     6,
+     7
+    ],
+    "g12_17": [
+     5,
+     8,
+     9
+    ],
+    "g65": [
+     1,
+     4,
+     6
+    ]
+   }
+  },
+  {
+   "ambito": "UE-7 LAS ERAS RESIDENCIAL",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 21,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    31,
+    42,
+    46
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     1,
+     2
+    ],
+    "g3_5": [
+     1,
+     2,
+     2
+    ],
+    "g6_11": [
+     3,
+     4,
+     5
+    ],
+    "g12_17": [
+     3,
+     5,
+     6
+    ],
+    "g65": [
+     1,
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "ambito": "APD-8 OSUNA ESTE",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 20,
+   "estado": "habitado",
+   "pct_residencial_vacante": 9.2,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    30,
+    40,
+    44
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     1,
+     1
+    ],
+    "g3_5": [
+     1,
+     1,
+     2
+    ],
+    "g6_11": [
+     3,
+     4,
+     5
+    ],
+    "g12_17": [
+     3,
+     5,
+     6
+    ],
+    "g65": [
+     1,
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "ambito": "APD-4",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 17,
+   "estado": "habitado",
+   "pct_residencial_vacante": 11.9,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    25,
+    34,
+    37
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     1,
+     1
+    ],
+    "g3_5": [
+     1,
+     1,
+     1
+    ],
+    "g6_11": [
+     2,
+     3,
+     4
+    ],
+    "g12_17": [
+     3,
+     4,
+     5
+    ],
+    "g65": [
+     1,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "ambito": "UE-8 CARRANQUE SUR RESIDENCIAL",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 16,
+   "estado": "futuro",
+   "pct_residencial_vacante": 100.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    24,
+    32,
+    35
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     1,
+     1
+    ],
+    "g3_5": [
+     1,
+     1,
+     1
+    ],
+    "g6_11": [
+     2,
+     3,
+     4
+    ],
+    "g12_17": [
+     3,
+     4,
+     5
+    ],
+    "g65": [
+     1,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "ambito": "UE-1 LOS OLIVOS RESIDENCIAL",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 14,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    21,
+    28,
+    30
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     1,
+     1
+    ],
+    "g3_5": [
+     1,
+     1,
+     1
+    ],
+    "g6_11": [
+     2,
+     3,
+     3
+    ],
+    "g12_17": [
+     2,
+     4,
+     4
+    ],
+    "g65": [
+     1,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "ambito": "APD-5 C/CASTILLO ESTE",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 13,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 17.8,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    19,
+    26,
+    28
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     1,
+     1
+    ],
+    "g3_5": [
+     1,
+     1,
+     1
+    ],
+    "g6_11": [
+     2,
+     3,
+     3
+    ],
+    "g12_17": [
+     2,
+     3,
+     4
+    ],
+    "g65": [
+     0,
+     1,
+     3
+    ]
+   }
+  },
+  {
+   "ambito": "UE-4 CAMINO DE CARRANQUE RESIDENCIAL",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 7,
+   "estado": "futuro",
+   "pct_residencial_vacante": 90.6,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    10,
+    14,
+    15
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     0,
+     0,
+     0
+    ],
+    "g3_5": [
+     0,
+     1,
+     1
+    ],
+    "g6_11": [
+     1,
+     1,
+     2
+    ],
+    "g12_17": [
+     1,
+     2,
+     2
+    ],
+    "g65": [
+     0,
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "ambito": "APD-6 ENSANCHE ESTE",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 5,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 34.9,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    7,
+    10,
+    11
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     0,
+     0,
+     0
+    ],
+    "g3_5": [
+     0,
+     0,
+     0
+    ],
+    "g6_11": [
+     1,
+     1,
+     1
+    ],
+    "g12_17": [
+     1,
+     1,
+     1
+    ],
+    "g65": [
+     0,
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "ambito": "APD-7 OSUNA OESTE",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 5,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    7,
+    10,
+    11
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     0,
+     0,
+     0
+    ],
+    "g3_5": [
+     0,
+     0,
+     0
+    ],
+    "g6_11": [
+     1,
+     1,
+     1
+    ],
+    "g12_17": [
+     1,
+     1,
+     1
+    ],
+    "g65": [
+     0,
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "ambito": "UE-2 CASCO ESTE RESIDENCIAL",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 3,
+   "estado": "futuro",
+   "pct_residencial_vacante": 100.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    4,
+    6,
+    7
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     0,
+     0,
+     0
+    ],
+    "g3_5": [
+     0,
+     0,
+     0
+    ],
+    "g6_11": [
+     0,
+     1,
+     1
+    ],
+    "g12_17": [
+     0,
+     1,
+     1
+    ],
+    "g65": [
+     0,
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "ambito": "SAU-3 LA DEMANDA",
+   "clase_suelo": "Suelo Apto Para Urbanizar",
+   "viviendas": null,
+   "estado": "futuro",
+   "pct_residencial_vacante": 100.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "UE-3 CASTILLO/OLIVARES RESIDENCIAL",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "futuro",
+   "pct_residencial_vacante": 100.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  }
+ ]
+}

@@ -1,0 +1,52 @@
+{
+ "municipio": {
+  "cod": "050",
+  "nombre": "Cubas de la Sagra",
+  "nombre_ckan": "Cubas de la Sagra",
+  "slug": "cubas-de-la-sagra"
+ },
+ "ambitos_poligonos_brutos": 47,
+ "ambitos_geometrias_invalidas_reparadas": 2,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 47,
+ "ambitos_sin_viviendas": 7,
+ "ambitos_guardados": 47,
+ "redes_geometrias_invalidas_reparadas": 115,
+ "redes_brutas": 371,
+ "redes_dotacionales": 146,
+ "redes_por_tipo_y_estado": {
+  "asistencial/sin_dato": 1,
+  "deportivo/sin_dato": 3,
+  "educativo/sin_dato": 4,
+  "zona_verde/sin_dato": 138
+ },
+ "redes_guardadas": 145,
+ "suelo_parcelas_brutas": 4830,
+ "suelo_geometrias_invalidas_reparadas": 1612,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 47,
+ "candidatas_vacantes_equipamiento": 90,
+ "candidatas_sin_superficie_en_origen": 1,
+ "candidatas_descartadas_menores_de_50_m2": 8,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 82,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 52,
+  ">=2000": 37,
+  ">=5000": 18,
+  ">=10000": 8
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 48,
+  "centros_educativos.geojson": 1,
+  "centros_sanitarios.geojson": 4,
+  "centros_sociales.geojson": 1,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 40,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 64,
+  "resumen_ambitos.json": 15
+ }
+}

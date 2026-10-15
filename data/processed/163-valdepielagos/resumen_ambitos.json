@@ -1,0 +1,61 @@
+{
+ "cod_ine": "163",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "SAU-5 LA ECOALDEA",
+   "viviendas_previstas": 42,
+   "residencial_ocupado_m2": 21409,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 656,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-2 ÁREA DE REPARTO 1",
+   "viviendas_previstas": 39,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 24079,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-4 ÁREA DE REPARTO 1",
+   "viviendas_previstas": 38,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 22252,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "AR-1 SAU3 (APLAZADO)",
+   "viviendas_previstas": 34,
+   "residencial_ocupado_m2": 3748,
+   "residencial_vacante_m2": 22721,
+   "equipamiento_ocupado_m2": 422,
+   "equipamiento_vacante_m2": 3232,
+   "pct_residencial_vacante": 85.8,
+   "pct_equipamiento_vacante": 88.5,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "AR-1 SAU1 (APLAZADO)",
+   "viviendas_previstas": 18,
+   "residencial_ocupado_m2": 1312,
+   "residencial_vacante_m2": 9697,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 88.1,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

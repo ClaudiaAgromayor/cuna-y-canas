@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "047",
+  "nombre": "Collado Villalba",
+  "nombre_ckan": "Collado Villalba",
+  "slug": "collado-villalba"
+ },
+ "educativos_municipio": 70,
+ "educativos_en_alta": 39,
+ "educativos_guardados": 39,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 378,
+ "sanitarios_centros": 135,
+ "sanitarios_guardados": 134,
+ "sanitarios_sin_coordenadas": 1,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 18,
+ "sociales_guardados": 14,
+ "sociales_sin_coordenadas": 4,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 21,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 67956
+}

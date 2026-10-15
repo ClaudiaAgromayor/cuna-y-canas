@@ -1,0 +1,1882 @@
+{
+ "cod_ine": "050",
+ "modelo": "población al completarse = viviendas previstas × habitantes por vivienda prevista; resultados en [mínimo, central, máximo]",
+ "calibracion": {
+  "municipio": "Getafe",
+  "fuente": "INE (Atlas de Distribución de Renta de los Hogares) + IDEM (ámbitos y suelo vacante)",
+  "criterio": "barrios con al menos 1000 viviendas previstas, menos del 15 % de suelo residencial vacante y al menos 1 sección censal entera dentro",
+  "barrios": [
+   {
+    "ambito": "SUI-05 PAU-2 EL BERCIAL-UNIVERSIDAD",
+    "viviendas": 5950,
+    "anio": 2023,
+    "poblacion": 12931,
+    "hab_por_vivienda": 2.173,
+    "tam_hogar": 2.96,
+    "pct_menores18": 28.7,
+    "pct_mayores65": 7.9,
+    "serie": {
+     "2015": 10740,
+     "2016": 11242,
+     "2017": 11709,
+     "2018": 12016,
+     "2019": 12172,
+     "2020": 12126,
+     "2021": 12291,
+     "2022": 12618,
+     "2023": 12931
+    }
+   },
+   {
+    "ambito": "SUI-07 PAU-3 PERALES DEL RÍO",
+    "viviendas": 1750,
+    "anio": 2023,
+    "poblacion": 3807,
+    "hab_por_vivienda": 2.175,
+    "tam_hogar": 3.22,
+    "pct_menores18": 25.6,
+    "pct_mayores65": 9.0,
+    "serie": {
+     "2015": 1699,
+     "2016": 1701,
+     "2017": 3289,
+     "2018": 3363,
+     "2019": 3392,
+     "2020": 3396,
+     "2021": 3744,
+     "2022": 3784,
+     "2023": 3807
+    }
+   },
+   {
+    "ambito": "SUS-PP-2 LOS MOLINOS",
+    "viviendas": 6276,
+    "anio": 2023,
+    "poblacion": 11473,
+    "hab_por_vivienda": 1.828,
+    "tam_hogar": 2.58,
+    "pct_menores18": 30.5,
+    "pct_mayores65": 2.4,
+    "serie": {
+     "2015": 5983,
+     "2016": 6554,
+     "2017": 7712,
+     "2018": 8369,
+     "2019": 8895,
+     "2020": 9741,
+     "2021": 10345,
+     "2022": 10832,
+     "2023": 11473
+    }
+   },
+   {
+    "ambito": "SUS-PP-3 BUENAVISTA",
+    "viviendas": 5958,
+    "anio": 2023,
+    "poblacion": 8854,
+    "hab_por_vivienda": 1.486,
+    "tam_hogar": 2.47,
+    "pct_menores18": 30.2,
+    "pct_mayores65": 3.1,
+    "serie": {
+     "2015": 6027,
+     "2016": 6823,
+     "2017": 5857,
+     "2018": 6623,
+     "2019": 7122,
+     "2020": 7565,
+     "2021": 8067,
+     "2022": 8374,
+     "2023": 8854
+    }
+   }
+  ],
+  "parametros": {
+   "hab_por_vivienda": [
+    1.486,
+    2.001,
+    2.175
+   ],
+   "pct_menores18": [
+    25.6,
+    29.45,
+    30.5
+   ],
+   "pct_mayores65": [
+    2.4,
+    5.5,
+    9.0
+   ]
+  },
+  "reparto_menores": {
+   "g0_2": 0.1018,
+   "g3_5": 0.1232,
+   "g6_11": 0.3592,
+   "g12_17": 0.4158
+  },
+  "tam_hogar_mediano_municipio": 2.6
+ },
+ "prueba_con_el_pasado": [
+  {
+   "ambito": "SUI-05 PAU-2 EL BERCIAL-UNIVERSIDAD",
+   "anio": 2023,
+   "real": 12931,
+   "prediccion": 10887,
+   "error_pct": -15.8,
+   "prediccion_ingenua": 15470,
+   "error_ingenua_pct": 19.6,
+   "rango": [
+    8842,
+    12941
+   ],
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "SUI-07 PAU-3 PERALES DEL RÍO",
+   "anio": 2023,
+   "real": 3807,
+   "prediccion": 3201,
+   "error_pct": -15.9,
+   "prediccion_ingenua": 4550,
+   "error_ingenua_pct": 19.5,
+   "rango": [
+    2600,
+    3803
+   ],
+   "dentro_del_rango": false
+  },
+  {
+   "ambito": "SUS-PP-2 LOS MOLINOS",
+   "anio": 2023,
+   "real": 11473,
+   "prediccion": 12205,
+   "error_pct": 6.4,
+   "prediccion_ingenua": 16318,
+   "error_ingenua_pct": 42.2,
+   "rango": [
+    9326,
+    13650
+   ],
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "SUS-PP-3 BUENAVISTA",
+   "anio": 2023,
+   "real": 8854,
+   "prediccion": 12266,
+   "error_pct": 38.5,
+   "prediccion_ingenua": 15491,
+   "error_ingenua_pct": 75.0,
+   "rango": [
+    10891,
+    12959
+   ],
+   "dentro_del_rango": false
+  }
+ ],
+ "ambitos": [
+  {
+   "ambito": "API-1",
+   "clase_suelo": "Suelo Urbano (INCORPORADO)",
+   "viviendas": 302,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 25.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    449,
+    604,
+    657
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     12,
+     18,
+     20
+    ],
+    "g3_5": [
+     14,
+     22,
+     25
+    ],
+    "g6_11": [
+     41,
+     64,
+     72
+    ],
+    "g12_17": [
+     48,
+     74,
+     83
+    ],
+    "g65": [
+     11,
+     33,
+     59
+    ]
+   }
+  },
+  {
+   "ambito": "UE-5",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 218,
+   "estado": "futuro",
+   "pct_residencial_vacante": 99.7,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    324,
+    436,
+    474
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     8,
+     13,
+     15
+    ],
+    "g3_5": [
+     10,
+     16,
+     18
+    ],
+    "g6_11": [
+     30,
+     46,
+     52
+    ],
+    "g12_17": [
+     34,
+     53,
+     60
+    ],
+    "g65": [
+     8,
+     24,
+     43
+    ]
+   }
+  },
+  {
+   "ambito": "UE-16",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 204,
+   "estado": "habitado",
+   "pct_residencial_vacante": 1.5,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    303,
+    408,
+    444
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     8,
+     12,
+     14
+    ],
+    "g3_5": [
+     10,
+     15,
+     17
+    ],
+    "g6_11": [
+     28,
+     43,
+     49
+    ],
+    "g12_17": [
+     32,
+     50,
+     56
+    ],
+    "g65": [
+     7,
+     22,
+     40
+    ]
+   }
+  },
+  {
+   "ambito": "S-1",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 187,
+   "estado": "futuro",
+   "pct_residencial_vacante": 98.6,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    278,
+    374,
+    407
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     7,
+     11,
+     13
+    ],
+    "g3_5": [
+     9,
+     14,
+     15
+    ],
+    "g6_11": [
+     26,
+     40,
+     45
+    ],
+    "g12_17": [
+     30,
+     46,
+     52
+    ],
+    "g65": [
+     7,
+     21,
+     37
+    ]
+   }
+  },
+  {
+   "ambito": "UE-10",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 179,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 73.8,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    266,
+    358,
+    389
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     7,
+     11,
+     12
+    ],
+    "g3_5": [
+     8,
+     13,
+     15
+    ],
+    "g6_11": [
+     24,
+     38,
+     43
+    ],
+    "g12_17": [
+     28,
+     44,
+     49
+    ],
+    "g65": [
+     6,
+     20,
+     35
+    ]
+   }
+  },
+  {
+   "ambito": "S-2",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 176,
+   "estado": "futuro",
+   "pct_residencial_vacante": 100.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    262,
+    352,
+    383
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     7,
+     11,
+     12
+    ],
+    "g3_5": [
+     8,
+     13,
+     14
+    ],
+    "g6_11": [
+     24,
+     37,
+     42
+    ],
+    "g12_17": [
+     28,
+     43,
+     49
+    ],
+    "g65": [
+     6,
+     19,
+     34
+    ]
+   }
+  },
+  {
+   "ambito": "S-9",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 145,
+   "estado": "futuro",
+   "pct_residencial_vacante": 98.5,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    215,
+    290,
+    315
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     6,
+     9,
+     10
+    ],
+    "g3_5": [
+     7,
+     11,
+     12
+    ],
+    "g6_11": [
+     20,
+     31,
+     35
+    ],
+    "g12_17": [
+     23,
+     36,
+     40
+    ],
+    "g65": [
+     5,
+     16,
+     28
+    ]
+   }
+  },
+  {
+   "ambito": "UE-6",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 129,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 67.8,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    192,
+    258,
+    281
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     5,
+     8,
+     9
+    ],
+    "g3_5": [
+     6,
+     9,
+     11
+    ],
+    "g6_11": [
+     18,
+     27,
+     31
+    ],
+    "g12_17": [
+     20,
+     32,
+     36
+    ],
+    "g65": [
+     5,
+     14,
+     25
+    ]
+   }
+  },
+  {
+   "ambito": "UE-1A",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 121,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 15.4,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    180,
+    242,
+    263
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     5,
+     7,
+     8
+    ],
+    "g3_5": [
+     6,
+     9,
+     10
+    ],
+    "g6_11": [
+     17,
+     26,
+     29
+    ],
+    "g12_17": [
+     19,
+     30,
+     33
+    ],
+    "g65": [
+     4,
+     13,
+     24
+    ]
+   }
+  },
+  {
+   "ambito": "S-3",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 111,
+   "estado": "futuro",
+   "pct_residencial_vacante": 99.7,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    165,
+    222,
+    241
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     4,
+     7,
+     7
+    ],
+    "g3_5": [
+     5,
+     8,
+     9
+    ],
+    "g6_11": [
+     15,
+     23,
+     26
+    ],
+    "g12_17": [
+     18,
+     27,
+     31
+    ],
+    "g65": [
+     4,
+     12,
+     22
+    ]
+   }
+  },
+  {
+   "ambito": "UE-12",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 94,
+   "estado": "futuro",
+   "pct_residencial_vacante": 97.8,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    140,
+    188,
+    204
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     4,
+     6,
+     6
+    ],
+    "g3_5": [
+     4,
+     7,
+     8
+    ],
+    "g6_11": [
+     13,
+     20,
+     22
+    ],
+    "g12_17": [
+     15,
+     23,
+     26
+    ],
+    "g65": [
+     3,
+     10,
+     18
+    ]
+   }
+  },
+  {
+   "ambito": "UE-11",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 90,
+   "estado": "futuro",
+   "pct_residencial_vacante": 86.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    134,
+    180,
+    196
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     3,
+     5,
+     6
+    ],
+    "g3_5": [
+     4,
+     7,
+     7
+    ],
+    "g6_11": [
+     12,
+     19,
+     21
+    ],
+    "g12_17": [
+     14,
+     22,
+     25
+    ],
+    "g65": [
+     3,
+     10,
+     18
+    ]
+   }
+  },
+  {
+   "ambito": "S-5",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 87,
+   "estado": "futuro",
+   "pct_residencial_vacante": 99.3,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    129,
+    174,
+    189
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     3,
+     5,
+     6
+    ],
+    "g3_5": [
+     4,
+     6,
+     7
+    ],
+    "g6_11": [
+     12,
+     18,
+     21
+    ],
+    "g12_17": [
+     14,
+     21,
+     24
+    ],
+    "g65": [
+     3,
+     10,
+     17
+    ]
+   }
+  },
+  {
+   "ambito": "S-8",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 78,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 55.9,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    116,
+    156,
+    170
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     3,
+     5,
+     5
+    ],
+    "g3_5": [
+     4,
+     6,
+     6
+    ],
+    "g6_11": [
+     11,
+     17,
+     19
+    ],
+    "g12_17": [
+     12,
+     19,
+     22
+    ],
+    "g65": [
+     3,
+     9,
+     15
+    ]
+   }
+  },
+  {
+   "ambito": "S-6",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 75,
+   "estado": "futuro",
+   "pct_residencial_vacante": 100.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    111,
+    150,
+    163
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     3,
+     4,
+     5
+    ],
+    "g3_5": [
+     4,
+     5,
+     6
+    ],
+    "g6_11": [
+     10,
+     16,
+     18
+    ],
+    "g12_17": [
+     12,
+     18,
+     21
+    ],
+    "g65": [
+     3,
+     8,
+     15
+    ]
+   }
+  },
+  {
+   "ambito": "UE-21",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 68,
+   "estado": "futuro",
+   "pct_residencial_vacante": 100.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    101,
+    136,
+    148
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     3,
+     4,
+     5
+    ],
+    "g3_5": [
+     3,
+     5,
+     6
+    ],
+    "g6_11": [
+     9,
+     14,
+     16
+    ],
+    "g12_17": [
+     11,
+     17,
+     19
+    ],
+    "g65": [
+     2,
+     7,
+     13
+    ]
+   }
+  },
+  {
+   "ambito": "UE-1B",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 66,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 36.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    98,
+    132,
+    144
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     3,
+     4,
+     4
+    ],
+    "g3_5": [
+     3,
+     5,
+     5
+    ],
+    "g6_11": [
+     9,
+     14,
+     16
+    ],
+    "g12_17": [
+     10,
+     16,
+     18
+    ],
+    "g65": [
+     2,
+     7,
+     13
+    ]
+   }
+  },
+  {
+   "ambito": "S-7",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 65,
+   "estado": "habitado",
+   "pct_residencial_vacante": 12.2,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    97,
+    130,
+    141
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     3,
+     4,
+     4
+    ],
+    "g3_5": [
+     3,
+     5,
+     5
+    ],
+    "g6_11": [
+     9,
+     14,
+     15
+    ],
+    "g12_17": [
+     10,
+     16,
+     18
+    ],
+    "g65": [
+     2,
+     7,
+     13
+    ]
+   }
+  },
+  {
+   "ambito": "UE-7",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 63,
+   "estado": "futuro",
+   "pct_residencial_vacante": 90.7,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    94,
+    126,
+    137
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     2,
+     4,
+     4
+    ],
+    "g3_5": [
+     3,
+     5,
+     5
+    ],
+    "g6_11": [
+     9,
+     13,
+     15
+    ],
+    "g12_17": [
+     10,
+     15,
+     17
+    ],
+    "g65": [
+     2,
+     7,
+     12
+    ]
+   }
+  },
+  {
+   "ambito": "UE-17",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 50,
+   "estado": "habitado",
+   "pct_residencial_vacante": 10.3,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    74,
+    100,
+    109
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     2,
+     3,
+     3
+    ],
+    "g3_5": [
+     2,
+     4,
+     4
+    ],
+    "g6_11": [
+     7,
+     11,
+     12
+    ],
+    "g12_17": [
+     8,
+     12,
+     14
+    ],
+    "g65": [
+     2,
+     6,
+     10
+    ]
+   }
+  },
+  {
+   "ambito": "UE-8",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 39,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 47.3,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    58,
+    78,
+    85
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     2,
+     2,
+     3
+    ],
+    "g3_5": [
+     2,
+     3,
+     3
+    ],
+    "g6_11": [
+     5,
+     8,
+     9
+    ],
+    "g12_17": [
+     6,
+     10,
+     11
+    ],
+    "g65": [
+     1,
+     4,
+     8
+    ]
+   }
+  },
+  {
+   "ambito": "UE-14",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 38,
+   "estado": "habitado",
+   "pct_residencial_vacante": 4.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    56,
+    76,
+    83
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     2,
+     3
+    ],
+    "g3_5": [
+     2,
+     3,
+     3
+    ],
+    "g6_11": [
+     5,
+     8,
+     9
+    ],
+    "g12_17": [
+     6,
+     9,
+     11
+    ],
+    "g65": [
+     1,
+     4,
+     7
+    ]
+   }
+  },
+  {
+   "ambito": "UE-15",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 38,
+   "estado": "habitado",
+   "pct_residencial_vacante": 6.8,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    56,
+    76,
+    83
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     2,
+     3
+    ],
+    "g3_5": [
+     2,
+     3,
+     3
+    ],
+    "g6_11": [
+     5,
+     8,
+     9
+    ],
+    "g12_17": [
+     6,
+     9,
+     11
+    ],
+    "g65": [
+     1,
+     4,
+     7
+    ]
+   }
+  },
+  {
+   "ambito": "UE-20",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 34,
+   "estado": "habitado",
+   "pct_residencial_vacante": 13.2,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    51,
+    68,
+    74
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     2,
+     2
+    ],
+    "g3_5": [
+     2,
+     2,
+     3
+    ],
+    "g6_11": [
+     5,
+     7,
+     8
+    ],
+    "g12_17": [
+     5,
+     8,
+     9
+    ],
+    "g65": [
+     1,
+     4,
+     7
+    ]
+   }
+  },
+  {
+   "ambito": "UE-22",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 30,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 66.7,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    45,
+    60,
+    65
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     2,
+     2
+    ],
+    "g3_5": [
+     1,
+     2,
+     2
+    ],
+    "g6_11": [
+     4,
+     6,
+     7
+    ],
+    "g12_17": [
+     5,
+     7,
+     8
+    ],
+    "g65": [
+     1,
+     3,
+     6
+    ]
+   }
+  },
+  {
+   "ambito": "UE-4",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 30,
+   "estado": "futuro",
+   "pct_residencial_vacante": 96.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    45,
+    60,
+    65
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     2,
+     2
+    ],
+    "g3_5": [
+     1,
+     2,
+     2
+    ],
+    "g6_11": [
+     4,
+     6,
+     7
+    ],
+    "g12_17": [
+     5,
+     7,
+     8
+    ],
+    "g65": [
+     1,
+     3,
+     6
+    ]
+   }
+  },
+  {
+   "ambito": "UE-9",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 26,
+   "estado": "futuro",
+   "pct_residencial_vacante": 99.4,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    39,
+    52,
+    57
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     2,
+     2
+    ],
+    "g3_5": [
+     1,
+     2,
+     2
+    ],
+    "g6_11": [
+     4,
+     6,
+     6
+    ],
+    "g12_17": [
+     4,
+     6,
+     7
+    ],
+    "g65": [
+     1,
+     3,
+     5
+    ]
+   }
+  },
+  {
+   "ambito": "UE-13A",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 24,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    36,
+    48,
+    52
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     1,
+     2
+    ],
+    "g3_5": [
+     1,
+     2,
+     2
+    ],
+    "g6_11": [
+     3,
+     5,
+     6
+    ],
+    "g12_17": [
+     4,
+     6,
+     7
+    ],
+    "g65": [
+     1,
+     3,
+     5
+    ]
+   }
+  },
+  {
+   "ambito": "UE-19",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 24,
+   "estado": "futuro",
+   "pct_residencial_vacante": 100.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    36,
+    48,
+    52
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     1,
+     2
+    ],
+    "g3_5": [
+     1,
+     2,
+     2
+    ],
+    "g6_11": [
+     3,
+     5,
+     6
+    ],
+    "g12_17": [
+     4,
+     6,
+     7
+    ],
+    "g65": [
+     1,
+     3,
+     5
+    ]
+   }
+  },
+  {
+   "ambito": "UE-31",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 24,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 145,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    36,
+    48,
+    52
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     1,
+     2
+    ],
+    "g3_5": [
+     1,
+     2,
+     2
+    ],
+    "g6_11": [
+     3,
+     5,
+     6
+    ],
+    "g12_17": [
+     4,
+     6,
+     7
+    ],
+    "g65": [
+     1,
+     3,
+     5
+    ]
+   }
+  },
+  {
+   "ambito": "UE-13B",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 22,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 35.8,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    33,
+    44,
+    48
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     1,
+     1
+    ],
+    "g3_5": [
+     1,
+     2,
+     2
+    ],
+    "g6_11": [
+     3,
+     5,
+     5
+    ],
+    "g12_17": [
+     4,
+     5,
+     6
+    ],
+    "g65": [
+     1,
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "ambito": "UE-26",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 22,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 77.4,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    33,
+    44,
+    48
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     1,
+     1
+    ],
+    "g3_5": [
+     1,
+     2,
+     2
+    ],
+    "g6_11": [
+     3,
+     5,
+     5
+    ],
+    "g12_17": [
+     4,
+     5,
+     6
+    ],
+    "g65": [
+     1,
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "ambito": "UE-18A",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 20,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 38.7,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    30,
+    40,
+    44
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     1,
+     1
+    ],
+    "g3_5": [
+     1,
+     1,
+     2
+    ],
+    "g6_11": [
+     3,
+     4,
+     5
+    ],
+    "g12_17": [
+     3,
+     5,
+     6
+    ],
+    "g65": [
+     1,
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "ambito": "UE-18B",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 20,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 73.3,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    30,
+    40,
+    44
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     1,
+     1
+    ],
+    "g3_5": [
+     1,
+     1,
+     2
+    ],
+    "g6_11": [
+     3,
+     4,
+     5
+    ],
+    "g12_17": [
+     3,
+     5,
+     6
+    ],
+    "g65": [
+     1,
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "ambito": "UE-3",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 19,
+   "estado": "futuro",
+   "pct_residencial_vacante": 100.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    28,
+    38,
+    41
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     1,
+     1
+    ],
+    "g3_5": [
+     1,
+     1,
+     2
+    ],
+    "g6_11": [
+     3,
+     4,
+     4
+    ],
+    "g12_17": [
+     3,
+     5,
+     5
+    ],
+    "g65": [
+     1,
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "ambito": "UE-27",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 16,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.6,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    24,
+    32,
+    35
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     1,
+     1
+    ],
+    "g3_5": [
+     1,
+     1,
+     1
+    ],
+    "g6_11": [
+     2,
+     3,
+     4
+    ],
+    "g12_17": [
+     3,
+     4,
+     4
+    ],
+    "g65": [
+     1,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "ambito": "UE-23",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 14,
+   "estado": "futuro",
+   "pct_residencial_vacante": 100.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    21,
+    28,
+    30
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     1,
+     1
+    ],
+    "g3_5": [
+     1,
+     1,
+     1
+    ],
+    "g6_11": [
+     2,
+     3,
+     3
+    ],
+    "g12_17": [
+     2,
+     3,
+     4
+    ],
+    "g65": [
+     1,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "ambito": "UE-2",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 10,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    15,
+    20,
+    22
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     0,
+     1,
+     1
+    ],
+    "g3_5": [
+     0,
+     1,
+     1
+    ],
+    "g6_11": [
+     1,
+     2,
+     2
+    ],
+    "g12_17": [
+     2,
+     2,
+     3
+    ],
+    "g65": [
+     0,
+     1,
+     2
+    ]
+   }
+  },
+  {
+   "ambito": "UE-24",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 10,
+   "estado": "futuro",
+   "pct_residencial_vacante": 100.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    15,
+    20,
+    22
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     0,
+     1,
+     1
+    ],
+    "g3_5": [
+     0,
+     1,
+     1
+    ],
+    "g6_11": [
+     1,
+     2,
+     2
+    ],
+    "g12_17": [
+     2,
+     2,
+     3
+    ],
+    "g65": [
+     0,
+     1,
+     2
+    ]
+   }
+  },
+  {
+   "ambito": "UE-25",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 10,
+   "estado": "futuro",
+   "pct_residencial_vacante": 100.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    15,
+    20,
+    22
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     0,
+     1,
+     1
+    ],
+    "g3_5": [
+     0,
+     1,
+     1
+    ],
+    "g6_11": [
+     1,
+     2,
+     2
+    ],
+    "g12_17": [
+     2,
+     2,
+     3
+    ],
+    "g65": [
+     0,
+     1,
+     2
+    ]
+   }
+  },
+  {
+   "ambito": "S-10",
+   "clase_suelo": "Suelo Apto Para Urbanizar",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "S-11",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 249,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "S-12",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 83,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "S-4",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "UE-28",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 133,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "UE-29",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "UE-30",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  }
+ ]
+}

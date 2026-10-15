@@ -1,0 +1,270 @@
+{
+ "cod_ine": "060",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "S-05.R LA ALARILLA",
+   "viviendas_previstas": 480,
+   "residencial_ocupado_m2": 884624,
+   "residencial_vacante_m2": 321503,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 6876,
+   "pct_residencial_vacante": 26.7,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 3
+  },
+  {
+   "ambito": "S-01.R EL LOMERON",
+   "viviendas_previstas": 209,
+   "residencial_ocupado_m2": 48664,
+   "residencial_vacante_m2": 5108,
+   "equipamiento_ocupado_m2": 3783,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 9.5,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "S-02.R LAS ERAS",
+   "viviendas_previstas": 82,
+   "residencial_ocupado_m2": 4351,
+   "residencial_vacante_m2": 15786,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 3216,
+   "pct_residencial_vacante": 78.4,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 4
+  },
+  {
+   "ambito": "UA-09 EL CHARCO",
+   "viviendas_previstas": 75,
+   "residencial_ocupado_m2": 1166,
+   "residencial_vacante_m2": 17875,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 93.9,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "S-03.R EL SONCERRO",
+   "viviendas_previstas": 63,
+   "residencial_ocupado_m2": 1371,
+   "residencial_vacante_m2": 19187,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 93.3,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-06 LAS NAVES",
+   "viviendas_previstas": 62,
+   "residencial_ocupado_m2": 6763,
+   "residencial_vacante_m2": 4587,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 40.4,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-04 BOLEO",
+   "viviendas_previstas": 46,
+   "residencial_ocupado_m2": 2033,
+   "residencial_vacante_m2": 9553,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 82.4,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-07 PLAZA DE TOROS",
+   "viviendas_previstas": 46,
+   "residencial_ocupado_m2": 6384,
+   "residencial_vacante_m2": 3500,
+   "equipamiento_ocupado_m2": 71,
+   "equipamiento_vacante_m2": 1797,
+   "pct_residencial_vacante": 35.4,
+   "pct_equipamiento_vacante": 96.2,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "UA-12 LOS LAVADEROS",
+   "viviendas_previstas": 36,
+   "residencial_ocupado_m2": 142,
+   "residencial_vacante_m2": 9458,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 98.5,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-01 LOS JARDINES",
+   "viviendas_previstas": 34,
+   "residencial_ocupado_m2": 8796,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-02-1 CAMARA AGRARIA",
+   "viviendas_previstas": 33,
+   "residencial_ocupado_m2": 6148,
+   "residencial_vacante_m2": 804,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 11.6,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-11 ARROYO DEL VALLE",
+   "viviendas_previstas": 33,
+   "residencial_ocupado_m2": 2506,
+   "residencial_vacante_m2": 5202,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 67.5,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-08 POLIDEPORTIVO",
+   "viviendas_previstas": 26,
+   "residencial_ocupado_m2": 2081,
+   "residencial_vacante_m2": 3263,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 378,
+   "pct_residencial_vacante": 61.1,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "UA-05",
+   "viviendas_previstas": 18,
+   "residencial_ocupado_m2": 4303,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-03",
+   "viviendas_previstas": 15,
+   "residencial_ocupado_m2": 2033,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-13 SAN FRANCISCO",
+   "viviendas_previstas": 15,
+   "residencial_ocupado_m2": 1419,
+   "residencial_vacante_m2": 804,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 36.2,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-10 LA CANTERA",
+   "viviendas_previstas": 12,
+   "residencial_ocupado_m2": 3783,
+   "residencial_vacante_m2": 236,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 5.9,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-02-2 CAMINO DE CHINCHON",
+   "viviendas_previstas": 7,
+   "residencial_ocupado_m2": 1277,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "PERI-1 EL CASTILLO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 6100,
+   "residencial_vacante_m2": 95,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 1.5,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "PERI-2 BARRIO DE LA CRUZ",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 18801,
+   "residencial_vacante_m2": 1135,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 5.7,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "S-04.I",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-14 VARIANTE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-15 PEÑAS DE LA GREDA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-16 EL CANAL",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

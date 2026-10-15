@@ -1,0 +1,50 @@
+{
+ "cod_ine": "035",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "UA-1 VILLARES",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 6088,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-2 CORNISA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 850,
+   "residencial_vacante_m2": 1652,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 66.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-3 LA VEREDA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 4908,
+   "residencial_vacante_m2": 1463,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 23.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-4 CAMINO DEL ROBLEDILLO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 4389,
+   "residencial_vacante_m2": 29778,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 87.2,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"id": "8_10125", "modo": "interurbano", "modos": "interurbano", "nombre": "CHAPINERÍA", "situacion": "S", "accesibilidad": "T", "lineas": "interurbano: 551", "n_lineas": 1, "fecha_dato": "20260529", "cod_ine": "051"}, "geometry": {"type": "Point", "coordinates": [-4.209471, 40.382921]}}]}

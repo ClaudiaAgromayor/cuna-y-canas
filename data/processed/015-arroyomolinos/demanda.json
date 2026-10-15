@@ -1,0 +1,670 @@
+{
+ "cod_ine": "015",
+ "modelo": "población al completarse = viviendas previstas × habitantes por vivienda prevista; resultados en [mínimo, central, máximo]",
+ "calibracion": {
+  "municipio": "Getafe",
+  "fuente": "INE (Atlas de Distribución de Renta de los Hogares) + IDEM (ámbitos y suelo vacante)",
+  "criterio": "barrios con al menos 1000 viviendas previstas, menos del 15 % de suelo residencial vacante y al menos 1 sección censal entera dentro",
+  "barrios": [
+   {
+    "ambito": "SUI-05 PAU-2 EL BERCIAL-UNIVERSIDAD",
+    "viviendas": 5950,
+    "anio": 2023,
+    "poblacion": 12931,
+    "hab_por_vivienda": 2.173,
+    "tam_hogar": 2.96,
+    "pct_menores18": 28.7,
+    "pct_mayores65": 7.9,
+    "serie": {
+     "2015": 10740,
+     "2016": 11242,
+     "2017": 11709,
+     "2018": 12016,
+     "2019": 12172,
+     "2020": 12126,
+     "2021": 12291,
+     "2022": 12618,
+     "2023": 12931
+    }
+   },
+   {
+    "ambito": "SUI-07 PAU-3 PERALES DEL RÍO",
+    "viviendas": 1750,
+    "anio": 2023,
+    "poblacion": 3807,
+    "hab_por_vivienda": 2.175,
+    "tam_hogar": 3.22,
+    "pct_menores18": 25.6,
+    "pct_mayores65": 9.0,
+    "serie": {
+     "2015": 1699,
+     "2016": 1701,
+     "2017": 3289,
+     "2018": 3363,
+     "2019": 3392,
+     "2020": 3396,
+     "2021": 3744,
+     "2022": 3784,
+     "2023": 3807
+    }
+   },
+   {
+    "ambito": "SUS-PP-2 LOS MOLINOS",
+    "viviendas": 6276,
+    "anio": 2023,
+    "poblacion": 11473,
+    "hab_por_vivienda": 1.828,
+    "tam_hogar": 2.58,
+    "pct_menores18": 30.5,
+    "pct_mayores65": 2.4,
+    "serie": {
+     "2015": 5983,
+     "2016": 6554,
+     "2017": 7712,
+     "2018": 8369,
+     "2019": 8895,
+     "2020": 9741,
+     "2021": 10345,
+     "2022": 10832,
+     "2023": 11473
+    }
+   },
+   {
+    "ambito": "SUS-PP-3 BUENAVISTA",
+    "viviendas": 5958,
+    "anio": 2023,
+    "poblacion": 8854,
+    "hab_por_vivienda": 1.486,
+    "tam_hogar": 2.47,
+    "pct_menores18": 30.2,
+    "pct_mayores65": 3.1,
+    "serie": {
+     "2015": 6027,
+     "2016": 6823,
+     "2017": 5857,
+     "2018": 6623,
+     "2019": 7122,
+     "2020": 7565,
+     "2021": 8067,
+     "2022": 8374,
+     "2023": 8854
+    }
+   }
+  ],
+  "parametros": {
+   "hab_por_vivienda": [
+    1.486,
+    2.001,
+    2.175
+   ],
+   "pct_menores18": [
+    25.6,
+    29.45,
+    30.5
+   ],
+   "pct_mayores65": [
+    2.4,
+    5.5,
+    9.0
+   ]
+  },
+  "reparto_menores": {
+   "g0_2": 0.1151,
+   "g3_5": 0.1392,
+   "g6_11": 0.3825,
+   "g12_17": 0.3632
+  },
+  "tam_hogar_mediano_municipio": 2.6
+ },
+ "prueba_con_el_pasado": [
+  {
+   "ambito": "SUI-05 PAU-2 EL BERCIAL-UNIVERSIDAD",
+   "anio": 2023,
+   "real": 12931,
+   "prediccion": 10887,
+   "error_pct": -15.8,
+   "prediccion_ingenua": 15470,
+   "error_ingenua_pct": 19.6,
+   "rango": [
+    8842,
+    12941
+   ],
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "SUI-07 PAU-3 PERALES DEL RÍO",
+   "anio": 2023,
+   "real": 3807,
+   "prediccion": 3201,
+   "error_pct": -15.9,
+   "prediccion_ingenua": 4550,
+   "error_ingenua_pct": 19.5,
+   "rango": [
+    2600,
+    3803
+   ],
+   "dentro_del_rango": false
+  },
+  {
+   "ambito": "SUS-PP-2 LOS MOLINOS",
+   "anio": 2023,
+   "real": 11473,
+   "prediccion": 12205,
+   "error_pct": 6.4,
+   "prediccion_ingenua": 16318,
+   "error_ingenua_pct": 42.2,
+   "rango": [
+    9326,
+    13650
+   ],
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "SUS-PP-3 BUENAVISTA",
+   "anio": 2023,
+   "real": 8854,
+   "prediccion": 12266,
+   "error_pct": 38.5,
+   "prediccion_ingenua": 15491,
+   "error_ingenua_pct": 75.0,
+   "rango": [
+    10891,
+    12959
+   ],
+   "dentro_del_rango": false
+  }
+ ],
+ "ambitos": [
+  {
+   "ambito": "SAU-3 CIUDAD JARDÍN DE ARROYOMOLINOS",
+   "clase_suelo": "Suelo Apto Para Urbanizar",
+   "viviendas": 3880,
+   "estado": "habitado",
+   "pct_residencial_vacante": 13.2,
+   "poblacion_actual": 5422,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    5766,
+    7764,
+    8439
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     170,
+     263,
+     296
+    ],
+    "g3_5": [
+     205,
+     318,
+     358
+    ],
+    "g6_11": [
+     565,
+     875,
+     985
+    ],
+    "g12_17": [
+     536,
+     830,
+     935
+    ],
+    "g65": [
+     138,
+     427,
+     760
+    ]
+   }
+  },
+  {
+   "ambito": "SAU-6 ZARZALEJO",
+   "clase_suelo": "Suelo Apto Para Urbanizar",
+   "viviendas": 2700,
+   "estado": "habitado",
+   "pct_residencial_vacante": 11.1,
+   "poblacion_actual": 5882,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    4012,
+    5403,
+    5872
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     118,
+     183,
+     206
+    ],
+    "g3_5": [
+     143,
+     221,
+     249
+    ],
+    "g6_11": [
+     393,
+     609,
+     685
+    ],
+    "g12_17": [
+     373,
+     578,
+     650
+    ],
+    "g65": [
+     96,
+     297,
+     528
+    ]
+   }
+  },
+  {
+   "ambito": "APD-4 LOS CARRIZOS",
+   "clase_suelo": "Suelo Apto Para Urbanizar",
+   "viviendas": 1500,
+   "estado": "habitado",
+   "pct_residencial_vacante": 2.0,
+   "poblacion_actual": 2541,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    2229,
+    3002,
+    3262
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     66,
+     102,
+     115
+    ],
+    "g3_5": [
+     79,
+     123,
+     138
+    ],
+    "g6_11": [
+     218,
+     338,
+     381
+    ],
+    "g12_17": [
+     207,
+     321,
+     361
+    ],
+    "g65": [
+     53,
+     165,
+     294
+    ]
+   }
+  },
+  {
+   "ambito": "SAU-2 EL RELLANO",
+   "clase_suelo": "Suelo Apto Para Urbanizar",
+   "viviendas": 975,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 19.2,
+   "poblacion_actual": 805,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    1449,
+    1951,
+    2121
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     43,
+     66,
+     74
+    ],
+    "g3_5": [
+     52,
+     80,
+     90
+    ],
+    "g6_11": [
+     142,
+     220,
+     247
+    ],
+    "g12_17": [
+     135,
+     209,
+     235
+    ],
+    "g65": [
+     35,
+     107,
+     191
+    ]
+   }
+  },
+  {
+   "ambito": "SAU-5 MOLINO PERDIDO",
+   "clase_suelo": "Suelo Apto Para Urbanizar",
+   "viviendas": 950,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 29.7,
+   "poblacion_actual": 2894,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    1412,
+    1901,
+    2066
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     42,
+     64,
+     73
+    ],
+    "g3_5": [
+     50,
+     78,
+     88
+    ],
+    "g6_11": [
+     138,
+     214,
+     241
+    ],
+    "g12_17": [
+     131,
+     203,
+     229
+    ],
+    "g65": [
+     34,
+     105,
+     186
+    ]
+   }
+  },
+  {
+   "ambito": "SAU-7 LA RINCONADA II",
+   "clase_suelo": "Suelo Apto Para Urbanizar",
+   "viviendas": 692,
+   "estado": "habitado",
+   "pct_residencial_vacante": 14.7,
+   "poblacion_actual": 1539,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    1028,
+    1385,
+    1505
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     30,
+     47,
+     53
+    ],
+    "g3_5": [
+     37,
+     57,
+     64
+    ],
+    "g6_11": [
+     101,
+     156,
+     176
+    ],
+    "g12_17": [
+     96,
+     148,
+     167
+    ],
+    "g65": [
+     25,
+     76,
+     135
+    ]
+   }
+  },
+  {
+   "ambito": "SAU-1 LOS MOSQUITOS",
+   "clase_suelo": "Suelo Apto Para Urbanizar",
+   "viviendas": 425,
+   "estado": "habitado",
+   "pct_residencial_vacante": 1.2,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    632,
+    850,
+    924
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     19,
+     29,
+     32
+    ],
+    "g3_5": [
+     23,
+     35,
+     39
+    ],
+    "g6_11": [
+     62,
+     96,
+     108
+    ],
+    "g12_17": [
+     59,
+     91,
+     102
+    ],
+    "g65": [
+     15,
+     47,
+     83
+    ]
+   }
+  },
+  {
+   "ambito": "APD-1 ÁREA DE CENTRALIDAD",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 120,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    178,
+    240,
+    261
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     5,
+     8,
+     9
+    ],
+    "g3_5": [
+     6,
+     10,
+     11
+    ],
+    "g6_11": [
+     17,
+     27,
+     30
+    ],
+    "g12_17": [
+     17,
+     26,
+     29
+    ],
+    "g65": [
+     4,
+     13,
+     23
+    ]
+   }
+  },
+  {
+   "ambito": "UE-5 C/ÁLAMO NORTE-CTRA M-413",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 24,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    36,
+    48,
+    52
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     2,
+     2
+    ],
+    "g3_5": [
+     1,
+     2,
+     2
+    ],
+    "g6_11": [
+     4,
+     5,
+     6
+    ],
+    "g12_17": [
+     3,
+     5,
+     6
+    ],
+    "g65": [
+     1,
+     3,
+     5
+    ]
+   }
+  },
+  {
+   "ambito": "UE-4 C/MADRID-RODRIGUEZ DE LA FUENTE",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 8,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    12,
+    16,
+    17
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     0,
+     1,
+     1
+    ],
+    "g3_5": [
+     0,
+     1,
+     1
+    ],
+    "g6_11": [
+     1,
+     2,
+     2
+    ],
+    "g12_17": [
+     1,
+     2,
+     2
+    ],
+    "g65": [
+     0,
+     1,
+     2
+    ]
+   }
+  },
+  {
+   "ambito": "ACTUACIÓN ASISTEMÁTICA",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 3.8,
+   "poblacion_actual": 7039,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "APD-2 PARQUE DE LA NIEVE",
+   "clase_suelo": "Suelo Apto Para Urbanizar",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 933,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "APD-3 VALDEFUENTES",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "SAU-4A VALDEARENAL NORTE",
+   "clase_suelo": "Suelo Apto Para Urbanizar",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 362,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "SAU-4B VALDEARENAL SUR",
+   "clase_suelo": "Suelo Apto Para Urbanizar",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 544,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "UE-1 C/MORALEJA",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "UE-2 EL JARDÍN",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 168,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "UE-6 C/ÁLAMO SUR",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "UE-7 C/ÁLAMO PLAZA",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  }
+ ]
+}

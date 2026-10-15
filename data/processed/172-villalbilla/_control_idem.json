@@ -1,0 +1,55 @@
+{
+ "municipio": {
+  "cod": "172",
+  "nombre": "Villalbilla",
+  "nombre_ckan": "Villalbilla",
+  "slug": "villalbilla"
+ },
+ "ambitos_poligonos_brutos": 40,
+ "ambitos_geometrias_invalidas_reparadas": 21,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [
+  "S-R8 LOS HUEROS"
+ ],
+ "ambitos": 28,
+ "ambitos_sin_viviendas": 11,
+ "ambitos_guardados": 28,
+ "redes_geometrias_invalidas_reparadas": 125,
+ "redes_brutas": 372,
+ "redes_dotacionales": 94,
+ "redes_por_tipo_y_estado": {
+  "cultural/sin_dato": 2,
+  "deportivo/sin_dato": 11,
+  "educativo/sin_dato": 12,
+  "sanitario/sin_dato": 1,
+  "zona_verde/sin_dato": 68
+ },
+ "redes_guardadas": 94,
+ "suelo_parcelas_brutas": 9817,
+ "suelo_geometrias_invalidas_reparadas": 3088,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 27,
+ "candidatas_vacantes_equipamiento": 114,
+ "candidatas_sin_superficie_en_origen": 31,
+ "candidatas_descartadas_menores_de_50_m2": 53,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 61,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 31,
+  ">=2000": 25,
+  ">=5000": 14,
+  ">=10000": 8
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 43,
+  "centros_educativos.geojson": 4,
+  "centros_sanitarios.geojson": 8,
+  "centros_sociales.geojson": 2,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 31,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 55,
+  "resumen_ambitos.json": 9
+ }
+}

@@ -1,0 +1,59 @@
+{
+ "municipio": {
+  "cod": "074",
+  "nombre": "Leganés",
+  "nombre_ckan": "Leganés",
+  "slug": "leganes"
+ },
+ "ambitos_poligonos_brutos": 144,
+ "ambitos_geometrias_invalidas_reparadas": 29,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 42,
+ "ambitos_sin_viviendas": 27,
+ "ambitos_guardados": 42,
+ "redes_geometrias_invalidas_reparadas": 285,
+ "redes_brutas": 1150,
+ "redes_dotacionales": 297,
+ "redes_por_tipo_y_estado": {
+  "cultural/sin_dato": 4,
+  "deportivo/sin_dato": 16,
+  "educativo/sin_dato": 29,
+  "sanitario/sin_dato": 9,
+  "zona_verde/sin_dato": 239
+ },
+ "redes_guardadas": 283,
+ "suelo_parcelas_brutas": 16018,
+ "suelo_geometrias_invalidas_reparadas": 6227,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 42,
+ "candidatas_vacantes_equipamiento": 325,
+ "candidatas_sin_superficie_en_origen": 10,
+ "candidatas_descartadas_menores_de_50_m2": 26,
+ "candidatas_duplicadas_por_referencia_catastral": 2,
+ "candidatas_guardadas": 299,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 238,
+  ">=2000": 191,
+  ">=5000": 118,
+  ">=10000": 49
+ },
+ "portal_suelo_parcelas": 24,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Industrial": 22,
+  "Terciario": 2
+ },
+ "portal_suelo_guardadas": 24,
+ "tamanos_kb": {
+  "ambitos.geojson": 121,
+  "centros_educativos.geojson": 35,
+  "centros_sanitarios.geojson": 120,
+  "centros_sociales.geojson": 33,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 156,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 16,
+  "redes.geojson": 155,
+  "resumen_ambitos.json": 14
+ }
+}

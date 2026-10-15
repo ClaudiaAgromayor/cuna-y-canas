@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "066",
+  "nombre": "Griñón",
+  "nombre_ckan": "Griñón",
+  "slug": "grinon"
+ },
+ "educativos_municipio": 12,
+ "educativos_en_alta": 8,
+ "educativos_guardados": 8,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 85,
+ "sanitarios_centros": 22,
+ "sanitarios_guardados": 22,
+ "sanitarios_sin_coordenadas": 0,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 8,
+ "sociales_guardados": 8,
+ "sociales_sin_coordenadas": 0,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 2,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 10785
+}

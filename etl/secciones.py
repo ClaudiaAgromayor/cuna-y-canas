@@ -88,10 +88,14 @@ def procesar(muni: dict) -> dict:
 
     # reparto por áreas: cada sección aporta a un ámbito la fracción de su superficie que cae dentro
     g["geometry"] = solo_poligonos(g.geometry)
-    amb = gpd.read_file(out / "ambitos.geojson").to_crs(M)[["nombre", "geometry"]]
+    amb = gpd.read_file(out / "ambitos.geojson")
+    amb = amb.to_crs(M)[["nombre", "geometry"]] if not amb.empty else gpd.GeoDataFrame({"nombre": []}, geometry=[], crs=M)
     amb["geometry"] = solo_poligonos(amb.geometry)
     g["area"] = g.geometry.area
-    inter = gpd.overlay(g[["cod_seccion", "area", "geometry"]], amb, how="intersection", keep_geom_type=False)
+    if amb.empty:  # sin ámbitos de desarrollo: ninguna sección se reparte
+        inter = gpd.GeoDataFrame({"cod_seccion": [], "nombre": [], "area": []}, geometry=[], crs=M)
+    else:
+        inter = gpd.overlay(g[["cod_seccion", "area", "geometry"]], amb, how="intersection", keep_geom_type=False)
     inter["frac"] = inter.geometry.area / inter["area"]
     inter = inter[inter["frac"] >= FRAC_MIN][["cod_seccion", "nombre", "frac"]]
     mejor = inter.sort_values("frac", ascending=False).drop_duplicates("cod_seccion")
@@ -108,6 +112,7 @@ def procesar(muni: dict) -> dict:
     s["geometry"] = s.geometry.simplify(2, preserve_topology=True)
     s = s.to_crs(4326)
     s["geometry"] = solo_poligonos(s.geometry.set_precision(1e-6, mode="pointwise"))
+    s = s[s.geometry.notna() & ~s.geometry.is_empty & s.geometry.is_valid]  # una sección diminuta puede colapsar al simplificar
     (out / "secciones.geojson").write_text(s.to_json(drop_id=True, ensure_ascii=False), encoding="utf-8")
 
     # series por ámbito: población repartida por áreas (supone densidad uniforme dentro de cada sección)

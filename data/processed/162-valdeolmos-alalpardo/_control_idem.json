@@ -1,0 +1,52 @@
+{
+ "municipio": {
+  "cod": "162",
+  "nombre": "Valdeolmos-Alalpardo",
+  "nombre_ckan": "Valdeolmos-Alalpardo",
+  "slug": "valdeolmos-alalpardo"
+ },
+ "ambitos_poligonos_brutos": 30,
+ "ambitos_geometrias_invalidas_reparadas": 0,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 30,
+ "ambitos_sin_viviendas": 2,
+ "ambitos_guardados": 30,
+ "redes_geometrias_invalidas_reparadas": 55,
+ "redes_brutas": 187,
+ "redes_dotacionales": 0,
+ "redes_por_tipo_y_estado": {},
+ "redes_guardadas": 0,
+ "suelo_parcelas_brutas": 2148,
+ "suelo_geometrias_invalidas_reparadas": 961,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 30,
+ "candidatas_vacantes_equipamiento": 11,
+ "candidatas_sin_superficie_en_origen": 0,
+ "candidatas_descartadas_menores_de_50_m2": 1,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 10,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 2,
+  ">=2000": 1,
+  ">=5000": 0,
+  ">=10000": 0
+ },
+ "portal_suelo_parcelas": 8,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Residencial": 8
+ },
+ "portal_suelo_guardadas": 8,
+ "tamanos_kb": {
+  "ambitos.geojson": 23,
+  "centros_educativos.geojson": 2,
+  "centros_sanitarios.geojson": 3,
+  "centros_sociales.geojson": 0,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 4,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 5,
+  "redes.geojson": 0,
+  "resumen_ambitos.json": 10
+ }
+}

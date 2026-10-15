@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"codigo": "28048038", "nombre": "POZUELO DEL REY", "tipo": "EEI-CN", "tipo_largo": "ESCUELA  INFANTIL-CASA DE NIÑOS", "titularidad": "PÚBLICO", "direccion": "de Carlos Ruiz", "cp": "28813", "distrito": "", "cod_ine": "116"}, "geometry": {"type": "Point", "coordinates": [-3.321392, 40.365779]}}]}

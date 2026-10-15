@@ -1,0 +1,51 @@
+{
+ "municipio": {
+  "cod": "042",
+  "nombre": "Colmenar del Arroyo",
+  "nombre_ckan": "Colmenar del Arroyo",
+  "slug": "colmenar-del-arroyo"
+ },
+ "ambitos_poligonos_brutos": 47,
+ "ambitos_geometrias_invalidas_reparadas": 6,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 47,
+ "ambitos_sin_viviendas": 16,
+ "ambitos_guardados": 47,
+ "redes_geometrias_invalidas_reparadas": 70,
+ "redes_brutas": 229,
+ "redes_dotacionales": 138,
+ "redes_por_tipo_y_estado": {
+  "deportivo/sin_dato": 5,
+  "educativo/sin_dato": 2,
+  "zona_verde/sin_dato": 131
+ },
+ "redes_guardadas": 137,
+ "suelo_parcelas_brutas": 2725,
+ "suelo_geometrias_invalidas_reparadas": 1121,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 44,
+ "candidatas_vacantes_equipamiento": 189,
+ "candidatas_sin_superficie_en_origen": 1,
+ "candidatas_descartadas_menores_de_50_m2": 12,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 177,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 107,
+  ">=2000": 84,
+  ">=5000": 48,
+  ">=10000": 15
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 34,
+  "centros_educativos.geojson": 1,
+  "centros_sanitarios.geojson": 1,
+  "centros_sociales.geojson": 0,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 78,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 55,
+  "resumen_ambitos.json": 14
+ }
+}

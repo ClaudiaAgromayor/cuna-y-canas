@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "013",
+  "nombre": "Aranjuez",
+  "nombre_ckan": "Aranjuez",
+  "slug": "aranjuez"
+ },
+ "educativos_municipio": 61,
+ "educativos_en_alta": 30,
+ "educativos_guardados": 30,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 395,
+ "sanitarios_centros": 138,
+ "sanitarios_guardados": 136,
+ "sanitarios_sin_coordenadas": 2,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 22,
+ "sociales_guardados": 21,
+ "sociales_sin_coordenadas": 1,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 17,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 63838
+}

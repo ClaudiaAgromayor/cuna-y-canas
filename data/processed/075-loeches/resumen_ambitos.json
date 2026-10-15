@@ -1,0 +1,105 @@
+{
+ "cod_ine": "075",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "S-4 VALDEPOZUELO",
+   "viviendas_previstas": 1910,
+   "residencial_ocupado_m2": 63767,
+   "residencial_vacante_m2": 203834,
+   "equipamiento_ocupado_m2": 992,
+   "equipamiento_vacante_m2": 191422,
+   "pct_residencial_vacante": 76.2,
+   "pct_equipamiento_vacante": 99.5,
+   "parcelas_equipamiento_vacantes": 23
+  },
+  {
+   "ambito": "S-1 LOS CONVENTOS",
+   "viviendas_previstas": 642,
+   "residencial_ocupado_m2": 144821,
+   "residencial_vacante_m2": 21724,
+   "equipamiento_ocupado_m2": 32274,
+   "equipamiento_vacante_m2": 14650,
+   "pct_residencial_vacante": 13.0,
+   "pct_equipamiento_vacante": 31.2,
+   "parcelas_equipamiento_vacantes": 7
+  },
+  {
+   "ambito": "S-2 RANCHO CHICO",
+   "viviendas_previstas": 434,
+   "residencial_ocupado_m2": 58698,
+   "residencial_vacante_m2": 19597,
+   "equipamiento_ocupado_m2": 7011,
+   "equipamiento_vacante_m2": 30998,
+   "pct_residencial_vacante": 25.0,
+   "pct_equipamiento_vacante": 81.6,
+   "parcelas_equipamiento_vacantes": 6
+  },
+  {
+   "ambito": "S-3 CAMINO PERALTA",
+   "viviendas_previstas": 272,
+   "residencial_ocupado_m2": 51336,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 11165,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "U-2",
+   "viviendas_previstas": 105,
+   "residencial_ocupado_m2": 19551,
+   "residencial_vacante_m2": 2638,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 3251,
+   "pct_residencial_vacante": 11.9,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "PLAN ESPECIAL COMPLEJO MEDIOAMBIENTAL DE RECICLAJE",
+   "viviendas_previstas": 0,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 202744,
+   "equipamiento_vacante_m2": 307209,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 60.2,
+   "parcelas_equipamiento_vacantes": 6
+  },
+  {
+   "ambito": "S-5 EL CRUCERO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 283,
+   "equipamiento_vacante_m2": 12246,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 97.7,
+   "parcelas_equipamiento_vacantes": 5
+  },
+  {
+   "ambito": "S-6 LOS PRADOS",
+   "viviendas_previstas": 0,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 7583,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "U-1",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 4805,
+   "residencial_vacante_m2": 707,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 12.8,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

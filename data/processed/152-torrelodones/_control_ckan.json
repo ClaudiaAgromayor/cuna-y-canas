@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "152",
+  "nombre": "Torrelodones",
+  "nombre_ckan": "Torrelodones",
+  "slug": "torrelodones"
+ },
+ "educativos_municipio": 33,
+ "educativos_en_alta": 19,
+ "educativos_guardados": 19,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 265,
+ "sanitarios_centros": 69,
+ "sanitarios_guardados": 68,
+ "sanitarios_sin_coordenadas": 1,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 11,
+ "sociales_guardados": 10,
+ "sociales_sin_coordenadas": 1,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 8,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 25324
+}

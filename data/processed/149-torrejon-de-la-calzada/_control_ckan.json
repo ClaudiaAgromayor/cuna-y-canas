@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "149",
+  "nombre": "Torrejón de la Calzada",
+  "nombre_ckan": "Torrejón de la Calzada",
+  "slug": "torrejon-de-la-calzada"
+ },
+ "educativos_municipio": 7,
+ "educativos_en_alta": 6,
+ "educativos_guardados": 6,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 60,
+ "sanitarios_centros": 18,
+ "sanitarios_guardados": 18,
+ "sanitarios_sin_coordenadas": 0,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 2,
+ "sociales_guardados": 1,
+ "sociales_sin_coordenadas": 1,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 4,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 10618
+}

@@ -1,0 +1,182 @@
+{
+ "cod_ine": "013",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "LAS CABEZADAS",
+   "viviendas_previstas": 4000,
+   "residencial_ocupado_m2": 1563,
+   "residencial_vacante_m2": 254686,
+   "equipamiento_ocupado_m2": 58809,
+   "equipamiento_vacante_m2": 323912,
+   "pct_residencial_vacante": 99.4,
+   "pct_equipamiento_vacante": 84.6,
+   "parcelas_equipamiento_vacantes": 30
+  },
+  {
+   "ambito": "LA MONTAÑA",
+   "viviendas_previstas": 2950,
+   "residencial_ocupado_m2": 618979,
+   "residencial_vacante_m2": 137215,
+   "equipamiento_ocupado_m2": 431640,
+   "equipamiento_vacante_m2": 204500,
+   "pct_residencial_vacante": 18.1,
+   "pct_equipamiento_vacante": 32.1,
+   "parcelas_equipamiento_vacantes": 13
+  },
+  {
+   "ambito": "AGFA",
+   "viviendas_previstas": 1300,
+   "residencial_ocupado_m2": 68798,
+   "residencial_vacante_m2": 24621,
+   "equipamiento_ocupado_m2": 16714,
+   "equipamiento_vacante_m2": 3930,
+   "pct_residencial_vacante": 26.4,
+   "pct_equipamiento_vacante": 19.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "S-I NUEVO ARANJUEZ (ACTUALMENTE CIUDAD DE LAS ARTES)",
+   "viviendas_previstas": 631,
+   "residencial_ocupado_m2": 138784,
+   "residencial_vacante_m2": 125150,
+   "equipamiento_ocupado_m2": 13849,
+   "equipamiento_vacante_m2": 3220,
+   "pct_residencial_vacante": 47.4,
+   "pct_equipamiento_vacante": 18.9,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "S-VIII PENICILINA",
+   "viviendas_previstas": 152,
+   "residencial_ocupado_m2": 51432,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 9093,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "ACADEMIA DE LA GUARDIA CIVIL",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 231897,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "AH-2 VERGEL-OLIVAS",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 47735,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 58722,
+   "equipamiento_vacante_m2": 3031,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": 4.9,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "PARCELA 501",
+   "viviendas_previstas": 0,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 27876,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 1562,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "PERI CORTIJO DE SAN ISIDRO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 76826,
+   "residencial_vacante_m2": 1704,
+   "equipamiento_ocupado_m2": 18982,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 2.2,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "PERI DE LA ESTACIÓN",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 8097,
+   "residencial_vacante_m2": 3267,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 28.8,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "PLAN ESPECIAL CENTRO PENITENCIARIO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 395713,
+   "equipamiento_vacante_m2": 11022,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 2.7,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "PUENTE LARGO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 2861520,
+   "equipamiento_ocupado_m2": 347,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "S-X ENTREVÍAS",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "S-XI CERRO DE LA LINTERNA OESTE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 5083,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 3
+  },
+  {
+   "ambito": "SUZNS-IX",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UNIDAD DE EJECUCIÓN PIRELLI",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 5824,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

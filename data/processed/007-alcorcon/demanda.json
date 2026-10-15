@@ -1,0 +1,1291 @@
+{
+ "cod_ine": "007",
+ "modelo": "población al completarse = viviendas previstas × habitantes por vivienda prevista; resultados en [mínimo, central, máximo]",
+ "calibracion": {
+  "municipio": "Getafe",
+  "fuente": "INE (Atlas de Distribución de Renta de los Hogares) + IDEM (ámbitos y suelo vacante)",
+  "criterio": "barrios con al menos 1000 viviendas previstas, menos del 15 % de suelo residencial vacante y al menos 1 sección censal entera dentro",
+  "barrios": [
+   {
+    "ambito": "SUI-05 PAU-2 EL BERCIAL-UNIVERSIDAD",
+    "viviendas": 5950,
+    "anio": 2023,
+    "poblacion": 12931,
+    "hab_por_vivienda": 2.173,
+    "tam_hogar": 2.96,
+    "pct_menores18": 28.7,
+    "pct_mayores65": 7.9,
+    "serie": {
+     "2015": 10740,
+     "2016": 11242,
+     "2017": 11709,
+     "2018": 12016,
+     "2019": 12172,
+     "2020": 12126,
+     "2021": 12291,
+     "2022": 12618,
+     "2023": 12931
+    }
+   },
+   {
+    "ambito": "SUI-07 PAU-3 PERALES DEL RÍO",
+    "viviendas": 1750,
+    "anio": 2023,
+    "poblacion": 3807,
+    "hab_por_vivienda": 2.175,
+    "tam_hogar": 3.22,
+    "pct_menores18": 25.6,
+    "pct_mayores65": 9.0,
+    "serie": {
+     "2015": 1699,
+     "2016": 1701,
+     "2017": 3289,
+     "2018": 3363,
+     "2019": 3392,
+     "2020": 3396,
+     "2021": 3744,
+     "2022": 3784,
+     "2023": 3807
+    }
+   },
+   {
+    "ambito": "SUS-PP-2 LOS MOLINOS",
+    "viviendas": 6276,
+    "anio": 2023,
+    "poblacion": 11473,
+    "hab_por_vivienda": 1.828,
+    "tam_hogar": 2.58,
+    "pct_menores18": 30.5,
+    "pct_mayores65": 2.4,
+    "serie": {
+     "2015": 5983,
+     "2016": 6554,
+     "2017": 7712,
+     "2018": 8369,
+     "2019": 8895,
+     "2020": 9741,
+     "2021": 10345,
+     "2022": 10832,
+     "2023": 11473
+    }
+   },
+   {
+    "ambito": "SUS-PP-3 BUENAVISTA",
+    "viviendas": 5958,
+    "anio": 2023,
+    "poblacion": 8854,
+    "hab_por_vivienda": 1.486,
+    "tam_hogar": 2.47,
+    "pct_menores18": 30.2,
+    "pct_mayores65": 3.1,
+    "serie": {
+     "2015": 6027,
+     "2016": 6823,
+     "2017": 5857,
+     "2018": 6623,
+     "2019": 7122,
+     "2020": 7565,
+     "2021": 8067,
+     "2022": 8374,
+     "2023": 8854
+    }
+   }
+  ],
+  "parametros": {
+   "hab_por_vivienda": [
+    1.486,
+    2.001,
+    2.175
+   ],
+   "pct_menores18": [
+    25.6,
+    29.45,
+    30.5
+   ],
+   "pct_mayores65": [
+    2.4,
+    5.5,
+    9.0
+   ]
+  },
+  "reparto_menores": {
+   "g0_2": 0.1193,
+   "g3_5": 0.1342,
+   "g6_11": 0.345,
+   "g12_17": 0.4015
+  },
+  "tam_hogar_mediano_municipio": 2.6
+ },
+ "prueba_con_el_pasado": [
+  {
+   "ambito": "SUI-05 PAU-2 EL BERCIAL-UNIVERSIDAD",
+   "anio": 2023,
+   "real": 12931,
+   "prediccion": 10887,
+   "error_pct": -15.8,
+   "prediccion_ingenua": 15470,
+   "error_ingenua_pct": 19.6,
+   "rango": [
+    8842,
+    12941
+   ],
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "SUI-07 PAU-3 PERALES DEL RÍO",
+   "anio": 2023,
+   "real": 3807,
+   "prediccion": 3201,
+   "error_pct": -15.9,
+   "prediccion_ingenua": 4550,
+   "error_ingenua_pct": 19.5,
+   "rango": [
+    2600,
+    3803
+   ],
+   "dentro_del_rango": false
+  },
+  {
+   "ambito": "SUS-PP-2 LOS MOLINOS",
+   "anio": 2023,
+   "real": 11473,
+   "prediccion": 12205,
+   "error_pct": 6.4,
+   "prediccion_ingenua": 16318,
+   "error_ingenua_pct": 42.2,
+   "rango": [
+    9326,
+    13650
+   ],
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "SUS-PP-3 BUENAVISTA",
+   "anio": 2023,
+   "real": 8854,
+   "prediccion": 12266,
+   "error_pct": 38.5,
+   "prediccion_ingenua": 15491,
+   "error_ingenua_pct": 75.0,
+   "rango": [
+    10891,
+    12959
+   ],
+   "dentro_del_rango": false
+  }
+ ],
+ "ambitos": [
+  {
+   "ambito": "ENSANCHE SUR PP-1 PP-2 PP-3",
+   "clase_suelo": "Suelo No Urbanizable Protegido",
+   "viviendas": 8351,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 15903,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    12410,
+    16710,
+    18163
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     379,
+     587,
+     661
+    ],
+    "g3_5": [
+     426,
+     660,
+     743
+    ],
+    "g6_11": [
+     1096,
+     1698,
+     1911
+    ],
+    "g12_17": [
+     1276,
+     1976,
+     2224
+    ],
+    "g65": [
+     298,
+     919,
+     1635
+    ]
+   }
+  },
+  {
+   "ambito": "RETAMAR DE LA HUERTA",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 3508,
+   "estado": "futuro",
+   "pct_residencial_vacante": 99.4,
+   "poblacion_actual": 80,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    5213,
+    7020,
+    7630
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     159,
+     247,
+     278
+    ],
+    "g3_5": [
+     179,
+     277,
+     312
+    ],
+    "g6_11": [
+     460,
+     713,
+     803
+    ],
+    "g12_17": [
+     536,
+     830,
+     934
+    ],
+    "g65": [
+     125,
+     386,
+     687
+    ]
+   }
+  },
+  {
+   "ambito": "PP-9 RESIDENCIAL LAS CÁRCAVAS (APLAZADO)",
+   "clase_suelo": "Suelo Urbanizable No Programado (APLAZADO)",
+   "viviendas": 855,
+   "estado": "futuro",
+   "pct_residencial_vacante": 100.0,
+   "poblacion_actual": 172,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    1271,
+    1711,
+    1860
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     39,
+     60,
+     68
+    ],
+    "g3_5": [
+     44,
+     68,
+     76
+    ],
+    "g6_11": [
+     112,
+     174,
+     196
+    ],
+    "g12_17": [
+     131,
+     202,
+     228
+    ],
+    "g65": [
+     31,
+     94,
+     167
+    ]
+   }
+  },
+  {
+   "ambito": "PP-7 PARQUE DE OCIO UNIVERSITARIO",
+   "clase_suelo": "Suelo Urbanizable Programado",
+   "viviendas": 630,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 734,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    936,
+    1261,
+    1370
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     29,
+     44,
+     50
+    ],
+    "g3_5": [
+     32,
+     50,
+     56
+    ],
+    "g6_11": [
+     83,
+     128,
+     144
+    ],
+    "g12_17": [
+     96,
+     149,
+     168
+    ],
+    "g65": [
+     22,
+     69,
+     123
+    ]
+   }
+  },
+  {
+   "ambito": "PP-12 LA RONDA",
+   "clase_suelo": "Suelo Urbanizable Programado",
+   "viviendas": 470,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 458,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    698,
+    940,
+    1022
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     21,
+     33,
+     37
+    ],
+    "g3_5": [
+     24,
+     37,
+     42
+    ],
+    "g6_11": [
+     62,
+     96,
+     108
+    ],
+    "g12_17": [
+     72,
+     111,
+     125
+    ],
+    "g65": [
+     17,
+     52,
+     92
+    ]
+   }
+  },
+  {
+   "ambito": "EN-1 ZARZA MAYOR",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 70,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 182,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    104,
+    140,
+    152
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     3,
+     5,
+     6
+    ],
+    "g3_5": [
+     4,
+     6,
+     6
+    ],
+    "g6_11": [
+     9,
+     14,
+     16
+    ],
+    "g12_17": [
+     11,
+     17,
+     19
+    ],
+    "g65": [
+     2,
+     8,
+     14
+    ]
+   }
+  },
+  {
+   "ambito": "EN-19 CARBALLINO/TIMANFAYA",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 51,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    76,
+    102,
+    111
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     2,
+     4,
+     4
+    ],
+    "g3_5": [
+     3,
+     4,
+     5
+    ],
+    "g6_11": [
+     7,
+     10,
+     12
+    ],
+    "g12_17": [
+     8,
+     12,
+     14
+    ],
+    "g65": [
+     2,
+     6,
+     10
+    ]
+   }
+  },
+  {
+   "ambito": "EN-15 CALLE COLÓN/CALLE SORIA",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 44,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    65,
+    88,
+    96
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     2,
+     3,
+     3
+    ],
+    "g3_5": [
+     2,
+     3,
+     4
+    ],
+    "g6_11": [
+     6,
+     9,
+     10
+    ],
+    "g12_17": [
+     7,
+     10,
+     12
+    ],
+    "g65": [
+     2,
+     5,
+     9
+    ]
+   }
+  },
+  {
+   "ambito": "EN-9 CINE SAN JOSÉ DE VALDERAS",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 30,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    45,
+    60,
+    65
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     2,
+     2
+    ],
+    "g3_5": [
+     2,
+     2,
+     3
+    ],
+    "g6_11": [
+     4,
+     6,
+     7
+    ],
+    "g12_17": [
+     5,
+     7,
+     8
+    ],
+    "g65": [
+     1,
+     3,
+     6
+    ]
+   }
+  },
+  {
+   "ambito": "EN-4 CALLE MAYOR",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 22,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    33,
+    44,
+    48
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     2,
+     2
+    ],
+    "g3_5": [
+     1,
+     2,
+     2
+    ],
+    "g6_11": [
+     3,
+     4,
+     5
+    ],
+    "g12_17": [
+     3,
+     5,
+     6
+    ],
+    "g65": [
+     1,
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "ambito": "EN-2 TRAVESÍA COLÓN/CALLE MAYOR",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 20,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 66.7,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    30,
+    40,
+    44
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     1,
+     2
+    ],
+    "g3_5": [
+     1,
+     2,
+     2
+    ],
+    "g6_11": [
+     3,
+     4,
+     5
+    ],
+    "g12_17": [
+     3,
+     5,
+     5
+    ],
+    "g65": [
+     1,
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "ambito": "EN-20 CAMPODÓN OESTE",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 20,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 39.7,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    30,
+    40,
+    44
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     1,
+     2
+    ],
+    "g3_5": [
+     1,
+     2,
+     2
+    ],
+    "g6_11": [
+     3,
+     4,
+     5
+    ],
+    "g12_17": [
+     3,
+     5,
+     5
+    ],
+    "g65": [
+     1,
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "ambito": "EN-3 CALLE CASTILLA",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 18,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    27,
+    36,
+    39
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     1,
+     1
+    ],
+    "g3_5": [
+     1,
+     1,
+     2
+    ],
+    "g6_11": [
+     2,
+     4,
+     4
+    ],
+    "g12_17": [
+     3,
+     4,
+     5
+    ],
+    "g65": [
+     1,
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "ambito": "EN-14 CALLE COLÓN/PLAZA DE LOS CAÍDOS",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 17,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    25,
+    34,
+    37
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     1,
+     1
+    ],
+    "g3_5": [
+     1,
+     1,
+     2
+    ],
+    "g6_11": [
+     2,
+     3,
+     4
+    ],
+    "g12_17": [
+     3,
+     4,
+     5
+    ],
+    "g65": [
+     1,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "ambito": "EN-16 CALLE DE LA IGLESIA",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 14,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    21,
+    28,
+    30
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     1,
+     1
+    ],
+    "g3_5": [
+     1,
+     1,
+     1
+    ],
+    "g6_11": [
+     2,
+     3,
+     3
+    ],
+    "g12_17": [
+     2,
+     3,
+     4
+    ],
+    "g65": [
+     1,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "ambito": "EN-21 AVENIDA DEL CASTILLO",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 14,
+   "estado": "habitado",
+   "pct_residencial_vacante": 14.3,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    21,
+    28,
+    30
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     1,
+     1
+    ],
+    "g3_5": [
+     1,
+     1,
+     1
+    ],
+    "g6_11": [
+     2,
+     3,
+     3
+    ],
+    "g12_17": [
+     2,
+     3,
+     4
+    ],
+    "g65": [
+     1,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "ambito": "EN-5 LOS ALFARES",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 12,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    18,
+    24,
+    26
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     1,
+     1
+    ],
+    "g3_5": [
+     1,
+     1,
+     1
+    ],
+    "g6_11": [
+     2,
+     2,
+     3
+    ],
+    "g12_17": [
+     2,
+     3,
+     3
+    ],
+    "g65": [
+     0,
+     1,
+     2
+    ]
+   }
+  },
+  {
+   "ambito": "EN-6 CALLE SANTO DOMINGO",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 10,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 60.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    15,
+    20,
+    22
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     0,
+     1,
+     1
+    ],
+    "g3_5": [
+     1,
+     1,
+     1
+    ],
+    "g6_11": [
+     1,
+     2,
+     2
+    ],
+    "g12_17": [
+     2,
+     2,
+     3
+    ],
+    "g65": [
+     0,
+     1,
+     2
+    ]
+   }
+  },
+  {
+   "ambito": "EN-7 CALLE SAN ROQUE",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 6,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 80.0,
+   "poblacion_actual": 63,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    9,
+    12,
+    13
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     0,
+     0,
+     0
+    ],
+    "g3_5": [
+     0,
+     0,
+     1
+    ],
+    "g6_11": [
+     1,
+     1,
+     1
+    ],
+    "g12_17": [
+     1,
+     1,
+     2
+    ],
+    "g65": [
+     0,
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "ambito": "APD-1 INDUSTRIAS ESPECIALES",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "APD-10 ANTIGUO ENCLAVE CALLE MADRID",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "APD-11 AMPLIACIÓN DE INDUSTRIAS ESPECIALES",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "APD-12 BARRIO DE LA UNIVERSIDAD",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 1.4,
+   "poblacion_actual": 8786,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "APD-2 VENTORRO DEL CANO",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 223,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "APD-3 CAMPODÓN CONSOLIDADO",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 7.0,
+   "poblacion_actual": 260,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "APD-5 ANTIGUO ENCLAVE NORTE",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 343,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "APD-6 AMPLIACIÓN ESTE VENTORRO DEL CANO",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 101,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "APD-7 AMPLIACIÓN OESTE VENTORRO DEL CANO",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 222,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "APD-8 SAN JOSÉ DE VALDERAS. FASE 2",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 3709,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "APD-9 FUENTE DEL PALOMAR",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.1,
+   "poblacion_actual": 3475,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "EN-10A NUDO SAN JOSÉ 1",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "EN-10B NUDO SAN JOSÉ 2",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "EN-11 SAN JOSÉ DE VALDERAS COMERCIAL",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "EN-12 ZONA DE SERVICIOS M-506",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "EN-13 AYUNTAMIENTO",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "EN-17 CIPASA",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "EN-18A CAÑADA DE POZUELO NORTE",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "EN-18B INDUSTRIAL CAÑADA DE POZUELO ESTE",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "EN-18C INDUSTRIAL CAÑADA DE POZUELO OESTE",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "EN-22 APARCAMIENTO DE PESADOS",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 149,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "EN-23 ZONA VERDE AVENIDA VILLAVICIOSA",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "EN-24 ZONA VERDE PLAZA DE LOS CAÍDOS",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "EN-25 PARQUE DEL ANTIGUO CEMENTERIO",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "EN-26 PARQUE DE SANTO DOMINGO",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 83,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "EN-27 ENTORNO ESTACIÓN DE LAS RETAMAS (APD-12 BARRIO DE LA UNIVERSIDAD)",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 181,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "EN-8 LA ROTONDA",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "OA-1 SAN JOSÉ DE VALDERAS",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 17789,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "OA-2 PRADO DE SANTO DOMINGO",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 2376,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "OA-3 LA RIVOTA",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 3290,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "OA-4 ÁREA DE CENTRALIDAD - SECTOR 1",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 454,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "OA-5 AVENIDA DE LEGANÉS",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 502,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "PERI CALLES VIRGEN DEL ICIAR, CUENCA, DESMONTE Y CERRAJÓN",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 554,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "PP-4 CÁRCAVAS ESTE",
+   "clase_suelo": "Suelo Urbanizable Programado",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "PP-5 CARRETERA DE VILLAVICIOSA",
+   "clase_suelo": "Suelo Urbanizable Programado",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "PP-6 CENTRO DE TRANSPORTES LA PRINCESA",
+   "clase_suelo": "Suelo Urbanizable No Programado",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 963,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "PP-8 PARQUE DE ACTIVIDADES EL LUCERO",
+   "clase_suelo": "Suelo Urbanizable Programado",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  }
+ ]
+}

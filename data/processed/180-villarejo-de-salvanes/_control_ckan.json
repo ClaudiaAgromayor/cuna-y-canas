@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "180",
+  "nombre": "Villarejo de Salvanés",
+  "nombre_ckan": "Villarejo de Salvanés",
+  "slug": "villarejo-de-salvanes"
+ },
+ "educativos_municipio": 13,
+ "educativos_en_alta": 11,
+ "educativos_guardados": 11,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 23,
+ "sanitarios_centros": 11,
+ "sanitarios_guardados": 11,
+ "sanitarios_sin_coordenadas": 0,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 1,
+ "sociales_guardados": 1,
+ "sociales_sin_coordenadas": 0,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 2,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 8035
+}

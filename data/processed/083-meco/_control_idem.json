@@ -1,0 +1,56 @@
+{
+ "municipio": {
+  "cod": "083",
+  "nombre": "Meco",
+  "nombre_ckan": "Meco",
+  "slug": "meco"
+ },
+ "ambitos_poligonos_brutos": 33,
+ "ambitos_geometrias_invalidas_reparadas": 7,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 20,
+ "ambitos_sin_viviendas": 6,
+ "ambitos_guardados": 20,
+ "redes_geometrias_invalidas_reparadas": 81,
+ "redes_brutas": 369,
+ "redes_dotacionales": 176,
+ "redes_por_tipo_y_estado": {
+  "deportivo/sin_dato": 6,
+  "educativo/sin_dato": 1,
+  "zona_verde/sin_dato": 169
+ },
+ "redes_guardadas": 176,
+ "suelo_parcelas_brutas": 7003,
+ "suelo_geometrias_invalidas_reparadas": 2824,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 19,
+ "candidatas_vacantes_equipamiento": 98,
+ "candidatas_sin_superficie_en_origen": 2,
+ "candidatas_descartadas_menores_de_50_m2": 5,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 93,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 75,
+  ">=2000": 63,
+  ">=5000": 36,
+  ">=10000": 27
+ },
+ "portal_suelo_parcelas": 10,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Industrial": 10
+ },
+ "portal_suelo_guardadas": 10,
+ "tamanos_kb": {
+  "ambitos.geojson": 50,
+  "centros_educativos.geojson": 3,
+  "centros_sanitarios.geojson": 5,
+  "centros_sociales.geojson": 1,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 45,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 6,
+  "redes.geojson": 96,
+  "resumen_ambitos.json": 6
+ }
+}

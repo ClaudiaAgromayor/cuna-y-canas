@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "164",
+  "nombre": "Valdetorres de Jarama",
+  "nombre_ckan": "Valdetorres de Jarama",
+  "slug": "valdetorres-de-jarama"
+ },
+ "educativos_municipio": 3,
+ "educativos_en_alta": 2,
+ "educativos_guardados": 2,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 20,
+ "sanitarios_centros": 6,
+ "sanitarios_guardados": 6,
+ "sanitarios_sin_coordenadas": 0,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 4,
+ "sociales_guardados": 4,
+ "sociales_sin_coordenadas": 0,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 2,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 5209
+}

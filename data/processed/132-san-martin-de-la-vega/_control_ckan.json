@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "132",
+  "nombre": "San Martín de la Vega",
+  "nombre_ckan": "San Martín de la Vega",
+  "slug": "san-martin-de-la-vega"
+ },
+ "educativos_municipio": 22,
+ "educativos_en_alta": 15,
+ "educativos_guardados": 15,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 61,
+ "sanitarios_centros": 24,
+ "sanitarios_guardados": 23,
+ "sanitarios_sin_coordenadas": 1,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 6,
+ "sociales_guardados": 6,
+ "sociales_sin_coordenadas": 0,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 6,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 20936
+}

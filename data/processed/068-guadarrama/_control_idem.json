@@ -1,0 +1,41 @@
+{
+ "municipio": {
+  "cod": "068",
+  "nombre": "Guadarrama",
+  "nombre_ckan": "Guadarrama",
+  "slug": "guadarrama"
+ },
+ "ambitos_poligonos_brutos": 0,
+ "ambitos": 0,
+ "redes_guardadas": 0,
+ "suelo_parcelas_brutas": 7185,
+ "suelo_geometrias_invalidas_reparadas": 2702,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 0,
+ "candidatas_vacantes_equipamiento": 80,
+ "candidatas_sin_superficie_en_origen": 2,
+ "candidatas_descartadas_menores_de_50_m2": 7,
+ "candidatas_duplicadas_por_referencia_catastral": 1,
+ "candidatas_guardadas": 73,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 40,
+  ">=2000": 18,
+  ">=5000": 7,
+  ">=10000": 2
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 0,
+  "centros_educativos.geojson": 5,
+  "centros_sanitarios.geojson": 13,
+  "centros_sociales.geojson": 7,
+  "farmacias.geojson": 1,
+  "natalidad.json": 1,
+  "paradas.geojson": 19,
+  "parcelas_vacantes.geojson": 31,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 0,
+  "resumen_ambitos.json": 0
+ }
+}

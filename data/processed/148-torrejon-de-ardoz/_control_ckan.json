@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "148",
+  "nombre": "Torrejón de Ardoz",
+  "nombre_ckan": "Torrejón de Ardoz",
+  "slug": "torrejon-de-ardoz"
+ },
+ "educativos_municipio": 122,
+ "educativos_en_alta": 69,
+ "educativos_guardados": 68,
+ "educativos_sin_coordenadas": 1,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 699,
+ "sanitarios_centros": 202,
+ "sanitarios_guardados": 202,
+ "sanitarios_sin_coordenadas": 0,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 28,
+ "sociales_guardados": 28,
+ "sociales_sin_coordenadas": 0,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 35,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 144211
+}

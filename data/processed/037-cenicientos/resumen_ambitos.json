@@ -1,0 +1,182 @@
+{
+ "cod_ine": "037",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "UA-03 CAMINO DE LA LADERA",
+   "viviendas_previstas": 58,
+   "residencial_ocupado_m2": 8497,
+   "residencial_vacante_m2": 4909,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 36.6,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-01 LOS CAÑOS",
+   "viviendas_previstas": 45,
+   "residencial_ocupado_m2": 519,
+   "residencial_vacante_m2": 13974,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 1794,
+   "pct_residencial_vacante": 96.4,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "UA-05 EL CASTAÑAR",
+   "viviendas_previstas": 44,
+   "residencial_ocupado_m2": 8025,
+   "residencial_vacante_m2": 11093,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 944,
+   "pct_residencial_vacante": 58.0,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "UA-11 CAMINO DE PIEDRA ESCRITA. ESTE",
+   "viviendas_previstas": 41,
+   "residencial_ocupado_m2": 4343,
+   "residencial_vacante_m2": 10339,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 70.4,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-07 LLANO DE LA ERMITA",
+   "viviendas_previstas": 35,
+   "residencial_ocupado_m2": 4060,
+   "residencial_vacante_m2": 4532,
+   "equipamiento_ocupado_m2": 142,
+   "equipamiento_vacante_m2": 614,
+   "pct_residencial_vacante": 52.7,
+   "pct_equipamiento_vacante": 81.3,
+   "parcelas_equipamiento_vacantes": 3
+  },
+  {
+   "ambito": "UA-08 CAMINO DEL CEMENTERIO",
+   "viviendas_previstas": 35,
+   "residencial_ocupado_m2": 8781,
+   "residencial_vacante_m2": 2785,
+   "equipamiento_ocupado_m2": 94,
+   "equipamiento_vacante_m2": 425,
+   "pct_residencial_vacante": 24.1,
+   "pct_equipamiento_vacante": 81.8,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "UA-09 CARRETERA DE ALMOROX",
+   "viviendas_previstas": 19,
+   "residencial_ocupado_m2": 5083,
+   "residencial_vacante_m2": 850,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 14.3,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-13 LAS TENERIAS",
+   "viviendas_previstas": 17,
+   "residencial_ocupado_m2": 1841,
+   "residencial_vacante_m2": 4532,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 71.1,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-01 LOS CAÑOS",
+   "viviendas_previstas": 15,
+   "residencial_ocupado_m2": 3966,
+   "residencial_vacante_m2": 4296,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 52.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-12 CAMINO DE PIEDRA ESCRITA. OESTE",
+   "viviendas_previstas": 13,
+   "residencial_ocupado_m2": 3856,
+   "residencial_vacante_m2": 3494,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 47.5,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-02 PRADOLAFUENTE",
+   "viviendas_previstas": 12,
+   "residencial_ocupado_m2": 956,
+   "residencial_vacante_m2": 6420,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 87.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-04 CALLE DE LA LUZ",
+   "viviendas_previstas": 12,
+   "residencial_ocupado_m2": 2502,
+   "residencial_vacante_m2": 991,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 28.4,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-10 POLIDEPORTIVO",
+   "viviendas_previstas": 10,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 6185,
+   "equipamiento_vacante_m2": 94,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 1.5,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "UA-14 EL EJIDO",
+   "viviendas_previstas": 6,
+   "residencial_ocupado_m2": 519,
+   "residencial_vacante_m2": 3494,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 87.1,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-02 LLANO DE LA ERMITA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-06 INDUSTRIAL DE LA ERMITA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

@@ -1,0 +1,60 @@
+{
+ "municipio": {
+  "cod": "007",
+  "nombre": "Alcorcón",
+  "nombre_ckan": "Alcorcón",
+  "slug": "alcorcon"
+ },
+ "ambitos_poligonos_brutos": 72,
+ "ambitos_geometrias_invalidas_reparadas": 16,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 56,
+ "ambitos_sin_viviendas": 37,
+ "ambitos_guardados": 56,
+ "redes_geometrias_invalidas_reparadas": 179,
+ "redes_brutas": 961,
+ "redes_dotacionales": 478,
+ "redes_por_tipo_y_estado": {
+  "asistencial/sin_dato": 1,
+  "cultural/sin_dato": 5,
+  "deportivo/sin_dato": 32,
+  "educativo/sin_dato": 11,
+  "sanitario/sin_dato": 1,
+  "zona_verde/sin_dato": 428
+ },
+ "redes_guardadas": 477,
+ "suelo_parcelas_brutas": 10271,
+ "suelo_geometrias_invalidas_reparadas": 3853,
+ "suelo_parcelas_en_ambitos_solapados": 1,
+ "resumen_ambitos": 55,
+ "candidatas_vacantes_equipamiento": 181,
+ "candidatas_sin_superficie_en_origen": 20,
+ "candidatas_descartadas_menores_de_50_m2": 41,
+ "candidatas_duplicadas_por_referencia_catastral": 1,
+ "candidatas_guardadas": 140,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 106,
+  ">=2000": 85,
+  ">=5000": 47,
+  ">=10000": 22
+ },
+ "portal_suelo_parcelas": 4,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Industrial": 3,
+  "Otros": 1
+ },
+ "portal_suelo_guardadas": 4,
+ "tamanos_kb": {
+  "ambitos.geojson": 101,
+  "centros_educativos.geojson": 34,
+  "centros_sanitarios.geojson": 139,
+  "centros_sociales.geojson": 12,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 66,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 2,
+  "redes.geojson": 252,
+  "resumen_ambitos.json": 19
+ }
+}

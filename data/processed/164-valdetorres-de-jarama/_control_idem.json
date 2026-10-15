@@ -1,0 +1,52 @@
+{
+ "municipio": {
+  "cod": "164",
+  "nombre": "Valdetorres de Jarama",
+  "nombre_ckan": "Valdetorres de Jarama",
+  "slug": "valdetorres-de-jarama"
+ },
+ "ambitos_poligonos_brutos": 15,
+ "ambitos_geometrias_invalidas_reparadas": 1,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 13,
+ "ambitos_sin_viviendas": 3,
+ "ambitos_guardados": 13,
+ "redes_geometrias_invalidas_reparadas": 22,
+ "redes_brutas": 82,
+ "redes_dotacionales": 14,
+ "redes_por_tipo_y_estado": {
+  "asistencial/sin_dato": 2,
+  "cultural/sin_dato": 4,
+  "deportivo/sin_dato": 3,
+  "educativo/sin_dato": 5
+ },
+ "redes_guardadas": 14,
+ "suelo_parcelas_brutas": 2956,
+ "suelo_geometrias_invalidas_reparadas": 936,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 13,
+ "candidatas_vacantes_equipamiento": 22,
+ "candidatas_sin_superficie_en_origen": 2,
+ "candidatas_descartadas_menores_de_50_m2": 3,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 19,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 9,
+  ">=2000": 8,
+  ">=5000": 2,
+  ">=10000": 0
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 11,
+  "centros_educativos.geojson": 1,
+  "centros_sanitarios.geojson": 2,
+  "centros_sociales.geojson": 2,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 8,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 6,
+  "resumen_ambitos.json": 4
+ }
+}

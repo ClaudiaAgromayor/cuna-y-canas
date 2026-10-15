@@ -82,6 +82,18 @@ def sociales(muni, out, ctrl):
     a_geojson(d, "direccion_coor_x", "direccion_coor_y", cols, muni, out / "centros_sociales.geojson", ctrl, "sociales")
 
 
+def farmacias(muni, out, ctrl):
+    d = leer_csv(descargar_ckan("oficinas_farmacia"))
+    nombres = {sin_tildes(muni["nombre"]).lower(), sin_tildes(muni["nombre_ckan"]).lower()}
+    d = d[d["MUNICIPIO_NOMBRE"].map(lambda t: sin_tildes(t).lower()).isin(nombres)].copy()
+    for c in ("LOCALIZACION_COORDENADA_X", "LOCALIZACION_COORDENADA_Y"):  # vienen con coma decimal
+        d[c] = d[c].str.replace(",", ".", regex=False)
+    d["direccion"] = (d["DIRECCION_VIAL_TIPO"] + " " + d["DIRECCION_VIAL_NOMBRE"] + " " + d["DIRECCION_VIAL_NRO"]).str.strip()
+    d["nombre"] = "Farmacia (" + d["direccion"] + ")"
+    cols = {"FARMACIA_NRO_SOE": "registro", "nombre": "nombre", "direccion": "direccion"}
+    a_geojson(d, "LOCALIZACION_COORDENADA_X", "LOCALIZACION_COORDENADA_Y", cols, muni, out / "farmacias.geojson", ctrl, "farmacias")
+
+
 def serie_municipal(nombre_dataset: str, muni: dict, filtros: dict | None = None) -> pd.DataFrame:
     """Filas de un dataset estadístico (código de territorio de 4 dígitos) que son del municipio."""
     d = leer_csv(descargar_ckan(nombre_dataset))
@@ -116,7 +128,7 @@ def demografia(muni, out, ctrl):
 def procesar(muni: dict) -> dict:
     out = carpeta_salida(muni)
     ctrl: dict = {"municipio": muni}
-    for paso in (educativos, sanitarios, sociales, demografia):
+    for paso in (educativos, sanitarios, sociales, farmacias, demografia):
         paso(muni, out, ctrl)
     (out / "_control_ckan.json").write_text(json.dumps(ctrl, ensure_ascii=False, indent=1), encoding="utf-8")
     return ctrl

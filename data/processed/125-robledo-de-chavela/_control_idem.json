@@ -1,0 +1,51 @@
+{
+ "municipio": {
+  "cod": "125",
+  "nombre": "Robledo de Chavela",
+  "nombre_ckan": "Robledo de Chavela",
+  "slug": "robledo-de-chavela"
+ },
+ "ambitos_poligonos_brutos": 27,
+ "ambitos_geometrias_invalidas_reparadas": 8,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 27,
+ "ambitos_sin_viviendas": 17,
+ "ambitos_guardados": 27,
+ "redes_geometrias_invalidas_reparadas": 66,
+ "redes_brutas": 194,
+ "redes_dotacionales": 27,
+ "redes_por_tipo_y_estado": {
+  "deportivo/sin_dato": 4,
+  "educativo/sin_dato": 5,
+  "zona_verde/sin_dato": 18
+ },
+ "redes_guardadas": 27,
+ "suelo_parcelas_brutas": 5663,
+ "suelo_geometrias_invalidas_reparadas": 1994,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 27,
+ "candidatas_vacantes_equipamiento": 31,
+ "candidatas_sin_superficie_en_origen": 1,
+ "candidatas_descartadas_menores_de_50_m2": 4,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 27,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 10,
+  ">=2000": 6,
+  ">=5000": 1,
+  ">=10000": 1
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 34,
+  "centros_educativos.geojson": 2,
+  "centros_sanitarios.geojson": 4,
+  "centros_sociales.geojson": 1,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 12,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 12,
+  "resumen_ambitos.json": 9
+ }
+}

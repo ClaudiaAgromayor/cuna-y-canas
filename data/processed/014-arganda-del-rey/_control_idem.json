@@ -1,0 +1,54 @@
+{
+ "municipio": {
+  "cod": "014",
+  "nombre": "Arganda del Rey",
+  "nombre_ckan": "Arganda del Rey",
+  "slug": "arganda-del-rey"
+ },
+ "ambitos_poligonos_brutos": 126,
+ "ambitos_geometrias_invalidas_reparadas": 41,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 115,
+ "ambitos_sin_viviendas": 64,
+ "ambitos_guardados": 115,
+ "redes_geometrias_invalidas_reparadas": 396,
+ "redes_brutas": 955,
+ "redes_dotacionales": 454,
+ "redes_por_tipo_y_estado": {
+  "asistencial/sin_dato": 9,
+  "cultural/sin_dato": 12,
+  "deportivo/sin_dato": 11,
+  "educativo/sin_dato": 25,
+  "sanitario/sin_dato": 4,
+  "zona_verde/sin_dato": 393
+ },
+ "redes_guardadas": 453,
+ "suelo_parcelas_brutas": 15642,
+ "suelo_geometrias_invalidas_reparadas": 7077,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 114,
+ "candidatas_vacantes_equipamiento": 173,
+ "candidatas_sin_superficie_en_origen": 18,
+ "candidatas_descartadas_menores_de_50_m2": 30,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 143,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 71,
+  ">=2000": 49,
+  ">=5000": 18,
+  ">=10000": 9
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 167,
+  "centros_educativos.geojson": 12,
+  "centros_sanitarios.geojson": 35,
+  "centros_sociales.geojson": 5,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 78,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 236,
+  "resumen_ambitos.json": 38
+ }
+}

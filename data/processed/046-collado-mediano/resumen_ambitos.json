@@ -1,0 +1,193 @@
+{
+ "cod_ine": "046",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "SAU-4 LA ROYA",
+   "viviendas_previstas": 201,
+   "residencial_ocupado_m2": 5675,
+   "residencial_vacante_m2": 79579,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 3846,
+   "pct_residencial_vacante": 93.3,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "SAU-11 PEÑARRUBIA",
+   "viviendas_previstas": 120,
+   "residencial_ocupado_m2": 16838,
+   "residencial_vacante_m2": 1604,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 8958,
+   "pct_residencial_vacante": 8.7,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "SAU-7 LA DEHESILLA 1",
+   "viviendas_previstas": 93,
+   "residencial_ocupado_m2": 33678,
+   "residencial_vacante_m2": 10179,
+   "equipamiento_ocupado_m2": 1501,
+   "equipamiento_vacante_m2": 281,
+   "pct_residencial_vacante": 23.2,
+   "pct_equipamiento_vacante": 15.8,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "SAU-3 LA HONTANILLA",
+   "viviendas_previstas": 79,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 53560,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-2 CERRO CASTILLO 2",
+   "viviendas_previstas": 76,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 46313,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-8 LA DEHESILLA 2",
+   "viviendas_previstas": 75,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 41617,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-10 EL BERROCAL",
+   "viviendas_previstas": 73,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 37056,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-6 ARROYO DEL SOTO 2",
+   "viviendas_previstas": 73,
+   "residencial_ocupado_m2": 15666,
+   "residencial_vacante_m2": 39403,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 71.6,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-5 ARROYO DEL SOTO 1",
+   "viviendas_previstas": 65,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 31332,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-1 CERRO CASTILLO 1",
+   "viviendas_previstas": 56,
+   "residencial_ocupado_m2": 10162,
+   "residencial_vacante_m2": 9896,
+   "equipamiento_ocupado_m2": 3058,
+   "equipamiento_vacante_m2": 1172,
+   "pct_residencial_vacante": 49.3,
+   "pct_equipamiento_vacante": 27.7,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "SAU-9 LA DEHESILLA 3",
+   "viviendas_previstas": 55,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 29645,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "ZONA 13 SERRANIA DE LA PALOMA 1",
+   "viviendas_previstas": 52,
+   "residencial_ocupado_m2": 27808,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 891,
+   "equipamiento_vacante_m2": 516,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": 36.7,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "AAA-01",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 188,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "AAA-02",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 188,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "C/ JOSÉ RIBERA Y AVDA. DEL PINAR",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 3518,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-12 INDUSTRIAL",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-03 CALLE HERREN",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 3752,
+   "residencial_vacante_m2": 281,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 7.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

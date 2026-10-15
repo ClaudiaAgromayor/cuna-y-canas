@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "007",
+  "nombre": "Alcorcón",
+  "nombre_ckan": "Alcorcón",
+  "slug": "alcorcon"
+ },
+ "educativos_municipio": 181,
+ "educativos_en_alta": 102,
+ "educativos_guardados": 99,
+ "educativos_sin_coordenadas": 3,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 1053,
+ "sanitarios_centros": 382,
+ "sanitarios_guardados": 377,
+ "sanitarios_sin_coordenadas": 5,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 34,
+ "sociales_guardados": 30,
+ "sociales_sin_coordenadas": 4,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 69,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 176806
+}

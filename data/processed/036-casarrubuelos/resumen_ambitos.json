@@ -1,0 +1,61 @@
+{
+ "cod_ine": "036",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "SUS-R4",
+   "viviendas_previstas": 540,
+   "residencial_ocupado_m2": 6900,
+   "residencial_vacante_m2": 109174,
+   "equipamiento_ocupado_m2": 378,
+   "equipamiento_vacante_m2": 23378,
+   "pct_residencial_vacante": 94.1,
+   "pct_equipamiento_vacante": 98.4,
+   "parcelas_equipamiento_vacantes": 10
+  },
+  {
+   "ambito": "SUS-R1",
+   "viviendas_previstas": 347,
+   "residencial_ocupado_m2": 20889,
+   "residencial_vacante_m2": 14084,
+   "equipamiento_ocupado_m2": 11295,
+   "equipamiento_vacante_m2": 7892,
+   "pct_residencial_vacante": 40.3,
+   "pct_equipamiento_vacante": 41.1,
+   "parcelas_equipamiento_vacantes": 4
+  },
+  {
+   "ambito": "SUS-R3",
+   "viviendas_previstas": 218,
+   "residencial_ocupado_m2": 11201,
+   "residencial_vacante_m2": 14746,
+   "equipamiento_ocupado_m2": 6097,
+   "equipamiento_vacante_m2": 5057,
+   "pct_residencial_vacante": 56.8,
+   "pct_equipamiento_vacante": 45.3,
+   "parcelas_equipamiento_vacantes": 4
+  },
+  {
+   "ambito": "SUS-R2",
+   "viviendas_previstas": 145,
+   "residencial_ocupado_m2": 10823,
+   "residencial_vacante_m2": 8554,
+   "equipamiento_ocupado_m2": 2883,
+   "equipamiento_vacante_m2": 1749,
+   "pct_residencial_vacante": 44.1,
+   "pct_equipamiento_vacante": 37.8,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "SUS-I",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 79,
+   "residencial_vacante_m2": 11483,
+   "equipamiento_ocupado_m2": 851,
+   "equipamiento_vacante_m2": 53400,
+   "pct_residencial_vacante": 99.3,
+   "pct_equipamiento_vacante": 98.4,
+   "parcelas_equipamiento_vacantes": 15
+  }
+ ]
+}

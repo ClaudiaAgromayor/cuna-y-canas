@@ -1,0 +1,57 @@
+{
+ "municipio": {
+  "cod": "067",
+  "nombre": "Guadalix de la Sierra",
+  "nombre_ckan": "Guadalix de la Sierra",
+  "slug": "guadalix-de-la-sierra"
+ },
+ "ambitos_poligonos_brutos": 52,
+ "ambitos_geometrias_invalidas_reparadas": 2,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [
+  "UE-20 PRADOS DEL CAMPO SANTO"
+ ],
+ "ambitos": 50,
+ "ambitos_sin_viviendas": 7,
+ "ambitos_guardados": 50,
+ "redes_geometrias_invalidas_reparadas": 64,
+ "redes_brutas": 186,
+ "redes_dotacionales": 33,
+ "redes_por_tipo_y_estado": {
+  "educativo/sin_dato": 4,
+  "zona_verde/sin_dato": 29
+ },
+ "redes_guardadas": 33,
+ "suelo_parcelas_brutas": 5437,
+ "suelo_geometrias_invalidas_reparadas": 2262,
+ "suelo_parcelas_en_ambitos_solapados": 1,
+ "resumen_ambitos": 50,
+ "candidatas_vacantes_equipamiento": 57,
+ "candidatas_sin_superficie_en_origen": 5,
+ "candidatas_descartadas_menores_de_50_m2": 12,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 45,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 12,
+  ">=2000": 7,
+  ">=5000": 1,
+  ">=10000": 0
+ },
+ "portal_suelo_parcelas": 14,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Residencial": 14
+ },
+ "portal_suelo_guardadas": 14,
+ "tamanos_kb": {
+  "ambitos.geojson": 53,
+  "centros_educativos.geojson": 2,
+  "centros_sanitarios.geojson": 4,
+  "centros_sociales.geojson": 1,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 19,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 7,
+  "redes.geojson": 15,
+  "resumen_ambitos.json": 17
+ }
+}

@@ -1,0 +1,59 @@
+{
+ "municipio": {
+  "cod": "134",
+  "nombre": "San Sebastián de los Reyes",
+  "nombre_ckan": "San Sebastián de los Reyes",
+  "slug": "san-sebastian-de-los-reyes"
+ },
+ "ambitos_poligonos_brutos": 51,
+ "ambitos_geometrias_invalidas_reparadas": 9,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 38,
+ "ambitos_sin_viviendas": 28,
+ "ambitos_guardados": 38,
+ "redes_geometrias_invalidas_reparadas": 203,
+ "redes_brutas": 806,
+ "redes_dotacionales": 197,
+ "redes_por_tipo_y_estado": {
+  "asistencial/sin_dato": 1,
+  "deportivo/existente": 1,
+  "deportivo/sin_dato": 9,
+  "educativo/sin_dato": 6,
+  "zona_verde/existente": 115,
+  "zona_verde/sin_dato": 65
+ },
+ "redes_guardadas": 196,
+ "suelo_parcelas_brutas": 8714,
+ "suelo_geometrias_invalidas_reparadas": 2385,
+ "suelo_parcelas_en_ambitos_solapados": 1,
+ "resumen_ambitos": 38,
+ "candidatas_vacantes_equipamiento": 159,
+ "candidatas_sin_superficie_en_origen": 10,
+ "candidatas_descartadas_menores_de_50_m2": 18,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 141,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 95,
+  ">=2000": 85,
+  ">=5000": 53,
+  ">=10000": 38
+ },
+ "portal_suelo_parcelas": 2,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Residencial": 2
+ },
+ "portal_suelo_guardadas": 2,
+ "tamanos_kb": {
+  "ambitos.geojson": 68,
+  "centros_educativos.geojson": 21,
+  "centros_sanitarios.geojson": 75,
+  "centros_sociales.geojson": 17,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 78,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 1,
+  "redes.geojson": 111,
+  "resumen_ambitos.json": 13
+ }
+}

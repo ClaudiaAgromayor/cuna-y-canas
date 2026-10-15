@@ -1,0 +1,171 @@
+{
+ "cod_ine": "087",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "MATARRUBIA II",
+   "viviendas_previstas": 279,
+   "residencial_ocupado_m2": 132433,
+   "residencial_vacante_m2": 10130,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 7879,
+   "pct_residencial_vacante": 7.1,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "SAU-01.N LOS ARROYUELOS",
+   "viviendas_previstas": 113,
+   "residencial_ocupado_m2": 57397,
+   "residencial_vacante_m2": 32582,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 36.2,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-02.S CERCA DE LA MORA",
+   "viviendas_previstas": 70,
+   "residencial_ocupado_m2": 43237,
+   "residencial_vacante_m2": 28621,
+   "equipamiento_ocupado_m2": 375,
+   "equipamiento_vacante_m2": 13272,
+   "pct_residencial_vacante": 39.8,
+   "pct_equipamiento_vacante": 97.3,
+   "parcelas_equipamiento_vacantes": 3
+  },
+  {
+   "ambito": "SAU-01.S LOS ROBALEJOS",
+   "viviendas_previstas": 62,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 63602,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-02 CERCA DE EN MEDIO",
+   "viviendas_previstas": 55,
+   "residencial_ocupado_m2": 5439,
+   "residencial_vacante_m2": 18942,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 6423,
+   "pct_residencial_vacante": 77.7,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "UA-07 LOS BORREGONES",
+   "viviendas_previstas": 48,
+   "residencial_ocupado_m2": 46762,
+   "residencial_vacante_m2": 10597,
+   "equipamiento_ocupado_m2": 328,
+   "equipamiento_vacante_m2": 7580,
+   "pct_residencial_vacante": 18.5,
+   "pct_equipamiento_vacante": 95.8,
+   "parcelas_equipamiento_vacantes": 8
+  },
+  {
+   "ambito": "UA-08 FERROCARRIL",
+   "viviendas_previstas": 27,
+   "residencial_ocupado_m2": 1266,
+   "residencial_vacante_m2": 12894,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 91.1,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-03 MATADERO",
+   "viviendas_previstas": 25,
+   "residencial_ocupado_m2": 14490,
+   "residencial_vacante_m2": 11629,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 44.5,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-01 LA CERQUILLA",
+   "viviendas_previstas": 16,
+   "residencial_ocupado_m2": 2251,
+   "residencial_vacante_m2": 34461,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 93.9,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "U-A04 MOLINO DE LA CRUZ NORTE",
+   "viviendas_previstas": 12,
+   "residencial_ocupado_m2": 4267,
+   "residencial_vacante_m2": 4736,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 52.6,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-06 LOS BORREGONES OESTE",
+   "viviendas_previstas": 10,
+   "residencial_ocupado_m2": 5908,
+   "residencial_vacante_m2": 4267,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 1172,
+   "pct_residencial_vacante": 41.9,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "UA-05 MOLINO DE LA CRUZ SUR",
+   "viviendas_previstas": 8,
+   "residencial_ocupado_m2": 2438,
+   "residencial_vacante_m2": 4689,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 65.8,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "FINCA LA CERCA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 7221,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "PARAJE MAJALASTABLAS",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 7409,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "PERI FINCA LA CERCA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 12801,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

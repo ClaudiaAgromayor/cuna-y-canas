@@ -1,0 +1,58 @@
+{
+ "municipio": {
+  "cod": "047",
+  "nombre": "Collado Villalba",
+  "nombre_ckan": "Collado Villalba",
+  "slug": "collado-villalba"
+ },
+ "ambitos_poligonos_brutos": 77,
+ "ambitos_geometrias_invalidas_reparadas": 9,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 72,
+ "ambitos_sin_viviendas": 60,
+ "ambitos_guardados": 72,
+ "redes_geometrias_invalidas_reparadas": 217,
+ "redes_brutas": 585,
+ "redes_dotacionales": 71,
+ "redes_por_tipo_y_estado": {
+  "cultural/sin_dato": 4,
+  "deportivo/sin_dato": 6,
+  "educativo/sin_dato": 22,
+  "sanitario/sin_dato": 2,
+  "zona_verde/sin_dato": 37
+ },
+ "redes_guardadas": 71,
+ "suelo_parcelas_brutas": 9285,
+ "suelo_geometrias_invalidas_reparadas": 3713,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 72,
+ "candidatas_vacantes_equipamiento": 75,
+ "candidatas_sin_superficie_en_origen": 4,
+ "candidatas_descartadas_menores_de_50_m2": 8,
+ "candidatas_duplicadas_por_referencia_catastral": 1,
+ "candidatas_guardadas": 67,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 41,
+  ">=2000": 29,
+  ">=5000": 18,
+  ">=10000": 7
+ },
+ "portal_suelo_parcelas": 1,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Residencial": 1
+ },
+ "portal_suelo_guardadas": 1,
+ "tamanos_kb": {
+  "ambitos.geojson": 66,
+  "centros_educativos.geojson": 13,
+  "centros_sanitarios.geojson": 50,
+  "centros_sociales.geojson": 6,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 35,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 1,
+  "redes.geojson": 34,
+  "resumen_ambitos.json": 25
+ }
+}

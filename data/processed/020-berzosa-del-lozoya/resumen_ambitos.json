@@ -1,0 +1,39 @@
+{
+ "cod_ine": "020",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "AA-01.UE-1",
+   "viviendas_previstas": 58,
+   "residencial_ocupado_m2": 2242,
+   "residencial_vacante_m2": 7519,
+   "equipamiento_ocupado_m2": 5744,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 77.0,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "AA-02.UE-2",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 2288,
+   "equipamiento_ocupado_m2": 7799,
+   "equipamiento_vacante_m2": 1214,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 13.5,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "AA-02.UE-3",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 700,
+   "residencial_vacante_m2": 2475,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 77.9,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

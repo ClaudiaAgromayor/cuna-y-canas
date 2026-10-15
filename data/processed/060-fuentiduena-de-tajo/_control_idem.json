@@ -1,0 +1,50 @@
+{
+ "municipio": {
+  "cod": "060",
+  "nombre": "Fuentidueña de Tajo",
+  "nombre_ckan": "Fuentidueña de Tajo",
+  "slug": "fuentiduena-de-tajo"
+ },
+ "ambitos_poligonos_brutos": 24,
+ "ambitos_geometrias_invalidas_reparadas": 4,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 24,
+ "ambitos_sin_viviendas": 6,
+ "ambitos_guardados": 24,
+ "redes_geometrias_invalidas_reparadas": 36,
+ "redes_brutas": 116,
+ "redes_dotacionales": 2,
+ "redes_por_tipo_y_estado": {
+  "deportivo/sin_dato": 1,
+  "educativo/sin_dato": 1
+ },
+ "redes_guardadas": 2,
+ "suelo_parcelas_brutas": 3042,
+ "suelo_geometrias_invalidas_reparadas": 1220,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 24,
+ "candidatas_vacantes_equipamiento": 17,
+ "candidatas_sin_superficie_en_origen": 1,
+ "candidatas_descartadas_menores_de_50_m2": 2,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 15,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 7,
+  ">=2000": 4,
+  ">=5000": 1,
+  ">=10000": 0
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 24,
+  "centros_educativos.geojson": 1,
+  "centros_sanitarios.geojson": 2,
+  "centros_sociales.geojson": 1,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 6,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 1,
+  "resumen_ambitos.json": 8
+ }
+}

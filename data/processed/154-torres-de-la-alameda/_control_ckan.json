@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "154",
+  "nombre": "Torres de la Alameda",
+  "nombre_ckan": "Torres de la Alameda",
+  "slug": "torres-de-la-alameda"
+ },
+ "educativos_municipio": 7,
+ "educativos_en_alta": 7,
+ "educativos_guardados": 7,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 36,
+ "sanitarios_centros": 13,
+ "sanitarios_guardados": 12,
+ "sanitarios_sin_coordenadas": 1,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 5,
+ "sociales_guardados": 5,
+ "sociales_sin_coordenadas": 0,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 2,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 7829
+}

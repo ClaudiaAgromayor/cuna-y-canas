@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "181",
+  "nombre": "Villaviciosa de Odón",
+  "nombre_ckan": "Villaviciosa de Odón",
+  "slug": "villaviciosa-de-odon"
+ },
+ "educativos_municipio": 52,
+ "educativos_en_alta": 21,
+ "educativos_guardados": 21,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 239,
+ "sanitarios_centros": 79,
+ "sanitarios_guardados": 77,
+ "sanitarios_sin_coordenadas": 1,
+ "sanitarios_coordenadas_fuera_del_municipio": 1,
+ "sociales_municipio": 12,
+ "sociales_guardados": 8,
+ "sociales_sin_coordenadas": 4,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 8,
+ "farmacias_sin_coordenadas": 1,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 30068
+}

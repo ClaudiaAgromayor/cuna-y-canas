@@ -1,0 +1,51 @@
+{
+ "municipio": {
+  "cod": "102",
+  "nombre": "Orusco de Tajuña",
+  "nombre_ckan": "Orusco de Tajuña",
+  "slug": "orusco-de-tajuna"
+ },
+ "ambitos_poligonos_brutos": 22,
+ "ambitos_geometrias_invalidas_reparadas": 6,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 21,
+ "ambitos_sin_viviendas": 10,
+ "ambitos_guardados": 21,
+ "redes_geometrias_invalidas_reparadas": 3,
+ "redes_brutas": 19,
+ "redes_dotacionales": 3,
+ "redes_por_tipo_y_estado": {
+  "deportivo/sin_dato": 1,
+  "educativo/sin_dato": 1,
+  "zona_verde/sin_dato": 1
+ },
+ "redes_guardadas": 3,
+ "suelo_parcelas_brutas": 1764,
+ "suelo_geometrias_invalidas_reparadas": 908,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 21,
+ "candidatas_vacantes_equipamiento": 6,
+ "candidatas_sin_superficie_en_origen": 0,
+ "candidatas_descartadas_menores_de_50_m2": 1,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 5,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 2,
+  ">=2000": 1,
+  ">=5000": 1,
+  ">=10000": 1
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 23,
+  "centros_educativos.geojson": 1,
+  "centros_sanitarios.geojson": 1,
+  "centros_sociales.geojson": 0,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 2,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 1,
+  "resumen_ambitos.json": 7
+ }
+}

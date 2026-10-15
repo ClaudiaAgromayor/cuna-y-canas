@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"tipo": "actual", "origen": "2803501001", "ambito": null, "pob": 2375.0, "g0_2": 69.9, "g3_5": 67.3, "g6_11": 136.3, "g12_17": 170.6, "g65": 422.8, "cod_ine": "035"}, "geometry": {"type": "Point", "coordinates": [-3.240894, 40.258258]}}]}

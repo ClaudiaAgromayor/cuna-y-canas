@@ -1,0 +1,52 @@
+{
+ "municipio": {
+  "cod": "119",
+  "nombre": "Quijorna",
+  "nombre_ckan": "Quijorna",
+  "slug": "quijorna"
+ },
+ "ambitos_poligonos_brutos": 28,
+ "ambitos_geometrias_invalidas_reparadas": 5,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 28,
+ "ambitos_sin_viviendas": 1,
+ "ambitos_guardados": 28,
+ "redes_geometrias_invalidas_reparadas": 99,
+ "redes_brutas": 241,
+ "redes_dotacionales": 49,
+ "redes_por_tipo_y_estado": {
+  "cultural/sin_dato": 2,
+  "deportivo/sin_dato": 2,
+  "educativo/sin_dato": 1,
+  "zona_verde/sin_dato": 44
+ },
+ "redes_guardadas": 49,
+ "suelo_parcelas_brutas": 2828,
+ "suelo_geometrias_invalidas_reparadas": 1086,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 28,
+ "candidatas_vacantes_equipamiento": 56,
+ "candidatas_sin_superficie_en_origen": 4,
+ "candidatas_descartadas_menores_de_50_m2": 10,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 46,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 26,
+  ">=2000": 18,
+  ">=5000": 6,
+  ">=10000": 4
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 31,
+  "centros_educativos.geojson": 1,
+  "centros_sanitarios.geojson": 2,
+  "centros_sociales.geojson": 0,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 20,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 23,
+  "resumen_ambitos.json": 10
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "municipio": {
+  "cod": "026",
+  "nombre": "Brunete",
+  "nombre_ckan": "Brunete",
+  "slug": "brunete"
+ },
+ "ambitos_poligonos_brutos": 0,
+ "ambitos": 0,
+ "redes_guardadas": 0,
+ "suelo_parcelas_brutas": 5706,
+ "suelo_geometrias_invalidas_reparadas": 1965,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 0,
+ "candidatas_vacantes_equipamiento": 397,
+ "candidatas_sin_superficie_en_origen": 27,
+ "candidatas_descartadas_menores_de_50_m2": 60,
+ "candidatas_duplicadas_por_referencia_catastral": 2,
+ "candidatas_guardadas": 337,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 154,
+  ">=2000": 115,
+  ">=5000": 68,
+  ">=10000": 23
+ },
+ "portal_suelo_parcelas": 13,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Residencial": 13
+ },
+ "portal_suelo_guardadas": 13,
+ "tamanos_kb": {
+  "ambitos.geojson": 0,
+  "centros_educativos.geojson": 3,
+  "centros_sanitarios.geojson": 9,
+  "centros_sociales.geojson": 0,
+  "farmacias.geojson": 1,
+  "natalidad.json": 1,
+  "paradas.geojson": 8,
+  "parcelas_vacantes.geojson": 144,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 7,
+  "redes.geojson": 0,
+  "resumen_ambitos.json": 0
+ }
+}

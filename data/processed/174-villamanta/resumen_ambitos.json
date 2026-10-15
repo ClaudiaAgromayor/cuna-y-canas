@@ -1,0 +1,237 @@
+{
+ "cod_ine": "174",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "SAU-6",
+   "viviendas_previstas": 212,
+   "residencial_ocupado_m2": 2783,
+   "residencial_vacante_m2": 46090,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 6369,
+   "pct_residencial_vacante": 94.3,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 4
+  },
+  {
+   "ambito": "SAU-5",
+   "viviendas_previstas": 89,
+   "residencial_ocupado_m2": 16700,
+   "residencial_vacante_m2": 30640,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 1038,
+   "pct_residencial_vacante": 64.7,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "SAU-3",
+   "viviendas_previstas": 83,
+   "residencial_ocupado_m2": 991,
+   "residencial_vacante_m2": 52363,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 1604,
+   "pct_residencial_vacante": 98.1,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "SAU-4",
+   "viviendas_previstas": 82,
+   "residencial_ocupado_m2": 94,
+   "residencial_vacante_m2": 55713,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 1934,
+   "pct_residencial_vacante": 99.8,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 5
+  },
+  {
+   "ambito": "SAU-1",
+   "viviendas_previstas": 78,
+   "residencial_ocupado_m2": 1415,
+   "residencial_vacante_m2": 34392,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 4104,
+   "pct_residencial_vacante": 96.0,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 8
+  },
+  {
+   "ambito": "UE-2",
+   "viviendas_previstas": 74,
+   "residencial_ocupado_m2": 4293,
+   "residencial_vacante_m2": 13870,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 76.4,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-12",
+   "viviendas_previstas": 28,
+   "residencial_ocupado_m2": 15474,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-7",
+   "viviendas_previstas": 26,
+   "residencial_ocupado_m2": 7171,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-3",
+   "viviendas_previstas": 21,
+   "residencial_ocupado_m2": 4104,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-8",
+   "viviendas_previstas": 19,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 8681,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-10",
+   "viviendas_previstas": 15,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 6416,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-11",
+   "viviendas_previstas": 15,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 7925,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 1085,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "UE-13",
+   "viviendas_previstas": 15,
+   "residencial_ocupado_m2": 11039,
+   "residencial_vacante_m2": 236,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 2.1,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-15",
+   "viviendas_previstas": 15,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 7706,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-9",
+   "viviendas_previstas": 12,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 6605,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-5",
+   "viviendas_previstas": 11,
+   "residencial_ocupado_m2": 5331,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-1",
+   "viviendas_previstas": 9,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 2185,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-4",
+   "viviendas_previstas": 9,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-6",
+   "viviendas_previstas": 9,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 4388,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-7",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 2500,
+   "equipamiento_ocupado_m2": 47,
+   "equipamiento_vacante_m2": 1604,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 97.1,
+   "parcelas_equipamiento_vacantes": 3
+  },
+  {
+   "ambito": "UE-14",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 519,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 9483,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 2
+  }
+ ]
+}

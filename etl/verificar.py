@@ -30,6 +30,8 @@ def verificar(carpeta: Path) -> list[str]:
     if not capas:
         return [f"{carpeta.name}: sin ficheros .geojson"]
     for nombre, g in capas.items():
+        if g.empty:  # capa sin elementos en este municipio: no hay nada que mezclar
+            continue
         otros = set(g["cod_ine"].unique()) - {cod} if "cod_ine" in g else {"(sin cod_ine)"}
         if otros:
             fallos.append(f"{carpeta.name}/{nombre}: códigos de municipio ajenos {otros}")

@@ -1,0 +1,41 @@
+{
+ "municipio": {
+  "cod": "177",
+  "nombre": "Villanueva del Pardillo",
+  "nombre_ckan": "Villanueva del Pardillo",
+  "slug": "villanueva-del-pardillo"
+ },
+ "ambitos_poligonos_brutos": 0,
+ "ambitos": 0,
+ "redes_guardadas": 0,
+ "suelo_parcelas_brutas": 3951,
+ "suelo_geometrias_invalidas_reparadas": 1559,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 0,
+ "candidatas_vacantes_equipamiento": 58,
+ "candidatas_sin_superficie_en_origen": 13,
+ "candidatas_descartadas_menores_de_50_m2": 16,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 42,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 24,
+  ">=2000": 16,
+  ">=5000": 8,
+  ">=10000": 3
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 0,
+  "centros_educativos.geojson": 4,
+  "centros_sanitarios.geojson": 16,
+  "centros_sociales.geojson": 3,
+  "farmacias.geojson": 1,
+  "natalidad.json": 1,
+  "paradas.geojson": 10,
+  "parcelas_vacantes.geojson": 19,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 0,
+  "resumen_ambitos.json": 0
+ }
+}

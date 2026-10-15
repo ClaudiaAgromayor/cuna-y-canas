@@ -1,0 +1,60 @@
+{
+ "municipio": {
+  "cod": "086",
+  "nombre": "El Molar",
+  "nombre_ckan": "Molar (El)",
+  "slug": "el-molar"
+ },
+ "ambitos_poligonos_brutos": 46,
+ "ambitos_geometrias_invalidas_reparadas": 12,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 41,
+ "ambitos_sin_viviendas": 4,
+ "ambitos_guardados": 41,
+ "redes_geometrias_invalidas_reparadas": 76,
+ "redes_brutas": 188,
+ "redes_dotacionales": 16,
+ "redes_por_tipo_y_estado": {
+  "asistencial/sin_dato": 3,
+  "cultural/sin_dato": 4,
+  "deportivo/sin_dato": 4,
+  "educativo/sin_dato": 2,
+  "sanitario/sin_dato": 2,
+  "zona_verde/sin_dato": 1
+ },
+ "redes_guardadas": 16,
+ "suelo_parcelas_brutas": 4032,
+ "suelo_geometrias_invalidas_reparadas": 1451,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 40,
+ "candidatas_vacantes_equipamiento": 48,
+ "candidatas_sin_superficie_en_origen": 1,
+ "candidatas_descartadas_menores_de_50_m2": 4,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 44,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 28,
+  ">=2000": 20,
+  ">=5000": 6,
+  ">=10000": 3
+ },
+ "portal_suelo_parcelas": 6,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Residencial": 5,
+  "Otros": 1
+ },
+ "portal_suelo_guardadas": 6,
+ "tamanos_kb": {
+  "ambitos.geojson": 49,
+  "centros_educativos.geojson": 2,
+  "centros_sanitarios.geojson": 0,
+  "centros_sociales.geojson": 1,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 19,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 3,
+  "redes.geojson": 7,
+  "resumen_ambitos.json": 13
+ }
+}

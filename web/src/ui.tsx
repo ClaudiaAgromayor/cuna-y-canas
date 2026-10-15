@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react'
+import { useState, type ReactNode } from 'react'
 import { Icono } from './iconos'
 
 export const n = (x: number) => Math.round(x).toLocaleString('es-ES')
@@ -13,6 +13,7 @@ export function nombreBarrio(ambito: string | null | undefined): string {
   if (!sin || (/^[A-Z0-9.\-]+$/.test(sin) && /\d/.test(sin))) return ambito // solo hay código (S-15, PAU-4): se deja tal cual
   if (!/[a-záéíóúñ]/.test(sin)) {
     return sin.toLowerCase().split(/(\s+|-|\()/).map((w, i) => (i > 0 && MINUSCULAS.has(w) ? w : w.charAt(0).toUpperCase() + w.slice(1))).join('')
+      .replace(/(^|\s)(Ii|Iii|Iv|Vi|Vii|Viii|Ix)(?=\s|$)/g, (_m, a: string, r: string) => a + r.toUpperCase()) // números romanos: "La Dehesilla II"
   }
   return sin
 }
@@ -87,8 +88,9 @@ export function Aviso({ titulo, children, tono = 'aviso' }: { titulo?: string; c
   )
 }
 
-export function Estado({ estado }: { estado: 'abierto' | 'suelo' | 'prevista' | 'licitada' | 'adjudicada' | 'obras' }) {
-  const [t, c] = ({ abierto: ['Abierto', 'bg-ok'], suelo: ['Suelo disponible', 'bg-suelo'], prevista: ['Prevista', 'bg-texto-3'],
+export type EstadoId = 'abierto' | 'plan' | 'suelo' | 'prevista' | 'licitada' | 'adjudicada' | 'obras'
+export function Estado({ estado }: { estado: EstadoId }) {
+  const [t, c] = ({ abierto: ['Abierto', 'bg-ok'], plan: ['En el planeamiento', 'bg-texto-3'], suelo: ['Suelo disponible', 'bg-suelo'], prevista: ['Prevista', 'bg-texto-3'],
     licitada: ['Licitada', 'bg-aviso'], adjudicada: ['Adjudicada', 'bg-aviso'], obras: ['En obras', 'bg-rojo'] } as const)[estado]
   return <span className="inline-flex shrink-0 items-center gap-1.5 text-xs font-medium text-texto-2"><span className={`h-2 w-2 ${c}`} />{t}</span>
 }
@@ -96,4 +98,17 @@ export function Estado({ estado }: { estado: 'abierto' | 'suelo' | 'prevista' | 
 export function Linea({ codigo, modo }: { codigo: string; modo: string }) {
   const c = modo === 'metro' ? 'bg-rojo text-white' : modo === 'cercanias' ? 'bg-tinta text-white' : modo === 'urbano' ? 'border border-tinta text-tinta' : 'bg-gris-2 text-tinta'
   return <span className={`inline-block px-1.5 text-[11px] leading-[18px] font-semibold tabular-nums ${c}`}>{codigo}</span>
+}
+
+/** Leyenda del mapa: siempre visible en pantallas medianas y grandes; en móvil, plegada tras un botón para no tapar el mapa. */
+export function Leyenda({ children }: { children: ReactNode }) {
+  const [abierta, setAbierta] = useState(false)
+  return (
+    <div className="absolute top-3 left-3 text-xs">
+      <button type="button" className="border border-tinta bg-white px-2.5 py-1 font-medium shadow-sm md:hidden" onClick={() => setAbierta(!abierta)} aria-expanded={abierta}>
+        {abierta ? 'Ocultar leyenda' : 'Leyenda'}
+      </button>
+      <div className={`${abierta ? 'block' : 'hidden'} pointer-events-none mt-1 bg-white/95 px-3 py-2.5 shadow-sm md:mt-0 md:block`}>{children}</div>
+    </div>
+  )
 }

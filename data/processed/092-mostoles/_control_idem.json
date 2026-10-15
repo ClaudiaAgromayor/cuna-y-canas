@@ -1,0 +1,61 @@
+{
+ "municipio": {
+  "cod": "092",
+  "nombre": "Móstoles",
+  "nombre_ckan": "Móstoles",
+  "slug": "mostoles"
+ },
+ "ambitos_poligonos_brutos": 88,
+ "ambitos_geometrias_invalidas_reparadas": 14,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 66,
+ "ambitos_sin_viviendas": 30,
+ "ambitos_guardados": 66,
+ "redes_geometrias_invalidas_reparadas": 254,
+ "redes_brutas": 1198,
+ "redes_dotacionales": 244,
+ "redes_por_tipo_y_estado": {
+  "asistencial/sin_dato": 6,
+  "cultural/sin_dato": 6,
+  "deportivo/sin_dato": 10,
+  "educativo/sin_dato": 18,
+  "sanitario/sin_dato": 4,
+  "zona_verde/sin_dato": 200
+ },
+ "redes_guardadas": 244,
+ "suelo_parcelas_brutas": 17751,
+ "suelo_geometrias_invalidas_reparadas": 7046,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 66,
+ "candidatas_vacantes_equipamiento": 373,
+ "candidatas_sin_superficie_en_origen": 11,
+ "candidatas_descartadas_menores_de_50_m2": 26,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 347,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 265,
+  ">=2000": 211,
+  ">=5000": 116,
+  ">=10000": 49
+ },
+ "portal_suelo_parcelas": 11,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Terciario": 7,
+  "Residencial": 3,
+  "Industrial": 1
+ },
+ "portal_suelo_guardadas": 11,
+ "tamanos_kb": {
+  "ambitos.geojson": 112,
+  "centros_educativos.geojson": 35,
+  "centros_sanitarios.geojson": 150,
+  "centros_sociales.geojson": 21,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 161,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 6,
+  "redes.geojson": 145,
+  "resumen_ambitos.json": 22
+ }
+}

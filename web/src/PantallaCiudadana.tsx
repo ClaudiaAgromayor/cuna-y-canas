@@ -1,27 +1,67 @@
 import { useMemo, useState } from 'react'
-import type { FeatureCollection, Geometry, Point, Polygon, Position } from 'geojson'
+import type { Feature, FeatureCollection, Geometry, Point, Polygon, Position } from 'geojson'
 import Mapa, { type CapaMapa, type Marcador } from './Mapa'
-import { circulo, existentesDe, metros, METROS_POR_MINUTO, type Existente } from './algoritmo'
-import type { DatosMunicipio, Servicio, ServicioId } from './tipos'
+import { circulo, metros, METROS_POR_MINUTO } from './algoritmo'
+import type { AmbitoDemanda, DatosMunicipio, Servicio, ServicioId } from './tipos'
 import { Icono, iconoSvg } from './iconos'
-import { Aviso, capitalizar, Estado, Linea, n, nombreBarrio } from './ui'
+import { Aviso, capitalizar, dec, Estado, Linea, n, nombreBarrio, type EstadoId, Leyenda } from './ui'
 
 interface Props { datos: DatosMunicipio; servicios: Record<ServicioId, Servicio> }
 
-const INTERESES: { id: string; texto: string; icono: string; servicios: ServicioId[] }[] = [
-  { id: 'bebe', texto: 'Tengo un bebé', icono: 'escuela_infantil', servicios: ['escuela_infantil'] },
-  { id: 'escolar', texto: 'Hijos en edad escolar', icono: 'colegio', servicios: ['colegio'] },
-  { id: 'familia', texto: 'Salud', icono: 'centro_salud', servicios: ['centro_salud'] },
-  { id: 'mayores', texto: 'Cuido de mis mayores', icono: 'residencia', servicios: ['centro_dia', 'residencia'] },
-]
-const FUENTE: Record<string, string> = {
-  centros_educativos: 'https://datos.comunidad.madrid/dataset/centros_educativos',
-  centros_sanitarios: 'https://datos.comunidad.madrid/dataset/centros_servicios_establecimientos_sanitarios',
-  centros_sociales: 'https://datos.comunidad.madrid/dataset/atencion_social_registro_centros',
-}
-const minutos = (m: number) => Math.max(1, Math.round(m / METROS_POR_MINUTO))
+/* ---------- qué se puede buscar ---------- */
 
-/** Anillos de cualquier geometría poligonal (también colecciones), para no fallar con geometrías reparadas. */
+type Fuente = 'educativos' | 'sanitarios' | 'sociales' | 'farmacias' | 'redes' | 'suelo'
+interface Categoria { id: string; grupo: string; texto: string; icono: string; fuente: Fuente; filtro: (p: Record<string, unknown>) => boolean; servicio?: ServicioId }
+
+const P = (p: Record<string, unknown>, k: string) => String(p[k] ?? '')
+const publico = (p: Record<string, unknown>) => P(p, 'titularidad').startsWith('PÚBLICO')
+const CATEGORIAS: Categoria[] = [
+  { id: 'ei_publica', grupo: 'Educación', texto: 'Escuela infantil pública', icono: 'escuela_infantil', fuente: 'educativos', servicio: 'escuela_infantil', filtro: (p) => ['EEI', 'EEI-CN'].includes(P(p, 'tipo')) },
+  { id: 'ei_privada', grupo: 'Educación', texto: 'Escuela infantil privada', icono: 'escuela_infantil', fuente: 'educativos', filtro: (p) => ['EIPR', 'CPR INF'].includes(P(p, 'tipo')) },
+  { id: 'col_publico', grupo: 'Educación', texto: 'Colegio público', icono: 'colegio', fuente: 'educativos', servicio: 'colegio', filtro: (p) => P(p, 'tipo').includes('PRI') && publico(p) },
+  { id: 'col_concertado', grupo: 'Educación', texto: 'Colegio concertado', icono: 'colegio', fuente: 'educativos', filtro: (p) => P(p, 'tipo').includes('PRI') && P(p, 'titularidad') === 'PRIVADO CONCERTADO' },
+  { id: 'col_privado', grupo: 'Educación', texto: 'Colegio privado', icono: 'colegio', fuente: 'educativos', filtro: (p) => P(p, 'tipo').includes('PRI') && P(p, 'titularidad') === 'PRIVADO' },
+  { id: 'instituto', grupo: 'Educación', texto: 'Instituto', icono: 'colegio', fuente: 'educativos', filtro: (p) => ['IES', 'IESO'].includes(P(p, 'tipo')) || (P(p, 'tipo').includes('SEC') && !P(p, 'tipo').includes('PRI')) },
+  { id: 'salud', grupo: 'Salud', texto: 'Centro de salud o consultorio', icono: 'centro_salud', fuente: 'sanitarios', servicio: 'centro_salud', filtro: (p) => ['Centro de salud', 'Consultorio de atención primaria'].includes(P(p, 'tipo')) },
+  { id: 'hospital', grupo: 'Salud', texto: 'Hospital', icono: 'centro_salud', fuente: 'sanitarios', filtro: (p) => P(p, 'tipo').startsWith('Hospital') },
+  { id: 'farmacia', grupo: 'Salud', texto: 'Farmacia', icono: 'centro_salud', fuente: 'farmacias', filtro: () => true },
+  { id: 'centro_dia', grupo: 'Mayores', texto: 'Centro de día', icono: 'centro_dia', fuente: 'sociales', servicio: 'centro_dia', filtro: (p) => P(p, 'tipo') === 'CENTROS DE DÍA' && P(p, 'subtipo') !== 'HOGARES Y CLUBES' && P(p, 'sector').includes('mayores') },
+  { id: 'residencia', grupo: 'Mayores', texto: 'Residencia', icono: 'residencia', fuente: 'sociales', servicio: 'residencia', filtro: (p) => P(p, 'tipo') === 'CENTROS RESIDENCIALES' && P(p, 'sector').includes('mayores') },
+  { id: 'hogar', grupo: 'Mayores', texto: 'Hogar o club de mayores', icono: 'centro_dia', fuente: 'sociales', filtro: (p) => P(p, 'subtipo') === 'HOGARES Y CLUBES' },
+  { id: 'parque', grupo: 'Ocio y bienestar', texto: 'Parques y zonas verdes', icono: 'suelo', fuente: 'redes', filtro: (p) => P(p, 'tipo') === 'zona_verde' && Number(p.sup_m2) >= 1000 },
+  { id: 'deporte', grupo: 'Ocio y bienestar', texto: 'Instalaciones deportivas', icono: 'centro_dia', fuente: 'redes', filtro: (p) => P(p, 'tipo') === 'deportivo' },
+  { id: 'cultura', grupo: 'Ocio y bienestar', texto: 'Equipamiento cultural', icono: 'colegio', fuente: 'redes', filtro: (p) => P(p, 'tipo') === 'cultural' },
+  { id: 'suelo', grupo: 'Lo que viene', texto: 'Suelo reservado para nuevos servicios', icono: 'suelo', fuente: 'suelo', filtro: () => true },
+]
+const GRUPOS = [...new Set(CATEGORIAS.map((c) => c.grupo))]
+
+const SITUACIONES: { id: string; texto: string; icono: string; cats: string[] }[] = [
+  { id: 'bebe', texto: 'Tengo un bebé', icono: 'escuela_infantil', cats: ['ei_publica', 'ei_privada', 'salud', 'farmacia', 'parque'] },
+  { id: 'escolar', texto: 'Hijos en edad escolar', icono: 'colegio', cats: ['col_publico', 'col_concertado', 'col_privado', 'instituto', 'deporte', 'parque'] },
+  { id: 'mayores', texto: 'Cuido de mis mayores', icono: 'residencia', cats: ['centro_dia', 'residencia', 'hogar', 'salud', 'farmacia'] },
+  { id: 'activo', texto: 'Deporte y ocio', icono: 'centro_dia', cats: ['deporte', 'parque', 'cultura'] },
+]
+const ESTADOS: { id: EstadoId; texto: string; disponible: boolean }[] = [
+  { id: 'abierto', texto: 'Ya existe', disponible: true },
+  { id: 'plan', texto: 'En el planeamiento', disponible: true },
+  { id: 'prevista', texto: 'Prevista', disponible: true },
+  { id: 'suelo', texto: 'Suelo disponible', disponible: true },
+  { id: 'licitada', texto: 'Licitada', disponible: false },
+  { id: 'obras', texto: 'En obras', disponible: false },
+]
+const FUENTE_URL: Record<Fuente, string> = {
+  educativos: 'https://datos.comunidad.madrid/dataset/centros_educativos',
+  sanitarios: 'https://datos.comunidad.madrid/dataset/centros_servicios_establecimientos_sanitarios',
+  sociales: 'https://datos.comunidad.madrid/dataset/atencion_social_registro_centros',
+  farmacias: 'https://datos.comunidad.madrid/dataset/oficinas_farmacia',
+  redes: 'https://idem.comunidad.madrid',
+  suelo: 'https://idem.comunidad.madrid',
+}
+const NOMBRE_FUENTE: Record<Fuente, string> = { educativos: 'Centros educativos', sanitarios: 'Registro sanitario', sociales: 'Registro de centros sociales', farmacias: 'Oficinas de farmacia', redes: 'Planeamiento (IDEM)', suelo: 'Suelo vacante 2026 (IDEM)' }
+const ETIQUETA_ESTADO_BARRIO: Record<string, string> = { habitado: 'Habitado', en_desarrollo: 'En construcción', futuro: 'Por construir', sin_datos: 'Sin datos' }
+
+/* ---------- utilidades ---------- */
+
 function poligonos(g: Geometry | null): Position[][][] {
   if (!g) return []
   if (g.type === 'Polygon') return [g.coordinates]
@@ -29,281 +69,309 @@ function poligonos(g: Geometry | null): Position[][][] {
   if (g.type === 'GeometryCollection') return g.geometries.flatMap(poligonos)
   return []
 }
+function centroide(g: Geometry): [number, number] {
+  if (g.type === 'Point') return g.coordinates as [number, number]
+  const anillo = poligonos(g).sort((a, b) => b[0].length - a[0].length)[0]?.[0] ?? []
+  return [anillo.reduce((t, x) => t + x[0], 0) / (anillo.length || 1), anillo.reduce((t, x) => t + x[1], 0) / (anillo.length || 1)]
+}
+const minutos = (m: number) => Math.max(1, Math.round(m / METROS_POR_MINUTO))
 
-interface Lugar { lon: number; lat: number; texto: string }
-interface Candidato { address: string; muni: string; lat: number; lng: number; type: string }
+interface Lugar { lon: number; lat: number; texto: string; ambito: string | null }
+interface Candidato { address: string; muni: string; lat: number; lng: number }
+interface Item { id: string; cat: Categoria; nombre: string; detalle: string; estado: EstadoId; lon: number; lat: number; d: number }
 
 export default function PantallaCiudadana({ datos, servicios }: Props) {
   const [lugar, setLugar] = useState<Lugar | null>(null)
-  const [intereses, setIntereses] = useState<string[]>(INTERESES.map((e) => e.id))
+  const [situaciones, setSituaciones] = useState<string[]>([])
+  const [cats, setCats] = useState<string[]>(['ei_publica', 'col_publico', 'instituto', 'salud', 'farmacia', 'residencia', 'parque', 'deporte', 'suelo'])
+  const [estados, setEstados] = useState<EstadoId[]>(['abierto', 'plan', 'prevista', 'suelo'])
+  const [radioMin, setRadioMin] = useState(10)
+  const [abiertos, setAbiertos] = useState<string[]>([])
+  const [buscarCalle, setBuscarCalle] = useState(false)
   const [q, setQ] = useState('')
   const [cands, setCands] = useState<Candidato[]>([])
-  const [buscando, setBuscando] = useState(false)
-  const [errorBusqueda, setErrorBusqueda] = useState('')
+  const [msg, setMsg] = useState('')
 
-  const capasPuntos = useMemo(() => ({ centros_educativos: datos.educativos, centros_sanitarios: datos.sanitarios, centros_sociales: datos.sociales }), [datos])
-  const sids = [...new Set(INTERESES.filter((e) => intereses.includes(e.id)).flatMap((e) => e.servicios))]
+  const demanda = useMemo(() => new Map((datos.demanda?.ambitos ?? []).map((a) => [a.ambito, a])), [datos])
+  const barrios = useMemo(() => (datos.demanda?.ambitos ?? []).filter((a) => (a.viviendas ?? 0) >= 150).sort((a, b) => (b.viviendas ?? 0) - (a.viviendas ?? 0)), [datos])
 
-  async function buscar() {
-    if (!q.trim()) return
-    setBuscando(true); setErrorBusqueda(''); setCands([])
-    try {
-      // geocodificador oficial CartoCiudad (IGN); se añade el municipio para no confundir calles homónimas
-      const url = `https://www.cartociudad.es/geocoder/api/geocoder/candidates?limit=6&q=${encodeURIComponent(`${q}, ${datos.indice.nombre}`)}`
-      const r: Candidato[] = await (await fetch(url)).json()
-      const delMunicipio = r.filter((c) => c.muni?.toLowerCase() === datos.indice.nombre.toLowerCase() && c.lat && c.lng)
-      if (delMunicipio.length === 1) elegir({ lon: delMunicipio[0].lng, lat: delMunicipio[0].lat, texto: delMunicipio[0].address })
-      else setCands(delMunicipio)
-      if (!delMunicipio.length) setErrorBusqueda(`No encontramos esa dirección en ${datos.indice.nombre}. Prueba con otra o pulsa en el mapa.`)
-    } catch {
-      setErrorBusqueda('El buscador no responde ahora mismo. Pulsa en el mapa o elige un barrio.')
-    } finally { setBuscando(false) }
-  }
-  const elegir = (l: Lugar) => { setLugar(l); setCands([]) }
-
-  const ambitoDe = (lon: number, lat: number) => {
-    for (const f of datos.ambitos.features) {
-      for (const poly of poligonos(f.geometry)) {
-        const anillo = poly[0]
-        let dentro = false
-        for (let i = 0, j = anillo.length - 1; i < anillo.length; j = i++) {
-          const [xi, yi] = anillo[i], [xj, yj] = anillo[j]
-          if ((yi > lat) !== (yj > lat) && lon < ((xj - xi) * (lat - yi)) / (yj - yi) + xi) dentro = !dentro
+  // todos los elementos que se pueden enseñar, calculados una sola vez por municipio
+  const universo = useMemo(() => {
+    const fc: Record<Fuente, Feature[]> = { educativos: datos.educativos.features, sanitarios: datos.sanitarios.features, sociales: datos.sociales.features,
+      farmacias: datos.farmacias.features, redes: datos.redes.features, suelo: datos.parcelas.features }
+    const out: Omit<Item, 'd'>[] = []
+    for (const c of CATEGORIAS) {
+      fc[c.fuente].forEach((f, i) => {
+        const p = (f.properties ?? {}) as Record<string, unknown>
+        if (!c.filtro(p)) return
+        const [lon, lat] = centroide(f.geometry)
+        let estado: EstadoId = 'abierto', nombre = p.nombre ? capitalizar(String(p.nombre)) : '', detalle = ''
+        if (c.fuente === 'redes') {
+          estado = p.estado === 'prevista' ? 'prevista' : p.estado === 'existente' ? 'abierto' : 'plan'
+          nombre = c.id === 'parque' ? 'Zona verde' : c.id === 'deporte' ? 'Equipamiento deportivo' : 'Equipamiento cultural'
+          detalle = `${n(Number(p.sup_m2))} m² · ${p.red ?? 'red pública'}`
+        } else if (c.fuente === 'suelo') {
+          estado = 'suelo'; nombre = 'Parcela para equipamiento público'
+          detalle = `${n(Number(p.area_m2))} m², sin construir`
+        } else {
+          if (!nombre) nombre = `${p.tipo ?? c.texto}${p.direccion ? ` (${capitalizar(String(p.direccion))})` : ''}`
+          detalle = [p.tipo_largo ?? p.subtipo ?? p.tipo, p.titularidad ?? p.naturaleza ?? p.dependencia].filter(Boolean)
+            .map((x) => { const t = String(x).toLowerCase(); return t.charAt(0).toUpperCase() + t.slice(1) }).join(' · ')
+          if (p.plazas) detalle += ` · ${n(Number(p.plazas))} plazas`
         }
-        if (dentro) return String(f.properties?.nombre)
+        out.push({ id: `${c.id}-${p.codigo ?? p.registro ?? p.ref_catastral ?? i}-${i}`, cat: c, nombre, detalle, estado, lon, lat })
+      })
+    }
+    return out
+  }, [datos])
+
+  const radio = radioMin * METROS_POR_MINUTO
+  const resultado = useMemo(() => {
+    if (!lugar) return null
+    const cerca: Item[] = universo.filter((x) => cats.includes(x.cat.id) && estados.includes(x.estado))
+      .map((x) => ({ ...x, d: metros(lugar.lon, lugar.lat, x.lon, x.lat) })).filter((x) => x.d <= radio).sort((a, b) => a.d - b.d)
+    const porCat = CATEGORIAS.filter((c) => cats.includes(c.id)).map((c) => {
+      const items = cerca.filter((x) => x.cat.id === c.id)
+      const masCercano = items.length ? null : universo.filter((x) => x.cat.id === c.id && x.estado === 'abierto')
+        .map((x) => ({ ...x, d: metros(lugar.lon, lugar.lat, x.lon, x.lat) })).sort((a, b) => a.d - b.d)[0] ?? null
+      return { c, items, masCercano }
+    })
+    const paradas = datos.paradas.features.map((f) => ({ f, d: metros(lugar.lon, lugar.lat, f.geometry.coordinates[0], f.geometry.coordinates[1]) }))
+      .filter((x) => x.d <= 5 * METROS_POR_MINUTO).sort((a, b) => a.d - b.d).slice(0, 3)
+    return { cerca, porCat, paradas, amb: lugar.ambito ? demanda.get(lugar.ambito) ?? null : null }
+  }, [lugar, universo, cats, estados, radio, datos, demanda])
+
+  // lo que hará falta en el barrio cuando esté completo (rangos del modelo)
+  const previsiones = useMemo(() => {
+    const a = resultado?.amb
+    if (!a?.grupos_completo || a.estado === 'sin_datos') return []
+    const ids = [...new Set(CATEGORIAS.filter((c) => cats.includes(c.id) && c.servicio).map((c) => c.servicio!))]
+    return ids.map((sid) => {
+      const s = servicios[sid]
+      const g = s.grupo.map((k) => (k === 'pob' ? a.poblacion_completo : a.grupos_completo![k])).filter(Boolean) as [number, number, number][]
+      const lo = Math.round(g.reduce((t, x) => t + x[0], 0) * s.tasa_uso[0]), hi = Math.round(g.reduce((t, x) => t + x[2], 0) * s.tasa_uso[2])
+      const abiertos = (resultado?.cerca ?? []).filter((x) => x.cat.servicio === sid && x.estado === 'abierto').length
+      return { s, lo, hi, abiertos }
+    })
+  }, [resultado, cats, servicios])
+
+  /* ---------- acciones ---------- */
+  const ambitoDe = (lon: number, lat: number) => {
+    for (const f of datos.ambitos.features) for (const poly of poligonos(f.geometry)) {
+      const a = poly[0]; let dentro = false
+      for (let i = 0, j = a.length - 1; i < a.length; j = i++) {
+        const [xi, yi] = a[i], [xj, yj] = a[j]
+        if ((yi > lat) !== (yj > lat) && lon < ((xj - xi) * (lat - yi)) / (yj - yi) + xi) dentro = !dentro
       }
+      if (dentro) return String(f.properties?.nombre)
     }
     return null
   }
-
-  const resultado = useMemo(() => {
-    if (!lugar) return null
-    const amb = ambitoDe(lugar.lon, lugar.lat)
-    const demAmb = datos.demanda?.ambitos.find((a) => a.ambito === amb)
-    const porServicio = sids.map((sid) => {
-      const s = servicios[sid]
-      const radio = s.minutos_andando * METROS_POR_MINUTO
-      const todos = existentesDe(s, capasPuntos, s.capacidad[1]).map((c) => ({ ...c, d: metros(lugar.lon, lugar.lat, c.lon, c.lat) })).sort((a, b) => a.d - b.d)
-      const cerca = todos.filter((c) => c.d <= radio)
-      const capCerca = cerca.reduce((t, c) => t + c.capacidad, 0)
-      let prevision: string | null = null
-      if (demAmb?.grupos_completo && demAmb.estado !== 'sin_datos') {
-        const g = s.grupo.map((k) => (k === 'pob' ? demAmb.poblacion_completo : demAmb.grupos_completo![k])).filter(Boolean) as [number, number, number][]
-        const lo = Math.round(g.reduce((t, x) => t + x[0], 0) * s.tasa_uso[0]), hi = Math.round(g.reduce((t, x) => t + x[2], 0) * s.tasa_uso[2])
-        if (sid === 'centro_salud') {
-          prevision = `${nombreBarrio(amb)} tendrá entre ${n(lo)} y ${n(hi)} habitantes. Un centro de salud atiende a unos ${n(s.capacidad[1])} y hay ${cerca.length} a menos de ${s.minutos_andando} minutos a pie.`
-        } else if (hi > capCerca) {
-          prevision = `Harán falta entre ${n(lo)} y ${n(hi)} ${s.unidad}. A menos de ${s.minutos_andando} minutos a pie hay ${n(capCerca)}${cerca.some((c) => !c.capacidadReal) ? ' (capacidad estimada)' : ''}.`
-        }
-      }
-      return { sid, s, cerca, masCercano: todos[0] as (Existente & { d: number }) | undefined, prevision }
-    })
-    const suelo = datos.parcelas.features.filter((f) => metros(lugar.lon, lugar.lat, f.properties.lon, f.properties.lat) <= 10 * METROS_POR_MINUTO)
-    const paradas = datos.paradas.features.map((f) => ({ f, d: metros(lugar.lon, lugar.lat, f.geometry.coordinates[0], f.geometry.coordinates[1]) }))
-      .filter((x) => x.d <= 5 * METROS_POR_MINUTO).sort((a, b) => a.d - b.d).slice(0, 3)
-    return { amb, demAmb, porServicio, suelo, paradas }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lugar, datos, intereses, servicios, capasPuntos])
-
-  const capas: CapaMapa[] = useMemo(() => {
-    const radio: FeatureCollection<Polygon> = { type: 'FeatureCollection', features: lugar ? [{ type: 'Feature', properties: {}, geometry: { type: 'Polygon', coordinates: [circulo(lugar.lon, lugar.lat, 10 * METROS_POR_MINUTO)] } }] : [] }
-    const todos: FeatureCollection<Point> = { type: 'FeatureCollection', features: sids.flatMap((sid) => existentesDe(servicios[sid], capasPuntos, servicios[sid].capacidad[1])
-      .map((c) => ({ type: 'Feature' as const, properties: { nombre: c.nombre, detalle: c.detalle, servicio: servicios[sid].nombre }, geometry: { type: 'Point' as const, coordinates: [c.lon, c.lat] } }))) }
-    return [
-      { id: 'c-ambitos', datos: datos.ambitos, estilo: { type: 'line', paint: { 'line-color': '#131313', 'line-width': 1, 'line-opacity': 0.35, 'line-dasharray': [3, 2] } },
-        popup: (p) => `<b>${nombreBarrio(String(p.nombre))}</b><br><span style="color:#595959">Barrio en desarrollo · ${p.viviendas ? n(Number(p.viviendas)) + ' viviendas previstas' : 'sin datos de viviendas'}</span>` },
-      { id: 'c-suelo', datos: datos.parcelas, estilo: { type: 'fill', paint: { 'fill-color': '#2b5c8a', 'fill-opacity': 0.3 } },
-        popup: (p) => `<b>Suelo reservado para equipamientos</b><br>${n(Number(p.area_m2))} m², todavía sin construir` },
-      { id: 'c-radio', datos: radio, estilo: { type: 'line', paint: { 'line-color': '#de0029', 'line-width': 1.5, 'line-dasharray': [2, 2] } } },
-      { id: 'c-todos', datos: todos, visible: !lugar, estilo: { type: 'circle', paint: { 'circle-radius': 4, 'circle-color': '#131313', 'circle-stroke-width': 1.5, 'circle-stroke-color': '#fff' } },
-        popup: (p) => `<b>${p.nombre}</b><br>${p.servicio}<br><span style="color:#595959">${p.detalle}</span>` },
-    ]
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [datos, lugar, intereses])
-
-  const centro = useMemo<[number, number] | null>(() => (lugar ? [lugar.lon, lugar.lat] : null), [lugar])
-  const marcadores: Marcador[] = useMemo(() => {
-    if (!lugar || !resultado) return []
-    const cercanos = resultado.porServicio.flatMap(({ sid, s, cerca }) => cerca.slice(0, 6).map((c) => ({
-      id: `${sid}-${c.id}`, lon: c.lon, lat: c.lat, texto: '', color: '#131313', html: iconoSvg(sid), clase: 'pequeno', titulo: `${capitalizar(c.nombre)} · ${s.nombre}`,
-    })))
-    return [...cercanos, { id: 'yo', lon: lugar.lon, lat: lugar.lat, texto: '', color: '#de0029', html: iconoSvg('ubicacion'), titulo: lugar.texto }]
-  }, [lugar, resultado])
-  const barrios = (datos.demanda?.ambitos ?? []).filter((a) => a.viviendas && a.viviendas >= 500)
-
-  const elegirBarrio = (nombre: string) => {
-    const pts = datos.demandaPuntos.features.filter((p) => p.properties.ambito === nombre)
-    if (pts.length) {
-      elegir({ lon: pts.reduce((t, p) => t + p.geometry.coordinates[0], 0) / pts.length, lat: pts.reduce((t, p) => t + p.geometry.coordinates[1], 0) / pts.length, texto: nombreBarrio(nombre) })
-      return
-    }
-    const f = datos.ambitos.features.find((x) => x.properties?.nombre === nombre)
-    const c = f ? poligonos(f.geometry)[0]?.[0] ?? [] : []
-    if (c.length) elegir({ lon: c.reduce((t, x) => t + x[0], 0) / c.length, lat: c.reduce((t, x) => t + x[1], 0) / c.length, texto: nombreBarrio(nombre) })
+  const elegirPunto = (lon: number, lat: number, texto: string) => setLugar({ lon, lat, texto, ambito: ambitoDe(lon, lat) })
+  const elegirBarrio = (a: AmbitoDemanda) => {
+    const pts = datos.demandaPuntos.features.filter((p) => p.properties.ambito === a.ambito)
+    const f = datos.ambitos.features.find((x) => x.properties?.nombre === a.ambito)
+    const [lon, lat] = pts.length ? [pts.reduce((t, p) => t + p.geometry.coordinates[0], 0) / pts.length, pts.reduce((t, p) => t + p.geometry.coordinates[1], 0) / pts.length]
+      : f ? centroide(f.geometry) : datos.indice.centro
+    setLugar({ lon, lat, texto: nombreBarrio(a.ambito), ambito: a.ambito })
+  }
+  async function buscar() {
+    if (!q.trim()) return
+    setMsg(''); setCands([])
+    try {
+      const url = `https://www.cartociudad.es/geocoder/api/geocoder/candidates?limit=6&q=${encodeURIComponent(`${q}, ${datos.indice.nombre}`)}`
+      const r: Candidato[] = await (await fetch(url)).json()
+      const ok = r.filter((c) => c.muni?.toLowerCase() === datos.indice.nombre.toLowerCase() && c.lat && c.lng)
+      if (ok.length === 1) elegirPunto(ok[0].lng, ok[0].lat, ok[0].address)
+      else setCands(ok)
+      if (!ok.length) setMsg(`No encontramos esa calle en ${datos.indice.nombre}.`)
+    } catch { setMsg('El buscador no responde. Elige un barrio o pulsa en el mapa.') }
+  }
+  const alternarSituacion = (id: string) => {
+    const s = SITUACIONES.find((x) => x.id === id)!
+    if (situaciones.includes(id)) { setSituaciones(situaciones.filter((x) => x !== id)); return }
+    setSituaciones([...situaciones, id]); setCats((c) => [...new Set([...c, ...s.cats])])
   }
 
+  /* ---------- mapa ---------- */
+  const capas: CapaMapa[] = useMemo(() => {
+    const circ: FeatureCollection<Polygon> = { type: 'FeatureCollection', features: lugar ? [{ type: 'Feature', properties: {}, geometry: { type: 'Polygon', coordinates: [circulo(lugar.lon, lugar.lat, radio)] } }] : [] }
+    const ambs: FeatureCollection = { ...datos.ambitos, features: datos.ambitos.features.map((f) => ({ ...f, properties: { ...f.properties, estado: demanda.get(String(f.properties?.nombre))?.estado ?? 'sin_datos', sel: f.properties?.nombre === lugar?.ambito } })) }
+    const items: FeatureCollection<Point> = { type: 'FeatureCollection', features: (resultado?.cerca ?? []).map((x) => ({ type: 'Feature', properties: { nombre: x.nombre, cat: x.cat.texto, estado: x.estado, detalle: x.detalle }, geometry: { type: 'Point', coordinates: [x.lon, x.lat] } })) }
+    return [
+      { id: 'b-ambitos', datos: ambs, estilo: { type: 'fill', paint: { 'fill-color': ['match', ['get', 'estado'], 'futuro', '#de0029', 'en_desarrollo', '#131313', '#8a8a8a'], 'fill-opacity': ['case', ['get', 'sel'], 0.14, 0.05] } } as CapaMapa['estilo'],
+        popup: (p) => `<b>${nombreBarrio(String(p.nombre))}</b><br><span style="color:#595959">${ETIQUETA_ESTADO_BARRIO[String(p.estado)]} · ${p.viviendas ? n(Number(p.viviendas)) + ' viviendas previstas' : 'sin datos de viviendas'}</span>` },
+      { id: 'b-ambitos-borde', datos: ambs, estilo: { type: 'line', paint: { 'line-color': ['case', ['get', 'sel'], '#de0029', '#595959'], 'line-width': ['case', ['get', 'sel'], 2.5, 1], 'line-dasharray': [3, 2] } } as CapaMapa['estilo'] },
+      { id: 'b-radio', datos: circ, estilo: { type: 'line', paint: { 'line-color': '#de0029', 'line-width': 1.5, 'line-dasharray': [2, 2] } } },
+      { id: 'b-items', datos: items, estilo: { type: 'circle', paint: { 'circle-radius': 6, 'circle-color': ['match', ['get', 'estado'], 'abierto', '#131313', 'suelo', '#2b5c8a', 'prevista', '#de0029', '#8a8a8a'], 'circle-stroke-width': 2, 'circle-stroke-color': '#fff' } } as CapaMapa['estilo'],
+        popup: (p) => `<b>${p.nombre}</b><br>${p.cat}<br><span style="color:#595959">${p.detalle}</span>` },
+    ]
+  }, [datos, demanda, lugar, radio, resultado])
+  const marcadores: Marcador[] = useMemo(() => (lugar ? [{ id: 'yo', lon: lugar.lon, lat: lugar.lat, texto: '', color: '#de0029', html: iconoSvg('ubicacion'), titulo: lugar.texto }] : []), [lugar])
+  const centro = useMemo<[number, number] | null>(() => (lugar ? [lugar.lon, lugar.lat] : null), [lugar])
+  const amb = resultado?.amb ?? null
+
   return (
-    <div className="grid h-full min-h-0 grid-cols-1 lg:grid-cols-[minmax(420px,520px)_1fr]">
-      <aside className="ficha min-h-0 overflow-y-auto border-r border-linea">
-        <div className="px-6 pt-7 pb-5">
-          <h1 className="text-[28px] leading-tight font-semibold tracking-tight">¿Qué hay cerca de tu casa<br /><span className="text-texto-2">y qué está por venir?</span></h1>
+    <div className="flex h-full min-h-0 flex-col md:grid md:grid-cols-[minmax(340px,480px)_1fr]">
+      <div className="relative order-1 h-[42vh] shrink-0 md:order-2 md:h-auto">
+        <Mapa bbox={datos.encuadre} capas={capas} marcadores={marcadores} centrarEn={centro}
+          onClickCapa={(capa, p, ll) => {
+            if (capa === 'b-ambitos') { const a = demanda.get(String(p.nombre)); if (a) elegirBarrio(a); else elegirPunto(ll[0], ll[1], 'Punto elegido en el mapa') }
+            else if (capa !== 'b-items') elegirPunto(ll[0], ll[1], 'Punto elegido en el mapa')
+          }}
+          onClickMapa={(lon, lat) => elegirPunto(lon, lat, 'Punto elegido en el mapa')} />
+        <Leyenda>
+          {[['#131313', 'Ya existe'], ['#8a8a8a', 'En el planeamiento'], ['#de0029', 'Prevista'], ['#2b5c8a', 'Suelo disponible']].map(([c, t]) => (
+            <div key={t} className="flex items-center gap-2 py-0.5"><span className="h-3 w-3 rounded-full" style={{ background: c }} />{t}</div>
+          ))}
+        </Leyenda>
+      </div>
 
-          {/* 1. dirección */}
-          <form className="no-imprimir mt-6" onSubmit={(e) => { e.preventDefault(); buscar() }}>
-            <label htmlFor="direccion" className="mb-1.5 block text-sm font-semibold">Tu dirección en {datos.indice.nombre}</label>
-            <div className="flex">
-              <div className="relative flex-1">
-                <Icono nombre="buscar" className="pointer-events-none absolute top-1/2 left-3 h-5 w-5 -translate-y-1/2 text-texto-3" />
-                <input id="direccion" className="h-12 w-full border border-tinta bg-white pr-3 pl-10 text-[15px] placeholder:text-texto-3 focus:outline-2 focus:outline-offset-[-2px] focus:outline-rojo"
-                  placeholder="Calle y número, p. ej. Avenida Rocinante 8" value={q} onChange={(e) => setQ(e.target.value)} autoComplete="street-address" />
-              </div>
-              <button className="h-12 bg-tinta px-5 text-sm font-semibold text-white transition-colors hover:bg-rojo disabled:opacity-60" disabled={buscando}>{buscando ? 'Buscando…' : 'Buscar'}</button>
-            </div>
-            {errorBusqueda && <p className="mt-2 text-sm text-rojo-oscuro">{errorBusqueda}</p>}
-            {cands.length > 0 && (
-              <ul className="border border-t-0 border-tinta bg-white text-sm shadow-sm">
-                {cands.map((c) => (
-                  <li key={`${c.address}${c.lat}`} className="border-t border-linea first:border-t-0">
-                    <button type="button" className="flex w-full items-center gap-2 px-3 py-2.5 text-left hover:bg-gris-1" onClick={() => elegir({ lon: c.lng, lat: c.lat, texto: c.address })}>
-                      <Icono nombre="ubicacion" className="h-4 w-4 text-texto-3" />{c.address}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            )}
-            <div className="mt-2.5 flex items-center gap-2 text-sm text-texto-2">
-              <span>o elige un barrio nuevo:</span>
-              <select className="min-w-0 flex-1 border-b border-tinta bg-transparent py-1 font-medium text-tinta focus:outline-none" value="" onChange={(e) => e.target.value && elegirBarrio(e.target.value)}>
-                <option value="">Seleccionar…</option>
-                {barrios.map((a) => <option key={a.ambito} value={a.ambito}>{nombreBarrio(a.ambito)}</option>)}
-              </select>
-            </div>
-          </form>
-
-          {/* 2. intereses */}
-          <fieldset className="no-imprimir mt-6">
-            <legend className="mb-2 text-sm font-semibold">Qué te interesa</legend>
-            <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
-              {INTERESES.map((e) => {
-                const on = intereses.includes(e.id)
-                return (
-                  <button type="button" key={e.id} aria-pressed={on} onClick={() => setIntereses((x) => on ? x.filter((y) => y !== e.id) : [...x, e.id])}
-                    className={`relative flex flex-col items-start gap-2 border p-3 text-left text-[13px] leading-tight transition-colors ${on ? 'border-tinta bg-white text-tinta shadow-[inset_0_0_0_1px_#131313]' : 'border-linea bg-gris-1 text-texto-3 hover:border-texto-3'}`}>
-                    <Icono nombre={e.icono} className="h-6 w-6" />
-                    <span className="font-medium">{e.texto}</span>
-                    {on && <span className="absolute top-2 right-2 flex h-4 w-4 items-center justify-center bg-tinta text-white"><Icono nombre="check" className="h-3 w-3" /></span>}
-                  </button>
-                )
-              })}
-            </div>
-          </fieldset>
+      <aside className="ficha order-2 min-h-0 flex-1 overflow-y-auto border-r border-linea md:order-1">
+        <div className="px-6 pt-6 pb-2">
+          <div className="text-xs font-medium tracking-wide text-texto-3 uppercase">{datos.indice.nombre}</div>
+          <h1 className="mt-1 text-[26px] leading-tight font-semibold tracking-tight">Qué hay y qué viene en cada barrio</h1>
         </div>
 
-        {!resultado && (
-          <ol className="mx-6 mb-8 grid gap-3 border-t border-linea pt-5 text-sm text-texto-2">
-            {['Escribe tu dirección, elige un barrio o pulsa en el mapa.', 'Marca lo que te interesa: colegios, salud, mayores…', 'Verás qué hay a pocos minutos a pie y qué suelo está reservado para nuevos servicios.'].map((t, i) => (
-              <li key={t} className="flex gap-3"><span className="flex h-6 w-6 shrink-0 items-center justify-center border border-tinta text-xs font-semibold text-tinta">{i + 1}</span>{t}</li>
+        <section className="no-imprimir px-6 pt-4">
+          <h2 className="mb-2 text-sm font-semibold">1. Elige un barrio <span className="font-normal text-texto-3">o pulsa en el mapa</span></h2>
+          <div className="grid max-h-56 grid-cols-1 gap-1.5 overflow-y-auto pr-1 sm:grid-cols-2">
+            {barrios.map((a) => {
+              const on = lugar?.ambito === a.ambito
+              return (
+                <button key={a.ambito} type="button" onClick={() => elegirBarrio(a)} aria-pressed={on}
+                  className={`border px-3 py-2 text-left transition-colors ${on ? 'border-tinta bg-tinta text-white' : 'border-linea hover:border-tinta'}`}>
+                  <div className="truncate text-sm font-medium">{nombreBarrio(a.ambito)}</div>
+                  <div className={`text-[11px] ${on ? 'text-white/70' : 'text-texto-3'}`}>{ETIQUETA_ESTADO_BARRIO[a.estado]} · {n(a.viviendas ?? 0)} viviendas</div>
+                </button>
+              )
+            })}
+          </div>
+          {barrios.length === 0 && <p className="text-sm text-texto-2">Este municipio no tiene barrios en desarrollo en el planeamiento. Pulsa en el mapa para elegir una zona.</p>}
+          <button type="button" className="mt-2 text-xs text-texto-2 underline underline-offset-2 hover:text-tinta" onClick={() => setBuscarCalle(!buscarCalle)}>{buscarCalle ? 'Ocultar buscador' : '¿Ya vives aquí? Busca tu calle'}</button>
+          {buscarCalle && (
+            <form className="mt-2" onSubmit={(e) => { e.preventDefault(); buscar() }}>
+              <div className="flex"><input className="h-10 min-w-0 flex-1 border border-tinta px-3 text-sm" placeholder="Calle y número" value={q} onChange={(e) => setQ(e.target.value)} />
+                <button className="h-10 bg-tinta px-4 text-sm font-semibold text-white hover:bg-rojo">Buscar</button></div>
+              {msg && <p className="mt-1 text-xs text-rojo-oscuro">{msg}</p>}
+              {cands.length > 0 && <ul className="border border-t-0 border-tinta text-sm">{cands.map((c) => <li key={c.address + c.lat}><button type="button" className="w-full px-3 py-2 text-left hover:bg-gris-1" onClick={() => { elegirPunto(c.lng, c.lat, c.address); setCands([]) }}>{c.address}</button></li>)}</ul>}
+            </form>
+          )}
+        </section>
+
+        <section className="no-imprimir px-6 pt-5">
+          <h2 className="mb-2 text-sm font-semibold">2. Qué buscas <span className="font-normal text-texto-3">({cats.length} elegidos)</span></h2>
+          <div className="mb-2 grid grid-cols-2 gap-1.5">
+            {SITUACIONES.map((s) => {
+              const on = situaciones.includes(s.id)
+              return <button key={s.id} type="button" aria-pressed={on} onClick={() => alternarSituacion(s.id)}
+                className={`flex items-center gap-2 border px-2.5 py-2 text-left text-[13px] leading-tight ${on ? 'border-tinta bg-tinta text-white' : 'border-linea hover:border-tinta'}`}>
+                <Icono nombre={s.icono} className="h-5 w-5 shrink-0" />{s.texto}</button>
+            })}
+          </div>
+          <div className="border-t border-linea">
+            {GRUPOS.map((g) => {
+              const cs = CATEGORIAS.filter((c) => c.grupo === g), nSel = cs.filter((c) => cats.includes(c.id)).length, ab = abiertos.includes(g)
+              return (
+                <div key={g} className="border-b border-linea">
+                  <button type="button" aria-expanded={ab} className="flex w-full items-center gap-2 py-2.5 text-left text-sm" onClick={() => setAbiertos((a) => ab ? a.filter((x) => x !== g) : [...a, g])}>
+                    <span className="font-medium">{g}</span>{nSel > 0 && <span className="bg-rojo px-1.5 text-[11px] font-semibold text-white">{nSel}</span>}<span className="ml-auto text-xs text-texto-3">{ab ? '▴' : '▾'}</span>
+                  </button>
+                  {ab && <div className="grid grid-cols-1 gap-0.5 pb-2.5 sm:grid-cols-2">{cs.map((c) => (
+                    <label key={c.id} className="flex cursor-pointer items-center gap-2 py-1 text-sm">
+                      <input type="checkbox" className="h-4 w-4 accent-tinta" checked={cats.includes(c.id)} onChange={() => setCats((x) => x.includes(c.id) ? x.filter((y) => y !== c.id) : [...x, c.id])} />{c.texto}
+                    </label>))}</div>}
+                </div>
+              )
+            })}
+          </div>
+        </section>
+
+        <section className="no-imprimir px-6 pt-5">
+          <h2 className="mb-2 text-sm font-semibold">3. Distancia y estado</h2>
+          <div className="flex">
+            {[5, 10, 15, 20].map((m) => <button key={m} type="button" aria-pressed={radioMin === m} onClick={() => setRadioMin(m)}
+              className={`flex-1 border-y border-l px-2 py-1.5 text-sm last:border-r ${radioMin === m ? 'border-tinta bg-tinta text-white' : 'border-linea hover:bg-gris-1'}`}>{m} min</button>)}
+          </div>
+          <div className="mt-1 text-xs text-texto-3">a pie, en línea recta ({n(radio)} m)</div>
+          <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5">
+            {ESTADOS.map((e) => (
+              <label key={e.id} className={`flex items-center gap-1.5 text-sm ${e.disponible ? 'cursor-pointer' : 'text-texto-3'}`} title={e.disponible ? '' : 'Sin datos todavía: llegará con las licitaciones y el BOCM'}>
+                <input type="checkbox" className="h-4 w-4 accent-tinta" disabled={!e.disponible} checked={estados.includes(e.id)} onChange={() => setEstados((x) => x.includes(e.id) ? x.filter((y) => y !== e.id) : [...x, e.id])} />
+                {e.texto}{!e.disponible && ' (sin datos)'}
+              </label>
             ))}
-          </ol>
-        )}
+          </div>
+        </section>
+
+        {!resultado && <p className="mx-6 mt-6 mb-8 border-t border-linea pt-5 text-sm text-texto-2">Elige un barrio de la lista o pulsa en el mapa para ver qué hay a su alrededor y qué está por venir.</p>}
 
         {resultado && lugar && (
-          <div className="border-t border-linea">
+          <div className="mt-6 border-t border-tinta">
             <div className="flex items-start gap-3 bg-gris-1 px-6 py-4">
               <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center bg-rojo text-white"><Icono nombre="ubicacion" className="h-5 w-5" /></span>
-              <div className="min-w-0">
+              <div className="min-w-0 flex-1">
                 <div className="font-semibold">{lugar.texto}</div>
-                <div className="text-sm text-texto-2">{resultado.amb
-                  ? <>Barrio en desarrollo: <b className="text-tinta">{nombreBarrio(resultado.amb)}</b>{resultado.demAmb?.viviendas ? ` · ${n(resultado.demAmb.viviendas)} viviendas previstas` : ''}</>
-                  : 'Fuera de los barrios de nuevo desarrollo'}</div>
+                <div className="text-sm text-texto-2">{amb ? `${ETIQUETA_ESTADO_BARRIO[amb.estado]} · ${n(amb.viviendas ?? 0)} viviendas previstas` : 'Fuera de los barrios en desarrollo'} · {resultado.cerca.length} resultados a menos de {radioMin} min</div>
               </div>
             </div>
 
-            {resultado.porServicio.map(({ sid, s, cerca, masCercano, prevision }) => (
-              <section key={sid} className="border-b border-linea px-6 py-5">
-                <div className="mb-2 flex items-center gap-2.5">
-                  <Icono nombre={sid} className="h-5 w-5" />
-                  <h2 className="font-semibold">{s.nombre}</h2>
-                  <span className="ml-auto text-xs text-texto-3">{cerca.length ? `${cerca.length} a menos de ${s.minutos_andando} min` : `ninguno a menos de ${s.minutos_andando} min`}</span>
+            {amb && (amb.poblacion_actual || amb.poblacion_completo) && (
+              <section className="border-b border-linea px-6 py-4">
+                <h2 className="mb-2 font-semibold">Su población</h2>
+                <div className="grid grid-cols-2 gap-3 text-sm">
+                  <div><div className="text-xs text-texto-3">Hoy ({amb.anio_poblacion_actual ?? '—'}, INE)</div><div className="text-xl font-semibold tabular-nums">{amb.poblacion_actual ? n(amb.poblacion_actual) : 'sin datos'}</div></div>
+                  <div><div className="text-xs text-texto-3">Cuando esté completo</div><div className="text-xl font-semibold tabular-nums">{amb.poblacion_completo ? `${n(amb.poblacion_completo[0])}–${n(amb.poblacion_completo[2])}` : 'sin datos'}</div></div>
                 </div>
-                {cerca.length === 0 && masCercano && (
-                  <p className="text-sm text-texto-2">El más cercano es <b className="text-tinta">{capitalizar(masCercano.nombre)}</b>, a unos {minutos(masCercano.d)} minutos a pie.</p>
+                {previsiones.filter((p) => p.hi > 0).length > 0 && (
+                  <div className="mt-3"><Aviso titulo="Lo que hará falta cuando esté completo">
+                    <ul className="mt-1 grid gap-0.5">{previsiones.filter((p) => p.hi > 0).map((p) => (
+                      <li key={p.s.nombre}>{p.s.nombre}: {p.s.unidad === 'plazas' ? `entre ${n(p.lo)} y ${n(p.hi)} plazas` : `entre ${n(p.lo)} y ${n(p.hi)} habitantes que atender`} · hoy hay {p.abiertos} a menos de {radioMin} min</li>))}</ul>
+                    <div className="mt-1 text-xs">Estimación del modelo con su rango. No atribuye responsabilidades.</div>
+                  </Aviso></div>
                 )}
+              </section>
+            )}
+
+            {resultado.porCat.map(({ c, items, masCercano }) => (
+              <section key={c.id} className="border-b border-linea px-6 py-4">
+                <div className="mb-1.5 flex items-center gap-2.5">
+                  <Icono nombre={c.icono} className="h-5 w-5" /><h2 className="font-semibold">{c.texto}</h2>
+                  <span className="ml-auto text-xs text-texto-3">{items.length ? `${items.length} a menos de ${radioMin} min` : 'ninguno cerca'}</span>
+                </div>
+                {!items.length && masCercano && <p className="text-sm text-texto-2">El más cercano: <b className="text-tinta">{masCercano.nombre}</b>, a unos {minutos(masCercano.d)} minutos a pie.</p>}
                 <ul>
-                  {cerca.slice(0, 3).map((c) => (
-                    <li key={c.id} className="flex items-center gap-3 border-t border-gris-2 py-2.5 first:border-t-0">
+                  {items.slice(0, 4).map((x) => (
+                    <li key={x.id} className="flex items-center gap-3 border-t border-gris-2 py-2 first:border-t-0">
                       <div className="min-w-0 flex-1">
-                        <div className="truncate text-[15px] font-medium" title={c.nombre}>{capitalizar(c.nombre)}</div>
-                        <div className="flex flex-wrap items-center gap-x-3 text-xs text-texto-3">
-                          <span className="capitalize">{c.detalle.toLowerCase()}</span>
-                          <a className="inline-flex items-center gap-0.5 text-texto-2 underline-offset-2 hover:text-rojo hover:underline" href={FUENTE[s.existentes.capa]} target="_blank" rel="noreferrer">
-                            Fuente<Icono nombre="externo" className="h-3 w-3" /></a>
-                        </div>
+                        <div className="truncate text-[15px] font-medium" title={x.nombre}>{x.nombre}</div>
+                        <div className="truncate text-xs text-texto-3">{x.detalle && <>{x.detalle} · </>}<a className="underline-offset-2 hover:text-rojo hover:underline" href={FUENTE_URL[c.fuente]} target="_blank" rel="noreferrer">{NOMBRE_FUENTE[c.fuente]}</a></div>
                       </div>
-                      <div className="text-right">
-                        <div className="text-[15px] font-semibold tabular-nums">{minutos(c.d)} min</div>
-                        <Estado estado="abierto" />
-                      </div>
+                      <div className="shrink-0 text-right"><div className="text-sm font-semibold tabular-nums">{minutos(x.d)} min</div><Estado estado={x.estado} /></div>
                     </li>
                   ))}
                 </ul>
-                {cerca.length > 3 && <div className="pt-1 text-xs text-texto-3">y {cerca.length - 3} más en el mapa</div>}
-                {prevision && <div className="mt-3"><Aviso titulo={`Cuando ${resultado.amb ? nombreBarrio(resultado.amb) : 'el barrio'} esté completo`}>{prevision}</Aviso></div>}
+                {items.length > 4 && <div className="pt-1 text-xs text-texto-3">y {items.length - 4} más en el mapa</div>}
               </section>
             ))}
 
-            <section className="border-b border-linea px-6 py-5">
-              <div className="mb-2 flex items-center gap-2.5"><Icono nombre="suelo" className="h-5 w-5" /><h2 className="font-semibold">Lo que está por venir</h2></div>
-              {resultado.suelo.length ? (
-                <div className="flex items-center gap-3">
-                  <div className="flex-1 text-sm text-texto-2"><b className="text-tinta">{resultado.suelo.length} parcelas</b> reservadas para equipamientos públicos a menos de 10 minutos ({n(resultado.suelo.reduce((t, f) => t + f.properties.area_m2, 0))} m²), todavía sin construir.</div>
-                  <Estado estado="suelo" />
-                </div>
-              ) : <p className="text-sm text-texto-2">No hay suelo de equipamiento vacante a menos de 10 minutos.</p>}
-              <p className="mt-2 text-xs text-texto-3">Licitaciones y obras en marcha: sin datos todavía para {datos.indice.nombre}. Fuente del suelo: IDEM, suelo vacante 2026.</p>
+            <section className="border-b border-linea px-6 py-4">
+              <div className="mb-1.5 flex items-center gap-2.5"><Icono nombre="autobus" className="h-5 w-5" /><h2 className="font-semibold">Transporte a menos de 5 min</h2></div>
+              {resultado.paradas.length ? <ul>{resultado.paradas.map(({ f, d }) => (
+                <li key={String(f.properties?.id)} className="flex items-start gap-3 border-t border-gris-2 py-2 first:border-t-0">
+                  <div className="min-w-0 flex-1"><div className="truncate text-sm font-medium">{capitalizar(String(f.properties?.nombre))}</div>
+                    <div className="mt-1 flex flex-wrap gap-1">{String(f.properties?.lineas ?? '').split('; ').flatMap((t) => { const [modo, ls] = t.split(': '); return (ls ?? '').split(',').map((l) => l.trim()).filter((l) => l && l !== '—').map((l) => <Linea key={modo + l} codigo={l} modo={modo} />) })}</div></div>
+                  <span className="text-sm font-semibold tabular-nums">{minutos(d)} min</span>
+                </li>))}</ul> : <p className="text-sm text-texto-2">Ninguna parada a menos de 5 minutos.</p>}
             </section>
 
-            <section className="border-b border-linea px-6 py-5">
-              <div className="mb-2 flex items-center gap-2.5"><Icono nombre="autobus" className="h-5 w-5" /><h2 className="font-semibold">Transporte a menos de 5 minutos</h2></div>
-              {resultado.paradas.length ? (
-                <ul>
-                  {resultado.paradas.map(({ f, d }) => (
-                    <li key={String(f.properties?.id)} className="flex items-start gap-3 border-t border-gris-2 py-2 first:border-t-0">
-                      <div className="min-w-0 flex-1">
-                        <div className="truncate text-sm font-medium">{capitalizar(String(f.properties?.nombre))}</div>
-                        <div className="mt-1 flex flex-wrap gap-1">
-                          {String(f.properties?.lineas ?? '').split('; ').flatMap((tramo) => {
-                            const [modo, ls] = tramo.split(': ')
-                            return (ls ?? '').split(',').map((l) => l.trim()).filter((l) => l && l !== '—').map((l) => <Linea key={`${modo}${l}`} codigo={l} modo={modo} />)
-                          })}
-                        </div>
-                      </div>
-                      <span className="text-sm font-semibold tabular-nums">{minutos(d)} min</span>
-                    </li>
-                  ))}
-                </ul>
-              ) : <p className="text-sm text-texto-2">Ninguna parada a menos de 5 minutos.</p>}
-            </section>
-
-            <div className="no-imprimir flex gap-2 px-6 py-5">
-              <button type="button" className="inline-flex items-center gap-2 border border-tinta px-4 py-2 text-sm hover:bg-gris-1" onClick={() => window.print()}>
-                <Icono nombre="descargar" className="h-4 w-4" />Descargar ficha (PDF)</button>
-              <button type="button" className="px-3 py-2 text-sm text-texto-2 underline-offset-2 hover:underline" onClick={() => { setLugar(null); setQ('') }}>Buscar otra dirección</button>
+            <div className="no-imprimir flex flex-wrap gap-2 px-6 py-5">
+              <button type="button" className="inline-flex items-center gap-2 border border-tinta px-4 py-2 text-sm hover:bg-gris-1" onClick={() => window.print()}><Icono nombre="descargar" className="h-4 w-4" />Ficha del barrio (PDF)</button>
             </div>
-            <p className="px-6 pb-6 text-xs leading-relaxed text-texto-3">Datos abiertos de la Comunidad de Madrid (IDEM y Portal de Datos Abiertos), INE y Consorcio Regional de Transportes. Las previsiones son estimaciones con su rango y no atribuyen responsabilidades. Tiempos a pie en línea recta.</p>
+            <p className="px-6 pb-6 text-xs leading-relaxed text-texto-3">Datos abiertos de la Comunidad de Madrid (IDEM y Portal de Datos Abiertos), INE y Consorcio Regional de Transportes. Licitaciones y obras: sin datos todavía. Distancias a pie en línea recta.{amb?.pct_residencial_vacante != null ? ` Suelo residencial aún sin construir en el barrio: ${dec(amb.pct_residencial_vacante)} %.` : ''}</p>
           </div>
         )}
       </aside>
-      <div className="relative min-h-[420px]">
-        <Mapa bbox={datos.encuadre} capas={capas} marcadores={marcadores} centrarEn={centro}
-          onClickMapa={(lon, lat) => elegir({ lon, lat, texto: 'Punto elegido en el mapa' })}
-          onClickCapa={(capa, _p, ll) => { if (capa !== 'c-todos') elegir({ lon: ll[0], lat: ll[1], texto: 'Punto elegido en el mapa' }) }} />
-        <div className="pointer-events-none absolute top-3 left-3 bg-white/95 px-3 py-2 text-xs shadow-sm">
-          <div className="flex items-center gap-2"><span className="h-3 w-3 bg-tinta" />Servicios existentes</div>
-          <div className="mt-1 flex items-center gap-2"><span className="h-3 w-3 bg-suelo/40 outline outline-suelo/60" />Suelo reservado para equipamientos</div>
-          <div className="mt-1 flex items-center gap-2"><span className="h-0 w-3 border-t-2 border-dashed border-rojo" />10 minutos a pie</div>
-        </div>
-      </div>
     </div>
   )
 }

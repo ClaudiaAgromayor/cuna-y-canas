@@ -1,0 +1,292 @@
+{
+ "cod_ine": "018",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "P-9 SAN CARLOS",
+   "viviendas_previstas": 113,
+   "residencial_ocupado_m2": 44035,
+   "residencial_vacante_m2": 11958,
+   "equipamiento_ocupado_m2": 1454,
+   "equipamiento_vacante_m2": 3986,
+   "pct_residencial_vacante": 21.4,
+   "pct_equipamiento_vacante": 73.3,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "P-11 LOS CHAPARROS",
+   "viviendas_previstas": 90,
+   "residencial_ocupado_m2": 1172,
+   "residencial_vacante_m2": 107221,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 98.9,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "P-3 LAS CERQUILLAS",
+   "viviendas_previstas": 90,
+   "residencial_ocupado_m2": 35353,
+   "residencial_vacante_m2": 13035,
+   "equipamiento_ocupado_m2": 1219,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 26.9,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "P-6 CARMONA",
+   "viviendas_previstas": 70,
+   "residencial_ocupado_m2": 39346,
+   "residencial_vacante_m2": 25887,
+   "equipamiento_ocupado_m2": 94,
+   "equipamiento_vacante_m2": 1970,
+   "pct_residencial_vacante": 39.7,
+   "pct_equipamiento_vacante": 95.5,
+   "parcelas_equipamiento_vacantes": 4
+  },
+  {
+   "ambito": "P-1 LAS HUERTAS",
+   "viviendas_previstas": 68,
+   "residencial_ocupado_m2": 25976,
+   "residencial_vacante_m2": 11253,
+   "equipamiento_ocupado_m2": 47,
+   "equipamiento_vacante_m2": 1125,
+   "pct_residencial_vacante": 30.2,
+   "pct_equipamiento_vacante": 96.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "P-2 LA CALLEJA",
+   "viviendas_previstas": 65,
+   "residencial_ocupado_m2": 18130,
+   "residencial_vacante_m2": 4970,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 4970,
+   "pct_residencial_vacante": 21.5,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "P-12 ANTIGUO POLÏGONO 39",
+   "viviendas_previstas": 64,
+   "residencial_ocupado_m2": 51633,
+   "residencial_vacante_m2": 16789,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 24.5,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "P-5 PEÑAQUINTERO",
+   "viviendas_previstas": 52,
+   "residencial_ocupado_m2": 125,
+   "residencial_vacante_m2": 30778,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 99.6,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "P-4 EL EJIDO",
+   "viviendas_previstas": 44,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 31131,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "P-10 MAJADA DE LAS MONJAS",
+   "viviendas_previstas": 43,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 50553,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "P-8 LA MESTA II",
+   "viviendas_previstas": 35,
+   "residencial_ocupado_m2": 27668,
+   "residencial_vacante_m2": 3330,
+   "equipamiento_ocupado_m2": 3705,
+   "equipamiento_vacante_m2": 1454,
+   "pct_residencial_vacante": 10.7,
+   "pct_equipamiento_vacante": 28.2,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "P-7 LA MESTA I",
+   "viviendas_previstas": 31,
+   "residencial_ocupado_m2": 21712,
+   "residencial_vacante_m2": 7487,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 25.6,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "REAJO DE SAN ANDRÉS",
+   "viviendas_previstas": 31,
+   "residencial_ocupado_m2": 237559,
+   "residencial_vacante_m2": 50673,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 17.6,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "P-13 LA TABLA",
+   "viviendas_previstas": 0,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 94,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-1 LA TEJERA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 19367,
+   "residencial_vacante_m2": 20211,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 51.1,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-10 ÁREA SITUADA ENTRE LAS CALLES DEL CARMEN Y MARGARITAS",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 797,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-11 PARQUE DEL SANTO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 1032,
+   "residencial_vacante_m2": 3470,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 77.1,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-2 LOS CERCADOS DE COLLADO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 42296,
+   "residencial_vacante_m2": 3798,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 8.2,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-3 URBANIZACIÓN MONTELLANO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 137812,
+   "residencial_vacante_m2": 563,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 516,
+   "pct_residencial_vacante": 0.4,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "UA-4 ÁREA SITUADA ENTRE LAS CALLES CARMEN Y CALZADA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 750,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-5 ÁREA SITUADA SOBRE CALLE VAQUEROS",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 2297,
+   "residencial_vacante_m2": 656,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 22.2,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-6 ÁREA SITUADA SOBRE CALLE DEL PINAR",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 10502,
+   "residencial_vacante_m2": 1922,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 15.5,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-8 ÁREA SITUADA SOBRE CALLE LOS HERRENES",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 797,
+   "residencial_vacante_m2": 2438,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 75.4,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-9 ÁREA SITUADA SOBRE CALLE MARGARITAS",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 797,
+   "residencial_vacante_m2": 6845,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 89.6,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-ZI-1",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-ZI-2",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

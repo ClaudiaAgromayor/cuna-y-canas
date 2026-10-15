@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "130",
+  "nombre": "San Fernando de Henares",
+  "nombre_ckan": "San Fernando de Henares",
+  "slug": "san-fernando-de-henares"
+ },
+ "educativos_municipio": 38,
+ "educativos_en_alta": 21,
+ "educativos_guardados": 21,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 159,
+ "sanitarios_centros": 59,
+ "sanitarios_guardados": 59,
+ "sanitarios_sin_coordenadas": 0,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 6,
+ "sociales_guardados": 6,
+ "sociales_sin_coordenadas": 0,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 11,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 39033
+}

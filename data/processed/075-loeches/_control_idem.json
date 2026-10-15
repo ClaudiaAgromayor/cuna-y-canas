@@ -1,0 +1,56 @@
+{
+ "municipio": {
+  "cod": "075",
+  "nombre": "Loeches",
+  "nombre_ckan": "Loeches",
+  "slug": "loeches"
+ },
+ "ambitos_poligonos_brutos": 9,
+ "ambitos_geometrias_invalidas_reparadas": 4,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 9,
+ "ambitos_sin_viviendas": 2,
+ "ambitos_guardados": 9,
+ "redes_geometrias_invalidas_reparadas": 57,
+ "redes_brutas": 188,
+ "redes_dotacionales": 39,
+ "redes_por_tipo_y_estado": {
+  "deportivo/sin_dato": 5,
+  "educativo/sin_dato": 3,
+  "zona_verde/sin_dato": 31
+ },
+ "redes_guardadas": 39,
+ "suelo_parcelas_brutas": 4691,
+ "suelo_geometrias_invalidas_reparadas": 1754,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 9,
+ "candidatas_vacantes_equipamiento": 81,
+ "candidatas_sin_superficie_en_origen": 22,
+ "candidatas_descartadas_menores_de_50_m2": 33,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 48,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 36,
+  ">=2000": 33,
+  ">=5000": 21,
+  ">=10000": 15
+ },
+ "portal_suelo_parcelas": 1,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Residencial": 1
+ },
+ "portal_suelo_guardadas": 1,
+ "tamanos_kb": {
+  "ambitos.geojson": 15,
+  "centros_educativos.geojson": 3,
+  "centros_sanitarios.geojson": 4,
+  "centros_sociales.geojson": 1,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 28,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 1,
+  "redes.geojson": 19,
+  "resumen_ambitos.json": 3
+ }
+}

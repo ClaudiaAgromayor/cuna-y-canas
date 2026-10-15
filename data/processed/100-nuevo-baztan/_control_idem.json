@@ -1,0 +1,50 @@
+{
+ "municipio": {
+  "cod": "100",
+  "nombre": "Nuevo Baztán",
+  "nombre_ckan": "Nuevo Baztán",
+  "slug": "nuevo-baztan"
+ },
+ "ambitos_poligonos_brutos": 8,
+ "ambitos_geometrias_invalidas_reparadas": 0,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 8,
+ "ambitos_sin_viviendas": 4,
+ "ambitos_guardados": 8,
+ "redes_geometrias_invalidas_reparadas": 27,
+ "redes_brutas": 107,
+ "redes_dotacionales": 10,
+ "redes_por_tipo_y_estado": {
+  "deportivo/sin_dato": 4,
+  "zona_verde/sin_dato": 6
+ },
+ "redes_guardadas": 10,
+ "suelo_parcelas_brutas": 4828,
+ "suelo_geometrias_invalidas_reparadas": 661,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 8,
+ "candidatas_vacantes_equipamiento": 13,
+ "candidatas_sin_superficie_en_origen": 1,
+ "candidatas_descartadas_menores_de_50_m2": 1,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 12,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 9,
+  ">=2000": 6,
+  ">=5000": 3,
+  ">=10000": 2
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 9,
+  "centros_educativos.geojson": 2,
+  "centros_sanitarios.geojson": 4,
+  "centros_sociales.geojson": 0,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 5,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 6,
+  "resumen_ambitos.json": 3
+ }
+}

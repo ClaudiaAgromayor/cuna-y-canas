@@ -1,0 +1,303 @@
+{
+ "cod_ine": "172",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "S-R8 LOS HUEROS",
+   "viviendas_previstas": 3802,
+   "residencial_ocupado_m2": 583221,
+   "residencial_vacante_m2": 76740,
+   "equipamiento_ocupado_m2": 105481,
+   "equipamiento_vacante_m2": 50553,
+   "pct_residencial_vacante": 11.6,
+   "pct_equipamiento_vacante": 32.4,
+   "parcelas_equipamiento_vacantes": 6
+  },
+  {
+   "ambito": "S-R7 VALDELÁGUILA II",
+   "viviendas_previstas": 250,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 155068,
+   "equipamiento_ocupado_m2": 2534,
+   "equipamiento_vacante_m2": 61053,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 96.0,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "S-R4 VALDECARPINTERO",
+   "viviendas_previstas": 200,
+   "residencial_ocupado_m2": 4199,
+   "residencial_vacante_m2": 45847,
+   "equipamiento_ocupado_m2": 706,
+   "equipamiento_vacante_m2": 12803,
+   "pct_residencial_vacante": 91.6,
+   "pct_equipamiento_vacante": 94.8,
+   "parcelas_equipamiento_vacantes": 3
+  },
+  {
+   "ambito": "S-R1 VILLABILLA ESTE",
+   "viviendas_previstas": 166,
+   "residencial_ocupado_m2": 1883,
+   "residencial_vacante_m2": 38302,
+   "equipamiento_ocupado_m2": 94,
+   "equipamiento_vacante_m2": 235,
+   "pct_residencial_vacante": 95.3,
+   "pct_equipamiento_vacante": 71.4,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "S-R6 VALDELÁGUILA I",
+   "viviendas_previstas": 140,
+   "residencial_ocupado_m2": 3389,
+   "residencial_vacante_m2": 35443,
+   "equipamiento_ocupado_m2": 4471,
+   "equipamiento_vacante_m2": 518,
+   "pct_residencial_vacante": 91.3,
+   "pct_equipamiento_vacante": 10.4,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "UE-10 LA ISABELA LOS HUEROS (ANULADO)",
+   "viviendas_previstas": 140,
+   "residencial_ocupado_m2": 1930,
+   "residencial_vacante_m2": 17321,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 90.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-2 EL ROBLEDAL",
+   "viviendas_previstas": 140,
+   "residencial_ocupado_m2": 39475,
+   "residencial_vacante_m2": 17274,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 30.4,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "S-R3 PASEO DE PEREDA (ANULADO POR SENTENCIA)",
+   "viviendas_previstas": 100,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-9 TINTORETO LOS HUEROS",
+   "viviendas_previstas": 35,
+   "residencial_ocupado_m2": 3577,
+   "residencial_vacante_m2": 706,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 16.5,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-3 VILLABILLA CAMINO DE LABOR",
+   "viviendas_previstas": 24,
+   "residencial_ocupado_m2": 4649,
+   "residencial_vacante_m2": 6826,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 59.5,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "PERI COMERCIAL EL ROBLEDAL",
+   "viviendas_previstas": 20,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 25229,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-1 BUNGALOW",
+   "viviendas_previstas": 20,
+   "residencial_ocupado_m2": 706,
+   "residencial_vacante_m2": 4943,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 87.5,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-6 VILLALBILLA PASEO DE PEREDA",
+   "viviendas_previstas": 15,
+   "residencial_ocupado_m2": 3813,
+   "residencial_vacante_m2": 1318,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 25.7,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-8 ANCHUELO EL GURUGÚ",
+   "viviendas_previstas": 7,
+   "residencial_ocupado_m2": 3247,
+   "residencial_vacante_m2": 1553,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 32.4,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "AA UE-5 VACIABOTAS",
+   "viviendas_previstas": 4,
+   "residencial_ocupado_m2": 753,
+   "residencial_vacante_m2": 847,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 52.9,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-4 VILLALBILLA VALLEJO NÁJERA",
+   "viviendas_previstas": 2,
+   "residencial_ocupado_m2": 800,
+   "residencial_vacante_m2": 486,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 37.8,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "AMBITO ELIMINADO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "API-S-R2 VILLALBILLA OESTE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 11203,
+   "residencial_vacante_m2": 1365,
+   "equipamiento_ocupado_m2": 11156,
+   "equipamiento_vacante_m2": 1365,
+   "pct_residencial_vacante": 10.9,
+   "pct_equipamiento_vacante": 10.9,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "S-D1 VALDEOBREA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 188,
+   "residencial_vacante_m2": 2024,
+   "equipamiento_ocupado_m2": 997,
+   "equipamiento_vacante_m2": 76234,
+   "pct_residencial_vacante": 91.5,
+   "pct_equipamiento_vacante": 98.7,
+   "parcelas_equipamiento_vacantes": 6
+  },
+  {
+   "ambito": "S-I2 LOS BORDALES",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 94,
+   "equipamiento_vacante_m2": 13179,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 99.3,
+   "parcelas_equipamiento_vacantes": 3
+  },
+  {
+   "ambito": "S-I3 PRADO ANCHO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 94,
+   "equipamiento_vacante_m2": 10919,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 99.1,
+   "parcelas_equipamiento_vacantes": 3
+  },
+  {
+   "ambito": "S-I4 LOSILLAS",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "S-R5 EL MIRADOR (ANTERIORMENTE LAS DESGRACIAS)",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 132330,
+   "residencial_vacante_m2": 103152,
+   "equipamiento_ocupado_m2": 25279,
+   "equipamiento_vacante_m2": 20713,
+   "pct_residencial_vacante": 43.8,
+   "pct_equipamiento_vacante": 45.0,
+   "parcelas_equipamiento_vacantes": 44
+  },
+  {
+   "ambito": "S-R9 VALDEOBREA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 20886,
+   "residencial_vacante_m2": 282,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 988,
+   "pct_residencial_vacante": 1.3,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "S-TC1 GURUGU",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 3671,
+   "equipamiento_ocupado_m2": 320,
+   "equipamiento_vacante_m2": 25554,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 98.8,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "SECTOR-R.3 PASEO DE PEREDA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 94,
+   "residencial_vacante_m2": 35726,
+   "equipamiento_ocupado_m2": 2448,
+   "equipamiento_vacante_m2": 94,
+   "pct_residencial_vacante": 99.7,
+   "pct_equipamiento_vacante": 3.7,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "UE-7 GURUGÚ",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 7341,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  }
+ ]
+}

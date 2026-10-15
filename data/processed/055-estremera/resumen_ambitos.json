@@ -1,0 +1,116 @@
+{
+ "cod_ine": "055",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "AA-1 TAPIES",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 47,
+   "residencial_vacante_m2": 7512,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 2315,
+   "pct_residencial_vacante": 99.4,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 4
+  },
+  {
+   "ambito": "AA-4 CALLE DEL TRABAJO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 29031,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "AA-5 LA VEGA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 24295,
+   "residencial_vacante_m2": 5672,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 284,
+   "pct_residencial_vacante": 18.9,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "AA-6 PEÑA RUBIA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 131151,
+   "residencial_vacante_m2": 67802,
+   "equipamiento_ocupado_m2": 47,
+   "equipamiento_vacante_m2": 54553,
+   "pct_residencial_vacante": 34.1,
+   "pct_equipamiento_vacante": 99.9,
+   "parcelas_equipamiento_vacantes": 47
+  },
+  {
+   "ambito": "AA-7 CERRO DEL AIRE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 62087,
+   "residencial_vacante_m2": 17428,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 21.9,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "ACTUACION AISLADA FRANCISCO DE GOYA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "S-1 GRAMANAZO Y LAS ERAS",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 23999,
+   "residencial_vacante_m2": 216735,
+   "equipamiento_ocupado_m2": 1984,
+   "equipamiento_vacante_m2": 4441,
+   "pct_residencial_vacante": 90.0,
+   "pct_equipamiento_vacante": 69.1,
+   "parcelas_equipamiento_vacantes": 11
+  },
+  {
+   "ambito": "S-2 EL RODILLO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 530,
+   "equipamiento_vacante_m2": 51460,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 99.0,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "S-3 VALDEANDRES",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "S-4 LA VENTILLA BAJA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

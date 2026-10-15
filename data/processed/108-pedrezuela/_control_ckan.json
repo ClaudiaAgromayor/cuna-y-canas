@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "108",
+  "nombre": "Pedrezuela",
+  "nombre_ckan": "Pedrezuela",
+  "slug": "pedrezuela"
+ },
+ "educativos_municipio": 11,
+ "educativos_en_alta": 7,
+ "educativos_guardados": 7,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 27,
+ "sanitarios_centros": 7,
+ "sanitarios_guardados": 7,
+ "sanitarios_sin_coordenadas": 0,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 4,
+ "sociales_guardados": 4,
+ "sociales_sin_coordenadas": 0,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 1,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 6604
+}

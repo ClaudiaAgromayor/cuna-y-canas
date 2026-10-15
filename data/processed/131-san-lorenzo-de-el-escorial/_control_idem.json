@@ -1,0 +1,52 @@
+{
+ "municipio": {
+  "cod": "131",
+  "nombre": "San Lorenzo de El Escorial",
+  "nombre_ckan": "San Lorenzo de El Escorial",
+  "slug": "san-lorenzo-de-el-escorial"
+ },
+ "ambitos_poligonos_brutos": 34,
+ "ambitos_geometrias_invalidas_reparadas": 10,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 30,
+ "ambitos_sin_viviendas": 16,
+ "ambitos_guardados": 30,
+ "redes_geometrias_invalidas_reparadas": 71,
+ "redes_brutas": 265,
+ "redes_dotacionales": 20,
+ "redes_por_tipo_y_estado": {
+  "asistencial/sin_dato": 1,
+  "deportivo/sin_dato": 2,
+  "educativo/sin_dato": 9,
+  "zona_verde/sin_dato": 8
+ },
+ "redes_guardadas": 20,
+ "suelo_parcelas_brutas": 5688,
+ "suelo_geometrias_invalidas_reparadas": 2286,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 30,
+ "candidatas_vacantes_equipamiento": 50,
+ "candidatas_sin_superficie_en_origen": 9,
+ "candidatas_descartadas_menores_de_50_m2": 21,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 29,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 12,
+  ">=2000": 10,
+  ">=5000": 5,
+  ">=10000": 3
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 36,
+  "centros_educativos.geojson": 6,
+  "centros_sanitarios.geojson": 16,
+  "centros_sociales.geojson": 3,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 13,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 11,
+  "resumen_ambitos.json": 10
+ }
+}

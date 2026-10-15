@@ -1,0 +1,56 @@
+{
+ "municipio": {
+  "cod": "082",
+  "nombre": "Manzanares el Real",
+  "nombre_ckan": "Manzanares el Real",
+  "slug": "manzanares-el-real"
+ },
+ "ambitos_poligonos_brutos": 33,
+ "ambitos_geometrias_invalidas_reparadas": 4,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 33,
+ "ambitos_sin_viviendas": 30,
+ "ambitos_guardados": 33,
+ "redes_geometrias_invalidas_reparadas": 11,
+ "redes_brutas": 32,
+ "redes_dotacionales": 5,
+ "redes_por_tipo_y_estado": {
+  "deportivo/sin_dato": 1,
+  "educativo/sin_dato": 1,
+  "zona_verde/sin_dato": 3
+ },
+ "redes_guardadas": 5,
+ "suelo_parcelas_brutas": 4056,
+ "suelo_geometrias_invalidas_reparadas": 897,
+ "suelo_parcelas_en_ambitos_solapados": 2,
+ "resumen_ambitos": 33,
+ "candidatas_vacantes_equipamiento": 37,
+ "candidatas_sin_superficie_en_origen": 0,
+ "candidatas_descartadas_menores_de_50_m2": 0,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 37,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 30,
+  ">=2000": 20,
+  ">=5000": 5,
+  ">=10000": 2
+ },
+ "portal_suelo_parcelas": 3,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Residencial": 3
+ },
+ "portal_suelo_guardadas": 3,
+ "tamanos_kb": {
+  "ambitos.geojson": 58,
+  "centros_educativos.geojson": 2,
+  "centros_sanitarios.geojson": 5,
+  "centros_sociales.geojson": 1,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 16,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 2,
+  "redes.geojson": 3,
+  "resumen_ambitos.json": 11
+ }
+}

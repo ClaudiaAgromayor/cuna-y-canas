@@ -1,0 +1,51 @@
+{
+ "municipio": {
+  "cod": "066",
+  "nombre": "Griñón",
+  "nombre_ckan": "Griñón",
+  "slug": "grinon"
+ },
+ "ambitos_poligonos_brutos": 88,
+ "ambitos_geometrias_invalidas_reparadas": 6,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 88,
+ "ambitos_sin_viviendas": 31,
+ "ambitos_guardados": 88,
+ "redes_geometrias_invalidas_reparadas": 159,
+ "redes_brutas": 479,
+ "redes_dotacionales": 105,
+ "redes_por_tipo_y_estado": {
+  "deportivo/sin_dato": 1,
+  "educativo/sin_dato": 2,
+  "zona_verde/sin_dato": 102
+ },
+ "redes_guardadas": 105,
+ "suelo_parcelas_brutas": 6316,
+ "suelo_geometrias_invalidas_reparadas": 2047,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 88,
+ "candidatas_vacantes_equipamiento": 56,
+ "candidatas_sin_superficie_en_origen": 5,
+ "candidatas_descartadas_menores_de_50_m2": 8,
+ "candidatas_duplicadas_por_referencia_catastral": 1,
+ "candidatas_guardadas": 48,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 27,
+  ">=2000": 22,
+  ">=5000": 9,
+  ">=10000": 0
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 84,
+  "centros_educativos.geojson": 3,
+  "centros_sanitarios.geojson": 9,
+  "centros_sociales.geojson": 3,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 23,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 46,
+  "resumen_ambitos.json": 30
+ }
+}

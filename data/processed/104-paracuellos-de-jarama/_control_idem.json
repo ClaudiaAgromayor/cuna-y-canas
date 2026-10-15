@@ -1,0 +1,58 @@
+{
+ "municipio": {
+  "cod": "104",
+  "nombre": "Paracuellos de Jarama",
+  "nombre_ckan": "Paracuellos de Jarama",
+  "slug": "paracuellos-de-jarama"
+ },
+ "ambitos_poligonos_brutos": 71,
+ "ambitos_geometrias_invalidas_reparadas": 25,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 55,
+ "ambitos_sin_viviendas": 13,
+ "ambitos_guardados": 55,
+ "redes_geometrias_invalidas_reparadas": 152,
+ "redes_brutas": 451,
+ "redes_dotacionales": 209,
+ "redes_por_tipo_y_estado": {
+  "asistencial/sin_dato": 2,
+  "cultural/sin_dato": 1,
+  "deportivo/sin_dato": 11,
+  "educativo/sin_dato": 14,
+  "zona_verde/sin_dato": 181
+ },
+ "redes_guardadas": 209,
+ "suelo_parcelas_brutas": 10949,
+ "suelo_geometrias_invalidas_reparadas": 3690,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 55,
+ "candidatas_vacantes_equipamiento": 71,
+ "candidatas_sin_superficie_en_origen": 11,
+ "candidatas_descartadas_menores_de_50_m2": 13,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 58,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 37,
+  ">=2000": 25,
+  ">=5000": 11,
+  ">=10000": 7
+ },
+ "portal_suelo_parcelas": 3,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Industrial": 3
+ },
+ "portal_suelo_guardadas": 3,
+ "tamanos_kb": {
+  "ambitos.geojson": 118,
+  "centros_educativos.geojson": 6,
+  "centros_sanitarios.geojson": 11,
+  "centros_sociales.geojson": 1,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 31,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 2,
+  "redes.geojson": 129,
+  "resumen_ambitos.json": 19
+ }
+}

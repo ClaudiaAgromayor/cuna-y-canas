@@ -1,0 +1,83 @@
+{
+ "cod_ine": "902",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "POLÍGONO 10",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 47,
+   "residencial_vacante_m2": 22515,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 99.8,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "POLÍGONO 11",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 3410,
+   "residencial_vacante_m2": 44142,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 92.8,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "POLÍGONO 14",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 4201,
+   "residencial_vacante_m2": 22872,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 84.5,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "POLÍGONO 6",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 8314,
+   "residencial_vacante_m2": 25830,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 75.6,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "POLÍGONO 7",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 25036,
+   "residencial_vacante_m2": 42972,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 63.2,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "POLÍGONO 8",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 234,
+   "residencial_vacante_m2": 53642,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 99.6,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "POLÍGONO 9",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 981,
+   "residencial_vacante_m2": 31527,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 97.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

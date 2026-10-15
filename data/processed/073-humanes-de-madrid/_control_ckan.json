@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "073",
+  "nombre": "Humanes de Madrid",
+  "nombre_ckan": "Humanes de Madrid",
+  "slug": "humanes-de-madrid"
+ },
+ "educativos_municipio": 25,
+ "educativos_en_alta": 15,
+ "educativos_guardados": 15,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 54,
+ "sanitarios_centros": 21,
+ "sanitarios_guardados": 21,
+ "sanitarios_sin_coordenadas": 0,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 3,
+ "sociales_guardados": 3,
+ "sociales_sin_coordenadas": 0,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 7,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 20549
+}

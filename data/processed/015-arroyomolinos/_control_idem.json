@@ -1,0 +1,57 @@
+{
+ "municipio": {
+  "cod": "015",
+  "nombre": "Arroyomolinos",
+  "nombre_ckan": "Arroyomolinos",
+  "slug": "arroyomolinos"
+ },
+ "ambitos_poligonos_brutos": 23,
+ "ambitos_geometrias_invalidas_reparadas": 7,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 19,
+ "ambitos_sin_viviendas": 7,
+ "ambitos_guardados": 19,
+ "redes_geometrias_invalidas_reparadas": 99,
+ "redes_brutas": 359,
+ "redes_dotacionales": 257,
+ "redes_por_tipo_y_estado": {
+  "deportivo/sin_dato": 14,
+  "educativo/sin_dato": 20,
+  "sanitario/sin_dato": 12,
+  "zona_verde/sin_dato": 211
+ },
+ "redes_guardadas": 257,
+ "suelo_parcelas_brutas": 10139,
+ "suelo_geometrias_invalidas_reparadas": 3563,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 18,
+ "candidatas_vacantes_equipamiento": 75,
+ "candidatas_sin_superficie_en_origen": 3,
+ "candidatas_descartadas_menores_de_50_m2": 8,
+ "candidatas_duplicadas_por_referencia_catastral": 3,
+ "candidatas_guardadas": 67,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 49,
+  ">=2000": 41,
+  ">=5000": 28,
+  ">=10000": 13
+ },
+ "portal_suelo_parcelas": 1,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Comercial": 1
+ },
+ "portal_suelo_guardadas": 1,
+ "tamanos_kb": {
+  "ambitos.geojson": 52,
+  "centros_educativos.geojson": 8,
+  "centros_sanitarios.geojson": 23,
+  "centros_sociales.geojson": 1,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 34,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 1,
+  "redes.geojson": 155,
+  "resumen_ambitos.json": 6
+ }
+}

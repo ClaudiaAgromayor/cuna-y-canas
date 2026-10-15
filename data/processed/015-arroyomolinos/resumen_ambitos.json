@@ -1,0 +1,204 @@
+{
+ "cod_ine": "015",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "SAU-3 CIUDAD JARDÍN DE ARROYOMOLINOS",
+   "viviendas_previstas": 3880,
+   "residencial_ocupado_m2": 403148,
+   "residencial_vacante_m2": 61387,
+   "equipamiento_ocupado_m2": 70772,
+   "equipamiento_vacante_m2": 52892,
+   "pct_residencial_vacante": 13.2,
+   "pct_equipamiento_vacante": 42.8,
+   "parcelas_equipamiento_vacantes": 7
+  },
+  {
+   "ambito": "SAU-6 ZARZALEJO",
+   "viviendas_previstas": 2700,
+   "residencial_ocupado_m2": 562478,
+   "residencial_vacante_m2": 69968,
+   "equipamiento_ocupado_m2": 51621,
+   "equipamiento_vacante_m2": 19679,
+   "pct_residencial_vacante": 11.1,
+   "pct_equipamiento_vacante": 27.6,
+   "parcelas_equipamiento_vacantes": 4
+  },
+  {
+   "ambito": "APD-4 LOS CARRIZOS",
+   "viviendas_previstas": 1500,
+   "residencial_ocupado_m2": 320961,
+   "residencial_vacante_m2": 6559,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 29397,
+   "pct_residencial_vacante": 2.0,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 4
+  },
+  {
+   "ambito": "SAU-2 EL RELLANO",
+   "viviendas_previstas": 975,
+   "residencial_ocupado_m2": 164187,
+   "residencial_vacante_m2": 38924,
+   "equipamiento_ocupado_m2": 519,
+   "equipamiento_vacante_m2": 24723,
+   "pct_residencial_vacante": 19.2,
+   "pct_equipamiento_vacante": 97.9,
+   "parcelas_equipamiento_vacantes": 4
+  },
+  {
+   "ambito": "SAU-5 MOLINO PERDIDO",
+   "viviendas_previstas": 950,
+   "residencial_ocupado_m2": 109373,
+   "residencial_vacante_m2": 46193,
+   "equipamiento_ocupado_m2": 36827,
+   "equipamiento_vacante_m2": 16986,
+   "pct_residencial_vacante": 29.7,
+   "pct_equipamiento_vacante": 31.6,
+   "parcelas_equipamiento_vacantes": 5
+  },
+  {
+   "ambito": "SAU-7 LA RINCONADA II",
+   "viviendas_previstas": 692,
+   "residencial_ocupado_m2": 215878,
+   "residencial_vacante_m2": 37145,
+   "equipamiento_ocupado_m2": 2218,
+   "equipamiento_vacante_m2": 18407,
+   "pct_residencial_vacante": 14.7,
+   "pct_equipamiento_vacante": 89.2,
+   "parcelas_equipamiento_vacantes": 3
+  },
+  {
+   "ambito": "SAU-1 LOS MOSQUITOS",
+   "viviendas_previstas": 425,
+   "residencial_ocupado_m2": 101809,
+   "residencial_vacante_m2": 1227,
+   "equipamiento_ocupado_m2": 3444,
+   "equipamiento_vacante_m2": 6086,
+   "pct_residencial_vacante": 1.2,
+   "pct_equipamiento_vacante": 63.9,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "APD-1 ÁREA DE CENTRALIDAD",
+   "viviendas_previstas": 120,
+   "residencial_ocupado_m2": 9384,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 283,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-5 C/ÁLAMO NORTE-CTRA M-413",
+   "viviendas_previstas": 24,
+   "residencial_ocupado_m2": 3964,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-4 C/MADRID-RODRIGUEZ DE LA FUENTE",
+   "viviendas_previstas": 8,
+   "residencial_ocupado_m2": 3964,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "ACTUACIÓN ASISTEMÁTICA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 939879,
+   "residencial_vacante_m2": 37596,
+   "equipamiento_ocupado_m2": 107108,
+   "equipamiento_vacante_m2": 28209,
+   "pct_residencial_vacante": 3.8,
+   "pct_equipamiento_vacante": 20.8,
+   "parcelas_equipamiento_vacantes": 10
+  },
+  {
+   "ambito": "APD-2 PARQUE DE LA NIEVE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 23304,
+   "equipamiento_vacante_m2": 48777,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 67.7,
+   "parcelas_equipamiento_vacantes": 3
+  },
+  {
+   "ambito": "APD-3 VALDEFUENTES",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 189,
+   "equipamiento_vacante_m2": 1415,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 88.2,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "SAU-4A VALDEARENAL NORTE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 18029,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-4B VALDEARENAL SUR",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 26465,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "UE-2 EL JARDÍN",
+   "viviendas_previstas": 0,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-6 C/ÁLAMO SUR",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-7 C/ÁLAMO PLAZA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 1038,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

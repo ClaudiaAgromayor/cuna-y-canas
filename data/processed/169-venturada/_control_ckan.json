@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "169",
+  "nombre": "Venturada",
+  "nombre_ckan": "Venturada",
+  "slug": "venturada"
+ },
+ "educativos_municipio": 4,
+ "educativos_en_alta": 3,
+ "educativos_guardados": 3,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 14,
+ "sanitarios_centros": 6,
+ "sanitarios_guardados": 6,
+ "sanitarios_sin_coordenadas": 0,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 1,
+ "sociales_guardados": 1,
+ "sociales_sin_coordenadas": 0,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 1,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 2633
+}

@@ -1,0 +1,53 @@
+{
+ "municipio": {
+  "cod": "038",
+  "nombre": "Cercedilla",
+  "nombre_ckan": "Cercedilla",
+  "slug": "cercedilla"
+ },
+ "ambitos_poligonos_brutos": 10,
+ "ambitos_geometrias_invalidas_reparadas": 1,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 10,
+ "ambitos_sin_viviendas": 6,
+ "ambitos_guardados": 10,
+ "redes_geometrias_invalidas_reparadas": 18,
+ "redes_brutas": 43,
+ "redes_dotacionales": 17,
+ "redes_por_tipo_y_estado": {
+  "cultural/sin_dato": 4,
+  "deportivo/sin_dato": 2,
+  "educativo/sin_dato": 6,
+  "sanitario/sin_dato": 1,
+  "zona_verde/sin_dato": 4
+ },
+ "redes_guardadas": 17,
+ "suelo_parcelas_brutas": 4735,
+ "suelo_geometrias_invalidas_reparadas": 1850,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 10,
+ "candidatas_vacantes_equipamiento": 8,
+ "candidatas_sin_superficie_en_origen": 1,
+ "candidatas_descartadas_menores_de_50_m2": 1,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 7,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 2,
+  ">=2000": 2,
+  ">=5000": 1,
+  ">=10000": 1
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 10,
+  "centros_educativos.geojson": 2,
+  "centros_sanitarios.geojson": 5,
+  "centros_sociales.geojson": 2,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 3,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 9,
+  "resumen_ambitos.json": 3
+ }
+}

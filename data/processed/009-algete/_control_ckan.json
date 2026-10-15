@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "009",
+  "nombre": "Algete",
+  "nombre_ckan": "Algete",
+  "slug": "algete"
+ },
+ "educativos_municipio": 25,
+ "educativos_en_alta": 15,
+ "educativos_guardados": 15,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 149,
+ "sanitarios_centros": 31,
+ "sanitarios_guardados": 31,
+ "sanitarios_sin_coordenadas": 0,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 5,
+ "sociales_guardados": 5,
+ "sociales_sin_coordenadas": 0,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 7,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 21194
+}

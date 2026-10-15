@@ -1,0 +1,46 @@
+{
+ "municipio": {
+  "cod": "040",
+  "nombre": "Ciempozuelos",
+  "nombre_ckan": "Ciempozuelos",
+  "slug": "ciempozuelos"
+ },
+ "ambitos_poligonos_brutos": 0,
+ "ambitos": 0,
+ "redes_guardadas": 0,
+ "suelo_parcelas_brutas": 8033,
+ "suelo_geometrias_invalidas_reparadas": 3263,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 0,
+ "candidatas_vacantes_equipamiento": 158,
+ "candidatas_sin_superficie_en_origen": 14,
+ "candidatas_descartadas_menores_de_50_m2": 20,
+ "candidatas_duplicadas_por_referencia_catastral": 1,
+ "candidatas_guardadas": 138,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 101,
+  ">=2000": 85,
+  ">=5000": 48,
+  ">=10000": 14
+ },
+ "portal_suelo_parcelas": 1,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Otros": 1
+ },
+ "portal_suelo_guardadas": 1,
+ "tamanos_kb": {
+  "ambitos.geojson": 0,
+  "centros_educativos.geojson": 5,
+  "centros_sanitarios.geojson": 11,
+  "centros_sociales.geojson": 15,
+  "farmacias.geojson": 2,
+  "natalidad.json": 1,
+  "paradas.geojson": 17,
+  "parcelas_vacantes.geojson": 64,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 1,
+  "redes.geojson": 0,
+  "resumen_ambitos.json": 0
+ }
+}

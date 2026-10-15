@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "054",
+  "nombre": "El Escorial",
+  "nombre_ckan": "Escorial (El)",
+  "slug": "el-escorial"
+ },
+ "educativos_municipio": 11,
+ "educativos_en_alta": 6,
+ "educativos_guardados": 6,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 0,
+ "sanitarios_centros": 0,
+ "sanitarios_guardados": 0,
+ "sanitarios_sin_coordenadas": 0,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 9,
+ "sociales_guardados": 9,
+ "sociales_sin_coordenadas": 0,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 0,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 17322
+}

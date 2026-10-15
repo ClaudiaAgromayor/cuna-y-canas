@@ -1,0 +1,149 @@
+{
+ "cod_ine": "121",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "SAU-R.1 LAS TRES CASAS",
+   "viviendas_previstas": 104,
+   "residencial_ocupado_m2": 468,
+   "residencial_vacante_m2": 53974,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 1872,
+   "pct_residencial_vacante": 99.1,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "SAU-R.2 LA VEGA",
+   "viviendas_previstas": 51,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 30614,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 3277,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "SAU-R.3 LOS MEMBRILLALES",
+   "viviendas_previstas": 32,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 39744,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 2294,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 3
+  },
+  {
+   "ambito": "SAU-R.5 VIÑA DE LAS ALMUNIAS",
+   "viviendas_previstas": 29,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 33344,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 3511,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 5
+  },
+  {
+   "ambito": "UE-03 LAS CERCAS DE LAS ALCACHOFAS",
+   "viviendas_previstas": 25,
+   "residencial_ocupado_m2": 3043,
+   "residencial_vacante_m2": 515,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 14.5,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-R.4 EL HIRIAL",
+   "viviendas_previstas": 18,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 22001,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 2434,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "UE-06 VIÑA DE LAS ARMUNIAS SUR",
+   "viviendas_previstas": 18,
+   "residencial_ocupado_m2": 1030,
+   "residencial_vacante_m2": 7302,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 87.6,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-01 CERCAS DE SAN PEDRO",
+   "viviendas_previstas": 17,
+   "residencial_ocupado_m2": 936,
+   "residencial_vacante_m2": 2715,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 74.4,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-04 LOS CARDOSOS NORTE",
+   "viviendas_previstas": 13,
+   "residencial_ocupado_m2": 374,
+   "residencial_vacante_m2": 4962,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 93.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-05 CAMINO DEL CEMENTERIO",
+   "viviendas_previstas": 13,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-02 ARROYO DE LA FUENTE",
+   "viviendas_previstas": 12,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 1404,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-07 LOS CARDOSOS LA CAÑADA",
+   "viviendas_previstas": 6,
+   "residencial_ocupado_m2": 47,
+   "residencial_vacante_m2": 2809,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 98.4,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-I.1 EL FRESNO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

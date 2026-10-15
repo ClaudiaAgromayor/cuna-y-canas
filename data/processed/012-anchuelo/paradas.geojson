@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"id": "8_07388", "modo": "interurbano", "modos": "interurbano", "nombre": "ANCHUELO-PZA.CONSTITUCIÓN", "situacion": "S", "accesibilidad": "T", "lineas": "interurbano: 275", "n_lineas": 1, "fecha_dato": "20260529", "cod_ine": "012"}, "geometry": {"type": "Point", "coordinates": [-3.268936, 40.465966]}}]}

@@ -1,0 +1,61 @@
+{
+ "municipio": {
+  "cod": "045",
+  "nombre": "Colmenar Viejo",
+  "nombre_ckan": "Colmenar Viejo",
+  "slug": "colmenar-viejo"
+ },
+ "ambitos_poligonos_brutos": 32,
+ "ambitos_geometrias_invalidas_reparadas": 5,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 14,
+ "ambitos_sin_viviendas": 3,
+ "ambitos_guardados": 14,
+ "redes_geometrias_invalidas_reparadas": 190,
+ "redes_brutas": 633,
+ "redes_dotacionales": 216,
+ "redes_por_tipo_y_estado": {
+  "asistencial/sin_dato": 1,
+  "cultural/sin_dato": 1,
+  "deportivo/sin_dato": 6,
+  "educativo/sin_dato": 15,
+  "sanitario/sin_dato": 2,
+  "zona_verde/sin_dato": 191
+ },
+ "redes_guardadas": 216,
+ "suelo_parcelas_brutas": 15158,
+ "suelo_geometrias_invalidas_reparadas": 6953,
+ "suelo_parcelas_en_ambitos_solapados": 1,
+ "resumen_ambitos": 14,
+ "candidatas_vacantes_equipamiento": 192,
+ "candidatas_sin_superficie_en_origen": 30,
+ "candidatas_descartadas_menores_de_50_m2": 52,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 140,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 92,
+  ">=2000": 79,
+  ">=5000": 65,
+  ">=10000": 43
+ },
+ "portal_suelo_parcelas": 16,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Terciario": 11,
+  "Residencial": 4,
+  "Comercial": 1
+ },
+ "portal_suelo_guardadas": 16,
+ "tamanos_kb": {
+  "ambitos.geojson": 39,
+  "centros_educativos.geojson": 12,
+  "centros_sanitarios.geojson": 38,
+  "centros_sociales.geojson": 8,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 90,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 9,
+  "redes.geojson": 119,
+  "resumen_ambitos.json": 5
+ }
+}

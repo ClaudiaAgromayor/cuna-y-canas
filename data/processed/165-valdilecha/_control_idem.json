@@ -1,0 +1,51 @@
+{
+ "municipio": {
+  "cod": "165",
+  "nombre": "Valdilecha",
+  "nombre_ckan": "Valdilecha",
+  "slug": "valdilecha"
+ },
+ "ambitos_poligonos_brutos": 21,
+ "ambitos_geometrias_invalidas_reparadas": 3,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 21,
+ "ambitos_sin_viviendas": 4,
+ "ambitos_guardados": 21,
+ "redes_geometrias_invalidas_reparadas": 35,
+ "redes_brutas": 119,
+ "redes_dotacionales": 17,
+ "redes_por_tipo_y_estado": {
+  "asistencial/sin_dato": 1,
+  "deportivo/sin_dato": 2,
+  "zona_verde/sin_dato": 14
+ },
+ "redes_guardadas": 17,
+ "suelo_parcelas_brutas": 2832,
+ "suelo_geometrias_invalidas_reparadas": 1466,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 21,
+ "candidatas_vacantes_equipamiento": 76,
+ "candidatas_sin_superficie_en_origen": 5,
+ "candidatas_descartadas_menores_de_50_m2": 10,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 66,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 30,
+  ">=2000": 17,
+  ">=5000": 3,
+  ">=10000": 2
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 21,
+  "centros_educativos.geojson": 1,
+  "centros_sanitarios.geojson": 2,
+  "centros_sociales.geojson": 0,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 27,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 7,
+  "resumen_ambitos.json": 7
+ }
+}

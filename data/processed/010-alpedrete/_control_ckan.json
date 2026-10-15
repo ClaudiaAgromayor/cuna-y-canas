@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "010",
+  "nombre": "Alpedrete",
+  "nombre_ckan": "Alpedrete",
+  "slug": "alpedrete"
+ },
+ "educativos_municipio": 26,
+ "educativos_en_alta": 13,
+ "educativos_guardados": 13,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 62,
+ "sanitarios_centros": 27,
+ "sanitarios_guardados": 26,
+ "sanitarios_sin_coordenadas": 1,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 11,
+ "sociales_guardados": 11,
+ "sociales_sin_coordenadas": 0,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 3,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 15831
+}

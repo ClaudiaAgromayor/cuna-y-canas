@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "049",
+  "nombre": "Coslada",
+  "nombre_ckan": "Coslada",
+  "slug": "coslada"
+ },
+ "educativos_municipio": 82,
+ "educativos_en_alta": 45,
+ "educativos_guardados": 45,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 506,
+ "sanitarios_centros": 143,
+ "sanitarios_guardados": 142,
+ "sanitarios_sin_coordenadas": 1,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 25,
+ "sociales_guardados": 24,
+ "sociales_sin_coordenadas": 1,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 30,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 80365
+}

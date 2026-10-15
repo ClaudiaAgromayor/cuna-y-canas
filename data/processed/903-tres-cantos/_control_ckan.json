@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "903",
+  "nombre": "Tres Cantos",
+  "nombre_ckan": "Tres Cantos",
+  "slug": "tres-cantos"
+ },
+ "educativos_municipio": 64,
+ "educativos_en_alta": 46,
+ "educativos_guardados": 45,
+ "educativos_sin_coordenadas": 1,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 485,
+ "sanitarios_centros": 167,
+ "sanitarios_guardados": 166,
+ "sanitarios_sin_coordenadas": 1,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 19,
+ "sociales_guardados": 19,
+ "sociales_sin_coordenadas": 0,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 16,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 34,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 54506
+}

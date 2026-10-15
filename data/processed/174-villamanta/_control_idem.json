@@ -1,0 +1,51 @@
+{
+ "municipio": {
+  "cod": "174",
+  "nombre": "Villamanta",
+  "nombre_ckan": "Villamanta",
+  "slug": "villamanta"
+ },
+ "ambitos_poligonos_brutos": 23,
+ "ambitos_geometrias_invalidas_reparadas": 2,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 21,
+ "ambitos_sin_viviendas": 2,
+ "ambitos_guardados": 21,
+ "redes_geometrias_invalidas_reparadas": 15,
+ "redes_brutas": 121,
+ "redes_dotacionales": 5,
+ "redes_por_tipo_y_estado": {
+  "asistencial/sin_dato": 1,
+  "educativo/sin_dato": 1,
+  "zona_verde/sin_dato": 3
+ },
+ "redes_guardadas": 5,
+ "suelo_parcelas_brutas": 2300,
+ "suelo_geometrias_invalidas_reparadas": 966,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 21,
+ "candidatas_vacantes_equipamiento": 29,
+ "candidatas_sin_superficie_en_origen": 2,
+ "candidatas_descartadas_menores_de_50_m2": 4,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 25,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 6,
+  ">=2000": 3,
+  ">=5000": 1,
+  ">=10000": 0
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 22,
+  "centros_educativos.geojson": 1,
+  "centros_sanitarios.geojson": 4,
+  "centros_sociales.geojson": 1,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 10,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 3,
+  "resumen_ambitos.json": 7
+ }
+}

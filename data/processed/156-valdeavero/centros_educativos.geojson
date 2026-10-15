@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"codigo": "28025233", "nombre": "ANGEL CASTRO", "tipo": "CP INF-PRI", "tipo_largo": "COLEGIO DE EDUCACIÓN INFANTIL Y PRIMARIA", "titularidad": "PÚBLICO", "direccion": "Silo", "cp": "28816", "distrito": "", "cod_ine": "156"}, "geometry": {"type": "Point", "coordinates": [-3.33495, 40.631885]}}]}

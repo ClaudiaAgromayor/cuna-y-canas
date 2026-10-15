@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "177",
+  "nombre": "Villanueva del Pardillo",
+  "nombre_ckan": "Villanueva del Pardillo",
+  "slug": "villanueva-del-pardillo"
+ },
+ "educativos_municipio": 26,
+ "educativos_en_alta": 12,
+ "educativos_guardados": 12,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 130,
+ "sanitarios_centros": 42,
+ "sanitarios_guardados": 42,
+ "sanitarios_sin_coordenadas": 0,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 7,
+ "sociales_guardados": 7,
+ "sociales_sin_coordenadas": 0,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 5,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 18415
+}

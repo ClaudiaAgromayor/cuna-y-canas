@@ -1,0 +1,49 @@
+{
+ "municipio": {
+  "cod": "059",
+  "nombre": "Fuente el Saz de Jarama",
+  "nombre_ckan": "Fuente el Saz de Jarama",
+  "slug": "fuente-el-saz-de-jarama"
+ },
+ "ambitos_poligonos_brutos": 43,
+ "ambitos_geometrias_invalidas_reparadas": 11,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 36,
+ "ambitos_sin_viviendas": 12,
+ "ambitos_guardados": 36,
+ "redes_geometrias_invalidas_reparadas": 67,
+ "redes_brutas": 242,
+ "redes_dotacionales": 113,
+ "redes_por_tipo_y_estado": {
+  "zona_verde/sin_dato": 113
+ },
+ "redes_guardadas": 113,
+ "suelo_parcelas_brutas": 4933,
+ "suelo_geometrias_invalidas_reparadas": 1951,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 36,
+ "candidatas_vacantes_equipamiento": 148,
+ "candidatas_sin_superficie_en_origen": 4,
+ "candidatas_descartadas_menores_de_50_m2": 7,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 141,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 101,
+  ">=2000": 78,
+  ">=5000": 26,
+  ">=10000": 7
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 47,
+  "centros_educativos.geojson": 1,
+  "centros_sanitarios.geojson": 6,
+  "centros_sociales.geojson": 2,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 62,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 57,
+  "resumen_ambitos.json": 12
+ }
+}

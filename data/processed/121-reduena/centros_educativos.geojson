@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"codigo": "28048725", "nombre": "REDUEÑA", "tipo": "EEI-CN", "tipo_largo": "ESCUELA  INFANTIL-CASA DE NIÑOS", "titularidad": "PÚBLICO", "direccion": "de las Eras", "cp": "28721", "distrito": "", "cod_ine": "121"}, "geometry": {"type": "Point", "coordinates": [-3.605512, 40.816018]}}]}

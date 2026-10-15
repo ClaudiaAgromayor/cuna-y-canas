@@ -1,0 +1,56 @@
+{
+ "municipio": {
+  "cod": "090",
+  "nombre": "Moralzarzal",
+  "nombre_ckan": "Moralzarzal",
+  "slug": "moralzarzal"
+ },
+ "ambitos_poligonos_brutos": 223,
+ "ambitos_geometrias_invalidas_reparadas": 19,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 214,
+ "ambitos_sin_viviendas": 30,
+ "ambitos_guardados": 214,
+ "redes_geometrias_invalidas_reparadas": 231,
+ "redes_brutas": 585,
+ "redes_dotacionales": 63,
+ "redes_por_tipo_y_estado": {
+  "deportivo/sin_dato": 3,
+  "educativo/sin_dato": 5,
+  "zona_verde/sin_dato": 55
+ },
+ "redes_guardadas": 63,
+ "suelo_parcelas_brutas": 9016,
+ "suelo_geometrias_invalidas_reparadas": 4008,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 211,
+ "candidatas_vacantes_equipamiento": 31,
+ "candidatas_sin_superficie_en_origen": 1,
+ "candidatas_descartadas_menores_de_50_m2": 6,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 25,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 13,
+  ">=2000": 5,
+  ">=5000": 3,
+  ">=10000": 2
+ },
+ "portal_suelo_parcelas": 1,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Otros": 1
+ },
+ "portal_suelo_guardadas": 1,
+ "tamanos_kb": {
+  "ambitos.geojson": 189,
+  "centros_educativos.geojson": 4,
+  "centros_sanitarios.geojson": 12,
+  "centros_sociales.geojson": 4,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 11,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 1,
+  "redes.geojson": 32,
+  "resumen_ambitos.json": 68
+ }
+}

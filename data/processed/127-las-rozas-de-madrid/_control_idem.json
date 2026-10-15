@@ -1,0 +1,41 @@
+{
+ "municipio": {
+  "cod": "127",
+  "nombre": "Las Rozas de Madrid",
+  "nombre_ckan": "Rozas de Madrid (Las)",
+  "slug": "las-rozas-de-madrid"
+ },
+ "ambitos_poligonos_brutos": 0,
+ "ambitos": 0,
+ "redes_guardadas": 0,
+ "suelo_parcelas_brutas": 13377,
+ "suelo_geometrias_invalidas_reparadas": 5149,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 0,
+ "candidatas_vacantes_equipamiento": 119,
+ "candidatas_sin_superficie_en_origen": 4,
+ "candidatas_descartadas_menores_de_50_m2": 7,
+ "candidatas_duplicadas_por_referencia_catastral": 1,
+ "candidatas_guardadas": 112,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 83,
+  ">=2000": 69,
+  ">=5000": 49,
+  ">=10000": 29
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 0,
+  "centros_educativos.geojson": 20,
+  "centros_sanitarios.geojson": 0,
+  "centros_sociales.geojson": 10,
+  "farmacias.geojson": 0,
+  "natalidad.json": 1,
+  "paradas.geojson": 93,
+  "parcelas_vacantes.geojson": 64,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 0,
+  "resumen_ambitos.json": 0
+ }
+}

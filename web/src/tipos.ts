@@ -15,6 +15,7 @@ export interface MunicipioIndice {
   capas: Record<string, boolean>
   tablas: Record<string, boolean>
   faltan: string[]
+  completo?: boolean
 }
 
 export type ServicioId = 'escuela_infantil' | 'colegio' | 'centro_salud' | 'centro_dia' | 'residencia'
@@ -61,6 +62,7 @@ export interface Parcela {
   lon: number
   lat: number
   cod_ine: string
+  red?: string | null // añadido en el navegador: red pública del planeamiento en la que cae
 }
 
 export interface AmbitoDemanda {
@@ -112,6 +114,7 @@ export interface DatosMunicipio {
   educativos: FeatureCollection<Point>
   sanitarios: FeatureCollection<Point>
   sociales: FeatureCollection<Point>
+  farmacias: FeatureCollection<Point>
   paradas: FeatureCollection<Point>
   zonasSalud: FeatureCollection<Polygon | MultiPolygon>
   redes: FeatureCollection<Polygon | MultiPolygon>

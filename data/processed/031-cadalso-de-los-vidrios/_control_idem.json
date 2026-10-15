@@ -1,0 +1,50 @@
+{
+ "municipio": {
+  "cod": "031",
+  "nombre": "Cadalso de los Vidrios",
+  "nombre_ckan": "Cadalso de los Vidrios",
+  "slug": "cadalso-de-los-vidrios"
+ },
+ "ambitos_poligonos_brutos": 12,
+ "ambitos_geometrias_invalidas_reparadas": 1,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 12,
+ "ambitos_sin_viviendas": 11,
+ "ambitos_guardados": 12,
+ "redes_geometrias_invalidas_reparadas": 11,
+ "redes_brutas": 58,
+ "redes_dotacionales": 28,
+ "redes_por_tipo_y_estado": {
+  "deportivo/sin_dato": 1,
+  "zona_verde/sin_dato": 27
+ },
+ "redes_guardadas": 28,
+ "suelo_parcelas_brutas": 4300,
+ "suelo_geometrias_invalidas_reparadas": 1712,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 12,
+ "candidatas_vacantes_equipamiento": 6,
+ "candidatas_sin_superficie_en_origen": 1,
+ "candidatas_descartadas_menores_de_50_m2": 1,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 5,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 3,
+  ">=2000": 3,
+  ">=5000": 2,
+  ">=10000": 0
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 10,
+  "centros_educativos.geojson": 1,
+  "centros_sanitarios.geojson": 1,
+  "centros_sociales.geojson": 5,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 3,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 13,
+  "resumen_ambitos.json": 4
+ }
+}

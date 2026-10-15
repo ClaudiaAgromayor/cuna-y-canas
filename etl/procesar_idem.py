@@ -34,6 +34,8 @@ TIPOS_RED = {"Educativos": "educativo", "Sanitarios": "sanitario", "Asistenciale
 
 def leer(muni: dict, capa: str) -> gpd.GeoDataFrame:
     g = gpd.read_file(carpeta_raw(muni) / f"{capa}.geojson", encoding="utf-8")
+    if g.empty or "CD_MUNICIPIO" not in g:  # capa sin elementos en este municipio
+        return gpd.GeoDataFrame({"CD_MUNICIPIO": []}, geometry=[], crs=M)
     cods = set(g["CD_MUNICIPIO"].unique())
     if cods - {muni["cod"]}:  # comprobación anti-mezcla de municipios
         raise SystemExit(f"{capa} contiene otros municipios: {cods}")
@@ -64,9 +66,16 @@ def num(serie) -> pd.Series:
     return pd.to_numeric(serie, errors="coerce")
 
 
+VACIO = '{"type": "FeatureCollection", "features": []}'
+
+
 def ambitos(muni, ctrl):
     raw = leer(muni, "VPLA_V_AMBITO_REF_25")
     ctrl["ambitos_poligonos_brutos"] = len(raw)
+    if raw.empty:  # municipio sin ámbitos de desarrollo en el planeamiento refundido
+        (carpeta_salida(muni) / "ambitos.geojson").write_text(VACIO, encoding="utf-8")
+        ctrl["ambitos"] = 0
+        return gpd.GeoDataFrame({"nombre": [], "viviendas": [], "clase_suelo": []}, geometry=[], crs=M)
     ctrl["ambitos_geometrias_invalidas_reparadas"] = int((~raw.geometry.is_valid).sum())
     raw = reparar(raw)
     raw["viv"] = num(raw["NM_VIV_TOT"])
@@ -91,6 +100,10 @@ def ambitos(muni, ctrl):
 
 def redes(muni, ctrl):
     raw = leer(muni, "VPLA_V_RED_REF_25")
+    if raw.empty:
+        (carpeta_salida(muni) / "redes.geojson").write_text(VACIO, encoding="utf-8")
+        ctrl["redes_guardadas"] = 0
+        return raw
     ctrl["redes_geometrias_invalidas_reparadas"] = int((~raw.geometry.is_valid).sum())
     raw = reparar(raw)
     g = raw[(raw["DS_USO_GLOBAL"] == "Equipamientos") & raw["DS_USO_DETA"].isin(TIPOS_RED)].copy()
@@ -118,6 +131,11 @@ def suelo(muni, ambitos_g, ctrl):
     """Parcelas vacantes de equipamiento y resumen por ámbito."""
     raw = leer(muni, "IDEM_VPLA_SVAC_SOCU_26")
     ctrl["suelo_parcelas_brutas"] = len(raw)
+    if raw.empty:
+        out = carpeta_salida(muni)
+        (out / "parcelas_vacantes.geojson").write_text(VACIO, encoding="utf-8")
+        (out / "resumen_ambitos.json").write_text(json.dumps({"cod_ine": muni["cod"], "ambitos": []}), encoding="utf-8")
+        return
     ctrl["suelo_geometrias_invalidas_reparadas"] = int((~raw.geometry.is_valid).sum())
     raw = raw.copy()
     malas = ~raw.geometry.is_valid
@@ -171,6 +189,9 @@ def suelo(muni, ambitos_g, ctrl):
 def portal_suelo(muni, ctrl):
     raw = leer(muni, "IDEM_V_SUELO_PARCELA")
     ctrl["portal_suelo_parcelas"] = len(raw)
+    if raw.empty:
+        (carpeta_salida(muni) / "portal_suelo.geojson").write_text('{"type": "FeatureCollection", "features": []}', encoding="utf-8")
+        return
     ctrl["portal_suelo_sin_geometria"] = int(raw.geometry.isna().sum())
     g = raw.rename(columns={"DS_PARCELA": "parcela", "DS_LOCALIZACION": "localizacion", "DS_REGIMEN_ES": "regimen", "DS_CLASE_ES": "clase",
                             "DS_USO_PPAL_ES": "uso", "DS_URBANIZA_ES": "urbanizacion", "NM_SUPER_REG": "sup_m2",

@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "044",
+  "nombre": "Colmenarejo",
+  "nombre_ckan": "Colmenarejo",
+  "slug": "colmenarejo"
+ },
+ "educativos_municipio": 11,
+ "educativos_en_alta": 7,
+ "educativos_guardados": 7,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 25,
+ "sanitarios_centros": 9,
+ "sanitarios_guardados": 9,
+ "sanitarios_sin_coordenadas": 0,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 3,
+ "sociales_guardados": 3,
+ "sociales_sin_coordenadas": 0,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 2,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 9755
+}

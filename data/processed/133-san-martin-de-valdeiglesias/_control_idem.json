@@ -1,0 +1,53 @@
+{
+ "municipio": {
+  "cod": "133",
+  "nombre": "San Martín de Valdeiglesias",
+  "nombre_ckan": "San Martín de Valdeiglesias",
+  "slug": "san-martin-de-valdeiglesias"
+ },
+ "ambitos_poligonos_brutos": 49,
+ "ambitos_geometrias_invalidas_reparadas": 14,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 48,
+ "ambitos_sin_viviendas": 13,
+ "ambitos_guardados": 48,
+ "redes_geometrias_invalidas_reparadas": 163,
+ "redes_brutas": 347,
+ "redes_dotacionales": 20,
+ "redes_por_tipo_y_estado": {
+  "cultural/sin_dato": 6,
+  "deportivo/sin_dato": 6,
+  "educativo/sin_dato": 4,
+  "sanitario/sin_dato": 1,
+  "zona_verde/sin_dato": 3
+ },
+ "redes_guardadas": 20,
+ "suelo_parcelas_brutas": 7243,
+ "suelo_geometrias_invalidas_reparadas": 2884,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 48,
+ "candidatas_vacantes_equipamiento": 64,
+ "candidatas_sin_superficie_en_origen": 1,
+ "candidatas_descartadas_menores_de_50_m2": 5,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 59,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 23,
+  ">=2000": 10,
+  ">=5000": 4,
+  ">=10000": 1
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 50,
+  "centros_educativos.geojson": 4,
+  "centros_sanitarios.geojson": 6,
+  "centros_sociales.geojson": 3,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 27,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 13,
+  "resumen_ambitos.json": 16
+ }
+}

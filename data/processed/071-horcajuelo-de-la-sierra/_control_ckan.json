@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "071",
+  "nombre": "Horcajuelo de la Sierra",
+  "nombre_ckan": "Horcajuelo de la Sierra",
+  "slug": "horcajuelo-de-la-sierra"
+ },
+ "educativos_municipio": 0,
+ "educativos_en_alta": 0,
+ "educativos_guardados": 0,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 4,
+ "sanitarios_centros": 1,
+ "sanitarios_guardados": 1,
+ "sanitarios_sin_coordenadas": 0,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 0,
+ "sociales_guardados": 0,
+ "sociales_sin_coordenadas": 0,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 0,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 106
+}

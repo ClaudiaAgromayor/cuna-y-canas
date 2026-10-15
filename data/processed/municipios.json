@@ -1,6 +1,2758 @@
 {
  "municipios": [
   {
+   "cod_ine": "001",
+   "slug": "la-acebeda",
+   "carpeta": "001-la-acebeda",
+   "nombre": "La Acebeda",
+   "centro": [
+    -3.63795,
+    41.0951
+   ],
+   "bbox": [
+    -3.6761,
+    41.0689,
+    -3.5998,
+    41.1213
+   ],
+   "poblacion": 70,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 38,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:06"
+  },
+  {
+   "cod_ine": "002",
+   "slug": "ajalvir",
+   "carpeta": "002-ajalvir",
+   "nombre": "Ajalvir",
+   "centro": [
+    -3.4737,
+    40.5277
+   ],
+   "bbox": [
+    -3.5122,
+    40.4932,
+    -3.4352,
+    40.5622
+   ],
+   "poblacion": 5007,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 350,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:06"
+  },
+  {
+   "cod_ine": "003",
+   "slug": "alameda-del-valle",
+   "carpeta": "003-alameda-del-valle",
+   "nombre": "Alameda del Valle",
+   "centro": [
+    -3.8536,
+    40.9156
+   ],
+   "bbox": [
+    -3.8986,
+    40.8584,
+    -3.8086,
+    40.9728
+   ],
+   "poblacion": 267,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:06"
+  },
+  {
+   "cod_ine": "004",
+   "slug": "el-alamo",
+   "carpeta": "004-el-alamo",
+   "nombre": "El Álamo",
+   "centro": [
+    -3.98615,
+    40.23295
+   ],
+   "bbox": [
+    -4.0268,
+    40.2095,
+    -3.9455,
+    40.2564
+   ],
+   "poblacion": 10590,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 2355,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:06"
+  },
+  {
+   "cod_ine": "005",
+   "slug": "alcala-de-henares",
+   "carpeta": "005-alcala-de-henares",
+   "nombre": "Alcalá de Henares",
+   "centro": [
+    -3.3655,
+    40.4957
+   ],
+   "bbox": [
+    -3.4472,
+    40.4459,
+    -3.2838,
+    40.5455
+   ],
+   "poblacion": 202549,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 30548,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:06"
+  },
+  {
+   "cod_ine": "006",
+   "slug": "alcobendas",
+   "carpeta": "006-alcobendas",
+   "nombre": "Alcobendas",
+   "centro": [
+    -3.6259,
+    40.54505
+   ],
+   "bbox": [
+    -3.7016,
+    40.5012,
+    -3.5502,
+    40.5889
+   ],
+   "poblacion": 123222,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 12948,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:06"
+  },
+  {
+   "cod_ine": "007",
+   "slug": "alcorcon",
+   "carpeta": "007-alcorcon",
+   "nombre": "Alcorcón",
+   "centro": [
+    -3.83345,
+    40.36345
+   ],
+   "bbox": [
+    -3.8791,
+    40.3239,
+    -3.7878,
+    40.403
+   ],
+   "poblacion": 176806,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 14162,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:06"
+  },
+  {
+   "cod_ine": "008",
+   "slug": "aldea-del-fresno",
+   "carpeta": "008-aldea-del-fresno",
+   "nombre": "Aldea del Fresno",
+   "centro": [
+    -4.2307,
+    40.3091
+   ],
+   "bbox": [
+    -4.295,
+    40.2682,
+    -4.1664,
+    40.35
+   ],
+   "poblacion": 3534,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 875,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:06"
+  },
+  {
+   "cod_ine": "009",
+   "slug": "algete",
+   "carpeta": "009-algete",
+   "nombre": "Algete",
+   "centro": [
+    -3.5238,
+    40.6184
+   ],
+   "bbox": [
+    -3.5937,
+    40.5808,
+    -3.4539,
+    40.656
+   ],
+   "poblacion": 21194,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 10331,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:06"
+  },
+  {
+   "cod_ine": "010",
+   "slug": "alpedrete",
+   "carpeta": "010-alpedrete",
+   "nombre": "Alpedrete",
+   "centro": [
+    -4.0215,
+    40.6583
+   ],
+   "bbox": [
+    -4.0477,
+    40.6324,
+    -3.9953,
+    40.6842
+   ],
+   "poblacion": 15831,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 2474,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:06"
+  },
+  {
+   "cod_ine": "011",
+   "slug": "ambite",
+   "carpeta": "011-ambite",
+   "nombre": "Ambite",
+   "centro": [
+    -3.1786,
+    40.3415
+   ],
+   "bbox": [
+    -3.2163,
+    40.3043,
+    -3.1409,
+    40.3787
+   ],
+   "poblacion": 736,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:06"
+  },
+  {
+   "cod_ine": "012",
+   "slug": "anchuelo",
+   "carpeta": "012-anchuelo",
+   "nombre": "Anchuelo",
+   "centro": [
+    -3.27785,
+    40.4666
+   ],
+   "bbox": [
+    -3.3214,
+    40.4381,
+    -3.2343,
+    40.4951
+   ],
+   "poblacion": 1413,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 274,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:06"
+  },
+  {
+   "cod_ine": "013",
+   "slug": "aranjuez",
+   "carpeta": "013-aranjuez",
+   "nombre": "Aranjuez",
+   "centro": [
+    -3.6946,
+    40.00765
+   ],
+   "bbox": [
+    -3.8757,
+    39.8847,
+    -3.5135,
+    40.1306
+   ],
+   "poblacion": 63838,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 9033,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:06"
+  },
+  {
+   "cod_ine": "014",
+   "slug": "arganda-del-rey",
+   "carpeta": "014-arganda-del-rey",
+   "nombre": "Arganda del Rey",
+   "centro": [
+    -3.44475,
+    40.30035
+   ],
+   "bbox": [
+    -3.5198,
+    40.2484,
+    -3.3697,
+    40.3523
+   ],
+   "poblacion": 60105,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 13757,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "015",
+   "slug": "arroyomolinos",
+   "carpeta": "015-arroyomolinos",
+   "nombre": "Arroyomolinos",
+   "centro": [
+    -3.9125,
+    40.28055
+   ],
+   "bbox": [
+    -3.9489,
+    40.2563,
+    -3.8761,
+    40.3048
+   ],
+   "poblacion": 38185,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 11274,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "016",
+   "slug": "el-atazar",
+   "carpeta": "016-el-atazar",
+   "nombre": "El Atazar",
+   "centro": [
+    -3.4625,
+    40.93785
+   ],
+   "bbox": [
+    -3.5034,
+    40.9084,
+    -3.4216,
+    40.9673
+   ],
+   "poblacion": 110,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:02"
+  },
+  {
+   "cod_ine": "017",
+   "slug": "batres",
+   "carpeta": "017-batres",
+   "nombre": "Batres",
+   "centro": [
+    -3.9251,
+    40.22375
+   ],
+   "bbox": [
+    -3.9563,
+    40.1962,
+    -3.8939,
+    40.2513
+   ],
+   "poblacion": 1978,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 874,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "018",
+   "slug": "becerril-de-la-sierra",
+   "carpeta": "018-becerril-de-la-sierra",
+   "nombre": "Becerril de la Sierra",
+   "centro": [
+    -3.9175,
+    40.7064
+   ],
+   "bbox": [
+    -4.0049,
+    40.6457,
+    -3.8301,
+    40.7671
+   ],
+   "poblacion": 6731,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 796,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "019",
+   "slug": "belmonte-de-tajo",
+   "carpeta": "019-belmonte-de-tajo",
+   "nombre": "Belmonte de Tajo",
+   "centro": [
+    -3.33715,
+    40.138
+   ],
+   "bbox": [
+    -3.3777,
+    40.098,
+    -3.2966,
+    40.178
+   ],
+   "poblacion": 1952,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 231,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "020",
+   "slug": "berzosa-del-lozoya",
+   "carpeta": "020-berzosa-del-lozoya",
+   "nombre": "Berzosa del Lozoya",
+   "centro": [
+    -3.52855,
+    40.97225
+   ],
+   "bbox": [
+    -3.5643,
+    40.9505,
+    -3.4928,
+    40.994
+   ],
+   "poblacion": 244,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 58,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "021",
+   "slug": "el-berrueco",
+   "carpeta": "021-el-berrueco",
+   "nombre": "El Berrueco",
+   "centro": [
+    -3.5579,
+    40.87845
+   ],
+   "bbox": [
+    -3.6026,
+    40.851,
+    -3.5132,
+    40.9059
+   ],
+   "poblacion": 811,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 650,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "022",
+   "slug": "boadilla-del-monte",
+   "carpeta": "022-boadilla-del-monte",
+   "nombre": "Boadilla del Monte",
+   "centro": [
+    -3.8952,
+    40.41695
+   ],
+   "bbox": [
+    -3.9526,
+    40.3777,
+    -3.8378,
+    40.4562
+   ],
+   "poblacion": 66319,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 00:48"
+  },
+  {
+   "cod_ine": "023",
+   "slug": "el-boalo",
+   "carpeta": "023-el-boalo",
+   "nombre": "El Boalo",
+   "centro": [
+    -3.90045,
+    40.7084
+   ],
+   "bbox": [
+    -3.9686,
+    40.6486,
+    -3.8323,
+    40.7682
+   ],
+   "poblacion": 8766,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 3943,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "024",
+   "slug": "braojos",
+   "carpeta": "024-braojos",
+   "nombre": "Braojos",
+   "centro": [
+    -3.6646,
+    41.0579
+   ],
+   "bbox": [
+    -3.7062,
+    41.0291,
+    -3.623,
+    41.0867
+   ],
+   "poblacion": 233,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 24,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "025",
+   "slug": "brea-de-tajo",
+   "carpeta": "025-brea-de-tajo",
+   "nombre": "Brea de Tajo",
+   "centro": [
+    -3.1264,
+    40.2429
+   ],
+   "bbox": [
+    -3.1734,
+    40.2003,
+    -3.0794,
+    40.2855
+   ],
+   "poblacion": 579,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 524,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "026",
+   "slug": "brunete",
+   "carpeta": "026-brunete",
+   "nombre": "Brunete",
+   "centro": [
+    -3.9952,
+    40.39765
+   ],
+   "bbox": [
+    -4.0466,
+    40.359,
+    -3.9438,
+    40.4363
+   ],
+   "poblacion": 11261,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:02"
+  },
+  {
+   "cod_ine": "027",
+   "slug": "buitrago-del-lozoya",
+   "carpeta": "027-buitrago-del-lozoya",
+   "nombre": "Buitrago del Lozoya",
+   "centro": [
+    -3.62455,
+    40.98915
+   ],
+   "bbox": [
+    -3.6687,
+    40.9537,
+    -3.5804,
+    41.0246
+   ],
+   "poblacion": 2026,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 194,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "028",
+   "slug": "bustarviejo",
+   "carpeta": "028-bustarviejo",
+   "nombre": "Bustarviejo",
+   "centro": [
+    -3.73035,
+    40.8376
+   ],
+   "bbox": [
+    -3.7896,
+    40.7946,
+    -3.6711,
+    40.8806
+   ],
+   "poblacion": 2867,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 1542,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "029",
+   "slug": "cabanillas-de-la-sierra",
+   "carpeta": "029-cabanillas-de-la-sierra",
+   "nombre": "Cabanillas de la Sierra",
+   "centro": [
+    -3.63395,
+    40.82645
+   ],
+   "bbox": [
+    -3.6596,
+    40.8011,
+    -3.6083,
+    40.8518
+   ],
+   "poblacion": 963,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 861,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "030",
+   "slug": "la-cabrera",
+   "carpeta": "030-la-cabrera",
+   "nombre": "La Cabrera",
+   "centro": [
+    -3.6107,
+    40.8646
+   ],
+   "bbox": [
+    -3.6504,
+    40.8405,
+    -3.571,
+    40.8887
+   ],
+   "poblacion": 2936,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 518,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "031",
+   "slug": "cadalso-de-los-vidrios",
+   "carpeta": "031-cadalso-de-los-vidrios",
+   "nombre": "Cadalso de los Vidrios",
+   "centro": [
+    -4.44235,
+    40.29535
+   ],
+   "bbox": [
+    -4.5064,
+    40.2576,
+    -4.3783,
+    40.3331
+   ],
+   "poblacion": 3387,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 44,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "032",
+   "slug": "camarma-de-esteruelas",
+   "carpeta": "032-camarma-de-esteruelas",
+   "nombre": "Camarma de Esteruelas",
+   "centro": [
+    -3.3774,
+    40.5657
+   ],
+   "bbox": [
+    -3.4185,
+    40.5232,
+    -3.3363,
+    40.6082
+   ],
+   "poblacion": 8342,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 1630,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "033",
+   "slug": "campo-real",
+   "carpeta": "033-campo-real",
+   "nombre": "Campo Real",
+   "centro": [
+    -3.37245,
+    40.3143
+   ],
+   "bbox": [
+    -3.432,
+    40.2653,
+    -3.3129,
+    40.3633
+   ],
+   "poblacion": 6965,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 1479,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "034",
+   "slug": "canencia",
+   "carpeta": "034-canencia",
+   "nombre": "Canencia",
+   "centro": [
+    -3.7577,
+    40.8941
+   ],
+   "bbox": [
+    -3.8196,
+    40.8465,
+    -3.6958,
+    40.9417
+   ],
+   "poblacion": 479,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 157,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "035",
+   "slug": "carabana",
+   "carpeta": "035-carabana",
+   "nombre": "Carabaña",
+   "centro": [
+    -3.23965,
+    40.258
+   ],
+   "bbox": [
+    -3.2849,
+    40.2125,
+    -3.1944,
+    40.3035
+   ],
+   "poblacion": 2470,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "036",
+   "slug": "casarrubuelos",
+   "carpeta": "036-casarrubuelos",
+   "nombre": "Casarrubuelos",
+   "centro": [
+    -3.83015,
+    40.1707
+   ],
+   "bbox": [
+    -3.8535,
+    40.1614,
+    -3.8068,
+    40.18
+   ],
+   "poblacion": 4357,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 1250,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "037",
+   "slug": "cenicientos",
+   "carpeta": "037-cenicientos",
+   "nombre": "Cenicientos",
+   "centro": [
+    -4.5068,
+    40.2412
+   ],
+   "bbox": [
+    -4.5791,
+    40.1994,
+    -4.4345,
+    40.283
+   ],
+   "poblacion": 2147,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 362,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "038",
+   "slug": "cercedilla",
+   "carpeta": "038-cercedilla",
+   "nombre": "Cercedilla",
+   "centro": [
+    -4.0464,
+    40.75425
+   ],
+   "bbox": [
+    -4.097,
+    40.7146,
+    -3.9958,
+    40.7939
+   ],
+   "poblacion": 7782,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 238,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "039",
+   "slug": "cervera-de-buitrago",
+   "carpeta": "039-cervera-de-buitrago",
+   "nombre": "Cervera de Buitrago",
+   "centro": [
+    -3.51965,
+    40.91665
+   ],
+   "bbox": [
+    -3.5497,
+    40.8984,
+    -3.4896,
+    40.9349
+   ],
+   "poblacion": 165,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:02"
+  },
+  {
+   "cod_ine": "040",
+   "slug": "ciempozuelos",
+   "carpeta": "040-ciempozuelos",
+   "nombre": "Ciempozuelos",
+   "centro": [
+    -3.60415,
+    40.15255
+   ],
+   "bbox": [
+    -3.6673,
+    40.1087,
+    -3.541,
+    40.1964
+   ],
+   "poblacion": 26254,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:03"
+  },
+  {
+   "cod_ine": "041",
+   "slug": "cobena",
+   "carpeta": "041-cobena",
+   "nombre": "Cobeña",
+   "centro": [
+    -3.50825,
+    40.5672
+   ],
+   "bbox": [
+    -3.5504,
+    40.5386,
+    -3.4661,
+    40.5958
+   ],
+   "poblacion": 7655,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 2403,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "042",
+   "slug": "colmenar-del-arroyo",
+   "carpeta": "042-colmenar-del-arroyo",
+   "nombre": "Colmenar del Arroyo",
+   "centro": [
+    -4.19965,
+    40.4015
+   ],
+   "bbox": [
+    -4.2531,
+    40.3478,
+    -4.1462,
+    40.4552
+   ],
+   "poblacion": 2053,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 755,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "043",
+   "slug": "colmenar-de-oreja",
+   "carpeta": "043-colmenar-de-oreja",
+   "nombre": "Colmenar de Oreja",
+   "centro": [
+    -3.4689,
+    40.08495
+   ],
+   "bbox": [
+    -3.594,
+    40.0341,
+    -3.3438,
+    40.1358
+   ],
+   "poblacion": 9231,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 1566,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "044",
+   "slug": "colmenarejo",
+   "carpeta": "044-colmenarejo",
+   "nombre": "Colmenarejo",
+   "centro": [
+    -4.01945,
+    40.5349
+   ],
+   "bbox": [
+    -4.0544,
+    40.4856,
+    -3.9845,
+    40.5842
+   ],
+   "poblacion": 9755,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 1926,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "045",
+   "slug": "colmenar-viejo",
+   "carpeta": "045-colmenar-viejo",
+   "nombre": "Colmenar Viejo",
+   "centro": [
+    -3.72465,
+    40.6617
+   ],
+   "bbox": [
+    -3.8651,
+    40.5914,
+    -3.5842,
+    40.732
+   ],
+   "poblacion": 58654,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 9092,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "046",
+   "slug": "collado-mediano",
+   "carpeta": "046-collado-mediano",
+   "nombre": "Collado Mediano",
+   "centro": [
+    -4.0282,
+    40.6906
+   ],
+   "bbox": [
+    -4.0616,
+    40.6625,
+    -3.9948,
+    40.7187
+   ],
+   "poblacion": 7749,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 1018,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "047",
+   "slug": "collado-villalba",
+   "carpeta": "047-collado-villalba",
+   "nombre": "Collado Villalba",
+   "centro": [
+    -3.9881,
+    40.64865
+   ],
+   "bbox": [
+    -4.0297,
+    40.6162,
+    -3.9465,
+    40.6811
+   ],
+   "poblacion": 67956,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 1496,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "048",
+   "slug": "corpa",
+   "carpeta": "048-corpa",
+   "nombre": "Corpa",
+   "centro": [
+    -3.24965,
+    40.4187
+   ],
+   "bbox": [
+    -3.2881,
+    40.393,
+    -3.2112,
+    40.4444
+   ],
+   "poblacion": 835,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 140,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "049",
+   "slug": "coslada",
+   "carpeta": "049-coslada",
+   "nombre": "Coslada",
+   "centro": [
+    -3.553,
+    40.4287
+   ],
+   "bbox": [
+    -3.5795,
+    40.4105,
+    -3.5265,
+    40.4469
+   ],
+   "poblacion": 80365,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 10014,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "050",
+   "slug": "cubas-de-la-sagra",
+   "carpeta": "050-cubas-de-la-sagra",
+   "nombre": "Cubas de la Sagra",
+   "centro": [
+    -3.84015,
+    40.1913
+   ],
+   "bbox": [
+    -3.8763,
+    40.1772,
+    -3.804,
+    40.2054
+   ],
+   "poblacion": 7217,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 2978,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "051",
+   "slug": "chapineria",
+   "carpeta": "051-chapineria",
+   "nombre": "Chapinería",
+   "centro": [
+    -4.2076,
+    40.36915
+   ],
+   "bbox": [
+    -4.2376,
+    40.3341,
+    -4.1776,
+    40.4042
+   ],
+   "poblacion": 2700,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 1043,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "052",
+   "slug": "chinchon",
+   "carpeta": "052-chinchon",
+   "nombre": "Chinchón",
+   "centro": [
+    -3.48295,
+    40.1585
+   ],
+   "bbox": [
+    -3.5809,
+    40.099,
+    -3.385,
+    40.218
+   ],
+   "poblacion": 5826,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 98,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "053",
+   "slug": "daganzo-de-arriba",
+   "carpeta": "053-daganzo-de-arriba",
+   "nombre": "Daganzo de Arriba",
+   "centro": [
+    -3.43935,
+    40.5632
+   ],
+   "bbox": [
+    -3.4832,
+    40.5089,
+    -3.3955,
+    40.6175
+   ],
+   "poblacion": 10758,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 1248,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "054",
+   "slug": "el-escorial",
+   "carpeta": "054-el-escorial",
+   "nombre": "El Escorial",
+   "centro": [
+    -4.0964,
+    40.57805
+   ],
+   "bbox": [
+    -4.16,
+    40.5187,
+    -4.0328,
+    40.6374
+   ],
+   "poblacion": 17322,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 2758,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "055",
+   "slug": "estremera",
+   "carpeta": "055-estremera",
+   "nombre": "Estremera",
+   "centro": [
+    -3.1078,
+    40.1421
+   ],
+   "bbox": [
+    -3.1626,
+    40.0614,
+    -3.053,
+    40.2228
+   ],
+   "poblacion": 1465,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "056",
+   "slug": "fresnedillas-de-la-oliva",
+   "carpeta": "056-fresnedillas-de-la-oliva",
+   "nombre": "Fresnedillas de la Oliva",
+   "centro": [
+    -4.17975,
+    40.4735
+   ],
+   "bbox": [
+    -4.2183,
+    40.4369,
+    -4.1412,
+    40.5101
+   ],
+   "poblacion": 1895,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 687,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "057",
+   "slug": "fresno-de-torote",
+   "carpeta": "057-fresno-de-torote",
+   "nombre": "Fresno de Torote",
+   "centro": [
+    -3.4077,
+    40.60865
+   ],
+   "bbox": [
+    -3.4441,
+    40.5715,
+    -3.3713,
+    40.6458
+   ],
+   "poblacion": 2558,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 3447,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "058",
+   "slug": "fuenlabrada",
+   "carpeta": "058-fuenlabrada",
+   "nombre": "Fuenlabrada",
+   "centro": [
+    -3.7943,
+    40.28875
+   ],
+   "bbox": [
+    -3.8493,
+    40.2497,
+    -3.7393,
+    40.3278
+   ],
+   "poblacion": 189814,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 19881,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "059",
+   "slug": "fuente-el-saz-de-jarama",
+   "carpeta": "059-fuente-el-saz-de-jarama",
+   "nombre": "Fuente el Saz de Jarama",
+   "centro": [
+    -3.5227,
+    40.64145
+   ],
+   "bbox": [
+    -3.5642,
+    40.6111,
+    -3.4812,
+    40.6718
+   ],
+   "poblacion": 7426,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 4661,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:07"
+  },
+  {
+   "cod_ine": "060",
+   "slug": "fuentiduena-de-tajo",
+   "carpeta": "060-fuentiduena-de-tajo",
+   "nombre": "Fuentidueña de Tajo",
+   "centro": [
+    -3.156,
+    40.11145
+   ],
+   "bbox": [
+    -3.2046,
+    40.0614,
+    -3.1074,
+    40.1615
+   ],
+   "poblacion": 2368,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 1292,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "061",
+   "slug": "galapagar",
+   "carpeta": "061-galapagar",
+   "nombre": "Galapagar",
+   "centro": [
+    -3.991,
+    40.57045
+   ],
+   "bbox": [
+    -4.0446,
+    40.5079,
+    -3.9374,
+    40.633
+   ],
+   "poblacion": 36805,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 1090,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "062",
+   "slug": "garganta-de-los-montes",
+   "carpeta": "062-garganta-de-los-montes",
+   "nombre": "Garganta de los Montes",
+   "centro": [
+    -3.6849,
+    40.92955
+   ],
+   "bbox": [
+    -3.7253,
+    40.8804,
+    -3.6445,
+    40.9787
+   ],
+   "poblacion": 442,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 90,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "063",
+   "slug": "gargantilla-del-lozoya-y-pinilla-de-buitrago",
+   "carpeta": "063-gargantilla-del-lozoya-y-pinilla-de-buitrago",
+   "nombre": "Gargantilla del Lozoya y Pinilla de Buitrago",
+   "centro": [
+    -3.69805,
+    40.96525
+   ],
+   "bbox": [
+    -3.7419,
+    40.9347,
+    -3.6542,
+    40.9958
+   ],
+   "poblacion": 405,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "064",
+   "slug": "gascones",
+   "carpeta": "064-gascones",
+   "nombre": "Gascones",
+   "centro": [
+    -3.67725,
+    41.03885
+   ],
+   "bbox": [
+    -3.7214,
+    41.0008,
+    -3.6331,
+    41.0769
+   ],
+   "poblacion": 250,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 100,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
    "cod_ine": "065",
    "slug": "getafe",
    "carpeta": "065-getafe",
@@ -26,6 +2778,7 @@
     "centros_educativos": true,
     "centros_sanitarios": true,
     "centros_sociales": true,
+    "farmacias": true,
     "secciones": true,
     "paradas": true,
     "zonas_salud": true,
@@ -39,7 +2792,1169 @@
     "demanda": true
    },
    "faltan": [],
-   "generado": "2026-10-16 00:03"
+   "completo": true,
+   "generado": "2026-10-16 00:36"
+  },
+  {
+   "cod_ine": "066",
+   "slug": "grinon",
+   "carpeta": "066-grinon",
+   "nombre": "Griñón",
+   "centro": [
+    -3.84395,
+    40.2188
+   ],
+   "bbox": [
+    -3.8845,
+    40.1995,
+    -3.8034,
+    40.2381
+   ],
+   "poblacion": 10785,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 2834,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "067",
+   "slug": "guadalix-de-la-sierra",
+   "carpeta": "067-guadalix-de-la-sierra",
+   "nombre": "Guadalix de la Sierra",
+   "centro": [
+    -3.6761,
+    40.76495
+   ],
+   "bbox": [
+    -3.7436,
+    40.725,
+    -3.6086,
+    40.8049
+   ],
+   "poblacion": 7010,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 2856,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "068",
+   "slug": "guadarrama",
+   "carpeta": "068-guadarrama",
+   "nombre": "Guadarrama",
+   "centro": [
+    -4.09975,
+    40.6772
+   ],
+   "bbox": [
+    -4.1735,
+    40.6299,
+    -4.026,
+    40.7245
+   ],
+   "poblacion": 17545,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:03"
+  },
+  {
+   "cod_ine": "069",
+   "slug": "la-hiruela",
+   "carpeta": "069-la-hiruela",
+   "nombre": "La Hiruela",
+   "centro": [
+    -3.45545,
+    41.069
+   ],
+   "bbox": [
+    -3.4858,
+    41.0427,
+    -3.4251,
+    41.0953
+   ],
+   "poblacion": 88,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:03"
+  },
+  {
+   "cod_ine": "070",
+   "slug": "horcajo-de-la-sierra-aoslos",
+   "carpeta": "070-horcajo-de-la-sierra-aoslos",
+   "nombre": "Horcajo de la Sierra-Aoslos",
+   "centro": [
+    -3.5827,
+    41.07885
+   ],
+   "bbox": [
+    -3.6096,
+    41.0434,
+    -3.5558,
+    41.1143
+   ],
+   "poblacion": 221,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 2,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "071",
+   "slug": "horcajuelo-de-la-sierra",
+   "carpeta": "071-horcajuelo-de-la-sierra",
+   "nombre": "Horcajuelo de la Sierra",
+   "centro": [
+    -3.54315,
+    41.086
+   ],
+   "bbox": [
+    -3.5644,
+    41.0373,
+    -3.5219,
+    41.1347
+   ],
+   "poblacion": 106,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:03"
+  },
+  {
+   "cod_ine": "072",
+   "slug": "hoyo-de-manzanares",
+   "carpeta": "072-hoyo-de-manzanares",
+   "nombre": "Hoyo de Manzanares",
+   "centro": [
+    -3.89775,
+    40.6189
+   ],
+   "bbox": [
+    -3.9531,
+    40.5853,
+    -3.8424,
+    40.6525
+   ],
+   "poblacion": 9323,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 2427,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "073",
+   "slug": "humanes-de-madrid",
+   "carpeta": "073-humanes-de-madrid",
+   "nombre": "Humanes de Madrid",
+   "centro": [
+    -3.82495,
+    40.2523
+   ],
+   "bbox": [
+    -3.8537,
+    40.2271,
+    -3.7962,
+    40.2775
+   ],
+   "poblacion": 20549,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 3756,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "074",
+   "slug": "leganes",
+   "carpeta": "074-leganes",
+   "nombre": "Leganés",
+   "centro": [
+    -3.76965,
+    40.329
+   ],
+   "bbox": [
+    -3.8184,
+    40.2925,
+    -3.7209,
+    40.3655
+   ],
+   "poblacion": 195946,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 14208,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "075",
+   "slug": "loeches",
+   "carpeta": "075-loeches",
+   "nombre": "Loeches",
+   "centro": [
+    -3.40915,
+    40.3877
+   ],
+   "bbox": [
+    -3.4658,
+    40.3431,
+    -3.3525,
+    40.4323
+   ],
+   "poblacion": 9321,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 3363,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "076",
+   "slug": "lozoya",
+   "carpeta": "076-lozoya",
+   "nombre": "Lozoya",
+   "centro": [
+    -3.7899,
+    40.9628
+   ],
+   "bbox": [
+    -3.8445,
+    40.9133,
+    -3.7353,
+    41.0123
+   ],
+   "poblacion": 600,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "078",
+   "slug": "madarcos",
+   "carpeta": "078-madarcos",
+   "nombre": "Madarcos",
+   "centro": [
+    -3.5717,
+    41.0404
+   ],
+   "bbox": [
+    -3.5887,
+    41.0213,
+    -3.5547,
+    41.0595
+   ],
+   "poblacion": 69,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:03"
+  },
+  {
+   "cod_ine": "080",
+   "slug": "majadahonda",
+   "carpeta": "080-majadahonda",
+   "nombre": "Majadahonda",
+   "centro": [
+    -3.8897,
+    40.47175
+   ],
+   "bbox": [
+    -3.945,
+    40.4419,
+    -3.8344,
+    40.5016
+   ],
+   "poblacion": 73662,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 10505,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "082",
+   "slug": "manzanares-el-real",
+   "carpeta": "082-manzanares-el-real",
+   "nombre": "Manzanares el Real",
+   "centro": [
+    -3.89015,
+    40.7318
+   ],
+   "bbox": [
+    -3.9797,
+    40.6486,
+    -3.8006,
+    40.815
+   ],
+   "poblacion": 9670,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 1128,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "083",
+   "slug": "meco",
+   "carpeta": "083-meco",
+   "nombre": "Meco",
+   "centro": [
+    -3.3233,
+    40.5611
+   ],
+   "bbox": [
+    -3.3635,
+    40.5213,
+    -3.2831,
+    40.6009
+   ],
+   "poblacion": 15979,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 2748,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "084",
+   "slug": "mejorada-del-campo",
+   "carpeta": "084-mejorada-del-campo",
+   "nombre": "Mejorada del Campo",
+   "centro": [
+    -3.47455,
+    40.3998
+   ],
+   "bbox": [
+    -3.5092,
+    40.378,
+    -3.4399,
+    40.4216
+   ],
+   "poblacion": 24976,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 4819,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "085",
+   "slug": "miraflores-de-la-sierra",
+   "carpeta": "085-miraflores-de-la-sierra",
+   "nombre": "Miraflores de la Sierra",
+   "centro": [
+    -3.7703,
+    40.78875
+   ],
+   "bbox": [
+    -3.8302,
+    40.7285,
+    -3.7104,
+    40.849
+   ],
+   "poblacion": 7335,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 1978,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "086",
+   "slug": "el-molar",
+   "carpeta": "086-el-molar",
+   "nombre": "El Molar",
+   "centro": [
+    -3.56665,
+    40.6971
+   ],
+   "bbox": [
+    -3.608,
+    40.6436,
+    -3.5253,
+    40.7506
+   ],
+   "poblacion": 9970,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 4385,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "087",
+   "slug": "los-molinos",
+   "carpeta": "087-los-molinos",
+   "nombre": "Los Molinos",
+   "centro": [
+    -4.0881,
+    40.72315
+   ],
+   "bbox": [
+    -4.1258,
+    40.6986,
+    -4.0504,
+    40.7477
+   ],
+   "poblacion": 4869,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 725,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "088",
+   "slug": "montejo-de-la-sierra",
+   "carpeta": "088-montejo-de-la-sierra",
+   "nombre": "Montejo de la Sierra",
+   "centro": [
+    -3.51155,
+    41.09945
+   ],
+   "bbox": [
+    -3.5479,
+    41.0492,
+    -3.4752,
+    41.1497
+   ],
+   "poblacion": 408,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 179,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "089",
+   "slug": "moraleja-de-enmedio",
+   "carpeta": "089-moraleja-de-enmedio",
+   "nombre": "Moraleja de Enmedio",
+   "centro": [
+    -3.89105,
+    40.25755
+   ],
+   "bbox": [
+    -3.9434,
+    40.2257,
+    -3.8387,
+    40.2894
+   ],
+   "poblacion": 5646,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 946,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "090",
+   "slug": "moralzarzal",
+   "carpeta": "090-moralzarzal",
+   "nombre": "Moralzarzal",
+   "centro": [
+    -3.93565,
+    40.6576
+   ],
+   "bbox": [
+    -3.9975,
+    40.5974,
+    -3.8738,
+    40.7178
+   ],
+   "poblacion": 14725,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 5651,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "091",
+   "slug": "morata-de-tajuna",
+   "carpeta": "091-morata-de-tajuna",
+   "nombre": "Morata de Tajuña",
+   "centro": [
+    -3.45015,
+    40.2276
+   ],
+   "bbox": [
+    -3.5058,
+    40.1969,
+    -3.3945,
+    40.2583
+   ],
+   "poblacion": 8394,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 548,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "092",
+   "slug": "mostoles",
+   "carpeta": "092-mostoles",
+   "nombre": "Móstoles",
+   "centro": [
+    -3.89325,
+    40.3199
+   ],
+   "bbox": [
+    -3.9454,
+    40.2857,
+    -3.8411,
+    40.3541
+   ],
+   "poblacion": 214293,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 22463,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "093",
+   "slug": "navacerrada",
+   "carpeta": "093-navacerrada",
+   "nombre": "Navacerrada",
+   "centro": [
+    -4.0054,
+    40.74955
+   ],
+   "bbox": [
+    -4.0422,
+    40.7105,
+    -3.9686,
+    40.7886
+   ],
+   "poblacion": 3338,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 860,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "094",
+   "slug": "navalafuente",
+   "carpeta": "094-navalafuente",
+   "nombre": "Navalafuente",
+   "centro": [
+    -3.67655,
+    40.81665
+   ],
+   "bbox": [
+    -3.7018,
+    40.7998,
+    -3.6513,
+    40.8335
+   ],
+   "poblacion": 1722,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 42,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "095",
+   "slug": "navalagamella",
+   "carpeta": "095-navalagamella",
+   "nombre": "Navalagamella",
+   "centro": [
+    -4.12415,
+    40.44345
+   ],
+   "bbox": [
+    -4.1773,
+    40.3645,
+    -4.071,
+    40.5224
+   ],
+   "poblacion": 3170,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 314,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
   },
   {
    "cod_ine": "096",
@@ -67,6 +3982,7 @@
     "centros_educativos": true,
     "centros_sanitarios": true,
     "centros_sociales": true,
+    "farmacias": true,
     "secciones": true,
     "paradas": true,
     "zonas_salud": true,
@@ -80,7 +3996,3663 @@
     "demanda": true
    },
    "faltan": [],
-   "generado": "2026-10-16 00:03"
+   "completo": true,
+   "generado": "2026-10-16 00:36"
+  },
+  {
+   "cod_ine": "097",
+   "slug": "navarredonda-y-san-mames",
+   "carpeta": "097-navarredonda-y-san-mames",
+   "nombre": "Navarredonda y San Mamés",
+   "centro": [
+    -3.7252,
+    41.00555
+   ],
+   "bbox": [
+    -3.7711,
+    40.975,
+    -3.6793,
+    41.0361
+   ],
+   "poblacion": 165,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:04"
+  },
+  {
+   "cod_ine": "099",
+   "slug": "navas-del-rey",
+   "carpeta": "099-navas-del-rey",
+   "nombre": "Navas del Rey",
+   "centro": [
+    -4.27725,
+    40.37735
+   ],
+   "bbox": [
+    -4.3269,
+    40.3265,
+    -4.2276,
+    40.4282
+   ],
+   "poblacion": 3424,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "100",
+   "slug": "nuevo-baztan",
+   "carpeta": "100-nuevo-baztan",
+   "nombre": "Nuevo Baztán",
+   "centro": [
+    -3.24965,
+    40.3746
+   ],
+   "bbox": [
+    -3.2799,
+    40.3462,
+    -3.2194,
+    40.403
+   ],
+   "poblacion": 7494,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 54,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "101",
+   "slug": "olmeda-de-las-fuentes",
+   "carpeta": "101-olmeda-de-las-fuentes",
+   "nombre": "Olmeda de las Fuentes",
+   "centro": [
+    -3.2049,
+    40.36765
+   ],
+   "bbox": [
+    -3.2342,
+    40.344,
+    -3.1756,
+    40.3913
+   ],
+   "poblacion": 434,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 155,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "102",
+   "slug": "orusco-de-tajuna",
+   "carpeta": "102-orusco-de-tajuna",
+   "nombre": "Orusco de Tajuña",
+   "centro": [
+    -3.21615,
+    40.28605
+   ],
+   "bbox": [
+    -3.2521,
+    40.2575,
+    -3.1802,
+    40.3146
+   ],
+   "poblacion": 1535,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 334,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "104",
+   "slug": "paracuellos-de-jarama",
+   "carpeta": "104-paracuellos-de-jarama",
+   "nombre": "Paracuellos de Jarama",
+   "centro": [
+    -3.52125,
+    40.5221
+   ],
+   "bbox": [
+    -3.566,
+    40.4687,
+    -3.4765,
+    40.5755
+   ],
+   "poblacion": 27649,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 6588,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "106",
+   "slug": "parla",
+   "carpeta": "106-parla",
+   "nombre": "Parla",
+   "centro": [
+    -3.7705,
+    40.2283
+   ],
+   "bbox": [
+    -3.8076,
+    40.2009,
+    -3.7334,
+    40.2557
+   ],
+   "poblacion": 138012,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 38174,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "107",
+   "slug": "patones",
+   "carpeta": "107-patones",
+   "nombre": "Patones",
+   "centro": [
+    -3.4823,
+    40.8824
+   ],
+   "bbox": [
+    -3.5251,
+    40.8462,
+    -3.4395,
+    40.9186
+   ],
+   "poblacion": 618,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 233,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "108",
+   "slug": "pedrezuela",
+   "carpeta": "108-pedrezuela",
+   "nombre": "Pedrezuela",
+   "centro": [
+    -3.6341,
+    40.7435
+   ],
+   "bbox": [
+    -3.6771,
+    40.7073,
+    -3.5911,
+    40.7797
+   ],
+   "poblacion": 6604,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 745,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "109",
+   "slug": "pelayos-de-la-presa",
+   "carpeta": "109-pelayos-de-la-presa",
+   "nombre": "Pelayos de la Presa",
+   "centro": [
+    -4.3259,
+    40.35995
+   ],
+   "bbox": [
+    -4.3471,
+    40.3438,
+    -4.3047,
+    40.3761
+   ],
+   "poblacion": 3192,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 974,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "110",
+   "slug": "perales-de-tajuna",
+   "carpeta": "110-perales-de-tajuna",
+   "nombre": "Perales de Tajuña",
+   "centro": [
+    -3.36065,
+    40.2259
+   ],
+   "bbox": [
+    -3.4233,
+    40.178,
+    -3.298,
+    40.2738
+   ],
+   "poblacion": 3257,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "111",
+   "slug": "pezuela-de-las-torres",
+   "carpeta": "111-pezuela-de-las-torres",
+   "nombre": "Pezuela de las Torres",
+   "centro": [
+    -3.1799,
+    40.4077
+   ],
+   "bbox": [
+    -3.2292,
+    40.3731,
+    -3.1306,
+    40.4423
+   ],
+   "poblacion": 1003,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 438,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "112",
+   "slug": "pinilla-del-valle",
+   "carpeta": "112-pinilla-del-valle",
+   "nombre": "Pinilla del Valle",
+   "centro": [
+    -3.83295,
+    40.93525
+   ],
+   "bbox": [
+    -3.8808,
+    40.8882,
+    -3.7851,
+    40.9823
+   ],
+   "poblacion": 200,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:04"
+  },
+  {
+   "cod_ine": "113",
+   "slug": "pinto",
+   "carpeta": "113-pinto",
+   "nombre": "Pinto",
+   "centro": [
+    -3.6819,
+    40.24585
+   ],
+   "bbox": [
+    -3.7413,
+    40.1989,
+    -3.6225,
+    40.2928
+   ],
+   "poblacion": 56592,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:04"
+  },
+  {
+   "cod_ine": "114",
+   "slug": "pinuecar-gandullas",
+   "carpeta": "114-pinuecar-gandullas",
+   "nombre": "Piñuécar-Gandullas",
+   "centro": [
+    -3.5977,
+    41.03505
+   ],
+   "bbox": [
+    -3.6224,
+    40.9902,
+    -3.573,
+    41.0799
+   ],
+   "poblacion": 184,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "115",
+   "slug": "pozuelo-de-alarcon",
+   "carpeta": "115-pozuelo-de-alarcon",
+   "nombre": "Pozuelo de Alarcón",
+   "centro": [
+    -3.81695,
+    40.4292
+   ],
+   "bbox": [
+    -3.8631,
+    40.3921,
+    -3.7708,
+    40.4663
+   ],
+   "poblacion": 89474,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:04"
+  },
+  {
+   "cod_ine": "116",
+   "slug": "pozuelo-del-rey",
+   "carpeta": "116-pozuelo-del-rey",
+   "nombre": "Pozuelo del Rey",
+   "centro": [
+    -3.3132,
+    40.3646
+   ],
+   "bbox": [
+    -3.356,
+    40.3286,
+    -3.2704,
+    40.4006
+   ],
+   "poblacion": 1312,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "117",
+   "slug": "pradena-del-rincon",
+   "carpeta": "117-pradena-del-rincon",
+   "nombre": "Prádena del Rincón",
+   "centro": [
+    -3.51235,
+    41.03925
+   ],
+   "bbox": [
+    -3.5594,
+    41.0126,
+    -3.4653,
+    41.0659
+   ],
+   "poblacion": 146,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 37,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:08"
+  },
+  {
+   "cod_ine": "118",
+   "slug": "puebla-de-la-sierra",
+   "carpeta": "118-puebla-de-la-sierra",
+   "nombre": "Puebla de la Sierra",
+   "centro": [
+    -3.4454,
+    41.0064
+   ],
+   "bbox": [
+    -3.4963,
+    40.9628,
+    -3.3945,
+    41.05
+   ],
+   "poblacion": 99,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 115,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "119",
+   "slug": "quijorna",
+   "carpeta": "119-quijorna",
+   "nombre": "Quijorna",
+   "centro": [
+    -4.0695,
+    40.41845
+   ],
+   "bbox": [
+    -4.113,
+    40.3882,
+    -4.026,
+    40.4487
+   ],
+   "poblacion": 4014,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 2095,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "120",
+   "slug": "rascafria",
+   "carpeta": "120-rascafria",
+   "nombre": "Rascafría",
+   "centro": [
+    -3.8891,
+    40.8731
+   ],
+   "bbox": [
+    -3.98,
+    40.7874,
+    -3.7982,
+    40.9588
+   ],
+   "poblacion": 1698,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 152,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "121",
+   "slug": "reduena",
+   "carpeta": "121-reduena",
+   "nombre": "Redueña",
+   "centro": [
+    -3.59525,
+    40.81595
+   ],
+   "bbox": [
+    -3.6178,
+    40.7894,
+    -3.5727,
+    40.8425
+   ],
+   "poblacion": 287,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 338,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "122",
+   "slug": "ribatejada",
+   "carpeta": "122-ribatejada",
+   "nombre": "Ribatejada",
+   "centro": [
+    -3.4225,
+    40.6615
+   ],
+   "bbox": [
+    -3.4827,
+    40.6305,
+    -3.3623,
+    40.6925
+   ],
+   "poblacion": 925,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 379,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "123",
+   "slug": "rivas-vaciamadrid",
+   "carpeta": "123-rivas-vaciamadrid",
+   "nombre": "Rivas-Vaciamadrid",
+   "centro": [
+    -3.52755,
+    40.34905
+   ],
+   "bbox": [
+    -3.5851,
+    40.2871,
+    -3.47,
+    40.411
+   ],
+   "poblacion": 103243,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:05"
+  },
+  {
+   "cod_ine": "124",
+   "slug": "robledillo-de-la-jara",
+   "carpeta": "124-robledillo-de-la-jara",
+   "nombre": "Robledillo de la Jara",
+   "centro": [
+    -3.52485,
+    40.9498
+   ],
+   "bbox": [
+    -3.5655,
+    40.9212,
+    -3.4842,
+    40.9784
+   ],
+   "poblacion": 119,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:05"
+  },
+  {
+   "cod_ine": "125",
+   "slug": "robledo-de-chavela",
+   "carpeta": "125-robledo-de-chavela",
+   "nombre": "Robledo de Chavela",
+   "centro": [
+    -4.2368,
+    40.48215
+   ],
+   "bbox": [
+    -4.3413,
+    40.4053,
+    -4.1323,
+    40.559
+   ],
+   "poblacion": 4874,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 1174,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "126",
+   "slug": "robregordo",
+   "carpeta": "126-robregordo",
+   "nombre": "Robregordo",
+   "centro": [
+    -3.6055,
+    41.1237
+   ],
+   "bbox": [
+    -3.645,
+    41.0953,
+    -3.566,
+    41.1521
+   ],
+   "poblacion": 79,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 20,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "127",
+   "slug": "las-rozas-de-madrid",
+   "carpeta": "127-las-rozas-de-madrid",
+   "nombre": "Las Rozas de Madrid",
+   "centro": [
+    -3.8915,
+    40.5248
+   ],
+   "bbox": [
+    -3.9498,
+    40.4751,
+    -3.8332,
+    40.5745
+   ],
+   "poblacion": 99579,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:05"
+  },
+  {
+   "cod_ine": "128",
+   "slug": "rozas-de-puerto-real",
+   "carpeta": "128-rozas-de-puerto-real",
+   "nombre": "Rozas de Puerto Real",
+   "centro": [
+    -4.51115,
+    40.3055
+   ],
+   "bbox": [
+    -4.5561,
+    40.2661,
+    -4.4662,
+    40.3449
+   ],
+   "poblacion": 582,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 54,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "129",
+   "slug": "san-agustin-del-guadalix",
+   "carpeta": "129-san-agustin-del-guadalix",
+   "nombre": "San Agustín del Guadalix",
+   "centro": [
+    -3.63615,
+    40.68245
+   ],
+   "bbox": [
+    -3.6805,
+    40.6388,
+    -3.5918,
+    40.7261
+   ],
+   "poblacion": 13947,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 2194,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "130",
+   "slug": "san-fernando-de-henares",
+   "carpeta": "130-san-fernando-de-henares",
+   "nombre": "San Fernando de Henares",
+   "centro": [
+    -3.4743,
+    40.4397
+   ],
+   "bbox": [
+    -3.538,
+    40.4065,
+    -3.4106,
+    40.4729
+   ],
+   "poblacion": 39033,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 200,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "131",
+   "slug": "san-lorenzo-de-el-escorial",
+   "carpeta": "131-san-lorenzo-de-el-escorial",
+   "nombre": "San Lorenzo de El Escorial",
+   "centro": [
+    -4.11515,
+    40.60885
+   ],
+   "bbox": [
+    -4.1988,
+    40.5625,
+    -4.0315,
+    40.6552
+   ],
+   "poblacion": 18942,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 2072,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "132",
+   "slug": "san-martin-de-la-vega",
+   "carpeta": "132-san-martin-de-la-vega",
+   "nombre": "San Martín de la Vega",
+   "centro": [
+    -3.5632,
+    40.2433
+   ],
+   "bbox": [
+    -3.6437,
+    40.1896,
+    -3.4827,
+    40.297
+   ],
+   "poblacion": 20936,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 1990,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "133",
+   "slug": "san-martin-de-valdeiglesias",
+   "carpeta": "133-san-martin-de-valdeiglesias",
+   "nombre": "San Martín de Valdeiglesias",
+   "centro": [
+    -4.34885,
+    40.36025
+   ],
+   "bbox": [
+    -4.4613,
+    40.3086,
+    -4.2364,
+    40.4119
+   ],
+   "poblacion": 9302,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 1248,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "134",
+   "slug": "san-sebastian-de-los-reyes",
+   "carpeta": "134-san-sebastian-de-los-reyes",
+   "nombre": "San Sebastián de los Reyes",
+   "centro": [
+    -3.6058,
+    40.5817
+   ],
+   "bbox": [
+    -3.6741,
+    40.5323,
+    -3.5375,
+    40.6311
+   ],
+   "poblacion": 97330,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 13420,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "135",
+   "slug": "santa-maria-de-la-alameda",
+   "carpeta": "135-santa-maria-de-la-alameda",
+   "nombre": "Santa María de la Alameda",
+   "centro": [
+    -4.2381,
+    40.6054
+   ],
+   "bbox": [
+    -4.3241,
+    40.5296,
+    -4.1521,
+    40.6812
+   ],
+   "poblacion": 1596,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 48,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "136",
+   "slug": "santorcaz",
+   "carpeta": "136-santorcaz",
+   "nombre": "Santorcaz",
+   "centro": [
+    -3.2273,
+    40.46955
+   ],
+   "bbox": [
+    -3.2593,
+    40.4344,
+    -3.1953,
+    40.5047
+   ],
+   "poblacion": 1015,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 338,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "137",
+   "slug": "los-santos-de-la-humosa",
+   "carpeta": "137-los-santos-de-la-humosa",
+   "nombre": "Los Santos de la Humosa",
+   "centro": [
+    -3.2538,
+    40.51415
+   ],
+   "bbox": [
+    -3.3088,
+    40.484,
+    -3.1988,
+    40.5443
+   ],
+   "poblacion": 2890,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 1621,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "138",
+   "slug": "la-serna-del-monte",
+   "carpeta": "138-la-serna-del-monte",
+   "nombre": "La Serna del Monte",
+   "centro": [
+    -3.62275,
+    41.04195
+   ],
+   "bbox": [
+    -3.6372,
+    41.013,
+    -3.6083,
+    41.0709
+   ],
+   "poblacion": 110,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 23,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "140",
+   "slug": "serranillos-del-valle",
+   "carpeta": "140-serranillos-del-valle",
+   "nombre": "Serranillos del Valle",
+   "centro": [
+    -3.90855,
+    40.2117
+   ],
+   "bbox": [
+    -3.9518,
+    40.1887,
+    -3.8653,
+    40.2347
+   ],
+   "poblacion": 4681,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 1488,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "141",
+   "slug": "sevilla-la-nueva",
+   "carpeta": "141-sevilla-la-nueva",
+   "nombre": "Sevilla la Nueva",
+   "centro": [
+    -4.0374,
+    40.35685
+   ],
+   "bbox": [
+    -4.0767,
+    40.3326,
+    -3.9981,
+    40.3811
+   ],
+   "poblacion": 9823,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 2774,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "143",
+   "slug": "somosierra",
+   "carpeta": "143-somosierra",
+   "nombre": "Somosierra",
+   "centro": [
+    -3.5752,
+    41.13985
+   ],
+   "bbox": [
+    -3.6137,
+    41.1139,
+    -3.5367,
+    41.1658
+   ],
+   "poblacion": 93,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 27,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "144",
+   "slug": "soto-del-real",
+   "carpeta": "144-soto-del-real",
+   "nombre": "Soto del Real",
+   "centro": [
+    -3.7856,
+    40.75895
+   ],
+   "bbox": [
+    -3.8384,
+    40.7043,
+    -3.7328,
+    40.8136
+   ],
+   "poblacion": 9459,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 3688,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "145",
+   "slug": "talamanca-de-jarama",
+   "carpeta": "145-talamanca-de-jarama",
+   "nombre": "Talamanca de Jarama",
+   "centro": [
+    -3.48915,
+    40.7396
+   ],
+   "bbox": [
+    -3.5439,
+    40.6899,
+    -3.4344,
+    40.7893
+   ],
+   "poblacion": 4621,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 1160,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "146",
+   "slug": "tielmes",
+   "carpeta": "146-tielmes",
+   "nombre": "Tielmes",
+   "centro": [
+    -3.3036,
+    40.22735
+   ],
+   "bbox": [
+    -3.3368,
+    40.1905,
+    -3.2704,
+    40.2642
+   ],
+   "poblacion": 2940,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:05"
+  },
+  {
+   "cod_ine": "147",
+   "slug": "titulcia",
+   "carpeta": "147-titulcia",
+   "nombre": "Titulcia",
+   "centro": [
+    -3.55965,
+    40.14645
+   ],
+   "bbox": [
+    -3.5839,
+    40.1217,
+    -3.5354,
+    40.1712
+   ],
+   "poblacion": 1398,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 732,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "148",
+   "slug": "torrejon-de-ardoz",
+   "carpeta": "148-torrejon-de-ardoz",
+   "nombre": "Torrejón de Ardoz",
+   "centro": [
+    -3.46275,
+    40.4707
+   ],
+   "bbox": [
+    -3.4995,
+    40.4305,
+    -3.426,
+    40.5109
+   ],
+   "poblacion": 144211,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 27346,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:11"
+  },
+  {
+   "cod_ine": "149",
+   "slug": "torrejon-de-la-calzada",
+   "carpeta": "149-torrejon-de-la-calzada",
+   "nombre": "Torrejón de la Calzada",
+   "centro": [
+    -3.7996,
+    40.19915
+   ],
+   "bbox": [
+    -3.8211,
+    40.1754,
+    -3.7781,
+    40.2229
+   ],
+   "poblacion": 10618,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 2667,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "150",
+   "slug": "torrejon-de-velasco",
+   "carpeta": "150-torrejon-de-velasco",
+   "nombre": "Torrejón de Velasco",
+   "centro": [
+    -3.7497,
+    40.1719
+   ],
+   "bbox": [
+    -3.8,
+    40.1322,
+    -3.6994,
+    40.2116
+   ],
+   "poblacion": 4895,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 12768,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "151",
+   "slug": "torrelaguna",
+   "carpeta": "151-torrelaguna",
+   "nombre": "Torrelaguna",
+   "centro": [
+    -3.55345,
+    40.8253
+   ],
+   "bbox": [
+    -3.6047,
+    40.7875,
+    -3.5022,
+    40.8631
+   ],
+   "poblacion": 5076,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 1648,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "152",
+   "slug": "torrelodones",
+   "carpeta": "152-torrelodones",
+   "nombre": "Torrelodones",
+   "centro": [
+    -3.9215,
+    40.57265
+   ],
+   "bbox": [
+    -3.9596,
+    40.5479,
+    -3.8834,
+    40.5974
+   ],
+   "poblacion": 25324,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:05"
+  },
+  {
+   "cod_ine": "153",
+   "slug": "torremocha-de-jarama",
+   "carpeta": "153-torremocha-de-jarama",
+   "nombre": "Torremocha de Jarama",
+   "centro": [
+    -3.5031,
+    40.83635
+   ],
+   "bbox": [
+    -3.5365,
+    40.7966,
+    -3.4697,
+    40.8761
+   ],
+   "poblacion": 1155,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 646,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "154",
+   "slug": "torres-de-la-alameda",
+   "carpeta": "154-torres-de-la-alameda",
+   "nombre": "Torres de la Alameda",
+   "centro": [
+    -3.36955,
+    40.4114
+   ],
+   "bbox": [
+    -3.4269,
+    40.3665,
+    -3.3122,
+    40.4563
+   ],
+   "poblacion": 7829,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 1700,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "155",
+   "slug": "valdaracete",
+   "carpeta": "155-valdaracete",
+   "nombre": "Valdaracete",
+   "centro": [
+    -3.2099,
+    40.2016
+   ],
+   "bbox": [
+    -3.2707,
+    40.1552,
+    -3.1491,
+    40.248
+   ],
+   "poblacion": 664,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 166,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "156",
+   "slug": "valdeavero",
+   "carpeta": "156-valdeavero",
+   "nombre": "Valdeavero",
+   "centro": [
+    -3.34875,
+    40.6259
+   ],
+   "bbox": [
+    -3.3836,
+    40.5966,
+    -3.3139,
+    40.6552
+   ],
+   "poblacion": 1892,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "157",
+   "slug": "valdelaguna",
+   "carpeta": "157-valdelaguna",
+   "nombre": "Valdelaguna",
+   "centro": [
+    -3.3717,
+    40.1763
+   ],
+   "bbox": [
+    -3.423,
+    40.1336,
+    -3.3204,
+    40.219
+   ],
+   "poblacion": 1120,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 414,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "158",
+   "slug": "valdemanco",
+   "carpeta": "158-valdemanco",
+   "nombre": "Valdemanco",
+   "centro": [
+    -3.6684,
+    40.86235
+   ],
+   "bbox": [
+    -3.694,
+    40.8325,
+    -3.6428,
+    40.8922
+   ],
+   "poblacion": 1119,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 420,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "159",
+   "slug": "valdemaqueda",
+   "carpeta": "159-valdemaqueda",
+   "nombre": "Valdemaqueda",
+   "centro": [
+    -4.29845,
+    40.49855
+   ],
+   "bbox": [
+    -4.3407,
+    40.4319,
+    -4.2562,
+    40.5652
+   ],
+   "poblacion": 871,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 160,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "160",
+   "slug": "valdemorillo",
+   "carpeta": "160-valdemorillo",
+   "nombre": "Valdemorillo",
+   "centro": [
+    -4.06185,
+    40.50675
+   ],
+   "bbox": [
+    -4.1316,
+    40.4412,
+    -3.9921,
+    40.5723
+   ],
+   "poblacion": 14395,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 951,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "161",
+   "slug": "valdemoro",
+   "carpeta": "161-valdemoro",
+   "nombre": "Valdemoro",
+   "centro": [
+    -3.65485,
+    40.181
+   ],
+   "bbox": [
+    -3.7181,
+    40.1323,
+    -3.5916,
+    40.2297
+   ],
+   "poblacion": 86078,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 23069,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:12"
+  },
+  {
+   "cod_ine": "162",
+   "slug": "valdeolmos-alalpardo",
+   "carpeta": "162-valdeolmos-alalpardo",
+   "nombre": "Valdeolmos-Alalpardo",
+   "centro": [
+    -3.45585,
+    40.63755
+   ],
+   "bbox": [
+    -3.4914,
+    40.6047,
+    -3.4203,
+    40.6704
+   ],
+   "poblacion": 4633,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 633,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "163",
+   "slug": "valdepielagos",
+   "carpeta": "163-valdepielagos",
+   "nombre": "Valdepiélagos",
+   "centro": [
+    -3.4728,
+    40.75575
+   ],
+   "bbox": [
+    -3.507,
+    40.7226,
+    -3.4386,
+    40.7889
+   ],
+   "poblacion": 615,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 171,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "164",
+   "slug": "valdetorres-de-jarama",
+   "carpeta": "164-valdetorres-de-jarama",
+   "nombre": "Valdetorres de Jarama",
+   "centro": [
+    -3.5085,
+    40.69645
+   ],
+   "bbox": [
+    -3.5568,
+    40.6604,
+    -3.4602,
+    40.7325
+   ],
+   "poblacion": 5209,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 322,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "165",
+   "slug": "valdilecha",
+   "carpeta": "165-valdilecha",
+   "nombre": "Valdilecha",
+   "centro": [
+    -3.30025,
+    40.2965
+   ],
+   "bbox": [
+    -3.3484,
+    40.2603,
+    -3.2521,
+    40.3327
+   ],
+   "poblacion": 3313,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 783,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:09"
+  },
+  {
+   "cod_ine": "166",
+   "slug": "valverde-de-alcala",
+   "carpeta": "166-valverde-de-alcala",
+   "nombre": "Valverde de Alcalá",
+   "centro": [
+    -3.3031,
+    40.40325
+   ],
+   "bbox": [
+    -3.3325,
+    40.3805,
+    -3.2737,
+    40.426
+   ],
+   "poblacion": 567,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 338,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:10"
+  },
+  {
+   "cod_ine": "167",
+   "slug": "velilla-de-san-antonio",
+   "carpeta": "167-velilla-de-san-antonio",
+   "nombre": "Velilla de San Antonio",
+   "centro": [
+    -3.48165,
+    40.3633
+   ],
+   "bbox": [
+    -3.512,
+    40.3381,
+    -3.4513,
+    40.3885
+   ],
+   "poblacion": 14467,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 2037,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:10"
+  },
+  {
+   "cod_ine": "168",
+   "slug": "el-vellon",
+   "carpeta": "168-el-vellon",
+   "nombre": "El Vellón",
+   "centro": [
+    -3.5595,
+    40.7633
+   ],
+   "bbox": [
+    -3.6102,
+    40.7346,
+    -3.5088,
+    40.792
+   ],
+   "poblacion": 2273,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:10"
+  },
+  {
+   "cod_ine": "169",
+   "slug": "venturada",
+   "carpeta": "169-venturada",
+   "nombre": "Venturada",
+   "centro": [
+    -3.62225,
+    40.79725
+   ],
+   "bbox": [
+    -3.651,
+    40.782,
+    -3.5935,
+    40.8125
+   ],
+   "poblacion": 2633,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 1906,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:10"
+  },
+  {
+   "cod_ine": "170",
+   "slug": "villaconejos",
+   "carpeta": "170-villaconejos",
+   "nombre": "Villaconejos",
+   "centro": [
+    -3.5002,
+    40.11245
+   ],
+   "bbox": [
+    -3.5494,
+    40.0849,
+    -3.451,
+    40.14
+   ],
+   "poblacion": 3565,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:06"
+  },
+  {
+   "cod_ine": "171",
+   "slug": "villa-del-prado",
+   "carpeta": "171-villa-del-prado",
+   "nombre": "Villa del Prado",
+   "centro": [
+    -4.29505,
+    40.27235
+   ],
+   "bbox": [
+    -4.3586,
+    40.2189,
+    -4.2315,
+    40.3258
+   ],
+   "poblacion": 7743,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 1225,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:10"
+  },
+  {
+   "cod_ine": "172",
+   "slug": "villalbilla",
+   "carpeta": "172-villalbilla",
+   "nombre": "Villalbilla",
+   "centro": [
+    -3.33805,
+    40.445
+   ],
+   "bbox": [
+    -3.4089,
+    40.418,
+    -3.2672,
+    40.472
+   ],
+   "poblacion": 18661,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 5165,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:10"
+  },
+  {
+   "cod_ine": "173",
+   "slug": "villamanrique-de-tajo",
+   "carpeta": "173-villamanrique-de-tajo",
+   "nombre": "Villamanrique de Tajo",
+   "centro": [
+    -3.23815,
+    40.0793
+   ],
+   "bbox": [
+    -3.2879,
+    40.0473,
+    -3.1884,
+    40.1113
+   ],
+   "poblacion": 863,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 343,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:10"
+  },
+  {
+   "cod_ine": "174",
+   "slug": "villamanta",
+   "carpeta": "174-villamanta",
+   "nombre": "Villamanta",
+   "centro": [
+    -4.11955,
+    40.29255
+   ],
+   "bbox": [
+    -4.1732,
+    40.2418,
+    -4.0659,
+    40.3433
+   ],
+   "poblacion": 2929,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 822,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:10"
+  },
+  {
+   "cod_ine": "175",
+   "slug": "villamantilla",
+   "carpeta": "175-villamantilla",
+   "nombre": "Villamantilla",
+   "centro": [
+    -4.14545,
+    40.34415
+   ],
+   "bbox": [
+    -4.188,
+    40.3184,
+    -4.1029,
+    40.3699
+   ],
+   "poblacion": 1674,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 1028,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:10"
+  },
+  {
+   "cod_ine": "176",
+   "slug": "villanueva-de-la-canada",
+   "carpeta": "176-villanueva-de-la-canada",
+   "nombre": "Villanueva de la Cañada",
+   "centro": [
+    -3.98985,
+    40.4462
+   ],
+   "bbox": [
+    -4.0435,
+    40.4077,
+    -3.9362,
+    40.4847
+   ],
+   "poblacion": 23784,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:06"
+  },
+  {
+   "cod_ine": "177",
+   "slug": "villanueva-del-pardillo",
+   "carpeta": "177-villanueva-del-pardillo",
+   "nombre": "Villanueva del Pardillo",
+   "centro": [
+    -3.96735,
+    40.48625
+   ],
+   "bbox": [
+    -4.0013,
+    40.4535,
+    -3.9334,
+    40.519
+   ],
+   "poblacion": 18415,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:06"
+  },
+  {
+   "cod_ine": "178",
+   "slug": "villanueva-de-perales",
+   "carpeta": "178-villanueva-de-perales",
+   "nombre": "Villanueva de Perales",
+   "centro": [
+    -4.0859,
+    40.36915
+   ],
+   "bbox": [
+    -4.1366,
+    40.3344,
+    -4.0352,
+    40.4039
+   ],
+   "poblacion": 1762,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 773,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:10"
+  },
+  {
+   "cod_ine": "179",
+   "slug": "villar-del-olmo",
+   "carpeta": "179-villar-del-olmo",
+   "nombre": "Villar del Olmo",
+   "centro": [
+    -3.2437,
+    40.33105
+   ],
+   "bbox": [
+    -3.2882,
+    40.3035,
+    -3.1992,
+    40.3586
+   ],
+   "poblacion": 2333,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 205,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:10"
+  },
+  {
+   "cod_ine": "180",
+   "slug": "villarejo-de-salvanes",
+   "carpeta": "180-villarejo-de-salvanes",
+   "nombre": "Villarejo de Salvanés",
+   "centro": [
+    -3.2738,
+    40.13315
+   ],
+   "bbox": [
+    -3.3499,
+    40.0515,
+    -3.1977,
+    40.2148
+   ],
+   "poblacion": 8035,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 2738,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:10"
+  },
+  {
+   "cod_ine": "181",
+   "slug": "villaviciosa-de-odon",
+   "carpeta": "181-villaviciosa-de-odon",
+   "nombre": "Villaviciosa de Odón",
+   "centro": [
+    -3.93645,
+    40.35775
+   ],
+   "bbox": [
+    -4.0065,
+    40.3002,
+    -3.8664,
+    40.4153
+   ],
+   "poblacion": 30068,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 5554,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:10"
+  },
+  {
+   "cod_ine": "182",
+   "slug": "villavieja-del-lozoya",
+   "carpeta": "182-villavieja-del-lozoya",
+   "nombre": "Villavieja del Lozoya",
+   "centro": [
+    -3.70335,
+    41.0278
+   ],
+   "bbox": [
+    -3.7555,
+    40.9906,
+    -3.6512,
+    41.065
+   ],
+   "poblacion": 335,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 418,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:10"
+  },
+  {
+   "cod_ine": "183",
+   "slug": "zarzalejo",
+   "carpeta": "183-zarzalejo",
+   "nombre": "Zarzalejo",
+   "centro": [
+    -4.17885,
+    40.54125
+   ],
+   "bbox": [
+    -4.2129,
+    40.5113,
+    -4.1448,
+    40.5712
+   ],
+   "poblacion": 1937,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 16,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:10"
+  },
+  {
+   "cod_ine": "901",
+   "slug": "lozoyuela-navas-sieteiglesias",
+   "carpeta": "901-lozoyuela-navas-sieteiglesias",
+   "nombre": "Lozoyuela-Navas-Sieteiglesias",
+   "centro": [
+    -3.62175,
+    40.9204
+   ],
+   "bbox": [
+    -3.6753,
+    40.8793,
+    -3.5682,
+    40.9615
+   ],
+   "poblacion": 1475,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 417,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:10"
+  },
+  {
+   "cod_ine": "902",
+   "slug": "puentes-viejas",
+   "carpeta": "902-puentes-viejas",
+   "nombre": "Puentes Viejas",
+   "centro": [
+    -3.56065,
+    40.9688
+   ],
+   "bbox": [
+    -3.6294,
+    40.9036,
+    -3.4919,
+    41.034
+   ],
+   "poblacion": 762,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": null,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:10"
+  },
+  {
+   "cod_ine": "903",
+   "slug": "tres-cantos",
+   "carpeta": "903-tres-cantos",
+   "nombre": "Tres Cantos",
+   "centro": [
+    -3.73905,
+    40.61375
+   ],
+   "bbox": [
+    -3.8115,
+    40.5821,
+    -3.6666,
+    40.6454
+   ],
+   "poblacion": 54506,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 6950,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "farmacias": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "completo": true,
+   "generado": "2026-10-16 01:10"
   }
  ],
  "servicios": "servicios.json"

@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "059",
+  "nombre": "Fuente el Saz de Jarama",
+  "nombre_ckan": "Fuente el Saz de Jarama",
+  "slug": "fuente-el-saz-de-jarama"
+ },
+ "educativos_municipio": 9,
+ "educativos_en_alta": 4,
+ "educativos_guardados": 4,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 51,
+ "sanitarios_centros": 14,
+ "sanitarios_guardados": 14,
+ "sanitarios_sin_coordenadas": 0,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 4,
+ "sociales_guardados": 4,
+ "sociales_sin_coordenadas": 0,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 3,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 7426
+}

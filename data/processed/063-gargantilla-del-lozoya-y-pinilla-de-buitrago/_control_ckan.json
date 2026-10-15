@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "063",
+  "nombre": "Gargantilla del Lozoya y Pinilla de Buitrago",
+  "nombre_ckan": "Gargantilla del Lozoya y Pinilla de Buitrago",
+  "slug": "gargantilla-del-lozoya-y-pinilla-de-buitrago"
+ },
+ "educativos_municipio": 1,
+ "educativos_en_alta": 0,
+ "educativos_guardados": 0,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 9,
+ "sanitarios_centros": 3,
+ "sanitarios_guardados": 2,
+ "sanitarios_sin_coordenadas": 1,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 2,
+ "sociales_guardados": 0,
+ "sociales_sin_coordenadas": 2,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 1,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 405
+}

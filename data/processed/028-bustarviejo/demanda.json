@@ -1,0 +1,1117 @@
+{
+ "cod_ine": "028",
+ "modelo": "población al completarse = viviendas previstas × habitantes por vivienda prevista; resultados en [mínimo, central, máximo]",
+ "calibracion": {
+  "municipio": "Getafe",
+  "fuente": "INE (Atlas de Distribución de Renta de los Hogares) + IDEM (ámbitos y suelo vacante)",
+  "criterio": "barrios con al menos 1000 viviendas previstas, menos del 15 % de suelo residencial vacante y al menos 1 sección censal entera dentro",
+  "barrios": [
+   {
+    "ambito": "SUI-05 PAU-2 EL BERCIAL-UNIVERSIDAD",
+    "viviendas": 5950,
+    "anio": 2023,
+    "poblacion": 12931,
+    "hab_por_vivienda": 2.173,
+    "tam_hogar": 2.96,
+    "pct_menores18": 28.7,
+    "pct_mayores65": 7.9,
+    "serie": {
+     "2015": 10740,
+     "2016": 11242,
+     "2017": 11709,
+     "2018": 12016,
+     "2019": 12172,
+     "2020": 12126,
+     "2021": 12291,
+     "2022": 12618,
+     "2023": 12931
+    }
+   },
+   {
+    "ambito": "SUI-07 PAU-3 PERALES DEL RÍO",
+    "viviendas": 1750,
+    "anio": 2023,
+    "poblacion": 3807,
+    "hab_por_vivienda": 2.175,
+    "tam_hogar": 3.22,
+    "pct_menores18": 25.6,
+    "pct_mayores65": 9.0,
+    "serie": {
+     "2015": 1699,
+     "2016": 1701,
+     "2017": 3289,
+     "2018": 3363,
+     "2019": 3392,
+     "2020": 3396,
+     "2021": 3744,
+     "2022": 3784,
+     "2023": 3807
+    }
+   },
+   {
+    "ambito": "SUS-PP-2 LOS MOLINOS",
+    "viviendas": 6276,
+    "anio": 2023,
+    "poblacion": 11473,
+    "hab_por_vivienda": 1.828,
+    "tam_hogar": 2.58,
+    "pct_menores18": 30.5,
+    "pct_mayores65": 2.4,
+    "serie": {
+     "2015": 5983,
+     "2016": 6554,
+     "2017": 7712,
+     "2018": 8369,
+     "2019": 8895,
+     "2020": 9741,
+     "2021": 10345,
+     "2022": 10832,
+     "2023": 11473
+    }
+   },
+   {
+    "ambito": "SUS-PP-3 BUENAVISTA",
+    "viviendas": 5958,
+    "anio": 2023,
+    "poblacion": 8854,
+    "hab_por_vivienda": 1.486,
+    "tam_hogar": 2.47,
+    "pct_menores18": 30.2,
+    "pct_mayores65": 3.1,
+    "serie": {
+     "2015": 6027,
+     "2016": 6823,
+     "2017": 5857,
+     "2018": 6623,
+     "2019": 7122,
+     "2020": 7565,
+     "2021": 8067,
+     "2022": 8374,
+     "2023": 8854
+    }
+   }
+  ],
+  "parametros": {
+   "hab_por_vivienda": [
+    1.486,
+    2.001,
+    2.175
+   ],
+   "pct_menores18": [
+    25.6,
+    29.45,
+    30.5
+   ],
+   "pct_mayores65": [
+    2.4,
+    5.5,
+    9.0
+   ]
+  },
+  "reparto_menores": {
+   "g0_2": 0.1068,
+   "g3_5": 0.1258,
+   "g6_11": 0.3601,
+   "g12_17": 0.4072
+  },
+  "tam_hogar_mediano_municipio": 2.6
+ },
+ "prueba_con_el_pasado": [
+  {
+   "ambito": "SUI-05 PAU-2 EL BERCIAL-UNIVERSIDAD",
+   "anio": 2023,
+   "real": 12931,
+   "prediccion": 10887,
+   "error_pct": -15.8,
+   "prediccion_ingenua": 15470,
+   "error_ingenua_pct": 19.6,
+   "rango": [
+    8842,
+    12941
+   ],
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "SUI-07 PAU-3 PERALES DEL RÍO",
+   "anio": 2023,
+   "real": 3807,
+   "prediccion": 3201,
+   "error_pct": -15.9,
+   "prediccion_ingenua": 4550,
+   "error_ingenua_pct": 19.5,
+   "rango": [
+    2600,
+    3803
+   ],
+   "dentro_del_rango": false
+  },
+  {
+   "ambito": "SUS-PP-2 LOS MOLINOS",
+   "anio": 2023,
+   "real": 11473,
+   "prediccion": 12205,
+   "error_pct": 6.4,
+   "prediccion_ingenua": 16318,
+   "error_ingenua_pct": 42.2,
+   "rango": [
+    9326,
+    13650
+   ],
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "SUS-PP-3 BUENAVISTA",
+   "anio": 2023,
+   "real": 8854,
+   "prediccion": 12266,
+   "error_pct": 38.5,
+   "prediccion_ingenua": 15491,
+   "error_ingenua_pct": 75.0,
+   "rango": [
+    10891,
+    12959
+   ],
+   "dentro_del_rango": false
+  }
+ ],
+ "ambitos": [
+  {
+   "ambito": "S-08R NAVALENGUA",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 403,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 36.6,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    599,
+    806,
+    877
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     16,
+     25,
+     29
+    ],
+    "g3_5": [
+     19,
+     30,
+     34
+    ],
+    "g6_11": [
+     55,
+     85,
+     96
+    ],
+    "g12_17": [
+     62,
+     97,
+     109
+    ],
+    "g65": [
+     14,
+     44,
+     79
+    ]
+   }
+  },
+  {
+   "ambito": "P-7 VALLE DE LOS ABEDULES",
+   "clase_suelo": "Suelo Apto Para Urbanizar",
+   "viviendas": 263,
+   "estado": "futuro",
+   "pct_residencial_vacante": 96.2,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    391,
+    526,
+    572
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     11,
+     17,
+     19
+    ],
+    "g3_5": [
+     13,
+     19,
+     22
+    ],
+    "g6_11": [
+     36,
+     56,
+     63
+    ],
+    "g12_17": [
+     41,
+     63,
+     71
+    ],
+    "g65": [
+     9,
+     29,
+     51
+    ]
+   }
+  },
+  {
+   "ambito": "P-4 VALLE DE LOS ABEDULES",
+   "clase_suelo": "Suelo Apto Para Urbanizar",
+   "viviendas": 239,
+   "estado": "futuro",
+   "pct_residencial_vacante": 98.3,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    355,
+    478,
+    520
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     10,
+     15,
+     17
+    ],
+    "g3_5": [
+     11,
+     18,
+     20
+    ],
+    "g6_11": [
+     33,
+     51,
+     57
+    ],
+    "g12_17": [
+     37,
+     57,
+     65
+    ],
+    "g65": [
+     9,
+     26,
+     47
+    ]
+   }
+  },
+  {
+   "ambito": "P-6 VALLE DE LOS ABEDULES",
+   "clase_suelo": "Suelo Apto Para Urbanizar",
+   "viviendas": 110,
+   "estado": "futuro",
+   "pct_residencial_vacante": 98.8,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    163,
+    220,
+    239
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     4,
+     7,
+     8
+    ],
+    "g3_5": [
+     5,
+     8,
+     9
+    ],
+    "g6_11": [
+     15,
+     23,
+     26
+    ],
+    "g12_17": [
+     17,
+     26,
+     30
+    ],
+    "g65": [
+     4,
+     12,
+     22
+    ]
+   }
+  },
+  {
+   "ambito": "UA-1-S1",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 107,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 33.5,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    159,
+    214,
+    233
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     4,
+     7,
+     8
+    ],
+    "g3_5": [
+     5,
+     8,
+     9
+    ],
+    "g6_11": [
+     15,
+     23,
+     26
+    ],
+    "g12_17": [
+     17,
+     26,
+     29
+    ],
+    "g65": [
+     4,
+     12,
+     21
+    ]
+   }
+  },
+  {
+   "ambito": "P-3 VALLE DE LOS ABEDULES",
+   "clase_suelo": "Suelo Apto Para Urbanizar",
+   "viviendas": 106,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 28.3,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    158,
+    212,
+    231
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     4,
+     7,
+     8
+    ],
+    "g3_5": [
+     5,
+     8,
+     9
+    ],
+    "g6_11": [
+     15,
+     22,
+     25
+    ],
+    "g12_17": [
+     16,
+     25,
+     29
+    ],
+    "g65": [
+     4,
+     12,
+     21
+    ]
+   }
+  },
+  {
+   "ambito": "S-03R PEDREGAL-OESTE",
+   "clase_suelo": "Suelo Apto Para Urbanizar",
+   "viviendas": 80,
+   "estado": "habitado",
+   "pct_residencial_vacante": 3.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    119,
+    160,
+    174
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     3,
+     5,
+     6
+    ],
+    "g3_5": [
+     4,
+     6,
+     7
+    ],
+    "g6_11": [
+     11,
+     17,
+     19
+    ],
+    "g12_17": [
+     12,
+     19,
+     22
+    ],
+    "g65": [
+     3,
+     9,
+     16
+    ]
+   }
+  },
+  {
+   "ambito": "S-09 LA BARDERA",
+   "clase_suelo": "Suelo Apto Para Urbanizar",
+   "viviendas": 64,
+   "estado": "habitado",
+   "pct_residencial_vacante": 13.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    95,
+    128,
+    139
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     3,
+     4,
+     5
+    ],
+    "g3_5": [
+     3,
+     5,
+     5
+    ],
+    "g6_11": [
+     9,
+     14,
+     15
+    ],
+    "g12_17": [
+     10,
+     15,
+     17
+    ],
+    "g65": [
+     2,
+     7,
+     13
+    ]
+   }
+  },
+  {
+   "ambito": "UA-3-S3",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 53,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 16.8,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    79,
+    106,
+    115
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     2,
+     3,
+     4
+    ],
+    "g3_5": [
+     3,
+     4,
+     4
+    ],
+    "g6_11": [
+     7,
+     11,
+     13
+    ],
+    "g12_17": [
+     8,
+     13,
+     14
+    ],
+    "g65": [
+     2,
+     6,
+     10
+    ]
+   }
+  },
+  {
+   "ambito": "UE-06A LA MATA NORTE",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 45,
+   "estado": "futuro",
+   "pct_residencial_vacante": 100.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    67,
+    90,
+    98
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     2,
+     3,
+     3
+    ],
+    "g3_5": [
+     2,
+     3,
+     4
+    ],
+    "g6_11": [
+     6,
+     10,
+     11
+    ],
+    "g12_17": [
+     7,
+     11,
+     12
+    ],
+    "g65": [
+     2,
+     5,
+     9
+    ]
+   }
+  },
+  {
+   "ambito": "S-07R SOLVARADERO-CENTRO",
+   "clase_suelo": "Suelo Apto Para Urbanizar",
+   "viviendas": 36,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    53,
+    72,
+    78
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     2,
+     3
+    ],
+    "g3_5": [
+     2,
+     3,
+     3
+    ],
+    "g6_11": [
+     5,
+     8,
+     9
+    ],
+    "g12_17": [
+     6,
+     9,
+     10
+    ],
+    "g65": [
+     1,
+     4,
+     7
+    ]
+   }
+  },
+  {
+   "ambito": "UA-2-S2",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 20,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 52.4,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    30,
+    40,
+    44
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     1,
+     1
+    ],
+    "g3_5": [
+     1,
+     1,
+     2
+    ],
+    "g6_11": [
+     3,
+     4,
+     5
+    ],
+    "g12_17": [
+     3,
+     5,
+     5
+    ],
+    "g65": [
+     1,
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "ambito": "UA-4-S4",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 16,
+   "estado": "futuro",
+   "pct_residencial_vacante": 98.2,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    24,
+    32,
+    35
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     1,
+     1
+    ],
+    "g3_5": [
+     1,
+     1,
+     1
+    ],
+    "g6_11": [
+     2,
+     3,
+     4
+    ],
+    "g12_17": [
+     3,
+     4,
+     4
+    ],
+    "g65": [
+     1,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "ambito": "P-1 CASCO ANTIGUO",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 14.2,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-10 ENSANCHE",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 24.2,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-11 ENSANCHE",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 6.5,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-12 ENSANCHE",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 48.7,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-13 ENSANCHE",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 57.5,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-14 ENSANCHE",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 6.4,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-15 ENSANCHE",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-17 ORDENANZA APROBADA",
+   "clase_suelo": "Suelo de Reserva Urbana",
+   "viviendas": null,
+   "estado": "futuro",
+   "pct_residencial_vacante": 96.8,
+   "poblacion_actual": 147,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "P-18 EL ROBLEDAL",
+   "clase_suelo": "Suelo Urbano (INCORPORADO)",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 6.2,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-19A RESERVA URBANA",
+   "clase_suelo": "Suelo de Reserva Urbana",
+   "viviendas": null,
+   "estado": "futuro",
+   "pct_residencial_vacante": 100.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-19B RESERVA URBANA",
+   "clase_suelo": "Suelo de Reserva Urbana",
+   "viviendas": null,
+   "estado": "futuro",
+   "pct_residencial_vacante": 97.4,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-19C",
+   "clase_suelo": "Suelo Urbanizable No Sectorizado",
+   "viviendas": null,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 80.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-19C PRIMA",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-2 ENSANCHE",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 14.6,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-20 RESERVA URBANA",
+   "clase_suelo": "Suelo de Reserva Urbana",
+   "viviendas": null,
+   "estado": "futuro",
+   "pct_residencial_vacante": 97.3,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-21 RESERVA URBANA",
+   "clase_suelo": "Suelo de Reserva Urbana",
+   "viviendas": null,
+   "estado": "futuro",
+   "pct_residencial_vacante": 93.5,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-22 RESERVA URBANA",
+   "clase_suelo": "Suelo de Reserva Urbana",
+   "viviendas": null,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 54.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-23A RESERVA URBANA",
+   "clase_suelo": "Suelo de Reserva Urbana",
+   "viviendas": null,
+   "estado": "futuro",
+   "pct_residencial_vacante": 97.2,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-23B RESERVA URBANA",
+   "clase_suelo": "Suelo de Reserva Urbana",
+   "viviendas": null,
+   "estado": "futuro",
+   "pct_residencial_vacante": 95.5,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-23C RESERVA URBANA",
+   "clase_suelo": "Suelo de Reserva Urbana",
+   "viviendas": null,
+   "estado": "futuro",
+   "pct_residencial_vacante": 99.5,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-24 RESERVA URBANA",
+   "clase_suelo": "Suelo de Reserva Urbana",
+   "viviendas": null,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 77.7,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-25 RESERVA URBANA",
+   "clase_suelo": "Suelo de Reserva Urbana",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-26 RESERVA URBANA",
+   "clase_suelo": "Suelo de Reserva Urbana",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-27 RESERVA URBANA",
+   "clase_suelo": "Suelo de Reserva Urbana",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-28 RESERVA URBANA",
+   "clase_suelo": "Suelo de Reserva Urbana",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-29 RESERVA URBANA",
+   "clase_suelo": "Suelo de Reserva Urbana",
+   "viviendas": null,
+   "estado": "futuro",
+   "pct_residencial_vacante": 100.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-3 ENSANCHE",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 55.8,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-30 RESERVA URBANA",
+   "clase_suelo": "Suelo de Reserva Urbana",
+   "viviendas": null,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 37.2,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-31 RESERVA URBANA",
+   "clase_suelo": "Suelo de Reserva Urbana",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-32 RESERVA URBANA",
+   "clase_suelo": "Suelo de Reserva Urbana",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-33 RESERVA URBANA",
+   "clase_suelo": "Suelo de Reserva Urbana",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-34 RESERVA URBANA",
+   "clase_suelo": "Suelo de Reserva Urbana",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-35 RESERVA URBANA",
+   "clase_suelo": "Suelo de Reserva Urbana",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-36 RESERVA URBANA",
+   "clase_suelo": "Suelo de Reserva Urbana",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-37 RESERVA URBANA",
+   "clase_suelo": "Suelo de Reserva Urbana",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-38 RESERVA URBANA",
+   "clase_suelo": "Suelo de Reserva Urbana",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-39 RESERVA URBANA",
+   "clase_suelo": "Suelo de Reserva Urbana",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-4 ENSANCHE",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 9.2,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-40 RESERVA URBANA",
+   "clase_suelo": "Suelo de Reserva Urbana",
+   "viviendas": null,
+   "estado": "futuro",
+   "pct_residencial_vacante": 100.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-5 ENSANCHE",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 29.7,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-7 ENSANCHE",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 4.2,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-8 ENSANCHE",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 36.8,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "P-9 ENSANCHE",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "POLIGONO LA MATA",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "S-06I LOS NAVAZALES",
+   "clase_suelo": "Suelo Apto Para Urbanizar",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  }
+ ]
+}

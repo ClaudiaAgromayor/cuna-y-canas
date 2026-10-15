@@ -1,0 +1,149 @@
+{
+ "cod_ine": "164",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "SAU-2",
+   "viviendas_previstas": 95,
+   "residencial_ocupado_m2": 34137,
+   "residencial_vacante_m2": 12473,
+   "equipamiento_ocupado_m2": 9918,
+   "equipamiento_vacante_m2": 1266,
+   "pct_residencial_vacante": 26.8,
+   "pct_equipamiento_vacante": 11.3,
+   "parcelas_equipamiento_vacantes": 3
+  },
+  {
+   "ambito": "SAU-1",
+   "viviendas_previstas": 71,
+   "residencial_ocupado_m2": 30151,
+   "residencial_vacante_m2": 7971,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 7691,
+   "pct_residencial_vacante": 20.9,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 4
+  },
+  {
+   "ambito": "UE-2",
+   "viviendas_previstas": 33,
+   "residencial_ocupado_m2": 16977,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 1172,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-4",
+   "viviendas_previstas": 33,
+   "residencial_ocupado_m2": 10505,
+   "residencial_vacante_m2": 6378,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 37.8,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-6",
+   "viviendas_previstas": 32,
+   "residencial_ocupado_m2": 9613,
+   "residencial_vacante_m2": 3517,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 26.8,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-3",
+   "viviendas_previstas": 20,
+   "residencial_ocupado_m2": 7551,
+   "residencial_vacante_m2": 1407,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 15.7,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-5",
+   "viviendas_previstas": 12,
+   "residencial_ocupado_m2": 6330,
+   "residencial_vacante_m2": 422,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 6.2,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-10",
+   "viviendas_previstas": 10,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 2204,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-9",
+   "viviendas_previstas": 10,
+   "residencial_ocupado_m2": 15620,
+   "residencial_vacante_m2": 7458,
+   "equipamiento_ocupado_m2": 281,
+   "equipamiento_vacante_m2": 6614,
+   "pct_residencial_vacante": 32.3,
+   "pct_equipamiento_vacante": 95.9,
+   "parcelas_equipamiento_vacantes": 3
+  },
+  {
+   "ambito": "UE-7",
+   "viviendas_previstas": 6,
+   "residencial_ocupado_m2": 3189,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-3 LA CUEVA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 91539,
+   "residencial_vacante_m2": 4768,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 3987,
+   "pct_residencial_vacante": 5.0,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 4
+  },
+  {
+   "ambito": "UE-1",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 1125,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-8",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

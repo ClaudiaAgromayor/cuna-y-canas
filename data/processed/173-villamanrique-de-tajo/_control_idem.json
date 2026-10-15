@@ -1,0 +1,47 @@
+{
+ "municipio": {
+  "cod": "173",
+  "nombre": "Villamanrique de Tajo",
+  "nombre_ckan": "Villamanrique de Tajo",
+  "slug": "villamanrique-de-tajo"
+ },
+ "ambitos_poligonos_brutos": 14,
+ "ambitos_geometrias_invalidas_reparadas": 4,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 13,
+ "ambitos_sin_viviendas": 4,
+ "ambitos_guardados": 13,
+ "redes_geometrias_invalidas_reparadas": 43,
+ "redes_brutas": 85,
+ "redes_dotacionales": 0,
+ "redes_por_tipo_y_estado": {},
+ "redes_guardadas": 0,
+ "suelo_parcelas_brutas": 1578,
+ "suelo_geometrias_invalidas_reparadas": 886,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 13,
+ "candidatas_vacantes_equipamiento": 74,
+ "candidatas_sin_superficie_en_origen": 1,
+ "candidatas_descartadas_menores_de_50_m2": 10,
+ "candidatas_duplicadas_por_referencia_catastral": 3,
+ "candidatas_guardadas": 64,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 25,
+  ">=2000": 18,
+  ">=5000": 10,
+  ">=10000": 5
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 13,
+  "centros_educativos.geojson": 0,
+  "centros_sanitarios.geojson": 0,
+  "centros_sociales.geojson": 0,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 38,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 0,
+  "resumen_ambitos.json": 4
+ }
+}

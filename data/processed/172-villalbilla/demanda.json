@@ -1,0 +1,975 @@
+{
+ "cod_ine": "172",
+ "modelo": "población al completarse = viviendas previstas × habitantes por vivienda prevista; resultados en [mínimo, central, máximo]",
+ "calibracion": {
+  "municipio": "Getafe",
+  "fuente": "INE (Atlas de Distribución de Renta de los Hogares) + IDEM (ámbitos y suelo vacante)",
+  "criterio": "barrios con al menos 1000 viviendas previstas, menos del 15 % de suelo residencial vacante y al menos 1 sección censal entera dentro",
+  "barrios": [
+   {
+    "ambito": "SUI-05 PAU-2 EL BERCIAL-UNIVERSIDAD",
+    "viviendas": 5950,
+    "anio": 2023,
+    "poblacion": 12931,
+    "hab_por_vivienda": 2.173,
+    "tam_hogar": 2.96,
+    "pct_menores18": 28.7,
+    "pct_mayores65": 7.9,
+    "serie": {
+     "2015": 10740,
+     "2016": 11242,
+     "2017": 11709,
+     "2018": 12016,
+     "2019": 12172,
+     "2020": 12126,
+     "2021": 12291,
+     "2022": 12618,
+     "2023": 12931
+    }
+   },
+   {
+    "ambito": "SUI-07 PAU-3 PERALES DEL RÍO",
+    "viviendas": 1750,
+    "anio": 2023,
+    "poblacion": 3807,
+    "hab_por_vivienda": 2.175,
+    "tam_hogar": 3.22,
+    "pct_menores18": 25.6,
+    "pct_mayores65": 9.0,
+    "serie": {
+     "2015": 1699,
+     "2016": 1701,
+     "2017": 3289,
+     "2018": 3363,
+     "2019": 3392,
+     "2020": 3396,
+     "2021": 3744,
+     "2022": 3784,
+     "2023": 3807
+    }
+   },
+   {
+    "ambito": "SUS-PP-2 LOS MOLINOS",
+    "viviendas": 6276,
+    "anio": 2023,
+    "poblacion": 11473,
+    "hab_por_vivienda": 1.828,
+    "tam_hogar": 2.58,
+    "pct_menores18": 30.5,
+    "pct_mayores65": 2.4,
+    "serie": {
+     "2015": 5983,
+     "2016": 6554,
+     "2017": 7712,
+     "2018": 8369,
+     "2019": 8895,
+     "2020": 9741,
+     "2021": 10345,
+     "2022": 10832,
+     "2023": 11473
+    }
+   },
+   {
+    "ambito": "SUS-PP-3 BUENAVISTA",
+    "viviendas": 5958,
+    "anio": 2023,
+    "poblacion": 8854,
+    "hab_por_vivienda": 1.486,
+    "tam_hogar": 2.47,
+    "pct_menores18": 30.2,
+    "pct_mayores65": 3.1,
+    "serie": {
+     "2015": 6027,
+     "2016": 6823,
+     "2017": 5857,
+     "2018": 6623,
+     "2019": 7122,
+     "2020": 7565,
+     "2021": 8067,
+     "2022": 8374,
+     "2023": 8854
+    }
+   }
+  ],
+  "parametros": {
+   "hab_por_vivienda": [
+    1.486,
+    2.001,
+    2.175
+   ],
+   "pct_menores18": [
+    25.6,
+    29.45,
+    30.5
+   ],
+   "pct_mayores65": [
+    2.4,
+    5.5,
+    9.0
+   ]
+  },
+  "reparto_menores": {
+   "g0_2": 0.1573,
+   "g3_5": 0.1654,
+   "g6_11": 0.3584,
+   "g12_17": 0.3189
+  },
+  "tam_hogar_mediano_municipio": 2.6
+ },
+ "prueba_con_el_pasado": [
+  {
+   "ambito": "SUI-05 PAU-2 EL BERCIAL-UNIVERSIDAD",
+   "anio": 2023,
+   "real": 12931,
+   "prediccion": 10887,
+   "error_pct": -15.8,
+   "prediccion_ingenua": 15470,
+   "error_ingenua_pct": 19.6,
+   "rango": [
+    8842,
+    12941
+   ],
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "SUI-07 PAU-3 PERALES DEL RÍO",
+   "anio": 2023,
+   "real": 3807,
+   "prediccion": 3201,
+   "error_pct": -15.9,
+   "prediccion_ingenua": 4550,
+   "error_ingenua_pct": 19.5,
+   "rango": [
+    2600,
+    3803
+   ],
+   "dentro_del_rango": false
+  },
+  {
+   "ambito": "SUS-PP-2 LOS MOLINOS",
+   "anio": 2023,
+   "real": 11473,
+   "prediccion": 12205,
+   "error_pct": 6.4,
+   "prediccion_ingenua": 16318,
+   "error_ingenua_pct": 42.2,
+   "rango": [
+    9326,
+    13650
+   ],
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "SUS-PP-3 BUENAVISTA",
+   "anio": 2023,
+   "real": 8854,
+   "prediccion": 12266,
+   "error_pct": 38.5,
+   "prediccion_ingenua": 15491,
+   "error_ingenua_pct": 75.0,
+   "rango": [
+    10891,
+    12959
+   ],
+   "dentro_del_rango": false
+  }
+ ],
+ "ambitos": [
+  {
+   "ambito": "S-R8 LOS HUEROS",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 3802,
+   "estado": "habitado",
+   "pct_residencial_vacante": 11.6,
+   "poblacion_actual": 6786,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    5650,
+    7608,
+    8269
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     228,
+     352,
+     397
+    ],
+    "g3_5": [
+     239,
+     371,
+     417
+    ],
+    "g6_11": [
+     518,
+     803,
+     904
+    ],
+    "g12_17": [
+     461,
+     715,
+     804
+    ],
+    "g65": [
+     136,
+     418,
+     744
+    ]
+   }
+  },
+  {
+   "ambito": "S-R7 VALDELÁGUILA II",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 250,
+   "estado": "futuro",
+   "pct_residencial_vacante": 100.0,
+   "poblacion_actual": 139,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    372,
+    500,
+    544
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     15,
+     23,
+     26
+    ],
+    "g3_5": [
+     16,
+     24,
+     27
+    ],
+    "g6_11": [
+     34,
+     53,
+     59
+    ],
+    "g12_17": [
+     30,
+     47,
+     53
+    ],
+    "g65": [
+     9,
+     28,
+     49
+    ]
+   }
+  },
+  {
+   "ambito": "S-R4 VALDECARPINTERO",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 200,
+   "estado": "futuro",
+   "pct_residencial_vacante": 91.6,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    297,
+    400,
+    435
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     12,
+     19,
+     21
+    ],
+    "g3_5": [
+     13,
+     19,
+     22
+    ],
+    "g6_11": [
+     27,
+     42,
+     48
+    ],
+    "g12_17": [
+     24,
+     38,
+     42
+    ],
+    "g65": [
+     7,
+     22,
+     39
+    ]
+   }
+  },
+  {
+   "ambito": "S-R1 VILLABILLA ESTE",
+   "clase_suelo": "Suelo Apto Para Urbanizar",
+   "viviendas": 166,
+   "estado": "futuro",
+   "pct_residencial_vacante": 95.3,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    247,
+    332,
+    361
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     10,
+     15,
+     17
+    ],
+    "g3_5": [
+     10,
+     16,
+     18
+    ],
+    "g6_11": [
+     23,
+     35,
+     39
+    ],
+    "g12_17": [
+     20,
+     31,
+     35
+    ],
+    "g65": [
+     6,
+     18,
+     32
+    ]
+   }
+  },
+  {
+   "ambito": "S-R6 VALDELÁGUILA I",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 140,
+   "estado": "futuro",
+   "pct_residencial_vacante": 91.3,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    208,
+    280,
+    304
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     8,
+     13,
+     15
+    ],
+    "g3_5": [
+     9,
+     14,
+     15
+    ],
+    "g6_11": [
+     19,
+     30,
+     33
+    ],
+    "g12_17": [
+     17,
+     26,
+     30
+    ],
+    "g65": [
+     5,
+     15,
+     27
+    ]
+   }
+  },
+  {
+   "ambito": "UE-10 LA ISABELA LOS HUEROS (ANULADO)",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 140,
+   "estado": "futuro",
+   "pct_residencial_vacante": 90.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    208,
+    280,
+    304
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     8,
+     13,
+     15
+    ],
+    "g3_5": [
+     9,
+     14,
+     15
+    ],
+    "g6_11": [
+     19,
+     30,
+     33
+    ],
+    "g12_17": [
+     17,
+     26,
+     30
+    ],
+    "g65": [
+     5,
+     15,
+     27
+    ]
+   }
+  },
+  {
+   "ambito": "UE-2 EL ROBLEDAL",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 140,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 30.4,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    208,
+    280,
+    304
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     8,
+     13,
+     15
+    ],
+    "g3_5": [
+     9,
+     14,
+     15
+    ],
+    "g6_11": [
+     19,
+     30,
+     33
+    ],
+    "g12_17": [
+     17,
+     26,
+     30
+    ],
+    "g65": [
+     5,
+     15,
+     27
+    ]
+   }
+  },
+  {
+   "ambito": "S-R3 PASEO DE PEREDA",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 100,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    149,
+    200,
+    217
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     6,
+     9,
+     10
+    ],
+    "g3_5": [
+     6,
+     10,
+     11
+    ],
+    "g6_11": [
+     14,
+     21,
+     24
+    ],
+    "g12_17": [
+     12,
+     19,
+     21
+    ],
+    "g65": [
+     4,
+     11,
+     20
+    ]
+   }
+  },
+  {
+   "ambito": "S-R3 PASEO DE PEREDA (ANULADO POR SENTENCIA)",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 100,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    149,
+    200,
+    217
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     6,
+     9,
+     10
+    ],
+    "g3_5": [
+     6,
+     10,
+     11
+    ],
+    "g6_11": [
+     14,
+     21,
+     24
+    ],
+    "g12_17": [
+     12,
+     19,
+     21
+    ],
+    "g65": [
+     4,
+     11,
+     20
+    ]
+   }
+  },
+  {
+   "ambito": "UE-9 TINTORETO LOS HUEROS",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 35,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 16.5,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    52,
+    70,
+    76
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     2,
+     3,
+     4
+    ],
+    "g3_5": [
+     2,
+     3,
+     4
+    ],
+    "g6_11": [
+     5,
+     7,
+     8
+    ],
+    "g12_17": [
+     4,
+     7,
+     7
+    ],
+    "g65": [
+     1,
+     4,
+     7
+    ]
+   }
+  },
+  {
+   "ambito": "UE-3 VILLABILLA CAMINO DE LABOR",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 24,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 59.5,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    36,
+    48,
+    52
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     2,
+     2
+    ],
+    "g3_5": [
+     2,
+     2,
+     3
+    ],
+    "g6_11": [
+     3,
+     5,
+     6
+    ],
+    "g12_17": [
+     3,
+     5,
+     5
+    ],
+    "g65": [
+     1,
+     3,
+     5
+    ]
+   }
+  },
+  {
+   "ambito": "PERI COMERCIAL EL ROBLEDAL",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 20,
+   "estado": "futuro",
+   "pct_residencial_vacante": 100.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    30,
+    40,
+    44
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     2,
+     2
+    ],
+    "g3_5": [
+     1,
+     2,
+     2
+    ],
+    "g6_11": [
+     3,
+     4,
+     5
+    ],
+    "g12_17": [
+     2,
+     4,
+     4
+    ],
+    "g65": [
+     1,
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "ambito": "UE-1 BUNGALOW",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 20,
+   "estado": "futuro",
+   "pct_residencial_vacante": 87.5,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    30,
+    40,
+    44
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     2,
+     2
+    ],
+    "g3_5": [
+     1,
+     2,
+     2
+    ],
+    "g6_11": [
+     3,
+     4,
+     5
+    ],
+    "g12_17": [
+     2,
+     4,
+     4
+    ],
+    "g65": [
+     1,
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "ambito": "UE-6 VILLALBILLA PASEO DE PEREDA",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 15,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 25.7,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    22,
+    30,
+    33
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     1,
+     1,
+     2
+    ],
+    "g3_5": [
+     1,
+     1,
+     2
+    ],
+    "g6_11": [
+     2,
+     3,
+     4
+    ],
+    "g12_17": [
+     2,
+     3,
+     3
+    ],
+    "g65": [
+     1,
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "ambito": "UE-8 ANCHUELO EL GURUGÚ",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 7,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 32.4,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    10,
+    14,
+    15
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     0,
+     1,
+     1
+    ],
+    "g3_5": [
+     0,
+     1,
+     1
+    ],
+    "g6_11": [
+     1,
+     1,
+     2
+    ],
+    "g12_17": [
+     1,
+     1,
+     1
+    ],
+    "g65": [
+     0,
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "ambito": "AA UE-5 VACIABOTAS",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 4,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 52.9,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    6,
+    8,
+    9
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     0,
+     0,
+     0
+    ],
+    "g3_5": [
+     0,
+     0,
+     0
+    ],
+    "g6_11": [
+     1,
+     1,
+     1
+    ],
+    "g12_17": [
+     0,
+     1,
+     1
+    ],
+    "g65": [
+     0,
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "ambito": "UE-4 VILLALBILLA VALLEJO NÁJERA",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 2,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 37.8,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    3,
+    4,
+    4
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     0,
+     0,
+     0
+    ],
+    "g3_5": [
+     0,
+     0,
+     0
+    ],
+    "g6_11": [
+     0,
+     0,
+     0
+    ],
+    "g12_17": [
+     0,
+     0,
+     0
+    ],
+    "g65": [
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "ambito": "AMBITO ELIMINADO",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "API-S-R2 VILLALBILLA OESTE",
+   "clase_suelo": "Suelo Apto Para Urbanizar (INCORPORADO)",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 10.9,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "S-D1 VALDEOBREA",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": null,
+   "estado": "futuro",
+   "pct_residencial_vacante": 91.5,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "S-I2 LOS BORDALES",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "S-I3 PRADO ANCHO",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "S-I4 LOSILLAS",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "S-R5 EL MIRADOR (ANTERIORMENTE LAS DESGRACIAS)",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": null,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 43.8,
+   "poblacion_actual": 412,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "S-R9 VALDEOBREA",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 1.3,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "S-TC1 GURUGU",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": null,
+   "estado": "futuro",
+   "pct_residencial_vacante": 100.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "SECTOR-R.3 PASEO DE PEREDA",
+   "clase_suelo": "Suelo Urbanizable",
+   "viviendas": null,
+   "estado": "futuro",
+   "pct_residencial_vacante": 99.7,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "UE-7 GURUGÚ",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  }
+ ]
+}

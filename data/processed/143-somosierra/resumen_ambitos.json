@@ -1,0 +1,61 @@
+{
+ "cod_ine": "143",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "UE-5 RESIDENCIAL EN COLONIA 2",
+   "viviendas_previstas": 8,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 4519,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-2 BORDE TRAVESÍA",
+   "viviendas_previstas": 6,
+   "residencial_ocupado_m2": 93,
+   "residencial_vacante_m2": 3215,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 97.2,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-4 RESIDENCIAL EN COLONIA 1",
+   "viviendas_previstas": 4,
+   "residencial_ocupado_m2": 47,
+   "residencial_vacante_m2": 2609,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 98.2,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-6 RESIDENCIAL EN COLONIA 3",
+   "viviendas_previstas": 3,
+   "residencial_ocupado_m2": 606,
+   "residencial_vacante_m2": 1072,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 63.9,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-3 PLAZA DE LA IGLESIA",
+   "viviendas_previstas": 2,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 745,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

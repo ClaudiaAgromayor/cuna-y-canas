@@ -50,7 +50,7 @@ SERVICIOS = {
         "nombre": "Centro de salud", "etapa": "Para toda la familia", "grupo": ["pob"], "tasa_uso": [1, 1, 1],
         "nota_tasa": "toda la población",
         "capacidad": [15000, 25000, 30000], "unidad": "habitantes por centro", "sup_min_m2": 2000, "minutos_andando": 15,
-        "existentes": {"capa": "centros_sanitarios", "campo": "tipo", "valores": ["Centro de salud"]}},
+        "existentes": {"capa": "centros_sanitarios", "campo": "tipo", "valores": ["Centro de salud", "Consultorio de atención primaria"]}},
     "centro_dia": {
         "nombre": "Centro de día para mayores", "etapa": "Cuido de mis padres", "grupo": ["g65"], "tasa_uso": [0.01, 0.015, 0.03],
         "nota_tasa": "plazas por persona de 65 y más años (supuesto, por verificar)",
@@ -130,12 +130,17 @@ def puntos_demanda(muni, out, reparto, params, pob_actual_amb, ambitos_df) -> gp
                     "geometry": r.geometry.representative_point()})
     # futuro: lo que falta hasta completar cada ámbito, sobre sus parcelas residenciales vacantes
     suelo = leer(muni, "IDEM_VPLA_SVAC_SOCU_26")
+    if suelo.empty:
+        suelo = gpd.GeoDataFrame({"DS_USO": [], "DS_OCUPACION": []}, geometry=[], crs=M)
     suelo["geometry"] = solo_poligonos(suelo.geometry)
-    res_vac = suelo[suelo["DS_USO"].str.startswith("Residencial") & (suelo["DS_OCUPACION"] == "Vacante")].copy()
+    res_vac = suelo[suelo["DS_USO"].astype(str).str.startswith("Residencial") & (suelo["DS_OCUPACION"] == "Vacante")].copy()
     res_vac["area"] = res_vac.geometry.area
     res_vac = res_vac[res_vac["area"] > 0]
     res_vac["geometry"] = res_vac.geometry.representative_point()
-    j = gpd.sjoin(res_vac[["area", "geometry"]], ambitos_df[["nombre", "geometry"]], predicate="within")
+    if ambitos_df.empty or res_vac.empty:
+        j = res_vac.iloc[0:0].assign(nombre=[])
+    else:
+        j = gpd.sjoin(res_vac[["area", "geometry"]], ambitos_df[["nombre", "geometry"]], predicate="within")
     for amb, d in j.groupby("nombre"):
         a = ambitos_df[ambitos_df["nombre"] == amb].iloc[0]
         if pd.isna(a["viviendas"]):
@@ -177,7 +182,8 @@ def procesar(muni: dict) -> dict:
         pass
     backtest = prueba_con_el_pasado(barrios, hogar_getafe)
 
-    amb = gpd.read_file(out / "ambitos.geojson").to_crs(M)
+    amb = gpd.read_file(out / "ambitos.geojson")
+    amb = amb.to_crs(M) if not amb.empty else gpd.GeoDataFrame({"nombre": [], "viviendas": [], "clase_suelo": []}, geometry=[], crs=M)
     resumen = {a["ambito"]: a for a in json.loads((out / "resumen_ambitos.json").read_text(encoding="utf-8"))["ambitos"]}
     series = ine_mun["por_ambito"]
     pob_actual = {a: s[max(s)]["poblacion"] for a, s in series.items()}

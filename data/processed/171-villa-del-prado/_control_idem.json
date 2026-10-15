@@ -1,0 +1,52 @@
+{
+ "municipio": {
+  "cod": "171",
+  "nombre": "Villa del Prado",
+  "nombre_ckan": "Villa del Prado",
+  "slug": "villa-del-prado"
+ },
+ "ambitos_poligonos_brutos": 32,
+ "ambitos_geometrias_invalidas_reparadas": 4,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 31,
+ "ambitos_sin_viviendas": 3,
+ "ambitos_guardados": 31,
+ "redes_geometrias_invalidas_reparadas": 26,
+ "redes_brutas": 137,
+ "redes_dotacionales": 10,
+ "redes_por_tipo_y_estado": {
+  "deportivo/sin_dato": 1,
+  "educativo/sin_dato": 1,
+  "sanitario/sin_dato": 1,
+  "zona_verde/sin_dato": 7
+ },
+ "redes_guardadas": 10,
+ "suelo_parcelas_brutas": 7078,
+ "suelo_geometrias_invalidas_reparadas": 2464,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 31,
+ "candidatas_vacantes_equipamiento": 46,
+ "candidatas_sin_superficie_en_origen": 3,
+ "candidatas_descartadas_menores_de_50_m2": 9,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 37,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 18,
+  ">=2000": 12,
+  ">=5000": 10,
+  ">=10000": 6
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 29,
+  "centros_educativos.geojson": 1,
+  "centros_sanitarios.geojson": 4,
+  "centros_sociales.geojson": 1,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 19,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 5,
+  "resumen_ambitos.json": 10
+ }
+}

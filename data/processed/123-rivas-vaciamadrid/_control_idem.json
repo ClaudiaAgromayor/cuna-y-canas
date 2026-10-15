@@ -1,0 +1,47 @@
+{
+ "municipio": {
+  "cod": "123",
+  "nombre": "Rivas-Vaciamadrid",
+  "nombre_ckan": "Rivas-Vaciamadrid",
+  "slug": "rivas-vaciamadrid"
+ },
+ "ambitos_poligonos_brutos": 0,
+ "ambitos": 0,
+ "redes_guardadas": 0,
+ "suelo_parcelas_brutas": 19547,
+ "suelo_geometrias_invalidas_reparadas": 7505,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 0,
+ "candidatas_vacantes_equipamiento": 105,
+ "candidatas_sin_superficie_en_origen": 22,
+ "candidatas_descartadas_menores_de_50_m2": 43,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 62,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 54,
+  ">=2000": 52,
+  ">=5000": 33,
+  ">=10000": 19
+ },
+ "portal_suelo_parcelas": 2,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Terciario": 1,
+  "Comercial": 1
+ },
+ "portal_suelo_guardadas": 2,
+ "tamanos_kb": {
+  "ambitos.geojson": 0,
+  "centros_educativos.geojson": 19,
+  "centros_sanitarios.geojson": 65,
+  "centros_sociales.geojson": 11,
+  "farmacias.geojson": 7,
+  "natalidad.json": 1,
+  "paradas.geojson": 76,
+  "parcelas_vacantes.geojson": 30,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 2,
+  "redes.geojson": 0,
+  "resumen_ambitos.json": 0
+ }
+}

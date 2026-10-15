@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "092",
+  "nombre": "Móstoles",
+  "nombre_ckan": "Móstoles",
+  "slug": "mostoles"
+ },
+ "educativos_municipio": 215,
+ "educativos_en_alta": 104,
+ "educativos_guardados": 104,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 1192,
+ "sanitarios_centros": 409,
+ "sanitarios_guardados": 403,
+ "sanitarios_sin_coordenadas": 5,
+ "sanitarios_coordenadas_fuera_del_municipio": 1,
+ "sociales_municipio": 54,
+ "sociales_guardados": 52,
+ "sociales_sin_coordenadas": 2,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 73,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 214293
+}

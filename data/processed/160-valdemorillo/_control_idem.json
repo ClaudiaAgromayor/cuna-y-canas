@@ -1,0 +1,51 @@
+{
+ "municipio": {
+  "cod": "160",
+  "nombre": "Valdemorillo",
+  "nombre_ckan": "Valdemorillo",
+  "slug": "valdemorillo"
+ },
+ "ambitos_poligonos_brutos": 29,
+ "ambitos_geometrias_invalidas_reparadas": 4,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 29,
+ "ambitos_sin_viviendas": 14,
+ "ambitos_guardados": 29,
+ "redes_geometrias_invalidas_reparadas": 89,
+ "redes_brutas": 270,
+ "redes_dotacionales": 24,
+ "redes_por_tipo_y_estado": {
+  "deportivo/sin_dato": 8,
+  "educativo/sin_dato": 6,
+  "zona_verde/sin_dato": 10
+ },
+ "redes_guardadas": 24,
+ "suelo_parcelas_brutas": 9755,
+ "suelo_geometrias_invalidas_reparadas": 3346,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 29,
+ "candidatas_vacantes_equipamiento": 21,
+ "candidatas_sin_superficie_en_origen": 0,
+ "candidatas_descartadas_menores_de_50_m2": 2,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 19,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 10,
+  ">=2000": 8,
+  ">=5000": 5,
+  ">=10000": 2
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 56,
+  "centros_educativos.geojson": 2,
+  "centros_sanitarios.geojson": 7,
+  "centros_sociales.geojson": 0,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 9,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 11,
+  "resumen_ambitos.json": 10
+ }
+}

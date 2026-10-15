@@ -1,0 +1,226 @@
+{
+ "cod_ine": "057",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "S-8 EL FANDANGO",
+   "viviendas_previstas": 550,
+   "residencial_ocupado_m2": 3301,
+   "residencial_vacante_m2": 151464,
+   "equipamiento_ocupado_m2": 657,
+   "equipamiento_vacante_m2": 35297,
+   "pct_residencial_vacante": 97.9,
+   "pct_equipamiento_vacante": 98.2,
+   "parcelas_equipamiento_vacantes": 9
+  },
+  {
+   "ambito": "S-1 LOS CIRATES UE2",
+   "viviendas_previstas": 463,
+   "residencial_ocupado_m2": 563,
+   "residencial_vacante_m2": 128083,
+   "equipamiento_ocupado_m2": 5511,
+   "equipamiento_vacante_m2": 21598,
+   "pct_residencial_vacante": 99.6,
+   "pct_equipamiento_vacante": 79.7,
+   "parcelas_equipamiento_vacantes": 7
+  },
+  {
+   "ambito": "S-7 EL DISCO",
+   "viviendas_previstas": 445,
+   "residencial_ocupado_m2": 94,
+   "residencial_vacante_m2": 127298,
+   "equipamiento_ocupado_m2": 188,
+   "equipamiento_vacante_m2": 33938,
+   "pct_residencial_vacante": 99.9,
+   "pct_equipamiento_vacante": 99.4,
+   "parcelas_equipamiento_vacantes": 3
+  },
+  {
+   "ambito": "S-9 LA GRANJILLA",
+   "viviendas_previstas": 353,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 106877,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 18306,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "S-6 EL PONTON",
+   "viviendas_previstas": 325,
+   "residencial_ocupado_m2": 47,
+   "residencial_vacante_m2": 134718,
+   "equipamiento_ocupado_m2": 1925,
+   "equipamiento_vacante_m2": 14411,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 88.2,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "S-4 EL POBO",
+   "viviendas_previstas": 250,
+   "residencial_ocupado_m2": 873,
+   "residencial_vacante_m2": 85897,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 21029,
+   "pct_residencial_vacante": 99.0,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "S-2 UE1",
+   "viviendas_previstas": 189,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 60846,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 13662,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "S-5 LA REGUERILLA",
+   "viviendas_previstas": 151,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 48208,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 18166,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 3
+  },
+  {
+   "ambito": "S-3 EL CALVARIO",
+   "viviendas_previstas": 149,
+   "residencial_ocupado_m2": 141,
+   "residencial_vacante_m2": 63184,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 13097,
+   "pct_residencial_vacante": 99.8,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 5
+  },
+  {
+   "ambito": "AA-04 RESIDENCIAL",
+   "viviendas_previstas": 116,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 22253,
+   "equipamiento_ocupado_m2": 141,
+   "equipamiento_vacante_m2": 5070,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 97.3,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "AA-09 EL POBO",
+   "viviendas_previstas": 90,
+   "residencial_ocupado_m2": 29056,
+   "residencial_vacante_m2": 16476,
+   "equipamiento_ocupado_m2": 78,
+   "equipamiento_vacante_m2": 4319,
+   "pct_residencial_vacante": 36.2,
+   "pct_equipamiento_vacante": 98.2,
+   "parcelas_equipamiento_vacantes": 3
+  },
+  {
+   "ambito": "AA-06 REGUERILLO",
+   "viviendas_previstas": 75,
+   "residencial_ocupado_m2": 9201,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "AA-01 FRESNO",
+   "viviendas_previstas": 67,
+   "residencial_ocupado_m2": 9816,
+   "residencial_vacante_m2": 8782,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 282,
+   "pct_residencial_vacante": 47.2,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "AE-07 POLIGONO 8",
+   "viviendas_previstas": 48,
+   "residencial_ocupado_m2": 25584,
+   "residencial_vacante_m2": 1643,
+   "equipamiento_ocupado_m2": 3521,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 6.0,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "AA-05 GRANJA AVICOLA",
+   "viviendas_previstas": 42,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 8403,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 469,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "AE-08 LA DEHESA",
+   "viviendas_previstas": 42,
+   "residencial_ocupado_m2": 66619,
+   "residencial_vacante_m2": 9483,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 12.5,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "AA-03 COMERCIAL",
+   "viviendas_previstas": 40,
+   "residencial_ocupado_m2": 1737,
+   "residencial_vacante_m2": 8637,
+   "equipamiento_ocupado_m2": 47,
+   "equipamiento_vacante_m2": 751,
+   "pct_residencial_vacante": 83.3,
+   "pct_equipamiento_vacante": 94.1,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "AA-02 PEDRO LLORENTE",
+   "viviendas_previstas": 33,
+   "residencial_ocupado_m2": 6009,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 2019,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "AA-11 CAMINO CAMARMA",
+   "viviendas_previstas": 19,
+   "residencial_ocupado_m2": 141,
+   "residencial_vacante_m2": 6244,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 97.8,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "AE-10 JARDIN SARRACINES",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 1154711,
+   "residencial_vacante_m2": 137059,
+   "equipamiento_ocupado_m2": 8261,
+   "equipamiento_vacante_m2": 4646,
+   "pct_residencial_vacante": 10.6,
+   "pct_equipamiento_vacante": 36.0,
+   "parcelas_equipamiento_vacantes": 1
+  }
+ ]
+}

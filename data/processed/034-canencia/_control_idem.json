@@ -1,0 +1,49 @@
+{
+ "municipio": {
+  "cod": "034",
+  "nombre": "Canencia",
+  "nombre_ckan": "Canencia",
+  "slug": "canencia"
+ },
+ "ambitos_poligonos_brutos": 16,
+ "ambitos_geometrias_invalidas_reparadas": 1,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 16,
+ "ambitos_sin_viviendas": 0,
+ "ambitos_guardados": 16,
+ "redes_geometrias_invalidas_reparadas": 30,
+ "redes_brutas": 51,
+ "redes_dotacionales": 2,
+ "redes_por_tipo_y_estado": {
+  "educativo/sin_dato": 2
+ },
+ "redes_guardadas": 2,
+ "suelo_parcelas_brutas": 1521,
+ "suelo_geometrias_invalidas_reparadas": 715,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 16,
+ "candidatas_vacantes_equipamiento": 4,
+ "candidatas_sin_superficie_en_origen": 0,
+ "candidatas_descartadas_menores_de_50_m2": 0,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 4,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 3,
+  ">=2000": 2,
+  ">=5000": 1,
+  ">=10000": 0
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 13,
+  "centros_educativos.geojson": 0,
+  "centros_sanitarios.geojson": 0,
+  "centros_sociales.geojson": 0,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 2,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 1,
+  "resumen_ambitos.json": 5
+ }
+}

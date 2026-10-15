@@ -89,7 +89,8 @@
    "capa": "centros_sanitarios",
    "campo": "tipo",
    "valores": [
-    "Centro de salud"
+    "Centro de salud",
+    "Consultorio de atención primaria"
    ]
   }
  },

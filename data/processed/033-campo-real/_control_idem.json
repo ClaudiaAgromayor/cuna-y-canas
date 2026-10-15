@@ -1,0 +1,58 @@
+{
+ "municipio": {
+  "cod": "033",
+  "nombre": "Campo Real",
+  "nombre_ckan": "Campo Real",
+  "slug": "campo-real"
+ },
+ "ambitos_poligonos_brutos": 30,
+ "ambitos_geometrias_invalidas_reparadas": 10,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 27,
+ "ambitos_sin_viviendas": 1,
+ "ambitos_guardados": 27,
+ "redes_geometrias_invalidas_reparadas": 50,
+ "redes_brutas": 175,
+ "redes_dotacionales": 100,
+ "redes_por_tipo_y_estado": {
+  "asistencial/sin_dato": 2,
+  "cultural/sin_dato": 1,
+  "deportivo/sin_dato": 2,
+  "educativo/sin_dato": 2,
+  "zona_verde/sin_dato": 93
+ },
+ "redes_guardadas": 100,
+ "suelo_parcelas_brutas": 3819,
+ "suelo_geometrias_invalidas_reparadas": 1667,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 27,
+ "candidatas_vacantes_equipamiento": 42,
+ "candidatas_sin_superficie_en_origen": 4,
+ "candidatas_descartadas_menores_de_50_m2": 7,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 35,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 18,
+  ">=2000": 10,
+  ">=5000": 7,
+  ">=10000": 3
+ },
+ "portal_suelo_parcelas": 1,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Industrial": 1
+ },
+ "portal_suelo_guardadas": 1,
+ "tamanos_kb": {
+  "ambitos.geojson": 26,
+  "centros_educativos.geojson": 2,
+  "centros_sanitarios.geojson": 3,
+  "centros_sociales.geojson": 1,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 16,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 1,
+  "redes.geojson": 43,
+  "resumen_ambitos.json": 9
+ }
+}

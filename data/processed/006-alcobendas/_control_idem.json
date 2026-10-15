@@ -1,0 +1,57 @@
+{
+ "municipio": {
+  "cod": "006",
+  "nombre": "Alcobendas",
+  "nombre_ckan": "Alcobendas",
+  "slug": "alcobendas"
+ },
+ "ambitos_poligonos_brutos": 63,
+ "ambitos_geometrias_invalidas_reparadas": 22,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 42,
+ "ambitos_sin_viviendas": 39,
+ "ambitos_guardados": 42,
+ "redes_geometrias_invalidas_reparadas": 177,
+ "redes_brutas": 628,
+ "redes_dotacionales": 118,
+ "redes_por_tipo_y_estado": {
+  "deportivo/sin_dato": 4,
+  "educativo/sin_dato": 8,
+  "zona_verde/sin_dato": 106
+ },
+ "redes_guardadas": 118,
+ "suelo_parcelas_brutas": 9067,
+ "suelo_geometrias_invalidas_reparadas": 3446,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 40,
+ "candidatas_vacantes_equipamiento": 117,
+ "candidatas_sin_superficie_en_origen": 4,
+ "candidatas_descartadas_menores_de_50_m2": 8,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 109,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 89,
+  ">=2000": 72,
+  ">=5000": 47,
+  ">=10000": 32
+ },
+ "portal_suelo_parcelas": 20,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Otros": 15,
+  "Terciario": 5
+ },
+ "portal_suelo_guardadas": 20,
+ "tamanos_kb": {
+  "ambitos.geojson": 89,
+  "centros_educativos.geojson": 31,
+  "centros_sanitarios.geojson": 117,
+  "centros_sociales.geojson": 13,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 58,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 14,
+  "redes.geojson": 63,
+  "resumen_ambitos.json": 14
+ }
+}

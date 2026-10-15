@@ -28,6 +28,11 @@ export interface Escenario {
   contarExistentes: boolean
   fijados: Fijado[]           // parcelas o puntos que el técnico obliga a usar
   excluidas: string[]         // parcelas que el técnico descarta
+  factorNatalidad: number     // 1 = como hoy; escala bebés y niños pequeños (0-5 años)
+  factorFuturo: number        // 1 = como prevé el modelo; escala la llegada de personas a los barrios nuevos
+  demandaFija: number | null  // cifra concreta del técnico ("1.000 niños"): sustituye a la estimación
+  zona: string | null         // ámbito de estudio; null = todo el municipio
+  soloRedPublica: boolean     // solo parcelas que el planeamiento reserva como red pública de equipamiento
 }
 
 export interface Fijado { id: string; lon: number; lat: number; etiqueta: string }
@@ -42,6 +47,7 @@ export interface Propuesta {
   ref_catastral: string | null
   area_m2: number | null
   ambito: string | null
+  red: string | null         // red pública del planeamiento en la que cae la parcela (indica titularidad pública)
   fijado: boolean
   captada: number            // demanda (usuarios del servicio) que pasa a estar cubierta
   personasEnRadio: number    // personas del grupo de edad a menos de X minutos
@@ -73,10 +79,15 @@ export function metros(lon1: number, lat1: number, lon2: number, lat2: number): 
   return Math.sqrt(x * x + y * y) * R
 }
 
+/** Personas del grupo de edad del servicio en un punto, según el escenario (sin aplicar la tasa de uso). */
+export function personasPunto(p: PuntoDemanda, s: Servicio, e: Escenario): number {
+  const grupo = s.grupo.reduce((t, g) => t + ((p as unknown as Record<string, number>)[g] ?? 0) * (g === 'g0_2' || g === 'g3_5' ? e.factorNatalidad : 1), 0)
+  const escala = p.tipo === 'futuro' ? (e.habPorVivienda / e.habPorViviendaCentral) * e.llenado * e.factorFuturo : 1
+  return grupo * escala
+}
+
 export function pesoDemanda(p: PuntoDemanda, s: Servicio, e: Escenario): number {
-  const grupo = s.grupo.reduce((t, g) => t + ((p as unknown as Record<string, number>)[g] ?? 0), 0)
-  const escala = p.tipo === 'futuro' ? (e.habPorVivienda / e.habPorViviendaCentral) * e.llenado : 1
-  return grupo * escala * e.tasaUso
+  return personasPunto(p, s, e) * e.tasaUso
 }
 
 export function existentesDe(s: Servicio, capas: Record<string, FeatureCollection<Point>>, capacidadPorDefecto: number): Existente[] {
@@ -114,7 +125,14 @@ export function calcular(
   paradas: Feature<Point>[],
 ): Resultado {
   const radio = e.minutos * METROS_POR_MINUTO
-  const pts = demanda.map((f) => ({ lon: f.geometry.coordinates[0], lat: f.geometry.coordinates[1], p: f.properties, w: pesoDemanda(f.properties, s, e) }))
+  const enZona = e.zona ? demanda.filter((f) => f.properties.ambito === e.zona) : demanda
+  const pts = enZona.map((f) => ({ lon: f.geometry.coordinates[0], lat: f.geometry.coordinates[1], p: f.properties, w: pesoDemanda(f.properties, s, e), h: personasPunto(f.properties, s, e) }))
+  // cifra concreta del técnico: se reparte en el espacio igual que la estimación del modelo
+  const totalModelo = pts.reduce((t, p) => t + p.w, 0)
+  if (e.demandaFija != null && totalModelo > 0) {
+    const k = e.demandaFija / totalModelo
+    pts.forEach((p) => { p.w *= k; p.h *= k })
+  }
   const sinCubrir = pts.map((p) => p.w)
   const vecinos = (lon: number, lat: number): Vecino[] =>
     pts.map((p, i) => ({ i, d: metros(lon, lat, p.lon, p.lat) })).filter((v) => v.d <= radio).sort((a, b) => a.d - b.d)
@@ -134,17 +152,18 @@ export function calcular(
   }
 
   // 3. candidatas: parcelas vacantes de equipamiento con superficie suficiente, más los puntos fijados a mano
-  type Cand = { id: string; lon: number; lat: number; ref: string | null; area: number | null; ambito: string | null; fijado: boolean; etiqueta?: string; vec: Vecino[] }
+  type Cand = { id: string; lon: number; lat: number; ref: string | null; area: number | null; ambito: string | null; red: string | null; fijado: boolean; etiqueta?: string; vec: Vecino[] }
   const excl = new Set(e.excluidas)
   const fijadosIds = new Set(e.fijados.map((f) => f.id))
   const cands: Cand[] = parcelas
-    .filter((f) => f.properties.area_m2 >= e.supMinima && !excl.has(f.properties.ref_catastral) && !fijadosIds.has(f.properties.ref_catastral))
+    .filter((f) => f.properties.area_m2 >= e.supMinima && !excl.has(f.properties.ref_catastral) && !fijadosIds.has(f.properties.ref_catastral)
+      && (!e.soloRedPublica || !!f.properties.red))
     .map((f) => ({ id: f.properties.ref_catastral, lon: f.properties.lon, lat: f.properties.lat, ref: f.properties.ref_catastral,
-      area: f.properties.area_m2, ambito: f.properties.ambito, fijado: false, vec: vecinos(f.properties.lon, f.properties.lat) }))
+      area: f.properties.area_m2, ambito: f.properties.ambito, red: f.properties.red ?? null, fijado: false, vec: vecinos(f.properties.lon, f.properties.lat) }))
   const fijados: Cand[] = e.fijados.map((f) => {
     const par = parcelas.find((p) => p.properties.ref_catastral === f.id)
     return { id: f.id, lon: f.lon, lat: f.lat, ref: par ? f.id : null, area: par?.properties.area_m2 ?? null, ambito: par?.properties.ambito ?? null,
-      fijado: true, etiqueta: f.etiqueta, vec: vecinos(f.lon, f.lat) }
+      red: par?.properties.red ?? null, fijado: true, etiqueta: f.etiqueta, vec: vecinos(f.lon, f.lat) }
   })
 
   const demandaSinCubrirTrasExistentes = sinCubrir.reduce((a, b) => a + b, 0)
@@ -162,7 +181,7 @@ export function calcular(
     }
     return captada
   }
-  const personas = (c: Cand) => c.vec.reduce((t, v) => t + s.grupo.reduce((g, k) => g + ((pts[v.i].p as unknown as Record<string, number>)[k] ?? 0) * (pts[v.i].p.tipo === 'futuro' ? (e.habPorVivienda / e.habPorViviendaCentral) * e.llenado : 1), 0), 0)
+  const personas = (c: Cand) => c.vec.reduce((t, v) => t + pts[v.i].h, 0)
   const parada = (lon: number, lat: number) => {
     let mejor: Propuesta['paradaMasCercana'] = null
     for (const f of paradas) {
@@ -196,7 +215,7 @@ export function calcular(
     cubiertaNuevos += captada
     propuestas.push({
       orden: k + 1, id: elegido.id, lon: elegido.lon, lat: elegido.lat, ref_catastral: elegido.ref, area_m2: elegido.area,
-      ambito: elegido.ambito ?? (elegido.etiqueta ?? null), fijado: elegido.fijado, captada: Math.round(captada),
+      ambito: elegido.ambito ?? (elegido.etiqueta ?? null), red: elegido.red, fijado: elegido.fijado, captada: Math.round(captada),
       personasEnRadio: Math.round(personas(elegido)), ocupacionPct: Math.round((100 * captada) / e.capacidad),
       paradaMasCercana: parada(elegido.lon, elegido.lat), alternativas,
     })

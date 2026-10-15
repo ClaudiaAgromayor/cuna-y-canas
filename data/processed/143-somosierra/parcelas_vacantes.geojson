@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"ref_catastral": "28143A00100175", "area_m2": 186.0, "ambito": null, "fecha_alta": "2012-09-02", "lon": -3.5818, "lat": 41.13515, "cod_ine": "143"}, "geometry": {"type": "Polygon", "coordinates": [[[-3.5817, 41.1352], [-3.5819, 41.1352], [-3.5819, 41.1351], [-3.5817, 41.1351], [-3.5817, 41.1352]]]}}]}

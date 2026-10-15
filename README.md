@@ -2,26 +2,37 @@
 
 Qué hace falta y qué viene en tu barrio. MAD Open Data Challenge 2026.
 
-Las decisiones y el estado del proyecto están en [DECISIONES.md](DECISIONES.md).
+Herramienta de datos abiertos con tres secciones sobre los mismos datos:
+
+- **¿Dónde vivir?** Compara los 179 municipios de la Comunidad de Madrid según tu situación (bebé, hijos en edad escolar, mayores, trabajo en Madrid…) y lo que te importa (24 criterios). Ficha de cada municipio con lo que hay y lo que viene.
+- **Barrios.** Qué servicios hay y cuáles vienen alrededor de cada barrio en desarrollo, con su estado y su fuente oficial.
+- **Planificar** (para técnicos). Cuánta demanda habrá año a año, dónde poner nuevos centros sobre suelo vacante, cuándo hacen falta y si la propuesta aguanta con otros supuestos.
+
+Las decisiones, hallazgos y el estado del proyecto están en [DECISIONES.md](DECISIONES.md).
 
 ## Estructura
 
 ```
 etl/             scripts Python: descarga por API y procesado
 data/raw/        datos tal como llegan de las API (no se versiona)
-data/processed/  GeoJSON/JSON ligeros que lee la web
-web/             aplicación web (Vite + React + MapLibre)
-docs/            documentos del concurso, validación y capturas
+data/processed/  GeoJSON/JSON ligeros que lee la web (una carpeta por municipio)
+web/             aplicación web (Vite + React + TypeScript + MapLibre + Tailwind)
+docs/            documentos del concurso
 ```
 
-## Puesta en marcha en local
+## Datos
 
 ```bash
 python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
-python etl/pipeline.py Getafe Navalcarnero   # todo: CKAN, IDEM, INE, CRTM, zonas de salud, demanda y verificación
+python etl/municipios_resumen.py             # indicadores de los 179 municipios para "¿Dónde vivir?"
+python etl/pipeline.py Getafe Navalcarnero   # detalle de uno o varios municipios: CKAN, IDEM, INE, CRTM, demanda y verificación
+python etl/lote.py                           # detalle de todos los municipios (unos 40 minutos)
+python etl/verificar.py                      # comprueba que ningún fichero mezcla municipios
 ```
+
+Fuentes, todas por API: Portal de Datos Abiertos de la Comunidad de Madrid (CKAN), IDEM (WFS), INE (Atlas de Distribución de Renta por sección censal), Consorcio Regional de Transportes (servicios de datos abiertos), Wikidata/Wikimedia Commons (fotos con licencia libre) y CartoCiudad (buscador de direcciones).
 
 ## Web
 

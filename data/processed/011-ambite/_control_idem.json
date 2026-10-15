@@ -1,0 +1,52 @@
+{
+ "municipio": {
+  "cod": "011",
+  "nombre": "Ambite",
+  "nombre_ckan": "Ambite",
+  "slug": "ambite"
+ },
+ "ambitos_poligonos_brutos": 25,
+ "ambitos_geometrias_invalidas_reparadas": 7,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 12,
+ "ambitos_sin_viviendas": 12,
+ "ambitos_guardados": 12,
+ "redes_geometrias_invalidas_reparadas": 32,
+ "redes_brutas": 75,
+ "redes_dotacionales": 33,
+ "redes_por_tipo_y_estado": {
+  "deportivo/sin_dato": 1,
+  "educativo/sin_dato": 1,
+  "sanitario/sin_dato": 1,
+  "zona_verde/sin_dato": 30
+ },
+ "redes_guardadas": 33,
+ "suelo_parcelas_brutas": 1965,
+ "suelo_geometrias_invalidas_reparadas": 881,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 12,
+ "candidatas_vacantes_equipamiento": 8,
+ "candidatas_sin_superficie_en_origen": 1,
+ "candidatas_descartadas_menores_de_50_m2": 1,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 7,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 2,
+  ">=2000": 2,
+  ">=5000": 2,
+  ">=10000": 0
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 12,
+  "centros_educativos.geojson": 0,
+  "centros_sanitarios.geojson": 1,
+  "centros_sociales.geojson": 0,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 3,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 17,
+  "resumen_ambitos.json": 4
+ }
+}

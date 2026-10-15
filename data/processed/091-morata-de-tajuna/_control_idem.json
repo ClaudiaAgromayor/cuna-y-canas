@@ -1,0 +1,58 @@
+{
+ "municipio": {
+  "cod": "091",
+  "nombre": "Morata de Tajuña",
+  "nombre_ckan": "Morata de Tajuña",
+  "slug": "morata-de-tajuna"
+ },
+ "ambitos_poligonos_brutos": 25,
+ "ambitos_geometrias_invalidas_reparadas": 2,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 24,
+ "ambitos_sin_viviendas": 13,
+ "ambitos_guardados": 24,
+ "redes_geometrias_invalidas_reparadas": 58,
+ "redes_brutas": 136,
+ "redes_dotacionales": 74,
+ "redes_por_tipo_y_estado": {
+  "cultural/sin_dato": 2,
+  "deportivo/sin_dato": 2,
+  "educativo/sin_dato": 3,
+  "zona_verde/sin_dato": 67
+ },
+ "redes_guardadas": 72,
+ "suelo_parcelas_brutas": 4138,
+ "suelo_geometrias_invalidas_reparadas": 1994,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 24,
+ "candidatas_vacantes_equipamiento": 35,
+ "candidatas_sin_superficie_en_origen": 2,
+ "candidatas_descartadas_menores_de_50_m2": 6,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 29,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 18,
+  ">=2000": 6,
+  ">=5000": 2,
+  ">=10000": 2
+ },
+ "portal_suelo_parcelas": 2,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Residencial": 1,
+  "Otros": 1
+ },
+ "portal_suelo_guardadas": 2,
+ "tamanos_kb": {
+  "ambitos.geojson": 20,
+  "centros_educativos.geojson": 2,
+  "centros_sanitarios.geojson": 4,
+  "centros_sociales.geojson": 1,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 13,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 1,
+  "redes.geojson": 40,
+  "resumen_ambitos.json": 8
+ }
+}

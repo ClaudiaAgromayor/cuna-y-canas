@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "042",
+  "nombre": "Colmenar del Arroyo",
+  "nombre_ckan": "Colmenar del Arroyo",
+  "slug": "colmenar-del-arroyo"
+ },
+ "educativos_municipio": 5,
+ "educativos_en_alta": 2,
+ "educativos_guardados": 2,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 12,
+ "sanitarios_centros": 3,
+ "sanitarios_guardados": 3,
+ "sanitarios_sin_coordenadas": 0,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 1,
+ "sociales_guardados": 1,
+ "sociales_sin_coordenadas": 0,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 1,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 2053
+}

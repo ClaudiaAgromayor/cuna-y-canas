@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"id": "8_12091", "modo": "interurbano", "modos": "interurbano", "nombre": "PUEBLA DE LA SIERRA", "situacion": "S", "accesibilidad": "T", "lineas": "interurbano: 912, SD1", "n_lineas": 2, "fecha_dato": "20260529", "cod_ine": "118"}, "geometry": {"type": "Point", "coordinates": [-3.444909, 41.012043]}}]}

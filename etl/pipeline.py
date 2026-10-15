@@ -34,35 +34,51 @@ PASOS = [("ckan", descargar_ckan.procesar), ("idem", procesar_idem.procesar), ("
 
 # capas que la web puede pintar; si falta alguna, el índice lo dice y la web muestra "sin datos"
 CAPAS = ["ambitos", "parcelas_vacantes", "redes", "portal_suelo", "centros_educativos", "centros_sanitarios",
-         "centros_sociales", "secciones", "paradas", "zonas_salud", "demanda_puntos"]
+         "centros_sociales", "farmacias", "secciones", "paradas", "zonas_salud", "demanda_puntos"]
 TABLAS = ["natalidad", "poblacion", "resumen_ambitos", "secciones_series", "demanda"]
+
+
+def ficha_indice(d) -> dict | None:
+    cod, slug = d.name.split("-", 1)
+    capas = {c: (d / f"{c}.geojson").exists() for c in CAPAS}
+    tablas = {t: (d / f"{t}.json").exists() for t in TABLAS}
+    ctrl = {}
+    for f in d.glob("_control*.json"):
+        ctrl.update(json.loads(f.read_text(encoding="utf-8")))
+    nombre = ctrl.get("municipio", {}).get("nombre", slug)
+    ref = next((d / f"{c}.geojson" for c in ("secciones", "ambitos", "centros_educativos") if capas.get(c)), None)
+    if ref is None:
+        return None
+    g = gpd.read_file(ref)
+    if g.empty:
+        return None
+    minx, miny, maxx, maxy = g.total_bounds
+    pob = json.loads((d / "poblacion.json").read_text(encoding="utf-8")) if tablas["poblacion"] else {}
+    ult = max(pob.get("por_anio", {}) or [None]) if pob else None
+    dem = json.loads((d / "demanda.json").read_text(encoding="utf-8")) if tablas["demanda"] else {}
+    return {
+        "cod_ine": cod, "slug": slug, "carpeta": d.name, "nombre": nombre,
+        "centro": [round((minx + maxx) / 2, 5), round((miny + maxy) / 2, 5)],
+        "bbox": [round(v, 5) for v in (minx, miny, maxx, maxy)],
+        "poblacion": pob.get("por_anio", {}).get(ult, {}).get("Total") if ult else None, "anio_poblacion": ult,
+        "viviendas_previstas": sum(a["viviendas"] or 0 for a in dem.get("ambitos", [])) or None,
+        "capas": capas, "tablas": tablas,
+        "faltan": [k for k, v in {**capas, **tablas}.items() if not v],
+        "completo": all(capas[c] for c in ("ambitos", "parcelas_vacantes", "demanda_puntos")) and tablas["demanda"],
+        "generado": time.strftime("%Y-%m-%d %H:%M", time.localtime(max(f.stat().st_mtime for f in d.iterdir()))),
+    }
 
 
 def indice() -> dict:
     municipios = []
     for d in sorted(p for p in PROCESSED.iterdir() if p.is_dir()):
-        cod, slug = d.name.split("-", 1)
-        capas = {c: (d / f"{c}.geojson").exists() for c in CAPAS}
-        tablas = {t: (d / f"{t}.json").exists() for t in TABLAS}
-        ctrl = {}
-        for f in d.glob("_control*.json"):
-            ctrl.update(json.loads(f.read_text(encoding="utf-8")))
-        nombre = ctrl.get("municipio", {}).get("nombre", slug)
-        ref = gpd.read_file(d / "secciones.geojson") if capas["secciones"] else gpd.read_file(d / "ambitos.geojson")
-        minx, miny, maxx, maxy = ref.total_bounds
-        pob = json.loads((d / "poblacion.json").read_text(encoding="utf-8")) if tablas["poblacion"] else {}
-        ult = max(pob.get("por_anio", {}) or [None]) if pob else None
-        dem = json.loads((d / "demanda.json").read_text(encoding="utf-8")) if tablas["demanda"] else {}
-        municipios.append({
-            "cod_ine": cod, "slug": slug, "carpeta": d.name, "nombre": nombre,
-            "centro": [round((minx + maxx) / 2, 5), round((miny + maxy) / 2, 5)],
-            "bbox": [round(v, 5) for v in (minx, miny, maxx, maxy)],
-            "poblacion": pob.get("por_anio", {}).get(ult, {}).get("Total") if ult else None, "anio_poblacion": ult,
-            "viviendas_previstas": sum(a["viviendas"] or 0 for a in dem.get("ambitos", [])) or None,
-            "capas": capas, "tablas": tablas,
-            "faltan": [k for k, v in {**capas, **tablas}.items() if not v],
-            "generado": time.strftime("%Y-%m-%d %H:%M", time.localtime(max(f.stat().st_mtime for f in d.iterdir()))),
-        })
+        try:
+            f = ficha_indice(d)
+        except Exception as e:  # noqa: BLE001 - una carpeta rota no impide el índice
+            print(f"  índice: {d.name} omitido ({e})")
+            continue
+        if f:
+            municipios.append(f)
     doc = {"municipios": municipios, "servicios": "servicios.json"}
     (PROCESSED / "municipios.json").write_text(json.dumps(doc, ensure_ascii=False, indent=1), encoding="utf-8")
     return doc

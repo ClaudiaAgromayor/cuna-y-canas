@@ -1,0 +1,52 @@
+{
+ "municipio": {
+  "cod": "032",
+  "nombre": "Camarma de Esteruelas",
+  "nombre_ckan": "Camarma de Esteruelas",
+  "slug": "camarma-de-esteruelas"
+ },
+ "ambitos_poligonos_brutos": 30,
+ "ambitos_geometrias_invalidas_reparadas": 0,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 30,
+ "ambitos_sin_viviendas": 8,
+ "ambitos_guardados": 30,
+ "redes_geometrias_invalidas_reparadas": 64,
+ "redes_brutas": 215,
+ "redes_dotacionales": 20,
+ "redes_por_tipo_y_estado": {
+  "asistencial/sin_dato": 2,
+  "deportivo/sin_dato": 3,
+  "educativo/sin_dato": 6,
+  "zona_verde/sin_dato": 9
+ },
+ "redes_guardadas": 20,
+ "suelo_parcelas_brutas": 3805,
+ "suelo_geometrias_invalidas_reparadas": 1284,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 30,
+ "candidatas_vacantes_equipamiento": 35,
+ "candidatas_sin_superficie_en_origen": 7,
+ "candidatas_descartadas_menores_de_50_m2": 11,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 24,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 16,
+  ">=2000": 10,
+  ">=5000": 3,
+  ">=10000": 2
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 30,
+  "centros_educativos.geojson": 3,
+  "centros_sanitarios.geojson": 3,
+  "centros_sociales.geojson": 1,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 10,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 9,
+  "resumen_ambitos.json": 10
+ }
+}

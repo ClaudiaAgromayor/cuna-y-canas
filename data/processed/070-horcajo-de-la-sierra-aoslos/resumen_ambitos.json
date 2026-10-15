@@ -1,0 +1,17 @@
+{
+ "cod_ine": "070",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "UE-1",
+   "viviendas_previstas": 2,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 746,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 140,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "municipio": {
+  "cod": "153",
+  "nombre": "Torremocha de Jarama",
+  "nombre_ckan": "Torremocha de Jarama",
+  "slug": "torremocha-de-jarama"
+ },
+ "ambitos_poligonos_brutos": 19,
+ "ambitos_geometrias_invalidas_reparadas": 4,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 17,
+ "ambitos_sin_viviendas": 2,
+ "ambitos_guardados": 17,
+ "redes_geometrias_invalidas_reparadas": 40,
+ "redes_brutas": 95,
+ "redes_dotacionales": 24,
+ "redes_por_tipo_y_estado": {
+  "asistencial/sin_dato": 1,
+  "deportivo/sin_dato": 2,
+  "educativo/sin_dato": 2,
+  "zona_verde/sin_dato": 19
+ },
+ "redes_guardadas": 24,
+ "suelo_parcelas_brutas": 1438,
+ "suelo_geometrias_invalidas_reparadas": 507,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 17,
+ "candidatas_vacantes_equipamiento": 21,
+ "candidatas_sin_superficie_en_origen": 0,
+ "candidatas_descartadas_menores_de_50_m2": 2,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 19,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 8,
+  ">=2000": 6,
+  ">=5000": 2,
+  ">=10000": 1
+ },
+ "portal_suelo_parcelas": 1,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Otros": 1
+ },
+ "portal_suelo_guardadas": 1,
+ "tamanos_kb": {
+  "ambitos.geojson": 18,
+  "centros_educativos.geojson": 1,
+  "centros_sanitarios.geojson": 1,
+  "centros_sociales.geojson": 1,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 9,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 1,
+  "redes.geojson": 14,
+  "resumen_ambitos.json": 6
+ }
+}

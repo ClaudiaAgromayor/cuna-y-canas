@@ -1,0 +1,58 @@
+{
+ "municipio": {
+  "cod": "036",
+  "nombre": "Casarrubuelos",
+  "nombre_ckan": "Casarrubuelos",
+  "slug": "casarrubuelos"
+ },
+ "ambitos_poligonos_brutos": 8,
+ "ambitos_geometrias_invalidas_reparadas": 3,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 5,
+ "ambitos_sin_viviendas": 1,
+ "ambitos_guardados": 5,
+ "redes_geometrias_invalidas_reparadas": 106,
+ "redes_brutas": 225,
+ "redes_dotacionales": 110,
+ "redes_por_tipo_y_estado": {
+  "cultural/sin_dato": 6,
+  "deportivo/sin_dato": 4,
+  "educativo/sin_dato": 7,
+  "sanitario/sin_dato": 2,
+  "zona_verde/sin_dato": 91
+ },
+ "redes_guardadas": 108,
+ "suelo_parcelas_brutas": 2291,
+ "suelo_geometrias_invalidas_reparadas": 1014,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 5,
+ "candidatas_vacantes_equipamiento": 46,
+ "candidatas_sin_superficie_en_origen": 6,
+ "candidatas_descartadas_menores_de_50_m2": 13,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 33,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 22,
+  ">=2000": 16,
+  ">=5000": 4,
+  ">=10000": 1
+ },
+ "portal_suelo_parcelas": 1,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Residencial": 1
+ },
+ "portal_suelo_guardadas": 1,
+ "tamanos_kb": {
+  "ambitos.geojson": 9,
+  "centros_educativos.geojson": 2,
+  "centros_sanitarios.geojson": 2,
+  "centros_sociales.geojson": 1,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 13,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 1,
+  "redes.geojson": 57,
+  "resumen_ambitos.json": 2
+ }
+}

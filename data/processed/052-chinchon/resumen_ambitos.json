@@ -1,0 +1,94 @@
+{
+ "cod_ine": "052",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "UA-1 VAGUADA",
+   "viviendas_previstas": 55,
+   "residencial_ocupado_m2": 520,
+   "residencial_vacante_m2": 1891,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 78.4,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "VALGRANDE",
+   "viviendas_previstas": 43,
+   "residencial_ocupado_m2": 348161,
+   "residencial_vacante_m2": 1363424,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 79.7,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "LOS COHONARES I Y III",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 176540,
+   "residencial_vacante_m2": 1072431,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 85.9,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "LOS COHONARES II, LA PONDEROSA Y LAS CALABAZAS",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 200341,
+   "residencial_vacante_m2": 225369,
+   "equipamiento_ocupado_m2": 757,
+   "equipamiento_vacante_m2": 64702,
+   "pct_residencial_vacante": 52.9,
+   "pct_equipamiento_vacante": 98.8,
+   "parcelas_equipamiento_vacantes": 14
+  },
+  {
+   "ambito": "UA-2A COOPERATIVA SAN ROQUE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-2B SAN ROQUE SUR",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 189,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-2C VICTA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 1442,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-3 LAS CRUCES",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 16217,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

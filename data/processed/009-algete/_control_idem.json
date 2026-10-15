@@ -1,0 +1,54 @@
+{
+ "municipio": {
+  "cod": "009",
+  "nombre": "Algete",
+  "nombre_ckan": "Algete",
+  "slug": "algete"
+ },
+ "ambitos_poligonos_brutos": 65,
+ "ambitos_geometrias_invalidas_reparadas": 10,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 39,
+ "ambitos_sin_viviendas": 9,
+ "ambitos_guardados": 39,
+ "redes_geometrias_invalidas_reparadas": 275,
+ "redes_brutas": 869,
+ "redes_dotacionales": 112,
+ "redes_por_tipo_y_estado": {
+  "asistencial/sin_dato": 1,
+  "cultural/sin_dato": 6,
+  "deportivo/sin_dato": 20,
+  "educativo/sin_dato": 12,
+  "sanitario/sin_dato": 1,
+  "zona_verde/sin_dato": 72
+ },
+ "redes_guardadas": 111,
+ "suelo_parcelas_brutas": 8470,
+ "suelo_geometrias_invalidas_reparadas": 4113,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 38,
+ "candidatas_vacantes_equipamiento": 151,
+ "candidatas_sin_superficie_en_origen": 10,
+ "candidatas_descartadas_menores_de_50_m2": 17,
+ "candidatas_duplicadas_por_referencia_catastral": 1,
+ "candidatas_guardadas": 134,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 91,
+  ">=2000": 67,
+  ">=5000": 38,
+  ">=10000": 14
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 70,
+  "centros_educativos.geojson": 5,
+  "centros_sanitarios.geojson": 13,
+  "centros_sociales.geojson": 2,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 68,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 57,
+  "resumen_ambitos.json": 12
+ }
+}

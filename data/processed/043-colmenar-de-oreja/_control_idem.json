@@ -1,0 +1,52 @@
+{
+ "municipio": {
+  "cod": "043",
+  "nombre": "Colmenar de Oreja",
+  "nombre_ckan": "Colmenar de Oreja",
+  "slug": "colmenar-de-oreja"
+ },
+ "ambitos_poligonos_brutos": 21,
+ "ambitos_geometrias_invalidas_reparadas": 2,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 21,
+ "ambitos_sin_viviendas": 18,
+ "ambitos_guardados": 21,
+ "redes_geometrias_invalidas_reparadas": 46,
+ "redes_brutas": 143,
+ "redes_dotacionales": 102,
+ "redes_por_tipo_y_estado": {
+  "deportivo/sin_dato": 4,
+  "educativo/sin_dato": 5,
+  "sanitario/sin_dato": 1,
+  "zona_verde/sin_dato": 92
+ },
+ "redes_guardadas": 102,
+ "suelo_parcelas_brutas": 8303,
+ "suelo_geometrias_invalidas_reparadas": 3079,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 21,
+ "candidatas_vacantes_equipamiento": 62,
+ "candidatas_sin_superficie_en_origen": 3,
+ "candidatas_descartadas_menores_de_50_m2": 9,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 53,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 13,
+  ">=2000": 10,
+  ">=5000": 6,
+  ">=10000": 3
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 34,
+  "centros_educativos.geojson": 2,
+  "centros_sanitarios.geojson": 4,
+  "centros_sociales.geojson": 1,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 21,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 64,
+  "resumen_ambitos.json": 7
+ }
+}

@@ -1,0 +1,270 @@
+{
+ "cod_ine": "089",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "S-6.R CAMINO DE MADRID",
+   "viviendas_previstas": 201,
+   "residencial_ocupado_m2": 35679,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 4767,
+   "equipamiento_vacante_m2": 472,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": 9.0,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "S-7.R",
+   "viviendas_previstas": 135,
+   "residencial_ocupado_m2": 26194,
+   "residencial_vacante_m2": 142,
+   "equipamiento_ocupado_m2": 1274,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.5,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "S-5.R HUERTA DEL CURA",
+   "viviendas_previstas": 134,
+   "residencial_ocupado_m2": 32092,
+   "residencial_vacante_m2": 10100,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 6135,
+   "pct_residencial_vacante": 23.9,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "UA-03 MIRADOR DE LA MOYUELA",
+   "viviendas_previstas": 108,
+   "residencial_ocupado_m2": 12759,
+   "residencial_vacante_m2": 1557,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 10.9,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-05 EL LOMO",
+   "viviendas_previstas": 105,
+   "residencial_ocupado_m2": 41721,
+   "residencial_vacante_m2": 2407,
+   "equipamiento_ocupado_m2": 18643,
+   "equipamiento_vacante_m2": 94,
+   "pct_residencial_vacante": 5.5,
+   "pct_equipamiento_vacante": 0.5,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "S-2.R EL CALVARIO",
+   "viviendas_previstas": 90,
+   "residencial_ocupado_m2": 25172,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 47,
+   "equipamiento_vacante_m2": 1416,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": 96.8,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "S-1.R EL MIRADOR",
+   "viviendas_previstas": 52,
+   "residencial_ocupado_m2": 24338,
+   "residencial_vacante_m2": 1794,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 6.9,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-08",
+   "viviendas_previstas": 30,
+   "residencial_ocupado_m2": 22514,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "S-9.MX CAMINO DE HUMANES",
+   "viviendas_previstas": 24,
+   "residencial_ocupado_m2": 566,
+   "residencial_vacante_m2": 11611,
+   "equipamiento_ocupado_m2": 236,
+   "equipamiento_vacante_m2": 13955,
+   "pct_residencial_vacante": 95.3,
+   "pct_equipamiento_vacante": 98.3,
+   "parcelas_equipamiento_vacantes": 6
+  },
+  {
+   "ambito": "UA-04 CALLE DE MADRID",
+   "viviendas_previstas": 22,
+   "residencial_ocupado_m2": 4814,
+   "residencial_vacante_m2": 2029,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 29.7,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-10",
+   "viviendas_previstas": 20,
+   "residencial_ocupado_m2": 11847,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-14 CAMINO DE MÓSTOLES",
+   "viviendas_previstas": 18,
+   "residencial_ocupado_m2": 4956,
+   "residencial_vacante_m2": 425,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 7.9,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-02 LOS SALMUEROS-NORTE",
+   "viviendas_previstas": 7,
+   "residencial_ocupado_m2": 1605,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "PARQUE Y EQUIPAMIENTO DOTACIONAL EDUCATIVO EN EL CAMINO DE MADRID",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 19397,
+   "equipamiento_vacante_m2": 849,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 4.2,
+   "parcelas_equipamiento_vacantes": 3
+  },
+  {
+   "ambito": "S-3.R LA ZAPATERA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 16526,
+   "residencial_vacante_m2": 7551,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 31.4,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "S-4.R ARROYO MANGADA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 15244,
+   "residencial_vacante_m2": 10100,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 39.9,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "S-8 INDUSTRIAL",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 2171,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 3
+  },
+  {
+   "ambito": "UA-01 EL ARROYO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 5097,
+   "residencial_vacante_m2": 2407,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 661,
+   "pct_residencial_vacante": 32.1,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "UA-06 LA MANSEA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 13923,
+   "residencial_vacante_m2": 944,
+   "equipamiento_ocupado_m2": 142,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 6.3,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-07 VILLAS DE MORALEJA-ESTE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 10620,
+   "residencial_vacante_m2": 2501,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 19.1,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-09 LOS SALMUEROS-SUR",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 4201,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 5570,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-11 POLÍGONO INDUSTRIAL",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 94,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-12 PLAZA IGLESIA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-13 INDUSTRIAL",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 85,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

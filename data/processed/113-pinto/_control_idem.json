@@ -1,0 +1,46 @@
+{
+ "municipio": {
+  "cod": "113",
+  "nombre": "Pinto",
+  "nombre_ckan": "Pinto",
+  "slug": "pinto"
+ },
+ "ambitos_poligonos_brutos": 0,
+ "ambitos": 0,
+ "redes_guardadas": 0,
+ "suelo_parcelas_brutas": 6720,
+ "suelo_geometrias_invalidas_reparadas": 2523,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 0,
+ "candidatas_vacantes_equipamiento": 339,
+ "candidatas_sin_superficie_en_origen": 13,
+ "candidatas_descartadas_menores_de_50_m2": 33,
+ "candidatas_duplicadas_por_referencia_catastral": 1,
+ "candidatas_guardadas": 306,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 186,
+  ">=2000": 138,
+  ">=5000": 77,
+  ">=10000": 43
+ },
+ "portal_suelo_parcelas": 2,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Terciario": 2
+ },
+ "portal_suelo_guardadas": 2,
+ "tamanos_kb": {
+  "ambitos.geojson": 0,
+  "centros_educativos.geojson": 9,
+  "centros_sanitarios.geojson": 46,
+  "centros_sociales.geojson": 6,
+  "farmacias.geojson": 4,
+  "natalidad.json": 1,
+  "paradas.geojson": 32,
+  "parcelas_vacantes.geojson": 159,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 1,
+  "redes.geojson": 0,
+  "resumen_ambitos.json": 0
+ }
+}

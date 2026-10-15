@@ -1,0 +1,50 @@
+{
+ "municipio": {
+  "cod": "163",
+  "nombre": "Valdepiélagos",
+  "nombre_ckan": "Valdepiélagos",
+  "slug": "valdepielagos"
+ },
+ "ambitos_poligonos_brutos": 5,
+ "ambitos_geometrias_invalidas_reparadas": 2,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 5,
+ "ambitos_sin_viviendas": 0,
+ "ambitos_guardados": 5,
+ "redes_geometrias_invalidas_reparadas": 11,
+ "redes_brutas": 24,
+ "redes_dotacionales": 10,
+ "redes_por_tipo_y_estado": {
+  "educativo/sin_dato": 1,
+  "zona_verde/sin_dato": 9
+ },
+ "redes_guardadas": 10,
+ "suelo_parcelas_brutas": 651,
+ "suelo_geometrias_invalidas_reparadas": 316,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 5,
+ "candidatas_vacantes_equipamiento": 1,
+ "candidatas_sin_superficie_en_origen": 0,
+ "candidatas_descartadas_menores_de_50_m2": 0,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 1,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 1,
+  ">=2000": 1,
+  ">=5000": 0,
+  ">=10000": 0
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 5,
+  "centros_educativos.geojson": 0,
+  "centros_sanitarios.geojson": 0,
+  "centros_sociales.geojson": 0,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 0,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 5,
+  "resumen_ambitos.json": 2
+ }
+}

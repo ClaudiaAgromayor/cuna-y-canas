@@ -1,0 +1,105 @@
+{
+ "cod_ine": "138",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "UE-2 PELIGROS",
+   "viviendas_previstas": 7,
+   "residencial_ocupado_m2": 560,
+   "residencial_vacante_m2": 2893,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 83.8,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "CALLE ESTE-6",
+   "viviendas_previstas": 4,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 1913,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "CALLE ESTE-1",
+   "viviendas_previstas": 3,
+   "residencial_ocupado_m2": 47,
+   "residencial_vacante_m2": 1120,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 96.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "CALLE ESTE-5",
+   "viviendas_previstas": 3,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 1913,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "CALLE ESTE-3",
+   "viviendas_previstas": 2,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 653,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-1 PELIGROS",
+   "viviendas_previstas": 2,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 1633,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "CALLE ESTE-2",
+   "viviendas_previstas": 1,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 1353,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "CALLE ESTE-4",
+   "viviendas_previstas": 1,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 980,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "POLIGONO GANADERO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 513,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

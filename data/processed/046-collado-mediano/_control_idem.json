@@ -1,0 +1,53 @@
+{
+ "municipio": {
+  "cod": "046",
+  "nombre": "Collado Mediano",
+  "nombre_ckan": "Collado Mediano",
+  "slug": "collado-mediano"
+ },
+ "ambitos_poligonos_brutos": 18,
+ "ambitos_geometrias_invalidas_reparadas": 7,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 17,
+ "ambitos_sin_viviendas": 5,
+ "ambitos_guardados": 17,
+ "redes_geometrias_invalidas_reparadas": 69,
+ "redes_brutas": 177,
+ "redes_dotacionales": 29,
+ "redes_por_tipo_y_estado": {
+  "cultural/sin_dato": 1,
+  "deportivo/sin_dato": 6,
+  "educativo/sin_dato": 4,
+  "sanitario/sin_dato": 1,
+  "zona_verde/sin_dato": 17
+ },
+ "redes_guardadas": 29,
+ "suelo_parcelas_brutas": 5222,
+ "suelo_geometrias_invalidas_reparadas": 1730,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 17,
+ "candidatas_vacantes_equipamiento": 21,
+ "candidatas_sin_superficie_en_origen": 1,
+ "candidatas_descartadas_menores_de_50_m2": 2,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 19,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 9,
+  ">=2000": 5,
+  ">=5000": 2,
+  ">=10000": 0
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 18,
+  "centros_educativos.geojson": 2,
+  "centros_sanitarios.geojson": 3,
+  "centros_sociales.geojson": 1,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 9,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 15,
+  "resumen_ambitos.json": 6
+ }
+}

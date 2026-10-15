@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "123",
+  "nombre": "Rivas-Vaciamadrid",
+  "nombre_ckan": "Rivas-Vaciamadrid",
+  "slug": "rivas-vaciamadrid"
+ },
+ "educativos_municipio": 65,
+ "educativos_en_alta": 56,
+ "educativos_guardados": 55,
+ "educativos_sin_coordenadas": 1,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 473,
+ "sanitarios_centros": 176,
+ "sanitarios_guardados": 175,
+ "sanitarios_sin_coordenadas": 1,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 26,
+ "sociales_guardados": 26,
+ "sociales_sin_coordenadas": 0,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 29,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 103243
+}

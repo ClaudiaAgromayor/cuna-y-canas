@@ -1,0 +1,61 @@
+{
+ "cod_ine": "064",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "SAU-1 LOS REDONDOS",
+   "viviendas_previstas": 100,
+   "residencial_ocupado_m2": 56528,
+   "residencial_vacante_m2": 138777,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 71.1,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "E-1 EXTENSIÓN DE CASCO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 4620,
+   "residencial_vacante_m2": 933,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 16.8,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "E-3 RESIDENCIAL UNIFAMILIAR",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 16755,
+   "residencial_vacante_m2": 23803,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 58.7,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "E-4 RESIDENCIAL UNIFAMILIAR",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 11483,
+   "residencial_vacante_m2": 8075,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 41.3,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-1",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 3407,
+   "residencial_vacante_m2": 3454,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 2567,
+   "pct_residencial_vacante": 50.3,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  }
+ ]
+}

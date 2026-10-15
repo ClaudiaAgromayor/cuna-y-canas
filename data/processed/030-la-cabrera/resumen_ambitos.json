@@ -1,0 +1,204 @@
+{
+ "cod_ine": "030",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "SAU-1 LA PEÑA DEL BUEY",
+   "viviendas_previstas": 137,
+   "residencial_ocupado_m2": 1777,
+   "residencial_vacante_m2": 154363,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 98.9,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-7 MODIFICADO - EL ACUIFERO",
+   "viviendas_previstas": 105,
+   "residencial_ocupado_m2": 14594,
+   "residencial_vacante_m2": 106551,
+   "equipamiento_ocupado_m2": 47,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 88.0,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-2 LA PEÑA DE LA LOMA",
+   "viviendas_previstas": 101,
+   "residencial_ocupado_m2": 234,
+   "residencial_vacante_m2": 113364,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 99.8,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-3 MODIFICADO - PRADO NUEVO II",
+   "viviendas_previstas": 82,
+   "residencial_ocupado_m2": 96978,
+   "residencial_vacante_m2": 94,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.1,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-5 LAS PILATAS",
+   "viviendas_previstas": 41,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 52397,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-4 LOS RIAJOS",
+   "viviendas_previstas": 33,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 7297,
+   "equipamiento_vacante_m2": 7952,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 52.1,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "SAU-6 PRADO NUEVO I",
+   "viviendas_previstas": 19,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 17730,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-10 PLAZA DE LA CONCORDIA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 374,
+   "residencial_vacante_m2": 2479,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 94,
+   "pct_residencial_vacante": 86.9,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "UE-1A EL CARRIZAL NORTE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 1637,
+   "residencial_vacante_m2": 15622,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 2572,
+   "pct_residencial_vacante": 90.5,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 5
+  },
+  {
+   "ambito": "UE-1B EL CARRIZAL SUR",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 29887,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 889,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "UE-2 LA CABRERA NORDESTE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 17166,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 4490,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "UE-3 EL BARRANCO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 24559,
+   "residencial_vacante_m2": 5894,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 19.4,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-4 PRADO ROCA DEL OLMO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 4444,
+   "residencial_vacante_m2": 4304,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 49.2,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-5 EL ERO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 3976,
+   "residencial_vacante_m2": 18432,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 1338,
+   "pct_residencial_vacante": 82.3,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "UE-6 CAMINO DE NAVALAFUENTE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 1263,
+   "residencial_vacante_m2": 12493,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 90.8,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-7 EL HONTANAR I",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 3555,
+   "residencial_vacante_m2": 9403,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 72.6,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-8 EL HONTANAR II",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 421,
+   "residencial_vacante_m2": 14333,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 97.1,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-9 EL HORNILLO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 374,
+   "residencial_vacante_m2": 9917,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 96.4,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "104",
+  "nombre": "Paracuellos de Jarama",
+  "nombre_ckan": "Paracuellos de Jarama",
+  "slug": "paracuellos-de-jarama"
+ },
+ "educativos_municipio": 29,
+ "educativos_en_alta": 18,
+ "educativos_guardados": 18,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 88,
+ "sanitarios_centros": 30,
+ "sanitarios_guardados": 30,
+ "sanitarios_sin_coordenadas": 0,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 4,
+ "sociales_guardados": 3,
+ "sociales_sin_coordenadas": 1,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 6,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 27649
+}

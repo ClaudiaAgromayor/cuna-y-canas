@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "074",
+  "nombre": "Leganés",
+  "nombre_ckan": "Leganés",
+  "slug": "leganes"
+ },
+ "educativos_municipio": 196,
+ "educativos_en_alta": 107,
+ "educativos_guardados": 105,
+ "educativos_sin_coordenadas": 2,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 847,
+ "sanitarios_centros": 333,
+ "sanitarios_guardados": 330,
+ "sanitarios_sin_coordenadas": 3,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 82,
+ "sociales_guardados": 82,
+ "sociales_sin_coordenadas": 0,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 68,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 195946
+}

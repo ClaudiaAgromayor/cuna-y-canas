@@ -1,0 +1,49 @@
+{
+ "municipio": {
+  "cod": "111",
+  "nombre": "Pezuela de las Torres",
+  "nombre_ckan": "Pezuela de las Torres",
+  "slug": "pezuela-de-las-torres"
+ },
+ "ambitos_poligonos_brutos": 8,
+ "ambitos_geometrias_invalidas_reparadas": 2,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 8,
+ "ambitos_sin_viviendas": 0,
+ "ambitos_guardados": 8,
+ "redes_geometrias_invalidas_reparadas": 20,
+ "redes_brutas": 53,
+ "redes_dotacionales": 8,
+ "redes_por_tipo_y_estado": {
+  "zona_verde/sin_dato": 8
+ },
+ "redes_guardadas": 8,
+ "suelo_parcelas_brutas": 1481,
+ "suelo_geometrias_invalidas_reparadas": 655,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 8,
+ "candidatas_vacantes_equipamiento": 18,
+ "candidatas_sin_superficie_en_origen": 3,
+ "candidatas_descartadas_menores_de_50_m2": 8,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 10,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 5,
+  ">=2000": 2,
+  ">=5000": 2,
+  ">=10000": 1
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 8,
+  "centros_educativos.geojson": 0,
+  "centros_sanitarios.geojson": 0,
+  "centros_sociales.geojson": 0,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 5,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 3,
+  "resumen_ambitos.json": 3
+ }
+}

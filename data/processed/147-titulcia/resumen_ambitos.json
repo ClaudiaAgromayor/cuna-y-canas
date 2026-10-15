@@ -1,0 +1,149 @@
+{
+ "cod_ine": "147",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "SAU-B EL PAVILLO SUR",
+   "viviendas_previstas": 224,
+   "residencial_ocupado_m2": 3215,
+   "residencial_vacante_m2": 93850,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 96.7,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-A EL PAVILLO NORTE",
+   "viviendas_previstas": 180,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 97528,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-D LA SOLEDAD",
+   "viviendas_previstas": 80,
+   "residencial_ocupado_m2": 14467,
+   "residencial_vacante_m2": 5626,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 851,
+   "pct_residencial_vacante": 28.0,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "SAU-C EL CAMPANARIO",
+   "viviendas_previstas": 72,
+   "residencial_ocupado_m2": 3546,
+   "residencial_vacante_m2": 25704,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 87.9,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-1 CAMINO DE LA VEGA",
+   "viviendas_previstas": 45,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 11867,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-9 LAS TRAVIESAS",
+   "viviendas_previstas": 32,
+   "residencial_ocupado_m2": 5153,
+   "residencial_vacante_m2": 2931,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 36.3,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-5 EL PAVILLO",
+   "viviendas_previstas": 25,
+   "residencial_ocupado_m2": 8605,
+   "residencial_vacante_m2": 7139,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 45.3,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-2 LA LUNA",
+   "viviendas_previstas": 20,
+   "residencial_ocupado_m2": 1087,
+   "residencial_vacante_m2": 3499,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 76.3,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-7 CALLE DEL CAMPO",
+   "viviendas_previstas": 20,
+   "residencial_ocupado_m2": 1466,
+   "residencial_vacante_m2": 1560,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 51.6,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-4 EL CALVARIO 2",
+   "viviendas_previstas": 12,
+   "residencial_ocupado_m2": 2128,
+   "residencial_vacante_m2": 1277,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 37.5,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-8 LAS MURALLAS",
+   "viviendas_previstas": 12,
+   "residencial_ocupado_m2": 851,
+   "residencial_vacante_m2": 142,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 14.3,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-3 EL CALVARIO 1",
+   "viviendas_previstas": 10,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 2742,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-6 RESIDENCIA",
+   "viviendas_previstas": 0,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 3357,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  }
+ ]
+}

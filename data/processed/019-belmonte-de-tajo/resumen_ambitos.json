@@ -1,0 +1,237 @@
+{
+ "cod_ine": "019",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "SAU-6 ENSANCHE RONDA SURESTE",
+   "viviendas_previstas": 48,
+   "residencial_ocupado_m2": 11962,
+   "residencial_vacante_m2": 4208,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 26.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-1 CORNISA NORTE",
+   "viviendas_previstas": 22,
+   "residencial_ocupado_m2": 804,
+   "residencial_vacante_m2": 10921,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 93.1,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-6 SECTOR SUR-OESTE",
+   "viviendas_previstas": 21,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 7707,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 2002,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "UE-8 SECTOR SUR-ESTE",
+   "viviendas_previstas": 20,
+   "residencial_ocupado_m2": 3215,
+   "residencial_vacante_m2": 4728,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 709,
+   "pct_residencial_vacante": 59.5,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "UE-11 RONDA SURESTE",
+   "viviendas_previstas": 18,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 7896,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-7 SECTOR SUR-CENTRO",
+   "viviendas_previstas": 17,
+   "residencial_ocupado_m2": 5106,
+   "residencial_vacante_m2": 284,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 5.3,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-4 CAMINO DE COLMENAR-SUROESTE 1",
+   "viviendas_previstas": 15,
+   "residencial_ocupado_m2": 189,
+   "residencial_vacante_m2": 6383,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 97.1,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-7 BORDE NORESTE 2",
+   "viviendas_previstas": 14,
+   "residencial_ocupado_m2": 4066,
+   "residencial_vacante_m2": 756,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 15.7,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-9 NUEVA PLAZA",
+   "viviendas_previstas": 11,
+   "residencial_ocupado_m2": 1655,
+   "residencial_vacante_m2": 2112,
+   "equipamiento_ocupado_m2": 378,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 56.1,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-3 NORTE 3",
+   "viviendas_previstas": 10,
+   "residencial_ocupado_m2": 5721,
+   "residencial_vacante_m2": 378,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 6.2,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-5 CARRETERA DE COLMENAR-SUROESTE 2",
+   "viviendas_previstas": 9,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 7281,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-12 TEXTIL",
+   "viviendas_previstas": 8,
+   "residencial_ocupado_m2": 3546,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-10 BODEGA",
+   "viviendas_previstas": 6,
+   "residencial_ocupado_m2": 757,
+   "residencial_vacante_m2": 1277,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 62.8,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-4 NORTE 4",
+   "viviendas_previstas": 6,
+   "residencial_ocupado_m2": 4066,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 284,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-5 NORTE 5",
+   "viviendas_previstas": 5,
+   "residencial_ocupado_m2": 851,
+   "residencial_vacante_m2": 1560,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 64.7,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-2 NORTE 2",
+   "viviendas_previstas": 1,
+   "residencial_ocupado_m2": 426,
+   "residencial_vacante_m2": 331,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 43.8,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-2 BORDE NORESTE 1",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 1324,
+   "residencial_vacante_m2": 8179,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 86.1,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-3 ESTE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 10875,
+   "residencial_vacante_m2": 2553,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 19.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-8 RESIDENCIA DE ANCIANOS",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 47,
+   "equipamiento_vacante_m2": 2364,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 98.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "SAU-9 SUROESTE 3",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 993,
+   "residencial_vacante_m2": 1277,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 56.2,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-I1 POLIGONO INDUSTRIAL",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 4003,
+   "equipamiento_vacante_m2": 6477,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 61.8,
+   "parcelas_equipamiento_vacantes": 9
+  }
+ ]
+}

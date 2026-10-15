@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "033",
+  "nombre": "Campo Real",
+  "nombre_ckan": "Campo Real",
+  "slug": "campo-real"
+ },
+ "educativos_municipio": 6,
+ "educativos_en_alta": 6,
+ "educativos_guardados": 6,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 30,
+ "sanitarios_centros": 8,
+ "sanitarios_guardados": 7,
+ "sanitarios_sin_coordenadas": 1,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 2,
+ "sociales_guardados": 2,
+ "sociales_sin_coordenadas": 0,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 2,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 6965
+}

@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"tipo": "actual", "origen": "2811001001", "ambito": "VALDEPERALES", "pob": 3171.0, "g0_2": 80.2, "g3_5": 85.2, "g6_11": 194.4, "g12_17": 217.3, "g65": 539.1, "cod_ine": "110"}, "geometry": {"type": "Point", "coordinates": [-3.358305, 40.225891]}}]}

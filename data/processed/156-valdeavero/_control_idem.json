@@ -1,0 +1,52 @@
+{
+ "municipio": {
+  "cod": "156",
+  "nombre": "Valdeavero",
+  "nombre_ckan": "Valdeavero",
+  "slug": "valdeavero"
+ },
+ "ambitos_poligonos_brutos": 14,
+ "ambitos_geometrias_invalidas_reparadas": 1,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 14,
+ "ambitos_sin_viviendas": 13,
+ "ambitos_guardados": 14,
+ "redes_geometrias_invalidas_reparadas": 35,
+ "redes_brutas": 123,
+ "redes_dotacionales": 64,
+ "redes_por_tipo_y_estado": {
+  "cultural/sin_dato": 3,
+  "deportivo/sin_dato": 2,
+  "educativo/sin_dato": 1,
+  "zona_verde/sin_dato": 58
+ },
+ "redes_guardadas": 64,
+ "suelo_parcelas_brutas": 2169,
+ "suelo_geometrias_invalidas_reparadas": 823,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 14,
+ "candidatas_vacantes_equipamiento": 93,
+ "candidatas_sin_superficie_en_origen": 5,
+ "candidatas_descartadas_menores_de_50_m2": 12,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 81,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 28,
+  ">=2000": 16,
+  ">=5000": 5,
+  ">=10000": 2
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 12,
+  "centros_educativos.geojson": 0,
+  "centros_sanitarios.geojson": 1,
+  "centros_sociales.geojson": 0,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 31,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 29,
+  "resumen_ambitos.json": 5
+ }
+}

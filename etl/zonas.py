@@ -54,8 +54,11 @@ def procesar(muni: dict) -> dict:
     ctrl["zonas_sin_nombre"] = int(z["nombre"].isna().sum())
 
     # centros de salud de atención primaria dentro de cada zona
-    cs = gpd.read_file(out / "centros_sanitarios.geojson").to_crs(M)
-    cs = cs[cs["tipo"] == "Centro de salud"]
+    cs = gpd.read_file(out / "centros_sanitarios.geojson")
+    if cs.empty or "tipo" not in cs:
+        cs = gpd.GeoDataFrame({"tipo": [], "registro": []}, geometry=[], crs=4326)
+    cs = cs.to_crs(M)
+    cs = cs[cs["tipo"].isin(["Centro de salud", "Consultorio de atención primaria"])]  # los consultorios son la atención primaria de los pueblos
     j = gpd.sjoin(cs[["registro", "geometry"]], z[["codigo", "geometry"]], predicate="within")
     z["centros_salud"] = z["codigo"].map(j.groupby("codigo").size()).fillna(0).astype(int)
     z["hab_por_centro"] = (z["poblacion_2023"] / z["centros_salud"].where(z["centros_salud"] > 0)).round()

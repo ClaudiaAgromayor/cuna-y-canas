@@ -1,0 +1,1061 @@
+{
+ "cod_ine": "092",
+ "modelo": "población al completarse = viviendas previstas × habitantes por vivienda prevista; resultados en [mínimo, central, máximo]",
+ "calibracion": {
+  "municipio": "Getafe",
+  "fuente": "INE (Atlas de Distribución de Renta de los Hogares) + IDEM (ámbitos y suelo vacante)",
+  "criterio": "barrios con al menos 1000 viviendas previstas, menos del 15 % de suelo residencial vacante y al menos 1 sección censal entera dentro",
+  "barrios": [
+   {
+    "ambito": "SUI-05 PAU-2 EL BERCIAL-UNIVERSIDAD",
+    "viviendas": 5950,
+    "anio": 2023,
+    "poblacion": 12931,
+    "hab_por_vivienda": 2.173,
+    "tam_hogar": 2.96,
+    "pct_menores18": 28.7,
+    "pct_mayores65": 7.9,
+    "serie": {
+     "2015": 10740,
+     "2016": 11242,
+     "2017": 11709,
+     "2018": 12016,
+     "2019": 12172,
+     "2020": 12126,
+     "2021": 12291,
+     "2022": 12618,
+     "2023": 12931
+    }
+   },
+   {
+    "ambito": "SUI-07 PAU-3 PERALES DEL RÍO",
+    "viviendas": 1750,
+    "anio": 2023,
+    "poblacion": 3807,
+    "hab_por_vivienda": 2.175,
+    "tam_hogar": 3.22,
+    "pct_menores18": 25.6,
+    "pct_mayores65": 9.0,
+    "serie": {
+     "2015": 1699,
+     "2016": 1701,
+     "2017": 3289,
+     "2018": 3363,
+     "2019": 3392,
+     "2020": 3396,
+     "2021": 3744,
+     "2022": 3784,
+     "2023": 3807
+    }
+   },
+   {
+    "ambito": "SUS-PP-2 LOS MOLINOS",
+    "viviendas": 6276,
+    "anio": 2023,
+    "poblacion": 11473,
+    "hab_por_vivienda": 1.828,
+    "tam_hogar": 2.58,
+    "pct_menores18": 30.5,
+    "pct_mayores65": 2.4,
+    "serie": {
+     "2015": 5983,
+     "2016": 6554,
+     "2017": 7712,
+     "2018": 8369,
+     "2019": 8895,
+     "2020": 9741,
+     "2021": 10345,
+     "2022": 10832,
+     "2023": 11473
+    }
+   },
+   {
+    "ambito": "SUS-PP-3 BUENAVISTA",
+    "viviendas": 5958,
+    "anio": 2023,
+    "poblacion": 8854,
+    "hab_por_vivienda": 1.486,
+    "tam_hogar": 2.47,
+    "pct_menores18": 30.2,
+    "pct_mayores65": 3.1,
+    "serie": {
+     "2015": 6027,
+     "2016": 6823,
+     "2017": 5857,
+     "2018": 6623,
+     "2019": 7122,
+     "2020": 7565,
+     "2021": 8067,
+     "2022": 8374,
+     "2023": 8854
+    }
+   }
+  ],
+  "parametros": {
+   "hab_por_vivienda": [
+    1.486,
+    2.001,
+    2.175
+   ],
+   "pct_menores18": [
+    25.6,
+    29.45,
+    30.5
+   ],
+   "pct_mayores65": [
+    2.4,
+    5.5,
+    9.0
+   ]
+  },
+  "reparto_menores": {
+   "g0_2": 0.1309,
+   "g3_5": 0.1438,
+   "g6_11": 0.3495,
+   "g12_17": 0.3758
+  },
+  "tam_hogar_mediano_municipio": 2.6
+ },
+ "prueba_con_el_pasado": [
+  {
+   "ambito": "SUI-05 PAU-2 EL BERCIAL-UNIVERSIDAD",
+   "anio": 2023,
+   "real": 12931,
+   "prediccion": 10887,
+   "error_pct": -15.8,
+   "prediccion_ingenua": 15470,
+   "error_ingenua_pct": 19.6,
+   "rango": [
+    8842,
+    12941
+   ],
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "SUI-07 PAU-3 PERALES DEL RÍO",
+   "anio": 2023,
+   "real": 3807,
+   "prediccion": 3201,
+   "error_pct": -15.9,
+   "prediccion_ingenua": 4550,
+   "error_ingenua_pct": 19.5,
+   "rango": [
+    2600,
+    3803
+   ],
+   "dentro_del_rango": false
+  },
+  {
+   "ambito": "SUS-PP-2 LOS MOLINOS",
+   "anio": 2023,
+   "real": 11473,
+   "prediccion": 12205,
+   "error_pct": 6.4,
+   "prediccion_ingenua": 16318,
+   "error_ingenua_pct": 42.2,
+   "rango": [
+    9326,
+    13650
+   ],
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "SUS-PP-3 BUENAVISTA",
+   "anio": 2023,
+   "real": 8854,
+   "prediccion": 12266,
+   "error_pct": 38.5,
+   "prediccion_ingenua": 15491,
+   "error_ingenua_pct": 75.0,
+   "rango": [
+    10891,
+    12959
+   ],
+   "dentro_del_rango": false
+  }
+ ],
+ "ambitos": [
+  {
+   "ambito": "PAU-4",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": 7878,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 15.8,
+   "poblacion_actual": 14732,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    11707,
+    15764,
+    17135
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     392,
+     608,
+     684
+    ],
+    "g3_5": [
+     431,
+     668,
+     752
+    ],
+    "g6_11": [
+     1047,
+     1623,
+     1827
+    ],
+    "g12_17": [
+     1126,
+     1745,
+     1964
+    ],
+    "g65": [
+     281,
+     867,
+     1542
+    ]
+   }
+  },
+  {
+   "ambito": "S-R1",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 4040,
+   "estado": "futuro",
+   "pct_residencial_vacante": 99.7,
+   "poblacion_actual": 64,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    6003,
+    8084,
+    8787
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     201,
+     312,
+     351
+    ],
+    "g3_5": [
+     221,
+     342,
+     385
+    ],
+    "g6_11": [
+     537,
+     832,
+     937
+    ],
+    "g12_17": [
+     578,
+     895,
+     1007
+    ],
+    "g65": [
+     144,
+     445,
+     791
+    ]
+   }
+  },
+  {
+   "ambito": "S-R2",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 2940,
+   "estado": "futuro",
+   "pct_residencial_vacante": 98.4,
+   "poblacion_actual": 329,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    4369,
+    5883,
+    6394
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     146,
+     227,
+     255
+    ],
+    "g3_5": [
+     161,
+     249,
+     280
+    ],
+    "g6_11": [
+     391,
+     606,
+     682
+    ],
+    "g12_17": [
+     420,
+     651,
+     733
+    ],
+    "g65": [
+     105,
+     324,
+     575
+    ]
+   }
+  },
+  {
+   "ambito": "S-R5",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 2352,
+   "estado": "futuro",
+   "pct_residencial_vacante": 100.0,
+   "poblacion_actual": 60,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    3495,
+    4706,
+    5116
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     117,
+     181,
+     204
+    ],
+    "g3_5": [
+     129,
+     199,
+     224
+    ],
+    "g6_11": [
+     313,
+     484,
+     545
+    ],
+    "g12_17": [
+     336,
+     521,
+     586
+    ],
+    "g65": [
+     84,
+     259,
+     460
+    ]
+   }
+  },
+  {
+   "ambito": "S-R3",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 2104,
+   "estado": "futuro",
+   "pct_residencial_vacante": 87.3,
+   "poblacion_actual": 359,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    3127,
+    4210,
+    4576
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     105,
+     162,
+     183
+    ],
+    "g3_5": [
+     115,
+     178,
+     201
+    ],
+    "g6_11": [
+     280,
+     433,
+     488
+    ],
+    "g12_17": [
+     301,
+     466,
+     524
+    ],
+    "g65": [
+     75,
+     232,
+     412
+    ]
+   }
+  },
+  {
+   "ambito": "S-R4",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 1904,
+   "estado": "futuro",
+   "pct_residencial_vacante": 99.8,
+   "poblacion_actual": 537,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    2829,
+    3810,
+    4141
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     95,
+     147,
+     165
+    ],
+    "g3_5": [
+     104,
+     161,
+     182
+    ],
+    "g6_11": [
+     253,
+     392,
+     441
+    ],
+    "g12_17": [
+     272,
+     422,
+     475
+    ],
+    "g65": [
+     68,
+     210,
+     373
+    ]
+   }
+  },
+  {
+   "ambito": "PP-7",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": 723,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 37.8,
+   "poblacion_actual": 1386,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    1074,
+    1447,
+    1573
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     36,
+     56,
+     63
+    ],
+    "g3_5": [
+     40,
+     61,
+     69
+    ],
+    "g6_11": [
+     96,
+     149,
+     168
+    ],
+    "g12_17": [
+     103,
+     160,
+     180
+    ],
+    "g65": [
+     26,
+     80,
+     142
+    ]
+   }
+  },
+  {
+   "ambito": "PAU-1",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": 272,
+   "estado": "habitado",
+   "pct_residencial_vacante": 3.5,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    404,
+    544,
+    592
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     14,
+     21,
+     24
+    ],
+    "g3_5": [
+     15,
+     23,
+     26
+    ],
+    "g6_11": [
+     36,
+     56,
+     63
+    ],
+    "g12_17": [
+     39,
+     60,
+     68
+    ],
+    "g65": [
+     10,
+     30,
+     53
+    ]
+   }
+  },
+  {
+   "ambito": "PP-4",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": 250,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 80.5,
+   "poblacion_actual": 576,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    372,
+    500,
+    544
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     12,
+     19,
+     22
+    ],
+    "g3_5": [
+     14,
+     21,
+     24
+    ],
+    "g6_11": [
+     33,
+     51,
+     58
+    ],
+    "g12_17": [
+     36,
+     55,
+     62
+    ],
+    "g65": [
+     9,
+     28,
+     49
+    ]
+   }
+  },
+  {
+   "ambito": "ACU-1",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "ACU-2",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "ACU-3",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "AOS-1",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 10.4,
+   "poblacion_actual": 183,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "AOS-11",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 617,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "AOS-12",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "AOS-13",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "AOS-14",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "AOS-15",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "futuro",
+   "pct_residencial_vacante": 100.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "AOS-16",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 279,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "AOS-17.1",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "AOS-17.2",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 163,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "AOS-18",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 3.9,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "AOS-19.1",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "AOS-19.2",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "AOS-2",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 6.3,
+   "poblacion_actual": 356,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "AOS-3",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 12.0,
+   "poblacion_actual": 118,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "AOS-4.1",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "AOS-4.2",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "AOS-5",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "AOS-6",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "AOS-7",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "AOS-8",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 9.4,
+   "poblacion_actual": 246,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "AOS-9.1",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "AOS-9.2",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "futuro",
+   "pct_residencial_vacante": 90.5,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "AOS-9.3",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 16.7,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "NORTE DE LA A-5 (APLAZADO)",
+   "clase_suelo": "Suelo Urbanizable No Sectorizado (APLAZADO)",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 73,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "NORTE DE LA R-5 (APLAZADO)",
+   "clase_suelo": "Suelo Urbanizable No Sectorizado (APLAZADO)",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 917,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "NORTE DEL PARQUE DEL SOTO",
+   "clase_suelo": "Suelo Urbanizable No Sectorizado",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 51,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "PAU-5",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 339,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "PE ACCESO A ZONA VERDE C/NÁPOLES 7",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 210,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "PE AMPLIACIÓN RED VIARIA Y ESPACIOS LIBRES PARQUE COIMBRA",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "PE ANTIGUA CARRETERA NACIONAL",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "PE AOS-10",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 383,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "PE AVENIDA IKER CASILLAS 25",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "PE C/ HERMANOS MACHADO",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 73,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "PE CLUB SOCIAL COIMBRA",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "PE CONTROL DE USOS PP-6",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "PE CONTROL URBANÍSTICO AMBIENTAL DE USOS",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "PE LAS PAJARILLAS",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "PE PARCELA D1-D1A PP10 LA FUENSANTA",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "PE POLÍGONO ARROYOMOLINOS",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 1029,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "S-OC",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 0,
+   "estado": "futuro",
+   "pct_residencial_vacante": 100.0,
+   "poblacion_actual": 167,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "S-P1",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "S-P2",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 482,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "S-P3",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 343,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "S-P4",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "S-P5",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 182,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "SUNC-1 CENTRO DE EXÁMENES",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "SUNC-2 ANTIGUA UA 1.2",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "SUNC-3 CID CAMPEADOR-LLEDÓ",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 424,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "SUNC-4 GRANADA-CORTE INGLÉS",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": null,
+   "estado": "futuro",
+   "pct_residencial_vacante": 96.0,
+   "poblacion_actual": 413,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "SUR DE LA R-5 (APLAZADO)",
+   "clase_suelo": "Suelo Urbanizable No Sectorizado (APLAZADO)",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 1171,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "UA-1.1",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "UG-16",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 336,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "UG-22",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "UG-5",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 339,
+   "anio_poblacion_actual": 2023
+  }
+ ]
+}

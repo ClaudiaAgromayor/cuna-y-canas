@@ -1,0 +1,57 @@
+{
+ "municipio": {
+  "cod": "044",
+  "nombre": "Colmenarejo",
+  "nombre_ckan": "Colmenarejo",
+  "slug": "colmenarejo"
+ },
+ "ambitos_poligonos_brutos": 37,
+ "ambitos_geometrias_invalidas_reparadas": 5,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 37,
+ "ambitos_sin_viviendas": 5,
+ "ambitos_guardados": 37,
+ "redes_geometrias_invalidas_reparadas": 54,
+ "redes_brutas": 181,
+ "redes_dotacionales": 57,
+ "redes_por_tipo_y_estado": {
+  "asistencial/sin_dato": 1,
+  "deportivo/sin_dato": 6,
+  "educativo/sin_dato": 3,
+  "zona_verde/sin_dato": 47
+ },
+ "redes_guardadas": 57,
+ "suelo_parcelas_brutas": 4363,
+ "suelo_geometrias_invalidas_reparadas": 1578,
+ "suelo_parcelas_en_ambitos_solapados": 1,
+ "resumen_ambitos": 37,
+ "candidatas_vacantes_equipamiento": 42,
+ "candidatas_sin_superficie_en_origen": 5,
+ "candidatas_descartadas_menores_de_50_m2": 5,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 37,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 28,
+  ">=2000": 19,
+  ">=5000": 13,
+  ">=10000": 9
+ },
+ "portal_suelo_parcelas": 1,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Otros": 1
+ },
+ "portal_suelo_guardadas": 1,
+ "tamanos_kb": {
+  "ambitos.geojson": 42,
+  "centros_educativos.geojson": 2,
+  "centros_sanitarios.geojson": 3,
+  "centros_sociales.geojson": 1,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 21,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 1,
+  "redes.geojson": 28,
+  "resumen_ambitos.json": 13
+ }
+}

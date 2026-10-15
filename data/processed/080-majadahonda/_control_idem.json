@@ -1,0 +1,64 @@
+{
+ "municipio": {
+  "cod": "080",
+  "nombre": "Majadahonda",
+  "nombre_ckan": "Majadahonda",
+  "slug": "majadahonda"
+ },
+ "ambitos_poligonos_brutos": 56,
+ "ambitos_geometrias_invalidas_reparadas": 10,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [
+  "APR-17 LOS SATÉLITES",
+  "UE-18 SUBUNIDADES A Y B - FUENTE MARCELA"
+ ],
+ "ambitos": 49,
+ "ambitos_sin_viviendas": 12,
+ "ambitos_guardados": 49,
+ "redes_geometrias_invalidas_reparadas": 176,
+ "redes_brutas": 528,
+ "redes_dotacionales": 84,
+ "redes_por_tipo_y_estado": {
+  "asistencial/sin_dato": 3,
+  "cultural/sin_dato": 4,
+  "deportivo/sin_dato": 19,
+  "educativo/sin_dato": 26,
+  "sanitario/sin_dato": 2,
+  "zona_verde/sin_dato": 30
+ },
+ "redes_guardadas": 84,
+ "suelo_parcelas_brutas": 9798,
+ "suelo_geometrias_invalidas_reparadas": 3971,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 49,
+ "candidatas_vacantes_equipamiento": 245,
+ "candidatas_sin_superficie_en_origen": 7,
+ "candidatas_descartadas_menores_de_50_m2": 14,
+ "candidatas_duplicadas_por_referencia_catastral": 1,
+ "candidatas_guardadas": 231,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 165,
+  ">=2000": 125,
+  ">=5000": 79,
+  ">=10000": 35
+ },
+ "portal_suelo_parcelas": 103,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Residencial": 101,
+  "Terciario": 1,
+  "Otros": 1
+ },
+ "portal_suelo_guardadas": 103,
+ "tamanos_kb": {
+  "ambitos.geojson": 66,
+  "centros_educativos.geojson": 15,
+  "centros_sanitarios.geojson": 90,
+  "centros_sociales.geojson": 8,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 123,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 51,
+  "redes.geojson": 54,
+  "resumen_ambitos.json": 16
+ }
+}

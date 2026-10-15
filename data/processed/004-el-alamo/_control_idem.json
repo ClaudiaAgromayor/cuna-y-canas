@@ -1,0 +1,49 @@
+{
+ "municipio": {
+  "cod": "004",
+  "nombre": "El Álamo",
+  "nombre_ckan": "Álamo (El)",
+  "slug": "el-alamo"
+ },
+ "ambitos_poligonos_brutos": 28,
+ "ambitos_geometrias_invalidas_reparadas": 9,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 17,
+ "ambitos_sin_viviendas": 7,
+ "ambitos_guardados": 17,
+ "redes_geometrias_invalidas_reparadas": 111,
+ "redes_brutas": 324,
+ "redes_dotacionales": 115,
+ "redes_por_tipo_y_estado": {
+  "zona_verde/sin_dato": 115
+ },
+ "redes_guardadas": 115,
+ "suelo_parcelas_brutas": 6197,
+ "suelo_geometrias_invalidas_reparadas": 1771,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 17,
+ "candidatas_vacantes_equipamiento": 119,
+ "candidatas_sin_superficie_en_origen": 7,
+ "candidatas_descartadas_menores_de_50_m2": 15,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 104,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 51,
+  ">=2000": 36,
+  ">=5000": 21,
+  ">=10000": 5
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 36,
+  "centros_educativos.geojson": 2,
+  "centros_sanitarios.geojson": 0,
+  "centros_sociales.geojson": 3,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 44,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 54,
+  "resumen_ambitos.json": 6
+ }
+}

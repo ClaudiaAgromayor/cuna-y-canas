@@ -1,0 +1,50 @@
+{
+ "municipio": {
+  "cod": "170",
+  "nombre": "Villaconejos",
+  "nombre_ckan": "Villaconejos",
+  "slug": "villaconejos"
+ },
+ "ambitos_poligonos_brutos": 0,
+ "ambitos": 0,
+ "redes_geometrias_invalidas_reparadas": 46,
+ "redes_brutas": 68,
+ "redes_dotacionales": 5,
+ "redes_por_tipo_y_estado": {
+  "cultural/sin_dato": 1,
+  "deportivo/sin_dato": 1,
+  "educativo/sin_dato": 2,
+  "sanitario/sin_dato": 1
+ },
+ "redes_guardadas": 5,
+ "suelo_parcelas_brutas": 2952,
+ "suelo_geometrias_invalidas_reparadas": 1460,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 0,
+ "candidatas_vacantes_equipamiento": 7,
+ "candidatas_sin_superficie_en_origen": 1,
+ "candidatas_descartadas_menores_de_50_m2": 2,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 5,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 2,
+  ">=2000": 1,
+  ">=5000": 1,
+  ">=10000": 0
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 0,
+  "centros_educativos.geojson": 1,
+  "centros_sanitarios.geojson": 1,
+  "centros_sociales.geojson": 0,
+  "farmacias.geojson": 0,
+  "natalidad.json": 1,
+  "paradas.geojson": 2,
+  "parcelas_vacantes.geojson": 2,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 2,
+  "resumen_ambitos.json": 0
+ }
+}

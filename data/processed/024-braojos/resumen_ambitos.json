@@ -1,0 +1,28 @@
+{
+ "cod_ine": "024",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "UE-1 NORESTE",
+   "viviendas_previstas": 17,
+   "residencial_ocupado_m2": 7698,
+   "residencial_vacante_m2": 11104,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 59.1,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-2 TRAVESIA ERAS",
+   "viviendas_previstas": 7,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 2379,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

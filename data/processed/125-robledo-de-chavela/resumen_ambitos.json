@@ -1,0 +1,303 @@
+{
+ "cod_ine": "125",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "UA-12 LA SUIZA ESPAÑOLA 1ª FASE",
+   "viviendas_previstas": 416,
+   "residencial_ocupado_m2": 580433,
+   "residencial_vacante_m2": 197530,
+   "equipamiento_ocupado_m2": 3198,
+   "equipamiento_vacante_m2": 2822,
+   "pct_residencial_vacante": 25.4,
+   "pct_equipamiento_vacante": 46.9,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "S-V ELISADERO",
+   "viviendas_previstas": 150,
+   "residencial_ocupado_m2": 235,
+   "residencial_vacante_m2": 22509,
+   "equipamiento_ocupado_m2": 12137,
+   "equipamiento_vacante_m2": 988,
+   "pct_residencial_vacante": 99.0,
+   "pct_equipamiento_vacante": 7.5,
+   "parcelas_equipamiento_vacantes": 3
+  },
+  {
+   "ambito": "UA-17",
+   "viviendas_previstas": 126,
+   "residencial_ocupado_m2": 31833,
+   "residencial_vacante_m2": 3669,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 94,
+   "pct_residencial_vacante": 10.3,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "UA-18",
+   "viviendas_previstas": 104,
+   "residencial_ocupado_m2": 34857,
+   "residencial_vacante_m2": 5457,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 1505,
+   "pct_residencial_vacante": 13.5,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "S-VI EL PINAR (AMBITO 1)",
+   "viviendas_previstas": 92,
+   "residencial_ocupado_m2": 956,
+   "residencial_vacante_m2": 13967,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 93.6,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "S-VI EL PINAR (AMBITO 2)",
+   "viviendas_previstas": 92,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 77549,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "S-IV VIRGEN DE NAVAHONDA",
+   "viviendas_previstas": 83,
+   "residencial_ocupado_m2": 612,
+   "residencial_vacante_m2": 66612,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 99.1,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "S-I PRIMO DE RIVERA",
+   "viviendas_previstas": 62,
+   "residencial_ocupado_m2": 3340,
+   "residencial_vacante_m2": 61664,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 94.9,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "S-III SAN SEBASTIAN",
+   "viviendas_previstas": 39,
+   "residencial_ocupado_m2": 2951,
+   "residencial_vacante_m2": 11337,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 79.3,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-19",
+   "viviendas_previstas": 10,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 2634,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "AMBITO ELIMINADO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 4563,
+   "residencial_vacante_m2": 4242,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 48.2,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-0 DOCTOR PÉREZ SUÁREZ",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 4186,
+   "residencial_vacante_m2": 6256,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 59.9,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-1 LOS PRADOS",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 15490,
+   "residencial_vacante_m2": 8419,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 1740,
+   "pct_residencial_vacante": 35.2,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 3
+  },
+  {
+   "ambito": "UA-10 ERAS DEL CRISTO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-11 ZONA INDUSTRIAL",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-13 LA SUIZA ESPAÑOLA 2ª FASE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 244673,
+   "residencial_vacante_m2": 123557,
+   "equipamiento_ocupado_m2": 1129,
+   "equipamiento_vacante_m2": 23893,
+   "pct_residencial_vacante": 33.6,
+   "pct_equipamiento_vacante": 95.5,
+   "parcelas_equipamiento_vacantes": 3
+  },
+  {
+   "ambito": "UA-14 CAMINO DE LA PARADILLA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 1301,
+   "residencial_vacante_m2": 16600,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 92.7,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-15 CANOPUS",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 139534,
+   "residencial_vacante_m2": 517,
+   "equipamiento_ocupado_m2": 4592,
+   "equipamiento_vacante_m2": 4893,
+   "pct_residencial_vacante": 0.4,
+   "pct_equipamiento_vacante": 51.6,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "UA-2 CARRETERA FRESNEDILLAS",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 14910,
+   "residencial_vacante_m2": 94,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.6,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-20 LAS NAVAS",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 17496,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-3 JESÚS HERAS",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 11477,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-4 LA HUERTA DE ARRIBA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 29681,
+   "residencial_vacante_m2": 1693,
+   "equipamiento_ocupado_m2": 47,
+   "equipamiento_vacante_m2": 706,
+   "pct_residencial_vacante": 5.4,
+   "pct_equipamiento_vacante": 93.7,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "UA-5 PASEO DE LA ARQUETA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 2446,
+   "residencial_vacante_m2": 7056,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 74.3,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-6 VILLALBA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 23802,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-7 CERCADO AGUADO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 39748,
+   "residencial_vacante_m2": 19803,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 33.3,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-8 ENSANCHE ESTE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 2681,
+   "residencial_vacante_m2": 5033,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 65.2,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-9 CAMINO DE LA ERMITA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 3152,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

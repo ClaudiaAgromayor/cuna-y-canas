@@ -1,0 +1,149 @@
+{
+ "cod_ine": "120",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "UE-4",
+   "viviendas_previstas": 57,
+   "residencial_ocupado_m2": 13874,
+   "residencial_vacante_m2": 47,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.3,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-2",
+   "viviendas_previstas": 32,
+   "residencial_ocupado_m2": 9631,
+   "residencial_vacante_m2": 3553,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 27.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "PP-1 DE LA UE ED 1 EL MERINEL",
+   "viviendas_previstas": 22,
+   "residencial_ocupado_m2": 1917,
+   "residencial_vacante_m2": 3974,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 421,
+   "pct_residencial_vacante": 67.5,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "UE-1",
+   "viviendas_previstas": 17,
+   "residencial_ocupado_m2": 4894,
+   "residencial_vacante_m2": 3273,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 40.1,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-3",
+   "viviendas_previstas": 15,
+   "residencial_ocupado_m2": 2992,
+   "residencial_vacante_m2": 1216,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 1356,
+   "pct_residencial_vacante": 28.9,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 3
+  },
+  {
+   "ambito": "UE-5",
+   "viviendas_previstas": 9,
+   "residencial_ocupado_m2": 2992,
+   "residencial_vacante_m2": 234,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 7.2,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "AMPLIACIÓN BARRIO DE ARRIBA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 3693,
+   "residencial_vacante_m2": 11057,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 75.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "C/ NUEVA Y C/ TORO - OTERUELO DEL VALLE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 203,
+   "residencial_vacante_m2": 2104,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 421,
+   "pct_residencial_vacante": 91.2,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "EL MERINEL",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 234,
+   "residencial_vacante_m2": 1169,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 83.3,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "LOS GRIFOS",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 155897,
+   "residencial_vacante_m2": 31210,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 16.7,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "POLÍGONO GANADERO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "PUERTAS DE LA DEHESA NORTE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 2618,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "PUERTAS DE LA DEHESA SUR",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 1543,
+   "residencial_vacante_m2": 5984,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 79.5,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

@@ -1,0 +1,160 @@
+{
+ "cod_ine": "045",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "SUNP LA ESTACION",
+   "viviendas_previstas": 3115,
+   "residencial_ocupado_m2": 385896,
+   "residencial_vacante_m2": 47445,
+   "equipamiento_ocupado_m2": 149266,
+   "equipamiento_vacante_m2": 52465,
+   "pct_residencial_vacante": 10.9,
+   "pct_equipamiento_vacante": 26.0,
+   "parcelas_equipamiento_vacantes": 13
+  },
+  {
+   "ambito": "SUP-09 LAVANDERAS",
+   "viviendas_previstas": 1737,
+   "residencial_ocupado_m2": 4892,
+   "residencial_vacante_m2": 225372,
+   "equipamiento_ocupado_m2": 938,
+   "equipamiento_vacante_m2": 128849,
+   "pct_residencial_vacante": 97.9,
+   "pct_equipamiento_vacante": 99.3,
+   "parcelas_equipamiento_vacantes": 8
+  },
+  {
+   "ambito": "SUS-03 ARROYO ESPINO",
+   "viviendas_previstas": 957,
+   "residencial_ocupado_m2": 131623,
+   "residencial_vacante_m2": 18860,
+   "equipamiento_ocupado_m2": 5699,
+   "equipamiento_vacante_m2": 45553,
+   "pct_residencial_vacante": 12.5,
+   "pct_equipamiento_vacante": 88.9,
+   "parcelas_equipamiento_vacantes": 6
+  },
+  {
+   "ambito": "SUP-04 LAS ADELFILLAS",
+   "viviendas_previstas": 746,
+   "residencial_ocupado_m2": 129526,
+   "residencial_vacante_m2": 8867,
+   "equipamiento_ocupado_m2": 14887,
+   "equipamiento_vacante_m2": 51792,
+   "pct_residencial_vacante": 6.4,
+   "pct_equipamiento_vacante": 77.7,
+   "parcelas_equipamiento_vacantes": 8
+  },
+  {
+   "ambito": "SUP-01 LA MAQUINILLA",
+   "viviendas_previstas": 552,
+   "residencial_ocupado_m2": 41712,
+   "residencial_vacante_m2": 5677,
+   "equipamiento_ocupado_m2": 38101,
+   "equipamiento_vacante_m2": 10370,
+   "pct_residencial_vacante": 12.0,
+   "pct_equipamiento_vacante": 21.4,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "SUP-08 NAVALLAR",
+   "viviendas_previstas": 467,
+   "residencial_ocupado_m2": 57987,
+   "residencial_vacante_m2": 10416,
+   "equipamiento_ocupado_m2": 12621,
+   "equipamiento_vacante_m2": 14827,
+   "pct_residencial_vacante": 15.2,
+   "pct_equipamiento_vacante": 54.0,
+   "parcelas_equipamiento_vacantes": 3
+  },
+  {
+   "ambito": "SUP-06 ALTO EUGENIO",
+   "viviendas_previstas": 437,
+   "residencial_ocupado_m2": 51178,
+   "residencial_vacante_m2": 33837,
+   "equipamiento_ocupado_m2": 18764,
+   "equipamiento_vacante_m2": 31194,
+   "pct_residencial_vacante": 39.8,
+   "pct_equipamiento_vacante": 62.4,
+   "parcelas_equipamiento_vacantes": 10
+  },
+  {
+   "ambito": "SUP-07 CERCA TEJERA",
+   "viviendas_previstas": 430,
+   "residencial_ocupado_m2": 50224,
+   "residencial_vacante_m2": 49817,
+   "equipamiento_ocupado_m2": 563,
+   "equipamiento_vacante_m2": 39639,
+   "pct_residencial_vacante": 49.8,
+   "pct_equipamiento_vacante": 98.6,
+   "parcelas_equipamiento_vacantes": 7
+  },
+  {
+   "ambito": "SUP-02 POZANCO",
+   "viviendas_previstas": 355,
+   "residencial_ocupado_m2": 17969,
+   "residencial_vacante_m2": 22380,
+   "equipamiento_ocupado_m2": 281,
+   "equipamiento_vacante_m2": 14826,
+   "pct_residencial_vacante": 55.5,
+   "pct_equipamiento_vacante": 98.1,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "SUP-05 AMAPOLAS",
+   "viviendas_previstas": 296,
+   "residencial_ocupado_m2": 422,
+   "residencial_vacante_m2": 61968,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 15527,
+   "pct_residencial_vacante": 99.3,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 4
+  },
+  {
+   "ambito": "PLAN ESPECIAL VÍAS PECUARIAS",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 42976,
+   "residencial_vacante_m2": 610,
+   "equipamiento_ocupado_m2": 17219,
+   "equipamiento_vacante_m2": 12340,
+   "pct_residencial_vacante": 1.4,
+   "pct_equipamiento_vacante": 41.7,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "SUNP-AR-B HUERTA MORANDO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SUNP-AR-C LA TEJERA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 141954,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 8
+  },
+  {
+   "ambito": "SUP-10 CASTILLEJOS",
+   "viviendas_previstas": 0,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 6008,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 2
+  }
+ ]
+}

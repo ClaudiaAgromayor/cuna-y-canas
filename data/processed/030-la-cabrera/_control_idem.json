@@ -1,0 +1,50 @@
+{
+ "municipio": {
+  "cod": "030",
+  "nombre": "La Cabrera",
+  "nombre_ckan": "Cabrera (La)",
+  "slug": "la-cabrera"
+ },
+ "ambitos_poligonos_brutos": 19,
+ "ambitos_geometrias_invalidas_reparadas": 1,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 18,
+ "ambitos_sin_viviendas": 11,
+ "ambitos_guardados": 18,
+ "redes_geometrias_invalidas_reparadas": 15,
+ "redes_brutas": 55,
+ "redes_dotacionales": 8,
+ "redes_por_tipo_y_estado": {
+  "sanitario/sin_dato": 2,
+  "zona_verde/sin_dato": 6
+ },
+ "redes_guardadas": 8,
+ "suelo_parcelas_brutas": 2596,
+ "suelo_geometrias_invalidas_reparadas": 1103,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 18,
+ "candidatas_vacantes_equipamiento": 14,
+ "candidatas_sin_superficie_en_origen": 0,
+ "candidatas_descartadas_menores_de_50_m2": 0,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 14,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 5,
+  ">=2000": 3,
+  ">=5000": 2,
+  ">=10000": 0
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 21,
+  "centros_educativos.geojson": 3,
+  "centros_sanitarios.geojson": 0,
+  "centros_sociales.geojson": 3,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 6,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 4,
+  "resumen_ambitos.json": 6
+ }
+}

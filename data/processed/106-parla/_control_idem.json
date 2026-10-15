@@ -1,0 +1,61 @@
+{
+ "municipio": {
+  "cod": "106",
+  "nombre": "Parla",
+  "nombre_ckan": "Parla",
+  "slug": "parla"
+ },
+ "ambitos_poligonos_brutos": 60,
+ "ambitos_geometrias_invalidas_reparadas": 6,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 51,
+ "ambitos_sin_viviendas": 38,
+ "ambitos_guardados": 51,
+ "redes_geometrias_invalidas_reparadas": 157,
+ "redes_brutas": 725,
+ "redes_dotacionales": 138,
+ "redes_por_tipo_y_estado": {
+  "asistencial/sin_dato": 1,
+  "cultural/sin_dato": 1,
+  "deportivo/sin_dato": 43,
+  "educativo/sin_dato": 4,
+  "sanitario/sin_dato": 2,
+  "zona_verde/sin_dato": 87
+ },
+ "redes_guardadas": 138,
+ "suelo_parcelas_brutas": 12669,
+ "suelo_geometrias_invalidas_reparadas": 5062,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 51,
+ "candidatas_vacantes_equipamiento": 82,
+ "candidatas_sin_superficie_en_origen": 7,
+ "candidatas_descartadas_menores_de_50_m2": 11,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 71,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 45,
+  ">=2000": 34,
+  ">=5000": 19,
+  ">=10000": 11
+ },
+ "portal_suelo_parcelas": 45,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Industrial": 37,
+  "Residencial": 6,
+  "Terciario": 2
+ },
+ "portal_suelo_guardadas": 44,
+ "tamanos_kb": {
+  "ambitos.geojson": 72,
+  "centros_educativos.geojson": 21,
+  "centros_sanitarios.geojson": 53,
+  "centros_sociales.geojson": 10,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 34,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 22,
+  "redes.geojson": 66,
+  "resumen_ambitos.json": 17
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "129",
+  "nombre": "San Agustín del Guadalix",
+  "nombre_ckan": "San Agustín del Guadalix",
+  "slug": "san-agustin-del-guadalix"
+ },
+ "educativos_municipio": 12,
+ "educativos_en_alta": 8,
+ "educativos_guardados": 8,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 77,
+ "sanitarios_centros": 30,
+ "sanitarios_guardados": 30,
+ "sanitarios_sin_coordenadas": 0,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 2,
+ "sociales_guardados": 2,
+ "sociales_sin_coordenadas": 0,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 3,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 13947
+}

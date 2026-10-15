@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "061",
+  "nombre": "Galapagar",
+  "nombre_ckan": "Galapagar",
+  "slug": "galapagar"
+ },
+ "educativos_municipio": 30,
+ "educativos_en_alta": 19,
+ "educativos_guardados": 19,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 115,
+ "sanitarios_centros": 43,
+ "sanitarios_guardados": 43,
+ "sanitarios_sin_coordenadas": 0,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 13,
+ "sociales_guardados": 13,
+ "sociales_sin_coordenadas": 0,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 10,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 36805
+}

@@ -1,0 +1,51 @@
+{
+ "municipio": {
+  "cod": "901",
+  "nombre": "Lozoyuela-Navas-Sieteiglesias",
+  "nombre_ckan": "Lozoyuela-Navas-Sieteiglesias",
+  "slug": "lozoyuela-navas-sieteiglesias"
+ },
+ "ambitos_poligonos_brutos": 17,
+ "ambitos_geometrias_invalidas_reparadas": 1,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 17,
+ "ambitos_sin_viviendas": 2,
+ "ambitos_guardados": 17,
+ "redes_geometrias_invalidas_reparadas": 65,
+ "redes_brutas": 135,
+ "redes_dotacionales": 9,
+ "redes_por_tipo_y_estado": {
+  "deportivo/sin_dato": 2,
+  "educativo/sin_dato": 2,
+  "zona_verde/sin_dato": 5
+ },
+ "redes_guardadas": 9,
+ "suelo_parcelas_brutas": 3545,
+ "suelo_geometrias_invalidas_reparadas": 1800,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 17,
+ "candidatas_vacantes_equipamiento": 24,
+ "candidatas_sin_superficie_en_origen": 2,
+ "candidatas_descartadas_menores_de_50_m2": 2,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 22,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 13,
+  ">=2000": 5,
+  ">=5000": 4,
+  ">=10000": 1
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 20,
+  "centros_educativos.geojson": 1,
+  "centros_sanitarios.geojson": 3,
+  "centros_sociales.geojson": 1,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 10,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 5,
+  "resumen_ambitos.json": 6
+ }
+}

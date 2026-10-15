@@ -1,0 +1,171 @@
+{
+ "cod_ine": "136",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "SAU-1 LA CRUZ DE PIEDRA",
+   "viviendas_previstas": 81,
+   "residencial_ocupado_m2": 2117,
+   "residencial_vacante_m2": 14302,
+   "equipamiento_ocupado_m2": 988,
+   "equipamiento_vacante_m2": 11385,
+   "pct_residencial_vacante": 87.1,
+   "pct_equipamiento_vacante": 92.0,
+   "parcelas_equipamiento_vacantes": 16
+  },
+  {
+   "ambito": "SAU-2 LA GUINDALERA",
+   "viviendas_previstas": 80,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 47613,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 1882,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "UE-3 EL EMBUDO",
+   "viviendas_previstas": 30,
+   "residencial_ocupado_m2": 5269,
+   "residencial_vacante_m2": 518,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 8.9,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-8 CERRO DE SAN MIGUEL",
+   "viviendas_previstas": 29,
+   "residencial_ocupado_m2": 94,
+   "residencial_vacante_m2": 19195,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 99.5,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-5 LAS CUEVAS",
+   "viviendas_previstas": 18,
+   "residencial_ocupado_m2": 5269,
+   "residencial_vacante_m2": 3858,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 42.3,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-1 CAMINO DE ANCHUELO",
+   "viviendas_previstas": 16,
+   "residencial_ocupado_m2": 5928,
+   "residencial_vacante_m2": 3936,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 39.9,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-6 LAS ERAS",
+   "viviendas_previstas": 16,
+   "residencial_ocupado_m2": 659,
+   "residencial_vacante_m2": 7057,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 91.5,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-10 LA ALBERCA",
+   "viviendas_previstas": 15,
+   "residencial_ocupado_m2": 7104,
+   "residencial_vacante_m2": 470,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 6.2,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-4 URBANIZACIÓN SAN ROQUE",
+   "viviendas_previstas": 12,
+   "residencial_ocupado_m2": 8234,
+   "residencial_vacante_m2": 2494,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 23.2,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-7 EL GAVILÁN",
+   "viviendas_previstas": 12,
+   "residencial_ocupado_m2": 1223,
+   "residencial_vacante_m2": 2729,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 69.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "AA-2 LAS PERDICES",
+   "viviendas_previstas": 11,
+   "residencial_ocupado_m2": 10679,
+   "residencial_vacante_m2": 4798,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 31.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-2 LAS TORRES",
+   "viviendas_previstas": 8,
+   "residencial_ocupado_m2": 3576,
+   "residencial_vacante_m2": 376,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 9.5,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "AA-1 URBANIZACIÓN EL COMISARIO",
+   "viviendas_previstas": 5,
+   "residencial_ocupado_m2": 13314,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-09 EL ALMENDRO",
+   "viviendas_previstas": 5,
+   "residencial_ocupado_m2": 94,
+   "residencial_vacante_m2": 2776,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 96.7,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-11 POLÍGONO INDUSTRIAL",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 517,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

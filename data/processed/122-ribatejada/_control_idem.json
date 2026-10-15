@@ -1,0 +1,50 @@
+{
+ "municipio": {
+  "cod": "122",
+  "nombre": "Ribatejada",
+  "nombre_ckan": "Ribatejada",
+  "slug": "ribatejada"
+ },
+ "ambitos_poligonos_brutos": 11,
+ "ambitos_geometrias_invalidas_reparadas": 0,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 11,
+ "ambitos_sin_viviendas": 1,
+ "ambitos_guardados": 11,
+ "redes_geometrias_invalidas_reparadas": 38,
+ "redes_brutas": 90,
+ "redes_dotacionales": 2,
+ "redes_por_tipo_y_estado": {
+  "deportivo/sin_dato": 1,
+  "educativo/sin_dato": 1
+ },
+ "redes_guardadas": 2,
+ "suelo_parcelas_brutas": 1134,
+ "suelo_geometrias_invalidas_reparadas": 438,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 11,
+ "candidatas_vacantes_equipamiento": 15,
+ "candidatas_sin_superficie_en_origen": 1,
+ "candidatas_descartadas_menores_de_50_m2": 2,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 13,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 5,
+  ">=2000": 2,
+  ">=5000": 0,
+  ">=10000": 0
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 10,
+  "centros_educativos.geojson": 1,
+  "centros_sanitarios.geojson": 1,
+  "centros_sociales.geojson": 1,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 5,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 1,
+  "resumen_ambitos.json": 4
+ }
+}

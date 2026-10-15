@@ -1,0 +1,52 @@
+{
+ "municipio": {
+  "cod": "130",
+  "nombre": "San Fernando de Henares",
+  "nombre_ckan": "San Fernando de Henares",
+  "slug": "san-fernando-de-henares"
+ },
+ "ambitos_poligonos_brutos": 44,
+ "ambitos_geometrias_invalidas_reparadas": 5,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 31,
+ "ambitos_sin_viviendas": 28,
+ "ambitos_guardados": 31,
+ "redes_geometrias_invalidas_reparadas": 101,
+ "redes_brutas": 446,
+ "redes_dotacionales": 256,
+ "redes_por_tipo_y_estado": {
+  "asistencial/sin_dato": 2,
+  "cultural/sin_dato": 1,
+  "deportivo/sin_dato": 4,
+  "zona_verde/sin_dato": 249
+ },
+ "redes_guardadas": 256,
+ "suelo_parcelas_brutas": 5688,
+ "suelo_geometrias_invalidas_reparadas": 2647,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 31,
+ "candidatas_vacantes_equipamiento": 76,
+ "candidatas_sin_superficie_en_origen": 1,
+ "candidatas_descartadas_menores_de_50_m2": 6,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 70,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 50,
+  ">=2000": 42,
+  ">=5000": 32,
+  ">=10000": 15
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 47,
+  "centros_educativos.geojson": 7,
+  "centros_sanitarios.geojson": 22,
+  "centros_sociales.geojson": 3,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 35,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 127,
+  "resumen_ambitos.json": 10
+ }
+}

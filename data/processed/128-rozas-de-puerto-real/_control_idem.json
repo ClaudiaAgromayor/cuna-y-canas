@@ -1,0 +1,50 @@
+{
+ "municipio": {
+  "cod": "128",
+  "nombre": "Rozas de Puerto Real",
+  "nombre_ckan": "Rozas de Puerto Real",
+  "slug": "rozas-de-puerto-real"
+ },
+ "ambitos_poligonos_brutos": 9,
+ "ambitos_geometrias_invalidas_reparadas": 5,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 9,
+ "ambitos_sin_viviendas": 8,
+ "ambitos_guardados": 9,
+ "redes_geometrias_invalidas_reparadas": 14,
+ "redes_brutas": 32,
+ "redes_dotacionales": 3,
+ "redes_por_tipo_y_estado": {
+  "deportivo/sin_dato": 1,
+  "zona_verde/sin_dato": 2
+ },
+ "redes_guardadas": 3,
+ "suelo_parcelas_brutas": 1673,
+ "suelo_geometrias_invalidas_reparadas": 722,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 9,
+ "candidatas_vacantes_equipamiento": 13,
+ "candidatas_sin_superficie_en_origen": 2,
+ "candidatas_descartadas_menores_de_50_m2": 2,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 11,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 2,
+  ">=2000": 2,
+  ">=5000": 1,
+  ">=10000": 1
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 7,
+  "centros_educativos.geojson": 1,
+  "centros_sanitarios.geojson": 1,
+  "centros_sociales.geojson": 0,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 4,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 2,
+  "resumen_ambitos.json": 3
+ }
+}

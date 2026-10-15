@@ -1,0 +1,56 @@
+{
+ "municipio": {
+  "cod": "085",
+  "nombre": "Miraflores de la Sierra",
+  "nombre_ckan": "Miraflores de la Sierra",
+  "slug": "miraflores-de-la-sierra"
+ },
+ "ambitos_poligonos_brutos": 39,
+ "ambitos_geometrias_invalidas_reparadas": 9,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 36,
+ "ambitos_sin_viviendas": 7,
+ "ambitos_guardados": 36,
+ "redes_geometrias_invalidas_reparadas": 67,
+ "redes_brutas": 165,
+ "redes_dotacionales": 22,
+ "redes_por_tipo_y_estado": {
+  "deportivo/sin_dato": 6,
+  "educativo/sin_dato": 3,
+  "zona_verde/sin_dato": 13
+ },
+ "redes_guardadas": 21,
+ "suelo_parcelas_brutas": 7060,
+ "suelo_geometrias_invalidas_reparadas": 3001,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 36,
+ "candidatas_vacantes_equipamiento": 39,
+ "candidatas_sin_superficie_en_origen": 3,
+ "candidatas_descartadas_menores_de_50_m2": 5,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 34,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 18,
+  ">=2000": 10,
+  ">=5000": 5,
+  ">=10000": 2
+ },
+ "portal_suelo_parcelas": 8,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Residencial": 8
+ },
+ "portal_suelo_guardadas": 8,
+ "tamanos_kb": {
+  "ambitos.geojson": 46,
+  "centros_educativos.geojson": 2,
+  "centros_sanitarios.geojson": 3,
+  "centros_sociales.geojson": 1,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 17,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 5,
+  "redes.geojson": 12,
+  "resumen_ambitos.json": 12
+ }
+}

@@ -1,0 +1,67 @@
+{
+ "municipio": {
+  "cod": "148",
+  "nombre": "Torrejón de Ardoz",
+  "nombre_ckan": "Torrejón de Ardoz",
+  "slug": "torrejon-de-ardoz"
+ },
+ "ambitos_poligonos_brutos": 114,
+ "ambitos_geometrias_invalidas_reparadas": 14,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 54,
+ "ambitos_sin_viviendas": 13,
+ "ambitos_guardados": 54,
+ "redes_geometrias_invalidas_reparadas": 160,
+ "redes_brutas": 729,
+ "redes_dotacionales": 417,
+ "redes_por_tipo_y_estado": {
+  "asistencial/sin_dato": 7,
+  "cultural/sin_dato": 18,
+  "deportivo/sin_dato": 26,
+  "educativo/sin_dato": 50,
+  "sanitario/sin_dato": 12,
+  "zona_verde/sin_dato": 304
+ },
+ "redes_guardadas": 417,
+ "suelo_parcelas_brutas": 11518,
+ "suelo_geometrias_invalidas_reparadas": 4540,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 54,
+ "candidatas_vacantes_equipamiento": 122,
+ "candidatas_sin_superficie_en_origen": 5,
+ "candidatas_descartadas_menores_de_50_m2": 17,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 105,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 72,
+  ">=2000": 57,
+  ">=5000": 35,
+  ">=10000": 13
+ },
+ "portal_suelo_parcelas": 6,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Residencial": 3,
+  "Terciario": 2,
+  "Otros": 1
+ },
+ "portal_suelo_guardadas": 6,
+ "tamanos_kb": {
+  "ambitos.geojson": 91,
+  "centros_educativos.geojson": 23,
+  "centros_sanitarios.geojson": 77,
+  "centros_sociales.geojson": 11,
+  "demanda.json": 30,
+  "farmacias.geojson": 8,
+  "natalidad.json": 1,
+  "paradas.geojson": 60,
+  "parcelas_vacantes.geojson": 50,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 4,
+  "redes.geojson": 204,
+  "resumen_ambitos.json": 18,
+  "secciones.geojson": 127,
+  "secciones_series.json": 143,
+  "zonas_salud.geojson": 26
+ }
+}

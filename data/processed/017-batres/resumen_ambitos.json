@@ -1,0 +1,226 @@
+{
+ "cod_ine": "017",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "APD-1 COTORREDONDO",
+   "viviendas_previstas": 357,
+   "residencial_ocupado_m2": 502045,
+   "residencial_vacante_m2": 38098,
+   "equipamiento_ocupado_m2": 9741,
+   "equipamiento_vacante_m2": 11378,
+   "pct_residencial_vacante": 7.1,
+   "pct_equipamiento_vacante": 53.9,
+   "parcelas_equipamiento_vacantes": 6
+  },
+  {
+   "ambito": "APD-2 MONTEBATRES",
+   "viviendas_previstas": 103,
+   "residencial_ocupado_m2": 206897,
+   "residencial_vacante_m2": 14163,
+   "equipamiento_ocupado_m2": 8592,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 6.4,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-9 COOPERATIVA LOS ANDES",
+   "viviendas_previstas": 66,
+   "residencial_ocupado_m2": 17808,
+   "residencial_vacante_m2": 94,
+   "equipamiento_ocupado_m2": 1417,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.5,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-2 BALLESTA ESTE RESIDENCIAL",
+   "viviendas_previstas": 59,
+   "residencial_ocupado_m2": 134,
+   "residencial_vacante_m2": 23051,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 99.4,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-1 BALLESTA OESTE RESIDENCIAL",
+   "viviendas_previstas": 56,
+   "residencial_ocupado_m2": 425,
+   "residencial_vacante_m2": 17525,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 1653,
+   "pct_residencial_vacante": 97.6,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "UE-11 CAMINO ALTO DE SERRANILLOS RESIDENCIAL",
+   "viviendas_previstas": 44,
+   "residencial_ocupado_m2": 13982,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "APD-3 OLIVARES",
+   "viviendas_previstas": 36,
+   "residencial_ocupado_m2": 9872,
+   "residencial_vacante_m2": 189,
+   "equipamiento_ocupado_m2": 2126,
+   "equipamiento_vacante_m2": 283,
+   "pct_residencial_vacante": 1.9,
+   "pct_equipamiento_vacante": 11.8,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "UE-10 ALTOS DE CARRANQUE NORTE",
+   "viviendas_previstas": 32,
+   "residencial_ocupado_m2": 1748,
+   "residencial_vacante_m2": 5763,
+   "equipamiento_ocupado_m2": 378,
+   "equipamiento_vacante_m2": 4440,
+   "pct_residencial_vacante": 76.7,
+   "pct_equipamiento_vacante": 92.2,
+   "parcelas_equipamiento_vacantes": 6
+  },
+  {
+   "ambito": "UE-7 LAS ERAS RESIDENCIAL",
+   "viviendas_previstas": 21,
+   "residencial_ocupado_m2": 7747,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "APD-8 OSUNA ESTE",
+   "viviendas_previstas": 20,
+   "residencial_ocupado_m2": 6046,
+   "residencial_vacante_m2": 614,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 9.2,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "APD-4",
+   "viviendas_previstas": 17,
+   "residencial_ocupado_m2": 4535,
+   "residencial_vacante_m2": 614,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 11.9,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-8 CARRANQUE SUR RESIDENCIAL",
+   "viviendas_previstas": 16,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 1559,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-1 LOS OLIVOS RESIDENCIAL",
+   "viviendas_previstas": 14,
+   "residencial_ocupado_m2": 24702,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "APD-5 C/CASTILLO ESTE",
+   "viviendas_previstas": 13,
+   "residencial_ocupado_m2": 3936,
+   "residencial_vacante_m2": 850,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 17.8,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-4 CAMINO DE CARRANQUE RESIDENCIAL",
+   "viviendas_previstas": 7,
+   "residencial_ocupado_m2": 283,
+   "residencial_vacante_m2": 2740,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 90.6,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "APD-6 ENSANCHE ESTE",
+   "viviendas_previstas": 5,
+   "residencial_ocupado_m2": 1937,
+   "residencial_vacante_m2": 1039,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 34.9,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "APD-7 OSUNA OESTE",
+   "viviendas_previstas": 5,
+   "residencial_ocupado_m2": 1275,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-2 CASCO ESTE RESIDENCIAL",
+   "viviendas_previstas": 3,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 1370,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-3 LA DEMANDA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 33852,
+   "equipamiento_ocupado_m2": 6377,
+   "equipamiento_vacante_m2": 3118,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 32.8,
+   "parcelas_equipamiento_vacantes": 4
+  },
+  {
+   "ambito": "UE-3 CASTILLO/OLIVARES RESIDENCIAL",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 992,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

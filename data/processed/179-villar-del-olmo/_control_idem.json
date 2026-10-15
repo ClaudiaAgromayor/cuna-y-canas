@@ -1,0 +1,51 @@
+{
+ "municipio": {
+  "cod": "179",
+  "nombre": "Villar del Olmo",
+  "nombre_ckan": "Villar del Olmo",
+  "slug": "villar-del-olmo"
+ },
+ "ambitos_poligonos_brutos": 11,
+ "ambitos_geometrias_invalidas_reparadas": 2,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 11,
+ "ambitos_sin_viviendas": 0,
+ "ambitos_guardados": 11,
+ "redes_geometrias_invalidas_reparadas": 23,
+ "redes_brutas": 96,
+ "redes_dotacionales": 5,
+ "redes_por_tipo_y_estado": {
+  "deportivo/sin_dato": 3,
+  "educativo/sin_dato": 1,
+  "sanitario/sin_dato": 1
+ },
+ "redes_guardadas": 5,
+ "suelo_parcelas_brutas": 2612,
+ "suelo_geometrias_invalidas_reparadas": 1059,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 11,
+ "candidatas_vacantes_equipamiento": 25,
+ "candidatas_sin_superficie_en_origen": 2,
+ "candidatas_descartadas_menores_de_50_m2": 2,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 23,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 11,
+  ">=2000": 5,
+  ">=5000": 2,
+  ">=10000": 0
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 9,
+  "centros_educativos.geojson": 1,
+  "centros_sanitarios.geojson": 0,
+  "centros_sociales.geojson": 0,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 10,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 2,
+  "resumen_ambitos.json": 4
+ }
+}

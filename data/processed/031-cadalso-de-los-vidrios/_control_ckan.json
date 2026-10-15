@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "031",
+  "nombre": "Cadalso de los Vidrios",
+  "nombre_ckan": "Cadalso de los Vidrios",
+  "slug": "cadalso-de-los-vidrios"
+ },
+ "educativos_municipio": 3,
+ "educativos_en_alta": 3,
+ "educativos_guardados": 3,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 12,
+ "sanitarios_centros": 3,
+ "sanitarios_guardados": 3,
+ "sanitarios_sin_coordenadas": 0,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 11,
+ "sociales_guardados": 11,
+ "sociales_sin_coordenadas": 0,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 1,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 3387
+}

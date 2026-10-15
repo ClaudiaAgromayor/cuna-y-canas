@@ -1,0 +1,50 @@
+{
+ "municipio": {
+  "cod": "110",
+  "nombre": "Perales de Tajuña",
+  "nombre_ckan": "Perales de Tajuña",
+  "slug": "perales-de-tajuna"
+ },
+ "ambitos_poligonos_brutos": 24,
+ "ambitos_geometrias_invalidas_reparadas": 0,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 24,
+ "ambitos_sin_viviendas": 24,
+ "ambitos_guardados": 24,
+ "redes_geometrias_invalidas_reparadas": 10,
+ "redes_brutas": 59,
+ "redes_dotacionales": 6,
+ "redes_por_tipo_y_estado": {
+  "deportivo/sin_dato": 1,
+  "zona_verde/sin_dato": 5
+ },
+ "redes_guardadas": 6,
+ "suelo_parcelas_brutas": 1997,
+ "suelo_geometrias_invalidas_reparadas": 750,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 23,
+ "candidatas_vacantes_equipamiento": 39,
+ "candidatas_sin_superficie_en_origen": 2,
+ "candidatas_descartadas_menores_de_50_m2": 8,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 31,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 11,
+  ">=2000": 6,
+  ">=5000": 0,
+  ">=10000": 0
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 28,
+  "centros_educativos.geojson": 1,
+  "centros_sanitarios.geojson": 1,
+  "centros_sociales.geojson": 0,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 12,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 2,
+  "resumen_ambitos.json": 8
+ }
+}

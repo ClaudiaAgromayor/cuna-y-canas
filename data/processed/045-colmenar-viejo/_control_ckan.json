@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "045",
+  "nombre": "Colmenar Viejo",
+  "nombre_ckan": "Colmenar Viejo",
+  "slug": "colmenar-viejo"
+ },
+ "educativos_municipio": 55,
+ "educativos_en_alta": 36,
+ "educativos_guardados": 36,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 264,
+ "sanitarios_centros": 106,
+ "sanitarios_guardados": 103,
+ "sanitarios_sin_coordenadas": 1,
+ "sanitarios_coordenadas_fuera_del_municipio": 2,
+ "sociales_municipio": 19,
+ "sociales_guardados": 18,
+ "sociales_sin_coordenadas": 0,
+ "sociales_coordenadas_fuera_del_municipio": 1,
+ "farmacias_guardados": 15,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 58654
+}

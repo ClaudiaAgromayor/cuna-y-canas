@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import maplibregl, { type LayerSpecification, type MapLayerMouseEvent } from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
 import type { FeatureCollection } from 'geojson'
@@ -60,7 +60,8 @@ export default function Mapa({ bbox, capas, marcadores = [], onClickCapa, onArra
     const m = new maplibregl.Map({ container: div.current!, style: ESTILO_BASE, bounds: bbox, fitBoundsOptions: { padding: 30 }, attributionControl: { compact: true } })
     m.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right')
     m.addControl(new maplibregl.ScaleControl({ unit: 'metric' }), 'bottom-left')
-    m.on('load', () => { listo.current = true; sincronizar(m, capasRef.current) })
+    // las capas de datos se añaden en cuanto el estilo está listo, sin esperar a que lleguen las teselas del mapa base
+    m.once('style.load', () => { listo.current = true; sincronizar(m, capasRef.current) })
     m.on('click', (ev: MapLayerMouseEvent) => {
       const ids = capasRef.current.filter((c) => c.visible !== false && m.getLayer(c.id)).map((c) => c.id)
       const f = m.queryRenderedFeatures(ev.point, { layers: ids })[0]
@@ -84,7 +85,13 @@ export default function Mapa({ bbox, capas, marcadores = [], onClickCapa, onArra
     })
     ro.observe(div.current!)
     mapa.current = m
-    return () => { ro.disconnect(); m.remove(); mapa.current = null; listo.current = false }
+    setGeneracion((g) => g + 1) // vuelve a colocar los marcadores en el mapa nuevo
+    if (import.meta.env.DEV) (window as unknown as { __mapa: maplibregl.Map }).__mapa = m // para depurar desde la consola
+    return () => {
+      // los marcadores pertenecen a este mapa: si no se borran, quedarían enganchados a un mapa ya destruido
+      marcas.current.forEach((mk) => mk.remove()); marcas.current.clear()
+      ro.disconnect(); m.remove(); mapa.current = null; listo.current = false
+    }
     // el mapa se crea una vez; bbox cambia con el municipio y se gestiona abajo
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -93,6 +100,7 @@ export default function Mapa({ bbox, capas, marcadores = [], onClickCapa, onArra
   useEffect(() => { if (centrarEn) mapa.current?.flyTo({ center: centrarEn, zoom: 14.4, duration: 900 }) }, [centrarEn])
   useEffect(() => { if (mapa.current && listo.current) sincronizar(mapa.current, capas) }, [capas])
 
+  const [generacion, setGeneracion] = useState(0)
   useEffect(() => {
     const m = mapa.current
     if (!m) return
@@ -115,7 +123,7 @@ export default function Mapa({ bbox, capas, marcadores = [], onClickCapa, onArra
         mk.setLngLat([x.lon, x.lat]).setDraggable(!!x.arrastrable)
       }
     }
-  }, [marcadores])
+  }, [marcadores, generacion])
 
   return <div ref={div} className="h-full w-full" />
 }

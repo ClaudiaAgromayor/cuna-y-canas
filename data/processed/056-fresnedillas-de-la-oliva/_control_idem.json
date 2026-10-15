@@ -1,0 +1,52 @@
+{
+ "municipio": {
+  "cod": "056",
+  "nombre": "Fresnedillas de la Oliva",
+  "nombre_ckan": "Fresnedillas de la Oliva",
+  "slug": "fresnedillas-de-la-oliva"
+ },
+ "ambitos_poligonos_brutos": 34,
+ "ambitos_geometrias_invalidas_reparadas": 3,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 34,
+ "ambitos_sin_viviendas": 3,
+ "ambitos_guardados": 34,
+ "redes_geometrias_invalidas_reparadas": 25,
+ "redes_brutas": 85,
+ "redes_dotacionales": 27,
+ "redes_por_tipo_y_estado": {
+  "deportivo/sin_dato": 2,
+  "educativo/sin_dato": 1,
+  "sanitario/sin_dato": 1,
+  "zona_verde/sin_dato": 23
+ },
+ "redes_guardadas": 27,
+ "suelo_parcelas_brutas": 1744,
+ "suelo_geometrias_invalidas_reparadas": 776,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 34,
+ "candidatas_vacantes_equipamiento": 18,
+ "candidatas_sin_superficie_en_origen": 0,
+ "candidatas_descartadas_menores_de_50_m2": 2,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 16,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 2,
+  ">=2000": 1,
+  ">=5000": 1,
+  ">=10000": 1
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 27,
+  "centros_educativos.geojson": 1,
+  "centros_sanitarios.geojson": 1,
+  "centros_sociales.geojson": 0,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 6,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 13,
+  "resumen_ambitos.json": 11
+ }
+}

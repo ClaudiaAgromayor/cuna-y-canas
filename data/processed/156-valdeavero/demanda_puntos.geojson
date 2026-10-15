@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"tipo": "actual", "origen": "2815601001", "ambito": "LA CARDOSA", "pob": 1793.0, "g0_2": 52.1, "g3_5": 53.0, "g6_11": 121.1, "g12_17": 134.2, "g65": 267.2, "cod_ine": "156"}, "geometry": {"type": "Point", "coordinates": [-3.355042, 40.625791]}}]}

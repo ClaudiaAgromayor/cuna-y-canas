@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"codigo": "28064743", "nombre": "VALDELAGUNA", "tipo": "EEI-CN", "tipo_largo": "ESCUELA  INFANTIL-CASA DE NIÑOS", "titularidad": "PÚBLICO", "direccion": "de los Colegios", "cp": "28391", "distrito": "", "cod_ine": "157"}, "geometry": {"type": "Point", "coordinates": [-3.370542, 40.15884]}}]}

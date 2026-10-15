@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"codigo": "28067264", "nombre": "VALDEMAQUEDA", "tipo": "EEI-CN", "tipo_largo": "ESCUELA  INFANTIL-CASA DE NIÑOS", "titularidad": "PÚBLICO", "direccion": "Juan Carlos I", "cp": "28295", "distrito": "", "cod_ine": "159"}, "geometry": {"type": "Point", "coordinates": [-4.298461, 40.512923]}}]}

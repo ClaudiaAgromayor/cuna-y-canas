@@ -1,0 +1,52 @@
+{
+ "municipio": {
+  "cod": "129",
+  "nombre": "San Agustín del Guadalix",
+  "nombre_ckan": "San Agustín del Guadalix",
+  "slug": "san-agustin-del-guadalix"
+ },
+ "ambitos_poligonos_brutos": 32,
+ "ambitos_geometrias_invalidas_reparadas": 3,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 30,
+ "ambitos_sin_viviendas": 1,
+ "ambitos_guardados": 30,
+ "redes_geometrias_invalidas_reparadas": 91,
+ "redes_brutas": 271,
+ "redes_dotacionales": 37,
+ "redes_por_tipo_y_estado": {
+  "asistencial/sin_dato": 2,
+  "deportivo/sin_dato": 9,
+  "educativo/sin_dato": 9,
+  "zona_verde/sin_dato": 17
+ },
+ "redes_guardadas": 37,
+ "suelo_parcelas_brutas": 3182,
+ "suelo_geometrias_invalidas_reparadas": 1137,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 30,
+ "candidatas_vacantes_equipamiento": 55,
+ "candidatas_sin_superficie_en_origen": 1,
+ "candidatas_descartadas_menores_de_50_m2": 5,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 50,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 35,
+  ">=2000": 31,
+  ">=5000": 13,
+  ">=10000": 2
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 32,
+  "centros_educativos.geojson": 3,
+  "centros_sanitarios.geojson": 11,
+  "centros_sociales.geojson": 1,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 22,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 18,
+  "resumen_ambitos.json": 10
+ }
+}

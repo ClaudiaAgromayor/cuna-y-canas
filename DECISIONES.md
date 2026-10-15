@@ -75,6 +75,38 @@ El equipo cree que da tiempo a hacerlo todo. Si nos retrasamos, se recorta por e
 
 ## 3. Decisiones
 
+### 16 oct (noche): la herramienta pasa a cubrir toda la Comunidad, con tres secciones
+**Por qué:** el equipo señaló que (1) a media pantalla la web no se organizaba bien, (2) la pantalla ciudadana es para **investigar pueblos** antes de mudarse, no para quien ya tiene una dirección, (3) hacían falta muchas más opciones en "qué te interesa", y (4) faltaban cosas que prometen los documentos Word. Se releyeron los documentos 1 y 3 y se cubrió cada punto.
+
+**Tres secciones** (cabecera):
+1. **¿Dónde vivir?** (nueva, es la entrada). Tu situación (bebé, hijos en edad escolar, cuido de mis mayores, trabajo en Madrid, tranquilidad, vivienda nueva, soy mayor) + **24 criterios** en 6 grupos (educación pública, concertada o privada, escuela infantil, instituto, FP, centro de salud, hospital cerca, farmacias, residencias, centros de día, hogares de mayores, metro o Cercanías, líneas de autobús, cerca de Madrid, zonas verdes, deporte, cultura, tranquilidad, ambiente joven, crecimiento, vivienda nueva, paro) + tamaño y distancia a Madrid. Ordena **los 179 municipios** en un mapa coloreado y un ranking. Cada municipio tiene su **ficha**: cómo queda en lo que te importa, lo que hay (12 indicadores), **lo que viene** (viviendas previstas → población que llegará → plazas que harán falta, con el modelo calibrado) y su gente (edad, nacimientos, renta, paro). **Comparador** de hasta 3 municipios lado a lado. Ficha en PDF.
+2. **Barrios** (rehecha). Se elige un **barrio** de la lista o se pulsa en el mapa; la calle es opcional. 16 categorías (escuela infantil pública o privada, colegio público, concertado o privado, instituto, centro de salud o consultorio, hospital, farmacia, centro de día, residencia, hogar de mayores, parques, deporte, cultura, suelo reservado) con atajos por situación; distancia 5/10/15/20 minutos; **filtro por estado** (ya existe, en el planeamiento, prevista, suelo disponible; licitada y en obras se muestran desactivadas hasta tener los datos). Población del barrio hoy y al completarse, y lo que hará falta.
+3. **Planificar** (técnicos), con todo lo del documento 1 y 3:
+   - **Zona de estudio:** un barrio (lista o clic en el mapa) o todo el municipio.
+   - **Gráfica de población año a año (2025–2040) por grupos** (bebés, niños, jóvenes, adultos, mayores), con el grupo del servicio en rojo.
+   - Deslizadores de **año**, **natalidad** (±40 %) y **llegada de personas** (±50 %), y una **cifra concreta** escrita a mano ("1.000 niños"), que se reparte en el espacio como la población.
+   - **Cuándo hace falta cada centro** (dimensión temporal) y si la mejor parcela **cambia** entre la primera y la última etapa.
+   - **Ver si aguanta:** cada ubicación se recalcula con menos viviendas (mínimo calibrado) y 3 años de retraso, y se marca si se mantiene.
+   - **Titularidad:** una parcela vacante que cae dentro de una red pública de equipamiento del planeamiento es suelo público ("de uso adecuado" si la red es del tipo del servicio). Interruptor "solo suelo público". En Getafe, 52 de las 294 candidatas.
+   - Ficha por ubicación: coordenadas, superficie, titularidad, personas cubiertas, parada más cercana, licitaciones (sin datos todavía) y alternativas descartadas.
+
+**Fotografías de licencia abierta** (lo prometía el documento 3): la imagen representativa de cada municipio en Wikidata (propiedad P18, buscada por código INE con la propiedad P772), servida desde Wikimedia Commons con enlace a su autoría y licencia. Los 179 municipios tienen foto.
+
+**Adaptable a cualquier ancho:** pantalla ancha con 3 columnas en Planificar; media pantalla (≥ 768 px) con 2 columnas y "Ajustes / Resultados" en pestañas; móvil con el mapa arriba y el panel debajo. Cabecera compacta en una línea. En móvil la leyenda del mapa se pliega tras un botón para no taparlo.
+
+### 16 oct (noche): cómo se puntúan los municipios
+- Cada criterio da a cada municipio un **percentil** respecto a los que pasan los filtros; la coincidencia es la media de los percentiles elegidos. No hay pesos inventados.
+- **Sesgo detectado y corregido:** con ratios por habitante ganaban aldeas de 300 habitantes (1 escuela para 15 niños). Ahora los criterios de servicios combinan **suficiencia (60 %)**, la ratio por habitante con tope en el percentil 75, y **variedad (40 %)**, cuántos centros hay para elegir.
+- "Tengo un bebé" incluye hospital cerca.
+
+### 16 oct (noche): procesado de toda la Comunidad
+- `etl/lote.py` ejecuta el pipeline para los 178 municipios (todos menos Madrid capital, que no está en el planeamiento refundido). Unos 15 s por municipio.
+- `etl/municipios_resumen.py` calcula unos 40 indicadores comparables de los 179 municipios (incluida Madrid) y sus límites (`municipios_resumen.json`, 236 KB; `municipios.geojson`, 157 KB).
+- **Robustez:** el pipeline aguanta capas vacías (pueblos sin Portal del Suelo, sin centros sanitarios o **sin ámbitos de desarrollo**: Boadilla, Brunete, Ciempozuelos, Guadarrama…).
+- **Consultorios de atención primaria:** se cuentan junto a los centros de salud. Son la atención primaria de los pueblos (154 en la Comunidad).
+- **Farmacias** (CKAN `oficinas_farmacia`, coordenadas con coma decimal) añadidas a cada municipio.
+
+
 ### 14 oct: el cambio de municipio es de datos y arquitectura, no de prompt
 - **Estado real a las 14 oct (verificado):** el único código es `etl/descargar_idem.py`. No hay prompt, ni modelo de IA, ni web (`web/` y `data/processed/` vacías), ni git. "Cambiar de municipio en la demo" era una propuesta, no una función.
 - **Diseño propuesto (sin implementar):**
@@ -153,6 +185,12 @@ Lo sacamos de OneDrive para que no sincronice `.venv` ni `node_modules`. La copi
 
 ## 4. Hallazgos en los datos
 Sirven para la presentación, en el criterio de tratamiento de los datos.
+
+### 16 oct (noche): hallazgos en los datos de toda la Comunidad
+- **Arroyomolinos tiene 38.185 habitantes y ningún centro de salud** (solo un consultorio). Paracuellos, 27.649 habitantes y un centro de salud.
+- **Navalcarnero tiene previstas 21.434 viviendas** para 33.352 habitantes: podría casi duplicar su población.
+- **Los Molinos (Getafe):** 11.473 vecinos, sin centro de salud ni escuela infantil pública a menos de 10 minutos a pie, y con 20 parcelas reservadas para equipamientos sin construir alrededor. Con los supuestos de partida, hacen falta **2 colegios nuevos ya hoy**, y las dos ubicaciones aguantan con menos viviendas y 3 años de retraso.
+- Datos que **no** existen a escala municipal en el catálogo: precio del alquiler (solo regional) y cobertura de banda ancha.
 
 ### 16 oct: rediseño con el estilo de las webs de la Comunidad de Madrid
 - **Por qué:** la primera versión tenía colores pastel, botones redondeados y estaba poco organizada. El equipo pidió algo más profesional, limpio y muy fácil de usar, en la línea de comunidad.madrid.
@@ -334,6 +372,16 @@ Cruzamos el suelo vacante y ocupado de 2026 con los ámbitos del planeamiento, c
 | Paradas y estaciones | CRTM, `services5.arcgis.com/UxADft6QPcvFyDU1` (M8_Red, M9_Red, M5_Red, M4_Red, M10_Red) | Filtro `CODIGOPROVINCIA='28' AND CODIGOMUNICIPIO`; trae las líneas y la accesibilidad |
 | Zonas básicas de salud (nombres y geometría 2019) | CKAN `covid19_tia_zonas_basicas_salud` (SHP) | Solo para poner nombre a las zonas de la IDEM |
 
+### Confirmadas el 16 de octubre
+| Dato | Fuente | Notas |
+|---|---|---|
+| Límites municipales | WFS IDEM `UnidadesAdministrativas:IDEM_CM_UNID_ADMIN` | 194 polígonos (con enclaves), 179 municipios + 2 terrenos comuneros sin población |
+| Farmacias | CKAN `oficinas_farmacia` | 2.956, con coordenadas UTM (coma decimal) y nombre del municipio |
+| Bibliotecas | CKAN `spacm_listado_bibliotecas_servicios_lectura` | 809, por localidad |
+| Renta disponible por habitante | CKAN `irpf_indicador_renta` (medida "Per cápita") | 2023 |
+| Paro registrado por 100 habitantes | CKAN `1902280` | 2025 |
+| Estaciones y paradas de toda la Comunidad | CRTM (M4, M5, M8, M9, M10), sin geometría | Para contar estaciones y líneas por municipio |
+
 ### Por localizar o confirmar
 - [ ] Matrícula de infantil de primer ciclo (CKAN)
 - [ ] Licitaciones: PLACSP (ATOM), BOCM (XML) y Portal de Contratación de la Comunidad
@@ -400,6 +448,7 @@ Un Ampere A1 (hasta 4 núcleos y 24 GB de RAM), 200 GB de disco, 10 GB de Object
 
 ## 9. Bitácora
 - **14 oct (noche, 3):** repositorio creado en GitHub, primer commit subido e invitada la compañera de equipo. Paso 3 hecho.
+- **16 oct (noche):** tres secciones (¿Dónde vivir?, Barrios, Planificar), 179 municipios comparables, lote de toda la Comunidad, todo lo que faltaba de los documentos en la pantalla técnica, y diseño adaptable a media pantalla y móvil.
 - **16 oct (tarde):** rediseño de la web con el estilo de comunidad.madrid (logo propio, no el oficial).
 - **16 oct:** la web funciona con las dos pantallas y los dos municipios (pasos 7 y 8 hechos y 10 casi). Probada en el navegador. Arreglados el mapa base, la ocupación mínima, las paradas duplicadas y las geometrías mixtas.
 - **15 oct:** etapa 2 de datos completa: `pipeline.py`, `secciones.py`, `transporte.py`, `zonas.py` y `demanda.py`. El modelo calibrado con barrios reales reduce a la mitad el error de la regla habitual. La verificación cazó una parada de Ciudad Real colada en Navalcarnero.

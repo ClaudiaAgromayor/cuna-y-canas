@@ -1,0 +1,49 @@
+{
+ "municipio": {
+  "cod": "141",
+  "nombre": "Sevilla la Nueva",
+  "nombre_ckan": "Sevilla la Nueva",
+  "slug": "sevilla-la-nueva"
+ },
+ "ambitos_poligonos_brutos": 35,
+ "ambitos_geometrias_invalidas_reparadas": 7,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 32,
+ "ambitos_sin_viviendas": 1,
+ "ambitos_guardados": 32,
+ "redes_geometrias_invalidas_reparadas": 79,
+ "redes_brutas": 251,
+ "redes_dotacionales": 29,
+ "redes_por_tipo_y_estado": {
+  "zona_verde/sin_dato": 29
+ },
+ "redes_guardadas": 29,
+ "suelo_parcelas_brutas": 3669,
+ "suelo_geometrias_invalidas_reparadas": 1305,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 32,
+ "candidatas_vacantes_equipamiento": 63,
+ "candidatas_sin_superficie_en_origen": 1,
+ "candidatas_descartadas_menores_de_50_m2": 4,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 59,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 26,
+  ">=2000": 20,
+  ">=5000": 5,
+  ">=10000": 1
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 36,
+  "centros_educativos.geojson": 2,
+  "centros_sanitarios.geojson": 7,
+  "centros_sociales.geojson": 2,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 25,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 13,
+  "resumen_ambitos.json": 10
+ }
+}

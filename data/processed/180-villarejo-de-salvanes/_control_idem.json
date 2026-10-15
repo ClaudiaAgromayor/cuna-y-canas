@@ -1,0 +1,47 @@
+{
+ "municipio": {
+  "cod": "180",
+  "nombre": "Villarejo de Salvanés",
+  "nombre_ckan": "Villarejo de Salvanés",
+  "slug": "villarejo-de-salvanes"
+ },
+ "ambitos_poligonos_brutos": 59,
+ "ambitos_geometrias_invalidas_reparadas": 10,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 57,
+ "ambitos_sin_viviendas": 18,
+ "ambitos_guardados": 57,
+ "redes_geometrias_invalidas_reparadas": 70,
+ "redes_brutas": 194,
+ "redes_dotacionales": 0,
+ "redes_por_tipo_y_estado": {},
+ "redes_guardadas": 0,
+ "suelo_parcelas_brutas": 5835,
+ "suelo_geometrias_invalidas_reparadas": 2651,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 57,
+ "candidatas_vacantes_equipamiento": 36,
+ "candidatas_sin_superficie_en_origen": 1,
+ "candidatas_descartadas_menores_de_50_m2": 4,
+ "candidatas_duplicadas_por_referencia_catastral": 3,
+ "candidatas_guardadas": 32,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 17,
+  ">=2000": 7,
+  ">=5000": 1,
+  ">=10000": 0
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 50,
+  "centros_educativos.geojson": 4,
+  "centros_sanitarios.geojson": 4,
+  "centros_sociales.geojson": 0,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 13,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 0,
+  "resumen_ambitos.json": 18
+ }
+}

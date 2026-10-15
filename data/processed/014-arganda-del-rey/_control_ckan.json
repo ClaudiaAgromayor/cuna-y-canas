@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "014",
+  "nombre": "Arganda del Rey",
+  "nombre_ckan": "Arganda del Rey",
+  "slug": "arganda-del-rey"
+ },
+ "educativos_municipio": 57,
+ "educativos_en_alta": 37,
+ "educativos_guardados": 35,
+ "educativos_sin_coordenadas": 2,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 302,
+ "sanitarios_centros": 95,
+ "sanitarios_guardados": 93,
+ "sanitarios_sin_coordenadas": 2,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 16,
+ "sociales_guardados": 13,
+ "sociales_sin_coordenadas": 3,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 19,
+ "farmacias_sin_coordenadas": 1,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 60105
+}

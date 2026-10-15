@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "015",
+  "nombre": "Arroyomolinos",
+  "nombre_ckan": "Arroyomolinos",
+  "slug": "arroyomolinos"
+ },
+ "educativos_municipio": 35,
+ "educativos_en_alta": 24,
+ "educativos_guardados": 23,
+ "educativos_sin_coordenadas": 1,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 167,
+ "sanitarios_centros": 62,
+ "sanitarios_guardados": 62,
+ "sanitarios_sin_coordenadas": 0,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 3,
+ "sociales_guardados": 2,
+ "sociales_sin_coordenadas": 1,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 11,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 38185
+}

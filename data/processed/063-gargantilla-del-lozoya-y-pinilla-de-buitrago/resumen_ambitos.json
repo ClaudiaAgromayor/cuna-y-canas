@@ -1,0 +1,105 @@
+{
+ "cod_ine": "063",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "POLÍGONO 1",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 19151,
+   "residencial_vacante_m2": 3176,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 14.2,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "POLÍGONO 2",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 4391,
+   "residencial_vacante_m2": 3503,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 44.4,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "POLÍGONO 3",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 8828,
+   "residencial_vacante_m2": 22234,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 71.6,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "POLÍGONO 4",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 15460,
+   "residencial_vacante_m2": 113086,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 88.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "POLÍGONO 5",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 3223,
+   "residencial_vacante_m2": 27465,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 89.5,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "POLÍGONO 6",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 15037,
+   "residencial_vacante_m2": 3456,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 18.7,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "POLÍGONO 7",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 2195,
+   "residencial_vacante_m2": 30167,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 93.2,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "POLÍGONO 8",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 2709,
+   "residencial_vacante_m2": 29972,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 91.7,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "POLÍGONO 9",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 166688,
+   "residencial_vacante_m2": 24197,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 12.7,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

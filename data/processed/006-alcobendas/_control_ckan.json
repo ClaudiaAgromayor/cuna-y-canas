@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "006",
+  "nombre": "Alcobendas",
+  "nombre_ckan": "Alcobendas",
+  "slug": "alcobendas"
+ },
+ "educativos_municipio": 138,
+ "educativos_en_alta": 87,
+ "educativos_guardados": 87,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 905,
+ "sanitarios_centros": 311,
+ "sanitarios_guardados": 310,
+ "sanitarios_sin_coordenadas": 1,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 36,
+ "sociales_guardados": 32,
+ "sociales_sin_coordenadas": 4,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 38,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 123222
+}

@@ -1,0 +1,193 @@
+{
+ "cod_ine": "004",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "SUR-4 ARROYO LAS VEGAS",
+   "viviendas_previstas": 406,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 181497,
+   "equipamiento_ocupado_m2": 378,
+   "equipamiento_vacante_m2": 54974,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 99.3,
+   "parcelas_equipamiento_vacantes": 14
+  },
+  {
+   "ambito": "SUR-5 ARROYO AVILÉS",
+   "viviendas_previstas": 382,
+   "residencial_ocupado_m2": 803,
+   "residencial_vacante_m2": 144930,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 20528,
+   "pct_residencial_vacante": 99.4,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 7
+  },
+  {
+   "ambito": "SUR-7 LA GRANJA",
+   "viviendas_previstas": 327,
+   "residencial_ocupado_m2": 519,
+   "residencial_vacante_m2": 142137,
+   "equipamiento_ocupado_m2": 17345,
+   "equipamiento_vacante_m2": 15770,
+   "pct_residencial_vacante": 99.6,
+   "pct_equipamiento_vacante": 47.6,
+   "parcelas_equipamiento_vacantes": 3
+  },
+  {
+   "ambito": "SUR-2 CAMINO DE LA CRUZ DE LA PIEDRA",
+   "viviendas_previstas": 291,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 132277,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 20023,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 4
+  },
+  {
+   "ambito": "SUR-3 LAS LONGUERAS",
+   "viviendas_previstas": 268,
+   "residencial_ocupado_m2": 8028,
+   "residencial_vacante_m2": 109929,
+   "equipamiento_ocupado_m2": 47,
+   "equipamiento_vacante_m2": 17285,
+   "pct_residencial_vacante": 93.2,
+   "pct_equipamiento_vacante": 99.7,
+   "parcelas_equipamiento_vacantes": 7
+  },
+  {
+   "ambito": "SUR-1 EL OLIVAR",
+   "viviendas_previstas": 220,
+   "residencial_ocupado_m2": 94,
+   "residencial_vacante_m2": 90811,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 15962,
+   "pct_residencial_vacante": 99.9,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 8
+  },
+  {
+   "ambito": "AA-1 LOS POCILLOS",
+   "viviendas_previstas": 148,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 31257,
+   "equipamiento_ocupado_m2": 8700,
+   "equipamiento_vacante_m2": 12675,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 59.3,
+   "parcelas_equipamiento_vacantes": 5
+  },
+  {
+   "ambito": "SUR-6 LOS VIÑEDOS",
+   "viviendas_previstas": 143,
+   "residencial_ocupado_m2": 47,
+   "residencial_vacante_m2": 61719,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 7838,
+   "pct_residencial_vacante": 99.9,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 8
+  },
+  {
+   "ambito": "AA-2 AVENIDA DE TOLEDO ESTE",
+   "viviendas_previstas": 136,
+   "residencial_ocupado_m2": 189,
+   "residencial_vacante_m2": 34472,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 12136,
+   "pct_residencial_vacante": 99.5,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 11
+  },
+  {
+   "ambito": "AA-3 FLORES",
+   "viviendas_previstas": 34,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 18087,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 2456,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "AS-1 PLAN ESPECIAL ARROYO LAS VEGAS",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 425,
+   "residencial_vacante_m2": 236,
+   "equipamiento_ocupado_m2": 189,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 35.7,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-III",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 12371,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 5
+  },
+  {
+   "ambito": "SUI-1 EL PRADO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 4249,
+   "equipamiento_ocupado_m2": 47,
+   "equipamiento_vacante_m2": 11427,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 99.6,
+   "parcelas_equipamiento_vacantes": 8
+  },
+  {
+   "ambito": "SUI-2 LAS HUERTAS",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 1920,
+   "equipamiento_vacante_m2": 28663,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 93.7,
+   "parcelas_equipamiento_vacantes": 15
+  },
+  {
+   "ambito": "UA-14",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 12751,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 94,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "UA-3B",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 11238,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-7D",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

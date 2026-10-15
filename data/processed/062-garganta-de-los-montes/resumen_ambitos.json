@@ -1,0 +1,83 @@
+{
+ "cod_ine": "062",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "LOS GARGANTALES",
+   "viviendas_previstas": 90,
+   "residencial_ocupado_m2": 58047,
+   "residencial_vacante_m2": 34787,
+   "equipamiento_ocupado_m2": 1168,
+   "equipamiento_vacante_m2": 4580,
+   "pct_residencial_vacante": 37.5,
+   "pct_equipamiento_vacante": 79.7,
+   "parcelas_equipamiento_vacantes": 5
+  },
+  {
+   "ambito": "C/ PORTALES",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 2617,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "C/ SAN ISIDRO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 234,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "EL VERDUGAL",
+   "viviendas_previstas": 0,
+   "residencial_ocupado_m2": 65705,
+   "residencial_vacante_m2": 4859,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 6.9,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "LAS ERAS DEL SOTO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 12241,
+   "residencial_vacante_m2": 654,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 5.1,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "LAS PAJARILLAS",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 52547,
+   "residencial_vacante_m2": 8152,
+   "equipamiento_ocupado_m2": 514,
+   "equipamiento_vacante_m2": 2102,
+   "pct_residencial_vacante": 13.4,
+   "pct_equipamiento_vacante": 80.4,
+   "parcelas_equipamiento_vacantes": 3
+  },
+  {
+   "ambito": "PARCELA PRIVADA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 2571,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 280,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  }
+ ]
+}

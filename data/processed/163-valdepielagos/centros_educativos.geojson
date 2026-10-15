@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"codigo": "28064755", "nombre": "VALDEPIELAGOS", "tipo": "EEI-CN", "tipo_largo": "ESCUELA  INFANTIL-CASA DE NIÑOS", "titularidad": "PÚBLICO", "direccion": "del Casar", "cp": "28170", "distrito": "", "cod_ine": "163"}, "geometry": {"type": "Point", "coordinates": [-3.464452, 40.759261]}}]}

@@ -1,0 +1,171 @@
+{
+ "cod_ine": "094",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "P-20 RESERVA URBANA",
+   "viviendas_previstas": 42,
+   "residencial_ocupado_m2": 17227,
+   "residencial_vacante_m2": 4197,
+   "equipamiento_ocupado_m2": 2902,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 19.6,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "P-1 CASCO ANTIGUO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 65953,
+   "residencial_vacante_m2": 22046,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 25.1,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "P-10 ENSANCHE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 94771,
+   "residencial_vacante_m2": 16899,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 15.1,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "P-11 ENSANCHE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 65628,
+   "residencial_vacante_m2": 2715,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 4.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "P-12 ENSANCHE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 17507,
+   "residencial_vacante_m2": 2200,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 11.2,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "P-13 ENSANCHE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 40885,
+   "residencial_vacante_m2": 15446,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 27.4,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "P-16 ORDENANZA APROBADA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 157124,
+   "residencial_vacante_m2": 20190,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 11.4,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "P-2 ENSANCHE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 1545,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "P-3 ENSANCHE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 24668,
+   "residencial_vacante_m2": 11281,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 31.4,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "P-4 ENSANCHE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 6305,
+   "residencial_vacante_m2": 3043,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 32.5,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "P-5 ENSANCHE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 40180,
+   "residencial_vacante_m2": 12733,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 24.1,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "P-6 ENSANCHE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 15354,
+   "residencial_vacante_m2": 94,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.6,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "P-7 ENSANCHE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 25934,
+   "residencial_vacante_m2": 4213,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 14.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "P-8 ENSANCHE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 5945,
+   "residencial_vacante_m2": 187,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 3.1,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "P-9 ENSANCHE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 19941,
+   "residencial_vacante_m2": 3698,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 15.6,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

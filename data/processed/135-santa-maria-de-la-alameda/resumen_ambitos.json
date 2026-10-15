@@ -1,0 +1,138 @@
+{
+ "cod_ine": "135",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "UMBRIA DE LOS GALLEGOS",
+   "viviendas_previstas": 48,
+   "residencial_ocupado_m2": 6118,
+   "residencial_vacante_m2": 44769,
+   "equipamiento_ocupado_m2": 423,
+   "equipamiento_vacante_m2": 5311,
+   "pct_residencial_vacante": 88.0,
+   "pct_equipamiento_vacante": 92.6,
+   "parcelas_equipamiento_vacantes": 9
+  },
+  {
+   "ambito": "P-1 CASCO ANTIGUO SANTA MARÍA DE LA ALAMEDA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 36053,
+   "residencial_vacante_m2": 8878,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 19.8,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "P-10 ENSANCHE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 192887,
+   "residencial_vacante_m2": 129562,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 40.2,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "P-2 CASCO ANTIGUO NAVALESPINO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 16724,
+   "residencial_vacante_m2": 10476,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 38.5,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "P-3 CASCO ANTIGUO ROBLEDONDO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 38012,
+   "residencial_vacante_m2": 33861,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 47.1,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "P-4 CASCO ANTIGUO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 9257,
+   "residencial_vacante_m2": 3994,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 30.1,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "P-5 CASCO ANTIGUO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 12079,
+   "residencial_vacante_m2": 7426,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 38.1,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "P-6 ENSANCHE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 57854,
+   "residencial_vacante_m2": 42088,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 42.1,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "P-7 CASCO ANTIGUO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 6621,
+   "residencial_vacante_m2": 2630,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 28.4,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "P-8 ENSANCHE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 186100,
+   "residencial_vacante_m2": 37032,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 16.6,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "P-9 ENSANCHE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 319748,
+   "residencial_vacante_m2": 141318,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 30.7,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "RIO COFIO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 1411,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  }
+ ]
+}

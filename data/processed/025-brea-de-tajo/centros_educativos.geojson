@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"codigo": "28060661", "nombre": "SIETE ESTRELLAS", "tipo": "EEI-CN", "tipo_largo": "ESCUELA  INFANTIL-CASA DE NIÑOS", "titularidad": "PÚBLICO", "direccion": "Mayor", "cp": "28596", "distrito": "", "cod_ine": "025"}, "geometry": {"type": "Point", "coordinates": [-3.111667, 40.2285]}}]}

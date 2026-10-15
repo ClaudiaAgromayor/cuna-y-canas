@@ -1,0 +1,46 @@
+{
+ "municipio": {
+  "cod": "176",
+  "nombre": "Villanueva de la Cañada",
+  "nombre_ckan": "Villanueva de la Cañada",
+  "slug": "villanueva-de-la-canada"
+ },
+ "ambitos_poligonos_brutos": 0,
+ "ambitos": 0,
+ "redes_guardadas": 0,
+ "suelo_parcelas_brutas": 13583,
+ "suelo_geometrias_invalidas_reparadas": 4699,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 0,
+ "candidatas_vacantes_equipamiento": 92,
+ "candidatas_sin_superficie_en_origen": 3,
+ "candidatas_descartadas_menores_de_50_m2": 7,
+ "candidatas_duplicadas_por_referencia_catastral": 1,
+ "candidatas_guardadas": 85,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 40,
+  ">=2000": 29,
+  ">=5000": 22,
+  ">=10000": 12
+ },
+ "portal_suelo_parcelas": 1,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Comercial": 1
+ },
+ "portal_suelo_guardadas": 1,
+ "tamanos_kb": {
+  "ambitos.geojson": 0,
+  "centros_educativos.geojson": 7,
+  "centros_sanitarios.geojson": 24,
+  "centros_sociales.geojson": 4,
+  "farmacias.geojson": 2,
+  "natalidad.json": 1,
+  "paradas.geojson": 35,
+  "parcelas_vacantes.geojson": 37,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 1,
+  "redes.geojson": 0,
+  "resumen_ambitos.json": 0
+ }
+}

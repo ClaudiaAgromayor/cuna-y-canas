@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "131",
+  "nombre": "San Lorenzo de El Escorial",
+  "nombre_ckan": "San Lorenzo de El Escorial",
+  "slug": "san-lorenzo-de-el-escorial"
+ },
+ "educativos_municipio": 36,
+ "educativos_en_alta": 17,
+ "educativos_guardados": 17,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 154,
+ "sanitarios_centros": 40,
+ "sanitarios_guardados": 40,
+ "sanitarios_sin_coordenadas": 0,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 8,
+ "sociales_guardados": 8,
+ "sociales_sin_coordenadas": 0,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 6,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 18942
+}

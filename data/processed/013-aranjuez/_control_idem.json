@@ -1,0 +1,51 @@
+{
+ "municipio": {
+  "cod": "013",
+  "nombre": "Aranjuez",
+  "nombre_ckan": "Aranjuez",
+  "slug": "aranjuez"
+ },
+ "ambitos_poligonos_brutos": 28,
+ "ambitos_geometrias_invalidas_reparadas": 3,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 17,
+ "ambitos_sin_viviendas": 11,
+ "ambitos_guardados": 17,
+ "redes_geometrias_invalidas_reparadas": 81,
+ "redes_brutas": 410,
+ "redes_dotacionales": 110,
+ "redes_por_tipo_y_estado": {
+  "deportivo/sin_dato": 10,
+  "educativo/sin_dato": 20,
+  "zona_verde/sin_dato": 80
+ },
+ "redes_guardadas": 110,
+ "suelo_parcelas_brutas": 9081,
+ "suelo_geometrias_invalidas_reparadas": 3329,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 16,
+ "candidatas_vacantes_equipamiento": 60,
+ "candidatas_sin_superficie_en_origen": 0,
+ "candidatas_descartadas_menores_de_50_m2": 2,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 58,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 52,
+  ">=2000": 47,
+  ">=5000": 34,
+  ">=10000": 22
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 37,
+  "centros_educativos.geojson": 11,
+  "centros_sanitarios.geojson": 51,
+  "centros_sociales.geojson": 8,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 33,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 63,
+  "resumen_ambitos.json": 6
+ }
+}

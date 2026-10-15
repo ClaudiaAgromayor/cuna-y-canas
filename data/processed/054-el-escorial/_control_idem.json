@@ -1,0 +1,62 @@
+{
+ "municipio": {
+  "cod": "054",
+  "nombre": "El Escorial",
+  "nombre_ckan": "Escorial (El)",
+  "slug": "el-escorial"
+ },
+ "ambitos_poligonos_brutos": 44,
+ "ambitos_geometrias_invalidas_reparadas": 8,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [
+  "S-1 ENSANCHE"
+ ],
+ "ambitos": 32,
+ "ambitos_sin_viviendas": 16,
+ "ambitos_guardados": 32,
+ "redes_geometrias_invalidas_reparadas": 91,
+ "redes_brutas": 267,
+ "redes_dotacionales": 66,
+ "redes_por_tipo_y_estado": {
+  "cultural/sin_dato": 1,
+  "deportivo/sin_dato": 3,
+  "educativo/sin_dato": 2,
+  "zona_verde/sin_dato": 60
+ },
+ "redes_guardadas": 66,
+ "suelo_parcelas_brutas": 6752,
+ "suelo_geometrias_invalidas_reparadas": 2377,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 32,
+ "candidatas_vacantes_equipamiento": 49,
+ "candidatas_sin_superficie_en_origen": 3,
+ "candidatas_descartadas_menores_de_50_m2": 6,
+ "candidatas_duplicadas_por_referencia_catastral": 1,
+ "candidatas_guardadas": 43,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 31,
+  ">=2000": 26,
+  ">=5000": 19,
+  ">=10000": 8
+ },
+ "portal_suelo_parcelas": 15,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Terciario": 7,
+  "Otros": 3,
+  "Residencial": 3,
+  "Comercial": 2
+ },
+ "portal_suelo_guardadas": 15,
+ "tamanos_kb": {
+  "ambitos.geojson": 41,
+  "centros_educativos.geojson": 2,
+  "centros_sanitarios.geojson": 0,
+  "centros_sociales.geojson": 4,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 22,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 11,
+  "redes.geojson": 44,
+  "resumen_ambitos.json": 11
+ }
+}

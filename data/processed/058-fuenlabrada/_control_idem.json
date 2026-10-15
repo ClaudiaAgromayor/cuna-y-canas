@@ -1,0 +1,61 @@
+{
+ "municipio": {
+  "cod": "058",
+  "nombre": "Fuenlabrada",
+  "nombre_ckan": "Fuenlabrada",
+  "slug": "fuenlabrada"
+ },
+ "ambitos_poligonos_brutos": 105,
+ "ambitos_geometrias_invalidas_reparadas": 22,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 97,
+ "ambitos_sin_viviendas": 33,
+ "ambitos_guardados": 97,
+ "redes_geometrias_invalidas_reparadas": 266,
+ "redes_brutas": 1113,
+ "redes_dotacionales": 289,
+ "redes_por_tipo_y_estado": {
+  "asistencial/sin_dato": 1,
+  "cultural/sin_dato": 3,
+  "deportivo/sin_dato": 32,
+  "educativo/sin_dato": 29,
+  "sanitario/sin_dato": 1,
+  "zona_verde/sin_dato": 223
+ },
+ "redes_guardadas": 288,
+ "suelo_parcelas_brutas": 14429,
+ "suelo_geometrias_invalidas_reparadas": 4990,
+ "suelo_parcelas_en_ambitos_solapados": 1,
+ "resumen_ambitos": 97,
+ "candidatas_vacantes_equipamiento": 210,
+ "candidatas_sin_superficie_en_origen": 9,
+ "candidatas_descartadas_menores_de_50_m2": 19,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 191,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 117,
+  ">=2000": 81,
+  ">=5000": 29,
+  ">=10000": 8
+ },
+ "portal_suelo_parcelas": 10,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Terciario": 8,
+  "Otros": 1,
+  "Industrial": 1
+ },
+ "portal_suelo_guardadas": 10,
+ "tamanos_kb": {
+  "ambitos.geojson": 129,
+  "centros_educativos.geojson": 36,
+  "centros_sanitarios.geojson": 98,
+  "centros_sociales.geojson": 16,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 88,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 6,
+  "redes.geojson": 160,
+  "resumen_ambitos.json": 32
+ }
+}

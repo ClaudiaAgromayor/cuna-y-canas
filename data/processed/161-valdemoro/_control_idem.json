@@ -1,0 +1,59 @@
+{
+ "municipio": {
+  "cod": "161",
+  "nombre": "Valdemoro",
+  "nombre_ckan": "Valdemoro",
+  "slug": "valdemoro"
+ },
+ "ambitos_poligonos_brutos": 39,
+ "ambitos_geometrias_invalidas_reparadas": 17,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 34,
+ "ambitos_sin_viviendas": 12,
+ "ambitos_guardados": 34,
+ "redes_geometrias_invalidas_reparadas": 215,
+ "redes_brutas": 730,
+ "redes_dotacionales": 152,
+ "redes_por_tipo_y_estado": {
+  "cultural/sin_dato": 1,
+  "deportivo/sin_dato": 6,
+  "educativo/sin_dato": 2,
+  "sanitario/sin_dato": 1,
+  "zona_verde/sin_dato": 142
+ },
+ "redes_guardadas": 152,
+ "suelo_parcelas_brutas": 10585,
+ "suelo_geometrias_invalidas_reparadas": 4132,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 32,
+ "candidatas_vacantes_equipamiento": 144,
+ "candidatas_sin_superficie_en_origen": 11,
+ "candidatas_descartadas_menores_de_50_m2": 28,
+ "candidatas_duplicadas_por_referencia_catastral": 1,
+ "candidatas_guardadas": 116,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 88,
+  ">=2000": 75,
+  ">=5000": 51,
+  ">=10000": 23
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 70,
+  "centros_educativos.geojson": 14,
+  "centros_sanitarios.geojson": 61,
+  "centros_sociales.geojson": 6,
+  "demanda.json": 18,
+  "farmacias.geojson": 5,
+  "natalidad.json": 1,
+  "paradas.geojson": 57,
+  "parcelas_vacantes.geojson": 61,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 89,
+  "resumen_ambitos.json": 11,
+  "secciones.geojson": 102,
+  "secciones_series.json": 68,
+  "zonas_salud.geojson": 12
+ }
+}

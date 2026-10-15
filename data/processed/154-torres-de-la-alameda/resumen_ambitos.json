@@ -1,0 +1,138 @@
+{
+ "cod_ine": "154",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "SAU-6",
+   "viviendas_previstas": 458,
+   "residencial_ocupado_m2": 1412,
+   "residencial_vacante_m2": 72981,
+   "equipamiento_ocupado_m2": 47,
+   "equipamiento_vacante_m2": 17421,
+   "pct_residencial_vacante": 98.1,
+   "pct_equipamiento_vacante": 99.7,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "SAU-7",
+   "viviendas_previstas": 288,
+   "residencial_ocupado_m2": 14314,
+   "residencial_vacante_m2": 102933,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 87.8,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-05 CALVARIO",
+   "viviendas_previstas": 260,
+   "residencial_ocupado_m2": 52463,
+   "residencial_vacante_m2": 6970,
+   "equipamiento_ocupado_m2": 9042,
+   "equipamiento_vacante_m2": 5604,
+   "pct_residencial_vacante": 11.7,
+   "pct_equipamiento_vacante": 38.3,
+   "parcelas_equipamiento_vacantes": 5
+  },
+  {
+   "ambito": "SAU-3R LAS MATANZAS",
+   "viviendas_previstas": 187,
+   "residencial_ocupado_m2": 92210,
+   "residencial_vacante_m2": 565,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 1837,
+   "pct_residencial_vacante": 0.6,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "SAU-1R LOS LEONES",
+   "viviendas_previstas": 172,
+   "residencial_ocupado_m2": 17379,
+   "residencial_vacante_m2": 76016,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 81.4,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-2R EL CAMINO",
+   "viviendas_previstas": 159,
+   "residencial_ocupado_m2": 2747,
+   "residencial_vacante_m2": 89059,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 97.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-04 EL PARQUE",
+   "viviendas_previstas": 75,
+   "residencial_ocupado_m2": 10078,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-02 LOS ALMENDROS",
+   "viviendas_previstas": 52,
+   "residencial_ocupado_m2": 16672,
+   "residencial_vacante_m2": 3203,
+   "equipamiento_ocupado_m2": 2637,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 16.1,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-03 LAS REGUERAS",
+   "viviendas_previstas": 35,
+   "residencial_ocupado_m2": 13656,
+   "residencial_vacante_m2": 330,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 2.4,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UA-01 LA CORNISA",
+   "viviendas_previstas": 14,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 1742,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SAU-4I LOS PALOMARES",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 471,
+   "equipamiento_vacante_m2": 50197,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 99.1,
+   "parcelas_equipamiento_vacantes": 14
+  },
+  {
+   "ambito": "SAU-5",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

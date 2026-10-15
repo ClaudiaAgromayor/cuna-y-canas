@@ -1,0 +1,292 @@
+{
+ "cod_ine": "084",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "API-1 (APLAZADO)",
+   "viviendas_previstas": 1061,
+   "residencial_ocupado_m2": 628942,
+   "residencial_vacante_m2": 310870,
+   "equipamiento_ocupado_m2": 9890,
+   "equipamiento_vacante_m2": 82383,
+   "pct_residencial_vacante": 33.1,
+   "pct_equipamiento_vacante": 89.3,
+   "parcelas_equipamiento_vacantes": 31
+  },
+  {
+   "ambito": "API-2 (APLAZADO)",
+   "viviendas_previstas": 884,
+   "residencial_ocupado_m2": 648464,
+   "residencial_vacante_m2": 77366,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 40970,
+   "pct_residencial_vacante": 10.7,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 5
+  },
+  {
+   "ambito": "S-7 EL OLIVAR GRANDE",
+   "viviendas_previstas": 762,
+   "residencial_ocupado_m2": 188,
+   "residencial_vacante_m2": 86103,
+   "equipamiento_ocupado_m2": 13188,
+   "equipamiento_vacante_m2": 22467,
+   "pct_residencial_vacante": 99.8,
+   "pct_equipamiento_vacante": 63.0,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "S-6 MEJORADA",
+   "viviendas_previstas": 505,
+   "residencial_ocupado_m2": 40379,
+   "residencial_vacante_m2": 21006,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 8902,
+   "pct_residencial_vacante": 34.2,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "S-2 CIUDAD DEPORTIVA",
+   "viviendas_previstas": 488,
+   "residencial_ocupado_m2": 60338,
+   "residencial_vacante_m2": 4899,
+   "equipamiento_ocupado_m2": 32925,
+   "equipamiento_vacante_m2": 8196,
+   "pct_residencial_vacante": 7.5,
+   "pct_equipamiento_vacante": 19.9,
+   "parcelas_equipamiento_vacantes": 6
+  },
+  {
+   "ambito": "S-1 PARQUE NORTE",
+   "viviendas_previstas": 283,
+   "residencial_ocupado_m2": 46486,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 94,
+   "equipamiento_vacante_m2": 9357,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": 99.0,
+   "parcelas_equipamiento_vacantes": 5
+  },
+  {
+   "ambito": "S-3 EL BALCÓN DEL HENARES",
+   "viviendas_previstas": 192,
+   "residencial_ocupado_m2": 36548,
+   "residencial_vacante_m2": 141,
+   "equipamiento_ocupado_m2": 424,
+   "equipamiento_vacante_m2": 4851,
+   "pct_residencial_vacante": 0.4,
+   "pct_equipamiento_vacante": 92.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "API-3",
+   "viviendas_previstas": 189,
+   "residencial_ocupado_m2": 21337,
+   "residencial_vacante_m2": 2073,
+   "equipamiento_ocupado_m2": 7725,
+   "equipamiento_vacante_m2": 989,
+   "pct_residencial_vacante": 8.9,
+   "pct_equipamiento_vacante": 11.4,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "UE-8 LIMITE NORTE",
+   "viviendas_previstas": 106,
+   "residencial_ocupado_m2": 5181,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-15 PARQUE DEL SUROESTE",
+   "viviendas_previstas": 96,
+   "residencial_ocupado_m2": 8055,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-16 PASEO DEL ARENERO",
+   "viviendas_previstas": 60,
+   "residencial_ocupado_m2": 8290,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-11 CATEDRAL",
+   "viviendas_previstas": 49,
+   "residencial_ocupado_m2": 2449,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-14 ESQUINA GAUDI-ARENERO",
+   "viviendas_previstas": 45,
+   "residencial_ocupado_m2": 2920,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-9 C/ SANTA ROSA",
+   "viviendas_previstas": 33,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 3486,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-20 CAMINO DE LA PRESA",
+   "viviendas_previstas": 30,
+   "residencial_ocupado_m2": 6311,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-19 C/ ANTONIO MACHADO",
+   "viviendas_previstas": 22,
+   "residencial_ocupado_m2": 848,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-2 C/COLEGIO JARAMA",
+   "viviendas_previstas": 14,
+   "residencial_ocupado_m2": 1601,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "PO-1 NORTE LAS ACACIAS",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "S-10 INDUSTRIAL",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 21012,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "S-4 EL ANGELILLO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 283,
+   "equipamiento_vacante_m2": 2826,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 90.9,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "S-5 ROMPEREJAS",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 2921,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 1
+  },
+  {
+   "ambito": "S-9",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 141,
+   "equipamiento_vacante_m2": 17320,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 99.2,
+   "parcelas_equipamiento_vacantes": 7
+  },
+  {
+   "ambito": "UE-10 CERRO DE LA HORCA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 1507,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-12 C/ DE LA IGLESIA",
+   "viviendas_previstas": 0,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-17 ROTONDA",
+   "viviendas_previstas": 0,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "UE-18 EJE O'DONNELL",
+   "viviendas_previstas": 0,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

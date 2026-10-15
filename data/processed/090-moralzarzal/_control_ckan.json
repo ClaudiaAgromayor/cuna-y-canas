@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "090",
+  "nombre": "Moralzarzal",
+  "nombre_ckan": "Moralzarzal",
+  "slug": "moralzarzal"
+ },
+ "educativos_municipio": 16,
+ "educativos_en_alta": 10,
+ "educativos_guardados": 10,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 90,
+ "sanitarios_centros": 34,
+ "sanitarios_guardados": 33,
+ "sanitarios_sin_coordenadas": 1,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 11,
+ "sociales_guardados": 11,
+ "sociales_sin_coordenadas": 0,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 3,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 14725
+}

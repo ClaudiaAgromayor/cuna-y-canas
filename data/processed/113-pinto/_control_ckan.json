@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "113",
+  "nombre": "Pinto",
+  "nombre_ckan": "Pinto",
+  "slug": "pinto"
+ },
+ "educativos_municipio": 41,
+ "educativos_en_alta": 26,
+ "educativos_guardados": 25,
+ "educativos_sin_coordenadas": 1,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 297,
+ "sanitarios_centros": 126,
+ "sanitarios_guardados": 126,
+ "sanitarios_sin_coordenadas": 0,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 17,
+ "sociales_guardados": 15,
+ "sociales_sin_coordenadas": 2,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 17,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 56592
+}

@@ -1,0 +1,54 @@
+{
+ "municipio": {
+  "cod": "181",
+  "nombre": "Villaviciosa de Odón",
+  "nombre_ckan": "Villaviciosa de Odón",
+  "slug": "villaviciosa-de-odon"
+ },
+ "ambitos_poligonos_brutos": 61,
+ "ambitos_geometrias_invalidas_reparadas": 4,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 43,
+ "ambitos_sin_viviendas": 15,
+ "ambitos_guardados": 43,
+ "redes_geometrias_invalidas_reparadas": 119,
+ "redes_brutas": 450,
+ "redes_dotacionales": 68,
+ "redes_por_tipo_y_estado": {
+  "asistencial/sin_dato": 1,
+  "cultural/sin_dato": 1,
+  "deportivo/sin_dato": 13,
+  "educativo/sin_dato": 7,
+  "sanitario/sin_dato": 1,
+  "zona_verde/sin_dato": 45
+ },
+ "redes_guardadas": 68,
+ "suelo_parcelas_brutas": 12335,
+ "suelo_geometrias_invalidas_reparadas": 5131,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 42,
+ "candidatas_vacantes_equipamiento": 79,
+ "candidatas_sin_superficie_en_origen": 21,
+ "candidatas_descartadas_menores_de_50_m2": 30,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 49,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 34,
+  ">=2000": 28,
+  ">=5000": 17,
+  ">=10000": 8
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 65,
+  "centros_educativos.geojson": 8,
+  "centros_sanitarios.geojson": 29,
+  "centros_sociales.geojson": 3,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 26,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 38,
+  "resumen_ambitos.json": 15
+ }
+}

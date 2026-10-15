@@ -1,0 +1,54 @@
+{
+ "municipio": {
+  "cod": "049",
+  "nombre": "Coslada",
+  "nombre_ckan": "Coslada",
+  "slug": "coslada"
+ },
+ "ambitos_poligonos_brutos": 46,
+ "ambitos_geometrias_invalidas_reparadas": 9,
+ "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
+ "ambitos": 38,
+ "ambitos_sin_viviendas": 23,
+ "ambitos_guardados": 38,
+ "redes_geometrias_invalidas_reparadas": 148,
+ "redes_brutas": 452,
+ "redes_dotacionales": 218,
+ "redes_por_tipo_y_estado": {
+  "asistencial/sin_dato": 7,
+  "cultural/sin_dato": 13,
+  "deportivo/sin_dato": 16,
+  "educativo/sin_dato": 38,
+  "sanitario/sin_dato": 8,
+  "zona_verde/sin_dato": 136
+ },
+ "redes_guardadas": 218,
+ "suelo_parcelas_brutas": 5921,
+ "suelo_geometrias_invalidas_reparadas": 2451,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 38,
+ "candidatas_vacantes_equipamiento": 47,
+ "candidatas_sin_superficie_en_origen": 0,
+ "candidatas_descartadas_menores_de_50_m2": 4,
+ "candidatas_duplicadas_por_referencia_catastral": 1,
+ "candidatas_guardadas": 43,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 33,
+  ">=2000": 23,
+  ">=5000": 12,
+  ">=10000": 8
+ },
+ "portal_suelo_parcelas": 0,
+ "tamanos_kb": {
+  "ambitos.geojson": 58,
+  "centros_educativos.geojson": 15,
+  "centros_sanitarios.geojson": 55,
+  "centros_sociales.geojson": 10,
+  "natalidad.json": 1,
+  "parcelas_vacantes.geojson": 24,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 0,
+  "redes.geojson": 138,
+  "resumen_ambitos.json": 13
+ }
+}

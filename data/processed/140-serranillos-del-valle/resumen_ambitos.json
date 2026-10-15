@@ -1,0 +1,171 @@
+{
+ "cod_ine": "140",
+ "fuente": "IDEM suelo vacante y ocupado 2026 y planeamiento refundido 2025",
+ "ambitos": [
+  {
+   "ambito": "SUZ-R.6 PRADERA DE LA SORDA",
+   "viviendas_previstas": 333,
+   "residencial_ocupado_m2": 47,
+   "residencial_vacante_m2": 89005,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 37365,
+   "pct_residencial_vacante": 99.9,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 8
+  },
+  {
+   "ambito": "SUZ-R5 EL ALAMILLO",
+   "viviendas_previstas": 291,
+   "residencial_ocupado_m2": 1087,
+   "residencial_vacante_m2": 56169,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 15873,
+   "pct_residencial_vacante": 98.1,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "SUZ-R.1 LA DIEZMARÍA",
+   "viviendas_previstas": 205,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 105525,
+   "equipamiento_ocupado_m2": 47,
+   "equipamiento_vacante_m2": 38782,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 99.9,
+   "parcelas_equipamiento_vacantes": 4
+  },
+  {
+   "ambito": "SUZ-R.2 CAMINO DE BATRES",
+   "viviendas_previstas": 185,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 85736,
+   "equipamiento_ocupado_m2": 1275,
+   "equipamiento_vacante_m2": 19934,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 94.0,
+   "parcelas_equipamiento_vacantes": 4
+  },
+  {
+   "ambito": "SUZ-R.3 LA OLIVILLA",
+   "viviendas_previstas": 178,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 57195,
+   "equipamiento_ocupado_m2": 7228,
+   "equipamiento_vacante_m2": 4913,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 40.5,
+   "parcelas_equipamiento_vacantes": 3
+  },
+  {
+   "ambito": "AA-2 ARROYO DEL HUERTO",
+   "viviendas_previstas": 120,
+   "residencial_ocupado_m2": 14124,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 5385,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 3
+  },
+  {
+   "ambito": "SUZ-R.4 CAMINO DE SAN JUAN",
+   "viviendas_previstas": 106,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 25085,
+   "equipamiento_ocupado_m2": 378,
+   "equipamiento_vacante_m2": 1984,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 84.0,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "AS-1 CALLE MADRID NORTE",
+   "viviendas_previstas": 28,
+   "residencial_ocupado_m2": 3968,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 47,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": 0.0,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "AA-1 CALLE DEL CERRO",
+   "viviendas_previstas": 16,
+   "residencial_ocupado_m2": 6235,
+   "residencial_vacante_m2": 236,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 1606,
+   "pct_residencial_vacante": 3.6,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 2
+  },
+  {
+   "ambito": "AS-3 CALLE MORALEJA DE ENMEDIO",
+   "viviendas_previstas": 14,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 1653,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "AS-2 CALLE DEL TRÉBOL",
+   "viviendas_previstas": 12,
+   "residencial_ocupado_m2": 1275,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 0.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SUZ-AP.1 ARROYO DEL PRADO",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 10251,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": 100.0,
+   "parcelas_equipamiento_vacantes": 3
+  },
+  {
+   "ambito": "SUZ-AP.2 CARRETERA DE CARRANQUE",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 47,
+   "equipamiento_ocupado_m2": 945,
+   "equipamiento_vacante_m2": 21012,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": 95.7,
+   "parcelas_equipamiento_vacantes": 5
+  },
+  {
+   "ambito": "SUZ-NS.1 LA LAGUNITA",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 231014,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": 100.0,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  },
+  {
+   "ambito": "SUZ-NS.2 EL MAZARRÓN",
+   "viviendas_previstas": null,
+   "residencial_ocupado_m2": 0,
+   "residencial_vacante_m2": 0,
+   "equipamiento_ocupado_m2": 0,
+   "equipamiento_vacante_m2": 0,
+   "pct_residencial_vacante": null,
+   "pct_equipamiento_vacante": null,
+   "parcelas_equipamiento_vacantes": 0
+  }
+ ]
+}

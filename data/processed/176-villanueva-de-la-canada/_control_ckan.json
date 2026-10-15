@@ -1,0 +1,28 @@
+{
+ "municipio": {
+  "cod": "176",
+  "nombre": "Villanueva de la Cañada",
+  "nombre_ckan": "Villanueva de la Cañada",
+  "slug": "villanueva-de-la-canada"
+ },
+ "educativos_municipio": 31,
+ "educativos_en_alta": 20,
+ "educativos_guardados": 20,
+ "educativos_sin_coordenadas": 0,
+ "educativos_coordenadas_fuera_del_municipio": 0,
+ "sanitarios_filas": 180,
+ "sanitarios_centros": 65,
+ "sanitarios_guardados": 64,
+ "sanitarios_sin_coordenadas": 1,
+ "sanitarios_coordenadas_fuera_del_municipio": 0,
+ "sociales_municipio": 10,
+ "sociales_guardados": 10,
+ "sociales_sin_coordenadas": 0,
+ "sociales_coordenadas_fuera_del_municipio": 0,
+ "farmacias_guardados": 7,
+ "farmacias_sin_coordenadas": 0,
+ "farmacias_coordenadas_fuera_del_municipio": 0,
+ "natalidad_anios": 40,
+ "poblacion_anios": 5,
+ "poblacion_total_ultimo_anio": 23784
+}

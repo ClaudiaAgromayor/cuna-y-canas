@@ -1,0 +1,49 @@
+{
+ "municipio": {
+  "cod": "022",
+  "nombre": "Boadilla del Monte",
+  "nombre_ckan": "Boadilla del Monte",
+  "slug": "boadilla-del-monte"
+ },
+ "ambitos_poligonos_brutos": 0,
+ "ambitos": 0,
+ "redes_guardadas": 0,
+ "suelo_parcelas_brutas": 13237,
+ "suelo_geometrias_invalidas_reparadas": 5810,
+ "suelo_parcelas_en_ambitos_solapados": 0,
+ "resumen_ambitos": 0,
+ "candidatas_vacantes_equipamiento": 193,
+ "candidatas_sin_superficie_en_origen": 34,
+ "candidatas_descartadas_menores_de_50_m2": 68,
+ "candidatas_duplicadas_por_referencia_catastral": 0,
+ "candidatas_guardadas": 125,
+ "candidatas_por_tamano_m2": {
+  ">=1000": 80,
+  ">=2000": 74,
+  ">=5000": 48,
+  ">=10000": 30
+ },
+ "portal_suelo_parcelas": 16,
+ "portal_suelo_sin_geometria": 0,
+ "portal_suelo_por_uso": {
+  "Residencial": 11,
+  "Comercial": 3,
+  "Terciario": 1,
+  "Otros": 1
+ },
+ "portal_suelo_guardadas": 16,
+ "tamanos_kb": {
+  "ambitos.geojson": 0,
+  "centros_educativos.geojson": 15,
+  "centros_sanitarios.geojson": 60,
+  "centros_sociales.geojson": 3,
+  "farmacias.geojson": 5,
+  "natalidad.json": 1,
+  "paradas.geojson": 74,
+  "parcelas_vacantes.geojson": 64,
+  "poblacion.json": 3,
+  "portal_suelo.geojson": 11,
+  "redes.geojson": 0,
+  "resumen_ambitos.json": 0
+ }
+}

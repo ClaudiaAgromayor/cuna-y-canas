@@ -1,0 +1,87 @@
+{
+ "municipios": [
+  {
+   "cod_ine": "065",
+   "slug": "getafe",
+   "carpeta": "065-getafe",
+   "nombre": "Getafe",
+   "centro": [
+    -3.66585,
+    40.3007
+   ],
+   "bbox": [
+    -3.7617,
+    40.2664,
+    -3.57,
+    40.335
+   ],
+   "poblacion": 195628,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 25388,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "generado": "2026-10-16 00:03"
+  },
+  {
+   "cod_ine": "096",
+   "slug": "navalcarnero",
+   "carpeta": "096-navalcarnero",
+   "nombre": "Navalcarnero",
+   "centro": [
+    -4.0124,
+    40.282
+   ],
+   "bbox": [
+    -4.0879,
+    40.2246,
+    -3.9369,
+    40.3394
+   ],
+   "poblacion": 33352,
+   "anio_poblacion": "2025",
+   "viviendas_previstas": 21434,
+   "capas": {
+    "ambitos": true,
+    "parcelas_vacantes": true,
+    "redes": true,
+    "portal_suelo": true,
+    "centros_educativos": true,
+    "centros_sanitarios": true,
+    "centros_sociales": true,
+    "secciones": true,
+    "paradas": true,
+    "zonas_salud": true,
+    "demanda_puntos": true
+   },
+   "tablas": {
+    "natalidad": true,
+    "poblacion": true,
+    "resumen_ambitos": true,
+    "secciones_series": true,
+    "demanda": true
+   },
+   "faltan": [],
+   "generado": "2026-10-16 00:03"
+  }
+ ],
+ "servicios": "servicios.json"
+}

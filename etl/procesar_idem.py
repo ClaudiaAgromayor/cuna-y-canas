@@ -19,7 +19,7 @@ import geopandas as gpd
 import numpy as np
 import pandas as pd
 
-from comun import carpeta_salida, resolver_municipio
+from comun import carpeta_salida, resolver_municipio, solo_poligonos
 from descargar_idem import carpeta_raw, descargar
 
 M = 25830            # CRS métrico (ETRS89 / UTM 30N) para medir superficies y simplificar
@@ -50,11 +50,12 @@ def reparar(g: gpd.GeoDataFrame) -> gpd.GeoDataFrame:
 
 def guardar(g: gpd.GeoDataFrame, ruta, muni: dict, tol: float = TOL_M) -> int:
     g = g.copy()
-    g["geometry"] = g.geometry.simplify(tol, preserve_topology=True).make_valid()
+    g["geometry"] = solo_poligonos(g.geometry.simplify(tol, preserve_topology=True))
     g = g[~g.geometry.is_empty]
     g["cod_ine"] = muni["cod"]
     g = g.to_crs(4326)
-    g["geometry"] = g.geometry.set_precision(1e-6, mode="pointwise").make_valid()  # ~10 cm: aligera sin reconstruir la topología
+    g["geometry"] = solo_poligonos(g.geometry.set_precision(1e-6, mode="pointwise"))  # ~10 cm: aligera sin reconstruir la topología
+    g = g[~g.geometry.is_empty]
     ruta.write_text(g.to_json(drop_id=True, ensure_ascii=False), encoding="utf-8")
     return len(g)
 

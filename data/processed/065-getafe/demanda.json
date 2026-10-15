@@ -1,0 +1,778 @@
+{
+ "cod_ine": "065",
+ "modelo": "población al completarse = viviendas previstas × habitantes por vivienda prevista; resultados en [mínimo, central, máximo]",
+ "calibracion": {
+  "municipio": "Getafe",
+  "fuente": "INE (Atlas de Distribución de Renta de los Hogares) + IDEM (ámbitos y suelo vacante)",
+  "criterio": "barrios con al menos 1000 viviendas previstas, menos del 15 % de suelo residencial vacante y al menos 1 sección censal entera dentro",
+  "barrios": [
+   {
+    "ambito": "SUI-05 PAU-2 EL BERCIAL-UNIVERSIDAD",
+    "viviendas": 5950,
+    "anio": 2023,
+    "poblacion": 12931,
+    "hab_por_vivienda": 2.173,
+    "tam_hogar": 2.96,
+    "pct_menores18": 28.7,
+    "pct_mayores65": 7.9,
+    "serie": {
+     "2015": 10740,
+     "2016": 11242,
+     "2017": 11709,
+     "2018": 12016,
+     "2019": 12172,
+     "2020": 12126,
+     "2021": 12291,
+     "2022": 12618,
+     "2023": 12931
+    }
+   },
+   {
+    "ambito": "SUI-07 PAU-3 PERALES DEL RÍO",
+    "viviendas": 1750,
+    "anio": 2023,
+    "poblacion": 3807,
+    "hab_por_vivienda": 2.175,
+    "tam_hogar": 3.22,
+    "pct_menores18": 25.6,
+    "pct_mayores65": 9.0,
+    "serie": {
+     "2015": 1699,
+     "2016": 1701,
+     "2017": 3289,
+     "2018": 3363,
+     "2019": 3392,
+     "2020": 3396,
+     "2021": 3744,
+     "2022": 3784,
+     "2023": 3807
+    }
+   },
+   {
+    "ambito": "SUS-PP-2 LOS MOLINOS",
+    "viviendas": 6276,
+    "anio": 2023,
+    "poblacion": 11473,
+    "hab_por_vivienda": 1.828,
+    "tam_hogar": 2.58,
+    "pct_menores18": 30.5,
+    "pct_mayores65": 2.4,
+    "serie": {
+     "2015": 5983,
+     "2016": 6554,
+     "2017": 7712,
+     "2018": 8369,
+     "2019": 8895,
+     "2020": 9741,
+     "2021": 10345,
+     "2022": 10832,
+     "2023": 11473
+    }
+   },
+   {
+    "ambito": "SUS-PP-3 BUENAVISTA",
+    "viviendas": 5958,
+    "anio": 2023,
+    "poblacion": 8854,
+    "hab_por_vivienda": 1.486,
+    "tam_hogar": 2.47,
+    "pct_menores18": 30.2,
+    "pct_mayores65": 3.1,
+    "serie": {
+     "2015": 6027,
+     "2016": 6823,
+     "2017": 5857,
+     "2018": 6623,
+     "2019": 7122,
+     "2020": 7565,
+     "2021": 8067,
+     "2022": 8374,
+     "2023": 8854
+    }
+   }
+  ],
+  "parametros": {
+   "hab_por_vivienda": [
+    1.486,
+    2.001,
+    2.175
+   ],
+   "pct_menores18": [
+    25.6,
+    29.45,
+    30.5
+   ],
+   "pct_mayores65": [
+    2.4,
+    5.5,
+    9.0
+   ]
+  },
+  "reparto_menores": {
+   "g0_2": 0.1342,
+   "g3_5": 0.1478,
+   "g6_11": 0.3545,
+   "g12_17": 0.3634
+  },
+  "tam_hogar_mediano_municipio": 2.6
+ },
+ "prueba_con_el_pasado": [
+  {
+   "ambito": "SUI-05 PAU-2 EL BERCIAL-UNIVERSIDAD",
+   "anio": 2023,
+   "real": 12931,
+   "prediccion": 10887,
+   "error_pct": -15.8,
+   "prediccion_ingenua": 15470,
+   "error_ingenua_pct": 19.6,
+   "rango": [
+    8842,
+    12941
+   ],
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "SUI-07 PAU-3 PERALES DEL RÍO",
+   "anio": 2023,
+   "real": 3807,
+   "prediccion": 3201,
+   "error_pct": -15.9,
+   "prediccion_ingenua": 4550,
+   "error_ingenua_pct": 19.5,
+   "rango": [
+    2600,
+    3803
+   ],
+   "dentro_del_rango": false
+  },
+  {
+   "ambito": "SUS-PP-2 LOS MOLINOS",
+   "anio": 2023,
+   "real": 11473,
+   "prediccion": 12205,
+   "error_pct": 6.4,
+   "prediccion_ingenua": 16318,
+   "error_ingenua_pct": 42.2,
+   "rango": [
+    9326,
+    13650
+   ],
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "SUS-PP-3 BUENAVISTA",
+   "anio": 2023,
+   "real": 8854,
+   "prediccion": 12266,
+   "error_pct": 38.5,
+   "prediccion_ingenua": 15491,
+   "error_ingenua_pct": 75.0,
+   "rango": [
+    10891,
+    12959
+   ],
+   "dentro_del_rango": false
+  }
+ ],
+ "ambitos": [
+  {
+   "ambito": "SUS-PP-2 LOS MOLINOS",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 6276,
+   "estado": "habitado",
+   "pct_residencial_vacante": 8.2,
+   "poblacion_actual": 11473,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    9326,
+    12558,
+    13650
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     320,
+     496,
+     559
+    ],
+    "g3_5": [
+     353,
+     547,
+     615
+    ],
+    "g6_11": [
+     846,
+     1311,
+     1476
+    ],
+    "g12_17": [
+     868,
+     1344,
+     1513
+    ],
+    "g65": [
+     224,
+     691,
+     1228
+    ]
+   }
+  },
+  {
+   "ambito": "SUS-PP-3 BUENAVISTA",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 5958,
+   "estado": "habitado",
+   "pct_residencial_vacante": 9.8,
+   "poblacion_actual": 8854,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    8854,
+    11922,
+    12959
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     304,
+     471,
+     530
+    ],
+    "g3_5": [
+     335,
+     519,
+     584
+    ],
+    "g6_11": [
+     804,
+     1245,
+     1401
+    ],
+    "g12_17": [
+     824,
+     1276,
+     1436
+    ],
+    "g65": [
+     212,
+     656,
+     1166
+    ]
+   }
+  },
+  {
+   "ambito": "SUI-05 PAU-2 EL BERCIAL-UNIVERSIDAD",
+   "clase_suelo": "Suelo Urbanizable Programado (INCORPORADO)",
+   "viviendas": 5950,
+   "estado": "habitado",
+   "pct_residencial_vacante": 4.2,
+   "poblacion_actual": 12931,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    8842,
+    11906,
+    12941
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     304,
+     471,
+     530
+    ],
+    "g3_5": [
+     335,
+     518,
+     583
+    ],
+    "g6_11": [
+     802,
+     1243,
+     1399
+    ],
+    "g12_17": [
+     823,
+     1274,
+     1434
+    ],
+    "g65": [
+     212,
+     655,
+     1165
+    ]
+   }
+  },
+  {
+   "ambito": "AA-01 EL ROSÓN",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 2752,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 35.5,
+   "poblacion_actual": 2025,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    4089,
+    5507,
+    5986
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     140,
+     218,
+     245
+    ],
+    "g3_5": [
+     155,
+     240,
+     270
+    ],
+    "g6_11": [
+     371,
+     575,
+     647
+    ],
+    "g12_17": [
+     380,
+     589,
+     663
+    ],
+    "g65": [
+     98,
+     303,
+     539
+    ]
+   }
+  },
+  {
+   "ambito": "SUI-07 PAU-3 PERALES DEL RÍO",
+   "clase_suelo": "Suelo Urbanizable Programado (INCORPORADO)",
+   "viviendas": 1750,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.5,
+   "poblacion_actual": 3807,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    2600,
+    3502,
+    3806
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     89,
+     138,
+     156
+    ],
+    "g3_5": [
+     98,
+     152,
+     172
+    ],
+    "g6_11": [
+     236,
+     366,
+     412
+    ],
+    "g12_17": [
+     242,
+     375,
+     422
+    ],
+    "g65": [
+     62,
+     193,
+     343
+    ]
+   }
+  },
+  {
+   "ambito": "API-PERI-01 KELVINATOR",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": 1080,
+   "estado": "habitado",
+   "pct_residencial_vacante": 5.6,
+   "poblacion_actual": 756,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    1605,
+    2161,
+    2349
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     55,
+     85,
+     96
+    ],
+    "g3_5": [
+     61,
+     94,
+     106
+    ],
+    "g6_11": [
+     146,
+     226,
+     254
+    ],
+    "g12_17": [
+     149,
+     231,
+     260
+    ],
+    "g65": [
+     39,
+     119,
+     211
+    ]
+   }
+  },
+  {
+   "ambito": "AA-02 LA ESTACIÓN",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 700,
+   "estado": "futuro",
+   "pct_residencial_vacante": 100.0,
+   "poblacion_actual": 496,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    1040,
+    1401,
+    1522
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     36,
+     55,
+     62
+    ],
+    "g3_5": [
+     39,
+     61,
+     69
+    ],
+    "g6_11": [
+     94,
+     146,
+     165
+    ],
+    "g12_17": [
+     97,
+     150,
+     169
+    ],
+    "g65": [
+     25,
+     77,
+     137
+    ]
+   }
+  },
+  {
+   "ambito": "AA-06 ILUSTRACIÓN",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 532,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 629,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    791,
+    1065,
+    1157
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     27,
+     42,
+     47
+    ],
+    "g3_5": [
+     30,
+     46,
+     52
+    ],
+    "g6_11": [
+     72,
+     111,
+     125
+    ],
+    "g12_17": [
+     74,
+     114,
+     128
+    ],
+    "g65": [
+     19,
+     59,
+     104
+    ]
+   }
+  },
+  {
+   "ambito": "AA-07 TROPIC COSTA",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": 200,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 194,
+   "anio_poblacion_actual": 2023,
+   "poblacion_completo": [
+    297,
+    400,
+    435
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     10,
+     16,
+     18
+    ],
+    "g3_5": [
+     11,
+     17,
+     20
+    ],
+    "g6_11": [
+     27,
+     42,
+     47
+    ],
+    "g12_17": [
+     28,
+     43,
+     48
+    ],
+    "g65": [
+     7,
+     22,
+     39
+    ]
+   }
+  },
+  {
+   "ambito": "AA-05 PARCELA L-2",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 190,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null,
+   "poblacion_completo": [
+    282,
+    380,
+    413
+   ],
+   "grupos_completo": {
+    "g0_2": [
+     10,
+     15,
+     17
+    ],
+    "g3_5": [
+     11,
+     17,
+     19
+    ],
+    "g6_11": [
+     26,
+     40,
+     45
+    ],
+    "g12_17": [
+     26,
+     41,
+     46
+    ],
+    "g65": [
+     7,
+     21,
+     37
+    ]
+   }
+  },
+  {
+   "ambito": "AA-03 EL QUIJOBAR",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "AA-04 PUERTA DE GETAFE",
+   "clase_suelo": "Suelo Urbano No Consolidado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 891,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "AA-06",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "API-ED-02 TOLEDO-ROJAS",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 144,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "API-PE-03 AMPLIACIÓN UNIVERSIDAD CARLOS III",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 924,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "PARQUE EMPRESARIAL LA CARPETANIA FASE 2",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 353,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "PARQUE EQUIPADO GETAFE SUR PAU ARROYO CULEBRO",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "PE VIVIENDA PÚBLICA BUENAVISTA",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 561,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "PLAN ESPECIAL ADARO",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "PLAN ESPECIAL AMBITO GETAFE TERMINAL",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "PLAN ESPECIAL DE INTERVENCIÓN EN EL ÁMBITO DE EL HOSPITALILLO",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": null,
+   "estado": "en_desarrollo",
+   "pct_residencial_vacante": 21.0,
+   "poblacion_actual": 383,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "PLAN ESPECIAL ORDENACIÓN REDES PUBLICAS SUPRAMUNICIPALES SUS-PP-2 LOS MOLINOS",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": null,
+   "estado": "habitado",
+   "pct_residencial_vacante": 0.0,
+   "poblacion_actual": 421,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "PP-01 JUNCAL",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 69,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "S-UP-B LOS OLIVOS AMPLIACIÓN",
+   "clase_suelo": "Suelo Urbanizable Programado (INCORPORADO)",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "SUI-01 CULEBRO PP-4 PARQUE INDUSTRIAL GETAFE SUR",
+   "clase_suelo": "Suelo Urbanizable Programado (INCORPORADO)",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 429,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "SUI-03 LOS GAVILANES",
+   "clase_suelo": "Suelo Urbanizable Programado (INCORPORADO)",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 188,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "SUI-04 PAU-4 LA CARPETANIA",
+   "clase_suelo": "Suelo Urbanizable Programado (INCORPORADO)",
+   "viviendas": null,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": 182,
+   "anio_poblacion_actual": 2023
+  },
+  {
+   "ambito": "SUS-PP-3 CONEXIÓN VIARIA N1",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "SUS-PP-4 LOS OLIVOS 3",
+   "clase_suelo": "Suelo Urbanizable Sectorizado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "U-23 RG PINAR",
+   "clase_suelo": "Suelo Urbano",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  },
+  {
+   "ambito": "UE CALLES DE LA CALIDAD, EL DISEÑO, LA ADAPTACIÓN Y LA INNOVACIÓN",
+   "clase_suelo": "Suelo Urbano Consolidado",
+   "viviendas": 0,
+   "estado": "sin_datos",
+   "pct_residencial_vacante": null,
+   "poblacion_actual": null,
+   "anio_poblacion_actual": null
+  }
+ ]
+}

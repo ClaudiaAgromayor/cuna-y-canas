@@ -77,6 +77,26 @@ def resolver_municipio(entrada: str) -> dict:
     return {"cod": fila["cod"], "nombre": nombre, "nombre_ckan": fila["Territorio"], "slug": slug(nombre)}
 
 
+def solo_poligonos(geoms):
+    """Repara y deja solo la parte poligonal (make_valid puede devolver colecciones con líneas o puntos)."""
+    from shapely.geometry import GeometryCollection, MultiPolygon, Polygon
+
+    def limpia(g):
+        if g is None or g.is_empty:
+            return g
+        if isinstance(g, (Polygon, MultiPolygon)):
+            return g
+        partes = [p for p in getattr(g, "geoms", []) if isinstance(p, (Polygon, MultiPolygon))]
+        polys = [q for p in partes for q in (p.geoms if isinstance(p, MultiPolygon) else [p])]
+        return MultiPolygon(polys) if polys else GeometryCollection()
+
+    geoms = geoms.copy()
+    malas = ~geoms.is_valid & geoms.notna()
+    if malas.any():  # "structure" descarta las partes colapsadas sin fallar con geometrías degeneradas
+        geoms[malas] = geoms[malas].make_valid(method="structure", keep_collapsed=False)
+    return geoms.apply(limpia)
+
+
 def carpeta_salida(muni: dict) -> Path:
     out = PROCESSED / f"{muni['cod']}-{muni['slug']}"
     out.mkdir(parents=True, exist_ok=True)

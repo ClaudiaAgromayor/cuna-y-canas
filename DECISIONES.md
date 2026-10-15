@@ -47,20 +47,20 @@ El equipo cree que da tiempo a hacerlo todo. Si nos retrasamos, se recorta por e
 - [x] 1. `etl/descargar_ckan.py`: centros, natalidad y población por municipio.
 - [x] 2. `etl/descargar_idem.py`, `etl/procesar_idem.py` y `etl/verificar.py`: capas ligeras de suelo y planeamiento, ponderadas por superficie.
 - [x] 3. Git y GitHub (hecho el 14 oct): repositorio `https://github.com/ClaudiaAgromayor/cuna-y-canas`, rama `main`, primer commit `f453ab9` con los scripts, `data/processed` y la documentación. `.gitignore` excluye `data/raw`, `.venv` y `node_modules`. La compañera de equipo está invitada como colaboradora.
-- [ ] 3b. `etl/pipeline.py MUNICIPIO`: encadena CKAN, IDEM y verificación, y regenera `data/processed/municipios.json` (índice con código INE, nombre, centro del mapa y qué datos tiene cada municipio).
+- [x] 3b. `etl/pipeline.py MUNICIPIO [...]` (hecho el 15 oct): encadena los 6 pasos y la verificación, y regenera `data/processed/municipios.json` (código INE, nombre, centro, bbox, población, viviendas previstas, capas disponibles y lo que falta). Getafe y Navalcarnero en 23 segundos.
 
 **Etapa 2: demanda y accesibilidad (miércoles 15)**
-- [ ] 4. INE: padrón por sección censal (descarga, recorte a Getafe y Navalcarnero, geometrías de secciones). Resultado: `poblacion_secciones.geojson`.
-- [ ] 5. Paradas de transporte del GTFS del CRTM (solo `stops.txt`, recortadas al municipio) y zonas básicas de salud (SHP, recortadas). Resultados: `paradas.geojson` y `zonas_salud.geojson`.
-- [ ] 6. Modelo de demanda: viviendas previstas × personas por hogar × estructura de edades de un barrio de referencia (El Bercial) × curva de llenado anual. Entradas fijadas, salida siempre en rango (mínimo, central y máximo). Resultado: `demanda.json` por ámbito, año y grupo de edad.
+- [x] 4. `etl/secciones.py` (hecho el 15 oct): geometrías de la IDEM (`IDEM_GDIE_G_SECCION`) e indicadores del INE por sección 2015–2023 (tabla 31105 del Atlas de Renta: población, % menores de 18, % 65 y más, tamaño del hogar). Población de cada ámbito repartida por áreas. Resultados: `secciones.geojson` y `secciones_series.json`.
+- [x] 5. `etl/transporte.py` y `etl/zonas.py` (hecho el 15 oct): paradas de los servicios de datos abiertos del CRTM (interurbanos, urbanos, Cercanías, Metro y Metro Ligero), filtradas por provincia y municipio; zonas básicas de salud construidas uniendo secciones y nombradas cruzando con el SHP de CKAN. Resultados: `paradas.geojson` y `zonas_salud.geojson`.
+- [x] 6. `etl/demanda.py` (hecho el 15 oct): población al completarse = viviendas previstas × habitantes por vivienda prevista, calibrado con 4 barrios nuevos ya habitados de Getafe; rangos [mínimo, central, máximo]; prueba con el pasado dejando cada barrio fuera. Resultados: `servicios.json` (supuestos por servicio), `demanda.json` y `demanda_puntos.geojson` (dónde está la demanda hoy y en el futuro). La curva de llenado año a año pasa a la web como deslizador.
 
 **Etapa 3: web y pantalla técnica (jueves 16)**
-- [ ] 7. Base de la web: Vite, React, TypeScript, MapLibre y Tailwind. Lee `municipios.json`, tiene el selector de municipio y carga las capas del elegido. Sin nada escrito a fuego para Getafe.
-- [ ] 8. Algoritmo y controles: cobertura máxima con límite de capacidad en TypeScript (en un Web Worker para que no se bloquee el mapa), deslizadores (población, capacidad, superficie mínima, minutos andando), escenarios lado a lado, arrastrar una parcela, los 5 servicios y exportación en GeoJSON y en informe.
+- [x] 7. Base de la web (hecho el 15-16 oct): `web/` con Vite, React 19, TypeScript, MapLibre 5.6 y Tailwind 4. Lee `municipios.json`, selector de municipio en la cabecera, el municipio y la pantalla quedan en la URL (`#m=065&p=tecnica`) y nada está escrito a fuego para Getafe. Segunda barrera anti-mezcla en el navegador (`datos.ts` rechaza elementos de otro municipio). Mapa base oficial del IGN.
+- [x] 8. Pantalla técnica (hecho el 16 oct): `web/src/algoritmo.ts` (cobertura máxima con límite de capacidad, voraz), los 5 servicios, 7 deslizadores (habitantes por vivienda, llenado de barrios nuevos, tasa de uso, capacidad, minutos andando, superficie mínima, nº de centros), descontar centros existentes, fijar o descartar parcelas con un clic, **arrastrar** una ubicación propuesta y ver el resultado al momento, guardar un escenario A y compararlo, alternativas descartadas con su motivo, prueba con el pasado a la vista y exportación en GeoJSON e informe HTML.
 
 **Etapa 4: lo que viene y pantalla ciudadana (viernes 17)**
 - [ ] 9. Licitaciones: descarga de PLACSP (ATOM) y BOCM (XML) filtrando por municipio; extracción con Claude Code a fichas JSON (objeto, ubicación, importe, fase, fecha, enlace oficial, código INE); reglas: no inventar, "sin datos" si no está claro y rechazo si el municipio del anuncio no coincide; revisión a mano de una muestra. Resultado: `licitaciones.json`.
-- [ ] 10. Pantalla ciudadana: buscador con CartoCiudad, filtros por situación (bebé, escolar, cuidar de mayores) y por estado, tarjetas con la fuente enlazada, brecha visible y ficha en PDF.
+- [~] 10. Pantalla ciudadana (casi hecha el 16 oct): buscador de direcciones con CartoCiudad (funciona desde el navegador y filtra por municipio), selector de barrios nuevos, clic en el mapa, filtros por etapa de la vida, tarjetas con estado y enlace a la fuente oficial, aviso de brecha con rango, suelo reservado cerca ("Suelo disponible"), paradas a menos de 5 minutos con sus líneas y ficha imprimible en PDF. **Falta:** los estados prevista, licitada, adjudicada y en obras, que llegan con el paso 9.
 
 **Etapa 5: validación y publicación (sábado 18)**
 - [ ] 11. Prueba con el pasado en Los Molinos y Buenavista (población prevista frente a padrón real, con el error a la vista), prueba de robustez (menos viviendas y retrasos de etapa), informe exportable.
@@ -153,6 +153,58 @@ Lo sacamos de OneDrive para que no sincronice `.venv` ni `node_modules`. La copi
 
 ## 4. Hallazgos en los datos
 Sirven para la presentación, en el criterio de tratamiento de los datos.
+
+### 16 oct: rediseño con el estilo de las webs de la Comunidad de Madrid
+- **Por qué:** la primera versión tenía colores pastel, botones redondeados y estaba poco organizada. El equipo pidió algo más profesional, limpio y muy fácil de usar, en la línea de comunidad.madrid.
+- **Qué tomamos de comunidad.madrid** (revisada el 16 oct): cabecera negra (#131313), tipografía IBM Plex Sans, rojo institucional (#DE0029) solo como acento, botones rectos con borde fino (2 px de radio como máximo), mucho blanco y títulos grandes.
+- **Logo:** uno propio (cuadrado rojo con una cuna en blanco), **no el emblema oficial** de la Comunidad. Usar la marca institucional en una herramienta no oficial podría parecer un respaldo de la Comunidad, y en el jurado hay representación suya. En su lugar, la mención "Con datos abiertos de la Comunidad de Madrid".
+- **Sencillez:**
+  - "Mi barrio" es la pantalla de entrada: un buscador grande, 4 casillas con icono para elegir qué te interesa, y resultados en filas con los minutos a pie y el estado.
+  - En la pantalla técnica, 3 pasos numerados con solo 3 deslizadores a la vista; el resto va plegado en "Supuestos avanzados".
+  - El resultado se resume en una frase grande ("3 centros nuevos") y una barra de cobertura.
+- **Detalles:** iconos de línea propios en lugar de bolas de colores; las líneas de autobús y metro como etiquetas; los nombres en mayúsculas de los registros pasan a formato normal; el mapa se encuadra en la zona habitada y no en todo el término municipal.
+
+### 16 oct: decisiones de la web
+- **Sin Web Worker:** el cálculo completo tarda milisegundos (unos 300 puntos de demanda por 300 candidatas), así que no hace falta. Se descarta para no añadir complejidad.
+- **Ocupación mínima del 30 %:** el algoritmo no propone un centro nuevo que se llenaría por debajo del 30 % de su capacidad. Sin esto proponía, por ejemplo, una escuela infantil al 23 %. Cuando ocurre, la web avisa de que la demanda restante está "dispersa" y que puede atenderse ampliando centros existentes.
+- **Mapa base del IGN (IGN Base, WMTS público), atenuado.** El de CARTO empezó a pedir clave de API. El del IGN es oficial y encaja con el discurso de datos abiertos.
+- **Distancias en línea recta, a 80 m por minuto.** Es una aproximación y la web lo dice. Mejora posible: tiempos por la red de calles.
+- **Nombres legibles de barrio:** "SUS-PP-2 LOS MOLINOS" se muestra como "Los Molinos", con el código oficial al lado en la pantalla técnica. Los centros de salud del registro sanitario no traen nombre: se identifican por su calle ("Centro de salud (Palestina)").
+- **Qué centros cuentan como oferta, por servicio** (`servicios.json`, campo `existentes`): escuelas infantiles públicas y privadas; colegios públicos y concertados; centros de salud; centros de día de mayores **sin** "hogares y clubes" (habrían sumado 1.459 plazas que no son de centro de día); residencias de mayores con sus plazas reales.
+- **Colegio:** la tasa de uso pasa a ser la proporción de alumnado en centros sostenidos con fondos públicos (supuesto 80–90 %), coherente con contar como oferta los públicos y los concertados.
+- **Probado en el navegador** con Getafe y Navalcarnero, en las dos pantallas. Resultados que sirven para la demo: en Getafe propone un colegio en Los Molinos que se llenaría al 100 % (675 plazas), a 212 m del metro El Casar; en la pantalla ciudadana, desde la Avenida Rocinante 8 no hay ningún centro de salud a menos de 15 minutos andando, y el barrio necesitará entre 959 y 1.882 plazas de colegio, frente a 675 cerca.
+- **Arranque local:** `.claude/launch.json` (servidor `web`) o `npm --prefix web run dev`. Producción: `npm --prefix web run build` → `web/dist` (código de unos 344 KB comprimido, más unos 2,4 MB de datos de los dos municipios).
+
+### 16 oct: más hallazgos en los datos
+- **Las paradas compartidas entre redes aparecen dos veces** en los servicios del Consorcio: la misma parada física, con el mismo identificador, en interurbanos y en urbanos (237 en Getafe y 45 en Navalcarnero). Se fusionan en una sola con todas sus líneas: Getafe pasa de 594 registros a 357 paradas reales y Navalcarnero de 125 a 80.
+- **Algunas geometrías reparadas salían como "colecciones"** (polígonos mezclados con líneas), y la web fallaba al buscar en qué barrio cae un punto. Ahora el procesado guarda solo polígonos y `verificar.py` rechaza cualquier otro tipo de geometría.
+
+### 15 oct: el modelo de demanda, calibrado con barrios reales (paso 6)
+- **En los barrios nuevos de Getafe viven entre 1,49 y 2,18 personas por vivienda prevista** (mediana 2,00), no los ~2,6 del tamaño medio del hogar. No todas las viviendas del plan llegan a estar habitadas, o no a la vez: la regla habitual (viviendas × tamaño del hogar) **sobreestima**.
+- **Los menores de 18 son entre el 25,6 y el 30,5 %** de la población en esos barrios (mediana 29,5 %), frente al 18,2 % del conjunto de Getafe. Los mayores de 65, entre el 2,4 y el 9 %.
+- **Barrios de calibración** (al menos 1.000 viviendas, menos del 15 % de suelo residencial vacante y al menos una sección censal entera dentro): El Bercial, Perales del Río, Los Molinos y Buenavista. Kelvinator quedó fuera: ninguna sección cae entera dentro y daba 0,7 habitantes por vivienda, un artefacto del reparto por áreas.
+- **Prueba con el pasado (deja uno fuera, población real de 2023 según el INE):**
+
+| Barrio | Real | Modelo | Error | Regla ingenua (viviendas × 2,6) |
+|---|---|---|---|---|
+| El Bercial | 12.931 | 10.887 | −15,8 % | +19,6 % |
+| Perales del Río | 3.807 | 3.201 | −15,9 % | +19,5 % |
+| Los Molinos | 11.473 | 12.205 | **+6,4 %** | +42,2 % |
+| Buenavista | 8.854 | 12.266 | +38,5 % | +75,0 % |
+
+  Error absoluto medio: **19 % frente al 39 %** de la regla habitual. Buenavista falla más porque todavía se está llenando (gana unos 500 habitantes al año); se dice tal cual en la presentación.
+- **Los menores se reparten por edades** con el censo municipal de 2025: 0-2 años el 13,4 %, 3-5 el 14,8 %, 6-11 el 35,5 % y 12-17 el 36,3 % (Getafe). Es un supuesto: en los barrios nuevos probablemente hay más niños pequeños.
+- **Población futura (central) por llegar:** unos 9.900 habitantes en Getafe y unos 40.600 en Navalcarnero, que casi duplicaría su población actual (33.352).
+- **Navalcarnero no permite calibrar:** solo tiene 16 secciones censales (unos 2.000 habitantes cada una), demasiado grandes para medir sus ámbitos. Se usan los parámetros de Getafe, y así se indica.
+- **Supuestos por servicio** (`servicios.json`): tasas de uso, capacidad por centro, superficie mínima y minutos andando. Son puntos de partida ajustables, no normas, y los que no tienen fuente están marcados "por verificar".
+
+### 15 oct: secciones, transporte y zonas de salud (pasos 4 y 5)
+- **La capa de secciones de la IDEM trae, por cada sección, su zona básica de salud y su zona de servicios sociales.** Pero esos códigos (6 dígitos) no coinciden con los del dataset de zonas de salud de CKAN (3 dígitos): el nombre se asigna cruzando por geometría.
+- **Getafe tiene 8 zonas básicas de salud y 9 centros de salud.** Juan de la Cierva atiende a 40.687 habitantes con un solo centro; El Bercial (Los Molinos) a 20.054. Navalcarnero es una sola zona con 2 centros para unos 32.000 habitantes.
+- **Paradas:** Getafe 594 (343 de interurbanos, 237 de urbanos, 9 de Metro y 5 de Cercanías); Navalcarnero 125.
+- **Error de mezcla cazado por `verificar.py`:** una parada de "Navalcarnero" estaba en Villarrubia de los Ojos (Ciudad Real), a 123 km. El código de municipio 096 se repite en otra provincia (13096) y el Consorcio tiene líneas que llegan allí. Ahora se filtra también por provincia. **Es un buen ejemplo para la presentación** de por qué la comprobación automática importa.
+- **Reparto de población por áreas:** cada sección aporta a un ámbito la fracción de su superficie que cae dentro. Antes usábamos "todo o nada" (mitad o más de la sección), y Buenavista perdía una sección de 3.894 habitantes que solo tiene el 43 % dentro.
+- **Los Molinos ha pasado de 5.983 habitantes en 2015 a 11.473 en 2023** (INE, reparto por áreas). Buenavista, de 6.027 a 8.854.
 
 ### 14 oct: resultados de la IDEM ponderados por superficie (paso 2)
 Antes contábamos parcelas; ahora medimos metros cuadrados, que es lo que importa. Equipamiento vacante = m² de parcelas vacantes de uso equipamiento / m² totales de equipamiento (vacantes + ocupadas) dentro del ámbito.
@@ -274,11 +326,16 @@ Cruzamos el suelo vacante y ocupado de 2026 con los ámbitos del planeamiento, c
 | Tasa bruta de natalidad por municipio | `1915900` | |
 | ~~Nacimientos por edad de la madre~~ y ~~matrícula de infantil~~ | `1917742`, `1919460` | Solo dan el total regional, sin municipios. No sirven |
 
+### Confirmadas el 15 de octubre
+| Dato | Fuente y acceso | Notas |
+|---|---|---|
+| Secciones censales (geometría + zona de salud + zona de servicios sociales) | WFS IDEM `UnidadesAdministrativas:IDEM_GDIE_G_SECCION`, filtro `CDMUNI` | 4.518 en la Comunidad; 122 en Getafe y 16 en Navalcarnero |
+| Indicadores demográficos por sección 2015–2023 | INE, Atlas de Distribución de Renta, tabla 31105 (CSV `jaxiT3/files/t/es/csv_bdsc/31105.csv?nocab=1`) | 38 MB, toda la provincia; formato español (174.480 y 41,2) |
+| Paradas y estaciones | CRTM, `services5.arcgis.com/UxADft6QPcvFyDU1` (M8_Red, M9_Red, M5_Red, M4_Red, M10_Red) | Filtro `CODIGOPROVINCIA='28' AND CODIGOMUNICIPIO`; trae las líneas y la accesibilidad |
+| Zonas básicas de salud (nombres y geometría 2019) | CKAN `covid19_tia_zonas_basicas_salud` (SHP) | Solo para poner nombre a las zonas de la IDEM |
+
 ### Por localizar o confirmar
 - [ ] Matrícula de infantil de primer ciclo (CKAN)
-- [ ] Padrón por sección censal y geometrías de las secciones (INE)
-- [ ] GTFS interurbano del CRTM
-- [ ] Zonas básicas de salud, capa SHP de 2019
 - [ ] Licitaciones: PLACSP (ATOM), BOCM (XML) y Portal de Contratación de la Comunidad
 
 ---
@@ -343,6 +400,9 @@ Un Ampere A1 (hasta 4 núcleos y 24 GB de RAM), 200 GB de disco, 10 GB de Object
 
 ## 9. Bitácora
 - **14 oct (noche, 3):** repositorio creado en GitHub, primer commit subido e invitada la compañera de equipo. Paso 3 hecho.
+- **16 oct (tarde):** rediseño de la web con el estilo de comunidad.madrid (logo propio, no el oficial).
+- **16 oct:** la web funciona con las dos pantallas y los dos municipios (pasos 7 y 8 hechos y 10 casi). Probada en el navegador. Arreglados el mapa base, la ocupación mínima, las paradas duplicadas y las geometrías mixtas.
+- **15 oct:** etapa 2 de datos completa: `pipeline.py`, `secciones.py`, `transporte.py`, `zonas.py` y `demanda.py`. El modelo calibrado con barrios reales reduce a la mitad el error de la regla habitual. La verificación cazó una parada de Ciudad Real colada en Navalcarnero.
 - **14 oct (noche, 2):** paso 2 hecho: `descargar_idem.py` genérico por código INE, `procesar_idem.py` y `verificar.py`. Getafe 818 KB y Navalcarnero 624 KB de capas ligeras. Hallazgos: parcelas con geometría inválida, 52 candidatas sin superficie, y el estado "prevista" no sale de las redes.
 - **14 oct (noche):** paso 1 hecho: `etl/comun.py` y `etl/descargar_ckan.py`, probados con Getafe y Navalcarnero; se detectaron y descartaron 3 coordenadas erróneas.
 - **14 oct (tarde, 2):** comprobamos que el texto de los 50.000 habitantes está oculto (blanco sobre blanco) en el PDF; el apartado 3 no pone límites. Getafe se queda. Decidido también: HTTPS, los 5 servicios y extracción con Claude Code.

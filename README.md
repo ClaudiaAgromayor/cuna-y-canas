@@ -20,8 +20,14 @@ docs/            documentos del concurso, validación y capturas
 python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
-python etl/descargar_idem.py GETAFE 065   # capas de la IDEM (planeamiento, suelo)
-python etl/descargar_ckan.py Getafe        # centros, natalidad y población (admite nombre o código INE)
-python etl/procesar_idem.py Getafe         # capas ligeras de suelo y planeamiento (descarga lo que falte)
-python etl/verificar.py                    # comprueba que no se mezclan municipios
+python etl/pipeline.py Getafe Navalcarnero   # todo: CKAN, IDEM, INE, CRTM, zonas de salud, demanda y verificación
+```
+
+## Web
+
+```bash
+cd web
+npm install
+npm run dev      # http://localhost:5173 (lee los datos de data/processed)
+npm run build    # versión de producción en web/dist
 ```

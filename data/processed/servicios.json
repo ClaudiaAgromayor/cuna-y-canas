@@ -1,0 +1,159 @@
+{
+ "escuela_infantil": {
+  "nombre": "Escuela infantil",
+  "etapa": "Tengo un bebé",
+  "grupo": [
+   "g0_2"
+  ],
+  "tasa_uso": [
+   0.35,
+   0.45,
+   0.55
+  ],
+  "nota_tasa": "proporción de niños de 0-2 años que acuden a escuela infantil (supuesto, por verificar con la estadística educativa)",
+  "capacidad": [
+   75,
+   120,
+   150
+  ],
+  "unidad": "plazas",
+  "sup_min_m2": 1500,
+  "minutos_andando": 10,
+  "existentes": {
+   "capa": "centros_educativos",
+   "campo": "tipo",
+   "valores": [
+    "EEI",
+    "EEI-CN",
+    "EIPR"
+   ]
+  }
+ },
+ "colegio": {
+  "nombre": "Colegio (infantil y primaria)",
+  "etapa": "Tengo hijos en edad escolar",
+  "grupo": [
+   "g3_5",
+   "g6_11"
+  ],
+  "tasa_uso": [
+   0.8,
+   0.85,
+   0.9
+  ],
+  "nota_tasa": "proporción de alumnado de 3-11 años en centros sostenidos con fondos públicos, públicos y concertados (supuesto, por verificar)",
+  "capacidad": [
+   450,
+   675,
+   900
+  ],
+  "unidad": "plazas",
+  "sup_min_m2": 8000,
+  "minutos_andando": 15,
+  "existentes": {
+   "capa": "centros_educativos",
+   "campo": "tipo",
+   "valores": [
+    "CP INF-PRI",
+    "CP INF-PRI-SEC",
+    "CPR INF-PRI",
+    "CPR INF-PRI-SEC"
+   ],
+   "titularidad": [
+    "PÚBLICO",
+    "PRIVADO CONCERTADO"
+   ]
+  }
+ },
+ "centro_salud": {
+  "nombre": "Centro de salud",
+  "etapa": "Para toda la familia",
+  "grupo": [
+   "pob"
+  ],
+  "tasa_uso": [
+   1,
+   1,
+   1
+  ],
+  "nota_tasa": "toda la población",
+  "capacidad": [
+   15000,
+   25000,
+   30000
+  ],
+  "unidad": "habitantes por centro",
+  "sup_min_m2": 2000,
+  "minutos_andando": 15,
+  "existentes": {
+   "capa": "centros_sanitarios",
+   "campo": "tipo",
+   "valores": [
+    "Centro de salud"
+   ]
+  }
+ },
+ "centro_dia": {
+  "nombre": "Centro de día para mayores",
+  "etapa": "Cuido de mis padres",
+  "grupo": [
+   "g65"
+  ],
+  "tasa_uso": [
+   0.01,
+   0.015,
+   0.03
+  ],
+  "nota_tasa": "plazas por persona de 65 y más años (supuesto, por verificar)",
+  "capacidad": [
+   40,
+   60,
+   90
+  ],
+  "unidad": "plazas",
+  "sup_min_m2": 1500,
+  "minutos_andando": 15,
+  "existentes": {
+   "capa": "centros_sociales",
+   "campo": "tipo",
+   "valores": [
+    "CENTROS DE DÍA"
+   ],
+   "sector_contiene": "mayores",
+   "excluir_subtipo": [
+    "HOGARES Y CLUBES"
+   ],
+   "campo_capacidad": "plazas"
+  }
+ },
+ "residencia": {
+  "nombre": "Residencia de mayores",
+  "etapa": "Cuido de mis padres",
+  "grupo": [
+   "g65"
+  ],
+  "tasa_uso": [
+   0.04,
+   0.05,
+   0.06
+  ],
+  "nota_tasa": "plazas por persona de 65 y más años; 5 por cada 100 es la ratio de referencia que se cita habitualmente",
+  "capacidad": [
+   80,
+   120,
+   180
+  ],
+  "unidad": "plazas",
+  "sup_min_m2": 4000,
+  "minutos_andando": 30,
+  "existentes": {
+   "capa": "centros_sociales",
+   "campo": "tipo",
+   "valores": [
+    "CENTROS RESIDENCIALES"
+   ],
+   "sector_contiene": "mayores",
+   "campo_capacidad": "plazas"
+  }
+ }
+}

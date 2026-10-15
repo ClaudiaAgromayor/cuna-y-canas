@@ -35,6 +35,9 @@ def verificar(carpeta: Path) -> list[str]:
             fallos.append(f"{carpeta.name}/{nombre}: códigos de municipio ajenos {otros}")
         if g.geometry.is_empty.any() or g.geometry.isna().any():
             fallos.append(f"{carpeta.name}/{nombre}: geometrías vacías")
+        mixtas = set(g.geom_type.unique()) - {"Point", "Polygon", "MultiPolygon"}
+        if mixtas:
+            fallos.append(f"{carpeta.name}/{nombre}: tipos de geometría no admitidos por la web {mixtas}")
         if not g.geometry.is_valid.all():
             fallos.append(f"{carpeta.name}/{nombre}: {(~g.geometry.is_valid).sum()} geometrías inválidas")
     for nombre in ("natalidad.json", "poblacion.json", "resumen_ambitos.json"):

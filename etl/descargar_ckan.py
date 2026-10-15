@@ -113,18 +113,21 @@ def demografia(muni, out, ctrl):
     ctrl["poblacion_total_ultimo_anio"] = por_anio.get(max(por_anio), {}).get("Total") if por_anio else None
 
 
+def procesar(muni: dict) -> dict:
+    out = carpeta_salida(muni)
+    ctrl: dict = {"municipio": muni}
+    for paso in (educativos, sanitarios, sociales, demografia):
+        paso(muni, out, ctrl)
+    (out / "_control_ckan.json").write_text(json.dumps(ctrl, ensure_ascii=False, indent=1), encoding="utf-8")
+    return ctrl
+
+
 def main() -> None:
     if len(sys.argv) < 2:
         raise SystemExit(__doc__)
     muni = resolver_municipio(sys.argv[1])
-    out = carpeta_salida(muni)
-    print(f"Municipio: {muni['nombre']} (INE {muni['cod']}) -> {out}")
-    ctrl: dict = {"municipio": muni}
-    for paso in (educativos, sanitarios, sociales, demografia):
-        paso(muni, out, ctrl)
-        print(f"  {paso.__name__:12s} ok")
-    (out / "_control_ckan.json").write_text(json.dumps(ctrl, ensure_ascii=False, indent=1), encoding="utf-8")
-    for k, v in ctrl.items():
+    print(f"Municipio: {muni['nombre']} (INE {muni['cod']}) -> {carpeta_salida(muni)}")
+    for k, v in procesar(muni).items():
         if k != "municipio":
             print(f"  {k:34s} {v}")
 

@@ -19,7 +19,7 @@
   "educativo/sin_dato": 13,
   "zona_verde/sin_dato": 463
  },
- "redes_guardadas": 483,
+ "redes_guardadas": 482,
  "suelo_parcelas_brutas": 13533,
  "suelo_geometrias_invalidas_reparadas": 5378,
  "suelo_parcelas_en_ambitos_solapados": 0,
@@ -48,11 +48,17 @@
   "centros_educativos.geojson": 8,
   "centros_sanitarios.geojson": 25,
   "centros_sociales.geojson": 7,
+  "demanda.json": 28,
+  "demanda_puntos.geojson": 209,
   "natalidad.json": 1,
-  "parcelas_vacantes.geojson": 204,
+  "paradas.geojson": 39,
+  "parcelas_vacantes.geojson": 202,
   "poblacion.json": 3,
   "portal_suelo.geojson": 5,
-  "redes.geojson": 245,
-  "resumen_ambitos.json": 16
+  "redes.geojson": 240,
+  "resumen_ambitos.json": 16,
+  "secciones.geojson": 88,
+  "secciones_series.json": 28,
+  "zonas_salud.geojson": 12
  }
 }

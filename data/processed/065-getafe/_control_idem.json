@@ -6,12 +6,14 @@
   "slug": "getafe"
  },
  "ambitos_poligonos_brutos": 44,
+ "ambitos_geometrias_invalidas_reparadas": 3,
  "ambitos_con_viviendas_discrepantes_entre_poligonos": [],
  "ambitos": 31,
  "ambitos_sin_viviendas": 9,
  "ambitos_guardados": 31,
- "redes_brutas": 1566,
- "redes_dotacionales": 726,
+ "redes_geometrias_invalidas_reparadas": 286,
+ "redes_brutas": 1511,
+ "redes_dotacionales": 725,
  "redes_por_tipo_y_estado": {
   "asistencial/existente": 14,
   "asistencial/sin_dato": 1,
@@ -22,11 +24,11 @@
   "educativo/existente": 46,
   "educativo/sin_dato": 20,
   "sanitario/existente": 11,
-  "zona_verde/existente": 392,
+  "zona_verde/existente": 391,
   "zona_verde/prevista": 26,
   "zona_verde/sin_dato": 164
  },
- "redes_guardadas": 726,
+ "redes_guardadas": 723,
  "suelo_parcelas_brutas": 24765,
  "suelo_geometrias_invalidas_reparadas": 10340,
  "suelo_parcelas_en_ambitos_solapados": 0,
@@ -57,11 +59,17 @@
   "centros_educativos.geojson": 35,
   "centros_sanitarios.geojson": 130,
   "centros_sociales.geojson": 22,
+  "demanda.json": 15,
+  "demanda_puntos.geojson": 82,
   "natalidad.json": 1,
-  "parcelas_vacantes.geojson": 144,
+  "paradas.geojson": 181,
+  "parcelas_vacantes.geojson": 141,
   "poblacion.json": 3,
   "portal_suelo.geojson": 23,
-  "redes.geojson": 387,
-  "resumen_ambitos.json": 10
+  "redes.geojson": 379,
+  "resumen_ambitos.json": 10,
+  "secciones.geojson": 185,
+  "secciones_series.json": 177,
+  "zonas_salud.geojson": 37
  }
 }

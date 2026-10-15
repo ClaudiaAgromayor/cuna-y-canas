@@ -448,6 +448,7 @@ Un Ampere A1 (hasta 4 núcleos y 24 GB de RAM), 200 GB de disco, 10 GB de Object
 
 ## 9. Bitácora
 - **14 oct (noche, 3):** repositorio creado en GitHub, primer commit subido e invitada la compañera de equipo. Paso 3 hecho.
+- **17 oct (madrugada):** lote completo: **178 municipios procesados y verificados** (todos menos Madrid capital), con farmacias. Fallos corregidos por el camino: municipios sin ámbitos de desarrollo (20) y secciones que colapsaban al simplificar (Torrejón de Ardoz y Valdemoro). `data/processed` ocupa 53 MB.
 - **16 oct (noche):** tres secciones (¿Dónde vivir?, Barrios, Planificar), 179 municipios comparables, lote de toda la Comunidad, todo lo que faltaba de los documentos en la pantalla técnica, y diseño adaptable a media pantalla y móvil.
 - **16 oct (tarde):** rediseño de la web con el estilo de comunidad.madrid (logo propio, no el oficial).
 - **16 oct:** la web funciona con las dos pantallas y los dos municipios (pasos 7 y 8 hechos y 10 casi). Probada en el navegador. Arreglados el mapa base, la ocupación mínima, las paradas duplicadas y las geometrías mixtas.

@@ -447,6 +447,7 @@ Un Ampere A1 (hasta 4 núcleos y 24 GB de RAM), 200 GB de disco, 10 GB de Object
 ---
 
 ## 9. Bitácora
+- **16 oct (noche, 2):** idea de logo nuevo: la cabeza de un bebé con un solo pelo que es una cana (cuna + canas). Se pedirá a Claude Design con el contexto del proyecto y la paleta de la web (rojo #DE0029, tinta #131313). Pendiente de elegir versión y cambiarlo en la cabecera.
 - **14 oct (noche, 3):** repositorio creado en GitHub, primer commit subido e invitada la compañera de equipo. Paso 3 hecho.
 - **17 oct (madrugada):** lote completo: **178 municipios procesados y verificados** (todos menos Madrid capital), con farmacias. Fallos corregidos por el camino: municipios sin ámbitos de desarrollo (20) y secciones que colapsaban al simplificar (Torrejón de Ardoz y Valdemoro). `data/processed` ocupa 53 MB.
 - **16 oct (noche):** tres secciones (¿Dónde vivir?, Barrios, Planificar), 179 municipios comparables, lote de toda la Comunidad, todo lo que faltaba de los documentos en la pantalla técnica, y diseño adaptable a media pantalla y móvil.

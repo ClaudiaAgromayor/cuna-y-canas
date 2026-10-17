@@ -56,6 +56,19 @@ def main():
     indice_f.write_text(json.dumps(indice, ensure_ascii=False), encoding="utf-8")
     print(f"solares residenciales vacantes: {total}")
 
+    # recuento por municipio en el resumen de "¿Dónde vivir?" y de la portada
+    res_f = PROCESSED / "municipios_resumen.json"
+    res = json.loads(res_f.read_text(encoding="utf-8"))
+    carpetas = {d.name[:3]: d for d in PROCESSED.iterdir() if d.is_dir() and d.name[:3].isdigit()}
+    for m in res["municipios"]:
+        d = carpetas.get(m["cod_ine"])
+        leer = lambda f: json.loads((d / f).read_text(encoding="utf-8"))["features"] if d and (d / f).exists() else []
+        sol = leer("vivienda_nueva.geojson")
+        m["solares_vivienda"] = len(sol)
+        m["solares_vivienda_m2"] = round(sum(x["properties"]["area_m2"] for x in sol))
+        m["suelo_publico_vivienda"] = sum(1 for x in leer("portal_suelo.geojson") if str(x["properties"].get("uso") or "").startswith("Resid"))
+    res_f.write_text(json.dumps(res, ensure_ascii=False), encoding="utf-8")
+
 
 if __name__ == "__main__":
     main()

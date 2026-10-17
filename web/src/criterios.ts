@@ -77,6 +77,9 @@ export interface ResumenMunicipio {
   parcelas_equip_1500?: number
   parcelas_equip_8000?: number
   suelo_equip_m2?: number | null
+  solares_vivienda?: number       // solares residenciales vacantes (catastro vía IDEM)
+  solares_vivienda_m2?: number
+  suelo_publico_vivienda?: number // parcelas públicas residenciales en venta o concesión (Portal del Suelo)
   foto: string | null        // imagen representativa en Wikimedia Commons (Wikidata P18)
   foto_pagina: string | null // página del fichero, con autoría y licencia
 }

@@ -27,6 +27,8 @@ python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
 python etl/municipios_resumen.py             # indicadores de los 179 municipios para "¿Dónde vivir?"
+python etl/vivienda_nueva.py                 # solares para vivienda sin construir (después del resumen: le añade los recuentos)
+python etl/paquete_datos.py                  # datasets para descargar (CSV, ZIP y diccionario)
 python etl/pipeline.py Getafe Navalcarnero   # detalle de uno o varios municipios: CKAN, IDEM, INE, CRTM, demanda y verificación
 python etl/lote.py                           # detalle de todos los municipios (unos 40 minutos)
 python etl/verificar.py                      # comprueba que ningún fichero mezcla municipios

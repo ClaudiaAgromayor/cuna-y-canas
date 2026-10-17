@@ -34,7 +34,7 @@ function necesidades(viviendas: number, modelo: Modelo, servicios: Record<Servic
   }
 }
 
-export default function PantallaInicio({ servicios, ir }: Props) {
+export default function PantallaInicio({ servicios, ir, tecnico }: Props) {
   const [resumen, setResumen] = useState<Resumen | null>(null)
   useEffect(() => { fetch(`${BASE}municipios_resumen.json`).then((r) => r.json()).then(setResumen) }, [])
 
@@ -59,6 +59,19 @@ export default function PantallaInicio({ servicios, ir }: Props) {
       .sort((a, b) => b.crece - a.crece)
       .slice(0, 10)
   }, [resumen, servicios])
+
+  // datos llamativos para quien busca casa: los primeros de cada lista, pulsables
+  const datos = useMemo(() => {
+    if (!resumen) return null
+    const top = (f: (m: ResumenMunicipio) => number | null | undefined, fmt: (v: number) => string, min = 0) =>
+      [...resumen.municipios].filter((m) => (f(m) ?? 0) > min).sort((a, b) => (f(b) ?? 0) - (f(a) ?? 0)).slice(0, 5).map((m) => ({ m, v: fmt(f(m)!) }))
+    return [
+      { t: 'Donde más se va a construir', f: 'Viviendas previstas en el planeamiento (IDEM)', filas: top((m) => m.viviendas_previstas, n) },
+      { t: 'Más solares para vivienda', f: 'Parcelas residenciales sin construir (catastro, IDEM)', filas: top((m) => m.solares_vivienda, n) },
+      { t: 'Suelo público en venta para vivienda', f: 'Parcelas residenciales (Portal del Suelo)', filas: top((m) => m.suelo_publico_vivienda, n) },
+      { t: 'Los que más crecen', f: 'Población, último periodo (padrón), más de 5.000 hab.', filas: top((m) => (m.poblacion >= 5000 ? m.crecimiento_pct : null), (v) => `+${dec(v)} %`) },
+    ]
+  }, [resumen])
 
   const ESTADO: Record<string, [string, string]> = { holgado: ['Hay suelo de sobra', 'bg-ok'], justo: ['Suelo justo', 'bg-aviso'], falta: ['Puede faltar suelo', 'bg-rojo'], sin_presion: ['Poca presión', 'bg-texto-3'] }
 
@@ -105,7 +118,9 @@ export default function PantallaInicio({ servicios, ir }: Props) {
             { t: 'Los Molinos (Getafe)', d: '11.473 vecinos y ningún centro de salud a 10 minutos a pie. ¿Qué hay y qué viene?', icono: 'ubicacion', fn: () => ir({ a: 'ciudadana', cod: '065', barrio: 'SUS-PP-2 LOS MOLINOS' }) },
             { t: 'Familia con bebé que trabaja en Madrid', d: '¿Qué municipios encajan mejor? Ranking de los 179 con datos oficiales.', icono: 'escuela_infantil', fn: () => ir({ a: 'municipios', situaciones: ['bebe', 'madrid'] }) },
             { t: 'Arroyomolinos', d: '38.185 habitantes y ningún centro de salud, solo un consultorio. Mira su ficha.', icono: 'centro_salud', fn: () => ir({ a: 'municipios', sel: '015' }) },
-            { t: 'Navalcarnero crece', d: '21.434 viviendas previstas para 33.352 habitantes. ¿Dónde irían los colegios?', icono: 'colegio', fn: () => ir({ a: 'tecnica', cod: '096', servicio: 'colegio' }) },
+            tecnico
+              ? { t: 'Navalcarnero crece', d: '21.434 viviendas previstas para 33.352 habitantes. ¿Dónde irían los colegios?', icono: 'colegio', fn: () => ir({ a: 'tecnica', cod: '096', servicio: 'colegio' }) }
+              : { t: 'Boadilla del Monte', d: '417 solares para vivienda sin construir y 11 parcelas públicas en venta. ¿Qué hay alrededor?', icono: 'casa_nueva', fn: () => ir({ a: 'ciudadana', cod: '022' }) },
           ].map((e) => (
             <button key={e.t} type="button" onClick={e.fn} className="group flex flex-col items-start border border-linea p-4 text-left transition-colors hover:border-tinta">
               <Icono nombre={e.icono} className="h-6 w-6 text-rojo" />
@@ -117,9 +132,50 @@ export default function PantallaInicio({ servicios, ir }: Props) {
         </div>
       </section>
 
-      {/* radar */}
+      {/* lo que puede encontrar quien busca casa */}
+      <section className="mx-auto max-w-6xl px-6 py-10">
+        <h2 className="text-xl font-semibold">Qué puedes encontrar si buscas casa</h2>
+        <p className="mt-1 max-w-3xl text-sm text-texto-2">Lo que no sale en los portales inmobiliarios: qué hay de verdad cerca, qué se va a construir y qué servicios llegarán (o no). Con datos oficiales de la Comunidad de Madrid.</p>
+        <div className="mt-5 grid gap-px bg-linea sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            ['ubicacion', 'Qué hay a 10 minutos de tu casa', 'Colegios, escuelas infantiles, centros de salud, farmacias, residencias, parques y paradas, en cualquier punto del mapa.', () => ir({ a: 'ciudadana', cod: '065' })],
+            ['casa_nueva', 'Qué se va a construir', 'Barrios nuevos del planeamiento, solares para vivienda sin construir y suelo público en venta.', () => ir({ a: 'ciudadana', cod: '022' })],
+            ['colegio', 'Qué servicios harán falta', 'Cuántas plazas de colegio o de escuela infantil necesitará tu barrio cuando esté lleno, y cuántas hay hoy.', () => ir({ a: 'ciudadana', cod: '065', barrio: 'SUS-PP-2 LOS MOLINOS' })],
+            ['tren', 'Dónde vivir según tu vida', 'Con bebé, con hijos, cuidando a tus mayores o trabajando en Madrid: los 179 municipios ordenados para ti.', () => ir({ a: 'municipios' })],
+          ].map(([ic, t, d, fn]) => (
+            <button key={t as string} type="button" onClick={fn as () => void} className="group bg-white p-5 text-left hover:bg-gris-1">
+              <Icono nombre={ic as string} className="h-6 w-6 text-rojo" /><div className="mt-3 font-semibold">{t as string}</div><p className="mt-1 text-sm text-texto-2">{d as string}</p>
+              <span className="mt-2 inline-block text-sm font-medium text-rojo group-hover:underline">Ver →</span>
+            </button>
+          ))}
+        </div>
+
+        {datos && (
+          <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {datos.map((b) => (
+              <div key={b.t} className="border-t-2 border-tinta pt-3">
+                <div className="text-sm font-semibold">{b.t}</div>
+                <div className="text-xs text-texto-3">{b.f}</div>
+                <ol className="mt-2 grid gap-1 text-sm">
+                  {b.filas.map((x, k) => (
+                    <li key={x.m.cod_ine}>
+                      <button type="button" onClick={() => ir({ a: 'municipios', sel: x.m.cod_ine })} className="flex w-full items-baseline gap-2 text-left hover:text-rojo">
+                        <span className="w-4 text-xs text-texto-3">{k + 1}</span><span className="min-w-0 flex-1 truncate">{x.m.nombre}</span><b className="tabular-nums">{x.v}</b>
+                      </button>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            ))}
+          </div>
+        )}
+      </section>
+
+      {/* radar: solo para técnicos */}
+      {tecnico && (
       <section className="border-y border-linea bg-gris-1">
         <div className="mx-auto max-w-6xl px-6 py-10">
+          <div className="text-xs font-semibold tracking-wide text-rojo uppercase">Solo técnicos</div>
           <h2 className="text-xl font-semibold">Radar: ¿hay sitio para lo que viene?</h2>
           <p className="mt-1 max-w-3xl text-sm text-texto-2">Los municipios que más pueden crecer según su planeamiento, cuántos colegios harían falta por la población nueva y cuántas parcelas vacantes de equipamiento tienen donde cabría uno (8.000 m² o más).</p>
           <div className="mt-4 overflow-x-auto bg-white">
@@ -129,7 +185,7 @@ export default function PantallaInicio({ servicios, ir }: Props) {
                 <th className="px-3 py-2 text-right font-medium">Colegios que harían falta</th><th className="px-3 py-2 text-right font-medium">Parcelas donde cabe uno</th><th className="px-3 py-2 font-medium">Diagnóstico</th></tr></thead>
               <tbody>
                 {radar.map((r) => (
-                  <tr key={r.m.cod_ine} className="cursor-pointer border-b border-gris-2 hover:bg-gris-1" onClick={() => ir({ a: 'municipios', sel: r.m.cod_ine })}>
+                  <tr key={r.m.cod_ine} className="cursor-pointer border-b border-gris-2 hover:bg-gris-1" onClick={() => ir({ a: 'tecnica', cod: r.m.cod_ine, servicio: 'colegio' })}>
                     <td className="px-3 py-2 font-medium">{r.m.nombre}</td>
                     <td className="px-3 py-2 text-right tabular-nums">{n(r.m.poblacion)}</td>
                     <td className="px-3 py-2 text-right tabular-nums">+{n(r.crece)}–{n(r.creceMax)} %</td>
@@ -141,34 +197,10 @@ export default function PantallaInicio({ servicios, ir }: Props) {
               </tbody>
             </table>
           </div>
-          <p className="mt-2 text-xs text-texto-3">Diagnóstico orientativo: una misma parcela puede servir para un colegio o para otro servicio. Pulsa un municipio para ver su ficha; el detalle de dónde ponerlos está en la herramienta para técnicos.</p>
+          <p className="mt-2 text-xs text-texto-3">Diagnóstico orientativo: una misma parcela puede servir para un colegio o para otro servicio. Pulsa un municipio para planificar dónde ponerlos.</p>
         </div>
       </section>
-
-      {/* qué nos hace distintos */}
-      <section className="mx-auto max-w-6xl px-6 py-10">
-        <h2 className="text-xl font-semibold">Qué hace distinto a Cuna y Canas</h2>
-        <div className="mt-4 grid gap-px bg-linea sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            ['validar', 'Mira al futuro', 'No solo lo que hay hoy: lo que va a hacer falta cuando se habiten las viviendas que ya prevé el planeamiento.'],
-            ['suelo', 'Comprueba si hay sitio', 'Cruza la demanda con el suelo público vacante de la IDEM: dónde cabe cada colegio, centro de salud o residencia.'],
-            ['ajustes', 'Sirve para decidir', 'Para la Administración: dónde poner cada centro, cuándo hace falta y si la propuesta aguanta con otros supuestos.'],
-            ['check', 'Validado con datos reales', 'Predecimos barrios ya construidos sin mirar sus datos: un error medio del 19 %, la mitad que la regla habitual.'],
-          ].map(([ic, t, d]) => (
-            <div key={t} className="bg-white p-5"><Icono nombre={ic} className="h-6 w-6" /><div className="mt-3 font-semibold">{t}</div><p className="mt-1 text-sm text-texto-2">{d}</p></div>
-          ))}
-        </div>
-        <div className="mt-6 grid gap-6 md:grid-cols-2">
-          <div className="border-l-[3px] border-tinta pl-4">
-            <div className="font-semibold">Un mismo dato, dos lecturas</div>
-            <p className="mt-1 text-sm text-texto-2">El vecino lee frases cortas y estados: <i>"Colegio: faltarán entre 959 y 1.882 plazas; hay 675 cerca"</i>. El técnico lee cifras, rangos y mapas para decidir dónde y cuándo.</p>
-          </div>
-          <div className="border-l-[3px] border-rojo pl-4">
-            <div className="font-semibold">Datos abiertos mejores para todos</div>
-            <p className="mt-1 text-sm text-texto-2">Al cruzar fuentes hemos encontrado errores en datos oficiales: centros sanitarios situados en calles homónimas de otra ciudad, paradas de otra provincia con el mismo código de municipio y miles de parcelas con geometría inválida. Los detectamos, los corregimos y los podemos devolver a la Comunidad.</p>
-          </div>
-        </div>
-      </section>
+      )}
 
       <footer className="border-t border-linea bg-tinta text-white">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-4 px-6 py-6 text-xs text-white/70">

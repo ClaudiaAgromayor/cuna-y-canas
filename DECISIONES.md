@@ -75,6 +75,14 @@ El equipo cree que da tiempo a hacerlo todo. Si nos retrasamos, se recorta por e
 
 ## 3. Decisiones
 
+### 17 oct (tarde): qué piden exactamente y Oracle Cloud
+- **Correo de la organización (fase de proyectos):** hay que entregar **(1) un prototipo funcional** y **(2) los datasets elaborados** que usa el prototipo. Contacto: jgarciag@inf.uc3m.es y el canal de Discord del datathon. **Ni el correo ni las bases exigen Oracle**: la cuenta de Oracle Cloud es un recurso que ofrece la organización (tenancy `uc3mdatathon`, dominio de identidad `Default`).
+- **Acceso a Oracle:** al entrar sale "Se ha producido un error del sistema en Oracle Identity Cloud Service". Es un fallo del servicio de identidad de Oracle, no de la contraseña. La cuenta ya estaba activa (se había entrado antes), así que no es la activación.
+- **Segundo intento:** sale "No puede marcar y acceder a la URL de conexión directamente". **Causa:** se abrió la página de acceso (`idcs-….identity.oraclecloud.com/ui/v1/signin`) desde un marcador o una pestaña antigua. Esa dirección es de un solo uso: Oracle la genera en cada inicio de sesión y caduca. El primer error seguramente venía de lo mismo (sesión antigua guardada).
+- **Cómo entrar:** cerrar todas las pestañas de Oracle, abrir una ventana privada y empezar siempre por `https://cloud.oracle.com/?tenant=uc3mdatathon` (o cloud.oracle.com → nombre de la cuenta en la nube `uc3mdatathon` → dominio `Default` → usuario y contraseña). Guardar como marcador esa dirección, nunca la de `idcs-…/signin`. Si con eso sigue fallando, escribir a la organización.
+- **Plan:** (a) entrar como se indica arriba; (b) si sigue, escribir a la organización; (c) **plan B de despliegue sin depender de Oracle**, para tener el enlace del prototipo sí o sí antes del 20.
+- **Pendiente:** preparar los "datasets elaborados" como entregable claro (paquete descargable + diccionario de datos).
+
 ### 17 oct (tarde): competencia publicada y guion
 - **Proyectos publicados de otros equipos (búsqueda en GitHub y la web, 17 oct):** solo **ViveTuMunicipio** tiene repositorio público (`pauladuck04/vive-tu-municipio`): un buscador de municipios con Elasticsearch, Logstash, padrón, centros, AEMET y agenda cultural. Es un comparador del presente, sin previsión ni planificación. Del resto no hay nada publicado (hay un repositorio "Oportunia" vacío, del 5 de octubre, sin confirmar que sea del concurso).
 - **Guion de 10 minutos** en `docs/GUION_PRESENTACION.md`: gancho con Los Molinos, cifras de la Comunidad, demo en 4 pasos (¿Dónde vivir? → Barrios → Planificar con ▶ → Radar), fiabilidad (API, prueba con el pasado, errores en datos oficiales), diferencia, futuro y cierre. Incluye el reparto entre las dos, la preparación, preguntas probables y el plan B.

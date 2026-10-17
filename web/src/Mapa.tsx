@@ -31,6 +31,15 @@ interface Props {
   onArrastrar?: (id: string, lon: number, lat: number) => void
   onClickMapa?: (lon: number, lat: number) => void
   centrarEn?: [number, number] | null
+  alCrear?: (m: maplibregl.Map) => void // da acceso al mapa (p. ej. para hacerle una foto para la ficha)
+}
+
+/** Foto del mapa tal como se ve (capas de datos incluidas), en PNG. Se lee justo después de pintar un fotograma. */
+export function fotoDelMapa(m: maplibregl.Map): Promise<string> {
+  return new Promise((ok) => {
+    m.once('render', () => { try { ok(m.getCanvas().toDataURL('image/png')) } catch { ok('') } })
+    m.triggerRepaint()
+  })
 }
 
 // Mapa base oficial del Instituto Geográfico Nacional (IGN Base, WMTS público), atenuado para que destaquen los datos
@@ -44,7 +53,7 @@ const ESTILO_BASE: maplibregl.StyleSpecification = {
   layers: [{ id: 'base', type: 'raster', source: 'base', paint: { 'raster-saturation': -0.75, 'raster-brightness-min': 0.15, 'raster-contrast': -0.1 } }],
 }
 
-export default function Mapa({ bbox, capas, marcadores = [], onClickCapa, onArrastrar, onClickMapa, centrarEn }: Props) {
+export default function Mapa({ bbox, capas, marcadores = [], onClickCapa, onArrastrar, onClickMapa, centrarEn, alCrear }: Props) {
   const div = useRef<HTMLDivElement>(null)
   const mapa = useRef<maplibregl.Map | null>(null)
   const listo = useRef(false)
@@ -57,6 +66,8 @@ export default function Mapa({ bbox, capas, marcadores = [], onClickCapa, onArra
   bboxRef.current = bbox
   const centroRef = useRef(centrarEn)
   centroRef.current = centrarEn
+  const alCrearRef = useRef(alCrear)
+  alCrearRef.current = alCrear
 
   useEffect(() => {
     const m = new maplibregl.Map({ container: div.current!, style: ESTILO_BASE, bounds: bbox, fitBoundsOptions: { padding: 30 }, attributionControl: { compact: true } })
@@ -92,6 +103,7 @@ export default function Mapa({ bbox, capas, marcadores = [], onClickCapa, onArra
     })
     ro.observe(div.current!)
     mapa.current = m
+    alCrearRef.current?.(m)
     setGeneracion((g) => g + 1) // vuelve a colocar los marcadores en el mapa nuevo
     if (import.meta.env.DEV) (window as unknown as { __mapa: maplibregl.Map }).__mapa = m // para depurar desde la consola
     return () => {

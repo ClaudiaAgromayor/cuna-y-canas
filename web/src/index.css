@@ -46,3 +46,14 @@ input[type="range"]:focus-visible { outline: none; }
   .ficha { overflow: visible !important; }
   #root, body, html { height: auto; }
 }
+
+/* ficha del barrio: solo se ve al imprimir; mientras se imprime, todo lo demás se oculta */
+.ficha-imprimible { display: none; }
+@media print {
+  body[data-imprimir="barrio"] #root > * { display: none !important; }
+  body[data-imprimir="barrio"] .ficha-imprimible { display: block !important; }
+  body[data-imprimir="barrio"] #root { height: auto; }
+  .ficha-imprimible { font-size: 11pt; color: #131313; }
+  .ficha-imprimible section { break-inside: avoid; }
+  @page { size: A4; margin: 14mm; }
+}

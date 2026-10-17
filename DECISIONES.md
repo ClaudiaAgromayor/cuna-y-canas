@@ -75,6 +75,23 @@ El equipo cree que da tiempo a hacerlo todo. Si nos retrasamos, se recorta por e
 
 ## 3. Decisiones
 
+### 17 oct (tarde): ficha del barrio, últimas búsquedas y más ideas de Lucía
+- **Ficha del barrio para imprimir o guardar en PDF, rehecha:**
+  1. Cabecera con el logo y la fecha.
+  2. Municipio y barrio en grande, con la foto del municipio.
+  3. **Foto del mapa** tal como se ve, con su leyenda.
+  4. Tres cifras clave: lo que tienes cerca (por ejemplo 3/8), la población de hoy y la población cuando esté completo.
+  5. Lo que hará falta.
+  6. Tabla de qué hay cerca y qué viene, con su estado y los minutos.
+  7. Transporte y fuentes.
+
+  Se pinta fuera de la aplicación (en un portal de React), así que al imprimir solo sale la ficha, en A4.
+- **"Qué buscas":** los 4 botones fijos de situación se sustituyen por **"Últimas búsquedas"**, con las 4 últimas opciones marcadas por la persona (se recuerdan en el navegador). Si no hay ninguna, no se muestra nada.
+- **"3. A qué distancia y qué mostrar"** lleva ahora una frase que explica para qué sirve.
+- **Idea 3 de Lucía:** cada resultado aparece en el mapa con el icono de su servicio, coloreado por su estado.
+- **Idea 4 de Lucía:** antes de elegir barrio, el mapa colorea cada barrio por el **% de suelo para servicios aún sin construir** (Los Molinos 72 %, Buenavista 60 %), y las tarjetas lo dicen.
+- **Pendiente de Lucía:** idea 1 completa (el ranking flotando sobre el mapa; ya está la parte de "solo los 15 mejores en color") e idea 6 (en móvil, barra inferior y panel deslizable).
+
 ### 17 oct: cómo nos desmarcamos de los otros 14 equipos
 **La competencia** (programa de la final, 20 oct; nosotros exponemos de 10:30 a 10:40):
 
@@ -485,6 +502,7 @@ Un Ampere A1 (hasta 4 núcleos y 24 GB de RAM), 200 GB de disco, 10 GB de Object
 ---
 
 ## 9. Bitácora
+- **17 oct (tarde):** ficha del barrio rehecha con foto del mapa; últimas búsquedas en lugar de situaciones fijas; frase explicativa en distancia y estado; ideas 3 y 4 de Lucía (iconos en el mapa y barrios coloreados por suelo sin construir).
 - **17 oct:** análisis de la competencia y estrategia para desmarcarnos; portada con cifras de la Comunidad, radar de suelo y ejemplos de un clic; acceso de técnicos (demo) arriba a la derecha; logo del bebé con una cana; mejoras de Lucía 1, 2, 5 y 7. Rama de Lucía integrada en `main`.
 - **16 oct (noche, 3):** revisión de la interfaz con capturas. Diagnóstico: en las tres secciones la respuesta queda debajo de los controles. Siete propuestas con maqueta (pendientes de decidir): 1) ranking de ¿Dónde vivir? flotando sobre el mapa con solo los 15 mejores en color; 2) veredicto del barrio arriba ("tienes 3 de las 8 cosas que buscas", con ✓/✗ y minutos); 3) iconos por servicio en el mapa y parcelas agrupadas; 4) barrios coloreados por suelo de equipamiento sin construir antes de elegir; 5) Planificar en modo sencillo (servicio, año, nº de centros; el resto plegado) con botón ▶ 2025→2040; 6) móvil con cabecera de una línea, barra inferior y panel deslizable; 7) ejemplos de un clic en la portada. Propuesta de orden: 1, 2 y 5. **Problema detectado:** con "Tengo un bebé" el primero es Santa María de la Alameda (1.596 hab.), empatado al 73 % con Madrid; hay que mostrar empates y revisar el tamaño por defecto.
 - **16 oct (noche, 2):** idea de logo nuevo: la cabeza de un bebé con un solo pelo que es una cana (cuna + canas). Se pedirá a Claude Design con el contexto del proyecto y la paleta de la web (rojo #DE0029, tinta #131313). Pendiente de elegir versión y cambiarlo en la cabecera.

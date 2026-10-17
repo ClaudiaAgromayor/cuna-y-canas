@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { Feature, FeatureCollection, Geometry, Point, Polygon, Position } from 'geojson'
-import Mapa, { type CapaMapa, type Marcador } from './Mapa'
+import type maplibregl from 'maplibre-gl'
+import Mapa, { fotoDelMapa, type CapaMapa, type Marcador } from './Mapa'
+import FichaBarrio from './FichaBarrio'
 import { circulo, metros, METROS_POR_MINUTO } from './algoritmo'
 import type { AmbitoDemanda, DatosMunicipio, Servicio, ServicioId } from './tipos'
 import { Icono, iconoSvg } from './iconos'
@@ -35,12 +37,6 @@ const CATEGORIAS: Categoria[] = [
 ]
 const GRUPOS = [...new Set(CATEGORIAS.map((c) => c.grupo))]
 
-const SITUACIONES: { id: string; texto: string; icono: string; cats: string[] }[] = [
-  { id: 'bebe', texto: 'Tengo un bebé', icono: 'escuela_infantil', cats: ['ei_publica', 'ei_privada', 'salud', 'farmacia', 'parque'] },
-  { id: 'escolar', texto: 'Hijos en edad escolar', icono: 'colegio', cats: ['col_publico', 'col_concertado', 'col_privado', 'instituto', 'deporte', 'parque'] },
-  { id: 'mayores', texto: 'Cuido de mis mayores', icono: 'residencia', cats: ['centro_dia', 'residencia', 'hogar', 'salud', 'farmacia'] },
-  { id: 'activo', texto: 'Deporte y ocio', icono: 'centro_dia', cats: ['deporte', 'parque', 'cultura'] },
-]
 const ESTADOS: { id: EstadoId; texto: string; disponible: boolean }[] = [
   { id: 'abierto', texto: 'Ya existe', disponible: true },
   { id: 'plan', texto: 'En el planeamiento', disponible: true },
@@ -82,7 +78,6 @@ interface Item { id: string; cat: Categoria; nombre: string; detalle: string; es
 
 export default function PantallaCiudadana({ datos, servicios, barrioInicial }: Props) {
   const [lugar, setLugar] = useState<Lugar | null>(null)
-  const [situaciones, setSituaciones] = useState<string[]>([])
   const [cats, setCats] = useState<string[]>(['ei_publica', 'col_publico', 'instituto', 'salud', 'farmacia', 'residencia', 'parque', 'deporte', 'suelo'])
   const [estados, setEstados] = useState<EstadoId[]>(['abierto', 'plan', 'prevista', 'suelo'])
   const [radioMin, setRadioMin] = useState(10)
@@ -91,6 +86,42 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial }: P
   const [q, setQ] = useState('')
   const [cands, setCands] = useState<Candidato[]>([])
   const [msg, setMsg] = useState('')
+  // últimas búsquedas: las 4 últimas opciones que la persona ha marcado (se recuerdan en este navegador)
+  const [recientes, setRecientes] = useState<string[]>(() => { try { return JSON.parse(localStorage.getItem('cyc_recientes') ?? '[]') } catch { return [] } })
+  const mapaRef = useRef<maplibregl.Map | null>(null)
+  const [sinConstruir, setSinConstruir] = useState<Map<string, { pct: number | null; m2: number }>>(new Map())
+  useEffect(() => {
+    fetch(`${import.meta.env.BASE_URL}${datos.indice.carpeta}/resumen_ambitos.json`).then((r) => r.json())
+      .then((d: { ambitos: { ambito: string; pct_equipamiento_vacante: number | null; equipamiento_vacante_m2: number }[] }) =>
+        setSinConstruir(new Map(d.ambitos.map((a) => [a.ambito, { pct: a.pct_equipamiento_vacante, m2: a.equipamiento_vacante_m2 }]))))
+      .catch(() => setSinConstruir(new Map()))
+  }, [datos])
+  const [imagenMapa, setImagenMapa] = useState('')
+  const [foto, setFoto] = useState<{ url: string; pagina: string | null } | null>(null)
+  useEffect(() => {
+    fetch(`${import.meta.env.BASE_URL}municipios_resumen.json`).then((r) => r.json())
+      .then((d: { municipios: { cod_ine: string; foto: string | null; foto_pagina: string | null }[] }) => {
+        const m = d.municipios.find((x) => x.cod_ine === datos.indice.cod_ine)
+        if (m?.foto) setFoto({ url: m.foto, pagina: m.foto_pagina })
+      }).catch(() => setFoto(null))
+  }, [datos])
+  const alternarCat = (id: string) => setCats((x) => {
+    if (x.includes(id)) return x.filter((y) => y !== id)
+    setRecientes((r) => {
+      const nuevo = [id, ...r.filter((y) => y !== id)].slice(0, 4)
+      try { localStorage.setItem('cyc_recientes', JSON.stringify(nuevo)) } catch { /* sin almacenamiento */ }
+      return nuevo
+    })
+    return [...x, id]
+  })
+  // ficha en PDF: primero una foto del mapa tal como se ve, después el diálogo de imprimir
+  const imprimirFicha = async () => {
+    if (mapaRef.current) setImagenMapa(await fotoDelMapa(mapaRef.current))
+    document.body.dataset.imprimir = 'barrio'
+    const limpiar = () => { delete document.body.dataset.imprimir; window.removeEventListener('afterprint', limpiar) }
+    window.addEventListener('afterprint', limpiar)
+    setTimeout(() => window.print(), 150)
+  }
   const refResultados = useRef<HTMLDivElement>(null)
   // al elegir un sitio, el panel baja solo hasta la respuesta (antes quedaba debajo de los filtros)
   useEffect(() => { if (lugar) setTimeout(() => refResultados.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 60) }, [lugar])
@@ -196,43 +227,55 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial }: P
     if (a) elegirBarrio(a)
   }, [barrioInicial]) // eslint-disable-line react-hooks/exhaustive-deps
 
-  const alternarSituacion = (id: string) => {
-    const s = SITUACIONES.find((x) => x.id === id)!
-    if (situaciones.includes(id)) { setSituaciones(situaciones.filter((x) => x !== id)); return }
-    setSituaciones([...situaciones, id]); setCats((c) => [...new Set([...c, ...s.cats])])
-  }
 
   /* ---------- mapa ---------- */
   const capas: CapaMapa[] = useMemo(() => {
     const circ: FeatureCollection<Polygon> = { type: 'FeatureCollection', features: lugar ? [{ type: 'Feature', properties: {}, geometry: { type: 'Polygon', coordinates: [circulo(lugar.lon, lugar.lat, radio)] } }] : [] }
-    const ambs: FeatureCollection = { ...datos.ambitos, features: datos.ambitos.features.map((f) => ({ ...f, properties: { ...f.properties, estado: demanda.get(String(f.properties?.nombre))?.estado ?? 'sin_datos', sel: f.properties?.nombre === lugar?.ambito } })) }
+    const ambs: FeatureCollection = { ...datos.ambitos, features: datos.ambitos.features.map((f) => ({ ...f, properties: { ...f.properties,
+      estado: demanda.get(String(f.properties?.nombre))?.estado ?? 'sin_datos', sel: f.properties?.nombre === lugar?.ambito,
+      vacio: sinConstruir.get(String(f.properties?.nombre))?.pct ?? -1, vacioM2: sinConstruir.get(String(f.properties?.nombre))?.m2 ?? 0 } })) }
     const items: FeatureCollection<Point> = { type: 'FeatureCollection', features: (resultado?.cerca ?? []).map((x) => ({ type: 'Feature', properties: { nombre: x.nombre, cat: x.cat.texto, estado: x.estado, detalle: x.detalle }, geometry: { type: 'Point', coordinates: [x.lon, x.lat] } })) }
     return [
-      { id: 'b-ambitos', datos: ambs, estilo: { type: 'fill', paint: { 'fill-color': ['match', ['get', 'estado'], 'futuro', '#de0029', 'en_desarrollo', '#131313', '#8a8a8a'], 'fill-opacity': ['case', ['get', 'sel'], 0.14, 0.05] } } as CapaMapa['estilo'],
-        popup: (p) => `<b>${nombreBarrio(String(p.nombre))}</b><br><span style="color:#595959">${ETIQUETA_ESTADO_BARRIO[String(p.estado)]} · ${p.viviendas ? n(Number(p.viviendas)) + ' viviendas previstas' : 'sin datos de viviendas'}</span>` },
+      // antes de elegir: cada barrio coloreado por el suelo para servicios que sigue sin construir; después, resaltado el elegido
+      { id: 'b-ambitos', datos: ambs, estilo: { type: 'fill', paint: lugar
+        ? { 'fill-color': ['match', ['get', 'estado'], 'futuro', '#de0029', 'en_desarrollo', '#131313', '#8a8a8a'], 'fill-opacity': ['case', ['get', 'sel'], 0.14, 0.05] }
+        : { 'fill-color': ['case', ['<', ['get', 'vacio'], 0], '#e6e6e6', ['interpolate', ['linear'], ['get', 'vacio'], 0, '#f6e3e6', 40, '#e3808f', 80, '#b50f2b']], 'fill-opacity': 0.7 } } as CapaMapa['estilo'],
+        popup: (p) => `<b>${nombreBarrio(String(p.nombre))}</b><br><span style="color:#595959">${ETIQUETA_ESTADO_BARRIO[String(p.estado)]} · ${p.viviendas ? n(Number(p.viviendas)) + ' viviendas previstas' : 'sin datos de viviendas'}${Number(p.vacio) >= 0 ? `<br>${n(Number(p.vacio))} % del suelo para servicios aún sin construir (${n(Number(p.vacioM2))} m²)` : ''}</span>` },
       { id: 'b-ambitos-borde', datos: ambs, estilo: { type: 'line', paint: { 'line-color': ['case', ['get', 'sel'], '#de0029', '#595959'], 'line-width': ['case', ['get', 'sel'], 2.5, 1], 'line-dasharray': [3, 2] } } as CapaMapa['estilo'] },
       { id: 'b-radio', datos: circ, estilo: { type: 'line', paint: { 'line-color': '#de0029', 'line-width': 1.5, 'line-dasharray': [2, 2] } } },
       { id: 'b-items', datos: items, estilo: { type: 'circle', paint: { 'circle-radius': 6, 'circle-color': ['match', ['get', 'estado'], 'abierto', '#131313', 'suelo', '#2b5c8a', 'prevista', '#de0029', '#8a8a8a'], 'circle-stroke-width': 2, 'circle-stroke-color': '#fff' } } as CapaMapa['estilo'],
         popup: (p) => `<b>${p.nombre}</b><br>${p.cat}<br><span style="color:#595959">${p.detalle}</span>` },
     ]
-  }, [datos, demanda, lugar, radio, resultado])
-  const marcadores: Marcador[] = useMemo(() => (lugar ? [{ id: 'yo', lon: lugar.lon, lat: lugar.lat, texto: '', color: '#de0029', html: iconoSvg('ubicacion'), titulo: lugar.texto }] : []), [lugar])
+  }, [datos, demanda, lugar, radio, resultado, sinConstruir])
+  // cada resultado con el icono de su servicio, coloreado por su estado (idea 3 de Lucía)
+  const COLOR_MARCA: Record<EstadoId, string> = { abierto: '#131313', plan: '#8a8a8a', prevista: '#de0029', suelo: '#2b5c8a', licitada: '#9a5b00', adjudicada: '#9a5b00', obras: '#de0029' }
+  const marcadores: Marcador[] = useMemo(() => {
+    if (!lugar) return []
+    const iconos: Marcador[] = (resultado?.cerca ?? []).slice(0, 60).map((x) => ({ id: x.id, lon: x.lon, lat: x.lat, texto: '', color: COLOR_MARCA[x.estado], html: iconoSvg(x.cat.icono), clase: 'pequeno', titulo: `${x.nombre} · ${x.cat.texto}` }))
+    return [...iconos, { id: 'yo', lon: lugar.lon, lat: lugar.lat, texto: '', color: '#de0029', html: iconoSvg('ubicacion'), titulo: lugar.texto }]
+  }, [lugar, resultado]) // eslint-disable-line react-hooks/exhaustive-deps
   const centro = useMemo<[number, number] | null>(() => (lugar ? [lugar.lon, lugar.lat] : null), [lugar])
   const amb = resultado?.amb ?? null
 
   return (
     <div className="flex h-full min-h-0 flex-col md:grid md:grid-cols-[minmax(340px,480px)_1fr]">
       <div className="relative order-1 h-[42vh] shrink-0 md:order-2 md:h-auto">
-        <Mapa bbox={datos.encuadre} capas={capas} marcadores={marcadores} centrarEn={centro}
+        <Mapa bbox={datos.encuadre} capas={capas} marcadores={marcadores} centrarEn={centro} alCrear={(m) => { mapaRef.current = m }}
           onClickCapa={(capa, p, ll) => {
             if (capa === 'b-ambitos') { const a = demanda.get(String(p.nombre)); if (a) elegirBarrio(a); else elegirPunto(ll[0], ll[1], 'Punto elegido en el mapa') }
             else if (capa !== 'b-items') elegirPunto(ll[0], ll[1], 'Punto elegido en el mapa')
           }}
           onClickMapa={(lon, lat) => elegirPunto(lon, lat, 'Punto elegido en el mapa')} />
         <Leyenda>
-          {[['#131313', 'Ya existe'], ['#8a8a8a', 'En el planeamiento'], ['#de0029', 'Prevista'], ['#2b5c8a', 'Suelo disponible']].map(([c, t]) => (
+          {lugar ? [['#131313', 'Ya existe'], ['#8a8a8a', 'En el planeamiento'], ['#de0029', 'Prevista'], ['#2b5c8a', 'Suelo disponible']].map(([c, t]) => (
             <div key={t} className="flex items-center gap-2 py-0.5"><span className="h-3 w-3 rounded-full" style={{ background: c }} />{t}</div>
-          ))}
+          )) : (
+            <div className="w-44">
+              <div className="mb-1 font-medium">Suelo para servicios aún sin construir en cada barrio</div>
+              <div className="flex h-2.5" style={{ background: 'linear-gradient(to right, #f6e3e6, #e3808f, #b50f2b)' }} />
+              <div className="flex justify-between text-texto-3"><span>poco</span><span>mucho</span></div>
+            </div>
+          )}
         </Leyenda>
       </div>
 
@@ -252,6 +295,9 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial }: P
                   className={`border px-3 py-2 text-left transition-colors ${on ? 'border-tinta bg-tinta text-white' : 'border-linea hover:border-tinta'}`}>
                   <div className="truncate text-sm font-medium">{nombreBarrio(a.ambito)}</div>
                   <div className={`text-[11px] ${on ? 'text-white/70' : 'text-texto-3'}`}>{ETIQUETA_ESTADO_BARRIO[a.estado]} · {n(a.viviendas ?? 0)} viviendas</div>
+                  {(sinConstruir.get(a.ambito)?.pct ?? null) != null && (
+                    <div className={`text-[11px] ${on ? 'text-white/70' : 'text-rojo-oscuro'}`}>{n(sinConstruir.get(a.ambito)!.pct!)} % del suelo para servicios sin construir</div>
+                  )}
                 </button>
               )
             })}
@@ -270,14 +316,21 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial }: P
 
         <section className="no-imprimir px-6 pt-5">
           <h2 className="mb-2 text-sm font-semibold">2. Qué buscas <span className="font-normal text-texto-3">({cats.length} elegidos)</span></h2>
-          <div className="mb-2 grid grid-cols-2 gap-1.5">
-            {SITUACIONES.map((s) => {
-              const on = situaciones.includes(s.id)
-              return <button key={s.id} type="button" aria-pressed={on} onClick={() => alternarSituacion(s.id)}
-                className={`flex items-center gap-2 border px-2.5 py-2 text-left text-[13px] leading-tight ${on ? 'border-tinta bg-tinta text-white' : 'border-linea hover:border-tinta'}`}>
-                <Icono nombre={s.icono} className="h-5 w-5 shrink-0" />{s.texto}</button>
-            })}
-          </div>
+          {recientes.length > 0 && (
+            <div className="mb-3">
+              <div className="mb-1.5 text-xs text-texto-3">Últimas búsquedas</div>
+              <div className="flex flex-wrap gap-1.5">
+                {recientes.map((id) => {
+                  const c = CATEGORIAS.find((x) => x.id === id)
+                  if (!c) return null
+                  const on = cats.includes(id)
+                  return <button key={id} type="button" aria-pressed={on} onClick={() => alternarCat(id)}
+                    className={`inline-flex items-center gap-1.5 border px-2.5 py-1.5 text-[13px] ${on ? 'border-tinta bg-tinta text-white' : 'border-linea hover:border-tinta'}`}>
+                    <Icono nombre={c.icono} className="h-4 w-4" />{c.texto}</button>
+                })}
+              </div>
+            </div>
+          )}
           <div className="border-t border-linea">
             {GRUPOS.map((g) => {
               const cs = CATEGORIAS.filter((c) => c.grupo === g), nSel = cs.filter((c) => cats.includes(c.id)).length, ab = abiertos.includes(g)
@@ -288,7 +341,7 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial }: P
                   </button>
                   {ab && <div className="grid grid-cols-1 gap-0.5 pb-2.5 sm:grid-cols-2">{cs.map((c) => (
                     <label key={c.id} className="flex cursor-pointer items-center gap-2 py-1 text-sm">
-                      <input type="checkbox" className="h-4 w-4 accent-tinta" checked={cats.includes(c.id)} onChange={() => setCats((x) => x.includes(c.id) ? x.filter((y) => y !== c.id) : [...x, c.id])} />{c.texto}
+                      <input type="checkbox" className="h-4 w-4 accent-tinta" checked={cats.includes(c.id)} onChange={() => alternarCat(c.id)} />{c.texto}
                     </label>))}</div>}
                 </div>
               )
@@ -297,7 +350,8 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial }: P
         </section>
 
         <section className="no-imprimir px-6 pt-5">
-          <h2 className="mb-2 text-sm font-semibold">3. Distancia y estado</h2>
+          <h2 className="text-sm font-semibold">3. A qué distancia y qué mostrar</h2>
+          <p className="mb-2 text-xs text-texto-3">Hasta dónde irías andando y qué quieres ver: lo que ya funciona, lo que el plan urbanístico reserva o prevé, y el suelo libre donde podría ir un servicio nuevo.</p>
           <div className="flex">
             {[5, 10, 15, 20].map((m) => <button key={m} type="button" aria-pressed={radioMin === m} onClick={() => setRadioMin(m)}
               className={`flex-1 border-y border-l px-2 py-1.5 text-sm last:border-r ${radioMin === m ? 'border-tinta bg-tinta text-white' : 'border-linea hover:bg-gris-1'}`}>{m} min</button>)}
@@ -399,12 +453,27 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial }: P
             </section>
 
             <div className="no-imprimir flex flex-wrap gap-2 px-6 py-5">
-              <button type="button" className="inline-flex items-center gap-2 border border-tinta px-4 py-2 text-sm hover:bg-gris-1" onClick={() => window.print()}><Icono nombre="descargar" className="h-4 w-4" />Ficha del barrio (PDF)</button>
+              <button type="button" className="inline-flex items-center gap-2 border border-tinta px-4 py-2 text-sm hover:bg-gris-1" onClick={imprimirFicha}><Icono nombre="descargar" className="h-4 w-4" />Ficha del barrio (PDF)</button>
             </div>
             <p className="px-6 pb-6 text-xs leading-relaxed text-texto-3">Datos abiertos de la Comunidad de Madrid (IDEM y Portal de Datos Abiertos), INE y Consorcio Regional de Transportes. Licitaciones y obras: sin datos todavía. Distancias a pie en línea recta.{amb?.pct_residencial_vacante != null ? ` Suelo residencial aún sin construir en el barrio: ${dec(amb.pct_residencial_vacante)} %.` : ''}</p>
           </div>
         )}
       </aside>
+      {resultado && lugar && (() => {
+        const buscadas = resultado.porCat.filter(({ c }) => c.id !== 'suelo')
+        const suelo = resultado.cerca.filter((x) => x.cat.id === 'suelo')
+        return (
+          <FichaBarrio municipio={datos.indice.nombre} lugar={lugar.texto} estadoBarrio={amb ? ETIQUETA_ESTADO_BARRIO[amb.estado] : null} viviendas={amb?.viviendas ?? null}
+            foto={foto} imagenMapa={imagenMapa} radioMin={radioMin}
+            veredicto={{ tienes: buscadas.filter((x) => x.items.length > 0).length, total: buscadas.length }}
+            poblacion={{ hoy: amb?.poblacion_actual ?? null, anio: amb?.anio_poblacion_actual ?? null, completo: amb?.poblacion_completo ? [amb.poblacion_completo[0], amb.poblacion_completo[2]] : null }}
+            previsiones={previsiones.filter((x) => x.hi > 0).map((x) => ({ servicio: x.s.nombre, texto: `${x.s.unidad === 'plazas' ? `entre ${n(x.lo)} y ${n(x.hi)} plazas` : `entre ${n(x.lo)} y ${n(x.hi)} habitantes que atender`}; hoy hay ${x.abiertos} a menos de ${radioMin} min` }))}
+            grupos={buscadas.map(({ c, items, masCercano }) => ({ titulo: c.texto, items: items.map((x) => ({ id: x.id, nombre: x.nombre, detalle: x.detalle, estado: x.estado, minutos: minutos(x.d) })),
+              masCercano: masCercano ? { nombre: masCercano.nombre, minutos: minutos(masCercano.d) } : null }))}
+            paradas={resultado.paradas.map(({ f, d }) => ({ nombre: capitalizar(String(f.properties?.nombre)), lineas: String(f.properties?.lineas ?? '—'), minutos: minutos(d) }))}
+            suelo={{ parcelas: suelo.length, m2: suelo.reduce((t, x) => t + Number(x.detalle.split(' m²')[0].replace(/\./g, '')), 0) }} />
+        )
+      })()}
     </div>
   )
 }

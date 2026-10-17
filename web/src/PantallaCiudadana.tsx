@@ -87,6 +87,17 @@ function textoViviendas(p: Record<string, unknown>) {
 
 export default function PantallaCiudadana({ datos, servicios, barrioInicial, catsIniciales }: Props) {
   const [lugar, setLugar] = useState<Lugar | null>(null)
+  // Escape: cierra la ventanita del mapa y, si no había ninguna abierta, quita el sitio elegido
+  useEffect(() => {
+    const tecla = (e: KeyboardEvent) => {
+      if (e.key !== 'Escape') return
+      const abiertas = document.querySelectorAll('.maplibregl-popup')
+      if (abiertas.length) abiertas.forEach((x) => x.remove())
+      else setLugar(null)
+    }
+    window.addEventListener('keydown', tecla)
+    return () => window.removeEventListener('keydown', tecla)
+  }, [])
   // de entrada nada marcado; si se llega desde "¿Dónde vivir?", solo lo que se buscaba allí
   const [cats, setCats] = useState<string[]>(catsIniciales ?? [])
   const [estados, setEstados] = useState<EstadoId[]>(['abierto', 'plan', 'prevista', 'suelo'])

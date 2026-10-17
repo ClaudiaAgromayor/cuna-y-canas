@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useState } from 'react'
 import type { FeatureCollection } from 'geojson'
 import Mapa, { type CapaMapa } from './Mapa'
-import { CRITERIOS, formatoCriterio, puntuar, SITUACIONES, TAMANOS, type Puntuado, type ResumenMunicipio } from './criterios'
+import { CRITERIOS, enFrase, ESCALA, formatoCriterio, lista, posicion, puntuar, SITUACIONES, TAMANOS, TOP, ZONAS, type Puntuado, type ResumenMunicipio } from './criterios'
+import FichaMunicipio from './FichaMunicipio'
 import type { MunicipioIndice, Rango, Servicio, ServicioId } from './tipos'
 import { Icono } from './iconos'
 import { Aviso, Boton, dec, n, Leyenda } from './ui'
@@ -21,8 +22,10 @@ interface Props {
 const BASE = import.meta.env.BASE_URL
 const GRUPOS = [...new Set(CRITERIOS.map((c) => c.grupo))]
 const ENCUADRE_CM: [number, number, number, number] = [-4.58, 39.88, -3.05, 41.17] // toda la Comunidad de Madrid
-const TOP = 15
-const ESCALA = ['#f6e3e6', '#eeb7c0', '#e3808f', '#d4475c', '#b50f2b', '#7d0019'] // de menos a más coincidencia
+const BORDE_TONO: Record<string, string> = { neutro: 'border-texto-3', ok: 'border-ok', aviso: 'border-aviso', rojo: 'border-rojo' }
+
+export interface Futuro { pob: Rango; items: { s: Servicio; plazas: number[]; centros: number[] }[] }
+export interface Sitio { colegios: number; grandes: number; titulo: string; tono: string }
 
 export default function PantallaMunicipios({ servicios, detallados, verBarrios, planificar, situacionesIniciales, selInicial }: Props) {
   const [resumen, setResumen] = useState<Resumen | null>(null)
@@ -109,6 +112,7 @@ export default function PantallaMunicipios({ servicios, detallados, verBarrios, 
             criterios={criterios} volver={() => setVerComparacion(false)} quitar={(c) => setComparar(comparar.filter((x) => x !== c))} />
         ) : elegido ? (
           <Ficha r={elegido} total={ranking.length} criterios={criterios} modelo={resumen.modelo} servicios={servicios}
+            situaciones={situaciones} limites={limites} puestos={porCod}
             volver={() => setSel(null)} comparando={comparar.includes(elegido.m.cod_ine)}
             alternarComparar={() => setComparar((c) => c.includes(elegido.m.cod_ine) ? c.filter((x) => x !== elegido.m.cod_ine) : [...c, elegido.m.cod_ine].slice(-3))}
             detallado={detallado(elegido.m.cod_ine)} verBarrios={() => verBarrios(elegido.m.cod_ine)} planificar={() => planificar(elegido.m.cod_ine)} />
@@ -132,6 +136,14 @@ export default function PantallaMunicipios({ servicios, detallados, verBarrios, 
                   )
                 })}
               </div>
+              {situaciones.length > 0 && (
+                <div className="mt-2.5 border-l-2 border-rojo bg-gris-1 px-3 py-2 text-xs leading-relaxed text-texto-2">
+                  {SITUACIONES.filter((s) => situaciones.includes(s.id)).map((s) => (
+                    <p key={s.id}><b className="text-tinta">{s.texto}:</b> {s.nota ? `${s.nota} ` : ''}Miramos {lista(s.criterios.map((id) => enFrase(CRITERIOS.find((c) => c.id === id)!.texto)))}.</p>
+                  ))}
+                  <p className="mt-1 text-texto-3">Puedes quitar o añadir criterios en el punto 2.</p>
+                </div>
+              )}
             </section>
 
             <section className="px-6 pt-5">
@@ -153,7 +165,7 @@ export default function PantallaMunicipios({ servicios, detallados, verBarrios, 
                           {cs.map((c) => (
                             <label key={c.id} className="flex cursor-pointer items-start gap-2.5 py-1 text-sm" title={c.explica}>
                               <input type="checkbox" className="mt-0.5 h-4 w-4 accent-tinta" checked={criterios.includes(c.id)} onChange={() => alternarCriterio(c.id)} />
-                              <span><span className="text-tinta">{c.texto}</span><span className="block text-xs text-texto-3">{c.explica}</span></span>
+                              <span><span className="text-tinta">{c.texto}</span><span className="block text-xs text-texto-2">{c.explica}</span><span className="block text-[11px] text-texto-3">Fuente: {c.fuente}</span></span>
                             </label>
                           ))}
                         </div>
@@ -195,7 +207,7 @@ export default function PantallaMunicipios({ servicios, detallados, verBarrios, 
                       <span className={`flex h-7 w-7 shrink-0 items-center justify-center text-sm font-semibold ${puesto <= 3 ? 'bg-rojo text-white' : 'border border-tinta'}`} title={empate ? 'Empatado con otro municipio' : undefined}>{puesto}{empate ? '=' : ''}</span>
                       <span className="min-w-0 flex-1">
                         <span className="block truncate font-medium">{r.m.nombre}</span>
-                        <span className="block text-xs text-texto-3">{n(r.m.poblacion)} hab. · {dec(r.m.dist_madrid_km, 0)} km de Madrid{r.m.tren_o_metro ? ' · tren o metro' : ''}</span>
+                        <span className="block text-xs text-texto-3">{n(r.m.poblacion)} hab. · {dec(r.m.dist_madrid_km, 0)} km de Madrid{r.m.lineas_tren_madrid.length ? ' · tren o Metro a Madrid' : ''}</span>
                       </span>
                       <span className="w-20 shrink-0">
                         <span className="block text-right text-sm font-semibold tabular-nums">{Math.round(r.puntos)} %</span>
@@ -205,7 +217,16 @@ export default function PantallaMunicipios({ servicios, detallados, verBarrios, 
                   </li>
                 )})}
               </ol>
-              <p className="mt-3 text-xs leading-relaxed text-texto-3">La coincidencia es la media de la posición de cada municipio en lo que has marcado (100 % = el mejor de los que cumplen tus filtros). En los servicios contamos si hay suficientes para su población y si hay donde elegir. Pulsa un municipio para ver su ficha.</p>
+              <p className="mt-3 text-xs text-texto-3">Pulsa un municipio para ver su ficha.</p>
+              <details className="mt-3 border-t border-linea pt-2 text-xs leading-relaxed text-texto-2">
+                <summary className="cursor-pointer py-1 font-medium text-tinta">Cómo ordenamos y de dónde salen los datos</summary>
+                <ul className="mt-1 grid list-disc gap-1.5 pl-4">
+                  <li><b className="text-tinta">Nada es una opinión.</b> Cada criterio es un dato oficial y abierto (debajo de cada uno pone su fuente), descargado por API del Portal de Datos Abiertos de la Comunidad, la IDEM, el INE y el Consorcio Regional de Transportes.</li>
+                  <li><b className="text-tinta">Comparamos con los demás municipios.</b> En cada criterio, el mejor de los que cumplen tus filtros saca 100 y el peor, 0. La coincidencia es la media de lo que has marcado: todos los criterios pesan igual.</li>
+                  <li><b className="text-tinta">Servicios: suficientes y donde elegir.</b> En colegios, centros de salud, residencias… contamos si hay bastantes para su población (60 %) y cuántos hay para elegir (40 %). Así un pueblo de 300 habitantes con una escuela no gana a una ciudad con veinte.</li>
+                  <li><b className="text-tinta">Trabajo en Madrid</b> no premia estar cerca, sino llegar bien: si hay tren o Metro hasta Madrid, cuántos autobuses van directos y la zona del abono, que marca lo que cuesta cada mes.</li>
+                </ul>
+              </details>
             </section>
           </>
         )}
@@ -222,14 +243,15 @@ export default function PantallaMunicipios({ servicios, detallados, verBarrios, 
 
 /* ---------- ficha de un municipio ---------- */
 
-function Ficha({ r, total, criterios, modelo, servicios, volver, comparando, alternarComparar, detallado, verBarrios, planificar }: {
+function Ficha({ r, total, criterios, modelo, servicios, situaciones, limites, puestos, volver, comparando, alternarComparar, detallado, verBarrios, planificar }: {
   r: Puntuado & { puesto: number }; total: number; criterios: string[]; modelo: Modelo | null; servicios: Record<ServicioId, Servicio>
+  situaciones: string[]; limites: FeatureCollection; puestos: Map<string, { puesto: number }>
   volver: () => void; comparando: boolean; alternarComparar: () => void; detallado: boolean; verBarrios: () => void; planificar: () => void
 }) {
   const m = r.m
   const cs = CRITERIOS.filter((c) => criterios.includes(c.id))
   // lo que viene: población que traerán las viviendas previstas y servicios que harán falta (rangos)
-  const futuro = useMemo(() => {
+  const futuro = useMemo((): Futuro | null => {
     if (!modelo || !m.viviendas_previstas) return null
     const hv = modelo.parametros.hab_por_vivienda, men = modelo.parametros.pct_menores18, may = modelo.parametros.pct_mayores65, rep = modelo.reparto_menores
     const pob = hv.map((h) => m.viviendas_previstas! * h) as Rango
@@ -251,11 +273,24 @@ function Ficha({ r, total, criterios, modelo, servicios, volver, comparando, alt
     { icono: 'centro_salud', valor: String(m.farmacias), texto: 'farmacias' },
     { icono: 'residencia', valor: n(m.plazas_residencia), texto: `plazas en ${m.residencias} residencias` },
     { icono: 'centro_dia', valor: String(m.centros_dia + m.hogares_mayores), texto: 'centros de día y hogares de mayores' },
-    { icono: 'autobus', valor: String(m.est_metro + m.est_cercanias + m.est_metro_ligero), texto: 'estaciones de Metro, Metro Ligero o Cercanías' },
-    { icono: 'autobus', valor: String(m.lineas_interurbanas), texto: 'líneas de autobús interurbano' },
+    { icono: 'tren', valor: m.lineas_tren_madrid.length ? 'Sí' : 'No', texto: m.lineas_tren_madrid.length ? `tren o Metro hasta Madrid: ${m.lineas_tren_madrid.slice(0, 5).join(', ')}${m.lineas_tren_madrid.length > 5 ? '…' : ''}` : 'hay tren ni Metro hasta Madrid' },
+    { icono: 'autobus', valor: String(m.bus_madrid), texto: `líneas de autobús directas a Madrid (${m.lineas_interurbanas} interurbanas en total)` },
     { icono: 'colegio', valor: String(m.bibliotecas), texto: 'bibliotecas' },
-    { icono: 'suelo', valor: m.zonas_verdes_m2_hab != null ? `${n(m.zonas_verdes_m2_hab)} m²` : '—', texto: 'de zonas verdes por habitante' },
+    { icono: 'arbol', valor: m.zonas_verdes_m2_hab != null ? `${n(m.zonas_verdes_m2_hab)} m²` : '—', texto: 'de zonas verdes por habitante' },
   ]
+  // ¿hay sitio para lo que viene? colegios que harían falta frente a parcelas vacantes donde cabe uno
+  const sitio: Sitio | null = futuro && m.suelo_detallado ? (() => {
+    const colegios = futuro.items.find((x) => x.s.nombre.startsWith('Colegio'))?.centros[1] ?? 0
+    const grandes = m.parcelas_equip_8000 ?? 0
+    const [titulo, tono] = colegios < 0.5 ? ['Poca presión sobre el suelo', 'neutro'] : grandes >= colegios * 2 ? ['Hay suelo de sobra', 'ok'] : grandes >= colegios ? ['Suelo justo', 'aviso'] : ['Puede faltar suelo', 'rojo']
+    return { colegios, grandes, titulo, tono }
+  })() : null
+  const imprimir = () => {
+    document.body.dataset.imprimir = 'municipio'
+    const limpiar = () => { delete document.body.dataset.imprimir; window.removeEventListener('afterprint', limpiar) }
+    window.addEventListener('afterprint', limpiar)
+    setTimeout(() => window.print(), 100)
+  }
 
   return (
     <div className="ficha">
@@ -277,6 +312,7 @@ function Ficha({ r, total, criterios, modelo, servicios, volver, comparando, alt
           <span><b className="text-tinta">{n(m.poblacion)}</b> habitantes ({m.anio_poblacion})</span>
           {m.crecimiento_pct != null && <span><b className="text-tinta">{m.crecimiento_pct > 0 ? '+' : ''}{dec(m.crecimiento_pct)} %</b> desde {m.periodo_crecimiento.split('-')[0]}</span>}
           <span><b className="text-tinta">{dec(m.dist_madrid_km, 0)} km</b> de Madrid</span>
+          {m.corona && <span>abono <b className="text-tinta">zona {m.corona}</b></span>}
         </div>
         {Number.isFinite(r.puntos) && criterios.length > 0 && (
           <div className="mt-4 flex items-center gap-3 bg-gris-1 px-4 py-3">
@@ -288,7 +324,7 @@ function Ficha({ r, total, criterios, modelo, servicios, volver, comparando, alt
           {detallado && <Boton primario icono="ubicacion" onClick={verBarrios}>Ver el mapa de {m.nombre}</Boton>}
           {!detallado && <span className="self-center text-xs text-texto-3">Mapa detallado en preparación</span>}
           <Boton icono="capas" onClick={alternarComparar}>{comparando ? 'Quitar de la comparación' : 'Comparar'}</Boton>
-          <Boton icono="descargar" onClick={() => window.print()}>Ficha PDF</Boton>
+          <Boton icono="descargar" onClick={imprimir}>Ficha PDF</Boton>
         </div>
       </div>
 
@@ -302,7 +338,7 @@ function Ficha({ r, total, criterios, modelo, servicios, volver, comparando, alt
                 <li key={c.id} className="text-sm">
                   <div className="flex items-baseline justify-between gap-2"><span>{c.texto}</span><span className="text-xs text-texto-3">{formatoCriterio(c, m)}</span></div>
                   <div className="mt-1 h-1.5 bg-gris-2"><div className="h-full bg-tinta" style={{ width: `${p ?? 0}%` }} /></div>
-                  <div className="mt-0.5 text-xs text-texto-3">{p == null ? 'sin datos' : p >= 66 ? 'Entre los mejores' : p >= 33 ? 'En la media' : 'Por debajo de la mayoría'}</div>
+                  <div className="mt-0.5 text-xs text-texto-3">{posicion(p)} · <span title={c.explica}>{c.fuente}</span></div>
                 </li>
               )
             })}
@@ -339,18 +375,13 @@ function Ficha({ r, total, criterios, modelo, servicios, volver, comparando, alt
               ))}
             </ul>
             <p className="mt-2 text-xs text-texto-3">Estimación con el modelo calibrado en barrios nuevos de {modelo?.municipio}. Es lo que harán falta por la población nueva, además de lo que ya existe.</p>
-            {m.suelo_detallado && (() => {
-              const colegios = futuro.items.find((x) => x.s.nombre.startsWith('Colegio'))?.centros[1] ?? 0
-              const grandes = m.parcelas_equip_8000 ?? 0
-              const diag = colegios < 0.5 ? ['Poca presión sobre el suelo', 'border-texto-3'] : grandes >= colegios * 2 ? ['Hay suelo de sobra', 'border-ok'] : grandes >= colegios ? ['Suelo justo', 'border-aviso'] : ['Puede faltar suelo', 'border-rojo']
-              return (
-                <div className={`mt-4 border-l-[3px] bg-gris-1 px-4 py-3 text-sm ${diag[1]}`}>
-                  <div className="font-semibold">¿Hay sitio para lo que viene? {diag[0]}</div>
-                  <p className="mt-1 text-texto-2">Tiene <b className="text-tinta">{n(m.parcelas_equip ?? 0)} parcelas vacantes</b> de equipamiento ({n((m.suelo_equip_m2 ?? 0) / 10000)} ha); en <b className="text-tinta">{n(grandes)}</b> cabría un colegio (8.000 m² o más) y en {n(m.parcelas_equip_1500 ?? 0)} una escuela infantil o un centro de día. La población nueva necesitaría el equivalente a {dec(colegios, 1)} {colegios < 1.5 ? 'colegio' : 'colegios'}.</p>
-                  <p className="mt-1 text-xs text-texto-3">Fuente: IDEM, suelo vacante y ocupado 2026.</p>
-                </div>
-              )
-            })()}
+            {sitio && (
+              <div className={`mt-4 border-l-[3px] bg-gris-1 px-4 py-3 text-sm ${BORDE_TONO[sitio.tono]}`}>
+                <div className="font-semibold">¿Hay sitio para lo que viene? {sitio.titulo}</div>
+                <p className="mt-1 text-texto-2">Tiene <b className="text-tinta">{n(m.parcelas_equip ?? 0)} parcelas vacantes</b> de equipamiento ({n((m.suelo_equip_m2 ?? 0) / 10000)} ha); en <b className="text-tinta">{n(sitio.grandes)}</b> cabría un colegio (8.000 m² o más) y en {n(m.parcelas_equip_1500 ?? 0)} una escuela infantil o un centro de día. La población nueva necesitaría el equivalente a {dec(sitio.colegios, 1)} {sitio.colegios < 1.5 ? 'colegio' : 'colegios'}.</p>
+                <p className="mt-1 text-xs text-texto-3">Fuente: IDEM, suelo vacante y ocupado 2026.</p>
+              </div>
+            )}
           </>
         ) : <p className="text-sm text-texto-2">{m.planeamiento_en_idem ? 'El planeamiento vigente no prevé nuevas viviendas en ámbitos de desarrollo.' : 'El planeamiento de este municipio no está en la base refundida de la IDEM.'}</p>}
         {detallado && <button type="button" className="no-imprimir mt-3 text-sm font-medium text-rojo underline underline-offset-2" onClick={planificar}>Ver dónde podrían ir los nuevos centros →</button>}
@@ -368,6 +399,8 @@ function Ficha({ r, total, criterios, modelo, servicios, volver, comparando, alt
         </div>
       </section>
       <p className="border-t border-linea px-6 py-4 text-xs leading-relaxed text-texto-3">Fuentes: Portal de Datos Abiertos de la Comunidad de Madrid (padrón, nacimientos, centros educativos, sanitarios y sociales, farmacias, bibliotecas, renta y paro), IDEM (límites, planeamiento 2025) y Consorcio Regional de Transportes. Distancias en línea recta.</p>
+      <FichaMunicipio r={r} total={total} criterios={cs} situaciones={SITUACIONES.filter((s) => situaciones.includes(s.id)).map((s) => s.texto)}
+        tiles={tiles} futuro={futuro} sitio={sitio} modelo={modelo?.municipio ?? null} limites={limites} puestos={puestos} />
     </div>
   )
 }
@@ -387,8 +420,9 @@ function Comparacion({ lista, criterios, volver, quitar }: { lista: (Puntuado & 
     ['Hospital más cercano (km)', (m) => m.hospital_km, (v) => dec(v, 0), false],
     ['Farmacias', (m) => m.farmacias, n, true],
     ['Plazas de residencia por 100 mayores', (m) => m.plazas_residencia_100may, (v) => dec(v), true],
-    ['Estaciones de tren o metro', (m) => m.est_metro + m.est_cercanias + m.est_metro_ligero, n, true],
-    ['Líneas de autobús', (m) => m.lineas_interurbanas, n, true],
+    ['Líneas de tren o Metro hasta Madrid', (m) => m.lineas_tren_madrid.length, n, true],
+    ['Autobuses directos a Madrid', (m) => m.bus_madrid, n, true],
+    ['Zona del abono', (m) => (m.corona ? ZONAS.indexOf(m.corona) : null), (v) => ZONAS[v], false],
     ['Zonas verdes (m²/hab.)', (m) => m.zonas_verdes_m2_hab, n, true],
     ['Viviendas previstas', (m) => m.viviendas_previstas, n, true],
     ['Renta por habitante (€)', (m) => m.renta_per_capita, n, true],

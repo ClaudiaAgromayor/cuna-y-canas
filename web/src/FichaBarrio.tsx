@@ -28,7 +28,7 @@ const ESTADO: Record<EstadoId, string> = { abierto: 'Abierto', plan: 'En el plan
 export default function FichaBarrio(p: Props) {
   const hoy = new Date().toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })
   return createPortal(
-    <div className="ficha-imprimible">
+    <div className="ficha-imprimible ficha-barrio">
       <header className="flex items-center gap-3 border-b-2 border-tinta pb-2">
         <Logo className="h-9 w-9" />
         <div className="leading-tight"><div className="text-[15pt] font-bold">Cuna y Canas</div><div className="text-[9pt] text-texto-2">Qué hace falta y qué viene en tu barrio</div></div>
@@ -67,7 +67,7 @@ export default function FichaBarrio(p: Props) {
         </section>
       )}
 
-      <section className="mt-4">
+      <section className="partible mt-4">
         <h2 className="border-b border-tinta pb-1 text-[12pt] font-semibold">Qué hay cerca y qué viene</h2>
         <table className="mt-1 w-full text-[9pt]">
           <tbody>
@@ -95,7 +95,7 @@ export default function FichaBarrio(p: Props) {
 
       <footer className="mt-5 border-t border-linea pt-2 text-[7.5pt] leading-snug text-texto-2">
         Datos abiertos de la Comunidad de Madrid (IDEM y Portal de Datos Abiertos), INE (Atlas de Distribución de Renta por sección censal) y Consorcio Regional de Transportes.
-        Distancias a pie en línea recta ({dec(p.radioMin * 0.08, 1)} km = {p.radioMin} min). Mapa base © IGN.{p.foto?.pagina ? ` Foto: Wikimedia Commons (licencia libre), ${p.foto.pagina}.` : ''} Licitaciones y obras: sin datos todavía.
+        Distancias a pie en línea recta ({dec(p.radioMin * 0.08, 1)} km = {p.radioMin} min). Mapa base © IGN.{p.foto?.pagina ? ` Foto: Wikimedia Commons (licencia libre), ${decodeURIComponent(p.foto.pagina.split('File:')[1] ?? '').replace(/_/g, ' ')}.` : ''} Licitaciones y obras: sin datos todavía.
       </footer>
     </div>,
     document.body,

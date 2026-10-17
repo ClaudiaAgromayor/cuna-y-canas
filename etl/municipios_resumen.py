@@ -59,6 +59,54 @@ def crtm(servicio: str) -> pd.DataFrame:
     return pd.DataFrame(json.loads(destino.read_text(encoding="utf-8")))
 
 
+def crtm_lineas(servicio: str, capa: int) -> pd.DataFrame:
+    """Qué municipios recorre cada línea (combinaciones distintas de línea, municipio y zona tarifaria), de la capa de tramos."""
+    destino = RAW / "crtm" / "_comunidad" / f"{servicio}_lineas.json"
+    if not destino.exists():
+        p = {"where": "1=1", "outFields": "NUMEROLINEAUSUARIO,CODIGOPROVINCIA,CODIGOMUNICIPIO,CORONATARIFARIA",
+             "returnDistinctValues": "true", "returnGeometry": "false", "f": "json", "resultRecordCount": 2000}
+        req = urllib.request.Request(f"{CRTM}/{servicio}/FeatureServer/{capa}/query?{urllib.parse.urlencode(p)}", headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=300) as r:
+            d = json.load(r)
+        if d.get("exceededTransferLimit"):
+            raise RuntimeError(f"{servicio}: más de 2000 combinaciones, hay que paginar")
+        destino.parent.mkdir(parents=True, exist_ok=True)
+        destino.write_text(json.dumps([f["attributes"] for f in d["features"]]), encoding="utf-8")
+    d = pd.DataFrame(json.loads(destino.read_text(encoding="utf-8")))
+    return d[d["CODIGOPROVINCIA"] == "28"]
+
+
+ZONAS = ["A", "B1", "B2", "B3", "C1", "C2"]
+
+
+def conexion_madrid() -> pd.DataFrame:
+    """Lo bien conectado que está cada municipio con Madrid, con datos del Consorcio Regional de Transportes:
+    - lineas_tren_madrid: líneas de Cercanías, Metro o Metro Ligero que unen el municipio con Madrid. Las de Metro cuentan
+      todas (la red está integrada: MetroSur enlaza con las líneas 3 y 10); Cercanías y Metro Ligero solo si llegan a Madrid
+      (así no cuentan la C-9 Cercedilla-Cotos ni el tranvía de Parla).
+    - bus_madrid: líneas de autobús interurbano que van del municipio a Madrid sin transbordo.
+    - corona: zona tarifaria del abono (A, B1, B2, B3, C1, C2): de ella depende lo que cuesta ir a Madrid cada mes."""
+    filas = []
+    for servicio, capa, modo in [("M5_Red", 4, "Cercanías"), ("M4_Red", 4, "Metro"), ("M10_Red", 4, "Metro Ligero"), ("M8_Red", 2, "bus")]:
+        d = crtm_lineas(servicio, capa).assign(modo=modo)
+        llega = set(d.loc[d["CODIGOMUNICIPIO"] == "079", "NUMEROLINEAUSUARIO"])
+        d["a_madrid"] = True if modo == "Metro" else d["NUMEROLINEAUSUARIO"].isin(llega)
+        filas.append(d)
+    d = pd.concat(filas)
+    tren = d[(d["modo"] != "bus") & d["a_madrid"]].copy()
+    # variantes de una misma línea (C-4a/C-4b, Metro 12-1/12-2, 10a/10b) cuentan como una
+    base = tren["NUMEROLINEAUSUARIO"].str.split("-").str[0].where(tren["modo"] != "Cercanías", tren["NUMEROLINEAUSUARIO"]).str.rstrip("ab")
+    tren["linea"] = [b if m == "Cercanías" else f"{m} {b}" for b, m in zip(base, tren["modo"])]
+    R = pd.DataFrame(index=sorted(d["CODIGOMUNICIPIO"].unique()))
+    R["lineas_tren_madrid"] = tren.groupby("CODIGOMUNICIPIO")["linea"].agg(lambda s: sorted(set(s)))
+    R["bus_madrid"] = d[(d["modo"] == "bus") & d["a_madrid"]].groupby("CODIGOMUNICIPIO")["NUMEROLINEAUSUARIO"].nunique()
+    validas = d[d["CORONATARIFARIA"].isin(ZONAS)]
+    R["corona"] = validas.groupby("CODIGOMUNICIPIO")["CORONATARIFARIA"].agg(lambda s: s.mode().min())
+    R["lineas_tren_madrid"] = R["lineas_tren_madrid"].apply(lambda x: x if isinstance(x, list) else [])
+    R["bus_madrid"] = R["bus_madrid"].fillna(0).astype(int)
+    return R
+
+
 def fotos_wikidata() -> dict:
     """Imagen representativa (P18) de cada municipio en Wikidata, por código INE (P772). Licencias libres de Wikimedia Commons."""
     destino = RAW / "wikidata_fotos.json"
@@ -188,6 +236,10 @@ def main() -> None:
         if servicio == "M8_Red":
             d["lineas"] = d["LINEAS"].fillna("").str.split(",")
             R["lineas_interurbanas"] = d.explode("lineas").assign(l=lambda x: x["lineas"].str.strip()).query("l != ''").groupby("CODIGOMUNICIPIO")["l"].nunique()
+    con = conexion_madrid()
+    R["lineas_tren_madrid"] = pd.Series({c: con["lineas_tren_madrid"].get(c, []) for c in R.index}, dtype=object)
+    R["bus_madrid"] = con["bus_madrid"]
+    R["corona"] = con["corona"]
 
     # --- planeamiento y bienestar (IDEM, toda la Comunidad sin geometría) ---
     amb = pd.DataFrame([x["properties"] for x in wfs("UsoDelSuelo", "VPLA_V_AMBITO_REF_25", "CD_MUNICIPIO,DS_NOMB_AMB,NM_VIV_TOT", "ambitos_props")["features"]])
@@ -231,7 +283,7 @@ def main() -> None:
     conteos = ["esc_infantil_publica", "esc_infantil_privada", "colegio_publico", "colegio_concertado", "colegio_privado", "instituto_publico", "fp",
                "centros_salud", "consultorios", "farmacias", "bibliotecas", "residencias", "plazas_residencia", "centros_dia", "plazas_centro_dia",
                "hogares_mayores", "centros_infancia_familia", "est_metro", "est_cercanias", "est_metro_ligero", "paradas_interurbano",
-               "paradas_urbano", "lineas_interurbanas", "equip_deportivos", "equip_culturales", "ambitos_desarrollo",
+               "paradas_urbano", "lineas_interurbanas", "bus_madrid", "equip_deportivos", "equip_culturales", "ambitos_desarrollo",
                "parcelas_equip", "parcelas_equip_1500", "parcelas_equip_8000"]
     R[conteos] = R[conteos].fillna(0).astype(int)
     R["nombre"] = [nombres.get(c, lim.set_index("cod").loc[c, "DS_NOMBRE"]) for c in R.index]

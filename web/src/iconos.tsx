@@ -17,6 +17,9 @@ const TRAZOS: Record<string, string> = {
   capas: 'M12 3 3 8l9 5 9-5-9-5ZM3 13l9 5 9-5M3 17.5l9 5 9-5',
   ajustes: 'M4 7h10M18 7h2M4 17h4M12 17h8M16 5v4M10 15v4',
   validar: 'M4 19V5M4 19h16M8 15l3-4 3 2 5-6',
+  tren: 'M7 15V6a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v9a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2ZM7 10h10M9.5 13.5h.01M14.5 13.5h.01M9 17l-2 4M15 17l2 4',
+  arbol: 'M12 21v-6M12 15c-3.6 0-6-2.2-6-5 0-1.9 1.1-3.4 2.7-4.1C9.2 4.2 10.5 3 12 3s2.8 1.2 3.3 2.9C16.9 6.6 18 8.1 18 10c0 2.8-2.4 5-6 5ZM9 21h6',
+  casa_nueva: 'M3.5 11 12 4l8.5 7M5.5 9.5V20h13V9.5M12 11v6M9 14h6',
 }
 
 export function Icono({ nombre, className = 'h-5 w-5' }: { nombre: string; className?: string }) {

@@ -40,20 +40,25 @@ input[type="range"]:focus-visible { outline: none; }
 .maplibregl-popup-content { font: 13px/1.45 var(--font-sans); border-radius: 2px; padding: 10px 12px; }
 .maplibregl-ctrl-group { border-radius: 2px !important; }
 
-/* ficha imprimible de la pantalla ciudadana: solo la columna de resultados */
+/* impresión normal (Ctrl+P) de cualquier pantalla: sin cabecera ni mapas */
 @media print {
-  header, .no-imprimir, .maplibregl-map { display: none !important; }
+  body:not([data-imprimir]) header, body:not([data-imprimir]) .no-imprimir, body:not([data-imprimir]) .maplibregl-map { display: none !important; }
   .ficha { overflow: visible !important; }
   #root, body, html { height: auto; }
 }
 
-/* ficha del barrio: solo se ve al imprimir; mientras se imprime, todo lo demás se oculta */
+/* fichas en PDF (barrio y municipio): solo se ven al imprimir; mientras se imprimen, todo lo demás se oculta */
 .ficha-imprimible { display: none; }
 @media print {
-  body[data-imprimir="barrio"] #root > * { display: none !important; }
-  body[data-imprimir="barrio"] .ficha-imprimible { display: block !important; }
-  body[data-imprimir="barrio"] #root { height: auto; }
-  .ficha-imprimible { font-size: 11pt; color: #131313; }
-  .ficha-imprimible section { break-inside: avoid; }
-  @page { size: A4; margin: 14mm; }
+  /* margen 0: así el navegador no añade fecha ni dirección; el margen lo pone la propia ficha en cada página */
+  @page { size: A4; margin: 0; }
+  body[data-imprimir] #root { display: none !important; }
+  body[data-imprimir="barrio"] .ficha-barrio, body[data-imprimir="municipio"] .ficha-municipio { display: block !important; }
+  .ficha-imprimible {
+    font-size: 10pt; line-height: 1.4; color: #131313; padding: 12mm 14mm 12mm;
+    -webkit-box-decoration-break: clone; box-decoration-break: clone;
+  }
+  .ficha-imprimible * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .ficha-imprimible section:not(.partible), .ficha-imprimible tr, .ficha-imprimible footer { break-inside: avoid; }
+  .ficha-imprimible h2 { break-after: avoid; }
 }

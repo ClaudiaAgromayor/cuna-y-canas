@@ -10,45 +10,76 @@ export const GRUPOS: { id: GrupoId; texto: string }[] = [
   { id: 'adultos', texto: 'Adultos' },
   { id: 'mayores', texto: 'Mayores (65+)' },
 ]
-const COLOR: Record<GrupoId, string> = { bebes: '#3d3d3d', ninos: '#6b6b6b', jovenes: '#9a9a9a', adultos: '#d4d4d4', mayores: '#b9b9b9' }
 
-/** Barras apiladas por año. El grupo que usa el servicio elegido se pinta en rojo; el año elegido, enmarcado. */
+/** Paso "redondo" del eje (1, 2 o 5 por una potencia de 10) para unas 3 líneas de referencia. */
+function paso(max: number) {
+  const bruto = max / 3, p = 10 ** Math.floor(Math.log10(bruto || 1)), r = bruto / p
+  return (r <= 1 ? 1 : r <= 2 ? 2 : r <= 5 ? 5 : 10) * p
+}
+
+/**
+ * Población de la zona año a año, centrada en quien usa el servicio elegido:
+ * la cifra clave (hoy → último año), barras de ese grupo a su propia escala y, debajo, el reparto de todos los grupos en el año elegido.
+ */
 export default function GraficaPoblacion({ filas, destacados, anio, onAnio }: { filas: FilaPoblacion[]; destacados: GrupoId[]; anio: number; onAnio: (a: number) => void }) {
   if (!filas.length) return null
-  const W = 300, H = 132, pie = 16
-  const max = Math.max(...filas.map((f) => GRUPOS.reduce((t, g) => t + f[g.id], 0))) || 1
-  const ancho = W / filas.length
-  const sel = filas.find((f) => f.anio === anio) ?? filas[filas.length - 1]
+  const valor = (f: FilaPoblacion) => destacados.reduce((t, g) => t + f[g], 0)
   const total = (f: FilaPoblacion) => GRUPOS.reduce((t, g) => t + f[g.id], 0)
-  const orden: GrupoId[] = [...GRUPOS.map((g) => g.id).filter((g) => !destacados.includes(g)), ...destacados] // destacados abajo
+  const primero = filas[0], ultimo = filas[filas.length - 1]
+  const sel = filas.find((f) => f.anio === anio) ?? ultimo
+  const cambio = valor(primero) ? (100 * (valor(ultimo) - valor(primero))) / valor(primero) : 0
+  const nombre = GRUPOS.filter((g) => destacados.includes(g.id)).map((g) => g.texto).join(' y ')
+
+  const W = 300, H = 110, IZQ = 30, DER = 10, pie = 15
+  const st = paso(Math.max(...filas.map(valor)))
+  const tope = Math.max(st, Math.ceil(Math.max(...filas.map(valor)) / st) * st)
+  const ancho = (W - IZQ - DER) / filas.length
+  const y = (v: number) => H - (v / tope) * (H - 8)
+  const maxGrupo = Math.max(...GRUPOS.map((g) => sel[g.id])) || 1
+
   return (
     <div>
-      <svg viewBox={`0 0 ${W} ${H + pie}`} className="w-full" role="img" aria-label="Población prevista por año y grupo de edad">
+      <div className="flex items-end justify-between gap-3">
+        <div>
+          <div className="text-xs text-texto-2">{nombre}</div>
+          <div className="text-[22px] leading-tight font-semibold tabular-nums">{n(valor(primero))} <span className="text-texto-3">→</span> {n(valor(ultimo))}</div>
+          <div className="text-xs text-texto-3">de {primero.anio} a {ultimo.anio}</div>
+        </div>
+        <div className={`text-right text-[22px] leading-tight font-semibold tabular-nums ${cambio > 0.5 ? 'text-rojo' : 'text-tinta'}`}>{cambio > 0 ? '+' : ''}{n(cambio)} %</div>
+      </div>
+
+      <svg viewBox={`0 0 ${W} ${H + pie}`} className="mt-2 w-full" role="img" aria-label={`${nombre} por año, de ${primero.anio} a ${ultimo.anio}`}>
+        {Array.from({ length: Math.round(tope / st) + 1 }, (_, i) => i * st).map((v) => (
+          <g key={v}>
+            <line x1={IZQ} x2={W - DER} y1={y(v)} y2={y(v)} stroke={v ? '#ebebeb' : '#131313'} strokeWidth={v ? 1 : 1.2} />
+            <text x={IZQ - 4} y={y(v) + 3.5} textAnchor="end" fontSize="9" fill="#8a8a8a">{n(v)}</text>
+          </g>
+        ))}
         {filas.map((f, i) => {
-          let y = H
-          const x = i * ancho
+          const x = IZQ + i * ancho, elegido = f.anio === sel.anio, v = valor(f)
           return (
             <g key={f.anio} onClick={() => onAnio(f.anio)} className="cursor-pointer">
-              <rect x={x} y={0} width={ancho} height={H} fill={f.anio === sel.anio ? '#f5f5f5' : 'transparent'} />
-              {[...orden].reverse().map((g) => {
-                const h = (f[g] / max) * (H - 6)
-                y -= h
-                return <rect key={g} x={x + 1.5} y={y} width={ancho - 3} height={Math.max(0, h)} fill={destacados.includes(g) ? '#de0029' : COLOR[g]} />
-              })}
-              {(i % 5 === 0 || f.anio === sel.anio) && <text x={x + ancho / 2} y={H + 12} textAnchor="middle" fontSize="8.5" fill={f.anio === sel.anio ? '#131313' : '#8a8a8a'} fontWeight={f.anio === sel.anio ? 700 : 400}>{f.anio}</text>}
+              <rect x={x} y={0} width={ancho} height={H} fill="transparent" />
+              <rect x={x + 1.5} y={y(v)} width={ancho - 3} height={H - y(v)} fill={elegido ? '#b10021' : '#de0029'} opacity={elegido ? 1 : 0.55} />
+              {elegido && <text x={x + ancho / 2} y={y(v) - 3} textAnchor="middle" fontSize="9.5" fontWeight={700} fill="#131313">{n(v)}</text>}
+              {(i % 5 === 0 || elegido) && <text x={x + ancho / 2} y={H + 11} textAnchor="middle" fontSize="9" fill={elegido ? '#131313' : '#8a8a8a'} fontWeight={elegido ? 700 : 400}>{f.anio}</text>}
             </g>
           )
         })}
       </svg>
-      <div className="mt-1 grid grid-cols-2 gap-x-3 gap-y-0.5 text-xs">
-        {GRUPOS.map((g) => (
-          <div key={g.id} className="flex items-center gap-1.5">
-            <span className="h-2.5 w-2.5 shrink-0" style={{ background: destacados.includes(g.id) ? '#de0029' : COLOR[g.id] }} />
-            <span className={destacados.includes(g.id) ? 'font-semibold' : 'text-texto-2'}>{g.texto}</span>
-            <span className="ml-auto tabular-nums">{n(sel[g.id])}</span>
-          </div>
-        ))}
-        <div className="col-span-2 mt-0.5 flex justify-between border-t border-linea pt-0.5"><span className="text-texto-2">Total en {sel.anio}</span><b className="tabular-nums">{n(total(sel))}</b></div>
+
+      <div className="mt-2 border-t border-linea pt-2">
+        <div className="mb-1 flex justify-between text-xs text-texto-2"><span>Todos en {sel.anio}</span><b className="text-tinta tabular-nums">{n(total(sel))} personas</b></div>
+        {GRUPOS.map((g) => {
+          const on = destacados.includes(g.id)
+          return (
+            <div key={g.id} className="grid grid-cols-[92px_1fr_44px] items-center gap-2 py-0.5 text-xs">
+              <span className={on ? 'font-semibold' : 'text-texto-2'}>{g.texto}</span>
+              <span className="h-2 bg-gris-1"><span className="block h-full" style={{ width: `${(100 * sel[g.id]) / maxGrupo}%`, background: on ? '#de0029' : '#8a8a8a' }} /></span>
+              <span className="text-right tabular-nums">{n(sel[g.id])}</span>
+            </div>
+          )
+        })}
       </div>
     </div>
   )

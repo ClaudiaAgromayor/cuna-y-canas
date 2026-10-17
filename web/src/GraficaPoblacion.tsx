@@ -28,7 +28,7 @@ export default function GraficaPoblacion({ filas, destacados, anio, onAnio }: { 
   const primero = filas[0], ultimo = filas[filas.length - 1]
   const sel = filas.find((f) => f.anio === anio) ?? ultimo
   const cambio = valor(primero) ? (100 * (valor(ultimo) - valor(primero))) / valor(primero) : 0
-  const nombre = GRUPOS.filter((g) => destacados.includes(g.id)).map((g) => g.texto).join(' y ')
+  const nombre = destacados.length >= GRUPOS.length ? 'Toda la población' : GRUPOS.filter((g) => destacados.includes(g.id)).map((g) => g.texto).join(' y ')
 
   const W = 300, H = 110, IZQ = 30, DER = 10, pie = 15
   const st = paso(Math.max(...filas.map(valor)))

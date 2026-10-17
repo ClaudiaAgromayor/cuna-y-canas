@@ -77,6 +77,10 @@ interface Candidato { address: string; muni: string; lat: number; lng: number }
 interface Item { id: string; cat: Categoria; nombre: string; detalle: string; estado: EstadoId; lon: number; lat: number; d: number }
 
 /** Viviendas del ámbito: las del planeamiento o, si no constan, una estimación con rango a partir de la superficie y la edificabilidad. */
+/** Ámbito con uso no residencial (industrial, terciario, dotacional…): ahí no habrá viviendas. */
+const noResidencial = (uso: unknown) => !!uso && !/resid/i.test(String(uso))
+const usoCorto = (uso: unknown) => (/industr/i.test(String(uso)) ? 'Zona industrial' : /terciar|comerc|oficin/i.test(String(uso)) ? 'Zona de oficinas y comercio' : `Zona de uso ${String(uso).toLowerCase()}`)
+
 function textoViviendas(p: Record<string, unknown>) {
   const v = Number(p.viviendas), lo = Number(p.viviendas_est_min), hi = Number(p.viviendas_est_max)
   const viv = v ? `${n(v)} viviendas previstas` : lo ? `entre ${n(lo)} y ${n(hi)} viviendas (estimación)` : 'sin datos de viviendas'
@@ -269,6 +273,7 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial, cat
     const circ: FeatureCollection<Polygon> = { type: 'FeatureCollection', features: lugar ? [{ type: 'Feature', properties: {}, geometry: { type: 'Polygon', coordinates: [circulo(lugar.lon, lugar.lat, radio)] } }] : [] }
     const ambs: FeatureCollection = { ...datos.ambitos, features: datos.ambitos.features.map((f) => ({ ...f, properties: { ...f.properties,
       estado: demanda.get(String(f.properties?.nombre))?.estado ?? 'sin_datos', sel: f.properties?.nombre === lugar?.ambito,
+      noRes: noResidencial(f.properties?.uso) && !Number(f.properties?.viviendas),
       vacio: sinConstruir.get(String(f.properties?.nombre))?.pct ?? -1, vacioM2: sinConstruir.get(String(f.properties?.nombre))?.m2 ?? 0 } })) }
     // antes de elegir sitio: todo lo que YA existe en el municipio (lo marcado o, si no hay nada marcado, todo)
     const base = lugar ? (resultado?.cerca ?? []) : universo.filter((x) => x.estado === 'abierto' && catsEf.includes(x.cat.id) && x.cat.fuente !== 'redes')
@@ -277,8 +282,10 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial, cat
       // antes de elegir: cada barrio coloreado por el suelo para servicios que sigue sin construir; después, resaltado el elegido
       { id: 'b-ambitos', datos: ambs, estilo: { type: 'fill', paint: lugar
         ? { 'fill-color': ['match', ['get', 'estado'], 'futuro', '#de0029', 'en_desarrollo', '#131313', '#8a8a8a'], 'fill-opacity': ['case', ['get', 'sel'], 0.14, 0.05] }
-        : { 'fill-color': ['case', ['<', ['get', 'vacio'], 0], '#e6e6e6', ['interpolate', ['linear'], ['get', 'vacio'], 0, '#f6e3e6', 40, '#e3808f', 80, '#b50f2b']], 'fill-opacity': 0.7 } } as CapaMapa['estilo'],
-        popup: (p) => `<b>${nombreBarrio(String(p.nombre))}</b><br><span style="color:#595959">${ETIQUETA_ESTADO_BARRIO[String(p.estado)]} · ${textoViviendas(p)}${Number(p.vacio) >= 0 ? `<br>${n(Number(p.vacio))} % del suelo para servicios aún sin construir (${n(Number(p.vacioM2))} m²)` : ''}</span>` },
+        : { 'fill-color': ['case', ['get', 'noRes'], '#e6e6e6', ['<', ['get', 'vacio'], 0], '#e6e6e6', ['interpolate', ['linear'], ['get', 'vacio'], 0, '#f6e3e6', 40, '#e3808f', 80, '#b50f2b']], 'fill-opacity': 0.7 } } as CapaMapa['estilo'],
+        popup: (p) => p.noRes === true || p.noRes === 'true'
+          ? `<b>${nombreBarrio(String(p.nombre))}</b><br><span style="color:#595959">${usoCorto(p.uso)} · no habrá viviendas${p.figura ? `<br>${p.figura}${p.promocion ? ` de promoción ${String(p.promocion).toLowerCase()}` : ''}` : ''}${Number(p.sup_m2) ? ` · ${n(Number(p.sup_m2) / 10000)} ha` : ''}</span>`
+          : `<b>${nombreBarrio(String(p.nombre))}</b><br><span style="color:#595959">${ETIQUETA_ESTADO_BARRIO[String(p.estado)]} · ${textoViviendas(p)}${Number(p.vacio) >= 0 ? `<br>${n(Number(p.vacio))} % del suelo para servicios aún sin construir (${n(Number(p.vacioM2))} m²)` : ''}</span>` },
       { id: 'b-ambitos-borde', datos: ambs, estilo: { type: 'line', paint: { 'line-color': ['case', ['get', 'sel'], '#de0029', '#595959'], 'line-width': ['case', ['get', 'sel'], 2.5, 1], 'line-dasharray': [3, 2] } } as CapaMapa['estilo'] },
       // dónde puede haber vivienda nueva: solares residenciales sin construir (catastro) y suelo público en venta para vivienda
       ...(verNueva ? [
@@ -463,7 +470,7 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial, cat
                 <h2 className="mb-2 font-semibold">Su población</h2>
                 <div className="grid grid-cols-2 gap-3 text-sm">
                   <div><div className="text-xs text-texto-3">Hoy ({amb.anio_poblacion_actual ?? '—'}, INE)</div><div className="text-xl font-semibold tabular-nums">{amb.poblacion_actual ? n(amb.poblacion_actual) : 'sin datos'}</div></div>
-                  <div><div className="text-xs text-texto-3">Cuando esté completo</div><div className="text-xl font-semibold tabular-nums">{amb.poblacion_completo ? `${n(amb.poblacion_completo[0])}–${n(amb.poblacion_completo[2])}` : 'sin datos'}</div></div>
+                  <div><div className="text-xs text-texto-3">Cuando esté completo</div><div className="text-xl font-semibold tabular-nums">{amb.poblacion_completo ? `${n(amb.poblacion_completo[0])}–${n(amb.poblacion_completo[2])}` : noResidencial(datos.ambitos.features.find((f) => f.properties?.nombre === amb.ambito)?.properties?.uso) ? 'no es zona residencial' : 'sin datos'}</div></div>
                 </div>
                 {previsiones.filter((p) => p.hi > 0).length > 0 && (
                   <div className="mt-3"><Aviso titulo="Lo que hará falta cuando esté completo">

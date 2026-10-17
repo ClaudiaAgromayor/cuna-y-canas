@@ -55,7 +55,7 @@ export default function PantallaTecnica({ datos, servicios, servicioInicial, zon
   const [aniosLlenado, setAniosLlenado] = useState(10)
   const [guardado, setGuardado] = useState<{ esc: Escenario; res: Resultado; servicio: string; anio: number } | null>(null)
   const [verParadas, setVerParadas] = useState(false)
-  const [verDemanda, setVerDemanda] = useState(true)
+  const [verDemanda, setVerDemanda] = useState(false)
   const [verZonas, setVerZonas] = useState(false)
   const [pestana, setPestana] = useState<'ajustes' | 'resultados'>('ajustes')
   const [cifra, setCifra] = useState('')
@@ -76,6 +76,8 @@ export default function PantallaTecnica({ datos, servicios, servicioInicial, zon
   useEffect(() => { setGuardado(null) }, [datos])
 
   const upd = (p: Partial<Escenario>) => setEsc((e) => ({ ...e, ...p }))
+  // al mover, fijar o descartar una ubicación se guarda cómo estaba la cobertura, para decir qué ha cambiado
+  const [cambio, setCambio] = useState<{ accion: string; antes: number } | null>(null)
   const llenadoDe = (a: number) => Math.max(0, Math.min(1, (a - ANIO_BASE) / aniosLlenado))
   const escE = useMemo(() => ({ ...esc, llenado: llenadoDe(anio) }), [esc, anio, aniosLlenado]) // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -184,18 +186,20 @@ export default function PantallaTecnica({ datos, servicios, servicioInicial, zon
   const marcadores: Marcador[] = useMemo(() => res.propuestas.map((p) => ({ id: p.id, lon: p.lon, lat: p.lat, texto: String(p.orden), color: p.fijado ? '#b10021' : '#de0029',
     arrastrable: true, titulo: 'Arrástralo para probar otra ubicación' })), [res])
 
+  const coberturaPct = () => (res.demandaTotal ? Math.round((100 * (res.demandaTotal - res.sinCubrir)) / res.demandaTotal) : 0)
   const alternarParcela = (ref: string) => {
     const par = parcelas.find((f) => f.properties.ref_catastral === ref)
     if (!par) return
+    setCambio({ accion: esc.fijados.some((f) => f.id === ref) ? 'Has soltado la parcela' : 'Has fijado una parcela como ubicación', antes: coberturaPct() })
     setEsc((e) => e.fijados.some((f) => f.id === ref)
       ? { ...e, fijados: e.fijados.filter((f) => f.id !== ref) }
       : { ...e, fijados: [...e.fijados, { id: ref, lon: par.properties.lon, lat: par.properties.lat, etiqueta: par.properties.ambito ?? 'Parcela fijada' }], excluidas: e.excluidas.filter((x) => x !== ref) })
   }
-  const arrastrar = (id: string, lon: number, lat: number) => setEsc((e) => ({
+  const arrastrar = (id: string, lon: number, lat: number) => { setCambio({ accion: 'Has movido un centro', antes: coberturaPct() }); setEsc((e) => ({
     ...e,
     excluidas: parcelas.some((f) => f.properties.ref_catastral === id) ? [...new Set([...e.excluidas, id])] : e.excluidas,
     fijados: [...e.fijados.filter((f) => f.id !== id), { id: `punto-${Date.now()}`, lon, lat, etiqueta: 'Ubicación elegida a mano' }],
-  }))
+  })) }
   const aplicarCifra = (v: string) => {
     setCifra(v)
     const x = Number(v.replace(/\./g, '').replace(',', '.'))
@@ -210,11 +214,28 @@ export default function PantallaTecnica({ datos, servicios, servicioInicial, zon
     : res.sinCubrir === 0 ? 'La oferta actual basta' : 'Ningún centro nuevo viable'
   const zonaTxt = esc.zona ? nombreBarrio(esc.zona) : datos.indice.nombre
   const usoAdecuado = (red: string | null) => !!red && USO_ADECUADO[sid].some((u) => red.endsWith(u))
+  const lugarDe = (p: { ambito: string | null; paradaMasCercana?: { nombre: string } | null }) =>
+    p.ambito && p.ambito !== 'Fuera de ámbitos' ? nombreBarrio(p.ambito) : p.paradaMasCercana ? `Cerca de ${capitalizar(p.paradaMasCercana.nombre)}` : 'En la ciudad ya construida'
+  // la respuesta en una frase: cuántos centros, cuándo y dónde
+  const resumen = res.propuestas.length
+    ? `${s.nombre}: ${res.propuestas.length === 1 ? 'hace falta 1 nuevo' : `hacen falta ${res.propuestas.length} nuevos`} en ${zonaTxt} para ${anio}. `
+      + res.propuestas.slice(0, 3).map((p, i) => {
+        const h = temporal.hitos[i]
+        return `${i === 0 ? 'El 1.º' : `el ${i + 1}.º`} hace falta ${h ? (h.anio === ANIO_BASE ? 'ya hoy' : `hacia ${h.anio}`) : `en ${anio}`}, ${((l) => (l.startsWith('Cerca') ? 'c' + l.slice(1) : l.startsWith('En la') ? 'e' + l.slice(1) : `en ${l}`))(lugarDe(p))}`
+      }).join('; ') + '.'
+    : res.sinCubrir === 0 ? `Los centros que ya hay en ${zonaTxt} bastan para la demanda de ${anio}.` : `Con estos supuestos no hay ninguna parcela donde un centro nuevo tenga suficiente demanda cerca.`
 
   const panelResultados = (<>
     <div className="border-b border-linea px-6 pt-6 pb-5">
       <div className="text-xs font-medium tracking-wide text-texto-3 uppercase">{s.nombre} · {zonaTxt} · {anio}</div>
       <div className="mt-1 text-[30px] leading-tight font-semibold tracking-tight">{titular}</div>
+      <p className="mt-2 border-l-[3px] border-rojo bg-gris-1 px-3 py-2 text-[15px] leading-snug text-tinta">{resumen}</p>
+      {cambio && (
+        <div className="mt-3 flex items-start gap-2 border border-tinta px-3 py-2 text-sm">
+          <span className="min-w-0 flex-1"><b>{cambio.accion}.</b> Antes se atendía el <b>{cambio.antes} %</b> de la demanda; ahora, el <b className={coberturaPct() >= cambio.antes ? 'text-ok' : 'text-rojo'}>{coberturaPct()} %</b>{coberturaPct() > cambio.antes ? ': mejora.' : coberturaPct() < cambio.antes ? ': empeora.' : ': igual.'}</span>
+          <button type="button" aria-label="Cerrar" className="text-texto-3 hover:text-tinta" onClick={() => setCambio(null)}>×</button>
+        </div>
+      )}
       <p className="mt-1 text-sm text-texto-2">{esc.demandaFija != null
         ? <>Con tu cifra: <b className="text-tinta">{n(esc.demandaFija)}</b> {unidad}, repartidos como la población.</>
         : <>Demanda en {anio}: entre <b className="text-tinta">{n(rango[0])}</b> y <b className="text-tinta">{n(rango[1])}</b> {unidad}. En este escenario, {n(res.demandaTotal)} ({n(res.demandaActual)} hoy y {n(res.demandaFutura)} por llegar).</>}</p>
@@ -260,7 +281,7 @@ export default function PantallaTecnica({ datos, servicios, servicioInicial, zon
             <div className="flex items-start gap-3 p-3">
               <span className={`flex h-7 w-7 shrink-0 items-center justify-center text-sm font-semibold text-white ${p.fijado ? 'bg-rojo-oscuro' : 'bg-rojo'}`}>{p.orden}</span>
               <div className="min-w-0 flex-1">
-                <div className="font-semibold">{nombreBarrio(p.ambito)}{p.fijado && <span className="ml-2 align-middle text-[11px] font-medium text-rojo">FIJADA</span>}</div>
+                <div className="font-semibold">{lugarDe(p)}{p.fijado && <span className="ml-2 align-middle text-[11px] font-medium text-rojo">FIJADA</span>}</div>
                 <div className="text-xs text-texto-3">{p.ref_catastral ? `Ref. catastral ${p.ref_catastral}` : 'Ubicación elegida a mano'}{p.area_m2 != null ? ` · ${n(p.area_m2)} m²` : ''}</div>
                 <div className="mt-1 flex flex-wrap gap-x-3 gap-y-0.5 text-[11px]">
                   <span className={p.red ? 'text-ok' : 'text-texto-3'}>{p.red ? (usoAdecuado(p.red) ? '● Suelo público de uso adecuado' : '● Suelo público') : '○ Titularidad por confirmar'}</span>

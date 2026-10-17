@@ -38,7 +38,8 @@ def procesar(carpeta) -> int:
     g["geometry"] = g.geometry.simplify(1.5)
     out = gpd.GeoDataFrame({"uso": g["DS_USO"], "ref_catastral": g["CD_REF_CAT"], "area_m2": g["area_m2"],
                             "cod_ine": carpeta.name[:3]}, geometry=g.geometry, crs=M).to_crs(4326)
-    out["geometry"] = out.geometry.set_precision(1e-6, mode="pointwise")
+    out["geometry"] = solo_poligonos(out.geometry.set_precision(1e-6, mode="pointwise"))  # el redondeo puede dejar geometrías inválidas
+    out = out[~out.geometry.is_empty]
     salida.write_text(out.to_json(drop_id=True, ensure_ascii=False), encoding="utf-8")
     return len(out)
 

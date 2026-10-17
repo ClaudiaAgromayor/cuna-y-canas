@@ -122,7 +122,16 @@ export default function Mapa({ bbox, capas, marcadores = [], onClickCapa, onArra
   }, [])
 
   useEffect(() => { mapa.current?.fitBounds(bbox, { padding: 30, duration: 800 }) }, [bbox])
-  useEffect(() => { if (centrarEn) mapa.current?.flyTo({ center: centrarEn, zoom: 14.4, duration: 900 }) }, [centrarEn])
+  // al elegir un sitio: si ya se ve bien (lejos de los bordes y con zoom de calle), el mapa no se mueve;
+  // si no, se desplaza hasta él sin alejarse (antes saltaba siempre a un zoom fijo y parecía moverse solo)
+  useEffect(() => {
+    const m = mapa.current
+    if (!centrarEn || !m) return
+    const p = m.project(centrarEn), w = m.getContainer().clientWidth, h = m.getContainer().clientHeight
+    const visible = p.x > w * 0.2 && p.x < w * 0.8 && p.y > h * 0.2 && p.y < h * 0.8
+    if (visible && m.getZoom() >= 13.5) return
+    m.easeTo({ center: centrarEn, zoom: Math.max(m.getZoom(), 14.4), duration: 600 })
+  }, [centrarEn])
   useEffect(() => { if (mapa.current && listo.current) sincronizar(mapa.current, capas) }, [capas])
 
   const [generacion, setGeneracion] = useState(0)

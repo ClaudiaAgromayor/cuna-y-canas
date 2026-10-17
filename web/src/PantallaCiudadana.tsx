@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { Feature, FeatureCollection, Geometry, Point, Polygon, Position } from 'geojson'
-import type maplibregl from 'maplibre-gl'
+import maplibregl from 'maplibre-gl'
 import Mapa, { fotoDelMapa, type CapaMapa, type Marcador } from './Mapa'
 import FichaBarrio from './FichaBarrio'
 import { circulo, metros, METROS_POR_MINUTO } from './algoritmo'
@@ -39,7 +39,7 @@ const GRUPOS = [...new Set(CATEGORIAS.map((c) => c.grupo))]
 
 const ESTADOS: { id: EstadoId; texto: string; disponible: boolean }[] = [
   { id: 'abierto', texto: 'Ya existe', disponible: true },
-  { id: 'plan', texto: 'En el planeamiento', disponible: true },
+  { id: 'plan', texto: 'Reservado, sin hacer', disponible: true },
   { id: 'prevista', texto: 'Prevista', disponible: true },
   { id: 'suelo', texto: 'Suelo disponible', disponible: true },
   { id: 'licitada', texto: 'Licitada', disponible: false },
@@ -141,6 +141,15 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial, cat
     setTimeout(() => window.print(), 150)
   }
   const refResultados = useRef<HTMLDivElement>(null)
+  // pulsar un nombre de la lista: el mapa va hasta él y lo señala
+  const senalar = (x: { nombre: string; lon: number; lat: number; d: number; cat: { texto: string } }) => {
+    const m = mapaRef.current
+    if (!m) return
+    document.querySelectorAll('.maplibregl-popup').forEach((e) => e.remove())
+    m.flyTo({ center: [x.lon, x.lat], zoom: Math.max(m.getZoom(), 16), duration: 700 })
+    new maplibregl.Popup({ maxWidth: '280px', closeButton: true }).setLngLat([x.lon, x.lat])
+      .setHTML(`<b>${x.nombre}</b><br><span style="color:#595959">${x.cat.texto} · a unos ${Math.max(1, Math.round(x.d / METROS_POR_MINUTO))} min a pie</span>`).addTo(m)
+  }
   // al elegir un sitio, el panel baja solo hasta la respuesta (antes quedaba debajo de los filtros)
   // (solo se desplaza el panel: scrollIntoView movía también la página y el mapa se iba hacia arriba)
   useEffect(() => {
@@ -168,7 +177,7 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial, cat
         if (c.fuente === 'redes') {
           estado = p.estado === 'prevista' ? 'prevista' : p.estado === 'existente' ? 'abierto' : 'plan'
           nombre = c.id === 'parque' ? 'Zona verde' : c.id === 'deporte' ? 'Equipamiento deportivo' : 'Equipamiento cultural'
-          detalle = `${n(Number(p.sup_m2))} m² · ${p.red ?? 'red pública'}`
+          detalle = `${n(Number(p.sup_m2))} m² · ${p.red ?? 'red pública'}${p.estado === 'vacante' ? ' · suelo aún vacío según el catastro' : p.estado === 'sin_dato' ? ' · sin confirmar si está hecho' : p.estado_fuente === 'catastro' ? ' · hecho según el catastro' : ''}`
         } else if (c.fuente === 'suelo') {
           estado = 'suelo'; nombre = 'Parcela para equipamiento público'
           detalle = `${n(Number(p.area_m2))} m², sin construir`
@@ -304,7 +313,7 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial, cat
           }}
           onClickMapa={(lon, lat) => elegirPunto(lon, lat, 'Punto elegido en el mapa')} />
         <Leyenda>
-          {lugar ? [['#131313', 'Ya existe'], ['#8a8a8a', 'En el planeamiento'], ['#de0029', 'Prevista'], ['#2b5c8a', 'Suelo disponible']].map(([c, t]) => (
+          {lugar ? [['#131313', 'Ya existe'], ['#8a8a8a', 'Reservado, sin hacer'], ['#de0029', 'Prevista'], ['#2b5c8a', 'Suelo disponible']].map(([c, t]) => (
             <div key={t} className="flex items-center gap-2 py-0.5"><span className="h-3 w-3 rounded-full" style={{ background: c }} />{t}</div>
           )) : (
             <div className="w-44">
@@ -318,7 +327,7 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial, cat
             <span>
               <span className="block font-medium">Dónde puede haber vivienda nueva</span>
               <span className="flex items-center gap-1.5 text-texto-3"><span className="h-2.5 w-3" style={{ background: '#e07b00', opacity: 0.7 }} />solar residencial sin construir</span>
-              <span className="flex items-center gap-1.5 text-texto-3"><span className="h-2.5 w-3" style={{ background: '#7a3fb0', opacity: 0.8 }} />suelo público en venta para vivienda</span>
+              {datos.portalSuelo.features.some((f) => String(f.properties?.uso ?? '').startsWith('Resid')) && <span className="flex items-center gap-1.5 text-texto-3"><span className="h-2.5 w-3" style={{ background: '#7a3fb0', opacity: 0.8 }} />suelo público en venta para vivienda</span>}
             </span>
           </label>
           {!lugar && <div className="mt-2 flex items-center gap-1.5 border-t border-linea pt-2 text-texto-3"><span className="h-2.5 w-2.5 rounded-full bg-tinta" />{cats.length ? 'lo que buscas y ya existe' : 'servicios que ya existen'}</div>}
@@ -472,12 +481,12 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial, cat
                   <Icono nombre={c.icono} className="h-5 w-5" /><h2 className="font-semibold">{c.texto}</h2>
                   <span className="ml-auto text-xs text-texto-3">{items.length ? `${items.length} a menos de ${radioMin} min` : 'ninguno cerca'}</span>
                 </div>
-                {!items.length && masCercano && <p className="text-sm text-texto-2">El más cercano: <b className="text-tinta">{masCercano.nombre}</b>, a unos {minutos(masCercano.d)} minutos a pie.</p>}
+                {!items.length && masCercano && <p className="text-sm text-texto-2">El más cercano: <button type="button" title="Ver en el mapa" onClick={() => senalar(masCercano)} className="font-bold text-tinta underline decoration-linea underline-offset-2 hover:text-rojo">{masCercano.nombre}</button>, a unos {minutos(masCercano.d)} minutos a pie.</p>}
                 <ul>
                   {items.slice(0, 4).map((x) => (
                     <li key={x.id} className="flex items-center gap-3 border-t border-gris-2 py-2 first:border-t-0">
                       <div className="min-w-0 flex-1">
-                        <div className="truncate text-[15px] font-medium" title={x.nombre}>{x.nombre}</div>
+                        <button type="button" title="Ver en el mapa" onClick={() => senalar(x)} className="block max-w-full truncate text-left text-[15px] font-medium hover:text-rojo hover:underline">{x.nombre}</button>
                         <div className="truncate text-xs text-texto-3">{x.detalle && <>{x.detalle} · </>}<a className="underline-offset-2 hover:text-rojo hover:underline" href={FUENTE_URL[c.fuente]} target="_blank" rel="noreferrer">{NOMBRE_FUENTE[c.fuente]}</a></div>
                       </div>
                       <div className="shrink-0 text-right"><div className="text-sm font-semibold tabular-nums">{minutos(x.d)} min</div><Estado estado={x.estado} /></div>

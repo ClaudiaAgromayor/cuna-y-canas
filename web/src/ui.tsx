@@ -90,7 +90,7 @@ export function Aviso({ titulo, children, tono = 'aviso' }: { titulo?: string; c
 
 export type EstadoId = 'abierto' | 'plan' | 'suelo' | 'prevista' | 'licitada' | 'adjudicada' | 'obras'
 export function Estado({ estado }: { estado: EstadoId }) {
-  const [t, c] = ({ abierto: ['Abierto', 'bg-ok'], plan: ['En el planeamiento', 'bg-texto-3'], suelo: ['Suelo disponible', 'bg-suelo'], prevista: ['Prevista', 'bg-texto-3'],
+  const [t, c] = ({ abierto: ['Abierto', 'bg-ok'], plan: ['Reservado, sin hacer', 'bg-texto-3'], suelo: ['Suelo disponible', 'bg-suelo'], prevista: ['Prevista', 'bg-texto-3'],
     licitada: ['Licitada', 'bg-aviso'], adjudicada: ['Adjudicada', 'bg-aviso'], obras: ['En obras', 'bg-rojo'] } as const)[estado]
   return <span className="inline-flex shrink-0 items-center gap-1.5 text-xs font-medium text-texto-2"><span className={`h-2 w-2 ${c}`} />{t}</span>
 }

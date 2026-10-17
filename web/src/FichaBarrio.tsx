@@ -22,7 +22,7 @@ interface Props {
   suelo: { parcelas: number; m2: number }
 }
 
-const ESTADO: Record<EstadoId, string> = { abierto: 'Abierto', plan: 'En el planeamiento', suelo: 'Suelo disponible', prevista: 'Prevista', licitada: 'Licitada', adjudicada: 'Adjudicada', obras: 'En obras' }
+const ESTADO: Record<EstadoId, string> = { abierto: 'Abierto', plan: 'Reservado, sin hacer', suelo: 'Suelo disponible', prevista: 'Prevista', licitada: 'Licitada', adjudicada: 'Adjudicada', obras: 'En obras' }
 
 /** Ficha del barrio para imprimir o guardar en PDF (A4). Se pinta fuera de la aplicación para que, al imprimir, solo salga esto. */
 export default function FichaBarrio(p: Props) {

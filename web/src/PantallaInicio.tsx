@@ -34,7 +34,7 @@ function necesidades(viviendas: number, modelo: Modelo, servicios: Record<Servic
   }
 }
 
-export default function PantallaInicio({ servicios, ir, tecnico }: Props) {
+export default function PantallaInicio({ servicios, ir }: Props) {
   const [resumen, setResumen] = useState<Resumen | null>(null)
   useEffect(() => { fetch(`${BASE}municipios_resumen.json`).then((r) => r.json()).then(setResumen) }, [])
 
@@ -77,9 +77,6 @@ export default function PantallaInicio({ servicios, ir, tecnico }: Props) {
             <div className="mt-6 flex flex-wrap gap-3">
               <button type="button" onClick={() => ir({ a: 'municipios' })} className="inline-flex items-center gap-2 bg-tinta px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-rojo">
                 <Icono nombre="ubicacion" className="h-4 w-4" />Busco dónde vivir
-              </button>
-              <button type="button" onClick={() => ir({ a: 'tecnica', cod: '065' })} className="inline-flex items-center gap-2 border border-tinta px-5 py-3 text-sm font-semibold hover:bg-gris-1">
-                <Icono nombre="ajustes" className="h-4 w-4" />Planifico servicios públicos{!tecnico && <span className="text-xs font-normal text-texto-3">· acceso técnico</span>}
               </button>
             </div>
           </div>

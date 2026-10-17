@@ -142,7 +142,14 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial, cat
   }
   const refResultados = useRef<HTMLDivElement>(null)
   // al elegir un sitio, el panel baja solo hasta la respuesta (antes quedaba debajo de los filtros)
-  useEffect(() => { if (lugar) setTimeout(() => refResultados.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 60) }, [lugar])
+  // (solo se desplaza el panel: scrollIntoView movía también la página y el mapa se iba hacia arriba)
+  useEffect(() => {
+    if (!lugar) return
+    setTimeout(() => {
+      const el = refResultados.current, panel = el?.closest('aside')
+      if (el && panel) panel.scrollBy({ top: el.getBoundingClientRect().top - panel.getBoundingClientRect().top, behavior: 'smooth' })
+    }, 60)
+  }, [lugar])
 
   const demanda = useMemo(() => new Map((datos.demanda?.ambitos ?? []).map((a) => [a.ambito, a])), [datos])
   const barrios = useMemo(() => (datos.demanda?.ambitos ?? []).filter((a) => (a.viviendas ?? 0) >= 150).sort((a, b) => (b.viviendas ?? 0) - (a.viviendas ?? 0)), [datos])

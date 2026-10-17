@@ -42,3 +42,16 @@ npm install
 npm run dev      # http://localhost:5173 (lee los datos de data/processed)
 npm run build    # versión de producción en web/dist
 ```
+
+## Publicación en Oracle Cloud
+
+La web publicada: https://objectstorage.eu-madrid-1.oraclecloud.com/n/axo19lrq7chl/b/cuna-y-canas/o/index.html
+
+Para volver a publicar después de cambios (necesita `%USERPROFILE%\.oci\config` y la clave de API; la clave nunca va al repositorio):
+
+```bash
+py -3.13 -m venv .venv-oci
+.venv-oci\Scripts\pip install oci-cli
+cd web && npm run build && cd ..
+.venv-oci\Scripts\python despliegue\oracle.py   # sube solo lo que ha cambiado, comprimido
+```

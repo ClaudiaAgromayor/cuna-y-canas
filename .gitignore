@@ -5,3 +5,5 @@ web/dist/
 __pycache__/
 *.key
 .env
+.venv-oci/
+*.pem

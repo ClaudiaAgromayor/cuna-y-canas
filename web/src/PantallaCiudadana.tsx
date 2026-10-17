@@ -87,6 +87,7 @@ function textoViviendas(p: Record<string, unknown>) {
 
 export default function PantallaCiudadana({ datos, servicios, barrioInicial, catsIniciales }: Props) {
   const [lugar, setLugar] = useState<Lugar | null>(null)
+  const [verNueva, setVerNueva] = useState(true) // capa de vivienda nueva posible (solares y suelo público en venta)
   // Escape (o la X de la ventanita): quita el sitio elegido y cierra la ventanita, de una vez
   const quitarLugar = () => { document.querySelectorAll('.maplibregl-popup').forEach((x) => x.remove()); setLugar(null) }
   useEffect(() => {
@@ -253,7 +254,9 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial, cat
     const ambs: FeatureCollection = { ...datos.ambitos, features: datos.ambitos.features.map((f) => ({ ...f, properties: { ...f.properties,
       estado: demanda.get(String(f.properties?.nombre))?.estado ?? 'sin_datos', sel: f.properties?.nombre === lugar?.ambito,
       vacio: sinConstruir.get(String(f.properties?.nombre))?.pct ?? -1, vacioM2: sinConstruir.get(String(f.properties?.nombre))?.m2 ?? 0 } })) }
-    const items: FeatureCollection<Point> = { type: 'FeatureCollection', features: (resultado?.cerca ?? []).map((x) => ({ type: 'Feature', properties: { nombre: x.nombre, cat: x.cat.texto, estado: x.estado, detalle: x.detalle }, geometry: { type: 'Point', coordinates: [x.lon, x.lat] } })) }
+    // antes de elegir sitio: todo lo que YA existe en el municipio (lo marcado o, si no hay nada marcado, todo)
+    const base = lugar ? (resultado?.cerca ?? []) : universo.filter((x) => x.estado === 'abierto' && catsEf.includes(x.cat.id) && x.cat.fuente !== 'redes')
+    const items: FeatureCollection<Point> = { type: 'FeatureCollection', features: base.map((x) => ({ type: 'Feature', properties: { nombre: x.nombre, cat: x.cat.texto, estado: x.estado, detalle: x.detalle }, geometry: { type: 'Point', coordinates: [x.lon, x.lat] } })) }
     return [
       // antes de elegir: cada barrio coloreado por el suelo para servicios que sigue sin construir; después, resaltado el elegido
       { id: 'b-ambitos', datos: ambs, estilo: { type: 'fill', paint: lugar
@@ -261,11 +264,19 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial, cat
         : { 'fill-color': ['case', ['<', ['get', 'vacio'], 0], '#e6e6e6', ['interpolate', ['linear'], ['get', 'vacio'], 0, '#f6e3e6', 40, '#e3808f', 80, '#b50f2b']], 'fill-opacity': 0.7 } } as CapaMapa['estilo'],
         popup: (p) => `<b>${nombreBarrio(String(p.nombre))}</b><br><span style="color:#595959">${ETIQUETA_ESTADO_BARRIO[String(p.estado)]} · ${textoViviendas(p)}${Number(p.vacio) >= 0 ? `<br>${n(Number(p.vacio))} % del suelo para servicios aún sin construir (${n(Number(p.vacioM2))} m²)` : ''}</span>` },
       { id: 'b-ambitos-borde', datos: ambs, estilo: { type: 'line', paint: { 'line-color': ['case', ['get', 'sel'], '#de0029', '#595959'], 'line-width': ['case', ['get', 'sel'], 2.5, 1], 'line-dasharray': [3, 2] } } as CapaMapa['estilo'] },
+      // dónde puede haber vivienda nueva: solares residenciales sin construir (catastro) y suelo público en venta para vivienda
+      ...(verNueva ? [
+        { id: 'b-nueva', datos: datos.viviendaNueva, estilo: { type: 'fill', paint: { 'fill-color': '#e07b00', 'fill-opacity': 0.45, 'fill-outline-color': '#9a5b00' } } as CapaMapa['estilo'],
+          popup: (p: Record<string, unknown>) => `<b>Solar para vivienda sin construir</b><br><span style="color:#595959">${p.uso} · ${n(Number(p.area_m2))} m²<br>Catastro, vía IDEM (suelo vacante y ocupado 2026)</span>` },
+        { id: 'b-portal', datos: { ...datos.portalSuelo, features: datos.portalSuelo.features.filter((f) => String(f.properties?.uso ?? '').startsWith('Resid')) },
+          estilo: { type: 'fill', paint: { 'fill-color': '#7a3fb0', 'fill-opacity': 0.55 } } as CapaMapa['estilo'],
+          popup: (p: Record<string, unknown>) => `<b>Suelo público para vivienda: ${p.regimen ?? 'en oferta'}</b><br><span style="color:#595959">${p.parcela ?? ''} · ${p.localizacion ?? ''}<br>Portal del Suelo de la Comunidad de Madrid</span>` },
+      ] : []),
       { id: 'b-radio', datos: circ, estilo: { type: 'line', paint: { 'line-color': '#de0029', 'line-width': 1.5, 'line-dasharray': [2, 2] } } },
-      { id: 'b-items', datos: items, estilo: { type: 'circle', paint: { 'circle-radius': 6, 'circle-color': ['match', ['get', 'estado'], 'abierto', '#131313', 'suelo', '#2b5c8a', 'prevista', '#de0029', '#8a8a8a'], 'circle-stroke-width': 2, 'circle-stroke-color': '#fff' } } as CapaMapa['estilo'],
+      { id: 'b-items', datos: items, estilo: { type: 'circle', paint: { 'circle-radius': lugar ? 6 : 4.5, 'circle-color': ['match', ['get', 'estado'], 'abierto', '#131313', 'suelo', '#2b5c8a', 'prevista', '#de0029', '#8a8a8a'], 'circle-stroke-width': 2, 'circle-stroke-color': '#fff' } } as CapaMapa['estilo'],
         popup: (p) => `<b>${p.nombre}</b><br>${p.cat}<br><span style="color:#595959">${p.detalle}</span>` },
     ]
-  }, [datos, demanda, lugar, radio, resultado, sinConstruir])
+  }, [datos, demanda, lugar, radio, resultado, sinConstruir, universo, catsEf, verNueva])
   // cada resultado con el icono de su servicio, coloreado por su estado (idea 3 de Lucía)
   const COLOR_MARCA: Record<EstadoId, string> = { abierto: '#131313', plan: '#8a8a8a', prevista: '#de0029', suelo: '#2b5c8a', licitada: '#9a5b00', adjudicada: '#9a5b00', obras: '#de0029' }
   const marcadores: Marcador[] = useMemo(() => {
@@ -295,6 +306,15 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial, cat
               <div className="flex justify-between text-texto-3"><span>poco</span><span>mucho</span></div>
             </div>
           )}
+          <label className="mt-2 flex cursor-pointer items-start gap-2 border-t border-linea pt-2">
+            <input type="checkbox" className="mt-0.5 accent-tinta" checked={verNueva} onChange={() => setVerNueva(!verNueva)} />
+            <span>
+              <span className="block font-medium">Dónde puede haber vivienda nueva</span>
+              <span className="flex items-center gap-1.5 text-texto-3"><span className="h-2.5 w-3" style={{ background: '#e07b00', opacity: 0.7 }} />solar residencial sin construir</span>
+              <span className="flex items-center gap-1.5 text-texto-3"><span className="h-2.5 w-3" style={{ background: '#7a3fb0', opacity: 0.8 }} />suelo público en venta para vivienda</span>
+            </span>
+          </label>
+          {!lugar && <div className="mt-2 flex items-center gap-1.5 border-t border-linea pt-2 text-texto-3"><span className="h-2.5 w-2.5 rounded-full bg-tinta" />{cats.length ? 'lo que buscas y ya existe' : 'servicios que ya existen'}</div>}
         </Leyenda>
       </div>
 
@@ -321,7 +341,7 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial, cat
               )
             })}
           </div>
-          {barrios.length === 0 && <p className="text-sm text-texto-2">Este municipio no tiene barrios en desarrollo en el planeamiento. Pulsa en el mapa para elegir una zona.</p>}
+          {barrios.length === 0 && <p className="text-sm text-texto-2">Su plan urbanístico no está en la base refundida de la Comunidad, así que no hay barrios nuevos dibujados.{datos.viviendaNueva.features.length > 0 && <> Pero el catastro muestra <b className="text-tinta">{n(datos.viviendaNueva.features.length)} solares para vivienda sin construir</b> (en naranja en el mapa).</>} Pulsa en el mapa para ver qué hay cerca de cualquier punto.</p>}
           <button type="button" className="mt-2 text-xs text-texto-2 underline underline-offset-2 hover:text-tinta" onClick={() => setBuscarCalle(!buscarCalle)}>{buscarCalle ? 'Ocultar buscador' : '¿Ya vives aquí? Busca tu calle'}</button>
           {buscarCalle && (
             <form className="mt-2" onSubmit={(e) => { e.preventDefault(); buscar() }}>

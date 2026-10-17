@@ -34,15 +34,18 @@ const cache = new Map<string, Promise<DatosMunicipio>>()
 export function cargarMunicipio(m: MunicipioIndice): Promise<DatosMunicipio> {
   if (!cache.has(m.cod_ine)) {
     cache.set(m.cod_ine, (async () => {
-      const [ambitos, parcelas, demandaPuntos, educativos, sanitarios, sociales, paradas, zonasSalud, redes, farmacias, demanda] = await Promise.all([
+      const [ambitos, parcelas, demandaPuntos, educativos, sanitarios, sociales, paradas, zonasSalud, redes, farmacias, demanda, viviendaNueva, portalSuelo] = await Promise.all([
         capa(m, 'ambitos'), capa(m, 'parcelas_vacantes'), capa(m, 'demanda_puntos'), capa(m, 'centros_educativos'),
         capa(m, 'centros_sanitarios'), capa(m, 'centros_sociales'), capa(m, 'paradas'), capa(m, 'zonas_salud'), capa(m, 'redes'), capa(m, 'farmacias'),
         m.tablas.demanda ? json<Demanda>(`${m.carpeta}/demanda.json`).catch(() => null) : Promise.resolve(null),
+        capa(m, 'vivienda_nueva'), capa(m, 'portal_suelo'),
       ])
       const pts = (demandaPuntos as FeatureCollection<Point>).features
       const xs = pts.map((f) => f.geometry.coordinates[0]), ys = pts.map((f) => f.geometry.coordinates[1])
-      const encuadre: [number, number, number, number] = xs.length ? [Math.min(...xs), Math.min(...ys), Math.max(...xs), Math.max(...ys)] : m.bbox
-      const datos = { indice: m, encuadre, ambitos, parcelas, demandaPuntos, educativos, sanitarios, sociales, farmacias, paradas, zonasSalud, redes, demanda } as DatosMunicipio
+      // encuadre desde los puntos de demanda; si son muy pocos (un solo punto da un encuadre de tamaño cero y el mapa no se dibuja), el del municipio
+      const caja: [number, number, number, number] | null = xs.length ? [Math.min(...xs), Math.min(...ys), Math.max(...xs), Math.max(...ys)] : null
+      const encuadre: [number, number, number, number] = caja && caja[2] - caja[0] > 0.01 && caja[3] - caja[1] > 0.008 ? caja : m.bbox
+      const datos = { indice: m, encuadre, ambitos, parcelas, demandaPuntos, educativos, sanitarios, sociales, farmacias, paradas, zonasSalud, redes, demanda, viviendaNueva, portalSuelo } as DatosMunicipio
       comprobarMunicipio(datos)
       return datos
     })())

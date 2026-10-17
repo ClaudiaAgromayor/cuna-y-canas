@@ -115,6 +115,8 @@ export interface DatosMunicipio {
   sanitarios: FeatureCollection<Point>
   sociales: FeatureCollection<Point>
   farmacias: FeatureCollection<Point>
+  viviendaNueva: FeatureCollection // solares residenciales vacantes (IDEM, suelo vacante y ocupado)
+  portalSuelo: FeatureCollection   // suelo público en venta o concesión (Portal del Suelo)
   paradas: FeatureCollection<Point>
   zonasSalud: FeatureCollection<Polygon | MultiPolygon>
   redes: FeatureCollection<Polygon | MultiPolygon>

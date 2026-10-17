@@ -81,7 +81,7 @@ export default function PantallaMunicipios({ servicios, detallados, verBarrios, 
     const datos: FeatureCollection = { ...limites, features: limites.features.map((f) => {
       const r = porCod.get(String(f.properties?.cod_ine))
       const m = unico ? resumen?.municipios.find((x) => x.cod_ine === String(f.properties?.cod_ine)) : undefined
-      return { ...f, properties: { ...f.properties, cant: m ? unico!.cantidad!(m) : -1, puntos: r ? (Number.isFinite(r.puntos) ? Math.round(r.puntos) : 0) : -1, puesto: r?.puesto ?? null, top: criterios.length > 0 && !!r && r.puesto <= TOP } }
+      return { ...f, properties: { ...f.properties, cant: m ? unico!.cantidad!(m) : -1, puntos: r ? (Number.isFinite(r.puntos) ? Math.round(r.puntos) : 0) : -1, puesto: r?.puesto ?? null, top: criterios.length > 0 && !!r && r.puesto <= TOP, hay: criterios.length > 0 } }
     }) }
     const selFc: FeatureCollection = { ...limites, features: limites.features.filter((f) => f.properties?.cod_ine === sel || comparar.includes(String(f.properties?.cod_ine))) }
     return [
@@ -89,8 +89,8 @@ export default function PantallaMunicipios({ servicios, detallados, verBarrios, 
         'fill-color': unico
           ? ['case', ['<', ['get', 'cant'], 0], '#f3f3f3', ['==', ['get', 'cant'], 0], '#e9e9e9',
             ['interpolate', ['linear'], ['sqrt', ['get', 'cant']], 1, ESCALA[1], Math.max(1.01, Math.sqrt(maxCant) / 2), ESCALA[3], Math.max(1.02, Math.sqrt(maxCant)), ESCALA[5]]]
-          : ['case', ['<', ['get', 'puntos'], 0], '#f3f3f3', ['!', ['get', 'top']], '#e4dcdd',
-            ['interpolate', ['linear'], ['get', 'puesto'], 1, ESCALA[5], 5, ESCALA[4], 10, ESCALA[3], 15, ESCALA[2]]],
+          : ['case', ['<', ['get', 'puntos'], 0], '#f3f3f3', ['!', ['to-boolean', ['get', 'hay']]], '#ebebeb',
+            ['interpolate', ['linear'], ['get', 'puntos'], 0, '#f4ecee', 40, ESCALA[1], 60, ESCALA[2], 75, ESCALA[3], 88, ESCALA[4], 100, ESCALA[5]]],
         'fill-opacity': 0.9 } } as CapaMapa['estilo'],
         popup: (p) => unico ? `<b>${p.nombre}</b><br>${Number(p.cant) > 0 ? `<b>${p.cant}</b> · ${enFrase(unico.texto)}` : `No hay: ${enFrase(unico.texto)}`}`
           : Number(p.puntos) < 0 ? `<b>${p.nombre}</b><br><span style="color:#595959">${sinDatos.has(String(p.cod_ine)) ? 'Sin datos para lo que has marcado' : 'No cumple los filtros de tamaño o distancia'}</span>`
@@ -121,10 +121,9 @@ export default function PantallaMunicipios({ servicios, detallados, verBarrios, 
           )}
           {!criterios.length && <div className="w-44 text-texto-2">Elige tu situación o qué te importa y aquí verás los municipios que mejor encajan.</div>}
           <div className={criterios.length && !unico ? "" : "hidden"}>
-          <div className="mb-1 font-medium">Los {TOP} que mejor encajan</div>
-          <div className="flex">{[...ESCALA].slice(2).reverse().map((c) => <span key={c} className="h-2.5 w-9" style={{ background: c }} />)}</div>
-          <div className="flex justify-between text-texto-3"><span>1.º</span><span>15.º</span></div>
-          <div className="mt-1 flex items-center gap-1.5 text-texto-3"><span className="h-2.5 w-4" style={{ background: '#e4dcdd' }} />resto</div>
+          <div className="mb-1 font-medium">Cuánto encaja con lo que buscas</div>
+          <div className="h-2.5 w-44" style={{ background: `linear-gradient(to right, #f4ecee, ${ESCALA[1]}, ${ESCALA[3]}, ${ESCALA[5]})` }} />
+          <div className="flex w-44 justify-between text-texto-3"><span>poco</span><span>mucho</span></div>
           {sinDatos.size > 0 && <div className="mt-0.5 flex items-center gap-1.5 text-texto-3"><span className="h-2.5 w-4 border border-linea" style={{ background: '#f3f3f3' }} />sin datos</div>}
           </div>
         </Leyenda>
@@ -249,7 +248,7 @@ export default function PantallaMunicipios({ servicios, detallados, verBarrios, 
                 <ul className="mt-1 grid list-disc gap-1.5 pl-4">
                   <li><b className="text-tinta">Nada es una opinión.</b> Cada criterio es un dato oficial y abierto (debajo de cada uno pone su fuente), descargado por API del Portal de Datos Abiertos de la Comunidad, la IDEM, el INE y el Consorcio Regional de Transportes.</li>
                   <li><b className="text-tinta">Comparamos con los demás municipios.</b> En cada criterio, el mejor de los que cumplen tus filtros saca 100 y el peor, 0. La coincidencia es la media de lo que has marcado: todos los criterios pesan igual.</li>
-                  <li><b className="text-tinta">Servicios: suficientes y donde elegir.</b> En colegios, centros de salud, residencias… contamos si hay bastantes para su población (60 %) y cuántos hay para elegir (40 %). Así un pueblo de 300 habitantes con una escuela no gana a una ciudad con veinte.</li>
+                  <li><b className="text-tinta">Servicios: suficientes y donde elegir.</b> En colegios, centros de salud, residencias… cuenta sobre todo cuántos hay para elegir (60 %) y que haya al menos los normales para su población (40 %); si no hay ninguno, saca 0. Así un pueblo de 300 habitantes con una escuela no gana a una ciudad con veinte.</li>
                   <li><b className="text-tinta">Trabajo en Madrid</b> no premia estar cerca, sino llegar bien: si hay tren o Metro hasta Madrid, cuántos autobuses van directos y la zona del abono, que marca lo que cuesta cada mes.</li>
                 </ul>
               </details>

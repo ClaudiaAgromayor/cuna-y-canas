@@ -161,7 +161,7 @@ export default function FichaMunicipio({ r, total, criterios, situaciones, tiles
       </section>
 
       <footer className="mt-5 border-t border-linea pt-2 text-[7pt] leading-snug text-texto-2">
-        <b className="text-tinta">Cómo se calcula.</b> Cada criterio compara el municipio con los demás que cumplen tus filtros: el mejor saca 100 y el peor, 0; la coincidencia es la media. En los servicios cuenta que haya bastantes para su población (60 %) y donde elegir (40 %).
+        <b className="text-tinta">Cómo se calcula.</b> Cada criterio compara el municipio con los demás que cumplen tus filtros: el mejor saca 100 y el peor, 0; la coincidencia es la media. En los servicios cuenta cuántos hay para elegir (60 %) y que haya al menos los normales para su población (40 %); si no hay ninguno, 0.
         {' '}<b className="text-tinta">Fuentes</b>, todas abiertas y descargadas por API: Portal de Datos Abiertos de la Comunidad de Madrid (padrón, nacimientos, centros educativos, sanitarios y sociales, farmacias, bibliotecas, renta y paro), IDEM (límites y planeamiento 2025), Consorcio Regional de Transportes (estaciones, líneas y zonas tarifarias) e INE. Distancias en línea recta.{m.foto_pagina ? ` Foto: Wikimedia Commons (licencia libre), ${decodeURIComponent(m.foto_pagina.split('File:')[1] ?? '').replace(/_/g, ' ')}.` : ''}
       </footer>
     </div>,

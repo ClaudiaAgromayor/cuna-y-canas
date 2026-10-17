@@ -6,8 +6,8 @@
  *
  * Los criterios "por habitante" tienen un problema: en un pueblo de 300 habitantes una sola escuela da una ratio
  * altísima. Por eso combinan dos cosas:
- *   - suficiencia (60 %): la ratio por habitante, con tope en el percentil 75 (a partir de ahí "hay suficiente");
- *   - variedad (40 %): cuántos centros hay para elegir.
+ *   - suficiencia (40 %): la ratio por habitante, con tope en la mediana (a partir de ahí "hay suficiente");
+ *   - variedad (60 %): cuántos centros hay para elegir. Si no hay ninguno, el criterio vale 0.
  */
 
 export interface ResumenMunicipio {
@@ -191,11 +191,13 @@ export function puntuar(lista: ResumenMunicipio[], criterios: string[]): Puntuad
     if (c.binario) { porCriterio[c.id] = new Map(vals.map((x) => [x.cod, x.v > 0 ? 100 : 0])); continue }
     if (c.saturar) { const t = cuantil(vals.map((x) => x.v), 0.75); vals = vals.map((x) => ({ ...x, v: Math.min(x.v, t) })) }
     if (!c.cantidad) { porCriterio[c.id] = percentiles(vals, c.mayorEsMejor); continue }
-    const tope = cuantil(vals.map((x) => x.v), 0.75)
+    const tope = cuantil(vals.map((x) => x.v), 0.5) // llegar a lo normal ya es "suficiente"
     vals = vals.map((x) => ({ ...x, v: Math.min(x.v, tope) }))
     const suficiencia = percentiles(vals, true)
     const variedad = percentiles(lista.map((m) => ({ cod: m.cod_ine, v: c.cantidad!(m) })), true)
-    porCriterio[c.id] = new Map(vals.map((x) => [x.cod, 0.6 * suficiencia.get(x.cod)! + 0.4 * (variedad.get(x.cod) ?? 0)]))
+    // si no hay ninguno, 0: no se reparte puesto con los demás que tampoco tienen
+    const cant = new Map(lista.map((m) => [m.cod_ine, c.cantidad!(m)]))
+    porCriterio[c.id] = new Map(vals.map((x) => [x.cod, (cant.get(x.cod) ?? 0) <= 0 ? 0 : 0.4 * suficiencia.get(x.cod)! + 0.6 * (variedad.get(x.cod) ?? 0)]))
   }
   // un municipio sin datos en ninguno de los criterios elegidos no entra en el ranking (sin datos no es lo mismo que el peor)
   return lista.map((m) => {

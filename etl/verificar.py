@@ -69,7 +69,7 @@ if __name__ == "__main__":
         m = resolver_municipio(sys.argv[1])
         carpetas = [PROCESSED / f"{m['cod']}-{m['slug']}"]
     else:
-        carpetas = sorted(p for p in PROCESSED.iterdir() if p.is_dir())
+        carpetas = sorted(p for p in PROCESSED.iterdir() if p.is_dir() and p.name[:3].isdigit())  # datos/ es el paquete para descargar
     todos = [f for c in carpetas for f in verificar(c)]
     for f in todos:
         print("  FALLO:", f)

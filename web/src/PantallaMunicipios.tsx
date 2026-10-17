@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import type { FeatureCollection } from 'geojson'
 import Mapa, { type CapaMapa } from './Mapa'
-import { CRITERIOS, enFrase, ESCALA, formatoCriterio, lista, posicion, puntuar, SITUACIONES, TAMANOS, TOP, ZONAS, type Puntuado, type ResumenMunicipio } from './criterios'
+import { CATS_DE_CRITERIO, CRITERIOS, enFrase, ESCALA, formatoCriterio, lista, posicion, puntuar, SITUACIONES, TAMANOS, TOP, ZONAS, type Puntuado, type ResumenMunicipio } from './criterios'
 import FichaMunicipio from './FichaMunicipio'
 import type { MunicipioIndice, Rango, Servicio, ServicioId } from './tipos'
 import { Icono } from './iconos'
@@ -15,7 +15,7 @@ interface Props {
   detallados: MunicipioIndice[]
   situacionesIniciales?: string[]
   selInicial?: string
-  verBarrios: (cod: string) => void
+  verBarrios: (cod: string, cats: string[]) => void
   planificar: (cod: string) => void
 }
 
@@ -30,8 +30,8 @@ export interface Sitio { colegios: number; grandes: number; titulo: string; tono
 export default function PantallaMunicipios({ servicios, detallados, verBarrios, planificar, situacionesIniciales, selInicial }: Props) {
   const [resumen, setResumen] = useState<Resumen | null>(null)
   const [limites, setLimites] = useState<FeatureCollection | null>(null)
-  const [situaciones, setSituaciones] = useState<string[]>(situacionesIniciales ?? ['bebe'])
-  const [criterios, setCriterios] = useState<string[]>(() => [...new Set(SITUACIONES.filter((s) => (situacionesIniciales ?? ['bebe']).includes(s.id)).flatMap((s) => s.criterios))])
+  const [situaciones, setSituaciones] = useState<string[]>(situacionesIniciales ?? [])
+  const [criterios, setCriterios] = useState<string[]>(() => [...new Set(SITUACIONES.filter((s) => (situacionesIniciales ?? []).includes(s.id)).flatMap((s) => s.criterios))])
   const [tamanos, setTamanos] = useState<string[]>([])
   const [distMax, setDistMax] = useState(90)
   const [sel, setSel] = useState<string | null>(selInicial ?? null)
@@ -118,7 +118,7 @@ export default function PantallaMunicipios({ servicios, detallados, verBarrios, 
             situaciones={situaciones} limites={limites} puestos={porCod}
             volver={() => setSel(null)} comparando={comparar.includes(elegido.m.cod_ine)}
             alternarComparar={() => setComparar((c) => c.includes(elegido.m.cod_ine) ? c.filter((x) => x !== elegido.m.cod_ine) : [...c, elegido.m.cod_ine].slice(-3))}
-            detallado={detallado(elegido.m.cod_ine)} verBarrios={() => verBarrios(elegido.m.cod_ine)} planificar={() => planificar(elegido.m.cod_ine)} />
+            detallado={detallado(elegido.m.cod_ine)} verBarrios={() => verBarrios(elegido.m.cod_ine, [...new Set(criterios.flatMap((c) => CATS_DE_CRITERIO[c] ?? []))])} planificar={() => planificar(elegido.m.cod_ine)} />
         ) : (
           <>
             <div className="px-6 pt-7 pb-2">

@@ -26,7 +26,7 @@ export default function App() {
   const [sesion, setSesion] = useState<Sesion | null>(leerSesion)
   const [login, setLogin] = useState<{ despues?: Destino } | null>(null)
   // parámetros de entrada para los ejemplos de un clic y los enlaces compartidos
-  const [entrada, setEntrada] = useState<{ situaciones?: string[]; sel?: string; barrio?: string; servicio?: ServicioId; zona?: string; clave: number }>(
+  const [entrada, setEntrada] = useState<{ situaciones?: string[]; sel?: string; barrio?: string; cats?: string[]; servicio?: ServicioId; zona?: string; clave: number }>(
     { situaciones: h.get('s')?.split(','), sel: h.get('sel') ?? undefined, barrio: h.get('b') ?? undefined, servicio: (h.get('serv') as ServicioId) ?? undefined, clave: 0 })
 
   useEffect(() => {
@@ -87,6 +87,9 @@ export default function App() {
                 {id === 'tecnica' && <Icono nombre="ajustes" className="h-4 w-4" />}{t}
               </button>
             ))}
+            <a href={`${import.meta.env.BASE_URL}datos/index.html`} className="flex shrink-0 items-center gap-1.5 border-b-[3px] border-transparent px-3.5 py-2.5 font-semibold text-white/70 hover:text-white">
+              <Icono nombre="descargar" className="h-4 w-4" />Datos abiertos
+            </a>
           </nav>
           <div className="ml-auto flex items-center gap-3 py-2">
             {conSelector && (
@@ -122,11 +125,11 @@ export default function App() {
         {servicios && pantalla === 'inicio' && <PantallaInicio servicios={servicios} ir={ir} tecnico={!!sesion} />}
         {servicios && pantalla === 'municipios' && (
           <PantallaMunicipios key={`m-${entrada.clave}`} servicios={servicios} detallados={indice} situacionesIniciales={entrada.situaciones} selInicial={entrada.sel}
-            verBarrios={(c) => irA('ciudadana', c)} planificar={(c) => ir({ a: 'tecnica', cod: c })} />
+            verBarrios={(c, cats) => { setEntrada({ cats, clave: Date.now() }); irA('ciudadana', c) }} planificar={(c) => ir({ a: 'tecnica', cod: c })} />
         )}
         {servicios && conSelector && !datos && !error && <div className="m-5 text-sm text-texto-2">Cargando {muni?.nombre ?? 'datos'}…</div>}
         {servicios && datos && pantalla === 'tecnica' && sesion && <PantallaTecnica key={`${datos.indice.cod_ine}-${entrada.clave}`} datos={datos} servicios={servicios} servicioInicial={entrada.servicio} zonaInicial={entrada.zona} />}
-        {servicios && datos && pantalla === 'ciudadana' && <PantallaCiudadana key={`${datos.indice.cod_ine}-${entrada.clave}`} datos={datos} servicios={servicios} barrioInicial={entrada.barrio} />}
+        {servicios && datos && pantalla === 'ciudadana' && <PantallaCiudadana key={`${datos.indice.cod_ine}-${entrada.clave}`} datos={datos} servicios={servicios} barrioInicial={entrada.barrio} catsIniciales={entrada.cats} />}
       </main>
       {login && <Login indice={indice} alCerrar={() => setLogin(null)} alEntrar={entrar} codSugerido={login.despues && 'cod' in login.despues ? login.despues.cod : cod} />}
     </div>

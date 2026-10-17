@@ -84,14 +84,25 @@ def ambitos(muni, ctrl):
     ctrl["ambitos_con_viviendas_discrepantes_entre_poligonos"] = discrepantes[discrepantes > 1].index.tolist()
     g = raw.dissolve(by="DS_NOMB_AMB", aggfunc={
         "DS_CLAS_SUE": "first", "viv": "max", "NM_VIV_PROT": "max", "NM_S_RL_EQU": "max", "NM_S_RG_EQU": "max",
-        "NM_S_SL_EQU": "max", "NM_C_ED": "max"}).reset_index()
+        "NM_S_SL_EQU": "max", "NM_C_ED": "max", "DS_US_PRED": "first", "DS_FIG_DES": "first", "DS_PROMOC": "first"}).reset_index()
     g = g.rename(columns={"DS_NOMB_AMB": "nombre", "DS_CLAS_SUE": "clase_suelo", "viv": "viviendas",
+                          "DS_US_PRED": "uso", "DS_FIG_DES": "figura", "DS_PROMOC": "promocion",
                           "NM_VIV_PROT": "viviendas_protegidas", "NM_S_RL_EQU": "red_local_equip_m2",
                           "NM_S_RG_EQU": "red_general_equip_m2", "NM_S_SL_EQU": "sistema_local_equip_m2",
                           "NM_C_ED": "coef_edificabilidad"})
     g["sup_m2"] = g.geometry.area.round()
     for c in ("viviendas_protegidas", "red_local_equip_m2", "red_general_equip_m2", "sistema_local_equip_m2", "coef_edificabilidad"):
         g[c] = num(g[c])
+    # sin viviendas en el planeamiento pero residencial y con edificabilidad: estimación orientativa con rango
+    # (m² edificables = superficie × coeficiente; m² por vivienda: unifamiliar 120-180, colectiva 80-110, sin precisar 90-150)
+    uso = g["uso"].fillna("").str.lower()
+    m2viv = np.select([uso.str.contains("unifam"), uso.str.contains("multifam|colectiv")], [180, 110], 150), \
+        np.select([uso.str.contains("unifam"), uso.str.contains("multifam|colectiv")], [120, 80], 90)
+    edif = g["sup_m2"] * g["coef_edificabilidad"].fillna(0)
+    estimable = g["viviendas"].isna() & uso.str.contains("resid") & (edif > 0)
+    g["viviendas_est_min"] = np.where(estimable, (edif / m2viv[0]).round(-1), np.nan)
+    g["viviendas_est_max"] = np.where(estimable, (edif / m2viv[1]).round(-1), np.nan)
+    ctrl["ambitos_viviendas_estimadas"] = int(estimable.sum())
     ctrl["ambitos"] = len(g)
     ctrl["ambitos_sin_viviendas"] = int(g["viviendas"].isna().sum())
     ctrl["ambitos_guardados"] = guardar(g, carpeta_salida(muni) / "ambitos.geojson", muni)

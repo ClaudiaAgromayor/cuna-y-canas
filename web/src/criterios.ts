@@ -206,6 +206,14 @@ export function puntuar(lista: ResumenMunicipio[], criterios: string[]): Puntuad
   }).filter((r) => !cs.length || Number.isFinite(r.puntos)).sort((a, b) => b.puntos - a.puntos)
 }
 
+/** Qué buscar en el mapa de barrios según los criterios elegidos en "¿Dónde vivir?" (solo los que tienen equivalente). */
+export const CATS_DE_CRITERIO: Record<string, string[]> = {
+  ei_publica: ['ei_publica'], ei_total: ['ei_publica', 'ei_privada'], col_publico: ['col_publico'], col_concertado: ['col_concertado'],
+  col_privado: ['col_privado'], instituto: ['instituto'], fp: ['instituto'], primaria: ['salud'], hospital: ['hospital'], farmacia: ['farmacia'],
+  residencia: ['residencia'], centro_dia: ['centro_dia'], hogar_mayores: ['hogar'], verde: ['parque'], deporte: ['deporte'], cultura: ['cultura'],
+  vivienda_nueva: ['suelo'],
+}
+
 export const TOP = 15
 export const ESCALA = ['#f6e3e6', '#eeb7c0', '#e3808f', '#d4475c', '#b50f2b', '#7d0019'] // de menos a más coincidencia
 /** Color de un municipio en el mapa según su puesto: solo los 15 primeros llevan color. */

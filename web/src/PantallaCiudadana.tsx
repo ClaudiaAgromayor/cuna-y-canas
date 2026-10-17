@@ -8,7 +8,7 @@ import type { AmbitoDemanda, DatosMunicipio, Servicio, ServicioId } from './tipo
 import { Icono, iconoSvg } from './iconos'
 import { Aviso, capitalizar, dec, Estado, Linea, n, nombreBarrio, type EstadoId, Leyenda } from './ui'
 
-interface Props { datos: DatosMunicipio; servicios: Record<ServicioId, Servicio>; barrioInicial?: string }
+interface Props { datos: DatosMunicipio; servicios: Record<ServicioId, Servicio>; barrioInicial?: string; catsIniciales?: string[] }
 
 /* ---------- qué se puede buscar ---------- */
 
@@ -76,9 +76,19 @@ interface Lugar { lon: number; lat: number; texto: string; ambito: string | null
 interface Candidato { address: string; muni: string; lat: number; lng: number }
 interface Item { id: string; cat: Categoria; nombre: string; detalle: string; estado: EstadoId; lon: number; lat: number; d: number }
 
-export default function PantallaCiudadana({ datos, servicios, barrioInicial }: Props) {
+/** Viviendas del ámbito: las del planeamiento o, si no constan, una estimación con rango a partir de la superficie y la edificabilidad. */
+function textoViviendas(p: Record<string, unknown>) {
+  const v = Number(p.viviendas), lo = Number(p.viviendas_est_min), hi = Number(p.viviendas_est_max)
+  const viv = v ? `${n(v)} viviendas previstas` : lo ? `entre ${n(lo)} y ${n(hi)} viviendas (estimación)` : 'sin datos de viviendas'
+  const extra = [p.uso, p.figura && `${p.figura}${p.promocion ? ` de promoción ${String(p.promocion).toLowerCase()}` : ''}`,
+    Number(p.sup_m2) ? `${n(Number(p.sup_m2) / 10000)} ha` : null, Number(p.coef_edificabilidad) ? `edificabilidad ${String(p.coef_edificabilidad).replace('.', ',')} m²/m²` : null].filter(Boolean)
+  return `${viv}${extra.length ? `<br>${extra.join(' · ')}` : ''}${lo && !v ? '<br><span style="font-size:11px">Estimado con la superficie × edificabilidad del planeamiento (IDEM) y 120-180 m² por vivienda unifamiliar u 80-110 colectiva</span>' : ''}`
+}
+
+export default function PantallaCiudadana({ datos, servicios, barrioInicial, catsIniciales }: Props) {
   const [lugar, setLugar] = useState<Lugar | null>(null)
-  const [cats, setCats] = useState<string[]>(['ei_publica', 'col_publico', 'instituto', 'salud', 'farmacia', 'residencia', 'parque', 'deporte', 'suelo'])
+  // de entrada nada marcado; si se llega desde "¿Dónde vivir?", solo lo que se buscaba allí
+  const [cats, setCats] = useState<string[]>(catsIniciales ?? [])
   const [estados, setEstados] = useState<EstadoId[]>(['abierto', 'plan', 'prevista', 'suelo'])
   const [radioMin, setRadioMin] = useState(10)
   const [abiertos, setAbiertos] = useState<string[]>([])
@@ -240,7 +250,7 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial }: P
       { id: 'b-ambitos', datos: ambs, estilo: { type: 'fill', paint: lugar
         ? { 'fill-color': ['match', ['get', 'estado'], 'futuro', '#de0029', 'en_desarrollo', '#131313', '#8a8a8a'], 'fill-opacity': ['case', ['get', 'sel'], 0.14, 0.05] }
         : { 'fill-color': ['case', ['<', ['get', 'vacio'], 0], '#e6e6e6', ['interpolate', ['linear'], ['get', 'vacio'], 0, '#f6e3e6', 40, '#e3808f', 80, '#b50f2b']], 'fill-opacity': 0.7 } } as CapaMapa['estilo'],
-        popup: (p) => `<b>${nombreBarrio(String(p.nombre))}</b><br><span style="color:#595959">${ETIQUETA_ESTADO_BARRIO[String(p.estado)]} · ${p.viviendas ? n(Number(p.viviendas)) + ' viviendas previstas' : 'sin datos de viviendas'}${Number(p.vacio) >= 0 ? `<br>${n(Number(p.vacio))} % del suelo para servicios aún sin construir (${n(Number(p.vacioM2))} m²)` : ''}</span>` },
+        popup: (p) => `<b>${nombreBarrio(String(p.nombre))}</b><br><span style="color:#595959">${ETIQUETA_ESTADO_BARRIO[String(p.estado)]} · ${textoViviendas(p)}${Number(p.vacio) >= 0 ? `<br>${n(Number(p.vacio))} % del suelo para servicios aún sin construir (${n(Number(p.vacioM2))} m²)` : ''}</span>` },
       { id: 'b-ambitos-borde', datos: ambs, estilo: { type: 'line', paint: { 'line-color': ['case', ['get', 'sel'], '#de0029', '#595959'], 'line-width': ['case', ['get', 'sel'], 2.5, 1], 'line-dasharray': [3, 2] } } as CapaMapa['estilo'] },
       { id: 'b-radio', datos: circ, estilo: { type: 'line', paint: { 'line-color': '#de0029', 'line-width': 1.5, 'line-dasharray': [2, 2] } } },
       { id: 'b-items', datos: items, estilo: { type: 'circle', paint: { 'circle-radius': 6, 'circle-color': ['match', ['get', 'estado'], 'abierto', '#131313', 'suelo', '#2b5c8a', 'prevista', '#de0029', '#8a8a8a'], 'circle-stroke-width': 2, 'circle-stroke-color': '#fff' } } as CapaMapa['estilo'],

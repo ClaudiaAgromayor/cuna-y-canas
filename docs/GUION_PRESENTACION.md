@@ -55,11 +55,13 @@ Antes que nosotros: Oportunia, Alcanza, Aterriza y CERCA DE TI. Justo después: 
    > "Esto es lo que me dice Laura con sus datos, pero en grande: cuántos niños de 3 a 11 años habrá cada año, **cuándo** hace falta cada colegio… y el primero hace falta ya."
 3. Señalar las ubicaciones propuestas en el mapa:
    > "Y **dónde**: sobre parcelas de suelo público que siguen vacías, con superficie, titularidad y transporte cerca."
-4. **Arrastrar** una ubicación a otra parcela:
+4. Barra de encima del mapa → **"− Quitar centro"** y pulsar el centro 1:
+   > "¿Y si solo hay presupuesto para uno? Lo quito y me dice al momento cuánta demanda dejo sin atender." *(Sale el aviso: "antes se atendía el 97 %, ahora el 95 %: empeora")*. Pulsar **"Volver a la propuesta automática"**.
+5. **Arrastrar** una ubicación a otra parcela:
    > "Si prefiero otra parcela, la muevo y veo al momento a cuántos niños llega."
-5. **Natalidad −20 %** y señalar **robustez**:
+6. **Natalidad −20 %** y señalar **robustez**:
    > "¿Y si nacen menos niños, o las obras se retrasan tres años? Lo recalcula, y me dice qué propuestas **aguantan** en cualquier caso. Esas son las que se pueden defender en un presupuesto."
-6. *(Si da tiempo)* Inicio → **Radar**: "Torrejón de Velasco puede multiplicar su población por cinco y solo tiene 4 parcelas donde cabe un colegio."
+7. *(Si da tiempo)* Inicio → **Radar** (solo con sesión de técnico): "Torrejón de Velasco puede multiplicar su población por cinco y solo tiene 4 parcelas donde cabe un colegio."
 
 > **Carmen:** "Laura elige con información. Yo planifico antes de que llegue. **Los mismos datos, dos lecturas.**"
 

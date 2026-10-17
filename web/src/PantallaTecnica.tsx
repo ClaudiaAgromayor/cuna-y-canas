@@ -78,6 +78,8 @@ export default function PantallaTecnica({ datos, servicios, servicioInicial, zon
   const upd = (p: Partial<Escenario>) => setEsc((e) => ({ ...e, ...p }))
   // al mover, fijar o descartar una ubicación se guarda cómo estaba la cobertura, para decir qué ha cambiado
   const [cambio, setCambio] = useState<{ accion: string; antes: number } | null>(null)
+  // pinchar el mapa solo cambia algo si se ha elegido antes "Añadir centro" o "Quitar centro"
+  const [modo, setModo] = useState<'ver' | 'anadir' | 'quitar'>('ver')
   const llenadoDe = (a: number) => Math.max(0, Math.min(1, (a - ANIO_BASE) / aniosLlenado))
   const escE = useMemo(() => ({ ...esc, llenado: llenadoDe(anio) }), [esc, anio, aniosLlenado]) // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -171,10 +173,9 @@ export default function PantallaTecnica({ datos, servicios, servicioInicial, zon
       { id: 'ambitos-borde', datos: amb, estilo: { type: 'line', paint: { 'line-color': ['case', ['get', 'zona'], '#de0029', ['match', ['get', 'estado'], ...Object.entries(COLOR_ESTADO).flat(), '#94a3b8']], 'line-width': ['case', ['get', 'zona'], 3, 1.4], 'line-dasharray': [3, 2] } } as CapaMapa['estilo'] },
       { id: 'zonas', datos: datos.zonasSalud, visible: verZonas, estilo: { type: 'line', paint: { 'line-color': '#1e7d4f', 'line-width': 2, 'line-dasharray': [1, 2] } },
         popup: (p) => `<b>Zona básica de salud ${p.nombre ?? p.codigo}</b><br>Habitantes (INE 2023): ${n(Number(p.poblacion_2023))}<br>Centros de salud y consultorios: ${p.centros_salud}` },
-      { id: 'radios-existentes', datos: radio(existentes), estilo: { type: 'fill', paint: { 'fill-color': '#131313', 'fill-opacity': 0.04 } } },
       { id: 'radios-propuestas', datos: radio(res.propuestas), estilo: { type: 'fill', paint: { 'fill-color': '#de0029', 'fill-opacity': 0.08 } } },
       { id: 'parcelas', datos: parc, estilo: { type: 'fill', paint: { 'fill-color': ['match', ['get', 'clase'], 'candidata', '#2b5c8a', 'fijada', '#de0029', 'excluida', '#595959', '#c4c4c4'], 'fill-opacity': 0.7 } } as CapaMapa['estilo'],
-        popup: (p) => `<b>Parcela vacante de equipamiento</b><br>Ref. catastral: ${p.ref_catastral}<br>Superficie: ${n(Number(p.area_m2))} m²<br>Titularidad: ${p.red && p.red !== 'null' ? `suelo público (${p.red})` : 'por confirmar'}<br>Barrio: ${nombreBarrio(p.ambito as string | null)}<br><i>${p.clase === 'pequena' ? 'No cumple los criterios de suelo' : p.clase === 'fijada' ? 'Fijada por ti. Pulsa para soltarla' : 'Pulsa para fijarla como ubicación'}</i>` },
+        popup: (p) => `<b>Parcela vacante de equipamiento</b><br>Ref. catastral: ${p.ref_catastral}<br>Superficie: ${n(Number(p.area_m2))} m²<br>Titularidad: ${p.red && p.red !== 'null' ? `suelo público (${p.red})` : 'por confirmar'}<br>Barrio: ${nombreBarrio(p.ambito as string | null)}<br><i>${p.clase === 'pequena' ? 'No cumple los criterios de suelo' : p.clase === 'fijada' ? 'Centro puesto por ti' : 'Para poner aquí un centro, pulsa antes «Añadir centro»'}</i>` },
       { id: 'demanda', datos: dem, visible: verDemanda, estilo: { type: 'circle', paint: { 'circle-radius': ['interpolate', ['linear'], ['sqrt', ['get', 'w']], 0, 1, 10, 6, 40, 16], 'circle-color': ['match', ['get', 'tipo'], 'futuro', '#de0029', '#595959'], 'circle-opacity': 0.35, 'circle-stroke-width': 0.5, 'circle-stroke-color': '#fff' } } as CapaMapa['estilo'],
         popup: (p) => `<b>${p.tipo === 'futuro' ? 'Demanda futura' : 'Demanda actual'}</b><br>${p.tipo === 'futuro' ? 'Suelo residencial vacante' : 'Sección censal ' + p.origen}<br>Barrio: ${nombreBarrio(p.ambito as string | null)}<br>Usuarios de ${s.nombre.toLowerCase()}: ${n(Math.round(Number(p.w)))}` },
       { id: 'paradas', datos: datos.paradas, visible: verParadas, estilo: { type: 'circle', paint: { 'circle-radius': 3, 'circle-color': ['match', ['get', 'modo'], 'metro', '#de0029', 'cercanias', '#131313', '#8a8a8a'], 'circle-stroke-width': 1, 'circle-stroke-color': '#fff' } } as CapaMapa['estilo'],
@@ -185,13 +186,14 @@ export default function PantallaTecnica({ datos, servicios, servicioInicial, zon
   }, [datos, esc, escE, s, existentes, res, estadoAmbito, verParadas, verDemanda, verZonas, parcelas])
 
   const marcadores: Marcador[] = useMemo(() => res.propuestas.map((p) => ({ id: p.id, lon: p.lon, lat: p.lat, texto: String(p.orden), color: p.fijado ? '#b10021' : '#de0029',
-    arrastrable: true, titulo: 'Arrástralo para probar otra ubicación' })), [res])
+    arrastrable: modo !== 'quitar', titulo: modo === 'quitar' ? 'Pulsa para quitar este centro' : 'Arrástralo para probar otra ubicación' })), [res, modo])
 
   const coberturaPct = () => (res.demandaTotal ? Math.round((100 * (res.demandaTotal - res.sinCubrir)) / res.demandaTotal) : 0)
   const alternarParcela = (ref: string) => {
     const par = parcelas.find((f) => f.properties.ref_catastral === ref)
     if (!par) return
-    setCambio({ accion: esc.fijados.some((f) => f.id === ref) ? 'Has soltado la parcela' : 'Has fijado una parcela como ubicación', antes: coberturaPct() })
+    setCambio({ accion: esc.fijados.some((f) => f.id === ref) ? 'Has soltado la parcela' : 'Has añadido un centro', antes: coberturaPct() })
+    if (modo === 'anadir' && !esc.fijados.some((f) => f.id === ref)) upd({ nCentros: res.propuestas.length + 1 })
     setEsc((e) => e.fijados.some((f) => f.id === ref)
       ? { ...e, fijados: e.fijados.filter((f) => f.id !== ref) }
       : { ...e, fijados: [...e.fijados, { id: ref, lon: par.properties.lon, lat: par.properties.lat, etiqueta: par.properties.ambito ?? 'Parcela fijada' }], excluidas: e.excluidas.filter((x) => x !== ref) })
@@ -201,6 +203,13 @@ export default function PantallaTecnica({ datos, servicios, servicioInicial, zon
     excluidas: parcelas.some((f) => f.properties.ref_catastral === id) ? [...new Set([...e.excluidas, id])] : e.excluidas,
     fijados: [...e.fijados.filter((f) => f.id !== id), { id: `punto-${Date.now()}`, lon, lat, etiqueta: 'Ubicación elegida a mano' }],
   })) }
+  const quitarCentro = (id: string) => {
+    setCambio({ accion: 'Has quitado un centro', antes: coberturaPct() })
+    const menos = Math.max(0, res.propuestas.length - 1)
+    setEsc((e) => e.fijados.some((f) => f.id === id)
+      ? { ...e, nCentros: menos, fijados: e.fijados.filter((f) => f.id !== id) }
+      : { ...e, nCentros: menos, excluidas: [...new Set([...e.excluidas, id])] })
+  }
   const aplicarCifra = (v: string) => {
     setCifra(v)
     const x = Number(v.replace(/\./g, '').replace(',', '.'))
@@ -454,17 +463,34 @@ export default function PantallaTecnica({ datos, servicios, servicioInicial, zon
           {(esc.fijados.length > 0 || esc.excluidas.length > 0) && (
             <div className="px-5 py-4"><Boton className="w-full" onClick={() => upd({ fijados: [], excluidas: [] })}>Deshacer ubicaciones fijadas y descartadas</Boton></div>
           )}
-          <p className="px-5 py-4 text-xs leading-relaxed text-texto-3">Consejo: pulsa una parcela azul para fijarla como ubicación, o arrastra un marcador rojo para probar otro sitio.</p>
+          <p className="px-5 py-4 text-xs leading-relaxed text-texto-3">Para cambiar los centros usa la barra de encima del mapa: «Añadir centro» y pulsa una parcela azul, o «Quitar centro» y pulsa un centro rojo. También puedes arrastrar un centro rojo para probar otro sitio.</p>
         </div>
       </aside>
 
       <div className="relative order-1 h-[45vh] shrink-0 md:order-2 md:h-auto">
         <Mapa bbox={datos.encuadre} capas={capas} marcadores={marcadores}
           onClickCapa={(capa, p) => {
-            if (capa === 'parcelas' && p.clase !== 'pequena') alternarParcela(String(p.ref_catastral))
+            if (capa === 'parcelas' && modo === 'anadir' && p.clase !== 'pequena' && p.clase !== 'fijada') alternarParcela(String(p.ref_catastral))
+            else if (capa === 'parcelas' && modo === 'quitar' && (p.clase === 'fijada' || res.propuestas.some((x) => x.id === p.ref_catastral))) quitarCentro(String(p.ref_catastral))
             else if (capa === 'ambitos' && estadoAmbito.has(String(p.nombre))) upd({ zona: String(p.nombre), fijados: [], excluidas: [] })
           }}
-          onArrastrar={arrastrar} />
+          onArrastrar={arrastrar} onClickMarcador={modo === 'quitar' ? quitarCentro : undefined} />
+        {/* barra de edición: el mapa solo cambia los centros si se elige una acción */}
+        <div className="absolute top-3 left-1/2 z-10 flex -translate-x-1/2 border border-tinta bg-white text-sm shadow-sm">
+          {([['ver', 'Ver'], ['anadir', '+ Añadir centro'], ['quitar', '− Quitar centro']] as const).map(([m, t]) => (
+            <button key={m} type="button" aria-pressed={modo === m} onClick={() => setModo(m)}
+              className={`px-3 py-1.5 font-medium ${modo === m ? 'bg-tinta text-white' : 'hover:bg-gris-1'} ${m !== 'ver' ? 'border-l border-tinta' : ''}`}>{t}</button>
+          ))}
+        </div>
+        {(esc.fijados.length > 0 || esc.excluidas.length > 0 || esc.nCentros !== 'auto') && (
+          <button type="button" onClick={() => { upd({ nCentros: 'auto', fijados: [], excluidas: [] }); setCambio(null); setModo('ver') }}
+            className="absolute top-3 right-14 z-10 border border-linea bg-white px-2.5 py-1.5 text-xs font-medium shadow-sm hover:border-tinta">Volver a la propuesta automática</button>
+        )}
+        {modo !== 'ver' && (
+          <div className="absolute top-14 left-1/2 z-10 -translate-x-1/2 bg-tinta px-3 py-1.5 text-xs text-white">
+            {modo === 'anadir' ? 'Pulsa una parcela azul para poner ahí un centro nuevo.' : 'Pulsa un centro rojo (o su parcela) para quitarlo.'}
+          </div>
+        )}
         <Leyenda>
           <Ley color="#131313" t={`${s.nombre} existente`} redondo />
           <Ley color="#de0029" t="Ubicación propuesta" />

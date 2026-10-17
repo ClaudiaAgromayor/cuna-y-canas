@@ -28,6 +28,7 @@ interface Props {
   capas: CapaMapa[]
   marcadores?: Marcador[]
   onClickCapa?: (capa: string, propiedades: Record<string, unknown>, lngLat: [number, number]) => void
+  onClickMarcador?: (id: string) => void
   onArrastrar?: (id: string, lon: number, lat: number) => void
   onClickMapa?: (lon: number, lat: number) => void
   centrarEn?: [number, number] | null
@@ -54,15 +55,15 @@ const ESTILO_BASE: maplibregl.StyleSpecification = {
   layers: [{ id: 'base', type: 'raster', source: 'base', paint: { 'raster-saturation': -0.75, 'raster-brightness-min': 0.15, 'raster-contrast': -0.1 } }],
 }
 
-export default function Mapa({ bbox, capas, marcadores = [], onClickCapa, onArrastrar, onClickMapa, centrarEn, alCrear, alCerrarPopup }: Props) {
+export default function Mapa({ bbox, capas, marcadores = [], onClickCapa, onArrastrar, onClickMapa, onClickMarcador, centrarEn, alCrear, alCerrarPopup }: Props) {
   const alCerrarRef = useRef(alCerrarPopup)
   alCerrarRef.current = alCerrarPopup
   const div = useRef<HTMLDivElement>(null)
   const mapa = useRef<maplibregl.Map | null>(null)
   const listo = useRef(false)
   const marcas = useRef(new Map<string, maplibregl.Marker>())
-  const callbacks = useRef({ onClickCapa, onArrastrar, onClickMapa })
-  callbacks.current = { onClickCapa, onArrastrar, onClickMapa }
+  const callbacks = useRef({ onClickCapa, onArrastrar, onClickMapa, onClickMarcador })
+  callbacks.current = { onClickCapa, onArrastrar, onClickMapa, onClickMarcador }
   const capasRef = useRef(capas)
   capasRef.current = capas
   const bboxRef = useRef(bbox)
@@ -147,11 +148,12 @@ export default function Mapa({ bbox, capas, marcadores = [], onClickCapa, onArra
       el.style.background = x.color
       if (x.html) el.innerHTML = x.html
       else el.textContent = x.texto
-      el.style.cursor = x.arrastrable ? 'grab' : 'default'
+      el.style.cursor = x.arrastrable ? 'grab' : callbacks.current.onClickMarcador ? 'pointer' : 'default'
       el.title = x.titulo ?? ''
       if (!mk) {
         mk = new maplibregl.Marker({ element: el, draggable: !!x.arrastrable }).setLngLat([x.lon, x.lat]).addTo(m)
         mk.on('dragend', () => { const p = mk!.getLngLat(); callbacks.current.onArrastrar?.(x.id, p.lng, p.lat) })
+        el.addEventListener('click', (e) => { if (callbacks.current.onClickMarcador) { e.stopPropagation(); callbacks.current.onClickMarcador(x.id) } })
         marcas.current.set(x.id, mk)
       } else {
         mk.setLngLat([x.lon, x.lat]).setDraggable(!!x.arrastrable)

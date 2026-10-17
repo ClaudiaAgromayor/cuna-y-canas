@@ -73,25 +73,33 @@ export default function PantallaMunicipios({ servicios, detallados, verBarrios, 
   }
   const alternarCriterio = (id: string) => setCriterios((c) => (c.includes(id) ? c.filter((x) => x !== id) : [...c, id]))
 
+  // con un solo servicio marcado, el mapa enseña DÓNDE HAY y cuántos (no el ranking por habitante)
+  const unico = criterios.length === 1 ? CRITERIOS.find((c) => c.id === criterios[0] && c.cantidad) ?? null : null
+  const maxCant = useMemo(() => (unico && resumen ? Math.max(1, ...resumen.municipios.map((m) => unico.cantidad!(m))) : 1), [unico, resumen])
   const capas: CapaMapa[] = useMemo(() => {
     if (!limites) return []
     const datos: FeatureCollection = { ...limites, features: limites.features.map((f) => {
       const r = porCod.get(String(f.properties?.cod_ine))
-      return { ...f, properties: { ...f.properties, puntos: r ? (Number.isFinite(r.puntos) ? Math.round(r.puntos) : 0) : -1, puesto: r?.puesto ?? null, top: criterios.length > 0 && !!r && r.puesto <= TOP } }
+      const m = unico ? resumen?.municipios.find((x) => x.cod_ine === String(f.properties?.cod_ine)) : undefined
+      return { ...f, properties: { ...f.properties, cant: m ? unico!.cantidad!(m) : -1, puntos: r ? (Number.isFinite(r.puntos) ? Math.round(r.puntos) : 0) : -1, puesto: r?.puesto ?? null, top: criterios.length > 0 && !!r && r.puesto <= TOP } }
     }) }
     const selFc: FeatureCollection = { ...limites, features: limites.features.filter((f) => f.properties?.cod_ine === sel || comparar.includes(String(f.properties?.cod_ine))) }
     return [
       { id: 'm-relleno', datos, estilo: { type: 'fill', paint: {
-        'fill-color': ['case', ['<', ['get', 'puntos'], 0], '#f3f3f3', ['!', ['get', 'top']], '#e4dcdd',
-          ['interpolate', ['linear'], ['get', 'puesto'], 1, ESCALA[5], 5, ESCALA[4], 10, ESCALA[3], 15, ESCALA[2]]],
+        'fill-color': unico
+          ? ['case', ['<', ['get', 'cant'], 0], '#f3f3f3', ['==', ['get', 'cant'], 0], '#e9e9e9',
+            ['interpolate', ['linear'], ['sqrt', ['get', 'cant']], 1, ESCALA[1], Math.max(1.01, Math.sqrt(maxCant) / 2), ESCALA[3], Math.max(1.02, Math.sqrt(maxCant)), ESCALA[5]]]
+          : ['case', ['<', ['get', 'puntos'], 0], '#f3f3f3', ['!', ['get', 'top']], '#e4dcdd',
+            ['interpolate', ['linear'], ['get', 'puesto'], 1, ESCALA[5], 5, ESCALA[4], 10, ESCALA[3], 15, ESCALA[2]]],
         'fill-opacity': 0.9 } } as CapaMapa['estilo'],
-        popup: (p) => Number(p.puntos) < 0 ? `<b>${p.nombre}</b><br><span style="color:#595959">${sinDatos.has(String(p.cod_ine)) ? 'Sin datos para lo que has marcado' : 'No cumple los filtros de tamaño o distancia'}</span>`
+        popup: (p) => unico ? `<b>${p.nombre}</b><br>${Number(p.cant) > 0 ? `<b>${p.cant}</b> · ${enFrase(unico.texto)}` : `No hay: ${enFrase(unico.texto)}`}`
+          : Number(p.puntos) < 0 ? `<b>${p.nombre}</b><br><span style="color:#595959">${sinDatos.has(String(p.cod_ine)) ? 'Sin datos para lo que has marcado' : 'No cumple los filtros de tamaño o distancia'}</span>`
           : !criterios.length ? `<b>${p.nombre}</b><br><span style="color:#595959">Elige tu situación o qué te importa para ordenar los municipios</span>`
           : `<b>${p.nombre}</b><br>Puesto ${p.puesto} de ${ranking.length} · coincidencia ${p.puntos} %` },
       { id: 'm-borde', datos, estilo: { type: 'line', paint: { 'line-color': '#ffffff', 'line-width': 0.8 } } },
       { id: 'm-sel', datos: selFc, estilo: { type: 'line', paint: { 'line-color': '#131313', 'line-width': 2.5 } } },
     ]
-  }, [limites, porCod, sel, comparar, ranking.length, sinDatos, criterios.length])
+  }, [limites, porCod, sel, comparar, ranking.length, sinDatos, criterios.length, unico, maxCant, resumen])
 
   if (!resumen || !limites) return <div className="m-5 text-sm text-texto-2">Cargando los 179 municipios…</div>
 
@@ -102,8 +110,17 @@ export default function PantallaMunicipios({ servicios, detallados, verBarrios, 
       <div className="relative order-1 h-[42vh] shrink-0 md:order-2 md:h-auto">
         <Mapa bbox={ENCUADRE_CM} capas={capas} onClickCapa={(capa, p) => { if (capa === 'm-relleno') { setSel(String(p.cod_ine)); setVerComparacion(false) } }} />
         <Leyenda>
+          {unico && (
+            <div className="w-48">
+              <div className="mb-1 font-medium">Dónde hay: {enFrase(unico.texto)}</div>
+              <div className="h-2.5" style={{ background: `linear-gradient(to right, ${ESCALA[1]}, ${ESCALA[3]}, ${ESCALA[5]})` }} />
+              <div className="flex justify-between text-texto-3"><span>1</span><span>{maxCant}</span></div>
+              <div className="mt-1 flex items-center gap-1.5 text-texto-3"><span className="h-2.5 w-4" style={{ background: '#e9e9e9' }} />no hay</div>
+              <div className="mt-1 text-texto-3">Con más de un criterio verás los que mejor encajan.</div>
+            </div>
+          )}
           {!criterios.length && <div className="w-44 text-texto-2">Elige tu situación o qué te importa y aquí verás los municipios que mejor encajan.</div>}
-          <div className={criterios.length ? "" : "hidden"}>
+          <div className={criterios.length && !unico ? "" : "hidden"}>
           <div className="mb-1 font-medium">Los {TOP} que mejor encajan</div>
           <div className="flex">{[...ESCALA].slice(2).reverse().map((c) => <span key={c} className="h-2.5 w-9" style={{ background: c }} />)}</div>
           <div className="flex justify-between text-texto-3"><span>1.º</span><span>15.º</span></div>

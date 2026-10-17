@@ -250,7 +250,12 @@ def main() -> None:
     red = pd.DataFrame([x["properties"] for x in wfs("UsoDelSuelo", "VPLA_V_RED_REF_25", "CD_MUNICIPIO,DS_USO_DETA,NM_AREA", "redes_props")["features"]])
     red["NM_AREA"] = pd.to_numeric(red["NM_AREA"], errors="coerce")
     verde = red[red["DS_USO_DETA"].isin(["Parques Municipales y Urbanos", "Jardines y Plazas"])]
-    R["zonas_verdes_m2"] = verde.groupby("CD_MUNICIPIO")["NM_AREA"].sum()
+    # zonas verdes: parques que existen según la EIEL 2023 (155 municipios); si no está, el suelo verde del planeamiento
+    eiel = pd.DataFrame([x["properties"] for x in wfs("CubiertaTerrestre", "IDEM_EIEL_PARQUE_23", "MUN,TIPOPARQUE,SUP_PARCEL")["features"]])
+    parques = eiel[eiel["TIPOPARQUE"] != "REFUGIOS DE PESCA Y MONTAÑA"].groupby("MUN")["SUP_PARCEL"].sum()
+    plan = verde.groupby("CD_MUNICIPIO")["NM_AREA"].sum()
+    R["zonas_verdes_m2"] = parques.reindex(R.index).fillna(plan.reindex(R.index))
+    R["zonas_verdes_fuente"] = np.where(R.index.isin(parques.index), "EIEL 2023 (parques existentes)", np.where(R.index.isin(plan.index), "planeamiento (suelo reservado)", None))
     R["equip_deportivos"] = red[red["DS_USO_DETA"] == "Deportivos"].groupby("CD_MUNICIPIO").size()
     R["equip_culturales"] = red[red["DS_USO_DETA"] == "Culturales"].groupby("CD_MUNICIPIO").size()
     R["planeamiento_en_idem"] = R.index.isin(red["CD_MUNICIPIO"].unique())

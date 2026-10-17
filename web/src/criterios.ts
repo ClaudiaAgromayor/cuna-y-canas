@@ -65,6 +65,7 @@ export interface ResumenMunicipio {
   ambitos_desarrollo: number
   zonas_verdes_m2: number | null
   zonas_verdes_m2_hab: number | null
+  zonas_verdes_fuente: string | null
   equip_deportivos: number
   equip_culturales: number
   planeamiento_en_idem: boolean
@@ -136,7 +137,7 @@ export const CRITERIOS: Criterio[] = [
   { id: 'autobus', fuente: F.crtm, grupo: 'Transporte', icono: 'autobus', unidad: 'líneas', texto: 'Muchas líneas de autobús', explica: 'Líneas de autobús interurbano distintas que paran en el municipio, vayan o no a Madrid', valor: (m) => m.lineas_interurbanas, mayorEsMejor: true },
   { id: 'madrid', fuente: 'IDEM (límites municipales)', grupo: 'Transporte', icono: 'ubicacion', unidad: 'km', texto: 'Cerca de Madrid', explica: 'Distancia en línea recta a la Puerta del Sol (km). Estar cerca no es lo mismo que estar bien conectado', valor: (m) => m.dist_madrid_km, mayorEsMejor: false },
   // Bienestar
-  { id: 'verde', fuente: F.planeamiento, grupo: 'Bienestar', icono: 'arbol', unidad: 'm² por hab.', texto: 'Zonas verdes urbanas', explica: 'Suelo que el planeamiento reserva para parques y jardines públicos, por habitante (incluye los que aún no están hechos). 49 municipios no tienen este dato', valor: (m) => m.zonas_verdes_m2_hab, cantidad: (m) => m.zonas_verdes_m2 ?? 0, mayorEsMejor: true },
+  { id: 'verde', fuente: 'IDEM (EIEL 2023 y planeamiento) y padrón', grupo: 'Bienestar', icono: 'arbol', unidad: 'm² por hab.', texto: 'Zonas verdes urbanas', explica: 'Metros cuadrados de parques y jardines públicos por habitante. Parques que existen según la encuesta de equipamientos locales (EIEL 2023); en las ciudades grandes, que no entran en ella, el suelo verde del planeamiento', valor: (m) => m.zonas_verdes_m2_hab, cantidad: (m) => m.zonas_verdes_m2 ?? 0, mayorEsMejor: true },
   { id: 'deporte', fuente: F.planeamiento, grupo: 'Bienestar', icono: 'centro_dia', unidad: 'por 10.000 hab.', texto: 'Instalaciones deportivas', explica: 'Parcelas de equipamiento deportivo público por cada 10.000 habitantes', valor: (m) => (m.poblacion ? (1e4 * m.equip_deportivos) / m.poblacion : 0), cantidad: (m) => m.equip_deportivos, mayorEsMejor: true },
   { id: 'cultura', fuente: 'Portal de Datos Abiertos (bibliotecas) e IDEM (equipamientos culturales)', grupo: 'Bienestar', icono: 'colegio', unidad: 'por 10.000 hab.', texto: 'Cultura y bibliotecas', explica: 'Bibliotecas y equipamientos culturales por cada 10.000 habitantes', valor: (m) => (m.poblacion ? (1e4 * (m.bibliotecas + m.equip_culturales)) / m.poblacion : 0), cantidad: (m) => m.bibliotecas + m.equip_culturales, mayorEsMejor: true },
   { id: 'naturaleza', fuente: 'IDEM (espacios naturales protegidos y Red Natura 2000)', grupo: 'Bienestar', icono: 'arbol', unidad: '% del municipio', texto: 'Naturaleza protegida', explica: 'Parte del municipio dentro de un espacio natural protegido o de la Red Natura 2000: sierras, montes, ríos y sotos', valor: (m) => m.pct_protegido, mayorEsMejor: true, saturar: true },

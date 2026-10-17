@@ -279,7 +279,7 @@ function Ficha({ r, total, criterios, modelo, servicios, situaciones, limites, p
     { icono: 'tren', valor: m.lineas_tren_madrid.length ? 'Sí' : 'No', texto: m.lineas_tren_madrid.length ? `tren o Metro hasta Madrid: ${m.lineas_tren_madrid.slice(0, 5).join(', ')}${m.lineas_tren_madrid.length > 5 ? '…' : ''}` : 'hay tren ni Metro hasta Madrid' },
     { icono: 'autobus', valor: String(m.bus_madrid), texto: `líneas de autobús directas a Madrid (${m.lineas_interurbanas} interurbanas en total)` },
     { icono: 'colegio', valor: String(m.bibliotecas), texto: 'bibliotecas' },
-    { icono: 'arbol', valor: m.zonas_verdes_m2_hab != null ? `${n(m.zonas_verdes_m2_hab)} m²` : '—', texto: 'de zonas verdes por habitante' },
+    { icono: 'arbol', valor: m.zonas_verdes_m2_hab != null ? `${n(m.zonas_verdes_m2_hab)} m²` : '—', texto: `de parques por habitante${m.zonas_verdes_fuente ? ` (${m.zonas_verdes_fuente})` : ' (sin datos)'}` },
   ]
   // ¿hay sitio para lo que viene? colegios que harían falta frente a parcelas vacantes donde cabe uno
   const sitio: Sitio | null = futuro && m.suelo_detallado ? (() => {

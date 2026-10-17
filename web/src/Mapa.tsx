@@ -32,6 +32,7 @@ interface Props {
   onClickMapa?: (lon: number, lat: number) => void
   centrarEn?: [number, number] | null
   alCrear?: (m: maplibregl.Map) => void // da acceso al mapa (p. ej. para hacerle una foto para la ficha)
+  alCerrarPopup?: () => void // se llama al cerrar con la X la ventanita de una capa
 }
 
 /** Foto del mapa tal como se ve (capas de datos incluidas), en PNG. Se lee justo después de pintar un fotograma. */
@@ -53,7 +54,9 @@ const ESTILO_BASE: maplibregl.StyleSpecification = {
   layers: [{ id: 'base', type: 'raster', source: 'base', paint: { 'raster-saturation': -0.75, 'raster-brightness-min': 0.15, 'raster-contrast': -0.1 } }],
 }
 
-export default function Mapa({ bbox, capas, marcadores = [], onClickCapa, onArrastrar, onClickMapa, centrarEn, alCrear }: Props) {
+export default function Mapa({ bbox, capas, marcadores = [], onClickCapa, onArrastrar, onClickMapa, centrarEn, alCrear, alCerrarPopup }: Props) {
+  const alCerrarRef = useRef(alCerrarPopup)
+  alCerrarRef.current = alCerrarPopup
   const div = useRef<HTMLDivElement>(null)
   const mapa = useRef<maplibregl.Map | null>(null)
   const listo = useRef(false)
@@ -80,7 +83,10 @@ export default function Mapa({ bbox, capas, marcadores = [], onClickCapa, onArra
       const f = m.queryRenderedFeatures(ev.point, { layers: ids })[0]
       if (f) {
         const capa = capasRef.current.find((c) => c.id === f.layer.id)
-        if (capa?.popup) new maplibregl.Popup({ maxWidth: '320px' }).setLngLat(ev.lngLat).setHTML(capa.popup(f.properties)).addTo(m)
+        if (capa?.popup) {
+          const pop = new maplibregl.Popup({ maxWidth: '320px' }).setLngLat(ev.lngLat).setHTML(capa.popup(f.properties)).addTo(m)
+          pop.getElement()?.querySelector('.maplibregl-popup-close-button')?.addEventListener('click', () => alCerrarRef.current?.())
+        }
         callbacks.current.onClickCapa?.(f.layer.id, f.properties, [ev.lngLat.lng, ev.lngLat.lat])
       } else {
         callbacks.current.onClickMapa?.(ev.lngLat.lng, ev.lngLat.lat)

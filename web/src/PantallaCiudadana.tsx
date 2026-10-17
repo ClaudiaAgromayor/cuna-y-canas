@@ -87,14 +87,10 @@ function textoViviendas(p: Record<string, unknown>) {
 
 export default function PantallaCiudadana({ datos, servicios, barrioInicial, catsIniciales }: Props) {
   const [lugar, setLugar] = useState<Lugar | null>(null)
-  // Escape: cierra la ventanita del mapa y, si no había ninguna abierta, quita el sitio elegido
+  // Escape (o la X de la ventanita): quita el sitio elegido y cierra la ventanita, de una vez
+  const quitarLugar = () => { document.querySelectorAll('.maplibregl-popup').forEach((x) => x.remove()); setLugar(null) }
   useEffect(() => {
-    const tecla = (e: KeyboardEvent) => {
-      if (e.key !== 'Escape') return
-      const abiertas = document.querySelectorAll('.maplibregl-popup')
-      if (abiertas.length) abiertas.forEach((x) => x.remove())
-      else setLugar(null)
-    }
+    const tecla = (e: KeyboardEvent) => { if (e.key === 'Escape') quitarLugar() }
     window.addEventListener('keydown', tecla)
     return () => window.removeEventListener('keydown', tecla)
   }, [])
@@ -283,7 +279,7 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial, cat
   return (
     <div className="flex h-full min-h-0 flex-col md:grid md:grid-cols-[minmax(340px,480px)_1fr]">
       <div className="relative order-1 h-[42vh] shrink-0 md:order-2 md:h-auto">
-        <Mapa bbox={datos.encuadre} capas={capas} marcadores={marcadores} centrarEn={centro} alCrear={(m) => { mapaRef.current = m }}
+        <Mapa bbox={datos.encuadre} capas={capas} marcadores={marcadores} centrarEn={centro} alCrear={(m) => { mapaRef.current = m }} alCerrarPopup={quitarLugar}
           onClickCapa={(capa, p, ll) => {
             if (capa === 'b-ambitos') { const a = demanda.get(String(p.nombre)); if (a) elegirBarrio(a); else elegirPunto(ll[0], ll[1], 'Punto elegido en el mapa') }
             else if (capa !== 'b-items') elegirPunto(ll[0], ll[1], 'Punto elegido en el mapa')

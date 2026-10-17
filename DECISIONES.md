@@ -75,6 +75,10 @@ El equipo cree que da tiempo a hacerlo todo. Si nos retrasamos, se recorta por e
 
 ## 3. Decisiones
 
+### 17 oct (tarde): competencia publicada y guion
+- **Proyectos publicados de otros equipos (búsqueda en GitHub y la web, 17 oct):** solo **ViveTuMunicipio** tiene repositorio público (`pauladuck04/vive-tu-municipio`): un buscador de municipios con Elasticsearch, Logstash, padrón, centros, AEMET y agenda cultural. Es un comparador del presente, sin previsión ni planificación. Del resto no hay nada publicado (hay un repositorio "Oportunia" vacío, del 5 de octubre, sin confirmar que sea del concurso).
+- **Guion de 10 minutos** en `docs/GUION_PRESENTACION.md`: gancho con Los Molinos, cifras de la Comunidad, demo en 4 pasos (¿Dónde vivir? → Barrios → Planificar con ▶ → Radar), fiabilidad (API, prueba con el pasado, errores en datos oficiales), diferencia, futuro y cierre. Incluye el reparto entre las dos, la preparación, preguntas probables y el plan B.
+
 ### 17 oct (tarde): ficha del barrio, últimas búsquedas y más ideas de Lucía
 - **Ficha del barrio para imprimir o guardar en PDF, rehecha:**
   1. Cabecera con el logo y la fecha.

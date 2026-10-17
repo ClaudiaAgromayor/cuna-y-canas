@@ -551,3 +551,6 @@ Un Ampere A1 (hasta 4 núcleos y 24 GB de RAM), 200 GB de disco, 10 GB de Object
 - **14 oct (tarde, 2):** comprobamos que el texto de los 50.000 habitantes está oculto (blanco sobre blanco) en el PDF; el apartado 3 no pone límites. Getafe se queda. Decidido también: HTTPS, los 5 servicios y extracción con Claude Code.
 - **14 oct (tarde):** al leer las bases vemos que el título del reto habla de municipios de menos de 50.000 habitantes. Getafe queda en revisión y Navalcarnero aparece como alternativa (§4).
 - **14 oct:** elegimos Getafe; descargamos las 5 capas de la IDEM; confirmamos que el suelo de equipamiento sigue vacante en los barrios nuevos; fijamos el calendario completo; decidimos usar Oracle como alojamiento y para dar acceso a los datos al jurado.
+
+### 17 oct (noche): guion con role play
+- La presentación empieza con dos escenas: **Laura**, vecina con un bebé que trabaja en Madrid y busca dónde mudarse (¿Dónde vivir?, compara Getafe y Navalcarnero, descarga las dos fichas PDF), y **Carmen**, técnica de la Comunidad (Planificar en Navalcarnero: ▶, arrastrar, natalidad y robustez). Después, 5 minutos de venta. Guion en `docs/GUION_PRESENTACION.md`.

@@ -129,7 +129,8 @@ export default function PantallaTecnica({ datos, servicios, servicioInicial, zon
     const porAnio = []
     for (let a = ANIO_BASE; a <= ANIO_FIN; a++) {
       const r = calcular(s, { ...escDif, llenado: llenadoDe(a), nCentros: 'auto', fijados: [] }, datos.demandaPuntos.features, parcelas, existentes, datos.paradas.features)
-      porAnio.push({ anio: a, necesarios: r.centrosNecesarios, mejor: r.propuestas[0] ?? null })
+      // solo cuentan los centros nuevos viables (los que se proponen): si la demanda es dispersa, no hay hito aunque falten plazas
+      porAnio.push({ anio: a, necesarios: r.propuestas.length, mejor: r.propuestas[0] ?? null })
     }
     const hitos: { centro: number; anio: number }[] = []
     let k = 1
@@ -211,7 +212,7 @@ export default function PantallaTecnica({ datos, servicios, servicioInicial, zon
   const objetivo = esc.nCentros === 'auto' ? res.centrosNecesarios : esc.nCentros
   const titular = res.propuestas.length
     ? `${res.propuestas.length} ${res.propuestas.length === 1 ? 'centro nuevo' : 'centros nuevos'}`
-    : res.sinCubrir === 0 ? 'La oferta actual basta' : 'Ningún centro nuevo viable'
+    : res.sinCubrir === 0 ? 'La oferta actual basta' : res.dispersa ? 'No hace falta ningún centro nuevo' : 'Ningún centro nuevo viable'
   const zonaTxt = esc.zona ? nombreBarrio(esc.zona) : datos.indice.nombre
   const usoAdecuado = (red: string | null) => !!red && USO_ADECUADO[sid].some((u) => red.endsWith(u))
   const lugarDe = (p: { ambito: string | null; paradaMasCercana?: { nombre: string } | null }) =>
@@ -223,7 +224,7 @@ export default function PantallaTecnica({ datos, servicios, servicioInicial, zon
         const h = temporal.hitos[i]
         return `${i === 0 ? 'El 1.º' : `el ${i + 1}.º`} hace falta ${h ? (h.anio === ANIO_BASE ? 'ya hoy' : `hacia ${h.anio}`) : `en ${anio}`}, ${((l) => (l.startsWith('Cerca') ? 'c' + l.slice(1) : l.startsWith('En la') ? 'e' + l.slice(1) : `en ${l}`))(lugarDe(p))}`
       }).join('; ') + '.'
-    : res.sinCubrir === 0 ? `Los centros que ya hay en ${zonaTxt} bastan para la demanda de ${anio}.` : `Con estos supuestos no hay ninguna parcela donde un centro nuevo tenga suficiente demanda cerca.`
+    : res.sinCubrir === 0 ? `Los centros que ya hay en ${zonaTxt} bastan para la demanda de ${anio}.` : res.dispersa ? `No hace falta ningún centro nuevo en ${zonaTxt}: los actuales ya atienden el ${pct(res.demandaTotal - res.sinCubrir)} % y lo que falta (${n(res.sinCubrir)} ${unidad}) está repartido; puede cubrirse ampliando los que hay.` : `Con estos supuestos no hay ninguna parcela donde un centro nuevo tenga suficiente demanda cerca.`
 
   const panelResultados = (<>
     <div className="border-b border-linea px-6 pt-6 pb-5">
@@ -269,7 +270,7 @@ export default function PantallaTecnica({ datos, servicios, servicioInicial, zon
             ? <>La mejor parcela <b className="text-tinta">cambia</b> entre la primera etapa ({temporal.primero?.anio}) y la última ({ANIO_FIN}): conviene reservar las dos.</>
             : temporal.primero ? <>La mejor parcela es la misma en {temporal.primero.anio} y en {ANIO_FIN}.</> : null}</p>
         </>
-      ) : <p className="text-sm text-texto-2">Con estos supuestos no hace falta ningún centro nuevo antes de {ANIO_FIN}.</p>}
+      ) : <p className="text-sm text-texto-2">Con estos supuestos no hace falta ningún centro nuevo antes de {ANIO_FIN}.{res.sinCubrir > 0 ? ` Lo que falta (${n(res.sinCubrir)} ${unidad}) está repartido y puede atenderse ampliando los centros que ya hay.` : ""}</p>}
     </section>
 
     <section className="border-b border-linea px-6 py-5">

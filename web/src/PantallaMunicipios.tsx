@@ -48,6 +48,8 @@ export default function PantallaMunicipios({ servicios, detallados, verBarrios, 
     m.dist_madrid_km <= distMax && (!tamanos.length || tamanos.some((t) => { const x = TAMANOS.find((y) => y.id === t)!; return m.poblacion >= x.min && m.poblacion < x.max }))),
   [resumen, distMax, tamanos])
   const ranking = useMemo(() => puntuar(filtrados, criterios), [filtrados, criterios])
+  // los que cumplen los filtros pero no tienen datos de lo elegido: en gris y fuera del ranking
+  const sinDatos = useMemo(() => new Set(filtrados.filter((m) => !ranking.some((r) => r.m.cod_ine === m.cod_ine)).map((m) => m.cod_ine)), [filtrados, ranking])
   const porCod = useMemo(() => {
     let puesto = 0, previo = NaN
     return new Map(ranking.map((r, i) => {
@@ -83,12 +85,12 @@ export default function PantallaMunicipios({ servicios, detallados, verBarrios, 
         'fill-color': ['case', ['<', ['get', 'puntos'], 0], '#f3f3f3', ['!', ['get', 'top']], '#e4dcdd',
           ['interpolate', ['linear'], ['get', 'puesto'], 1, ESCALA[5], 5, ESCALA[4], 10, ESCALA[3], 15, ESCALA[2]]],
         'fill-opacity': 0.9 } } as CapaMapa['estilo'],
-        popup: (p) => Number(p.puntos) < 0 ? `<b>${p.nombre}</b><br><span style="color:#595959">No cumple los filtros de tamaño o distancia</span>`
+        popup: (p) => Number(p.puntos) < 0 ? `<b>${p.nombre}</b><br><span style="color:#595959">${sinDatos.has(String(p.cod_ine)) ? 'Sin datos para lo que has marcado' : 'No cumple los filtros de tamaño o distancia'}</span>`
           : `<b>${p.nombre}</b><br>Puesto ${p.puesto} de ${ranking.length} · coincidencia ${p.puntos} %` },
       { id: 'm-borde', datos, estilo: { type: 'line', paint: { 'line-color': '#ffffff', 'line-width': 0.8 } } },
       { id: 'm-sel', datos: selFc, estilo: { type: 'line', paint: { 'line-color': '#131313', 'line-width': 2.5 } } },
     ]
-  }, [limites, porCod, sel, comparar, ranking.length])
+  }, [limites, porCod, sel, comparar, ranking.length, sinDatos])
 
   if (!resumen || !limites) return <div className="m-5 text-sm text-texto-2">Cargando los 179 municipios…</div>
 
@@ -103,6 +105,7 @@ export default function PantallaMunicipios({ servicios, detallados, verBarrios, 
           <div className="flex">{[...ESCALA].slice(2).reverse().map((c) => <span key={c} className="h-2.5 w-9" style={{ background: c }} />)}</div>
           <div className="flex justify-between text-texto-3"><span>1.º</span><span>15.º</span></div>
           <div className="mt-1 flex items-center gap-1.5 text-texto-3"><span className="h-2.5 w-4" style={{ background: '#e4dcdd' }} />resto</div>
+          {sinDatos.size > 0 && <div className="mt-0.5 flex items-center gap-1.5 text-texto-3"><span className="h-2.5 w-4 border border-linea" style={{ background: '#f3f3f3' }} />sin datos</div>}
         </Leyenda>
       </div>
 
@@ -194,7 +197,7 @@ export default function PantallaMunicipios({ servicios, detallados, verBarrios, 
             <section className="px-6 pt-5 pb-8">
               <div className="mb-2 flex items-baseline justify-between">
                 <h2 className="text-sm font-semibold">Los que mejor encajan</h2>
-                <span className="text-xs text-texto-3">{ranking.length} municipios cumplen los filtros</span>
+                <span className="text-xs text-texto-3">{ranking.length} municipios cumplen los filtros{sinDatos.size ? ` · ${sinDatos.size} sin datos` : ''}</span>
               </div>
               {criterios.length === 0 && <Aviso tono="info">Marca al menos un criterio para ordenar los municipios.</Aviso>}
               <ol className="border-t border-tinta">

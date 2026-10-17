@@ -21,6 +21,7 @@ export interface ResumenMunicipio {
   pob_5_14: number
   pob_65: number
   pct_menores15: number
+  pct_protegido: number // % del término en un espacio natural protegido o en la Red Natura 2000 (LIC/ZEC)
   pct_mayores65: number
   nacidos: number | null
   anio_nacidos: number
@@ -135,9 +136,10 @@ export const CRITERIOS: Criterio[] = [
   { id: 'autobus', fuente: F.crtm, grupo: 'Transporte', icono: 'autobus', unidad: 'líneas', texto: 'Muchas líneas de autobús', explica: 'Líneas de autobús interurbano distintas que paran en el municipio, vayan o no a Madrid', valor: (m) => m.lineas_interurbanas, mayorEsMejor: true },
   { id: 'madrid', fuente: 'IDEM (límites municipales)', grupo: 'Transporte', icono: 'ubicacion', unidad: 'km', texto: 'Cerca de Madrid', explica: 'Distancia en línea recta a la Puerta del Sol (km). Estar cerca no es lo mismo que estar bien conectado', valor: (m) => m.dist_madrid_km, mayorEsMejor: false },
   // Bienestar
-  { id: 'verde', fuente: F.planeamiento, grupo: 'Bienestar', icono: 'arbol', unidad: 'm² por hab.', texto: 'Parques y zonas verdes', explica: 'Metros cuadrados de zonas verdes públicas del planeamiento por habitante', valor: (m) => m.zonas_verdes_m2_hab, cantidad: (m) => m.zonas_verdes_m2 ?? 0, mayorEsMejor: true },
+  { id: 'verde', fuente: F.planeamiento, grupo: 'Bienestar', icono: 'arbol', unidad: 'm² por hab.', texto: 'Zonas verdes urbanas', explica: 'Suelo que el planeamiento reserva para parques y jardines públicos, por habitante (incluye los que aún no están hechos). 49 municipios no tienen este dato', valor: (m) => m.zonas_verdes_m2_hab, cantidad: (m) => m.zonas_verdes_m2 ?? 0, mayorEsMejor: true },
   { id: 'deporte', fuente: F.planeamiento, grupo: 'Bienestar', icono: 'centro_dia', unidad: 'por 10.000 hab.', texto: 'Instalaciones deportivas', explica: 'Parcelas de equipamiento deportivo público por cada 10.000 habitantes', valor: (m) => (m.poblacion ? (1e4 * m.equip_deportivos) / m.poblacion : 0), cantidad: (m) => m.equip_deportivos, mayorEsMejor: true },
   { id: 'cultura', fuente: 'Portal de Datos Abiertos (bibliotecas) e IDEM (equipamientos culturales)', grupo: 'Bienestar', icono: 'colegio', unidad: 'por 10.000 hab.', texto: 'Cultura y bibliotecas', explica: 'Bibliotecas y equipamientos culturales por cada 10.000 habitantes', valor: (m) => (m.poblacion ? (1e4 * (m.bibliotecas + m.equip_culturales)) / m.poblacion : 0), cantidad: (m) => m.bibliotecas + m.equip_culturales, mayorEsMejor: true },
+  { id: 'naturaleza', fuente: 'IDEM (espacios naturales protegidos y Red Natura 2000)', grupo: 'Bienestar', icono: 'arbol', unidad: '% del municipio', texto: 'Naturaleza protegida', explica: 'Parte del municipio dentro de un espacio natural protegido o de la Red Natura 2000: sierras, montes, ríos y sotos', valor: (m) => m.pct_protegido, mayorEsMejor: true, saturar: true },
   { id: 'tranquilo', fuente: 'Padrón e IDEM (superficie del municipio)', grupo: 'Bienestar', icono: 'arbol', unidad: 'hab./km²', texto: 'Tranquilidad (poca densidad)', explica: 'Habitantes por km²: cuanto menos, más tranquilo', valor: (m) => m.densidad, mayorEsMejor: false },
   // Futuro
   { id: 'joven', fuente: F.padron, grupo: 'Futuro y empleo', icono: 'escuela_infantil', unidad: '% menores de 15', texto: 'Ambiente joven y familias', explica: 'Porcentaje de menores de 15 años', valor: (m) => m.pct_menores15, mayorEsMejor: true },
@@ -151,7 +153,7 @@ export const SITUACIONES: { id: string; texto: string; icono: string; criterios:
   { id: 'escolar', texto: 'Tengo hijos en edad escolar', icono: 'colegio', criterios: ['col_publico', 'instituto', 'deporte', 'cultura', 'joven'] },
   { id: 'mayores', texto: 'Cuido de mis mayores', icono: 'residencia', criterios: ['residencia', 'centro_dia', 'primaria', 'hospital'] },
   { id: 'madrid', texto: 'Trabajo en Madrid', icono: 'tren', criterios: ['tren_madrid', 'bus_madrid', 'abono'], nota: 'No premiamos vivir cerca, sino llegar bien.' },
-  { id: 'tranquilo', texto: 'Busco tranquilidad', icono: 'arbol', criterios: ['tranquilo', 'verde'] },
+  { id: 'tranquilo', texto: 'Busco tranquilidad', icono: 'arbol', criterios: ['tranquilo', 'naturaleza', 'verde'] },
   { id: 'vivienda', texto: 'Busco vivienda nueva', icono: 'casa_nueva', criterios: ['vivienda_nueva', 'crece'] },
   { id: 'jubilado', texto: 'Soy mayor', icono: 'centro_dia', criterios: ['primaria', 'hospital', 'farmacia', 'hogar_mayores', 'centro_dia'] },
 ]
@@ -194,12 +196,13 @@ export function puntuar(lista: ResumenMunicipio[], criterios: string[]): Puntuad
     const variedad = percentiles(lista.map((m) => ({ cod: m.cod_ine, v: c.cantidad!(m) })), true)
     porCriterio[c.id] = new Map(vals.map((x) => [x.cod, 0.6 * suficiencia.get(x.cod)! + 0.4 * (variedad.get(x.cod) ?? 0)]))
   }
+  // un municipio sin datos en ninguno de los criterios elegidos no entra en el ranking (sin datos no es lo mismo que el peor)
   return lista.map((m) => {
     const detalle: Record<string, number> = {}
     for (const c of cs) { const p = porCriterio[c.id].get(m.cod_ine); if (p != null) detalle[c.id] = p }
     const vs = Object.values(detalle)
-    return { m, puntos: vs.length ? vs.reduce((a, b) => a + b, 0) / vs.length : 0, detalle }
-  }).sort((a, b) => b.puntos - a.puntos)
+    return { m, puntos: vs.length ? vs.reduce((a, b) => a + b, 0) / vs.length : NaN, detalle }
+  }).filter((r) => !cs.length || Number.isFinite(r.puntos)).sort((a, b) => b.puntos - a.puntos)
 }
 
 export const TOP = 15

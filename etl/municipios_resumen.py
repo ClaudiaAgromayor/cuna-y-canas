@@ -14,6 +14,7 @@ import urllib.parse
 import urllib.request
 
 import geopandas as gpd
+import shapely
 import numpy as np
 import pandas as pd
 
@@ -269,6 +270,11 @@ def main() -> None:
     R["suelo_detallado"] = R.index.isin(list(suelo))
 
     # --- derivados por habitante ---
+    # --- naturaleza: parte del término municipal dentro de un espacio natural protegido o de la Red Natura 2000 (IDEM) ---
+    capas = [wfs("LugaresProtegidos", c) for c in ("IDEM_MA_ENP", "IDEM_MA_RED_NATURA_LIC_ZEC")]  # sin ZEPA: protege estepas cerealistas para aves, no espacios para pasear
+    prot = gpd.GeoDataFrame.from_features([f for c in capas for f in c["features"]], crs=4326).to_crs(M)
+    prot = prot.geometry.make_valid().buffer(0).union_all()
+    R["pct_protegido"] = pd.Series({c: 100 * shapely.make_valid(g).intersection(prot).area / g.area for c, g in zip(lim["cod"], lim.geometry)})
     R["sup_km2"] = lim.set_index("cod")["sup_km2"]
     R["dist_madrid_km"] = lim.set_index("cod")["dist_madrid_km"]
     R["densidad"] = R["poblacion"] / R["sup_km2"]

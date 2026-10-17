@@ -170,11 +170,13 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial, cat
   }, [datos])
 
   const radio = radioMin * METROS_POR_MINUTO
+  // sin nada marcado se enseña todo lo que hay; en cuanto se marca algo, solo eso
+  const catsEf = useMemo(() => (cats.length ? cats : CATEGORIAS.map((c) => c.id)), [cats])
   const resultado = useMemo(() => {
     if (!lugar) return null
     const cerca: Item[] = universo.filter((x) => cats.includes(x.cat.id) && estados.includes(x.estado))
       .map((x) => ({ ...x, d: metros(lugar.lon, lugar.lat, x.lon, x.lat) })).filter((x) => x.d <= radio).sort((a, b) => a.d - b.d)
-    const porCat = CATEGORIAS.filter((c) => cats.includes(c.id)).map((c) => {
+    const porCat = CATEGORIAS.filter((c) => catsEf.includes(c.id)).map((c) => {
       const items = cerca.filter((x) => x.cat.id === c.id)
       const masCercano = items.length ? null : universo.filter((x) => x.cat.id === c.id && x.estado === 'abierto')
         .map((x) => ({ ...x, d: metros(lugar.lon, lugar.lat, x.lon, x.lat) })).sort((a, b) => a.d - b.d)[0] ?? null
@@ -183,13 +185,13 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial, cat
     const paradas = datos.paradas.features.map((f) => ({ f, d: metros(lugar.lon, lugar.lat, f.geometry.coordinates[0], f.geometry.coordinates[1]) }))
       .filter((x) => x.d <= 5 * METROS_POR_MINUTO).sort((a, b) => a.d - b.d).slice(0, 3)
     return { cerca, porCat, paradas, amb: lugar.ambito ? demanda.get(lugar.ambito) ?? null : null }
-  }, [lugar, universo, cats, estados, radio, datos, demanda])
+  }, [lugar, universo, catsEf, estados, radio, datos, demanda])
 
   // lo que hará falta en el barrio cuando esté completo (rangos del modelo)
   const previsiones = useMemo(() => {
     const a = resultado?.amb
     if (!a?.grupos_completo || a.estado === 'sin_datos') return []
-    const ids = [...new Set(CATEGORIAS.filter((c) => cats.includes(c.id) && c.servicio).map((c) => c.servicio!))]
+    const ids = [...new Set(CATEGORIAS.filter((c) => catsEf.includes(c.id) && c.servicio).map((c) => c.servicio!))]
     return ids.map((sid) => {
       const s = servicios[sid]
       const g = s.grupo.map((k) => (k === 'pob' ? a.poblacion_completo : a.grupos_completo![k])).filter(Boolean) as [number, number, number][]

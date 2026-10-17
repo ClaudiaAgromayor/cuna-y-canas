@@ -182,7 +182,7 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial, cat
   const catsEf = useMemo(() => (cats.length ? cats : CATEGORIAS.map((c) => c.id)), [cats])
   const resultado = useMemo(() => {
     if (!lugar) return null
-    const cerca: Item[] = universo.filter((x) => cats.includes(x.cat.id) && estados.includes(x.estado))
+    const cerca: Item[] = universo.filter((x) => catsEf.includes(x.cat.id) && estados.includes(x.estado))
       .map((x) => ({ ...x, d: metros(lugar.lon, lugar.lat, x.lon, x.lat) })).filter((x) => x.d <= radio).sort((a, b) => a.d - b.d)
     const porCat = CATEGORIAS.filter((c) => catsEf.includes(c.id)).map((c) => {
       const items = cerca.filter((x) => x.cat.id === c.id)
@@ -207,7 +207,7 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial, cat
       const abiertos = (resultado?.cerca ?? []).filter((x) => x.cat.servicio === sid && x.estado === 'abierto').length
       return { s, lo, hi, abiertos }
     })
-  }, [resultado, cats, servicios])
+  }, [resultado, catsEf, servicios])
 
   /* ---------- acciones ---------- */
   const ambitoDe = (lon: number, lat: number) => {
@@ -452,7 +452,7 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial, cat
                 {previsiones.filter((p) => p.hi > 0).length > 0 && (
                   <div className="mt-3"><Aviso titulo="Lo que hará falta cuando esté completo">
                     <ul className="mt-1 grid gap-0.5">{previsiones.filter((p) => p.hi > 0).map((p) => (
-                      <li key={p.s.nombre}>{p.s.nombre}: {p.s.unidad === 'plazas' ? `entre ${n(p.lo)} y ${n(p.hi)} plazas` : `entre ${n(p.lo)} y ${n(p.hi)} habitantes que atender`} · hoy hay {p.abiertos} a menos de {radioMin} min</li>))}</ul>
+                      <li key={p.s.nombre}>{p.s.nombre}: {p.s.unidad === 'plazas' ? `entre ${n(p.lo)} y ${n(p.hi)} plazas` : `entre ${n(p.lo)} y ${n(p.hi)} habitantes que atender`} · hoy hay {p.abiertos} {p.abiertos === 1 ? "público" : "públicos"} a menos de {radioMin} min</li>))}</ul>
                     <div className="mt-1 text-xs">Estimación del modelo con su rango. No atribuye responsabilidades.</div>
                   </Aviso></div>
                 )}
@@ -506,7 +506,7 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial, cat
             foto={foto} imagenMapa={imagenMapa} radioMin={radioMin}
             veredicto={{ tienes: buscadas.filter((x) => x.items.length > 0).length, total: buscadas.length }}
             poblacion={{ hoy: amb?.poblacion_actual ?? null, anio: amb?.anio_poblacion_actual ?? null, completo: amb?.poblacion_completo ? [amb.poblacion_completo[0], amb.poblacion_completo[2]] : null }}
-            previsiones={previsiones.filter((x) => x.hi > 0).map((x) => ({ servicio: x.s.nombre, texto: `${x.s.unidad === 'plazas' ? `entre ${n(x.lo)} y ${n(x.hi)} plazas` : `entre ${n(x.lo)} y ${n(x.hi)} habitantes que atender`}; hoy hay ${x.abiertos} a menos de ${radioMin} min` }))}
+            previsiones={previsiones.filter((x) => x.hi > 0).map((x) => ({ servicio: x.s.nombre, texto: `${x.s.unidad === 'plazas' ? `entre ${n(x.lo)} y ${n(x.hi)} plazas` : `entre ${n(x.lo)} y ${n(x.hi)} habitantes que atender`}; hoy hay ${x.abiertos} ${x.abiertos === 1 ? "público" : "públicos"} a menos de ${radioMin} min` }))}
             grupos={buscadas.map(({ c, items, masCercano }) => ({ titulo: c.texto, items: items.map((x) => ({ id: x.id, nombre: x.nombre, detalle: x.detalle, estado: x.estado, minutos: minutos(x.d) })),
               masCercano: masCercano ? { nombre: masCercano.nombre, minutos: minutos(masCercano.d) } : null }))}
             paradas={resultado.paradas.map(({ f, d }) => ({ nombre: capitalizar(String(f.properties?.nombre)), lineas: String(f.properties?.lineas ?? '—'), minutos: minutos(d) }))}

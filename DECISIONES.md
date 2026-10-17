@@ -75,6 +75,44 @@ El equipo cree que da tiempo a hacerlo todo. Si nos retrasamos, se recorta por e
 
 ## 3. Decisiones
 
+### 17 oct: cómo nos desmarcamos de los otros 14 equipos
+**La competencia** (programa de la final, 20 oct; nosotros exponemos de 10:30 a 10:40):
+
+| Tipo de proyecto | Equipos |
+|---|---|
+| Elegir municipio o mudarse | EL pueblo (donde mudarte sin echar nada de menos), Madrid 179, ViveTuMunicipio, Aterriza (tu llegada paso a paso), Rumbo a Casa, HabitaMadrid (radiografía de la repoblación), Nido |
+| Mayores | MADcompaña (acompañante urbano), CERCA DE TI (cuidar también es llegar) |
+| Otros | Oportunia (emprender en los municipios), MadridSilencio, Alcanza, MiMad, GoMAD |
+
+**Conclusión:** unos siete equipos harán un comparador de municipios. El nuestro no puede ser el centro del discurso. **Lo que solo tenemos nosotros:**
+1. **Miramos al futuro:** cuánta gente va a llegar según el planeamiento y qué servicios le van a faltar.
+2. **¿Hay sitio?** Cruzamos esa demanda con el suelo público vacante (IDEM) de cada municipio.
+3. **Herramienta para la Administración:** dónde poner cada centro, cuándo y si la propuesta aguanta.
+4. **Validado con el pasado:** error medio del 19 % frente al 39 % de la regla habitual.
+5. **Calidad de datos:** errores encontrados en datos oficiales, que podemos devolver a la Comunidad (organizadora).
+
+**Frase para venderlo:** *"Los demás te dicen dónde vivir hoy. Cuna y Canas te dice qué va a faltar mañana, y dónde ponerlo."*
+**Titular de la portada:** *"Llegan las familias. ¿Llegarán los colegios?"*
+
+### 17 oct: portada, acceso de técnicos, logo y mejoras de Lucía
+- **Portada nueva (Inicio):**
+  - Titular y cifras de toda la Comunidad: **513.487 viviendas previstas en 144 municipios**, entre **0,76 y 1,12 millones de personas** más, **78.000–154.000 plazas de colegio** y el equivalente a **31–45 centros de salud** (fuera de Madrid capital).
+  - Dos caminos ("Busco dónde vivir" y "Planifico servicios públicos") y cuatro **ejemplos de un clic** (idea 7 de Lucía): Los Molinos, familia con bebé que trabaja en Madrid, Arroyomolinos y Navalcarnero.
+  - **Radar "¿hay sitio para lo que viene?"**: los municipios que más pueden crecer, los colegios que harían falta y las parcelas donde cabe uno. Ejemplo: **Torrejón de Velasco** (4.895 habitantes) puede crecer entre un 388 y un 567 %, necesitaría unos 5 colegios y tiene 4 parcelas de 8.000 m² o más ("puede faltar suelo").
+  - Bloque "Qué hace distinto a Cuna y Canas" y "Datos abiertos mejores para todos".
+- **Acceso de técnicos arriba a la derecha** (entrar y salir). "Planificar" deja la navegación ciudadana y solo aparece con sesión. **Es un acceso de demostración, sin contraseña**: el usuario elige organismo (Comunidad de Madrid o un ayuntamiento) y la sesión se guarda en el navegador; en producción sería con Cl@ve o certificado. No se piden ni guardan credenciales.
+- **Logo nuevo (idea de Lucía):** la cabeza de un bebé con un solo pelo, que es una cana, sobre el cuadrado rojo. También como icono de la pestaña.
+- **Mejoras de Lucía incorporadas:**
+  - Idea 1: en el mapa de "¿Dónde vivir?" solo los 15 mejores en color.
+  - **Empates** visibles en el ranking (mismo puesto con "=").
+  - Idea 2: **veredicto del barrio** ("tienes 5/8 de lo que buscas", con ✓/✕ y minutos).
+  - Idea 5: botón **▶** que recorre los años de 2025 a 2040.
+  - Idea 7: ejemplos de un clic.
+  - Además, al elegir barrio el panel baja solo hasta la respuesta, que antes quedaba debajo de los controles (el diagnóstico de Lucía).
+  - **Pendientes:** idea 3 (iconos por servicio en el mapa), idea 4 (barrios coloreados por suelo sin construir) e idea 6 (móvil con barra inferior y panel deslizable).
+- **"¿Hay sitio para lo que viene?" en cada ficha de municipio:** parcelas vacantes de equipamiento, hectáreas, cuántas admiten un colegio (8.000 m² o más) o una escuela infantil o centro de día (1.500 m² o más), frente a los colegios que necesitaría la población nueva.
+
+
 ### 16 oct (noche): la herramienta pasa a cubrir toda la Comunidad, con tres secciones
 **Por qué:** el equipo señaló que (1) a media pantalla la web no se organizaba bien, (2) la pantalla ciudadana es para **investigar pueblos** antes de mudarse, no para quien ya tiene una dirección, (3) hacían falta muchas más opciones en "qué te interesa", y (4) faltaban cosas que prometen los documentos Word. Se releyeron los documentos 1 y 3 y se cubrió cada punto.
 
@@ -447,6 +485,7 @@ Un Ampere A1 (hasta 4 núcleos y 24 GB de RAM), 200 GB de disco, 10 GB de Object
 ---
 
 ## 9. Bitácora
+- **17 oct:** análisis de la competencia y estrategia para desmarcarnos; portada con cifras de la Comunidad, radar de suelo y ejemplos de un clic; acceso de técnicos (demo) arriba a la derecha; logo del bebé con una cana; mejoras de Lucía 1, 2, 5 y 7. Rama de Lucía integrada en `main`.
 - **16 oct (noche, 3):** revisión de la interfaz con capturas. Diagnóstico: en las tres secciones la respuesta queda debajo de los controles. Siete propuestas con maqueta (pendientes de decidir): 1) ranking de ¿Dónde vivir? flotando sobre el mapa con solo los 15 mejores en color; 2) veredicto del barrio arriba ("tienes 3 de las 8 cosas que buscas", con ✓/✗ y minutos); 3) iconos por servicio en el mapa y parcelas agrupadas; 4) barrios coloreados por suelo de equipamiento sin construir antes de elegir; 5) Planificar en modo sencillo (servicio, año, nº de centros; el resto plegado) con botón ▶ 2025→2040; 6) móvil con cabecera de una línea, barra inferior y panel deslizable; 7) ejemplos de un clic en la portada. Propuesta de orden: 1, 2 y 5. **Problema detectado:** con "Tengo un bebé" el primero es Santa María de la Alameda (1.596 hab.), empatado al 73 % con Madrid; hay que mostrar empates y revisar el tamaño por defecto.
 - **16 oct (noche, 2):** idea de logo nuevo: la cabeza de un bebé con un solo pelo que es una cana (cuna + canas). Se pedirá a Claude Design con el contexto del proyecto y la paleta de la web (rojo #DE0029, tinta #131313). Pendiente de elegir versión y cambiarlo en la cabecera.
 - **14 oct (noche, 3):** repositorio creado en GitHub, primer commit subido e invitada la compañera de equipo. Paso 3 hecho.

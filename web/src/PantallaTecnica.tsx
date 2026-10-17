@@ -8,7 +8,7 @@ import { Icono } from './iconos'
 import { descargarGeoJSON, descargarInforme } from './exportar'
 import GraficaPoblacion, { type FilaPoblacion, type GrupoId } from './GraficaPoblacion'
 
-interface Props { datos: DatosMunicipio; servicios: Record<ServicioId, Servicio> }
+interface Props { datos: DatosMunicipio; servicios: Record<ServicioId, Servicio>; servicioInicial?: ServicioId; zonaInicial?: string }
 
 const COLOR_ESTADO: Record<string, string> = { habitado: '#8a8a8a', en_desarrollo: '#131313', futuro: '#de0029', sin_datos: '#c4c4c4' }
 const NOMBRE_ESTADO: Record<string, string> = { habitado: 'Habitado', en_desarrollo: 'En desarrollo', futuro: 'Por construir', sin_datos: 'Sin datos' }
@@ -47,10 +47,10 @@ function dentro(lon: number, lat: number, polys: Position[][][]): boolean {
   return false
 }
 
-export default function PantallaTecnica({ datos, servicios }: Props) {
-  const [sid, setSid] = useState<ServicioId>('colegio')
+export default function PantallaTecnica({ datos, servicios, servicioInicial, zonaInicial }: Props) {
+  const [sid, setSid] = useState<ServicioId>(servicioInicial ?? 'colegio')
   const s = servicios[sid]
-  const [esc, setEsc] = useState<Escenario>(() => escenarioInicial(s, datos))
+  const [esc, setEsc] = useState<Escenario>(() => escenarioInicial(s, datos, zonaInicial ?? null))
   const [anio, setAnio] = useState(2035)
   const [aniosLlenado, setAniosLlenado] = useState(10)
   const [guardado, setGuardado] = useState<{ esc: Escenario; res: Resultado; servicio: string; anio: number } | null>(null)
@@ -59,6 +59,17 @@ export default function PantallaTecnica({ datos, servicios }: Props) {
   const [verZonas, setVerZonas] = useState(false)
   const [pestana, setPestana] = useState<'ajustes' | 'resultados'>('ajustes')
   const [cifra, setCifra] = useState('')
+  const [reproduciendo, setReproduciendo] = useState(false)
+
+  // ▶ recorre los años de 2025 a 2040 para ver cómo llega la población y cuándo hacen falta los centros
+  useEffect(() => {
+    if (!reproduciendo) return
+    const t = setInterval(() => setAnio((a) => {
+      if (a >= ANIO_FIN) { setReproduciendo(false); return a }
+      return a + 1
+    }), 650)
+    return () => clearInterval(t)
+  }, [reproduciendo])
 
   // cambiar de servicio reinicia los supuestos del servicio, pero conserva la zona de estudio
   useEffect(() => { setEsc((e) => escenarioInicial(servicios[sid], datos, e.zona)); setCifra(''); setVerZonas(sid === 'centro_salud') }, [sid, datos, servicios])
@@ -361,8 +372,15 @@ export default function PantallaTecnica({ datos, servicios }: Props) {
           <Paso num={2} titulo={`Población de ${zonaTxt}`}>
             <GraficaPoblacion filas={filas} destacados={GRUPOS_SERVICIO[sid]} anio={anio} onAnio={setAnio} />
             <div className="mt-4">
-              <Deslizador etiqueta="Año de la previsión" valor={anio} min={ANIO_BASE} max={ANIO_FIN} paso={1} formato={String}
-                onChange={setAnio} ayuda={`En ${anio} habrá llegado el ${Math.round(llenadoDe(anio) * 100)} % de la población de los barrios nuevos`} />
+              <div className="flex items-end gap-3">
+                <div className="min-w-0 flex-1">
+                  <Deslizador etiqueta="Año de la previsión" valor={anio} min={ANIO_BASE} max={ANIO_FIN} paso={1} formato={String}
+                    onChange={(v) => { setReproduciendo(false); setAnio(v) }} ayuda={`En ${anio} habrá llegado el ${Math.round(llenadoDe(anio) * 100)} % de la población de los barrios nuevos`} />
+                </div>
+                <button type="button" aria-label={reproduciendo ? 'Pausar' : 'Reproducir de 2025 a 2040'} title={reproduciendo ? 'Pausar' : 'Ver la evolución de 2025 a 2040'}
+                  onClick={() => { if (!reproduciendo && anio >= ANIO_FIN) setAnio(ANIO_BASE); setReproduciendo(!reproduciendo) }}
+                  className="mb-5 flex h-9 w-9 shrink-0 items-center justify-center bg-tinta text-white hover:bg-rojo">{reproduciendo ? '❚❚' : '▶'}</button>
+              </div>
               <Deslizador etiqueta="Natalidad" valor={esc.factorNatalidad} min={0.6} max={1.4} paso={0.05} formato={(v) => `${v >= 1 ? '+' : ''}${Math.round((v - 1) * 100)} %`}
                 onChange={(v) => upd({ factorNatalidad: v })} ayuda="Más o menos nacimientos que hoy (afecta a 0-5 años)" />
               <Deslizador etiqueta="Llegada de personas" valor={esc.factorFuturo} min={0.5} max={1.5} paso={0.05} formato={(v) => `${v >= 1 ? '+' : ''}${Math.round((v - 1) * 100)} %`}

@@ -55,6 +55,8 @@ export default function Mapa({ bbox, capas, marcadores = [], onClickCapa, onArra
   capasRef.current = capas
   const bboxRef = useRef(bbox)
   bboxRef.current = bbox
+  const centroRef = useRef(centrarEn)
+  centroRef.current = centrarEn
 
   useEffect(() => {
     const m = new maplibregl.Map({ container: div.current!, style: ESTILO_BASE, bounds: bbox, fitBoundsOptions: { padding: 30 }, attributionControl: { compact: true } })
@@ -81,7 +83,12 @@ export default function Mapa({ bbox, capas, marcadores = [], onClickCapa, onArra
     let encuadrado = false
     const ro = new ResizeObserver(() => {
       m.resize()
-      if (!encuadrado && div.current && div.current.clientWidth > 50) { m.fitBounds(bboxRef.current, { padding: 30, duration: 0 }); encuadrado = true }
+      if (!encuadrado && div.current && div.current.clientWidth > 50) {
+        // si ya hay un punto elegido (p. ej. un ejemplo de un clic), se centra ahí en vez de encuadrar todo
+        if (centroRef.current) m.jumpTo({ center: centroRef.current, zoom: 14.4 })
+        else m.fitBounds(bboxRef.current, { padding: 30, duration: 0 })
+        encuadrado = true
+      }
     })
     ro.observe(div.current!)
     mapa.current = m

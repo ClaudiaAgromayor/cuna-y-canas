@@ -67,6 +67,11 @@ export interface ResumenMunicipio {
   sup_km2: number
   densidad: number
   dist_madrid_km: number
+  suelo_detallado?: boolean
+  parcelas_equip?: number
+  parcelas_equip_1500?: number
+  parcelas_equip_8000?: number
+  suelo_equip_m2?: number | null
   foto: string | null        // imagen representativa en Wikimedia Commons (Wikidata P18)
   foto_pagina: string | null // página del fichero, con autoría y licencia
 }

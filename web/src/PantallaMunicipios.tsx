@@ -12,6 +12,8 @@ interface Resumen { generado: string; modelo: Modelo | null; municipios: Resumen
 interface Props {
   servicios: Record<ServicioId, Servicio>
   detallados: MunicipioIndice[]
+  situacionesIniciales?: string[]
+  selInicial?: string
   verBarrios: (cod: string) => void
   planificar: (cod: string) => void
 }
@@ -19,16 +21,17 @@ interface Props {
 const BASE = import.meta.env.BASE_URL
 const GRUPOS = [...new Set(CRITERIOS.map((c) => c.grupo))]
 const ENCUADRE_CM: [number, number, number, number] = [-4.58, 39.88, -3.05, 41.17] // toda la Comunidad de Madrid
+const TOP = 15
 const ESCALA = ['#f6e3e6', '#eeb7c0', '#e3808f', '#d4475c', '#b50f2b', '#7d0019'] // de menos a más coincidencia
 
-export default function PantallaMunicipios({ servicios, detallados, verBarrios, planificar }: Props) {
+export default function PantallaMunicipios({ servicios, detallados, verBarrios, planificar, situacionesIniciales, selInicial }: Props) {
   const [resumen, setResumen] = useState<Resumen | null>(null)
   const [limites, setLimites] = useState<FeatureCollection | null>(null)
-  const [situaciones, setSituaciones] = useState<string[]>(['bebe'])
-  const [criterios, setCriterios] = useState<string[]>(SITUACIONES[0].criterios)
+  const [situaciones, setSituaciones] = useState<string[]>(situacionesIniciales ?? ['bebe'])
+  const [criterios, setCriterios] = useState<string[]>(() => [...new Set(SITUACIONES.filter((s) => (situacionesIniciales ?? ['bebe']).includes(s.id)).flatMap((s) => s.criterios))])
   const [tamanos, setTamanos] = useState<string[]>([])
   const [distMax, setDistMax] = useState(90)
-  const [sel, setSel] = useState<string | null>(null)
+  const [sel, setSel] = useState<string | null>(selInicial ?? null)
   const [comparar, setComparar] = useState<string[]>([])
   const [verComparacion, setVerComparacion] = useState(false)
   const [abiertos, setAbiertos] = useState<string[]>([])
@@ -42,7 +45,14 @@ export default function PantallaMunicipios({ servicios, detallados, verBarrios, 
     m.dist_madrid_km <= distMax && (!tamanos.length || tamanos.some((t) => { const x = TAMANOS.find((y) => y.id === t)!; return m.poblacion >= x.min && m.poblacion < x.max }))),
   [resumen, distMax, tamanos])
   const ranking = useMemo(() => puntuar(filtrados, criterios), [filtrados, criterios])
-  const porCod = useMemo(() => new Map(ranking.map((r, i) => [r.m.cod_ine, { ...r, puesto: i + 1 }])), [ranking])
+  const porCod = useMemo(() => {
+    let puesto = 0, previo = NaN
+    return new Map(ranking.map((r, i) => {
+      const redondo = Math.round(r.puntos)
+      if (redondo !== previo) { puesto = i + 1; previo = redondo }
+      return [r.m.cod_ine, { ...r, puesto }]
+    }))
+  }, [ranking])
   const elegido = sel ? porCod.get(sel) ?? (resumen ? { m: resumen.municipios.find((x) => x.cod_ine === sel)!, puntos: NaN, detalle: {}, puesto: 0 } : null) : null
 
   const alternarSituacion = (id: string) => {
@@ -62,13 +72,14 @@ export default function PantallaMunicipios({ servicios, detallados, verBarrios, 
     if (!limites) return []
     const datos: FeatureCollection = { ...limites, features: limites.features.map((f) => {
       const r = porCod.get(String(f.properties?.cod_ine))
-      return { ...f, properties: { ...f.properties, puntos: r ? Math.round(r.puntos) : -1, puesto: r?.puesto ?? null } }
+      return { ...f, properties: { ...f.properties, puntos: r ? Math.round(r.puntos) : -1, puesto: r?.puesto ?? null, top: !!r && r.puesto <= TOP } }
     }) }
     const selFc: FeatureCollection = { ...limites, features: limites.features.filter((f) => f.properties?.cod_ine === sel || comparar.includes(String(f.properties?.cod_ine))) }
     return [
       { id: 'm-relleno', datos, estilo: { type: 'fill', paint: {
-        'fill-color': ['case', ['<', ['get', 'puntos'], 0], '#ececec', ['interpolate', ['linear'], ['get', 'puntos'], 0, ESCALA[0], 20, ESCALA[1], 40, ESCALA[2], 60, ESCALA[3], 80, ESCALA[4], 100, ESCALA[5]]],
-        'fill-opacity': 0.85 } } as CapaMapa['estilo'],
+        'fill-color': ['case', ['<', ['get', 'puntos'], 0], '#f3f3f3', ['!', ['get', 'top']], '#e4dcdd',
+          ['interpolate', ['linear'], ['get', 'puesto'], 1, ESCALA[5], 5, ESCALA[4], 10, ESCALA[3], 15, ESCALA[2]]],
+        'fill-opacity': 0.9 } } as CapaMapa['estilo'],
         popup: (p) => Number(p.puntos) < 0 ? `<b>${p.nombre}</b><br><span style="color:#595959">No cumple los filtros de tamaño o distancia</span>`
           : `<b>${p.nombre}</b><br>Puesto ${p.puesto} de ${ranking.length} · coincidencia ${p.puntos} %` },
       { id: 'm-borde', datos, estilo: { type: 'line', paint: { 'line-color': '#ffffff', 'line-width': 0.8 } } },
@@ -85,9 +96,10 @@ export default function PantallaMunicipios({ servicios, detallados, verBarrios, 
       <div className="relative order-1 h-[42vh] shrink-0 md:order-2 md:h-auto">
         <Mapa bbox={ENCUADRE_CM} capas={capas} onClickCapa={(capa, p) => { if (capa === 'm-relleno') { setSel(String(p.cod_ine)); setVerComparacion(false) } }} />
         <Leyenda>
-          <div className="mb-1 font-medium">Coincidencia con lo que buscas</div>
-          <div className="flex">{ESCALA.map((c) => <span key={c} className="h-2.5 w-7" style={{ background: c }} />)}</div>
-          <div className="flex justify-between text-texto-3"><span>menos</span><span>más</span></div>
+          <div className="mb-1 font-medium">Los {TOP} que mejor encajan</div>
+          <div className="flex">{[...ESCALA].slice(2).reverse().map((c) => <span key={c} className="h-2.5 w-9" style={{ background: c }} />)}</div>
+          <div className="flex justify-between text-texto-3"><span>1.º</span><span>15.º</span></div>
+          <div className="mt-1 flex items-center gap-1.5 text-texto-3"><span className="h-2.5 w-4" style={{ background: '#e4dcdd' }} />resto</div>
         </Leyenda>
       </div>
 
@@ -174,10 +186,13 @@ export default function PantallaMunicipios({ servicios, detallados, verBarrios, 
               </div>
               {criterios.length === 0 && <Aviso tono="info">Marca al menos un criterio para ordenar los municipios.</Aviso>}
               <ol className="border-t border-tinta">
-                {criterios.length > 0 && ranking.slice(0, 15).map((r, i) => (
+                {criterios.length > 0 && ranking.slice(0, TOP).map((r, i) => {
+                  const puesto = porCod.get(r.m.cod_ine)?.puesto ?? i + 1
+                  const empate = ranking.some((o, j) => j !== i && Math.round(o.puntos) === Math.round(r.puntos))
+                  return (
                   <li key={r.m.cod_ine}>
                     <button type="button" onClick={() => setSel(r.m.cod_ine)} className="flex w-full items-center gap-3 border-b border-linea py-2.5 text-left hover:bg-gris-1">
-                      <span className={`flex h-7 w-7 shrink-0 items-center justify-center text-sm font-semibold ${i < 3 ? 'bg-rojo text-white' : 'border border-tinta'}`}>{i + 1}</span>
+                      <span className={`flex h-7 w-7 shrink-0 items-center justify-center text-sm font-semibold ${puesto <= 3 ? 'bg-rojo text-white' : 'border border-tinta'}`} title={empate ? 'Empatado con otro municipio' : undefined}>{puesto}{empate ? '=' : ''}</span>
                       <span className="min-w-0 flex-1">
                         <span className="block truncate font-medium">{r.m.nombre}</span>
                         <span className="block text-xs text-texto-3">{n(r.m.poblacion)} hab. · {dec(r.m.dist_madrid_km, 0)} km de Madrid{r.m.tren_o_metro ? ' · tren o metro' : ''}</span>
@@ -188,7 +203,7 @@ export default function PantallaMunicipios({ servicios, detallados, verBarrios, 
                       </span>
                     </button>
                   </li>
-                ))}
+                )})}
               </ol>
               <p className="mt-3 text-xs leading-relaxed text-texto-3">La coincidencia es la media de la posición de cada municipio en lo que has marcado (100 % = el mejor de los que cumplen tus filtros). En los servicios contamos si hay suficientes para su población y si hay donde elegir. Pulsa un municipio para ver su ficha.</p>
             </section>
@@ -324,6 +339,18 @@ function Ficha({ r, total, criterios, modelo, servicios, volver, comparando, alt
               ))}
             </ul>
             <p className="mt-2 text-xs text-texto-3">Estimación con el modelo calibrado en barrios nuevos de {modelo?.municipio}. Es lo que harán falta por la población nueva, además de lo que ya existe.</p>
+            {m.suelo_detallado && (() => {
+              const colegios = futuro.items.find((x) => x.s.nombre.startsWith('Colegio'))?.centros[1] ?? 0
+              const grandes = m.parcelas_equip_8000 ?? 0
+              const diag = colegios < 0.5 ? ['Poca presión sobre el suelo', 'border-texto-3'] : grandes >= colegios * 2 ? ['Hay suelo de sobra', 'border-ok'] : grandes >= colegios ? ['Suelo justo', 'border-aviso'] : ['Puede faltar suelo', 'border-rojo']
+              return (
+                <div className={`mt-4 border-l-[3px] bg-gris-1 px-4 py-3 text-sm ${diag[1]}`}>
+                  <div className="font-semibold">¿Hay sitio para lo que viene? {diag[0]}</div>
+                  <p className="mt-1 text-texto-2">Tiene <b className="text-tinta">{n(m.parcelas_equip ?? 0)} parcelas vacantes</b> de equipamiento ({n((m.suelo_equip_m2 ?? 0) / 10000)} ha); en <b className="text-tinta">{n(grandes)}</b> cabría un colegio (8.000 m² o más) y en {n(m.parcelas_equip_1500 ?? 0)} una escuela infantil o un centro de día. La población nueva necesitaría el equivalente a {dec(colegios, 1)} {colegios < 1.5 ? 'colegio' : 'colegios'}.</p>
+                  <p className="mt-1 text-xs text-texto-3">Fuente: IDEM, suelo vacante y ocupado 2026.</p>
+                </div>
+              )
+            })()}
           </>
         ) : <p className="text-sm text-texto-2">{m.planeamiento_en_idem ? 'El planeamiento vigente no prevé nuevas viviendas en ámbitos de desarrollo.' : 'El planeamiento de este municipio no está en la base refundida de la IDEM.'}</p>}
         {detallado && <button type="button" className="no-imprimir mt-3 text-sm font-medium text-rojo underline underline-offset-2" onClick={planificar}>Ver dónde podrían ir los nuevos centros →</button>}

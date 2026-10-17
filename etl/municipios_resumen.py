@@ -202,6 +202,20 @@ def main() -> None:
     R["equip_culturales"] = red[red["DS_USO_DETA"] == "Culturales"].groupby("CD_MUNICIPIO").size()
     R["planeamiento_en_idem"] = R.index.isin(red["CD_MUNICIPIO"].unique())
 
+    # --- suelo reservado para equipamientos (de las carpetas detalladas de cada municipio) ---
+    suelo = {}
+    for d in PROCESSED.iterdir():
+        f = d / "parcelas_vacantes.geojson"
+        if not d.is_dir() or not f.exists():
+            continue
+        areas = [x["properties"].get("area_m2") or 0 for x in json.loads(f.read_text(encoding="utf-8"))["features"]]
+        suelo[d.name.split("-")[0]] = {"suelo_equip_m2": sum(areas), "parcelas_equip": len(areas),
+                                        "parcelas_equip_1500": sum(a >= 1500 for a in areas),   # cabe una escuela infantil o un centro de día
+                                        "parcelas_equip_8000": sum(a >= 8000 for a in areas)}  # cabe un colegio
+    for k in ("suelo_equip_m2", "parcelas_equip", "parcelas_equip_1500", "parcelas_equip_8000"):
+        R[k] = pd.Series({c: v[k] for c, v in suelo.items()})
+    R["suelo_detallado"] = R.index.isin(list(suelo))
+
     # --- derivados por habitante ---
     R["sup_km2"] = lim.set_index("cod")["sup_km2"]
     R["dist_madrid_km"] = lim.set_index("cod")["dist_madrid_km"]
@@ -217,7 +231,8 @@ def main() -> None:
     conteos = ["esc_infantil_publica", "esc_infantil_privada", "colegio_publico", "colegio_concertado", "colegio_privado", "instituto_publico", "fp",
                "centros_salud", "consultorios", "farmacias", "bibliotecas", "residencias", "plazas_residencia", "centros_dia", "plazas_centro_dia",
                "hogares_mayores", "centros_infancia_familia", "est_metro", "est_cercanias", "est_metro_ligero", "paradas_interurbano",
-               "paradas_urbano", "lineas_interurbanas", "equip_deportivos", "equip_culturales", "ambitos_desarrollo"]
+               "paradas_urbano", "lineas_interurbanas", "equip_deportivos", "equip_culturales", "ambitos_desarrollo",
+               "parcelas_equip", "parcelas_equip_1500", "parcelas_equip_8000"]
     R[conteos] = R[conteos].fillna(0).astype(int)
     R["nombre"] = [nombres.get(c, lim.set_index("cod").loc[c, "DS_NOMBRE"]) for c in R.index]
     R["nombre"] = R["nombre"].str.replace(r"^(.*) \((El|La|Los|Las)\)$", r"\2 \1", regex=True)

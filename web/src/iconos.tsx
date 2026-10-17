@@ -32,14 +32,23 @@ export function iconoSvg(nombre: string): string {
   return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="${TRAZOS[nombre] ?? ''}"/></svg>`
 }
 
-/** Logotipo propio: cuadrado rojo con una cuna (arco) y un punto. No es el emblema de la Comunidad de Madrid. */
+/**
+ * Logotipo propio (idea de Lucía): la cabeza de un bebé con un solo pelo, y ese pelo es una cana. De la cuna a las canas.
+ * Cuadrado rojo en el lenguaje visual de la Comunidad, pero no es su emblema.
+ */
 export function Logo({ className = 'h-9 w-9' }: { className?: string }) {
   return (
-    <svg viewBox="0 0 40 40" className={className} aria-label="Cuna y Canas">
+    <svg viewBox="0 0 40 40" className={className} role="img" aria-label="Cuna y Canas">
       <rect width="40" height="40" fill="#de0029" />
-      <path d="M10 17a10 10 0 0 0 20 0" fill="none" stroke="#fff" strokeWidth="3.2" strokeLinecap="square" />
-      <rect x="18" y="9" width="4" height="4" fill="#fff" />
-      <path d="M8 31h24" stroke="#fff" strokeWidth="2" />
+      {/* la cana: un rizo gris claro que sale de la coronilla */}
+      <path d="M20 13.2c-.4-3.4 1.2-6.4 4.3-6.9 2.6-.4 4 2 2.6 3.7-1.1 1.3-3.2.6-2.9-1" fill="none" stroke="#d6d6d6" strokeWidth="1.9" strokeLinecap="round" />
+      {/* cabeza */}
+      <circle cx="20" cy="24" r="11" fill="#fff" />
+      {/* ojos cerrados, mofletes y sonrisa */}
+      <path d="M14.6 22.6q1.6 1.5 3.2 0M22.2 22.6q1.6 1.5 3.2 0" fill="none" stroke="#131313" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M17.4 27.4q2.6 2.4 5.2 0" fill="none" stroke="#de0029" strokeWidth="1.6" strokeLinecap="round" />
+      <circle cx="13.6" cy="26.2" r="1.3" fill="#f3b6bf" />
+      <circle cx="26.4" cy="26.2" r="1.3" fill="#f3b6bf" />
     </svg>
   )
 }

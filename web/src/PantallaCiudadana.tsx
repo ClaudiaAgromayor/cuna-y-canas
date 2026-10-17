@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import type { Feature, FeatureCollection, Geometry, Point, Polygon, Position } from 'geojson'
 import Mapa, { type CapaMapa, type Marcador } from './Mapa'
 import { circulo, metros, METROS_POR_MINUTO } from './algoritmo'
@@ -6,7 +6,7 @@ import type { AmbitoDemanda, DatosMunicipio, Servicio, ServicioId } from './tipo
 import { Icono, iconoSvg } from './iconos'
 import { Aviso, capitalizar, dec, Estado, Linea, n, nombreBarrio, type EstadoId, Leyenda } from './ui'
 
-interface Props { datos: DatosMunicipio; servicios: Record<ServicioId, Servicio> }
+interface Props { datos: DatosMunicipio; servicios: Record<ServicioId, Servicio>; barrioInicial?: string }
 
 /* ---------- qué se puede buscar ---------- */
 
@@ -80,7 +80,7 @@ interface Lugar { lon: number; lat: number; texto: string; ambito: string | null
 interface Candidato { address: string; muni: string; lat: number; lng: number }
 interface Item { id: string; cat: Categoria; nombre: string; detalle: string; estado: EstadoId; lon: number; lat: number; d: number }
 
-export default function PantallaCiudadana({ datos, servicios }: Props) {
+export default function PantallaCiudadana({ datos, servicios, barrioInicial }: Props) {
   const [lugar, setLugar] = useState<Lugar | null>(null)
   const [situaciones, setSituaciones] = useState<string[]>([])
   const [cats, setCats] = useState<string[]>(['ei_publica', 'col_publico', 'instituto', 'salud', 'farmacia', 'residencia', 'parque', 'deporte', 'suelo'])
@@ -91,6 +91,9 @@ export default function PantallaCiudadana({ datos, servicios }: Props) {
   const [q, setQ] = useState('')
   const [cands, setCands] = useState<Candidato[]>([])
   const [msg, setMsg] = useState('')
+  const refResultados = useRef<HTMLDivElement>(null)
+  // al elegir un sitio, el panel baja solo hasta la respuesta (antes quedaba debajo de los filtros)
+  useEffect(() => { if (lugar) setTimeout(() => refResultados.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 60) }, [lugar])
 
   const demanda = useMemo(() => new Map((datos.demanda?.ambitos ?? []).map((a) => [a.ambito, a])), [datos])
   const barrios = useMemo(() => (datos.demanda?.ambitos ?? []).filter((a) => (a.viviendas ?? 0) >= 150).sort((a, b) => (b.viviendas ?? 0) - (a.viviendas ?? 0)), [datos])
@@ -187,6 +190,12 @@ export default function PantallaCiudadana({ datos, servicios }: Props) {
       if (!ok.length) setMsg(`No encontramos esa calle en ${datos.indice.nombre}.`)
     } catch { setMsg('El buscador no responde. Elige un barrio o pulsa en el mapa.') }
   }
+  // ejemplos de un clic: llegar con un barrio ya elegido
+  useEffect(() => {
+    const a = barrioInicial ? demanda.get(barrioInicial) : undefined
+    if (a) elegirBarrio(a)
+  }, [barrioInicial]) // eslint-disable-line react-hooks/exhaustive-deps
+
   const alternarSituacion = (id: string) => {
     const s = SITUACIONES.find((x) => x.id === id)!
     if (situaciones.includes(id)) { setSituaciones(situaciones.filter((x) => x !== id)); return }
@@ -307,7 +316,7 @@ export default function PantallaCiudadana({ datos, servicios }: Props) {
         {!resultado && <p className="mx-6 mt-6 mb-8 border-t border-linea pt-5 text-sm text-texto-2">Elige un barrio de la lista o pulsa en el mapa para ver qué hay a su alrededor y qué está por venir.</p>}
 
         {resultado && lugar && (
-          <div className="mt-6 border-t border-tinta">
+          <div ref={refResultados} className="mt-6 scroll-mt-2 border-t border-tinta">
             <div className="flex items-start gap-3 bg-gris-1 px-6 py-4">
               <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center bg-rojo text-white"><Icono nombre="ubicacion" className="h-5 w-5" /></span>
               <div className="min-w-0 flex-1">
@@ -315,6 +324,30 @@ export default function PantallaCiudadana({ datos, servicios }: Props) {
                 <div className="text-sm text-texto-2">{amb ? `${ETIQUETA_ESTADO_BARRIO[amb.estado]} · ${n(amb.viviendas ?? 0)} viviendas previstas` : 'Fuera de los barrios en desarrollo'} · {resultado.cerca.length} resultados a menos de {radioMin} min</div>
               </div>
             </div>
+
+            {(() => {
+              // veredicto de un vistazo (idea de Lucía): cuántas de las cosas que buscas tienes cerca
+              const buscadas = resultado.porCat.filter(({ c }) => c.id !== 'suelo')
+              const tienes = buscadas.filter((x) => x.items.length > 0)
+              if (!buscadas.length) return null
+              return (
+                <section className="border-b border-linea px-6 py-4">
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-[30px] leading-none font-semibold tabular-nums">{tienes.length}<span className="text-texto-3">/{buscadas.length}</span></span>
+                    <span className="text-sm text-texto-2">de las cosas que buscas, a menos de {radioMin} min a pie</span>
+                  </div>
+                  <ul className="mt-3 grid grid-cols-1 gap-x-4 gap-y-1 text-sm sm:grid-cols-2">
+                    {buscadas.map(({ c, items, masCercano }) => (
+                      <li key={c.id} className="flex items-center gap-2">
+                        <span className={`flex h-4 w-4 shrink-0 items-center justify-center text-[10px] font-bold text-white ${items.length ? 'bg-ok' : 'bg-rojo'}`}>{items.length ? '✓' : '✕'}</span>
+                        <span className="min-w-0 flex-1 truncate">{c.texto}</span>
+                        <span className="shrink-0 text-xs text-texto-3 tabular-nums">{items.length ? `${minutos(items[0].d)} min` : masCercano ? `${minutos(masCercano.d)} min` : '—'}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              )
+            })()}
 
             {amb && (amb.poblacion_actual || amb.poblacion_completo) && (
               <section className="border-b border-linea px-6 py-4">

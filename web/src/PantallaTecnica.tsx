@@ -350,23 +350,31 @@ export default function PantallaTecnica({ datos, servicios, servicioInicial, zon
       )}
     </section>
 
-    {datos.demanda && (
-      <section className="px-6 py-5">
-        <h3 className="flex items-center gap-2 font-semibold"><Icono nombre="validar" className="h-5 w-5" />¿Acierta el modelo?</h3>
-        <p className="mt-1 mb-3 text-xs text-texto-2">Predecimos cada barrio sin mirar sus datos y lo comparamos con su población real ({datos.demanda.prueba_con_el_pasado[0]?.anio}, INE).</p>
-        <table className="w-full text-sm">
-          <thead><tr className="border-b border-tinta text-left text-xs text-texto-2"><th className="py-1.5 font-medium">Barrio</th><th className="text-right font-medium">Real</th><th className="text-right font-medium">Error modelo</th><th className="text-right font-medium">Regla habitual</th></tr></thead>
-          <tbody>{datos.demanda.prueba_con_el_pasado.map((b) => (
-            <tr key={b.ambito} className="border-b border-gris-2">
-              <td className="py-1.5">{nombreBarrio(b.ambito)}</td><td className="text-right tabular-nums">{n(b.real)}</td>
-              <td className="text-right font-semibold tabular-nums">{b.error_pct > 0 ? '+' : ''}{dec(b.error_pct)} %</td>
-              <td className="text-right text-texto-3 tabular-nums">{b.error_ingenua_pct > 0 ? '+' : ''}{dec(b.error_ingenua_pct)} %</td>
-            </tr>))}
-          </tbody>
-        </table>
-        <p className="mt-4 text-[11px] leading-relaxed text-texto-3">Fuentes: IDEM (planeamiento 2025, suelo vacante 2026), Portal de Datos Abiertos de la Comunidad de Madrid, INE (Atlas de renta por sección), Consorcio de Transportes. Distancias en línea recta.</p>
-      </section>
-    )}
+    {datos.demanda && (() => {
+      const pr = datos.demanda.prueba_con_el_pasado
+      const media = (k: 'error_pct' | 'error_ingenua_pct') => pr.length ? pr.reduce((t, b) => t + Math.abs(b[k]), 0) / pr.length : 0
+      return (
+        <section className="px-6 py-5">
+          <details>
+            <summary className="flex cursor-pointer items-center gap-2 font-semibold"><Icono nombre="validar" className="h-5 w-5" />¿Son fiables estas cifras?<span className="ml-auto text-xs font-normal text-texto-3">ver la prueba</span></summary>
+            <p className="mt-2 text-sm text-texto-2">Lo comprobamos con barrios nuevos de {datos.demanda.calibracion.municipio ?? 'Getafe'} que ya están habitados: calculamos su población <b className="text-tinta">sin mirar sus datos</b> y la comparamos con la real ({pr[0]?.anio}, INE). De media nos equivocamos un <b className="text-tinta">{dec(media('error_pct'), 0)} %</b>; la regla habitual (viviendas × tamaño medio del hogar), un <b className="text-tinta">{dec(media('error_ingenua_pct'), 0)} %</b>.</p>
+            <table className="mt-3 w-full text-sm">
+              <thead><tr className="border-b border-tinta text-left text-xs text-texto-2">
+                <th className="py-1.5 pr-2 font-medium">Barrio</th><th className="pr-2 text-right font-medium">Población real</th><th className="pr-2 text-right font-medium">Nuestro error</th><th className="text-right font-medium">Regla habitual</th></tr></thead>
+              <tbody>{pr.map((b) => (
+                <tr key={b.ambito} className="border-b border-gris-2">
+                  <td className="py-1.5 pr-2">{nombreBarrio(b.ambito)}</td><td className="pr-2 text-right tabular-nums">{n(b.real)}</td>
+                  <td className="pr-2 text-right font-semibold tabular-nums">{b.error_pct > 0 ? '+' : ''}{dec(b.error_pct)} %</td>
+                  <td className="text-right text-texto-3 tabular-nums">{b.error_ingenua_pct > 0 ? '+' : ''}{dec(b.error_ingenua_pct)} %</td>
+                </tr>))}
+              </tbody>
+            </table>
+            <p className="mt-2 text-xs text-texto-3">Por eso todas las cifras se dan con rango (mínimo y máximo), no como un número exacto.</p>
+          </details>
+          <p className="mt-4 text-[11px] leading-relaxed text-texto-3">Fuentes: IDEM (planeamiento 2025, suelo vacante 2026), Portal de Datos Abiertos de la Comunidad de Madrid, INE (Atlas de renta por sección), Consorcio de Transportes. Distancias en línea recta.</p>
+        </section>
+      )
+    })()}
   </>)
 
   return (

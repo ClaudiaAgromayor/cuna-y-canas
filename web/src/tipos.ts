@@ -30,6 +30,7 @@ export interface Servicio {
   unidad: string
   sup_min_m2: number
   minutos_andando: number
+  escala?: 'municipio' // residencias: se eligen en todo el municipio, no por cercanía
   existentes: {
     capa: string
     campo: string

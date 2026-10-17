@@ -52,15 +52,15 @@ SERVICIOS = {
         "capacidad": [15000, 25000, 30000], "unidad": "habitantes por centro", "sup_min_m2": 2000, "minutos_andando": 15,
         "existentes": {"capa": "centros_sanitarios", "campo": "tipo", "valores": ["Centro de salud", "Consultorio de atención primaria"]}},
     "centro_dia": {
-        "nombre": "Centro de día para mayores", "etapa": "Cuido de mis padres", "grupo": ["g65"], "tasa_uso": [0.01, 0.015, 0.03],
-        "nota_tasa": "plazas por persona de 65 y más años (supuesto, por verificar)",
+        "nombre": "Centro de día para mayores", "etapa": "Cuido de mis padres", "grupo": ["g65"], "tasa_uso": [0.01, 0.013, 0.016],
+        "nota_tasa": "plazas por persona de 65 y más años: media real de la Comunidad de Madrid (1,3 por 100), con rango 1-1,6",
         "capacidad": [40, 60, 90], "unidad": "plazas", "sup_min_m2": 1500, "minutos_andando": 15,
         "existentes": {"capa": "centros_sociales", "campo": "tipo", "valores": ["CENTROS DE DÍA"], "sector_contiene": "mayores",
                        "excluir_subtipo": ["HOGARES Y CLUBES"], "campo_capacidad": "plazas"}},
     "residencia": {
-        "nombre": "Residencia de mayores", "etapa": "Cuido de mis padres", "grupo": ["g65"], "tasa_uso": [0.04, 0.05, 0.06],
-        "nota_tasa": "plazas por persona de 65 y más años; 5 por cada 100 es la ratio de referencia que se cita habitualmente",
-        "capacidad": [80, 120, 180], "unidad": "plazas", "sup_min_m2": 4000, "minutos_andando": 30,
+        "nombre": "Residencia de mayores", "etapa": "Cuido de mis padres", "grupo": ["g65"], "tasa_uso": [0.035, 0.043, 0.05],
+        "nota_tasa": "plazas por persona de 65 y más años: media real de la Comunidad de Madrid (57.996 plazas para 1,34 millones de mayores = 4,3 por 100), con rango 3,5-5 (5 es la ratio de referencia que se suele citar)",
+        "capacidad": [80, 120, 180], "unidad": "plazas", "sup_min_m2": 4000, "minutos_andando": 180, "escala": "municipio",
         "existentes": {"capa": "centros_sociales", "campo": "tipo", "valores": ["CENTROS RESIDENCIALES"], "sector_contiene": "mayores",
                        "campo_capacidad": "plazas"}},
 }

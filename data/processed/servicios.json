@@ -102,10 +102,10 @@
   ],
   "tasa_uso": [
    0.01,
-   0.015,
-   0.03
+   0.013,
+   0.016
   ],
-  "nota_tasa": "plazas por persona de 65 y más años (supuesto, por verificar)",
+  "nota_tasa": "plazas por persona de 65 y más años: media real de la Comunidad de Madrid (1,3 por 100), con rango 1-1,6",
   "capacidad": [
    40,
    60,
@@ -134,11 +134,11 @@
    "g65"
   ],
   "tasa_uso": [
-   0.04,
-   0.05,
-   0.06
+   0.035,
+   0.043,
+   0.05
   ],
-  "nota_tasa": "plazas por persona de 65 y más años; 5 por cada 100 es la ratio de referencia que se cita habitualmente",
+  "nota_tasa": "plazas por persona de 65 y más años: media real de la Comunidad de Madrid (57.996 plazas para 1,34 millones de mayores = 4,3 por 100), con rango 3,5-5 (5 es la ratio de referencia que se suele citar)",
   "capacidad": [
    80,
    120,
@@ -146,7 +146,7 @@
   ],
   "unidad": "plazas",
   "sup_min_m2": 4000,
-  "minutos_andando": 30,
+  "minutos_andando": 180,
   "existentes": {
    "capa": "centros_sociales",
    "campo": "tipo",
@@ -155,6 +155,7 @@
    ],
    "sector_contiene": "mayores",
    "campo_capacidad": "plazas"
-  }
+  },
+  "escala": "municipio"
  }
 }

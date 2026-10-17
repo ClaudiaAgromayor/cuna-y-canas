@@ -58,7 +58,6 @@ export default function PantallaTecnica({ datos, servicios, servicioInicial, zon
   const [verDemanda, setVerDemanda] = useState(false)
   const [verZonas, setVerZonas] = useState(false)
   const [pestana, setPestana] = useState<'ajustes' | 'resultados'>('ajustes')
-  const [cifra, setCifra] = useState('')
   const [reproduciendo, setReproduciendo] = useState(false)
 
   // ▶ recorre los años de 2025 a 2040 para ver cómo llega la población y cuándo hacen falta los centros
@@ -72,7 +71,7 @@ export default function PantallaTecnica({ datos, servicios, servicioInicial, zon
   }, [reproduciendo])
 
   // cambiar de servicio reinicia los supuestos del servicio, pero conserva la zona de estudio
-  useEffect(() => { setEsc((e) => escenarioInicial(servicios[sid], datos, e.zona)); setCifra(''); setVerZonas(sid === 'centro_salud') }, [sid, datos, servicios])
+  useEffect(() => { setEsc((e) => escenarioInicial(servicios[sid], datos, e.zona)); setVerZonas(sid === 'centro_salud') }, [sid, datos, servicios])
   useEffect(() => { setGuardado(null) }, [datos])
 
   const upd = (p: Partial<Escenario>) => setEsc((e) => ({ ...e, ...p }))
@@ -210,16 +209,15 @@ export default function PantallaTecnica({ datos, servicios, servicioInicial, zon
       ? { ...e, nCentros: menos, fijados: e.fijados.filter((f) => f.id !== id) }
       : { ...e, nCentros: menos, excluidas: [...new Set([...e.excluidas, id])] })
   }
-  const aplicarCifra = (v: string) => {
-    setCifra(v)
-    const x = Number(v.replace(/\./g, '').replace(',', '.'))
-    upd({ demandaFija: v.trim() && Number.isFinite(x) && x > 0 ? x : null })
-  }
+
 
   const pct = (x: number) => (res.demandaTotal ? Math.round((100 * x) / res.demandaTotal) : 0)
   const unidad = s.unidad === 'plazas' ? 'plazas' : 'usuarios'
   const objetivo = esc.nCentros === 'auto' ? res.centrosNecesarios : esc.nCentros
-  const titular = res.propuestas.length
+  const deficitPlazas = Math.max(0, Math.round(res.demandaTotal - res.cubiertaExistentes))
+  const titular = s.escala === 'municipio' && res.propuestas.length
+    ? `Faltan unas ${n(deficitPlazas)} plazas`
+    : res.propuestas.length
     ? `${res.propuestas.length} ${res.propuestas.length === 1 ? 'centro nuevo' : 'centros nuevos'}`
     : res.sinCubrir === 0 ? 'La oferta actual basta' : res.dispersa ? 'No hace falta ningún centro nuevo' : 'Ningún centro nuevo viable'
   const zonaTxt = esc.zona ? nombreBarrio(esc.zona) : datos.indice.nombre
@@ -227,13 +225,22 @@ export default function PantallaTecnica({ datos, servicios, servicioInicial, zon
   const lugarDe = (p: { ambito: string | null; paradaMasCercana?: { nombre: string } | null }) =>
     p.ambito && p.ambito !== 'Fuera de ámbitos' ? nombreBarrio(p.ambito) : p.paradaMasCercana ? `Cerca de ${capitalizar(p.paradaMasCercana.nombre)}` : 'En la ciudad ya construida'
   // la respuesta en una frase: cuántos centros, cuándo y dónde
-  const resumen = res.propuestas.length
+  const deficit = Math.max(0, res.demandaTotal - res.cubiertaExistentes)
+  const base = s.nota_tasa && /media real/.test(s.nota_tasa) ? ` (comparado con la media de la Comunidad: ${s.grupo.includes('g65') ? `${dec(100 * s.tasa_uso[1], 1)} plazas por cada 100 mayores de 65` : ''})` : ''
+  const faltan = s.unidad === 'plazas' && deficit > 0 && !res.dispersa ? ` Faltan unas ${n(deficit)} plazas${base}.` : ''
+  // residencias: se cuentan en plazas para todo el municipio, comparando con la media de la Comunidad
+  const capEx = existentes.reduce((t, c) => t + c.capacidad, 0)
+  const ratioHoy = res.demandaTotal ? (100 * capEx * s.tasa_uso[1]) / res.demandaTotal : 0
+  const resumenMunicipio = deficit > 0
+    ? `En ${zonaTxt} faltan unas ${n(deficit)} plazas de ${s.nombre.toLowerCase()}: tiene ${dec(ratioHoy, 1)} por cada 100 mayores de 65 y la media de la Comunidad es ${dec(100 * s.tasa_uso[1], 1)}. Equivale a entre ${Math.max(1, Math.round(deficit / s.capacidad[2]))} y ${Math.max(1, Math.round(deficit / s.capacidad[0]))} residencias, según su tamaño (${s.capacidad[0]}-${s.capacidad[2]} plazas). El mapa propone dónde, sobre suelo de equipamiento vacante.`
+    : `${zonaTxt} tiene ${dec(ratioHoy, 1)} plazas por cada 100 mayores de 65, por encima de la media de la Comunidad (${dec(100 * s.tasa_uso[1], 1)}): no le faltan plazas.`
+  const resumen = s.escala === 'municipio' ? resumenMunicipio : (res.propuestas.length
     ? `${s.nombre}: ${res.propuestas.length === 1 ? 'hace falta 1 nuevo' : `hacen falta ${res.propuestas.length} nuevos`} en ${zonaTxt} para ${anio}. `
       + res.propuestas.slice(0, 3).map((p, i) => {
         const h = temporal.hitos[i]
         return `${i === 0 ? 'El 1.º' : `el ${i + 1}.º`} hace falta ${h ? (h.anio === ANIO_BASE ? 'ya hoy' : `hacia ${h.anio}`) : `en ${anio}`}, ${((l) => (l.startsWith('Cerca') ? 'c' + l.slice(1) : l.startsWith('En la') ? 'e' + l.slice(1) : `en ${l}`))(lugarDe(p))}`
       }).join('; ') + '.'
-    : res.sinCubrir === 0 ? `Los centros que ya hay en ${zonaTxt} bastan para la demanda de ${anio}.` : res.dispersa ? `No hace falta ningún centro nuevo en ${zonaTxt}: los actuales ya atienden el ${pct(res.demandaTotal - res.sinCubrir)} % y lo que falta (${n(res.sinCubrir)} ${unidad}) está repartido; puede cubrirse ampliando los que hay.` : `Con estos supuestos no hay ninguna parcela donde un centro nuevo tenga suficiente demanda cerca.`
+    : res.sinCubrir === 0 ? `Los centros que ya hay en ${zonaTxt} bastan para la demanda de ${anio}.` : res.dispersa ? `No hace falta ningún centro nuevo en ${zonaTxt}: los actuales ya atienden el ${pct(res.demandaTotal - res.sinCubrir)} % y lo que falta (${n(res.sinCubrir)} ${unidad}) está repartido; puede cubrirse ampliando los que hay.` : `Con estos supuestos no hay ninguna parcela donde un centro nuevo tenga suficiente demanda cerca.`) + faltan
 
   const panelResultados = (<>
     <div className="border-b border-linea px-6 pt-6 pb-5">
@@ -268,12 +275,12 @@ export default function PantallaTecnica({ datos, servicios, servicioInicial, zon
       {temporal.hitos.length ? (
         <>
           <ol className="relative ml-1 border-l-2 border-linea">
-            {temporal.hitos.map((h) => (
-              <li key={h.centro} className="relative pb-2.5 pl-4 last:pb-0 text-sm">
+            {[...new Set(temporal.hitos.map((h) => h.anio))].map((a) => { const hs = temporal.hitos.filter((h) => h.anio === a); const h = { ...hs[0], n: hs.length }; return (
+              <li key={a} className="relative pb-2.5 pl-4 last:pb-0 text-sm">
                 <span className="absolute top-1 -left-[7px] h-3 w-3 bg-rojo" />
-                <b className="tabular-nums">{h.anio === ANIO_BASE ? 'Ya hoy' : h.anio}</b> · {h.centro === 1 ? 'el primer centro nuevo' : `el ${h.centro}.º centro nuevo`}{h.anio === ANIO_BASE ? ' (déficit actual)' : ''}
+                <b className="tabular-nums">{h.anio === ANIO_BASE ? 'Ya hoy' : h.anio}</b> · {h.n > 1 ? `${h.n} centros nuevos${h.centro > 1 ? ' más' : ''}` : h.centro === 1 ? 'el primer centro nuevo' : `el ${h.centro}.º centro nuevo`}{h.anio === ANIO_BASE ? ' (déficit actual)' : ''}
               </li>
-            ))}
+            ) })}
           </ol>
           <p className="mt-2 text-xs text-texto-2">Si los barrios nuevos se completan en {aniosLlenado} años. {temporal.cambia
             ? <>La mejor parcela <b className="text-tinta">cambia</b> entre la primera etapa ({temporal.primero?.anio}) y la última ({ANIO_FIN}): conviene reservar las dos.</>
@@ -424,19 +431,14 @@ export default function PantallaTecnica({ datos, servicios, servicioInicial, zon
                 onChange={(v) => upd({ factorNatalidad: v })} ayuda="Más o menos nacimientos que hoy (afecta a 0-5 años)" />
               <Deslizador etiqueta="Llegada de personas" valor={esc.factorFuturo} min={0.5} max={1.5} paso={0.05} formato={(v) => `${v >= 1 ? '+' : ''}${Math.round((v - 1) * 100)} %`}
                 onChange={(v) => upd({ factorFuturo: v })} ayuda="Más o menos población nueva de la que prevé el modelo" />
-              <label className="block text-sm">
-                <span className="text-texto-2">O escribe una cifra concreta de {unidad}</span>
-                <div className="mt-1 flex">
-                  <input inputMode="numeric" className="h-9 min-w-0 flex-1 border border-tinta px-2.5 tabular-nums" placeholder={`p. ej. ${s.unidad === 'plazas' ? '1.000' : '20.000'}`} value={cifra} onChange={(e) => aplicarCifra(e.target.value)} />
-                  {cifra && <button type="button" className="h-9 border border-l-0 border-tinta px-3 text-xs hover:bg-gris-1" onClick={() => aplicarCifra('')}>Usar el modelo</button>}
-                </div>
-              </label>
             </div>
           </Paso>
 
           <Paso num={3} titulo="Condiciones del servicio">
-            <Deslizador etiqueta="Tiempo máximo a pie" valor={esc.minutos} min={5} max={30} paso={1} formato={(v) => `${v} min`}
-              onChange={(v) => upd({ minutos: v })} ayuda={`${n(esc.minutos * 80)} m en línea recta`} />
+            {s.escala === 'municipio'
+              ? <p className="mb-3 text-sm text-texto-2">Las residencias no se eligen por cercanía: se calcula para <b className="text-tinta">todo el municipio</b>.</p>
+              : <Deslizador etiqueta="Tiempo máximo a pie" valor={esc.minutos} min={5} max={30} paso={1} formato={(v) => `${v} min`}
+                  onChange={(v) => upd({ minutos: v })} ayuda={`${n(esc.minutos * 80)} m en línea recta`} />}
             <Deslizador etiqueta="Centros nuevos" valor={objetivo} min={0} max={Math.max(10, res.centrosNecesarios)}
               paso={1} formato={(v) => (esc.nCentros === 'auto' ? `${v} · automático` : String(v))} onChange={(v) => upd({ nCentros: v })}
               ayuda={esc.nCentros === 'auto' ? 'Los que hacen falta según la demanda' : undefined} />
@@ -484,18 +486,18 @@ export default function PantallaTecnica({ datos, servicios, servicioInicial, zon
           }}
           onArrastrar={arrastrar} onClickMarcador={modo === 'quitar' ? quitarCentro : undefined} />
         {/* barra de edición: el mapa solo cambia los centros si se elige una acción */}
-        <div className="absolute top-3 left-1/2 z-10 flex -translate-x-1/2 border border-tinta bg-white text-sm shadow-sm">
+        <div className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 border border-tinta bg-white text-xs shadow-sm">
           {([['ver', 'Ver'], ['anadir', '+ Añadir centro'], ['quitar', '− Quitar centro']] as const).map(([m, t]) => (
             <button key={m} type="button" aria-pressed={modo === m} onClick={() => setModo(m)}
-              className={`px-3 py-1.5 font-medium ${modo === m ? 'bg-tinta text-white' : 'hover:bg-gris-1'} ${m !== 'ver' ? 'border-l border-tinta' : ''}`}>{t}</button>
+              className={`px-2.5 py-1 font-medium ${modo === m ? 'bg-tinta text-white' : 'hover:bg-gris-1'} ${m !== 'ver' ? 'border-l border-tinta' : ''}`}>{t}</button>
           ))}
         </div>
         {(esc.fijados.length > 0 || esc.excluidas.length > 0 || esc.nCentros !== 'auto') && (
           <button type="button" onClick={() => { upd({ nCentros: 'auto', fijados: [], excluidas: [] }); setCambio(null); setModo('ver') }}
-            className="absolute top-3 right-14 z-10 border border-linea bg-white px-2.5 py-1.5 text-xs font-medium shadow-sm hover:border-tinta">Volver a la propuesta automática</button>
+            className="absolute right-3 bottom-8 z-10 border border-linea bg-white px-2.5 py-1 text-xs font-medium shadow-sm hover:border-tinta">Volver a la propuesta automática</button>
         )}
         {modo !== 'ver' && (
-          <div className="absolute top-14 left-1/2 z-10 -translate-x-1/2 bg-tinta px-3 py-1.5 text-xs text-white">
+          <div className="absolute bottom-[4.25rem] left-1/2 z-10 -translate-x-1/2 bg-tinta px-3 py-1.5 text-xs text-white">
             {modo === 'anadir' ? 'Pulsa una parcela azul para poner ahí un centro nuevo.' : 'Pulsa un centro rojo (o su parcela) para quitarlo.'}
           </div>
         )}

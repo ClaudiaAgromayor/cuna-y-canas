@@ -3,6 +3,7 @@ import type { FeatureCollection } from 'geojson'
 import Mapa, { type CapaMapa } from './Mapa'
 import { CATS_DE_CRITERIO, CRITERIOS, enFrase, ESCALA, formatoCriterio, lista, posicion, puntuar, SITUACIONES, TAMANOS, TOP, ZONAS, type Puntuado, type ResumenMunicipio } from './criterios'
 import FichaMunicipio from './FichaMunicipio'
+import PlanoPublico from './PlanoPublico'
 import type { MunicipioIndice, Rango, Servicio, ServicioId } from './tipos'
 import { Icono } from './iconos'
 import { Aviso, Boton, dec, n, Leyenda } from './ui'
@@ -16,7 +17,6 @@ interface Props {
   situacionesIniciales?: string[]
   selInicial?: string
   verBarrios: (cod: string, cats: string[]) => void
-  planificar: (cod: string) => void
 }
 
 const BASE = import.meta.env.BASE_URL
@@ -27,7 +27,7 @@ const BORDE_TONO: Record<string, string> = { neutro: 'border-texto-3', ok: 'bord
 export interface Futuro { pob: Rango; items: { s: Servicio; plazas: number[]; centros: number[] }[] }
 export interface Sitio { colegios: number; grandes: number; titulo: string; tono: string }
 
-export default function PantallaMunicipios({ servicios, detallados, verBarrios, planificar, situacionesIniciales, selInicial }: Props) {
+export default function PantallaMunicipios({ servicios, detallados, verBarrios, situacionesIniciales, selInicial }: Props) {
   const [resumen, setResumen] = useState<Resumen | null>(null)
   const [limites, setLimites] = useState<FeatureCollection | null>(null)
   const [situaciones, setSituaciones] = useState<string[]>(situacionesIniciales ?? [])
@@ -138,7 +138,7 @@ export default function PantallaMunicipios({ servicios, detallados, verBarrios, 
             situaciones={situaciones} limites={limites} puestos={porCod}
             volver={() => setSel(null)} comparando={comparar.includes(elegido.m.cod_ine)}
             alternarComparar={() => setComparar((c) => c.includes(elegido.m.cod_ine) ? c.filter((x) => x !== elegido.m.cod_ine) : [...c, elegido.m.cod_ine].slice(-3))}
-            detallado={detallado(elegido.m.cod_ine)} verBarrios={() => verBarrios(elegido.m.cod_ine, [...new Set(criterios.flatMap((c) => CATS_DE_CRITERIO[c] ?? []))])} planificar={() => planificar(elegido.m.cod_ine)} />
+            detallado={detallado(elegido.m.cod_ine)} verBarrios={() => verBarrios(elegido.m.cod_ine, [...new Set(criterios.flatMap((c) => CATS_DE_CRITERIO[c] ?? []))])} indice={detallados.find((d) => d.cod_ine === elegido.m.cod_ine)} />
         ) : (
           <>
             <div className="px-6 pt-7 pb-2">
@@ -268,12 +268,13 @@ export default function PantallaMunicipios({ servicios, detallados, verBarrios, 
 
 /* ---------- ficha de un municipio ---------- */
 
-function Ficha({ r, total, criterios, modelo, servicios, situaciones, limites, puestos, volver, comparando, alternarComparar, detallado, verBarrios, planificar }: {
+function Ficha({ r, total, criterios, modelo, servicios, situaciones, limites, puestos, volver, comparando, alternarComparar, detallado, verBarrios, indice }: {
   r: Puntuado & { puesto: number }; total: number; criterios: string[]; modelo: Modelo | null; servicios: Record<ServicioId, Servicio>
   situaciones: string[]; limites: FeatureCollection; puestos: Map<string, { puesto: number }>
-  volver: () => void; comparando: boolean; alternarComparar: () => void; detallado: boolean; verBarrios: () => void; planificar: () => void
+  volver: () => void; comparando: boolean; alternarComparar: () => void; detallado: boolean; verBarrios: () => void; indice?: MunicipioIndice
 }) {
   const m = r.m
+  const [plano, setPlano] = useState(false)
   const cs = CRITERIOS.filter((c) => criterios.includes(c.id))
   // lo que viene: población que traerán las viviendas previstas y servicios que harán falta (rangos)
   const futuro = useMemo((): Futuro | null => {
@@ -409,7 +410,8 @@ function Ficha({ r, total, criterios, modelo, servicios, situaciones, limites, p
             )}
           </>
         ) : <p className="text-sm text-texto-2">{m.planeamiento_en_idem ? 'El planeamiento vigente no prevé nuevas viviendas en ámbitos de desarrollo.' : 'El planeamiento de este municipio no está en la base refundida de la IDEM.'}</p>}
-        {detallado && <button type="button" className="no-imprimir mt-3 text-sm font-medium text-rojo underline underline-offset-2" onClick={planificar}>Ver dónde podrían ir los nuevos centros →</button>}
+        {detallado && indice && <button type="button" className="no-imprimir mt-3 text-sm font-medium text-rojo underline underline-offset-2" onClick={() => setPlano(true)}>Ver dónde podrían ir los nuevos centros →</button>}
+        {plano && indice && <PlanoPublico indice={indice} servicios={servicios} cerrar={() => setPlano(false)} />}
       </section>
 
       <section className="border-t border-linea px-6 py-5 text-sm">

@@ -125,7 +125,7 @@ export default function App() {
         {servicios && pantalla === 'inicio' && <PantallaInicio servicios={servicios} ir={ir} tecnico={!!sesion} />}
         {servicios && pantalla === 'municipios' && (
           <PantallaMunicipios key={`m-${entrada.clave}`} servicios={servicios} detallados={indice} situacionesIniciales={entrada.situaciones} selInicial={entrada.sel}
-            verBarrios={(c, cats) => { setEntrada({ cats, clave: Date.now() }); irA('ciudadana', c) }} planificar={(c) => ir({ a: 'tecnica', cod: c })} />
+            verBarrios={(c, cats) => { setEntrada({ cats, clave: Date.now() }); irA('ciudadana', c) }} />
         )}
         {servicios && conSelector && !datos && !error && <div className="m-5 text-sm text-texto-2">Cargando {muni?.nombre ?? 'datos'}…</div>}
         {servicios && datos && pantalla === 'tecnica' && sesion && <PantallaTecnica key={`${datos.indice.cod_ine}-${entrada.clave}`} datos={datos} servicios={servicios} servicioInicial={entrada.servicio} zonaInicial={entrada.zona} />}

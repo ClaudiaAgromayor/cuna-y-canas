@@ -9,7 +9,7 @@ import type { AmbitoDemanda, DatosMunicipio, Servicio, ServicioId } from './tipo
 import { Icono, iconoSvg } from './iconos'
 import { Aviso, capitalizar, dec, Estado, imprimirConNombre, Linea, n, nombreBarrio, type EstadoId, Leyenda } from './ui'
 
-interface Props { datos: DatosMunicipio; servicios: Record<ServicioId, Servicio>; barrioInicial?: string; catsIniciales?: string[] }
+interface Props { datos: DatosMunicipio; servicios: Record<ServicioId, Servicio>; barrioInicial?: string; catsIniciales?: string[]; verFicha?: () => void }
 
 /* ---------- qué se puede buscar ---------- */
 
@@ -91,7 +91,7 @@ function textoViviendas(p: Record<string, unknown>) {
   return `${viv}${extra.length ? `<br>${extra.join(' · ')}` : ''}${lo && !v ? '<br><span style="font-size:11px">Estimado con la superficie × edificabilidad del planeamiento (IDEM) y 120-180 m² por vivienda unifamiliar u 80-110 colectiva</span>' : ''}`
 }
 
-export default function PantallaCiudadana({ datos, servicios, barrioInicial, catsIniciales }: Props) {
+export default function PantallaCiudadana({ datos, servicios, barrioInicial, catsIniciales, verFicha }: Props) {
   const [lugar, setLugar] = useState<Lugar | null>(null)
   const [verNueva, setVerNueva] = useState(true) // capa de vivienda nueva posible (solares y suelo público en venta)
   // Escape (o la X de la ventanita): quita el sitio elegido y cierra la ventanita, de una vez
@@ -352,6 +352,7 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial, cat
         <div className="px-6 pt-6 pb-2">
           <div className="text-xs font-medium tracking-wide text-texto-3 uppercase">{datos.indice.nombre}</div>
           <h1 className="mt-1 text-[26px] leading-tight font-semibold tracking-tight">Qué hay y qué viene en cada barrio</h1>
+          {verFicha && <button type="button" onClick={verFicha} className="no-imprimir mt-2 text-sm font-medium text-rojo underline underline-offset-2">Ficha de {datos.indice.nombre}: todos sus datos y PDF →</button>}
         </div>
 
         <section className="no-imprimir px-6 pt-4">

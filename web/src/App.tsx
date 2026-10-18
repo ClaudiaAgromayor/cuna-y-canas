@@ -129,7 +129,7 @@ export default function App() {
         )}
         {servicios && conSelector && !datos && !error && <div className="m-5 text-sm text-texto-2">Cargando {muni?.nombre ?? 'datos'}…</div>}
         {servicios && datos && pantalla === 'tecnica' && sesion && <PantallaTecnica key={`${datos.indice.cod_ine}-${entrada.clave}`} datos={datos} servicios={servicios} servicioInicial={entrada.servicio} zonaInicial={entrada.zona} />}
-        {servicios && datos && pantalla === 'ciudadana' && <PantallaCiudadana key={`${datos.indice.cod_ine}-${entrada.clave}`} datos={datos} servicios={servicios} barrioInicial={entrada.barrio} catsIniciales={entrada.cats} />}
+        {servicios && datos && pantalla === 'ciudadana' && <PantallaCiudadana key={`${datos.indice.cod_ine}-${entrada.clave}`} datos={datos} servicios={servicios} barrioInicial={entrada.barrio} catsIniciales={entrada.cats} verFicha={() => ir({ a: 'municipios', sel: datos.indice.cod_ine })} />}
       </main>
       {login && <Login indice={indice} alCerrar={() => setLogin(null)} alEntrar={entrar} codSugerido={login.despues && 'cod' in login.despues ? login.despues.cod : cod} />}
     </div>

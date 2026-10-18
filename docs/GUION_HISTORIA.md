@@ -37,10 +37,9 @@ Es el **speech y la demo del inicio** de la presentación: una familia busca dó
 
 ## LA HISTORIA (0:00 – 4:30)
 
-### 0:00 – 0:15 · Bienvenida (Laura, con la portada en pantalla)
-> **Laura:** "Bienvenidos a Cuna y Canas. Buenos días. Cuna y Canas cuenta qué hace falta y qué viene en tu barrio, desde la cuna hasta las canas, con los datos abiertos de la Comunidad de Madrid. Y como los datos se entienden mejor con una persona detrás, os lo cuento con una historia: la mía."
-
 ### 0:00 – 0:30 · Gancho (Laura, con el dibujo en la mano)
+> **Laura** *(con la portada en pantalla, una sola frase):* "Bienvenidos a Cuna y Canas: los datos abiertos de Madrid, de la cuna a las canas, contados con una historia."
+> *(saca el dibujo)*
 > "Esto lo ha dibujado mi hija Martina, cinco años. Es nuestra casa nueva: tiene un cole al lado, un columpio y aquí, con el bastón, los abuelos. *(pausa)* Solo tiene un problema: no sabemos dónde está esa casa."
 > "Somos mi marido, Martina, yo, el bebé que viene en septiembre —que ya tiene más ropa que yo— y mis padres, que quieren venirse cerca, pero con condiciones: mi madre quiere un hogar de mayores para jugar al dominó con sus amigas, y mi padre, que anda regular, un centro de día por las mañanas. Y los dos lo tienen claro: a una residencia, todavía no."
 

@@ -51,7 +51,7 @@ export default function PlanoPublico({ indice, servicios, cerrar }: { indice: Mu
     const libres: FeatureCollection = { type: 'FeatureCollection', features: parcelas.filter((f) => f.properties.area_m2 >= s.sup_min_m2) }
     return [
       { id: 'barrios', datos: datos.ambitos, estilo: { type: 'line', paint: { 'line-color': '#8a8a8a', 'line-width': 1.2, 'line-dasharray': [3, 2] } } },
-      { id: 'radios', datos: radio(res.propuestas), estilo: { type: 'fill', paint: { 'fill-color': '#de0029', 'fill-opacity': 0.1 } } },
+      { id: 'radios', datos: radio(s.escala === 'municipio' ? [] : res.propuestas), estilo: { type: 'fill', paint: { 'fill-color': '#de0029', 'fill-opacity': 0.1 } } },
       { id: 'libres', datos: libres, estilo: { type: 'fill', paint: { 'fill-color': '#2b5c8a', 'fill-opacity': 0.55 } },
         popup: (p) => `<b>Suelo vacante de equipamiento</b><br>${n(Number(p.area_m2))} m² · cabría un centro` },
       { id: 'existentes', datos: ex, estilo: { type: 'circle', paint: { 'circle-radius': 5.5, 'circle-color': '#131313', 'circle-stroke-width': 2, 'circle-stroke-color': '#fff' } },
@@ -60,9 +60,19 @@ export default function PlanoPublico({ indice, servicios, cerrar }: { indice: Mu
   }, [datos, res, existentes, parcelas, s])
   const marcadores: Marcador[] = useMemo(() => (res?.propuestas ?? []).map((p) => ({ id: p.id, lon: p.lon, lat: p.lat, texto: String(p.orden), color: '#de0029', titulo: lugarDe(p) })), [res]) // eslint-disable-line react-hooks/exhaustive-deps
 
+  // encuadre: los puntos de demanda y las parcelas del municipio (el del índice abarca demasiado)
+  const encuadre = useMemo<[number, number, number, number] | null>(() => {
+    if (!datos) return null
+    const xs: number[] = [], ys: number[] = []
+    datos.demandaPuntos.features.forEach((f) => { xs.push(f.geometry.coordinates[0]); ys.push(f.geometry.coordinates[1]) })
+    parcelas.forEach((f) => { xs.push(f.properties.lon); ys.push(f.properties.lat) })
+    if (!xs.length) return datos.encuadre
+    const b: [number, number, number, number] = [Math.min(...xs), Math.min(...ys), Math.max(...xs), Math.max(...ys)]
+    return b[2] - b[0] > 0.01 && b[3] - b[1] > 0.008 ? b : datos.encuadre
+  }, [datos, parcelas])
   const unidad = s.unidad === 'plazas' ? 'plazas' : 'usuarios'
   const frase = !res ? '' : res.propuestas.length
-    ? `Con la población prevista para ${ANIO}, ${indice.nombre} necesitaría ${res.propuestas.length === 1 ? 'un centro nuevo' : `${res.propuestas.length} centros nuevos`} de ${s.nombre.toLowerCase()}${hoy && hoy.propuestas.length ? `; ${hoy.propuestas.length === 1 ? 'uno haría falta ya hoy' : `${hoy.propuestas.length} harían falta ya hoy`}` : ''}. En el mapa, en rojo, dónde podrían ir sobre suelo público vacante.`
+    ? `Con la población prevista para ${ANIO}, en ${indice.nombre} ${res.propuestas.length === 1 ? 'haría falta 1 nuevo' : `harían falta ${res.propuestas.length} nuevos`} (${s.nombre.toLowerCase()})${hoy && hoy.propuestas.length ? (res.propuestas.length === 1 ? ', y haría falta ya hoy' : `; ${hoy.propuestas.length === 1 ? 'uno haría falta ya hoy' : `${hoy.propuestas.length} harían falta ya hoy`}`) : ''}. En el mapa, en rojo, dónde podrían ir sobre suelo público vacante.`
     : res.sinCubrir === 0 ? `Los centros que ya hay en ${indice.nombre} bastan para la demanda prevista en ${ANIO}.`
     : `No hace falta ningún centro nuevo de ${s.nombre.toLowerCase()}: los actuales atienden la mayor parte y lo que falta está repartido, así que se cubriría ampliando los que ya hay.`
 
@@ -93,7 +103,7 @@ export default function PlanoPublico({ indice, servicios, cerrar }: { indice: Mu
                   {res.propuestas.map((p) => (
                     <li key={p.id} className="flex items-start gap-3 text-sm">
                       <span className="flex h-6 w-6 shrink-0 items-center justify-center bg-rojo text-xs font-semibold text-white">{p.orden}</span>
-                      <span className="min-w-0 flex-1"><b>{lugarDe(p)}</b><span className="block text-xs text-texto-3">{p.area_m2 != null ? `${n(p.area_m2)} m² · ` : ''}atendería a unos {n(p.captada)} {unidad}</span></span>
+                      <span className="min-w-0 flex-1"><b>{lugarDe(p)}</b><span className="block text-xs text-texto-3">{p.area_m2 != null ? `${n(p.area_m2)} m² · ` : ''}atendería a {unidad === 'plazas' ? 'unas' : 'unos'} {n(p.captada)} {unidad}</span></span>
                     </li>
                   ))}
                 </ol>
@@ -111,7 +121,7 @@ export default function PlanoPublico({ indice, servicios, cerrar }: { indice: Mu
           )}
         </div>
         <div className="relative min-h-[300px] flex-1">
-          {datos && <Mapa bbox={datos.encuadre} capas={capas} marcadores={marcadores} />}
+          {datos && encuadre && <Mapa bbox={encuadre} capas={capas} marcadores={marcadores} />}
         </div>
       </div>
     </div>,

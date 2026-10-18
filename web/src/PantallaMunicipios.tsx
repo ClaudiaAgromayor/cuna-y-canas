@@ -133,7 +133,7 @@ export default function PantallaMunicipios({ servicios, detallados, verBarrios, 
       <aside className="order-2 min-h-0 flex-1 overflow-y-auto border-r border-linea md:order-1">
         {verComparacion && comparar.length > 0 ? (
           <Comparacion lista={comparar.map((c) => porCod.get(c) ?? { m: resumen.municipios.find((x) => x.cod_ine === c)!, puntos: NaN, detalle: {}, puesto: 0 })}
-            criterios={criterios} volver={() => setVerComparacion(false)} quitar={(c) => setComparar(comparar.filter((x) => x !== c))} />
+            criterios={criterios} volver={() => setVerComparacion(false)} abrir={(c) => { setSel(c); setVerComparacion(false) }} quitar={(c) => setComparar(comparar.filter((x) => x !== c))} />
         ) : elegido ? (
           <Ficha r={elegido} total={ranking.length} criterios={criterios} modelo={resumen.modelo} servicios={servicios}
             situaciones={situaciones} limites={limites} puestos={porCod}
@@ -430,7 +430,7 @@ function Ficha({ r, total, criterios, modelo, servicios, situaciones, limites, p
 
 /* ---------- comparación lado a lado ---------- */
 
-function Comparacion({ lista, criterios, volver, quitar }: { lista: (Puntuado & { puesto?: number })[]; criterios: string[]; volver: () => void; quitar: (c: string) => void }) {
+function Comparacion({ lista, criterios, volver, quitar, abrir }: { lista: (Puntuado & { puesto?: number })[]; criterios: string[]; volver: () => void; quitar: (c: string) => void; abrir: (c: string) => void }) {
   const filas: [string, (m: ResumenMunicipio) => number | null, (v: number) => string, boolean][] = [
     ['Habitantes', (m) => m.poblacion, n, true],
     ['Crecimiento (%)', (m) => m.crecimiento_pct, (v) => dec(v), true],
@@ -461,7 +461,7 @@ function Comparacion({ lista, criterios, volver, quitar }: { lista: (Puntuado & 
                 <th className="py-2 pr-3 font-medium text-texto-2"></th>
                 {lista.map((r) => (
                   <th key={r.m.cod_ine} className="py-2 pr-3 align-bottom font-semibold">
-                    {r.m.nombre}
+                    <button type="button" title={`Ver la ficha de ${r.m.nombre}`} onClick={() => abrir(r.m.cod_ine)} className="text-left font-semibold underline decoration-linea underline-offset-2 hover:text-rojo">{r.m.nombre}</button>
                     {criterios.length > 0 && Number.isFinite(r.puntos) && <div className="text-xs font-normal text-texto-3">{Math.round(r.puntos)} % coincidencia</div>}
                     <button type="button" className="text-xs font-normal text-texto-3 underline" onClick={() => quitar(r.m.cod_ine)}>quitar</button>
                   </th>

@@ -34,11 +34,13 @@ Antes que nosotros: Oportunia, Alcanza, Aterriza y CERCA DE TI. Justo después: 
 1. **Inicio → "Busco dónde vivir".**
 2. Marca **"Tengo un bebé o espero uno"** y **"Trabajo en Madrid"**. El mapa cambia al momento.
    > "Le digo mi situación y me ordena los 179 municipios. Y me explica qué mira: escuela infantil pública, centro de salud, hospital… Y para el trabajo no me premia vivir pegada a Madrid, sino **llegar bien**: si hay tren o Metro, cuántos autobuses van directos y la zona del abono."
-3. Abre **Getafe** → **Comparar**. Vuelve y abre **Navalcarnero** → **Comparar** → **Ver comparación**.
-   > "Getafe: Cercanías y Metro, abono B1. Navalcarnero: más barato de vivienda seguro, pero sin tren, zona B3… y con 9 autobuses directos."
+3. Mirar la lista: arriba salen **Leganés, Alcorcón y Madrid**.
+   > "Me salen las ciudades grandes, y yo no quiero una ciudad: quiero algo más pequeño."
+   Pulsar el filtro **20.000 – 50.000 hab.** → salen **San Fernando de Henares, Torrelodones y Navalcarnero**. Abrir **San Fernando** → **Comparar**; volver, abrir **Navalcarnero** → **Comparar** → **Ver comparación**.
+   > "San Fernando: Metro, abono B1, 15 autobuses directos. Navalcarnero: sin tren, abono B3, 9 autobuses directos… pero fijaos en esto."
 4. En la ficha de **Navalcarnero**, bajar a **"Lo que viene"**:
-   > "Y esto no lo he visto en ningún portal inmobiliario: su plan urbanístico prevé **21.000 viviendas**. Puede casi duplicarse. ¿Habrá plaza en la escuela infantil cuando llegue toda esa gente? Aquí me dice cuántas harán falta."
-5. **Ficha PDF** de Navalcarnero y de Getafe (enseñar la primera página un segundo).
+   > "Y esto no lo he visto en ningún portal inmobiliario: San Fernando prevé 200 viviendas nuevas; Navalcarnero, **21.434**. Puede casi duplicarse. ¿Habrá plaza en la escuela infantil cuando llegue toda esa gente? Aquí me dice cuántas harán falta."
+5. **Ficha PDF** de San Fernando y de Navalcarnero (enseñar la primera página un segundo).
    > "Me llevo las dos fichas para decidirlo con mi pareja."
 6. *(Opcional si va bien de tiempo)* **"Ver el mapa de Getafe"** → Barrios → **Los Molinos**: "3 de las 8 cosas que busco a 10 minutos; no hay centro de salud".
 

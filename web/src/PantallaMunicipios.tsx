@@ -279,7 +279,7 @@ function Ficha({ r, total, criterios, modelo, servicios, situaciones, limites, p
   // lo que viene: población que traerán las viviendas previstas y servicios que harán falta (rangos)
   const futuro = useMemo((): Futuro | null => {
     if (!modelo || !m.viviendas_previstas) return null
-    const hv = modelo.parametros.hab_por_vivienda, men = modelo.parametros.pct_menores18, may = modelo.parametros.pct_mayores65, rep = modelo.reparto_menores
+    const hv = m.hab_por_vivienda ?? modelo.parametros.hab_por_vivienda, men = modelo.parametros.pct_menores18, may = modelo.parametros.pct_mayores65, rep = modelo.reparto_menores
     const pob = hv.map((h) => m.viviendas_previstas! * h) as Rango
     const grupo = (k: string) => pob.map((p, i) => (k === 'g65' ? (p * may[i]) / 100 : k === 'pob' ? p : (p * men[i] * (rep[k] ?? 0)) / 100))
     const necesita = (sid: ServicioId) => {
@@ -395,7 +395,7 @@ function Ficha({ r, total, criterios, modelo, servicios, situaciones, limites, p
                 </li>
               ))}
             </ul>
-            <p className="mt-2 text-xs text-texto-3">Estimación con el modelo calibrado en barrios nuevos de {modelo?.municipio}. Es lo que harán falta por la población nueva, además de lo que ya existe.</p>
+            <p className="mt-2 text-xs text-texto-3">Estimación con el modelo calibrado con {modelo?.municipio}, con su rango. Es lo que harán falta por la población nueva, además de lo que ya existe.</p>
             {sitio && (
               <div className={`mt-4 border-l-[3px] bg-gris-1 px-4 py-3 text-sm ${BORDE_TONO[sitio.tono]}`}>
                 <div className="font-semibold">¿Hay sitio para lo que viene? {sitio.titulo}</div>

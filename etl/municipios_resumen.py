@@ -18,6 +18,7 @@ import shapely
 import numpy as np
 import pandas as pd
 
+import modelo_poblacion as MP
 from comun import PROCESSED, RAW, descargar_ckan, leer_csv, sin_tildes
 
 M = 25830
@@ -305,11 +306,17 @@ def main() -> None:
     R = R[R["poblacion"].notna()]  # 998 y 999 son terrenos comuneros sin población
     R = R.drop(columns=["poblacion_inicio"]).round(2)
     filas = [{"cod_ine": c, **{k: (None if (isinstance(v, float) and np.isnan(v)) else (v.item() if hasattr(v, "item") else v)) for k, v in r.items()}} for c, r in R.iterrows()]
-    # parámetros del modelo de demanda (calibrados con barrios nuevos de Getafe) para estimar lo que hará falta
-    calib = next(PROCESSED.glob("065-*/demanda.json"), None)
-    parametros = json.loads(calib.read_text(encoding="utf-8"))["calibracion"] if calib else None
-    if parametros:
-        parametros = {k: parametros[k] for k in ("municipio", "parametros", "reparto_menores", "criterio")}
+    # modelo de población (etl/modelo_poblacion.py): habitantes por vivienda completa de cada municipio, con su rango, y parámetros comunes
+    mp = MP.cargar()
+    for f in filas:
+        carpeta = next(PROCESSED.glob(f"{f['cod_ine']}-*"), None)
+        rasgos = (MP.rasgos_municipio(carpeta) if carpeta else None) or {"tam": mp["tam_mediana_global"], "men15": f["pct_menores15"] or mp["men15_mediana_global"]}
+        f["hab_por_vivienda"] = MP.hab_por_vivienda(mp, rasgos)
+    getafe = next(PROCESSED.glob("065-*/demanda.json"), None)
+    reparto = json.loads(getafe.read_text(encoding="utf-8"))["calibracion"]["reparto_menores"] if getafe else None
+    parametros = {"municipio": f"{mp['calibracion']['n_barrios']} barrios nuevos de {mp['calibracion']['n_municipios']} municipios",
+                  "parametros": {"hab_por_vivienda": MP.hab_por_vivienda(mp, None), "pct_menores18": mp["pct_menores18"], "pct_mayores65": mp["pct_mayores65"]},
+                  "reparto_menores": reparto, "criterio": mp["calibracion"]["criterio"], "prueba": mp["resumen_prueba"]}
     doc = {"generado": pd.Timestamp.now().strftime("%Y-%m-%d"), "n": len(filas), "modelo": parametros,
            "municipios": sorted(filas, key=lambda x: x["nombre"])}
     (PROCESSED / "municipios_resumen.json").write_text(json.dumps(doc, ensure_ascii=False), encoding="utf-8")

@@ -80,13 +80,14 @@ export interface AmbitoDemanda {
 
 export interface PruebaPasado {
   ambito: string
+  municipio?: string
   anio: number
   real: number
   prediccion: number
   error_pct: number
   prediccion_ingenua: number
   error_ingenua_pct: number
-  rango: [number, number]
+  rango?: [number, number]
   dentro_del_rango: boolean
 }
 
@@ -95,12 +96,15 @@ export interface Demanda {
   modelo: string
   calibracion: {
     municipio: string
+    n_barrios?: number
+    n_municipios?: number
+    resumen_prueba?: { error_medio_pct: number; error_mediano_pct: number; error_regla_habitual_pct: number; dentro_del_rango_pct: number }
     fuente: string
     criterio: string
-    barrios: { ambito: string; viviendas: number; poblacion: number; hab_por_vivienda: number; serie: Record<string, number> }[]
+    barrios: { ambito: string; viviendas: number; poblacion: number; hab_por_vivienda: number }[]
     parametros: { hab_por_vivienda: Rango; pct_menores18: Rango; pct_mayores65: Rango }
     reparto_menores: Record<string, number>
-    tam_hogar_mediano_municipio: number
+    rasgos_municipio?: { tam: number; men15: number }
   }
   prueba_con_el_pasado: PruebaPasado[]
   ambitos: AmbitoDemanda[]

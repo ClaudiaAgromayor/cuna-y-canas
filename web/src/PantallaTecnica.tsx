@@ -359,23 +359,28 @@ export default function PantallaTecnica({ datos, servicios, servicioInicial, zon
 
     {datos.demanda && (() => {
       const pr = datos.demanda.prueba_con_el_pasado
+      const cal = datos.demanda.calibracion
+      const rp = cal.resumen_prueba
       const media = (k: 'error_pct' | 'error_ingenua_pct') => pr.length ? pr.reduce((t, b) => t + Math.abs(b[k]), 0) / pr.length : 0
       return (
         <section className="px-6 py-5">
           <details>
             <summary className="flex cursor-pointer items-center gap-2 font-semibold"><Icono nombre="validar" className="h-5 w-5" />¿Son fiables estas cifras?<span className="ml-auto text-xs font-normal text-texto-3">ver la prueba</span></summary>
-            <p className="mt-2 text-sm text-texto-2">Lo comprobamos con barrios nuevos de {datos.demanda.calibracion.municipio ?? 'Getafe'} que ya están habitados: calculamos su población <b className="text-tinta">sin mirar sus datos</b> y la comparamos con la real ({pr[0]?.anio}, INE). De media nos equivocamos un <b className="text-tinta">{dec(media('error_pct'), 0)} %</b>; la regla habitual (viviendas × tamaño medio del hogar), un <b className="text-tinta">{dec(media('error_ingenua_pct'), 0)} %</b>.</p>
-            <table className="mt-3 w-full text-sm">
-              <thead><tr className="border-b border-tinta text-left text-xs text-texto-2">
-                <th className="py-1.5 pr-2 font-medium">Barrio</th><th className="pr-2 text-right font-medium">Población real</th><th className="pr-2 text-right font-medium">Nuestro error</th><th className="text-right font-medium">Regla habitual</th></tr></thead>
-              <tbody>{pr.map((b) => (
-                <tr key={b.ambito} className="border-b border-gris-2">
-                  <td className="py-1.5 pr-2">{nombreBarrio(b.ambito)}</td><td className="pr-2 text-right tabular-nums">{n(b.real)}</td>
-                  <td className="pr-2 text-right font-semibold tabular-nums">{b.error_pct > 0 ? '+' : ''}{dec(b.error_pct)} %</td>
-                  <td className="text-right text-texto-3 tabular-nums">{b.error_ingenua_pct > 0 ? '+' : ''}{dec(b.error_ingenua_pct)} %</td>
-                </tr>))}
-              </tbody>
-            </table>
+            <p className="mt-2 text-sm text-texto-2">Lo comprobamos con <b className="text-tinta">{cal.n_barrios ?? pr.length} barrios nuevos ya habitados de {cal.n_municipios ?? 'varios'} municipios</b>: para cada uno dejamos fuera su municipio entero, calculamos su población <b className="text-tinta">sin mirar sus datos</b> y la comparamos con la real (INE). De media nos equivocamos un <b className="text-tinta">{dec(rp?.error_medio_pct ?? media('error_pct'), 0)} %</b>; la regla habitual (viviendas × tamaño medio del hogar), un <b className="text-tinta">{dec(rp?.error_regla_habitual_pct ?? media('error_ingenua_pct'), 0)} %</b>.</p>
+            <p className="mt-2 text-xs text-texto-2">El factor de habitantes por vivienda de {datos.indice.nombre} ({hv ? `${dec(hv[0], 2)}–${dec(hv[2], 2)}` : '—'}) se calcula con el tamaño de hogar de su municipio y lo joven que es, y descuenta lo que aún no está construido según el catastro.{rp ? ` El rango acierta en el ${rp.dentro_del_rango_pct} % de los barrios.` : ''}</p>
+            <div className="mt-3 max-h-72 overflow-y-auto border-y border-linea">
+              <table className="w-full text-sm">
+                <thead><tr className="sticky top-0 border-b border-tinta bg-white text-left text-xs text-texto-2">
+                  <th className="py-1.5 pr-2 font-medium">Barrio</th><th className="pr-2 text-right font-medium">Población real</th><th className="pr-2 text-right font-medium">Nuestro error</th><th className="text-right font-medium">Regla habitual</th></tr></thead>
+                <tbody>{pr.map((b) => (
+                  <tr key={`${b.municipio}-${b.ambito}`} className="border-b border-gris-2">
+                    <td className="py-1.5 pr-2">{nombreBarrio(b.ambito)}</td><td className="pr-2 text-right tabular-nums">{n(b.real)}</td>
+                    <td className="pr-2 text-right font-semibold tabular-nums">{b.error_pct > 0 ? '+' : ''}{dec(b.error_pct)} %</td>
+                    <td className="text-right text-texto-3 tabular-nums">{b.error_ingenua_pct > 0 ? '+' : ''}{dec(b.error_ingenua_pct)} %</td>
+                  </tr>))}
+                </tbody>
+              </table>
+            </div>
             <p className="mt-2 text-xs text-texto-3">Por eso todas las cifras se dan con rango (mínimo y máximo), no como un número exacto.</p>
           </details>
           <p className="mt-4 text-[11px] leading-relaxed text-texto-3">Fuentes: IDEM (planeamiento 2025, suelo vacante 2026), Portal de Datos Abiertos de la Comunidad de Madrid, INE (Atlas de renta por sección), Consorcio de Transportes. Distancias en línea recta.</p>
@@ -450,7 +455,7 @@ export default function PantallaTecnica({ datos, servicios, servicioInicial, zon
               <div className="mt-4">
                 {hv && <Deslizador etiqueta="Habitantes por vivienda nueva" valor={esc.habPorVivienda} min={hv[0]} max={hv[2]} paso={0.01}
                   formato={(v) => dec(v, 2)} onChange={(v) => upd({ habPorVivienda: v })}
-                  ayuda={`Medido en barrios nuevos de ${datos.demanda?.calibracion.municipio}: ${dec(hv[0], 2)}–${dec(hv[2], 2)}`} />}
+                  ayuda={`Calculado para este municipio con ${datos.demanda?.calibracion.municipio}: ${dec(hv[0], 2)}–${dec(hv[2], 2)}`} />}
                 <Deslizador etiqueta="Años para completar los barrios" valor={aniosLlenado} min={3} max={20} paso={1} formato={(v) => `${v} años`}
                   onChange={setAniosLlenado} ayuda={`Desde ${ANIO_BASE}. Los Molinos tardó más de 8 años en llenarse (INE)`} />
                 <Deslizador etiqueta="Tasa de uso" valor={esc.tasaUso} min={s.tasa_uso[0] * 0.5} max={Math.min(1, s.tasa_uso[2] * 1.3)} paso={0.005}

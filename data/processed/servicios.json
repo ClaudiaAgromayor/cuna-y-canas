@@ -147,6 +147,7 @@
   "unidad": "plazas",
   "sup_min_m2": 4000,
   "minutos_andando": 180,
+  "escala": "municipio",
   "existentes": {
    "capa": "centros_sociales",
    "campo": "tipo",
@@ -155,7 +156,6 @@
    ],
    "sector_contiene": "mayores",
    "campo_capacidad": "plazas"
-  },
-  "escala": "municipio"
+  }
  }
 }

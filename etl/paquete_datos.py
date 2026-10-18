@@ -46,6 +46,7 @@ CAMPOS_MUNICIPIO = {
     "lineas_tren_madrid": "Líneas de Cercanías, Metro o Metro Ligero que llevan a Madrid (CRTM, recorridos)",
     "bus_madrid": "Líneas de autobús interurbano directas a Madrid (CRTM, recorridos)",
     "corona": "Zona tarifaria del abono de transporte: A, B1, B2, B3, C1, C2 (CRTM)",
+    "hab_por_vivienda": "Habitantes por vivienda completa que usa el modelo de población para este municipio: mínimo, central y máximo (ver «Cómo se han elaborado»)",
     "dist_madrid_km": "Distancia en línea recta a la Puerta del Sol (km)",
     "zonas_verdes_m2 / zonas_verdes_m2_hab / zonas_verdes_fuente": "Superficie de parques y por habitante; fuente: EIEL 2023 (parques existentes) o planeamiento (IDEM)",
     "pct_protegido": "% del término en un Espacio Natural Protegido o LIC/ZEC de la Red Natura 2000 (IDEM)",
@@ -63,7 +64,7 @@ CAMPOS_BARRIO = {
     "pct_residencial_vacante": "% del suelo residencial aún vacante",
     "pct_equipamiento_vacante / equipamiento_vacante_m2": "% y m² del suelo para equipamientos aún sin construir",
     "poblacion_actual / anio_poblacion_actual": "Población hoy (INE, Atlas de Distribución de Renta por sección censal, repartida por superficie)",
-    "poblacion_completo_min / _central / _max": "Población cuando el barrio esté completo: viviendas × habitantes por vivienda calibrados en barrios nuevos de Getafe (rango)",
+    "poblacion_completo_min / _central / _max": "Población cuando el barrio esté completo: viviendas × habitantes por vivienda del municipio (modelo de población, con rango)",
     "g0_2, g3_5, g6_11, g12_17, g65 (min/central/max)": "Población al completarse por edad: 0-2, 3-5, 6-11, 12-17 y 65 o más",
 }
 
@@ -165,7 +166,7 @@ code{{background:#f5f5f5;padding:1px 4px;font-size:13px}} a.b{{display:inline-bl
 <ul>
 <li><b>Todo por API, nada a mano:</b> CKAN del Portal de Datos Abiertos (<code>package_show</code>), WFS de la IDEM (planeamiento, suelo vacante, secciones censales, espacios protegidos, EIEL), INE (tabla 31105 del Atlas de Renta) y servicios de datos abiertos del CRTM.</li>
 <li><b>Limpieza:</b> geometrías reparadas, centros con coordenadas en otra ciudad descartados (más de 15 km del municipio), paradas de otras provincias filtradas y paradas compartidas entre redes unificadas.</li>
-<li><b>Población futura:</b> viviendas previstas × habitantes por vivienda medidos en barrios nuevos ya habitados de Getafe, siempre en rango (mínimo, central, máximo). Prueba con el pasado: error medio del 19 %, frente al 39 % de la regla habitual.</li>
+<li><b>Población futura:</b> viviendas previstas × habitantes por vivienda completa de cada municipio, con rango. El factor sale de un modelo calibrado con 28 barrios nuevos ya habitados de 17 municipios (INE 2023) y explicado por el tamaño del hogar y el % de menores de 15 años del municipio; descuenta el suelo residencial que el catastro aún da por vacante. Prueba con el pasado dejando fuera el municipio entero: error medio del 13 %, frente al 25 % de la regla habitual (viviendas × tamaño medio del hogar).</li>
 </ul>
 
 <h2>Diccionario: municipios.csv</h2>

@@ -17,8 +17,8 @@ interface Props { servicios: Record<ServicioId, Servicio>; ir: (d: Destino) => v
 const BASE = import.meta.env.BASE_URL
 
 /** Plazas que hará falta por la población que traerán las viviendas previstas (rango del modelo calibrado). */
-function necesidades(viviendas: number, modelo: Modelo, servicios: Record<ServicioId, Servicio>) {
-  const hv = modelo.parametros.hab_por_vivienda, men = modelo.parametros.pct_menores18, may = modelo.parametros.pct_mayores65, rep = modelo.reparto_menores
+function necesidades(viviendas: number, modelo: Modelo, servicios: Record<ServicioId, Servicio>, habPorVivienda?: Rango) {
+  const hv = habPorVivienda ?? modelo.parametros.hab_por_vivienda, men = modelo.parametros.pct_menores18, may = modelo.parametros.pct_mayores65, rep = modelo.reparto_menores
   const grupo = (k: string, i: number) => {
     const p = viviendas * hv[i]
     return k === 'pob' ? p : k === 'g65' ? (p * may[i]) / 100 : (p * men[i] * (rep[k] ?? 0)) / 100
@@ -40,8 +40,17 @@ export default function PantallaInicio({ servicios, ir, tecnico }: Props) {
 
   const total = useMemo(() => {
     if (!resumen?.modelo) return null
+    // cada municipio con su propio factor de habitantes por vivienda; luego se suma
+    const sumar = (a: number[], b: number[]) => a.map((x, i) => x + b[i])
+    let acc = null as null | ReturnType<typeof necesidades>
+    for (const m of resumen.municipios) {
+      if (!m.viviendas_previstas) continue
+      const x = necesidades(m.viviendas_previstas, resumen.modelo, servicios, m.hab_por_vivienda)
+      acc = acc ? { personas: sumar(acc.personas, x.personas), escuela: sumar(acc.escuela, x.escuela), colegio: sumar(acc.colegio, x.colegio), colegiosCentral: acc.colegiosCentral + x.colegiosCentral,
+        salud: sumar(acc.salud, x.salud), residencia: sumar(acc.residencia, x.residencia) } : x
+    }
     const viv = resumen.municipios.reduce((t, m) => t + (m.viviendas_previstas ?? 0), 0)
-    return { viv, ...necesidades(viv, resumen.modelo, servicios), municipios: resumen.municipios.filter((m) => (m.viviendas_previstas ?? 0) > 0).length }
+    return acc ? { viv, ...acc, municipios: resumen.municipios.filter((m) => (m.viviendas_previstas ?? 0) > 0).length } : null
   }, [resumen, servicios])
 
   // radar: municipios que más crecen y si les queda suelo para los colegios que harán falta
@@ -51,7 +60,7 @@ export default function PantallaInicio({ servicios, ir, tecnico }: Props) {
       .filter((m) => m.poblacion >= 1000 && (m.viviendas_previstas ?? 0) >= 300 && m.suelo_detallado)
       .map((m) => {
         const grandes = m.parcelas_equip_8000 ?? 0
-        const nec = necesidades(m.viviendas_previstas!, resumen.modelo!, servicios)
+        const nec = necesidades(m.viviendas_previstas!, resumen.modelo!, servicios, m.hab_por_vivienda)
         const colegios = nec.colegiosCentral
         const estado = colegios < 0.5 ? 'sin_presion' : grandes >= colegios * 2 ? 'holgado' : grandes >= colegios ? 'justo' : 'falta'
         return { m, crece: (100 * nec.personas[0]) / m.poblacion, creceMax: (100 * nec.personas[1]) / m.poblacion, colegios, grandes, estado }
@@ -105,7 +114,7 @@ export default function PantallaInicio({ servicios, ir, tecnico }: Props) {
                 </div>
               </dl>
             ) : <div className="p-5 text-sm text-texto-2">Calculando…</div>}
-            <div className="border-t border-linea px-5 py-2 text-[11px] text-texto-3">Fuera de Madrid capital. Modelo calibrado con barrios nuevos reales de Getafe (INE).</div>
+            <div className="border-t border-linea px-5 py-2 text-[11px] text-texto-3">Fuera de Madrid capital. Modelo calibrado con {resumen?.modelo?.municipio ?? 'barrios nuevos reales'} (INE).</div>
           </div>
         </div>
       </section>

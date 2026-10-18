@@ -3,13 +3,13 @@
 Uso: python etl/demanda.py MUNICIPIO        (nombre o código INE de 3 dígitos)
 
 Modelo (transparente y en rangos):
-  población de un ámbito al completarse = viviendas previstas × habitantes por vivienda prevista
-  - "habitantes por vivienda prevista" se calibra con barrios nuevos YA HABITADOS de Getafe (INE 2023):
-    población real repartida por áreas / viviendas del plan. Rango = mínimo y máximo observados; central = mediana.
-  - % de menores de 18 y de 65 y más: los observados en esos barrios (rango y mediana).
+  población de un ámbito al completarse = viviendas previstas × habitantes por vivienda completa
+  - "habitantes por vivienda completa" lo da etl/modelo_poblacion.py: calibrado con 28 barrios nuevos ya habitados de toda la
+    Comunidad (INE 2023), explicado por el tamaño del hogar y el % de menores de 15 años del municipio. Rango = percentiles 10 y 90
+    del cociente real/previsto en la prueba con el pasado (dejando fuera el municipio entero).
+  - % de menores de 18 y de 65 y más: los observados en esos barrios (percentil 10, mediana y percentil 90).
   - reparto de los menores por edades (0-2, 3-5, 6-11, 12-17): el del censo del municipio, por tramos quinquenales.
-Prueba con el pasado: cada barrio de calibración se predice con los parámetros de los DEMÁS barrios (deja uno fuera)
-y se compara con su población real de 2023, junto a la regla ingenua (viviendas × tamaño medio del hogar).
+Prueba con el pasado: se calcula en etl/modelo_poblacion.py y se copia a cada demanda.json.
 
 Genera:
   data/processed/servicios.json                    parámetros por servicio (supuestos ajustables en la web)
@@ -17,20 +17,16 @@ Genera:
   data/processed/<cod>-<slug>/demanda_puntos.geojson  dónde está la demanda: secciones (hoy) y suelo residencial vacante (futuro)
 """
 import json
-import statistics as st
 import sys
 
 import geopandas as gpd
 import pandas as pd
 
+import modelo_poblacion as MP
 from comun import PROCESSED, carpeta_salida, resolver_municipio, solo_poligonos
 from procesar_idem import leer
 
 M = 25830
-CALIBRACION = "065"            # los parámetros salen de los barrios nuevos de Getafe (los únicos con series fiables)
-MIN_VIVIENDAS_CALIB = 1000     # barrios pequeños: el reparto por áreas es demasiado ruidoso
-MAX_RES_VACANTE_CALIB = 15     # solo barrios ya construidos (% de suelo residencial vacante)
-MIN_SECCIONES_ENTERAS = 1      # al menos una sección censal entera dentro del ámbito: si no, el reparto por áreas no es fiable
 
 # Supuestos por servicio. Son puntos de partida ajustables con deslizadores en la web, no normas.
 # "existentes" dice qué centros del municipio cuentan como oferta ya disponible de ese servicio.
@@ -77,45 +73,10 @@ def reparto_menores(muni_dir) -> dict:
     return {k: round(v / tot, 4) for k, v in tramos.items()}
 
 
-def barrios_calibracion() -> list[dict]:
-    muni = resolver_municipio(CALIBRACION)
-    d = PROCESSED / f"{muni['cod']}-{muni['slug']}"
-    series = json.loads((d / "secciones_series.json").read_text(encoding="utf-8"))["por_ambito"]
-    resumen = {a["ambito"]: a for a in json.loads((d / "resumen_ambitos.json").read_text(encoding="utf-8"))["ambitos"]}
-    filas = []
-    for amb, s in series.items():
-        r = resumen.get(amb)
-        if not r or not r["viviendas_previstas"] or r["viviendas_previstas"] < MIN_VIVIENDAS_CALIB:
-            continue
-        if r["pct_residencial_vacante"] is None or r["pct_residencial_vacante"] > MAX_RES_VACANTE_CALIB:
-            continue
-        u = s[max(s)]
-        if u.get("secciones_enteras", 0) < MIN_SECCIONES_ENTERAS:
-            continue
-        filas.append({"ambito": amb, "viviendas": r["viviendas_previstas"], "anio": int(max(s)), "poblacion": u["poblacion"],
-                      "hab_por_vivienda": round(u["poblacion"] / r["viviendas_previstas"], 3), "tam_hogar": u["tam_hogar"],
-                      "pct_menores18": round(100 * u["menores18"] / u["poblacion"], 1),
-                      "pct_mayores65": round(100 * u["mayores65"] / u["poblacion"], 1),
-                      "serie": {int(y): v["poblacion"] for y, v in sorted(s.items())}})
-    return filas
 
 
-def rango(valores: list[float]) -> list[float]:
-    return [round(min(valores), 3), round(st.median(valores), 3), round(max(valores), 3)]
 
 
-def prueba_con_el_pasado(barrios: list[dict], tam_hogar_municipal: float) -> list[dict]:
-    res = []
-    for b in barrios:
-        otros = [o["hab_por_vivienda"] for o in barrios if o is not b]
-        pred = b["viviendas"] * st.mean(otros)
-        ingenua = b["viviendas"] * tam_hogar_municipal
-        res.append({"ambito": b["ambito"], "anio": b["anio"], "real": b["poblacion"],
-                    "prediccion": round(pred), "error_pct": round(100 * (pred - b["poblacion"]) / b["poblacion"], 1),
-                    "prediccion_ingenua": round(ingenua), "error_ingenua_pct": round(100 * (ingenua - b["poblacion"]) / b["poblacion"], 1),
-                    "rango": [round(b["viviendas"] * min(otros)), round(b["viviendas"] * max(otros))],
-                    "dentro_del_rango": b["viviendas"] * min(otros) <= b["poblacion"] <= b["viviendas"] * max(otros)})
-    return res
 
 
 def puntos_demanda(muni, out, reparto, params, pob_actual_amb, ambitos_df) -> gpd.GeoDataFrame:
@@ -165,22 +126,15 @@ def puntos_demanda(muni, out, reparto, params, pob_actual_amb, ambitos_df) -> gp
 def procesar(muni: dict) -> dict:
     out = carpeta_salida(muni)
     (PROCESSED / "servicios.json").write_text(json.dumps(SERVICIOS, ensure_ascii=False, indent=1), encoding="utf-8")
-    barrios = barrios_calibracion()
-    params = {"hab_por_vivienda": rango([b["hab_por_vivienda"] for b in barrios]),
-              "pct_menores18": rango([b["pct_menores18"] for b in barrios]),
-              "pct_mayores65": rango([b["pct_mayores65"] for b in barrios])}
+    # el factor de habitantes por vivienda sale del modelo de población (etl/modelo_poblacion.py), calibrado con 28 barrios
+    # nuevos de toda la Comunidad y aplicado a este municipio con su tamaño de hogar y su % de menores de 15 años
+    mp = MP.cargar()
+    rasgos = MP.rasgos_municipio(out)
+    params = {"hab_por_vivienda": MP.hab_por_vivienda(mp, rasgos), "pct_menores18": mp["pct_menores18"], "pct_mayores65": mp["pct_mayores65"]}
     reparto = reparto_menores(out)
     ine_mun = json.loads((out / "secciones_series.json").read_text(encoding="utf-8"))
-    hogar_mun = st.median([v["tam_hogar"] for s in ine_mun["por_seccion"].values() for y, v in s.items() if v.get("tam_hogar")] or [2.6])
-    gtf = resolver_municipio(CALIBRACION)
-    hogar_getafe = 2.6
-    try:
-        ser = json.loads((PROCESSED / f"{gtf['cod']}-{gtf['slug']}" / "secciones_series.json").read_text(encoding="utf-8"))["por_seccion"]
-        ult = max(int(y) for s in ser.values() for y in s)
-        hogar_getafe = round(st.median([s[str(ult)]["tam_hogar"] for s in ser.values() if str(ult) in s and s[str(ult)]["tam_hogar"]]), 2)
-    except (FileNotFoundError, ValueError):
-        pass
-    backtest = prueba_con_el_pasado(barrios, hogar_getafe)
+    barrios = mp["barrios"]
+    backtest = mp["prueba"]
 
     amb = gpd.read_file(out / "ambitos.geojson")
     amb = amb.to_crs(M) if not amb.empty else gpd.GeoDataFrame({"nombre": [], "viviendas": [], "clase_suelo": []}, geometry=[], crs=M)
@@ -205,18 +159,19 @@ def procesar(muni: dict) -> dict:
     ambitos.sort(key=lambda f: -(f["viviendas"] or 0))
 
     doc = {"cod_ine": muni["cod"],
-           "modelo": "población al completarse = viviendas previstas × habitantes por vivienda prevista; resultados en [mínimo, central, máximo]",
-           "calibracion": {"municipio": gtf["nombre"], "fuente": "INE (Atlas de Distribución de Renta de los Hogares) + IDEM (ámbitos y suelo vacante)",
-                           "criterio": f"barrios con al menos {MIN_VIVIENDAS_CALIB} viviendas previstas, menos del {MAX_RES_VACANTE_CALIB} % de suelo residencial vacante y al menos {MIN_SECCIONES_ENTERAS} sección censal entera dentro",
-                           "barrios": barrios, "parametros": params, "reparto_menores": reparto,
-                           "tam_hogar_mediano_municipio": hogar_getafe},
+           "modelo": "población al completarse = viviendas previstas × habitantes por vivienda completa; resultados en [mínimo, central, máximo]",
+           "calibracion": {"municipio": f"{mp['calibracion']['n_barrios']} barrios nuevos de {mp['calibracion']['n_municipios']} municipios",
+                           "n_barrios": mp["calibracion"]["n_barrios"], "n_municipios": mp["calibracion"]["n_municipios"],
+                           "fuente": "INE (Atlas de Distribución de Renta de los Hogares) + IDEM (ámbitos y suelo vacante) + padrón",
+                           "criterio": mp["calibracion"]["criterio"], "barrios": barrios, "parametros": params, "reparto_menores": reparto,
+                           "rasgos_municipio": rasgos, "pesos_modelo": mp["modelo"]["w"], "resumen_prueba": mp["resumen_prueba"]},
            "prueba_con_el_pasado": backtest,
            "ambitos": ambitos}
     (out / "demanda.json").write_text(json.dumps(doc, ensure_ascii=False, indent=1), encoding="utf-8")
     pts = puntos_demanda(muni, out, reparto, params, pob_actual, amb)
     (out / "demanda_puntos.geojson").write_text(pts.to_json(drop_id=True, ensure_ascii=False), encoding="utf-8")
-    return {"barrios_calibracion": [b["ambito"] for b in barrios], "parametros": params, "reparto_menores": reparto,
-            "prueba_con_el_pasado": [(b["ambito"], b["real"], b["prediccion"], b["error_pct"], b["error_ingenua_pct"], b["dentro_del_rango"]) for b in backtest],
+    return {"barrios_calibracion": len(barrios), "parametros": params, "reparto_menores": reparto,
+            "prueba_con_el_pasado": mp["resumen_prueba"],
             "puntos_actual": int((pts["tipo"] == "actual").sum()), "puntos_futuro": int((pts["tipo"] == "futuro").sum()),
             "poblacion_futura_central": round(float(pts.loc[pts["tipo"] == "futuro", "pob"].sum())),
             "ambitos_por_estado": pd.Series([a["estado"] for a in ambitos]).value_counts().to_dict()}

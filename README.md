@@ -26,6 +26,8 @@ docs/            documentos del concurso
 python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
+python etl/modelo_poblacion.py                # modelo de población: calibra con 28 barrios nuevos de 17 municipios y hace la prueba con el pasado
+python etl/lote_demanda.py                   # recalcula la demanda de todos los municipios con ese modelo (unos 4 minutos)
 python etl/municipios_resumen.py             # indicadores de los 179 municipios para "¿Dónde vivir?"
 python etl/vivienda_nueva.py                 # solares para vivienda sin construir (después del resumen: le añade los recuentos)
 python etl/redes_catastro.py                 # ¿hecha o no? estado de zonas verdes y equipamientos con el catastro

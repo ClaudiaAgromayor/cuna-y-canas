@@ -137,7 +137,7 @@ export default function FichaMunicipio({ r, total, criterios, situaciones, tiles
                 ))}
               </tbody>
             </table>
-            <p className="mt-1 text-[7.5pt] text-texto-3">Estimación con el modelo calibrado en barrios nuevos de {modelo ?? 'Getafe'}, con su rango. Es lo que hará falta además de lo que ya existe.</p>
+            <p className="mt-1 text-[7.5pt] text-texto-3">Estimación con el modelo calibrado con {modelo ?? '28 barrios nuevos'}, con su rango. Es lo que hará falta además de lo que ya existe.</p>
             {sitio && (
               <div className="mt-3 border-l-[3px] bg-gris-1 px-3 py-2 text-[9.5pt]" style={{ borderColor: TONO[sitio.tono] }}>
                 <b>¿Hay sitio para lo que viene? {sitio.titulo}.</b> Tiene {n(m.parcelas_equip ?? 0)} parcelas vacantes de equipamiento ({n((m.suelo_equip_m2 ?? 0) / 10000)} ha); en {n(sitio.grandes)} cabría un colegio (8.000 m² o más) y en {n(m.parcelas_equip_1500 ?? 0)} una escuela infantil o un centro de día. La población nueva necesitaría el equivalente a {dec(sitio.colegios, 1)} {sitio.colegios < 1.5 ? 'colegio' : 'colegios'}.

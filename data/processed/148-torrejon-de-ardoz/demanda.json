@@ -1,111 +1,253 @@
 {
  "cod_ine": "148",
- "modelo": "población al completarse = viviendas previstas × habitantes por vivienda prevista; resultados en [mínimo, central, máximo]",
+ "modelo": "población al completarse = viviendas previstas × habitantes por vivienda completa; resultados en [mínimo, central, máximo]",
  "calibracion": {
-  "municipio": "Getafe",
-  "fuente": "INE (Atlas de Distribución de Renta de los Hogares) + IDEM (ámbitos y suelo vacante)",
-  "criterio": "barrios con al menos 1000 viviendas previstas, menos del 15 % de suelo residencial vacante y al menos 1 sección censal entera dentro",
+  "municipio": "28 barrios nuevos de 17 municipios",
+  "n_barrios": 28,
+  "n_municipios": 17,
+  "fuente": "INE (Atlas de Distribución de Renta de los Hogares) + IDEM (ámbitos y suelo vacante) + padrón",
+  "criterio": "barrios con al menos 500 viviendas previstas, menos del 20 % de suelo residencial vacante y una sección censal entera dentro",
   "barrios": [
    {
+    "ambito": "S-101 LA GARENA SUR",
+    "municipio": "005",
+    "viviendas": 2189,
+    "poblacion": 3786,
+    "ocupacion": 1.0,
+    "hab_por_vivienda": 1.73
+   },
+   {
+    "ambito": "S-41 CAMPO DEL ÁNGEL",
+    "municipio": "005",
+    "viviendas": 2750,
+    "poblacion": 7056,
+    "ocupacion": 0.93,
+    "hab_por_vivienda": 2.566
+   },
+   {
+    "ambito": "API-5 VALDELASFUENTES",
+    "municipio": "006",
+    "viviendas": 3398,
+    "poblacion": 8224,
+    "ocupacion": 1.0,
+    "hab_por_vivienda": 2.42
+   },
+   {
+    "ambito": "ENSANCHE SUR PP-1 PP-2 PP-3",
+    "municipio": "007",
+    "viviendas": 8351,
+    "poblacion": 15903,
+    "ocupacion": 1.0,
+    "hab_por_vivienda": 1.904
+   },
+   {
+    "ambito": "LA MONTAÑA",
+    "municipio": "013",
+    "viviendas": 2950,
+    "poblacion": 7237,
+    "ocupacion": 0.819,
+    "hab_por_vivienda": 2.453
+   },
+   {
+    "ambito": "SAU-6 ZARZALEJO",
+    "municipio": "015",
+    "viviendas": 2700,
+    "poblacion": 5882,
+    "ocupacion": 0.889,
+    "hab_por_vivienda": 2.179
+   },
+   {
+    "ambito": "SUNP LA ESTACION",
+    "municipio": "045",
+    "viviendas": 3115,
+    "poblacion": 6336,
+    "ocupacion": 0.891,
+    "hab_por_vivienda": 2.034
+   },
+   {
+    "ambito": "SUNP-RI",
+    "municipio": "049",
+    "viviendas": 2579,
+    "poblacion": 7384,
+    "ocupacion": 1.0,
+    "hab_por_vivienda": 2.863
+   },
+   {
+    "ambito": "UE-17",
+    "municipio": "049",
+    "viviendas": 906,
+    "poblacion": 2309,
+    "ocupacion": 1.0,
+    "hab_por_vivienda": 2.549
+   },
+   {
+    "ambito": "UZI-1 LORANCA CIUDAD JARDÍN",
+    "municipio": "058",
+    "viviendas": 7040,
+    "poblacion": 18842,
+    "ocupacion": 0.973,
+    "hab_por_vivienda": 2.676
+   },
+   {
+    "ambito": "UZI-5 LA FUENTE",
+    "municipio": "058",
+    "viviendas": 1200,
+    "poblacion": 3582,
+    "ocupacion": 1.0,
+    "hab_por_vivienda": 2.985
+   },
+   {
     "ambito": "SUI-05 PAU-2 EL BERCIAL-UNIVERSIDAD",
+    "municipio": "065",
     "viviendas": 5950,
-    "anio": 2023,
     "poblacion": 12931,
-    "hab_por_vivienda": 2.173,
-    "tam_hogar": 2.96,
-    "pct_menores18": 28.7,
-    "pct_mayores65": 7.9,
-    "serie": {
-     "2015": 10740,
-     "2016": 11242,
-     "2017": 11709,
-     "2018": 12016,
-     "2019": 12172,
-     "2020": 12126,
-     "2021": 12291,
-     "2022": 12618,
-     "2023": 12931
-    }
+    "ocupacion": 0.958,
+    "hab_por_vivienda": 2.173
    },
    {
     "ambito": "SUI-07 PAU-3 PERALES DEL RÍO",
+    "municipio": "065",
     "viviendas": 1750,
-    "anio": 2023,
     "poblacion": 3807,
-    "hab_por_vivienda": 2.175,
-    "tam_hogar": 3.22,
-    "pct_menores18": 25.6,
-    "pct_mayores65": 9.0,
-    "serie": {
-     "2015": 1699,
-     "2016": 1701,
-     "2017": 3289,
-     "2018": 3363,
-     "2019": 3392,
-     "2020": 3396,
-     "2021": 3744,
-     "2022": 3784,
-     "2023": 3807
-    }
+    "ocupacion": 0.995,
+    "hab_por_vivienda": 2.175
    },
    {
     "ambito": "SUS-PP-2 LOS MOLINOS",
+    "municipio": "065",
     "viviendas": 6276,
-    "anio": 2023,
     "poblacion": 11473,
-    "hab_por_vivienda": 1.828,
-    "tam_hogar": 2.58,
-    "pct_menores18": 30.5,
-    "pct_mayores65": 2.4,
-    "serie": {
-     "2015": 5983,
-     "2016": 6554,
-     "2017": 7712,
-     "2018": 8369,
-     "2019": 8895,
-     "2020": 9741,
-     "2021": 10345,
-     "2022": 10832,
-     "2023": 11473
-    }
+    "ocupacion": 0.918,
+    "hab_por_vivienda": 1.828
    },
    {
     "ambito": "SUS-PP-3 BUENAVISTA",
+    "municipio": "065",
     "viviendas": 5958,
-    "anio": 2023,
     "poblacion": 8854,
-    "hab_por_vivienda": 1.486,
-    "tam_hogar": 2.47,
-    "pct_menores18": 30.2,
-    "pct_mayores65": 3.1,
-    "serie": {
-     "2015": 6027,
-     "2016": 6823,
-     "2017": 5857,
-     "2018": 6623,
-     "2019": 7122,
-     "2020": 7565,
-     "2021": 8067,
-     "2022": 8374,
-     "2023": 8854
-    }
+    "ocupacion": 0.902,
+    "hab_por_vivienda": 1.486
+   },
+   {
+    "ambito": "PAU-1 PP-5",
+    "municipio": "074",
+    "viviendas": 3600,
+    "poblacion": 7304,
+    "ocupacion": 0.998,
+    "hab_por_vivienda": 2.029
+   },
+   {
+    "ambito": "PAU-4",
+    "municipio": "092",
+    "viviendas": 7878,
+    "poblacion": 14732,
+    "ocupacion": 0.842,
+    "hab_por_vivienda": 1.87
+   },
+   {
+    "ambito": "S-10 LOS CUADROS",
+    "municipio": "104",
+    "viviendas": 665,
+    "poblacion": 2097,
+    "ocupacion": 0.982,
+    "hab_por_vivienda": 3.153
+   },
+   {
+    "ambito": "S-8 LAS CALABAZAS",
+    "municipio": "104",
+    "viviendas": 670,
+    "poblacion": 2151,
+    "ocupacion": 0.97,
+    "hab_por_vivienda": 3.21
+   },
+   {
+    "ambito": "S-4BIS RESIDENCIAL ESTE",
+    "municipio": "106",
+    "viviendas": 11906,
+    "poblacion": 29706,
+    "ocupacion": 0.932,
+    "hab_por_vivienda": 2.495
+   },
+   {
+    "ambito": "DEHESA VIEJA",
+    "municipio": "134",
+    "viviendas": 5030,
+    "poblacion": 12310,
+    "ocupacion": 0.992,
+    "hab_por_vivienda": 2.447
+   },
+   {
+    "ambito": "SUNP-R1 SOTO DEL HENARES",
+    "municipio": "148",
+    "viviendas": 6585,
+    "poblacion": 11402,
+    "ocupacion": 0.882,
+    "hab_por_vivienda": 1.732
+   },
+   {
+    "ambito": "UE-SUP-CE1 LA ZARZUELA",
+    "municipio": "148",
+    "viviendas": 1741,
+    "poblacion": 4792,
+    "ocupacion": 1.0,
+    "hab_por_vivienda": 2.752
+   },
+   {
+    "ambito": "UE-SUP-CE3 FRESNOS II",
+    "municipio": "148",
+    "viviendas": 1277,
+    "poblacion": 4146,
+    "ocupacion": 0.977,
+    "hab_por_vivienda": 3.247
+   },
+   {
+    "ambito": "R-2 CANTO NEGRO",
+    "municipio": "161",
+    "viviendas": 975,
+    "poblacion": 2089,
+    "ocupacion": 0.811,
+    "hab_por_vivienda": 2.143
+   },
+   {
+    "ambito": "R-5 PARAJE MERINO",
+    "municipio": "161",
+    "viviendas": 2100,
+    "poblacion": 7434,
+    "ocupacion": 0.977,
+    "hab_por_vivienda": 3.54
+   },
+   {
+    "ambito": "UDE OESTE-NORTE",
+    "municipio": "161",
+    "viviendas": 4300,
+    "poblacion": 11346,
+    "ocupacion": 0.893,
+    "hab_por_vivienda": 2.639
+   },
+   {
+    "ambito": "S-R8 LOS HUEROS",
+    "municipio": "172",
+    "viviendas": 3802,
+    "poblacion": 6786,
+    "ocupacion": 0.884,
+    "hab_por_vivienda": 1.785
    }
   ],
   "parametros": {
    "hab_por_vivienda": [
-    1.486,
-    2.001,
-    2.175
+    2.058,
+    2.522,
+    2.928
    ],
    "pct_menores18": [
-    25.6,
-    29.45,
-    30.5
+    20.21,
+    28.37,
+    30.78
    ],
    "pct_mayores65": [
-    2.4,
-    5.5,
-    9.0
+    3.66,
+    6.6,
+    10.27
    ]
   },
   "reparto_menores": {
@@ -114,63 +256,330 @@
    "g6_11": 0.3493,
    "g12_17": 0.3781
   },
-  "tam_hogar_mediano_municipio": 2.6
+  "rasgos_municipio": {
+   "tam": 2.8,
+   "men15": 14.68
+  },
+  "pesos_modelo": [
+   0.9101231290847085,
+   0.19684604372187378,
+   -0.11151713491635656
+  ],
+  "resumen_prueba": {
+   "error_medio_pct": 13.1,
+   "error_mediano_pct": 10.4,
+   "error_regla_habitual_pct": 25.1,
+   "dentro_del_rango_pct": 79,
+   "criterio": "se deja fuera el municipio entero y se predice con los demás"
+  }
  },
  "prueba_con_el_pasado": [
   {
+   "ambito": "S-101 LA GARENA SUR",
+   "municipio": "005",
+   "anio": 2023,
+   "real": 3786,
+   "prediccion": 5407,
+   "error_pct": 42.8,
+   "prediccion_ingenua": 5910,
+   "error_ingenua_pct": 56.1,
+   "dentro_del_rango": false
+  },
+  {
+   "ambito": "S-41 CAMPO DEL ÁNGEL",
+   "municipio": "005",
+   "anio": 2023,
+   "real": 7056,
+   "prediccion": 6317,
+   "error_pct": -10.5,
+   "prediccion_ingenua": 7425,
+   "error_ingenua_pct": 5.2,
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "API-5 VALDELASFUENTES",
+   "municipio": "006",
+   "anio": 2023,
+   "real": 8224,
+   "prediccion": 9734,
+   "error_pct": 18.4,
+   "prediccion_ingenua": 9854,
+   "error_ingenua_pct": 19.8,
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "ENSANCHE SUR PP-1 PP-2 PP-3",
+   "municipio": "007",
+   "anio": 2023,
+   "real": 15903,
+   "prediccion": 18522,
+   "error_pct": 16.5,
+   "prediccion_ingenua": 21713,
+   "error_ingenua_pct": 36.5,
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "LA MONTAÑA",
+   "municipio": "013",
+   "anio": 2023,
+   "real": 7237,
+   "prediccion": 6008,
+   "error_pct": -17.0,
+   "prediccion_ingenua": 8260,
+   "error_ingenua_pct": 14.1,
+   "dentro_del_rango": false
+  },
+  {
+   "ambito": "SAU-6 ZARZALEJO",
+   "municipio": "015",
+   "anio": 2023,
+   "real": 5882,
+   "prediccion": 6403,
+   "error_pct": 8.9,
+   "prediccion_ingenua": 8370,
+   "error_ingenua_pct": 42.3,
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "SUNP LA ESTACION",
+   "municipio": "045",
+   "anio": 2023,
+   "real": 6336,
+   "prediccion": 6985,
+   "error_pct": 10.3,
+   "prediccion_ingenua": 8878,
+   "error_ingenua_pct": 40.1,
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "SUNP-RI",
+   "municipio": "049",
+   "anio": 2023,
+   "real": 7384,
+   "prediccion": 6466,
+   "error_pct": -12.4,
+   "prediccion_ingenua": 6963,
+   "error_ingenua_pct": -5.7,
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "UE-17",
+   "municipio": "049",
+   "anio": 2023,
+   "real": 2309,
+   "prediccion": 2271,
+   "error_pct": -1.6,
+   "prediccion_ingenua": 2446,
+   "error_ingenua_pct": 5.9,
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "UZI-1 LORANCA CIUDAD JARDÍN",
+   "municipio": "058",
+   "anio": 2023,
+   "real": 18842,
+   "prediccion": 18404,
+   "error_pct": -2.3,
+   "prediccion_ingenua": 19712,
+   "error_ingenua_pct": 4.6,
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "UZI-5 LA FUENTE",
+   "municipio": "058",
+   "anio": 2023,
+   "real": 3582,
+   "prediccion": 3224,
+   "error_pct": -10.0,
+   "prediccion_ingenua": 3360,
+   "error_ingenua_pct": -6.2,
+   "dentro_del_rango": true
+  },
+  {
    "ambito": "SUI-05 PAU-2 EL BERCIAL-UNIVERSIDAD",
+   "municipio": "065",
    "anio": 2023,
    "real": 12931,
-   "prediccion": 10887,
-   "error_pct": -15.8,
+   "prediccion": 11439,
+   "error_pct": -11.5,
    "prediccion_ingenua": 15470,
    "error_ingenua_pct": 19.6,
-   "rango": [
-    8842,
-    12941
-   ],
    "dentro_del_rango": true
   },
   {
    "ambito": "SUI-07 PAU-3 PERALES DEL RÍO",
+   "municipio": "065",
    "anio": 2023,
    "real": 3807,
-   "prediccion": 3201,
-   "error_pct": -15.9,
+   "prediccion": 3494,
+   "error_pct": -8.2,
    "prediccion_ingenua": 4550,
    "error_ingenua_pct": 19.5,
-   "rango": [
-    2600,
-    3803
-   ],
-   "dentro_del_rango": false
+   "dentro_del_rango": true
   },
   {
    "ambito": "SUS-PP-2 LOS MOLINOS",
+   "municipio": "065",
    "anio": 2023,
    "real": 11473,
-   "prediccion": 12205,
-   "error_pct": 6.4,
+   "prediccion": 11562,
+   "error_pct": 0.8,
    "prediccion_ingenua": 16318,
    "error_ingenua_pct": 42.2,
-   "rango": [
-    9326,
-    13650
-   ],
    "dentro_del_rango": true
   },
   {
    "ambito": "SUS-PP-3 BUENAVISTA",
+   "municipio": "065",
    "anio": 2023,
    "real": 8854,
-   "prediccion": 12266,
-   "error_pct": 38.5,
+   "prediccion": 10785,
+   "error_pct": 21.8,
    "prediccion_ingenua": 15491,
    "error_ingenua_pct": 75.0,
-   "rango": [
-    10891,
-    12959
-   ],
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "PAU-1 PP-5",
+   "municipio": "074",
+   "anio": 2023,
+   "real": 7304,
+   "prediccion": 7865,
+   "error_pct": 7.7,
+   "prediccion_ingenua": 9360,
+   "error_ingenua_pct": 28.1,
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "PAU-4",
+   "municipio": "092",
+   "anio": 2023,
+   "real": 14732,
+   "prediccion": 16065,
+   "error_pct": 9.0,
+   "prediccion_ingenua": 21271,
+   "error_ingenua_pct": 44.4,
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "S-10 LOS CUADROS",
+   "municipio": "104",
+   "anio": 2023,
+   "real": 2097,
+   "prediccion": 2002,
+   "error_pct": -4.5,
+   "prediccion_ingenua": 2128,
+   "error_ingenua_pct": 1.5,
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "S-8 LAS CALABAZAS",
+   "municipio": "104",
+   "anio": 2023,
+   "real": 2151,
+   "prediccion": 1992,
+   "error_pct": -7.4,
+   "prediccion_ingenua": 2144,
+   "error_ingenua_pct": -0.3,
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "S-4BIS RESIDENCIAL ESTE",
+   "municipio": "106",
+   "anio": 2023,
+   "real": 29706,
+   "prediccion": 32174,
+   "error_pct": 8.3,
+   "prediccion_ingenua": 35718,
+   "error_ingenua_pct": 20.2,
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "DEHESA VIEJA",
+   "municipio": "134",
+   "anio": 2023,
+   "real": 12310,
+   "prediccion": 10778,
+   "error_pct": -12.4,
+   "prediccion_ingenua": 13581,
+   "error_ingenua_pct": 10.3,
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "SUNP-R1 SOTO DEL HENARES",
+   "municipio": "148",
+   "anio": 2023,
+   "real": 11402,
+   "prediccion": 14571,
+   "error_pct": 27.8,
+   "prediccion_ingenua": 18438,
+   "error_ingenua_pct": 61.7,
+   "dentro_del_rango": false
+  },
+  {
+   "ambito": "UE-SUP-CE1 LA ZARZUELA",
+   "municipio": "148",
+   "anio": 2023,
+   "real": 4792,
+   "prediccion": 4368,
+   "error_pct": -8.9,
+   "prediccion_ingenua": 4875,
+   "error_ingenua_pct": 1.7,
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "UE-SUP-CE3 FRESNOS II",
+   "municipio": "148",
+   "anio": 2023,
+   "real": 4146,
+   "prediccion": 3130,
+   "error_pct": -24.5,
+   "prediccion_ingenua": 3576,
+   "error_ingenua_pct": -13.8,
+   "dentro_del_rango": false
+  },
+  {
+   "ambito": "R-2 CANTO NEGRO",
+   "municipio": "161",
+   "anio": 2023,
+   "real": 2089,
+   "prediccion": 2086,
+   "error_pct": -0.2,
+   "prediccion_ingenua": 2828,
+   "error_ingenua_pct": 35.4,
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "R-5 PARAJE MERINO",
+   "municipio": "161",
+   "anio": 2023,
+   "real": 7434,
+   "prediccion": 5412,
+   "error_pct": -27.2,
+   "prediccion_ingenua": 6090,
+   "error_ingenua_pct": -18.1,
+   "dentro_del_rango": false
+  },
+  {
+   "ambito": "UDE OESTE-NORTE",
+   "municipio": "161",
+   "anio": 2023,
+   "real": 11346,
+   "prediccion": 10128,
+   "error_pct": -10.7,
+   "prediccion_ingenua": 12470,
+   "error_ingenua_pct": 9.9,
+   "dentro_del_rango": true
+  },
+  {
+   "ambito": "S-R8 LOS HUEROS",
+   "municipio": "172",
+   "anio": 2023,
+   "real": 6786,
+   "prediccion": 8434,
+   "error_pct": 24.3,
+   "prediccion_ingenua": 11216,
+   "error_ingenua_pct": 65.3,
    "dentro_del_rango": false
   }
  ],
@@ -184,35 +593,35 @@
    "poblacion_actual": 11402,
    "anio_poblacion_actual": 2023,
    "poblacion_completo": [
-    9785,
-    13177,
-    14322
+    13552,
+    16607,
+    19281
    ],
    "grupos_completo": {
     "g0_2": [
-     326,
-     505,
-     569
+     357,
+     613,
+     773
     ],
     "g3_5": [
-     356,
-     552,
-     622
+     390,
+     670,
+     845
     ],
     "g6_11": [
-     875,
-     1356,
-     1526
+     957,
+     1646,
+     2073
     ],
     "g12_17": [
-     947,
-     1467,
-     1652
+     1036,
+     1781,
+     2244
     ],
     "g65": [
-     235,
-     725,
-     1289
+     496,
+     1096,
+     1980
     ]
    }
   },
@@ -225,35 +634,35 @@
    "poblacion_actual": 4792,
    "anio_poblacion_actual": 2023,
    "poblacion_completo": [
-    2587,
-    3484,
-    3787
+    3583,
+    4391,
+    5098
    ],
    "grupos_completo": {
     "g0_2": [
-     86,
-     134,
-     150
+     94,
+     162,
+     204
     ],
     "g3_5": [
-     94,
-     146,
-     164
+     103,
+     177,
+     223
     ],
     "g6_11": [
-     231,
-     358,
-     403
+     253,
+     435,
+     548
     ],
     "g12_17": [
-     250,
-     388,
-     437
+     274,
+     471,
+     593
     ],
     "g65": [
-     62,
-     192,
-     341
+     131,
+     290,
+     524
     ]
    }
   },
@@ -266,35 +675,35 @@
    "poblacion_actual": 738,
    "anio_poblacion_actual": 2023,
    "poblacion_completo": [
-    2529,
-    3406,
-    3702
+    3503,
+    4292,
+    4983
    ],
    "grupos_completo": {
     "g0_2": [
-     84,
-     131,
-     147
+     92,
+     159,
+     200
     ],
     "g3_5": [
-     92,
-     143,
-     161
+     101,
+     173,
+     218
     ],
     "g6_11": [
-     226,
-     350,
-     394
+     247,
+     425,
+     536
     ],
     "g12_17": [
-     245,
-     379,
-     427
+     268,
+     460,
+     580
     ],
     "g65": [
-     61,
-     187,
-     333
+     128,
+     283,
+     512
     ]
    }
   },
@@ -307,35 +716,35 @@
    "poblacion_actual": 1786,
    "anio_poblacion_actual": 2023,
    "poblacion_completo": [
-    2357,
-    3174,
-    3450
+    3264,
+    4000,
+    4644
    ],
    "grupos_completo": {
     "g0_2": [
-     79,
-     122,
-     137
+     86,
+     148,
+     186
     ],
     "g3_5": [
-     86,
-     133,
-     150
+     94,
+     161,
+     203
     ],
     "g6_11": [
-     211,
-     327,
-     368
+     230,
+     396,
+     499
     ],
     "g12_17": [
-     228,
-     353,
-     398
+     249,
+     429,
+     540
     ],
     "g65": [
-     57,
-     175,
-     310
+     119,
+     264,
+     477
     ]
    }
   },
@@ -348,35 +757,35 @@
    "poblacion_actual": 2400,
    "anio_poblacion_actual": 2023,
    "poblacion_completo": [
-    2318,
-    3122,
-    3393
+    3210,
+    3934,
+    4568
    ],
    "grupos_completo": {
     "g0_2": [
-     77,
-     120,
-     135
+     84,
+     145,
+     183
     ],
     "g3_5": [
-     84,
-     131,
-     147
+     92,
+     159,
+     200
     ],
     "g6_11": [
-     207,
-     321,
-     361
+     227,
+     390,
+     491
     ],
     "g12_17": [
-     224,
-     348,
-     391
+     245,
+     422,
+     532
     ],
     "g65": [
-     56,
-     172,
-     305
+     117,
+     260,
+     469
     ]
    }
   },
@@ -389,35 +798,35 @@
    "poblacion_actual": 2906,
    "anio_poblacion_actual": 2023,
    "poblacion_completo": [
-    1935,
-    2605,
-    2832
+    2680,
+    3284,
+    3812
    ],
    "grupos_completo": {
     "g0_2": [
-     64,
-     100,
-     112
+     71,
+     121,
+     153
     ],
     "g3_5": [
-     70,
-     109,
-     123
+     77,
+     133,
+     167
     ],
     "g6_11": [
-     173,
-     268,
-     302
+     189,
+     325,
+     410
     ],
     "g12_17": [
-     187,
-     290,
-     327
+     205,
+     352,
+     444
     ],
     "g65": [
-     46,
-     143,
-     255
+     98,
+     217,
+     391
     ]
    }
   },
@@ -430,35 +839,35 @@
    "poblacion_actual": 4146,
    "anio_poblacion_actual": 2023,
    "poblacion_completo": [
-    1898,
-    2555,
-    2777
+    2628,
+    3221,
+    3739
    ],
    "grupos_completo": {
     "g0_2": [
-     63,
-     98,
-     110
+     69,
+     119,
+     150
     ],
     "g3_5": [
-     69,
-     107,
-     121
+     76,
+     130,
+     164
     ],
     "g6_11": [
-     170,
-     263,
-     296
+     186,
+     319,
+     402
     ],
     "g12_17": [
-     184,
-     285,
-     320
+     201,
+     346,
+     435
     ],
     "g65": [
-     46,
-     141,
-     250
+     96,
+     213,
+     384
     ]
    }
   },
@@ -471,35 +880,35 @@
    "poblacion_actual": 394,
    "anio_poblacion_actual": 2023,
    "poblacion_completo": [
-    1698,
-    2287,
-    2486
+    2352,
+    2883,
+    3347
    ],
    "grupos_completo": {
     "g0_2": [
-     57,
-     88,
-     99
+     62,
+     106,
+     134
     ],
     "g3_5": [
-     62,
-     96,
-     108
+     68,
+     116,
+     147
     ],
     "g6_11": [
-     152,
-     235,
-     265
+     166,
+     286,
+     360
     ],
     "g12_17": [
-     164,
-     255,
-     287
+     180,
+     309,
+     390
     ],
     "g65": [
-     41,
-     126,
-     224
+     86,
+     190,
+     344
     ]
    }
   },
@@ -512,35 +921,35 @@
    "poblacion_actual": 1266,
    "anio_poblacion_actual": 2023,
    "poblacion_completo": [
-    1621,
-    2183,
-    2373
+    2245,
+    2752,
+    3194
    ],
    "grupos_completo": {
     "g0_2": [
-     54,
-     84,
-     94
+     59,
+     102,
+     128
     ],
     "g3_5": [
-     59,
-     91,
-     103
+     65,
+     111,
+     140
     ],
     "g6_11": [
-     145,
-     225,
-     253
+     158,
+     273,
+     343
     ],
     "g12_17": [
-     157,
-     243,
-     274
+     172,
+     295,
+     372
     ],
     "g65": [
-     39,
-     120,
-     214
+     82,
+     182,
+     328
     ]
    }
   },
@@ -553,35 +962,35 @@
    "poblacion_actual": 408,
    "anio_poblacion_actual": 2023,
    "poblacion_completo": [
-    1589,
-    2139,
-    2325
+    2200,
+    2696,
+    3130
    ],
    "grupos_completo": {
     "g0_2": [
-     53,
-     82,
-     92
+     58,
+     100,
+     125
     ],
     "g3_5": [
-     58,
-     90,
-     101
+     63,
+     109,
+     137
     ],
     "g6_11": [
-     142,
-     220,
-     248
+     155,
+     267,
+     337
     ],
     "g12_17": [
-     154,
-     238,
-     268
+     168,
+     289,
+     364
     ],
     "g65": [
-     38,
-     118,
-     209
+     81,
+     178,
+     321
     ]
    }
   },
@@ -594,35 +1003,35 @@
    "poblacion_actual": 1755,
    "anio_poblacion_actual": 2023,
    "poblacion_completo": [
-    1529,
-    2059,
-    2238
+    2118,
+    2595,
+    3013
    ],
    "grupos_completo": {
     "g0_2": [
-     51,
-     79,
-     89
+     56,
+     96,
+     121
     ],
     "g3_5": [
-     56,
-     86,
-     97
+     61,
+     105,
+     132
     ],
     "g6_11": [
-     137,
-     212,
-     238
+     150,
+     257,
+     324
     ],
     "g12_17": [
-     148,
-     229,
-     258
+     162,
+     278,
+     351
     ],
     "g65": [
-     37,
-     113,
-     201
+     78,
+     171,
+     309
     ]
    }
   },
@@ -635,35 +1044,35 @@
    "poblacion_actual": 750,
    "anio_poblacion_actual": 2023,
    "poblacion_completo": [
-    1404,
-    1891,
-    2055
+    1945,
+    2383,
+    2767
    ],
    "grupos_completo": {
     "g0_2": [
-     47,
-     73,
-     82
+     51,
+     88,
+     111
     ],
     "g3_5": [
-     51,
-     79,
-     89
+     56,
+     96,
+     121
     ],
     "g6_11": [
-     126,
-     195,
-     219
+     137,
+     236,
+     297
     ],
     "g12_17": [
-     136,
-     211,
-     237
+     149,
+     256,
+     322
     ],
     "g65": [
-     34,
-     104,
-     185
+     71,
+     157,
+     284
     ]
    }
   },
@@ -676,35 +1085,35 @@
    "poblacion_actual": 462,
    "anio_poblacion_actual": 2023,
    "poblacion_completo": [
-    1275,
-    1717,
-    1866
+    1766,
+    2164,
+    2512
    ],
    "grupos_completo": {
     "g0_2": [
-     42,
-     66,
-     74
+     46,
+     80,
+     101
     ],
     "g3_5": [
-     46,
-     72,
-     81
+     51,
+     87,
+     110
     ],
     "g6_11": [
-     114,
-     177,
-     199
+     125,
+     214,
+     270
     ],
     "g12_17": [
-     123,
-     191,
-     215
+     135,
+     232,
+     292
     ],
     "g65": [
-     31,
-     94,
-     168
+     65,
+     143,
+     258
     ]
    }
   },
@@ -717,35 +1126,35 @@
    "poblacion_actual": 1454,
    "anio_poblacion_actual": 2023,
    "poblacion_completo": [
-    1193,
-    1607,
-    1747
+    1653,
+    2025,
+    2351
    ],
    "grupos_completo": {
     "g0_2": [
-     40,
-     62,
-     69
+     43,
+     75,
+     94
     ],
     "g3_5": [
-     43,
-     67,
-     76
+     48,
+     82,
+     103
     ],
     "g6_11": [
-     107,
-     165,
-     186
+     117,
+     201,
+     253
     ],
     "g12_17": [
-     115,
-     179,
-     201
+     126,
+     217,
+     274
     ],
     "g65": [
-     29,
-     88,
-     157
+     60,
+     134,
+     241
     ]
    }
   },
@@ -758,35 +1167,35 @@
    "poblacion_actual": 1236,
    "anio_poblacion_actual": 2023,
    "poblacion_completo": [
-    892,
-    1201,
-    1305
+    1235,
+    1513,
+    1757
    ],
    "grupos_completo": {
     "g0_2": [
-     30,
-     46,
-     52
+     32,
+     56,
+     70
     ],
     "g3_5": [
-     32,
-     50,
-     57
+     36,
+     61,
+     77
     ],
     "g6_11": [
-     80,
-     124,
-     139
+     87,
+     150,
+     189
     ],
     "g12_17": [
-     86,
-     134,
-     150
+     94,
+     162,
+     204
     ],
     "g65": [
-     21,
-     66,
-     117
+     45,
+     100,
+     180
     ]
    }
   },
@@ -799,35 +1208,35 @@
    "poblacion_actual": null,
    "anio_poblacion_actual": null,
    "poblacion_completo": [
-    730,
-    982,
-    1068
+    1010,
+    1238,
+    1438
    ],
    "grupos_completo": {
     "g0_2": [
-     24,
-     38,
-     42
+     27,
+     46,
+     58
     ],
     "g3_5": [
-     27,
-     41,
-     46
+     29,
+     50,
+     63
     ],
     "g6_11": [
-     65,
-     101,
-     114
+     71,
+     123,
+     155
     ],
     "g12_17": [
-     71,
-     109,
-     123
+     77,
+     133,
+     167
     ],
     "g65": [
-     18,
-     54,
-     96
+     37,
+     82,
+     148
     ]
    }
   },
@@ -840,35 +1249,35 @@
    "poblacion_actual": 148,
    "anio_poblacion_actual": 2023,
    "poblacion_completo": [
-    713,
-    960,
-    1044
+    988,
+    1211,
+    1405
    ],
    "grupos_completo": {
     "g0_2": [
-     24,
-     37,
-     41
+     26,
+     45,
+     56
     ],
     "g3_5": [
-     26,
-     40,
-     45
+     28,
+     49,
+     62
     ],
     "g6_11": [
-     64,
-     99,
-     111
+     70,
+     120,
+     151
     ],
     "g12_17": [
-     69,
-     107,
-     120
+     75,
+     130,
+     164
     ],
     "g65": [
-     17,
-     53,
-     94
+     36,
+     80,
+     144
     ]
    }
   },
@@ -881,35 +1290,35 @@
    "poblacion_actual": 893,
    "anio_poblacion_actual": 2023,
    "poblacion_completo": [
-    706,
-    950,
-    1033
+    978,
+    1198,
+    1391
    ],
    "grupos_completo": {
     "g0_2": [
-     24,
-     36,
-     41
+     26,
+     44,
+     56
     ],
     "g3_5": [
-     26,
-     40,
-     45
+     28,
+     48,
+     61
     ],
     "g6_11": [
-     63,
-     98,
-     110
+     69,
+     119,
+     150
     ],
     "g12_17": [
-     68,
-     106,
-     119
+     75,
+     129,
+     162
     ],
     "g65": [
-     17,
-     52,
-     93
+     36,
+     79,
+     143
     ]
    }
   },
@@ -922,35 +1331,35 @@
    "poblacion_actual": 1597,
    "anio_poblacion_actual": 2023,
    "poblacion_completo": [
-    623,
-    838,
-    911
+    862,
+    1057,
+    1227
    ],
    "grupos_completo": {
     "g0_2": [
-     21,
-     32,
-     36
+     23,
+     39,
+     49
     ],
     "g3_5": [
-     23,
-     35,
-     40
+     25,
+     43,
+     54
     ],
     "g6_11": [
-     56,
-     86,
-     97
+     61,
+     105,
+     132
     ],
     "g12_17": [
-     60,
-     93,
-     105
+     66,
+     113,
+     143
     ],
     "g65": [
-     15,
-     46,
-     82
+     32,
+     70,
+     126
     ]
    }
   },
@@ -963,35 +1372,35 @@
    "poblacion_actual": 563,
    "anio_poblacion_actual": 2023,
    "poblacion_completo": [
-    525,
-    706,
-    768
+    726,
+    890,
+    1034
    ],
    "grupos_completo": {
     "g0_2": [
-     17,
-     27,
-     30
+     19,
+     33,
+     41
     ],
     "g3_5": [
-     19,
-     30,
-     33
+     21,
+     36,
+     45
     ],
     "g6_11": [
-     47,
-     73,
-     82
+     51,
+     88,
+     111
     ],
     "g12_17": [
-     51,
-     79,
-     89
+     55,
+     95,
+     120
     ],
     "g65": [
-     13,
-     39,
-     69
+     27,
+     59,
+     106
     ]
    }
   },
@@ -1004,35 +1413,35 @@
    "poblacion_actual": 989,
    "anio_poblacion_actual": 2023,
    "poblacion_completo": [
-    406,
-    546,
-    594
+    562,
+    689,
+    799
    ],
    "grupos_completo": {
     "g0_2": [
-     14,
-     21,
-     24
+     15,
+     25,
+     32
     ],
     "g3_5": [
-     15,
-     23,
-     26
+     16,
+     28,
+     35
     ],
     "g6_11": [
-     36,
-     56,
-     63
+     40,
+     68,
+     86
     ],
     "g12_17": [
-     39,
-     61,
-     69
+     43,
+     74,
+     93
     ],
     "g65": [
-     10,
-     30,
-     53
+     21,
+     45,
+     82
     ]
    }
   },
@@ -1045,35 +1454,35 @@
    "poblacion_actual": 280,
    "anio_poblacion_actual": 2023,
    "poblacion_completo": [
-    340,
-    458,
-    498
+    471,
+    578,
+    671
    ],
    "grupos_completo": {
     "g0_2": [
-     11,
-     18,
-     20
+     12,
+     21,
+     27
     ],
     "g3_5": [
-     12,
-     19,
-     22
+     14,
+     23,
+     29
     ],
     "g6_11": [
-     30,
-     47,
-     53
+     33,
+     57,
+     72
     ],
     "g12_17": [
-     33,
-     51,
-     57
+     36,
+     62,
+     78
     ],
     "g65": [
-     8,
-     25,
-     45
+     17,
+     38,
+     69
     ]
    }
   },
@@ -1086,35 +1495,35 @@
    "poblacion_actual": null,
    "anio_poblacion_actual": null,
    "poblacion_completo": [
-    319,
-    430,
-    468
+    442,
+    542,
+    630
    ],
    "grupos_completo": {
     "g0_2": [
-     11,
-     16,
-     19
+     12,
+     20,
+     25
     ],
     "g3_5": [
-     12,
-     18,
-     20
+     13,
+     22,
+     28
     ],
     "g6_11": [
-     29,
-     44,
-     50
+     31,
+     54,
+     68
     ],
     "g12_17": [
-     31,
-     48,
-     54
+     34,
+     58,
+     73
     ],
     "g65": [
-     8,
-     24,
-     42
+     16,
+     36,
+     65
     ]
    }
   },
@@ -1127,35 +1536,35 @@
    "poblacion_actual": 420,
    "anio_poblacion_actual": 2023,
    "poblacion_completo": [
-    276,
-    372,
-    405
+    383,
+    469,
+    545
    ],
    "grupos_completo": {
     "g0_2": [
-     9,
-     14,
-     16
+     10,
+     17,
+     22
     ],
     "g3_5": [
-     10,
-     16,
-     18
+     11,
+     19,
+     24
     ],
     "g6_11": [
-     25,
-     38,
-     43
+     27,
+     46,
+     59
     ],
     "g12_17": [
-     27,
-     41,
-     47
+     29,
+     50,
+     63
     ],
     "g65": [
-     7,
-     20,
-     36
+     14,
+     31,
+     56
     ]
    }
   },
@@ -1168,35 +1577,35 @@
    "poblacion_actual": 670,
    "anio_poblacion_actual": 2023,
    "poblacion_completo": [
-    267,
-    360,
-    391
+    370,
+    454,
+    527
    ],
    "grupos_completo": {
     "g0_2": [
-     9,
-     14,
-     16
+     10,
+     17,
+     21
     ],
     "g3_5": [
-     10,
-     15,
-     17
+     11,
+     18,
+     23
     ],
     "g6_11": [
-     24,
-     37,
-     42
+     26,
+     45,
+     57
     ],
     "g12_17": [
-     26,
-     40,
-     45
+     28,
+     49,
+     61
     ],
     "g65": [
-     6,
-     20,
-     35
+     14,
+     30,
+     54
     ]
    }
   },
@@ -1209,35 +1618,35 @@
    "poblacion_actual": 270,
    "anio_poblacion_actual": 2023,
    "poblacion_completo": [
-    218,
-    294,
-    320
+    303,
+    371,
+    430
    ],
    "grupos_completo": {
     "g0_2": [
-     7,
-     11,
-     13
+     8,
+     14,
+     17
     ],
     "g3_5": [
-     8,
-     12,
-     14
+     9,
+     15,
+     19
     ],
     "g6_11": [
-     19,
-     30,
-     34
+     21,
+     37,
+     46
     ],
     "g12_17": [
-     21,
-     33,
-     37
+     23,
+     40,
+     50
     ],
     "g65": [
-     5,
-     16,
-     29
+     11,
+     24,
+     44
     ]
    }
   },
@@ -1250,35 +1659,35 @@
    "poblacion_actual": null,
    "anio_poblacion_actual": null,
    "poblacion_completo": [
-    178,
-    240,
-    261
+    247,
+    303,
+    351
    ],
    "grupos_completo": {
     "g0_2": [
      6,
-     9,
-     10
+     11,
+     14
     ],
     "g3_5": [
-     6,
-     10,
-     11
+     7,
+     12,
+     15
     ],
     "g6_11": [
-     16,
-     25,
-     28
+     17,
+     30,
+     38
     ],
     "g12_17": [
-     17,
-     27,
-     30
+     19,
+     33,
+     41
     ],
     "g65": [
-     4,
-     13,
-     23
+     9,
+     20,
+     36
     ]
    }
   },
@@ -1291,35 +1700,35 @@
    "poblacion_actual": null,
    "anio_poblacion_actual": null,
    "poblacion_completo": [
-    153,
-    206,
-    224
+    212,
+    260,
+    302
    ],
    "grupos_completo": {
     "g0_2": [
-     5,
-     8,
-     9
+     6,
+     10,
+     12
     ],
     "g3_5": [
      6,
-     9,
-     10
+     10,
+     13
     ],
     "g6_11": [
-     14,
-     21,
-     24
+     15,
+     26,
+     32
     ],
     "g12_17": [
-     15,
-     23,
-     26
+     16,
+     28,
+     35
     ],
     "g65": [
-     4,
-     11,
-     20
+     8,
+     17,
+     31
     ]
    }
   },
@@ -1332,35 +1741,35 @@
    "poblacion_actual": 401,
    "anio_poblacion_actual": 2023,
    "poblacion_completo": [
-    137,
-    184,
-    200
+    189,
+    232,
+    269
    ],
    "grupos_completo": {
     "g0_2": [
      5,
-     7,
-     8
+     9,
+     11
     ],
     "g3_5": [
      5,
-     8,
-     9
+     9,
+     12
     ],
     "g6_11": [
-     12,
-     19,
-     21
+     13,
+     23,
+     29
     ],
     "g12_17": [
-     13,
-     20,
-     23
+     14,
+     25,
+     31
     ],
     "g65": [
-     3,
-     10,
-     18
+     7,
+     15,
+     28
     ]
    }
   },
@@ -1373,35 +1782,35 @@
    "poblacion_actual": null,
    "anio_poblacion_actual": null,
    "poblacion_completo": [
-    129,
-    174,
-    189
+    179,
+    219,
+    255
    ],
    "grupos_completo": {
     "g0_2": [
-     4,
-     7,
-     8
+     5,
+     8,
+     10
     ],
     "g3_5": [
      5,
-     7,
-     8
+     9,
+     11
     ],
     "g6_11": [
-     12,
-     18,
-     20
+     13,
+     22,
+     27
     ],
     "g12_17": [
-     12,
-     19,
-     22
+     14,
+     23,
+     30
     ],
     "g65": [
-     3,
-     10,
-     17
+     7,
+     14,
+     26
     ]
    }
   },
@@ -1414,35 +1823,35 @@
    "poblacion_actual": 350,
    "anio_poblacion_actual": 2023,
    "poblacion_completo": [
-    114,
-    154,
-    167
+    158,
+    194,
+    225
    ],
    "grupos_completo": {
     "g0_2": [
      4,
-     6,
-     7
+     7,
+     9
     ],
     "g3_5": [
-     4,
-     6,
-     7
+     5,
+     8,
+     10
     ],
     "g6_11": [
-     10,
-     16,
-     18
+     11,
+     19,
+     24
     ],
     "g12_17": [
-     11,
-     17,
-     19
+     12,
+     21,
+     26
     ],
     "g65": [
-     3,
-     8,
-     15
+     6,
+     13,
+     23
     ]
    }
   },
@@ -1455,35 +1864,35 @@
    "poblacion_actual": null,
    "anio_poblacion_actual": null,
    "poblacion_completo": [
-    71,
-    96,
-    104
+    99,
+    121,
+    141
    ],
    "grupos_completo": {
     "g0_2": [
-     2,
+     3,
      4,
-     4
+     6
     ],
     "g3_5": [
      3,
-     4,
-     5
+     5,
+     6
     ],
     "g6_11": [
-     6,
-     10,
-     11
+     7,
+     12,
+     15
     ],
     "g12_17": [
-     7,
-     11,
-     12
+     8,
+     13,
+     16
     ],
     "g65": [
-     2,
-     5,
-     9
+     4,
+     8,
+     14
     ]
    }
   },
@@ -1496,35 +1905,35 @@
    "poblacion_actual": 75,
    "anio_poblacion_actual": 2023,
    "poblacion_completo": [
-    48,
-    64,
-    70
+    66,
+    81,
+    94
    ],
    "grupos_completo": {
     "g0_2": [
      2,
-     2,
-     3
+     3,
+     4
     ],
     "g3_5": [
      2,
      3,
-     3
+     4
     ],
     "g6_11": [
-     4,
-     7,
-     7
+     5,
+     8,
+     10
     ],
     "g12_17": [
      5,
-     7,
-     8
+     9,
+     11
     ],
     "g65": [
-     1,
-     4,
-     6
+     2,
+     5,
+     10
     ]
    }
   },
@@ -1537,35 +1946,35 @@
    "poblacion_actual": null,
    "anio_poblacion_actual": null,
    "poblacion_completo": [
-    42,
-    56,
-    61
+    58,
+    71,
+    82
    ],
    "grupos_completo": {
     "g0_2": [
-     1,
      2,
-     2
+     3,
+     3
     ],
     "g3_5": [
      2,
-     2,
-     3
+     3,
+     4
     ],
     "g6_11": [
      4,
-     6,
-     6
+     7,
+     9
     ],
     "g12_17": [
      4,
-     6,
-     7
+     8,
+     10
     ],
     "g65": [
-     1,
-     3,
-     5
+     2,
+     5,
+     8
     ]
    }
   },
@@ -1578,9 +1987,9 @@
    "poblacion_actual": null,
    "anio_poblacion_actual": null,
    "poblacion_completo": [
-    30,
-    40,
-    44
+    41,
+    50,
+    59
    ],
    "grupos_completo": {
     "g0_2": [
@@ -1591,22 +2000,22 @@
     "g3_5": [
      1,
      2,
-     2
+     3
     ],
     "g6_11": [
      3,
-     4,
-     5
+     5,
+     6
     ],
     "g12_17": [
      3,
-     4,
-     5
+     5,
+     7
     ],
     "g65": [
-     1,
      2,
-     4
+     3,
+     6
     ]
    }
   },

@@ -73,11 +73,11 @@ Antes que nosotros: Oportunia, Alcanza, Aterriza y CERCA DE TI. Justo después: 
 
 ### 5:00 – 6:00 · El problema es enorme (Laura)
 > "Lo de Laura no es un caso: es la norma. En Los Molinos, en Getafe, viven hoy **11.473 personas**, casi un tercio menores… y no tienen centro de salud ni escuela infantil pública a diez minutos.
-> Y va a volver a pasar: el planeamiento de la Comunidad ya prevé **513.000 viviendas**. Entre **760.000 y 1,1 millones de personas**. Harán falta **entre 78.000 y 154.000 plazas de colegio** y **más de 30 centros de salud**."
+> Y va a volver a pasar: el planeamiento de la Comunidad ya prevé **513.000 viviendas**. Entre **1,1 y 1,5 millones de personas**. Harán falta **entre 88.000 y 214.000 plazas de colegio** y **más de 40 centros de salud**."
 
 ### 6:00 – 7:15 · Por qué es fiable (Carmen)
 > "Todo sale **por API** de los datos abiertos de la Comunidad, IDEM y Portal de Datos Abiertos, más INE y Consorcio de Transportes. Los 178 municipios se procesan solos.
-> **¿Acierta?** Lo probamos con el pasado: predecimos barrios ya construidos **sin mirar sus datos** y lo comparamos con el padrón real. **Error medio del 19 %; la regla habitual falla el doble.** Y siempre damos un rango, nunca una cifra inventada.
+> **¿Acierta?** Lo probamos con el pasado: tomamos **28 barrios nuevos ya habitados de 17 municipios**, dejamos fuera su municipio entero, predecimos su población **sin mirar sus datos** y la comparamos con el padrón real. **Error medio del 13 %; la regla habitual de viviendas por tamaño del hogar falla un 25 %: casi el doble.** Y siempre damos un rango, nunca una cifra inventada.
 > Y al cruzar fuentes encontramos **errores en datos oficiales**: centros de salud ubicados en otra ciudad con una calle del mismo nombre, paradas de Ciudad Real con código de un pueblo de Madrid. Los corregimos y se los podemos devolver a la Comunidad."
 
 ### 7:15 – 8:30 · Qué nos hace únicos (Laura)
@@ -99,8 +99,8 @@ Antes que nosotros: Oportunia, Alcanza, Aterriza y CERCA DE TI. Justo después: 
 ## Preguntas probables del jurado (y respuesta corta)
 | Pregunta | Respuesta |
 |---|---|
-| ¿De dónde sale la población futura? | Viviendas previstas del planeamiento (IDEM) × habitantes por vivienda medidos en barrios nuevos reales de Getafe (INE por sección censal). Siempre en rango. |
-| ¿Por qué calibrar solo con Getafe? | Tiene barrios nuevos ya habitados con secciones censales pequeñas; en pueblos las secciones son demasiado grandes. El rango lo recoge. |
+| ¿De dónde sale la población futura? | Viviendas previstas del planeamiento (IDEM) × habitantes por vivienda completa de cada municipio, con rango. El factor sale de un modelo calibrado con 28 barrios ya habitados de 17 municipios (INE por sección censal), explicado por el tamaño del hogar y lo joven que es el municipio, descontando lo que el catastro da aún por construir. |
+| ¿Y no es un modelo muy simple? | Es a propósito: probamos otras variables (renta, densidad, distancia a Madrid, vivienda protegida, natalidad…) y con 28 barrios ninguna mejoraba de forma fiable; más variables solo ajustarían ruido. Con las dos que usamos el error baja del 25 % al 13 %, y todas las cifras salen con rango. Un hallazgo: calibrar solo con Getafe subestimaba la población que llega a otros municipios, porque sus barrios nuevos tienen hogares pequeños (vivienda protegida). |
 | ¿Cómo ordenáis los municipios? | Cada criterio es un dato oficial con su fuente a la vista; comparamos cada municipio con los demás (0 el peor, 100 el mejor) y hacemos la media. En servicios cuenta que haya bastantes para su población y donde elegir. |
 | ¿"Trabajo en Madrid" no favorece a los de al lado? | No mide distancia: mide si hay tren o Metro hasta Madrid, cuántos autobuses directos y la zona del abono (Consorcio de Transportes). |
 | ¿Las distancias son reales? | En línea recta a 80 m/min. Mejora clara: tiempos por calles. |

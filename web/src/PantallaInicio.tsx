@@ -15,6 +15,8 @@ export type Destino =
 interface Props { servicios: Record<ServicioId, Servicio>; ir: (d: Destino) => void; tecnico: boolean }
 
 const BASE = import.meta.env.BASE_URL
+/** Viviendas previstas que el catastro aún da por sin construir (si no hay dato, todas las previstas). */
+const pendientes = (m: ResumenMunicipio) => m.viviendas_pendientes ?? m.viviendas_previstas ?? 0
 
 /** Plazas que hará falta por la población que traerán las viviendas previstas (rango del modelo calibrado). */
 function necesidades(viviendas: number, modelo: Modelo, servicios: Record<ServicioId, Servicio>, habPorVivienda?: Rango) {
@@ -44,23 +46,24 @@ export default function PantallaInicio({ servicios, ir, tecnico }: Props) {
     const sumar = (a: number[], b: number[]) => a.map((x, i) => x + b[i])
     let acc = null as null | ReturnType<typeof necesidades>
     for (const m of resumen.municipios) {
-      if (!m.viviendas_previstas) continue
-      const x = necesidades(m.viviendas_previstas, resumen.modelo, servicios, m.hab_por_vivienda)
+      if (!pendientes(m)) continue
+      const x = necesidades(pendientes(m), resumen.modelo, servicios, m.hab_por_vivienda)
       acc = acc ? { personas: sumar(acc.personas, x.personas), escuela: sumar(acc.escuela, x.escuela), colegio: sumar(acc.colegio, x.colegio), colegiosCentral: acc.colegiosCentral + x.colegiosCentral,
         salud: sumar(acc.salud, x.salud), residencia: sumar(acc.residencia, x.residencia) } : x
     }
-    const viv = resumen.municipios.reduce((t, m) => t + (m.viviendas_previstas ?? 0), 0)
-    return acc ? { viv, ...acc, municipios: resumen.municipios.filter((m) => (m.viviendas_previstas ?? 0) > 0).length } : null
+    const viv = resumen.municipios.reduce((t, m) => t + pendientes(m), 0)
+    const previstas = resumen.municipios.reduce((t, m) => t + (m.viviendas_previstas ?? 0), 0)
+    return acc ? { viv, previstas, ...acc, municipios: resumen.municipios.filter((m) => pendientes(m) > 0).length } : null
   }, [resumen, servicios])
 
   // radar: municipios que más crecen y si les queda suelo para los colegios que harán falta
   const radar = useMemo(() => {
     if (!resumen?.modelo) return []
     return resumen.municipios
-      .filter((m) => m.poblacion >= 1000 && (m.viviendas_previstas ?? 0) >= 300 && m.suelo_detallado)
+      .filter((m) => m.poblacion >= 1000 && pendientes(m) >= 300 && m.suelo_detallado)
       .map((m) => {
         const grandes = m.parcelas_equip_8000 ?? 0
-        const nec = necesidades(m.viviendas_previstas!, resumen.modelo!, servicios, m.hab_por_vivienda)
+        const nec = necesidades(pendientes(m), resumen.modelo!, servicios, m.hab_por_vivienda)
         const colegios = nec.colegiosCentral
         const estado = colegios < 0.5 ? 'sin_presion' : grandes >= colegios * 2 ? 'holgado' : grandes >= colegios ? 'justo' : 'falta'
         return { m, crece: (100 * nec.personas[0]) / m.poblacion, creceMax: (100 * nec.personas[1]) / m.poblacion, colegios, grandes, estado }
@@ -75,7 +78,7 @@ export default function PantallaInicio({ servicios, ir, tecnico }: Props) {
     const top = (f: (m: ResumenMunicipio) => number | null | undefined, fmt: (v: number) => string, min = 0) =>
       [...resumen.municipios].filter((m) => (f(m) ?? 0) > min).sort((a, b) => (f(b) ?? 0) - (f(a) ?? 0)).slice(0, 5).map((m) => ({ m, v: fmt(f(m)!) }))
     return [
-      { t: 'Donde más se va a construir', f: 'Viviendas previstas en el planeamiento (IDEM)', filas: top((m) => m.viviendas_previstas, n) },
+      { t: 'Donde más se va a construir', f: 'Viviendas previstas aún sin construir (IDEM y catastro)', filas: top((m) => m.viviendas_pendientes ?? m.viviendas_previstas, n) },
       { t: 'Más solares para vivienda', f: 'Parcelas residenciales sin construir (catastro, IDEM)', filas: top((m) => m.solares_vivienda, n) },
       { t: 'Suelo público en venta para vivienda', f: 'Parcelas residenciales (Portal del Suelo)', filas: top((m) => m.suelo_publico_vivienda, n) },
       { t: 'Los que más crecen', f: 'Población, último periodo (padrón), más de 5.000 hab.', filas: top((m) => (m.poblacion >= 5000 ? m.crecimiento_pct : null), (v) => `+${dec(v)} %`) },
@@ -106,7 +109,7 @@ export default function PantallaInicio({ servicios, ir, tecnico }: Props) {
             <div className="border-b border-tinta bg-tinta px-5 py-3 text-sm text-white">Lo que prevé el planeamiento urbanístico vigente</div>
             {total ? (
               <dl className="divide-y divide-linea">
-                <div className="px-5 py-4"><dt className="text-sm text-texto-2">Viviendas nuevas previstas en {total.municipios} municipios</dt><dd className="text-[34px] leading-tight font-semibold tabular-nums">{n(total.viv)}</dd></div>
+                <div className="px-5 py-4"><dt className="text-sm text-texto-2">Viviendas aún sin construir en {total.municipios} municipios <span className="text-texto-3">(de {n(total.previstas)} previstas en el plan)</span></dt><dd className="text-[34px] leading-tight font-semibold tabular-nums">{n(total.viv)}</dd></div>
                 <div className="px-5 py-4"><dt className="text-sm text-texto-2">Personas que pueden llegar</dt><dd className="text-2xl font-semibold tabular-nums">{dec(total.personas[0] / 1e6, 2)}–{dec(total.personas[1] / 1e6, 2)} millones</dd></div>
                 <div className="grid grid-cols-2 divide-x divide-linea">
                   <div className="px-5 py-4"><dt className="text-xs text-texto-2">Plazas de colegio que harán falta</dt><dd className="text-xl font-semibold tabular-nums">{n(total.colegio[0] / 1000)}–{n(total.colegio[1] / 1000)} mil</dd></div>
@@ -114,7 +117,7 @@ export default function PantallaInicio({ servicios, ir, tecnico }: Props) {
                 </div>
               </dl>
             ) : <div className="p-5 text-sm text-texto-2">Calculando…</div>}
-            <div className="border-t border-linea px-5 py-2 text-[11px] text-texto-3">Fuera de Madrid capital. Modelo calibrado con {resumen?.modelo?.municipio ?? 'barrios nuevos reales'} (INE).</div>
+            <div className="border-t border-linea px-5 py-2 text-[11px] text-texto-3">Fuera de Madrid capital. Las ya construidas, según el catastro, no cuentan. Modelo calibrado con {resumen?.modelo?.municipio ?? 'barrios nuevos reales'} (INE).</div>
           </div>
         </div>
       </section>

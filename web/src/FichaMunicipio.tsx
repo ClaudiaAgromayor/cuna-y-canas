@@ -123,7 +123,7 @@ export default function FichaMunicipio({ r, total, criterios, situaciones, tiles
         <Titulo>Lo que viene</Titulo>
         {futuro ? (
           <>
-            <p className="text-[10pt]">El planeamiento prevé <b>{n(m.viviendas_previstas!)} viviendas</b> en {m.ambitos_desarrollo} {m.ambitos_desarrollo === 1 ? 'ámbito' : 'ámbitos'} de desarrollo. Cuando estén habitadas pueden llegar <b>entre {n(futuro.pob[0])} y {n(futuro.pob[2])} personas</b> más.</p>
+            <p className="text-[10pt]">El planeamiento prevé <b>{n(m.viviendas_previstas!)} viviendas</b> en {m.ambitos_desarrollo} {m.ambitos_desarrollo === 1 ? 'ámbito' : 'ámbitos'} de desarrollo; según el catastro, <b>{n(m.viviendas_pendientes ?? m.viviendas_previstas!)}</b> aún están sin construir. Cuando estén habitadas pueden llegar <b>entre {n(futuro.pob[0])} y {n(futuro.pob[2])} personas</b> más.</p>
             <table className="mt-2 w-full text-[9.5pt]">
               <thead><tr className="border-b border-tinta text-left text-[8pt] text-texto-2"><th className="py-1 font-medium">Servicio</th><th className="py-1 text-right font-medium">Lo que hará falta por la población nueva</th></tr></thead>
               <tbody>

@@ -62,6 +62,7 @@ export interface ResumenMunicipio {
   corona: string | null        // zona tarifaria del abono (A, B1, B2, B3, C1, C2)
   viviendas_previstas: number | null
   viviendas_previstas_por_100hab: number | null
+  viviendas_pendientes?: number | null // de las previstas, las que el catastro aún da por sin construir
   ambitos_desarrollo: number
   zonas_verdes_m2: number | null
   zonas_verdes_m2_hab: number | null
@@ -149,7 +150,7 @@ export const CRITERIOS: Criterio[] = [
   // Futuro
   { id: 'joven', fuente: F.padron, grupo: 'Futuro y empleo', icono: 'escuela_infantil', unidad: '% menores de 15', texto: 'Ambiente joven y familias', explica: 'Porcentaje de menores de 15 años', valor: (m) => m.pct_menores15, mayorEsMejor: true },
   { id: 'crece', fuente: F.padron, grupo: 'Futuro y empleo', icono: 'validar', unidad: '% de crecimiento', texto: 'Municipio que crece', explica: 'Crecimiento de la población en los últimos años (%)', valor: (m) => m.crecimiento_pct, mayorEsMejor: true },
-  { id: 'vivienda_nueva', fuente: F.planeamiento, grupo: 'Futuro y empleo', icono: 'casa_nueva', unidad: 'viviendas por 100 hab.', texto: 'Vivienda nueva prevista', explica: 'Viviendas previstas en el planeamiento por cada 100 habitantes', valor: (m) => m.viviendas_previstas_por_100hab, mayorEsMejor: true },
+  { id: 'vivienda_nueva', fuente: F.planeamiento, grupo: 'Futuro y empleo', icono: 'casa_nueva', unidad: 'viviendas por 100 hab.', texto: 'Vivienda nueva por construir', explica: 'Viviendas previstas en el planeamiento que según el catastro aún no están construidas, por cada 100 habitantes', valor: (m) => (m.poblacion ? (100 * (m.viviendas_pendientes ?? m.viviendas_previstas ?? 0)) / m.poblacion : null), mayorEsMejor: true },
   { id: 'empleo', fuente: 'Portal de Datos Abiertos de la Comunidad (paro registrado) y padrón', grupo: 'Futuro y empleo', icono: 'validar', unidad: 'parados por 100 hab.', texto: 'Menos paro', explica: 'Personas en paro registrado por cada 100 habitantes', valor: (m) => m.paro_por_100, mayorEsMejor: false },
 ]
 

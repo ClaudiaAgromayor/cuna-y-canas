@@ -50,6 +50,7 @@ CAMPOS_MUNICIPIO = {
     "dist_madrid_km": "Distancia en línea recta a la Puerta del Sol (km)",
     "zonas_verdes_m2 / zonas_verdes_m2_hab / zonas_verdes_fuente": "Superficie de parques y por habitante; fuente: EIEL 2023 (parques existentes) o planeamiento (IDEM)",
     "pct_protegido": "% del término en un Espacio Natural Protegido o LIC/ZEC de la Red Natura 2000 (IDEM)",
+    "viviendas_pendientes": "De las viviendas previstas, las que el catastro aún da por sin construir (viviendas de cada ámbito × % de suelo residencial vacante); sin dato de ocupación, el ámbito se cuenta entero",
     "viviendas_previstas / viviendas_previstas_por_100hab / ambitos_desarrollo": "Viviendas previstas en el planeamiento refundido 2025 (IDEM), por 100 habitantes y nº de ámbitos con viviendas",
     "parcelas_equip / parcelas_equip_1500 / parcelas_equip_8000 / suelo_equip_m2": "Parcelas de equipamiento vacantes (IDEM, suelo vacante 2026): total, de 1.500 m² o más, de 8.000 m² o más y superficie",
     "sup_km2 / densidad": "Superficie del término (km²) y habitantes por km²",

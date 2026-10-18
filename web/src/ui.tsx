@@ -20,6 +20,10 @@ export function imprimirConNombre(tipo: 'barrio' | 'municipio', nombre: string, 
   setTimeout(() => window.print(), espera)
 }
 
+/** Parámetros de la dirección al abrir la página. Solo se usan en desarrollo, para sacar capturas de estados concretos (cmp, plano, serv, min). */
+export const DIRECCION_INICIAL = new URLSearchParams(typeof location !== 'undefined' ? location.hash.slice(1) : '')
+export const ayuda = (k: string) => (import.meta.env.DEV ? DIRECCION_INICIAL.get(k) : null)
+
 export function nombreBarrio(ambito: string | null | undefined): string {
   if (!ambito) return 'Fuera de los barrios en desarrollo'
   // los códigos de planeamiento siempre llevan guion: SUS-PP-2, AA-01, S-I.1, PAU-2

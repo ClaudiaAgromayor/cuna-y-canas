@@ -5,7 +5,7 @@ import Mapa, { type CapaMapa, type Marcador } from './Mapa'
 import { calcular, circulo, existentesDe, type Escenario } from './algoritmo'
 import { cargarMunicipio } from './datos'
 import type { DatosMunicipio, MunicipioIndice, Parcela, Servicio, ServicioId } from './tipos'
-import { capitalizar, n, nombreBarrio } from './ui'
+import { ayuda, capitalizar, dec, n, nombreBarrio } from './ui'
 import { Icono } from './iconos'
 
 const SERVICIOS: ServicioId[] = ['colegio', 'escuela_infantil', 'centro_salud', 'centro_dia', 'residencia']
@@ -25,7 +25,7 @@ function escenario(s: Servicio, d: DatosMunicipio, llenado: number): Escenario {
 export default function PlanoPublico({ indice, servicios, cerrar }: { indice: MunicipioIndice; servicios: Record<ServicioId, Servicio>; cerrar: () => void }) {
   const [datos, setDatos] = useState<DatosMunicipio | null>(null)
   const [error, setError] = useState('')
-  const [sid, setSid] = useState<ServicioId>('colegio')
+  const [sid, setSid] = useState<ServicioId>(() => (ayuda('serv') as ServicioId | null) ?? 'colegio')
   useEffect(() => { cargarMunicipio(indice).then(setDatos).catch((e) => setError(e.message)) }, [indice])
   useEffect(() => {
     const tecla = (e: KeyboardEvent) => { if (e.key === 'Escape') cerrar() }
@@ -71,7 +71,14 @@ export default function PlanoPublico({ indice, servicios, cerrar }: { indice: Mu
     return b[2] - b[0] > 0.01 && b[3] - b[1] > 0.008 ? b : datos.encuadre
   }, [datos, parcelas])
   const unidad = s.unidad === 'plazas' ? 'plazas' : 'usuarios'
-  const frase = !res ? '' : res.propuestas.length
+  // residencias: no se eligen por cercanía; se cuentan en plazas para todo el municipio frente a la media de la Comunidad
+  const capEx = existentes.reduce((t, c) => t + c.capacidad, 0)
+  const ratioHoy = res && res.demandaTotal ? (100 * capEx * s.tasa_uso[1]) / res.demandaTotal : 0
+  const deficit = res ? Math.max(0, Math.round(res.demandaTotal - res.cubiertaExistentes)) : 0
+  const fraseMunicipio = deficit > 0
+    ? `${indice.nombre} tiene ${dec(ratioHoy, 1)} plazas de ${s.nombre.toLowerCase()} por cada 100 mayores de 65 y la media de la Comunidad es ${dec(100 * s.tasa_uso[1], 1)}: faltarían unas ${n(deficit)} plazas, entre ${Math.max(1, Math.round(deficit / s.capacidad[2]))} y ${Math.max(1, Math.round(deficit / s.capacidad[0]))} residencias según su tamaño. En el mapa, en rojo, dónde podrían ir las primeras.`
+    : `${indice.nombre} tiene ${dec(ratioHoy, 1)} plazas por cada 100 mayores de 65, por encima de la media de la Comunidad (${dec(100 * s.tasa_uso[1], 1)}): no le faltan plazas.`
+  const frase = !res ? '' : s.escala === 'municipio' ? fraseMunicipio : res.propuestas.length
     ? `Con la población prevista para ${ANIO}, en ${indice.nombre} ${res.propuestas.length === 1 ? 'haría falta 1 nuevo' : `harían falta ${res.propuestas.length} nuevos`} (${s.nombre.toLowerCase()})${hoy && hoy.propuestas.length ? (res.propuestas.length === 1 ? ', y haría falta ya hoy' : `; ${hoy.propuestas.length === 1 ? 'uno haría falta ya hoy' : `${hoy.propuestas.length} harían falta ya hoy`}`) : ''}. En el mapa, en rojo, dónde podrían ir sobre suelo público vacante.`
     : res.sinCubrir === 0 ? `Los centros que ya hay en ${indice.nombre} bastan para la demanda prevista en ${ANIO}.`
     : `No hace falta ningún centro nuevo de ${s.nombre.toLowerCase()}: los actuales atienden la mayor parte y lo que falta está repartido, así que se cubriría ampliando los que ya hay.`

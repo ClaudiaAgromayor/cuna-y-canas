@@ -6,7 +6,7 @@ import FichaMunicipio from './FichaMunicipio'
 import PlanoPublico from './PlanoPublico'
 import type { MunicipioIndice, Rango, Servicio, ServicioId } from './tipos'
 import { Icono } from './iconos'
-import { Aviso, Boton, dec, imprimirConNombre, n, Leyenda } from './ui'
+import { ayuda, Aviso, Boton, dec, imprimirConNombre, n, Leyenda } from './ui'
 
 interface Modelo { municipio: string; parametros: { hab_por_vivienda: Rango; pct_menores18: Rango; pct_mayores65: Rango }; reparto_menores: Record<string, number> }
 interface Resumen { generado: string; modelo: Modelo | null; municipios: ResumenMunicipio[] }
@@ -38,6 +38,7 @@ export default function PantallaMunicipios({ servicios, detallados, verBarrios, 
   const [comparar, setComparar] = useState<string[]>([])
   const [verComparacion, setVerComparacion] = useState(false)
   const [abiertos, setAbiertos] = useState<string[]>([])
+  useEffect(() => { const c = ayuda('cmp'); if (c) { setComparar(c.split(',')); setVerComparacion(true) } }, [])
 
   useEffect(() => {
     fetch(`${BASE}municipios_resumen.json`).then((r) => r.json()).then(setResumen)
@@ -274,13 +275,13 @@ function Ficha({ r, total, criterios, modelo, servicios, situaciones, limites, p
   volver: () => void; comparando: boolean; alternarComparar: () => void; detallado: boolean; verBarrios: () => void; indice?: MunicipioIndice
 }) {
   const m = r.m
-  const [plano, setPlano] = useState(false)
+  const [plano, setPlano] = useState(() => ayuda('plano') === '1')
   const cs = CRITERIOS.filter((c) => criterios.includes(c.id))
   // lo que viene: población que traerán las viviendas previstas y servicios que harán falta (rangos)
   const futuro = useMemo((): Futuro | null => {
-    if (!modelo || !m.viviendas_previstas) return null
+    if (!modelo || !(m.viviendas_pendientes ?? m.viviendas_previstas)) return null
     const hv = m.hab_por_vivienda ?? modelo.parametros.hab_por_vivienda, men = modelo.parametros.pct_menores18, may = modelo.parametros.pct_mayores65, rep = modelo.reparto_menores
-    const pob = hv.map((h) => m.viviendas_previstas! * h) as Rango
+    const pob = hv.map((h) => (m.viviendas_pendientes ?? m.viviendas_previstas)! * h) as Rango
     const grupo = (k: string) => pob.map((p, i) => (k === 'g65' ? (p * may[i]) / 100 : k === 'pob' ? p : (p * men[i] * (rep[k] ?? 0)) / 100))
     const necesita = (sid: ServicioId) => {
       const s = servicios[sid]
@@ -384,7 +385,7 @@ function Ficha({ r, total, criterios, modelo, servicios, situaciones, limites, p
         <h2 className="mb-2 font-semibold">Lo que viene</h2>
         {futuro ? (
           <>
-            <p className="text-sm text-texto-2">El planeamiento prevé <b className="text-tinta">{n(m.viviendas_previstas!)} viviendas</b> en {m.ambitos_desarrollo} {m.ambitos_desarrollo === 1 ? 'ámbito' : 'ámbitos'} de desarrollo. Cuando estén habitadas pueden llegar <b className="text-tinta">entre {n(futuro.pob[0])} y {n(futuro.pob[2])} personas</b> más.</p>
+            <p className="text-sm text-texto-2">El planeamiento prevé <b className="text-tinta">{n(m.viviendas_previstas!)} viviendas</b> en {m.ambitos_desarrollo} {m.ambitos_desarrollo === 1 ? 'ámbito' : 'ámbitos'} de desarrollo; según el catastro, <b className="text-tinta">{n(m.viviendas_pendientes ?? m.viviendas_previstas!)}</b> aún están sin construir. Cuando estén habitadas pueden llegar <b className="text-tinta">entre {n(futuro.pob[0])} y {n(futuro.pob[2])} personas</b> más.</p>
             <ul className="mt-3 border-t border-gris-2">
               {futuro.items.map(({ s, plazas, centros }) => (
                 <li key={s.nombre} className="flex items-baseline justify-between gap-3 border-b border-gris-2 py-2 text-sm">
@@ -445,8 +446,7 @@ function Comparacion({ lista, criterios, volver, quitar }: { lista: (Puntuado & 
     ['Líneas de tren o Metro hasta Madrid', (m) => m.lineas_tren_madrid.length, n, true],
     ['Autobuses directos a Madrid', (m) => m.bus_madrid, n, true],
     ['Zona del abono', (m) => (m.corona ? ZONAS.indexOf(m.corona) : null), (v) => ZONAS[v], false],
-    ['Zonas verdes (m²/hab.)', (m) => m.zonas_verdes_m2_hab, n, true],
-    ['Viviendas previstas', (m) => m.viviendas_previstas, n, true],
+    ['Viviendas aún por construir', (m) => m.viviendas_pendientes ?? m.viviendas_previstas, n, true],
     ['Renta por habitante (€)', (m) => m.renta_per_capita, n, true],
   ]
   return (

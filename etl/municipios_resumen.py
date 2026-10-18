@@ -306,6 +306,15 @@ def main() -> None:
     R = R[R["poblacion"].notna()]  # 998 y 999 son terrenos comuneros sin población
     R = R.drop(columns=["poblacion_inicio"]).round(2)
     filas = [{"cod_ine": c, **{k: (None if (isinstance(v, float) and np.isnan(v)) else (v.item() if hasattr(v, "item") else v)) for k, v in r.items()}} for c, r in R.iterrows()]
+    # viviendas pendientes: de las previstas en el planeamiento, las que el catastro aún da por sin construir
+    # (viviendas de cada ámbito × % de suelo residencial vacante; sin dato de ocupación, el ámbito se cuenta entero)
+    for f in filas:
+        carpeta = next(PROCESSED.glob(f"{f['cod_ine']}-*"), None)
+        pend = None
+        if carpeta and (carpeta / "resumen_ambitos.json").exists():
+            amb = json.loads((carpeta / "resumen_ambitos.json").read_text(encoding="utf-8"))["ambitos"]
+            pend = sum((r.get("viviendas_previstas") or 0) * (r["pct_residencial_vacante"] / 100 if r.get("pct_residencial_vacante") is not None else 1) for r in amb)
+        f["viviendas_pendientes"] = round(pend) if pend is not None else f.get("viviendas_previstas")
     # modelo de población (etl/modelo_poblacion.py): habitantes por vivienda completa de cada municipio, con su rango, y parámetros comunes
     mp = MP.cargar()
     for f in filas:

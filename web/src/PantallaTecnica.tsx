@@ -3,7 +3,7 @@ import type { Feature, FeatureCollection, Geometry, MultiPolygon, Point, Polygon
 import Mapa, { type CapaMapa, type Marcador } from './Mapa'
 import { calcular, circulo, existentesDe, OCUPACION_MINIMA, pesoDemanda, type Escenario, type Resultado } from './algoritmo'
 import type { DatosMunicipio, Parcela, Servicio, ServicioId } from './tipos'
-import { Aviso, Boton, capitalizar, dec, Deslizador, Interruptor, n, nombreBarrio, Paso, Leyenda } from './ui'
+import { ayuda, Aviso, Boton, capitalizar, dec, Deslizador, Interruptor, n, nombreBarrio, Paso, Leyenda } from './ui'
 import { Icono } from './iconos'
 import { descargarGeoJSON, descargarInforme } from './exportar'
 import GraficaPoblacion, { type FilaPoblacion, type GrupoId } from './GraficaPoblacion'
@@ -54,8 +54,8 @@ export default function PantallaTecnica({ datos, servicios, servicioInicial, zon
   const [anio, setAnio] = useState(2035)
   const [aniosLlenado, setAniosLlenado] = useState(10)
   const [guardado, setGuardado] = useState<{ esc: Escenario; res: Resultado; servicio: string; anio: number } | null>(null)
-  const [verParadas, setVerParadas] = useState(false)
-  const [verDemanda, setVerDemanda] = useState(false)
+  const [verParadas, setVerParadas] = useState(true)
+  const [verDemanda, setVerDemanda] = useState(true)
   const [verZonas, setVerZonas] = useState(false)
   const [pestana, setPestana] = useState<'ajustes' | 'resultados'>('ajustes')
   const [reproduciendo, setReproduciendo] = useState(false)
@@ -73,11 +73,12 @@ export default function PantallaTecnica({ datos, servicios, servicioInicial, zon
   // cambiar de servicio reinicia los supuestos del servicio, pero conserva la zona de estudio
   useEffect(() => { setEsc((e) => escenarioInicial(servicios[sid], datos, e.zona)); setVerZonas(sid === 'centro_salud') }, [sid, datos, servicios])
   useEffect(() => { setGuardado(null) }, [datos])
+  useEffect(() => { const m = Number(ayuda('min')); if (m) setEsc((e) => ({ ...e, minutos: m })) }, []) // solo desarrollo: capturas con otro tiempo a pie
 
   const upd = (p: Partial<Escenario>) => setEsc((e) => ({ ...e, ...p }))
   // al mover, fijar o descartar una ubicación se guarda cómo estaba la cobertura, para decir qué ha cambiado
   const [cambio, setCambio] = useState<{ accion: string; antes: number } | null>(null)
-  // pinchar el mapa solo cambia algo si se ha elegido antes "Añadir centro" o "Quitar centro"
+  // pinchar el mapa solo cambia algo si se ha elegido antes "Poner un centro" o "Quitar un centro"
   const [modo, setModo] = useState<'ver' | 'anadir' | 'quitar'>('ver')
   const llenadoDe = (a: number) => Math.max(0, Math.min(1, (a - ANIO_BASE) / aniosLlenado))
   const escE = useMemo(() => ({ ...esc, llenado: llenadoDe(anio) }), [esc, anio, aniosLlenado]) // eslint-disable-line react-hooks/exhaustive-deps
@@ -367,16 +368,21 @@ export default function PantallaTecnica({ datos, servicios, servicioInicial, zon
           <details>
             <summary className="flex cursor-pointer items-center gap-2 font-semibold"><Icono nombre="validar" className="h-5 w-5" />¿Son fiables estas cifras?<span className="ml-auto text-xs font-normal text-texto-3">ver la prueba</span></summary>
             <p className="mt-2 text-sm text-texto-2">Lo comprobamos con <b className="text-tinta">{cal.n_barrios ?? pr.length} barrios nuevos ya habitados de {cal.n_municipios ?? 'varios'} municipios</b>: para cada uno dejamos fuera su municipio entero, calculamos su población <b className="text-tinta">sin mirar sus datos</b> y la comparamos con la real (INE). De media nos equivocamos un <b className="text-tinta">{dec(rp?.error_medio_pct ?? media('error_pct'), 0)} %</b>; la regla habitual (viviendas × tamaño medio del hogar), un <b className="text-tinta">{dec(rp?.error_regla_habitual_pct ?? media('error_ingenua_pct'), 0)} %</b>.</p>
+            <div className="mt-3 grid gap-1.5 border-l-[3px] border-tinta bg-gris-1 px-3 py-2 text-xs leading-relaxed text-texto-2">
+              <p><b className="text-tinta">Nuestro error:</b> cuánto se equivoca nuestro modelo con cada barrio. «+20 %» = calculamos un 20 % más de gente de la que hay.</p>
+              <p><b className="text-tinta">Regla habitual:</b> la cuenta que suele hacerse a mano: viviendas del plan × personas por hogar de la ciudad.</p>
+              <p>En <b className="text-tinta">{pr.filter((b) => Math.abs(b.error_pct) < 20).length} de {pr.length}</b> barrios el error es menor del 20 %; solo {pr.filter((b) => Math.abs(b.error_pct) >= 30).length === 1 ? 'uno pasa' : `${pr.filter((b) => Math.abs(b.error_pct) >= 30).length} pasan`} del 30 %. Mejoramos la regla habitual en <b className="text-tinta">{pr.filter((b) => Math.abs(b.error_pct) < Math.abs(b.error_ingenua_pct)).length}</b> barrios.</p>
+            </div>
             <p className="mt-2 text-xs text-texto-2">El factor de habitantes por vivienda de {datos.indice.nombre} ({hv ? `${dec(hv[0], 2)}–${dec(hv[2], 2)}` : '—'}) se calcula con el tamaño de hogar de su municipio y lo joven que es, y descuenta lo que aún no está construido según el catastro.{rp ? ` El rango acierta en el ${rp.dentro_del_rango_pct} % de los barrios.` : ''}</p>
             <div className="mt-3 max-h-72 overflow-y-auto border-y border-linea">
               <table className="w-full text-sm">
                 <thead><tr className="sticky top-0 border-b border-tinta bg-white text-left text-xs text-texto-2">
-                  <th className="py-1.5 pr-2 font-medium">Barrio</th><th className="pr-2 text-right font-medium">Población real</th><th className="pr-2 text-right font-medium">Nuestro error</th><th className="text-right font-medium">Regla habitual</th></tr></thead>
+                  <th className="py-1.5 pr-2 font-medium">Barrio</th><th className="pr-2 text-right font-medium">Población real</th><th className="pr-2 text-right font-medium whitespace-nowrap">Nuestro error</th><th className="text-right font-medium whitespace-nowrap">Regla habitual</th></tr></thead>
                 <tbody>{pr.map((b) => (
                   <tr key={`${b.municipio}-${b.ambito}`} className="border-b border-gris-2">
                     <td className="py-1.5 pr-2">{nombreBarrio(b.ambito)}</td><td className="pr-2 text-right tabular-nums">{n(b.real)}</td>
-                    <td className="pr-2 text-right font-semibold tabular-nums">{b.error_pct > 0 ? '+' : ''}{dec(b.error_pct)} %</td>
-                    <td className="text-right text-texto-3 tabular-nums">{b.error_ingenua_pct > 0 ? '+' : ''}{dec(b.error_ingenua_pct)} %</td>
+                    <td className="pr-2 text-right font-semibold whitespace-nowrap tabular-nums">{b.error_pct > 0 ? '+' : ''}{dec(b.error_pct)} %</td>
+                    <td className="text-right whitespace-nowrap text-texto-3 tabular-nums">{b.error_ingenua_pct > 0 ? '+' : ''}{dec(b.error_ingenua_pct)} %</td>
                   </tr>))}
                 </tbody>
               </table>
@@ -478,7 +484,7 @@ export default function PantallaTecnica({ datos, servicios, servicioInicial, zon
           {(esc.fijados.length > 0 || esc.excluidas.length > 0) && (
             <div className="px-5 py-4"><Boton className="w-full" onClick={() => upd({ fijados: [], excluidas: [] })}>Deshacer ubicaciones fijadas y descartadas</Boton></div>
           )}
-          <p className="px-5 py-4 text-xs leading-relaxed text-texto-3">Para cambiar los centros usa la barra de encima del mapa: «Añadir centro» y pulsa una parcela azul, o «Quitar centro» y pulsa un centro rojo. También puedes arrastrar un centro rojo para probar otro sitio.</p>
+          <p className="px-5 py-4 text-xs leading-relaxed text-texto-3">Para probar tu idea usa «Prueba tu idea», debajo del mapa: «Poner un centro» y pulsa una parcela azul, o «Quitar un centro» y pulsa un centro rojo. También puedes arrastrar un centro rojo para moverlo.</p>
         </div>
       </aside>
 
@@ -490,21 +496,26 @@ export default function PantallaTecnica({ datos, servicios, servicioInicial, zon
             else if (capa === 'ambitos' && estadoAmbito.has(String(p.nombre))) upd({ zona: String(p.nombre), fijados: [], excluidas: [] })
           }}
           onArrastrar={arrastrar} onClickMarcador={modo === 'quitar' ? quitarCentro : undefined} />
-        {/* barra de edición: el mapa solo cambia los centros si se elige una acción */}
-        <div className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 border border-tinta bg-white text-xs shadow-sm">
-          {([['ver', 'Ver'], ['anadir', '+ Añadir centro'], ['quitar', '− Quitar centro']] as const).map(([m, t]) => (
-            <button key={m} type="button" aria-pressed={modo === m} onClick={() => setModo(m)}
-              className={`px-2.5 py-1 font-medium ${modo === m ? 'bg-tinta text-white' : 'hover:bg-gris-1'} ${m !== 'ver' ? 'border-l border-tinta' : ''}`}>{t}</button>
-          ))}
+        {/* prueba tu idea: el mapa solo cambia los centros si se elige antes una acción */}
+        <div className="absolute bottom-8 left-1/2 z-10 w-[min(92%,520px)] -translate-x-1/2 border border-tinta bg-white shadow-sm">
+          <div className="flex items-center gap-2 border-b border-linea px-3 py-1.5 text-xs">
+            <b>Prueba tu idea</b><span className="text-texto-3">¿Y si lo pones en otro sitio, o te quedas con menos?</span>
+          </div>
+          <div className="flex text-xs">
+            {([['ver', 'Solo mirar'], ['anadir', '+ Poner un centro'], ['quitar', '− Quitar un centro']] as const).map(([m, t]) => (
+              <button key={m} type="button" aria-pressed={modo === m} onClick={() => setModo(m)}
+                className={`flex-1 px-2.5 py-1.5 font-medium ${modo === m ? 'bg-tinta text-white' : 'hover:bg-gris-1'} ${m !== 'ver' ? 'border-l border-tinta' : ''}`}>{t}</button>
+            ))}
+          </div>
+          <p className="border-t border-linea px-3 py-1.5 text-xs text-texto-2">
+            {modo === 'ver' ? 'Ahora solo ves datos: pulsar no cambia nada. Elige «Poner» o «Quitar» para probar.'
+              : modo === 'anadir' ? <b className="text-tinta">Pulsa una parcela azul: ahí irá un centro nuevo y verás cuánta gente más atiende.</b>
+              : <b className="text-tinta">Pulsa un centro rojo para quitarlo y ver cuánta gente se queda sin atender.</b>}
+          </p>
         </div>
         {(esc.fijados.length > 0 || esc.excluidas.length > 0 || esc.nCentros !== 'auto') && (
           <button type="button" onClick={() => { upd({ nCentros: 'auto', fijados: [], excluidas: [] }); setCambio(null); setModo('ver') }}
             className="absolute right-3 bottom-8 z-10 border border-linea bg-white px-2.5 py-1 text-xs font-medium shadow-sm hover:border-tinta">Volver a la propuesta automática</button>
-        )}
-        {modo !== 'ver' && (
-          <div className="absolute bottom-[4.25rem] left-1/2 z-10 -translate-x-1/2 bg-tinta px-3 py-1.5 text-xs text-white">
-            {modo === 'anadir' ? 'Pulsa una parcela azul para poner ahí un centro nuevo.' : 'Pulsa un centro rojo (o su parcela) para quitarlo.'}
-          </div>
         )}
         <Leyenda>
           <Ley color="#131313" t={`${s.nombre} existente`} redondo />

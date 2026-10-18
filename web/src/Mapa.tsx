@@ -39,7 +39,9 @@ interface Props {
 /** Foto del mapa tal como se ve (capas de datos incluidas), en PNG. Se lee justo después de pintar un fotograma. */
 export function fotoDelMapa(m: maplibregl.Map): Promise<string> {
   return new Promise((ok) => {
-    m.once('render', () => { try { ok(m.getCanvas().toDataURL('image/png')) } catch { ok('') } })
+    // si el mapa no llega a pintar (pestaña en segundo plano, equipo lento), la ficha se imprime igualmente, sin foto
+    const espera = setTimeout(() => ok(''), 1500)
+    m.once('render', () => { clearTimeout(espera); try { ok(m.getCanvas().toDataURL('image/png')) } catch { ok('') } })
     m.triggerRepaint()
   })
 }

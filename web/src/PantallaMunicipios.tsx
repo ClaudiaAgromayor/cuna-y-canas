@@ -6,7 +6,7 @@ import FichaMunicipio from './FichaMunicipio'
 import PlanoPublico from './PlanoPublico'
 import type { MunicipioIndice, Rango, Servicio, ServicioId } from './tipos'
 import { Icono } from './iconos'
-import { Aviso, Boton, dec, n, Leyenda } from './ui'
+import { Aviso, Boton, dec, imprimirConNombre, n, Leyenda } from './ui'
 
 interface Modelo { municipio: string; parametros: { hab_por_vivienda: Rango; pct_menores18: Rango; pct_mayores65: Rango }; reparto_menores: Record<string, number> }
 interface Resumen { generado: string; modelo: Modelo | null; municipios: ResumenMunicipio[] }
@@ -311,12 +311,7 @@ function Ficha({ r, total, criterios, modelo, servicios, situaciones, limites, p
     const [titulo, tono] = colegios < 0.5 ? ['Poca presión sobre el suelo', 'neutro'] : grandes >= colegios * 2 ? ['Hay suelo de sobra', 'ok'] : grandes >= colegios ? ['Suelo justo', 'aviso'] : ['Puede faltar suelo', 'rojo']
     return { colegios, grandes, titulo, tono }
   })() : null
-  const imprimir = () => {
-    document.body.dataset.imprimir = 'municipio'
-    const limpiar = () => { delete document.body.dataset.imprimir; window.removeEventListener('afterprint', limpiar) }
-    window.addEventListener('afterprint', limpiar)
-    setTimeout(() => window.print(), 100)
-  }
+  const imprimir = () => imprimirConNombre('municipio', m.nombre)
 
   return (
     <div className="ficha">

@@ -6,7 +6,7 @@ import FichaBarrio from './FichaBarrio'
 import { circulo, metros, METROS_POR_MINUTO } from './algoritmo'
 import type { AmbitoDemanda, DatosMunicipio, Servicio, ServicioId } from './tipos'
 import { Icono, iconoSvg } from './iconos'
-import { Aviso, capitalizar, dec, Estado, Linea, n, nombreBarrio, type EstadoId, Leyenda } from './ui'
+import { Aviso, capitalizar, dec, Estado, imprimirConNombre, Linea, n, nombreBarrio, type EstadoId, Leyenda } from './ui'
 
 interface Props { datos: DatosMunicipio; servicios: Record<ServicioId, Servicio>; barrioInicial?: string; catsIniciales?: string[] }
 
@@ -140,10 +140,7 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial, cat
   // ficha en PDF: primero una foto del mapa tal como se ve, después el diálogo de imprimir
   const imprimirFicha = async () => {
     if (mapaRef.current) setImagenMapa(await fotoDelMapa(mapaRef.current))
-    document.body.dataset.imprimir = 'barrio'
-    const limpiar = () => { delete document.body.dataset.imprimir; window.removeEventListener('afterprint', limpiar) }
-    window.addEventListener('afterprint', limpiar)
-    setTimeout(() => window.print(), 150)
+    imprimirConNombre('barrio', lugar?.ambito ? nombreBarrio(lugar.ambito) : `${datos.indice.nombre} punto elegido`, 150)
   }
   const refResultados = useRef<HTMLDivElement>(null)
   // pulsar un nombre de la lista: el mapa va hasta él y lo señala

@@ -6,6 +6,20 @@ export const dec = (x: number, d = 1) => x.toLocaleString('es-ES', { minimumFrac
 
 const MINUSCULAS = new Set(['de', 'del', 'la', 'las', 'los', 'el', 'y', 'en'])
 /** "SUS-PP-2 LOS MOLINOS" -> "Los Molinos"; "SUI-05 PAU-2 EL BERCIAL-UNIVERSIDAD" -> "El Bercial-Universidad". El código oficial se conserva aparte. */
+/**
+ * Imprime una ficha con un nombre de archivo claro: al guardar en PDF el navegador propone el título de la página,
+ * así que se pone "FichaSanFernandoDeHenares" mientras se imprime y después se restaura.
+ */
+export function imprimirConNombre(tipo: 'barrio' | 'municipio', nombre: string, espera = 100) {
+  const camel = nombre.normalize('NFD').replace(/[̀-ͯ]/g, '').split(/[^A-Za-z0-9]+/).filter(Boolean).map((w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join('')
+  const titulo = document.title
+  document.title = `Ficha${camel}`
+  document.body.dataset.imprimir = tipo
+  const limpiar = () => { delete document.body.dataset.imprimir; document.title = titulo; window.removeEventListener('afterprint', limpiar) }
+  window.addEventListener('afterprint', limpiar)
+  setTimeout(() => window.print(), espera)
+}
+
 export function nombreBarrio(ambito: string | null | undefined): string {
   if (!ambito) return 'Fuera de los barrios en desarrollo'
   // los códigos de planeamiento siempre llevan guion: SUS-PP-2, AA-01, S-I.1, PAU-2

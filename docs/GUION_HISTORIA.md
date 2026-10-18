@@ -79,13 +79,7 @@ Antes: marca lo que busca: **escuela infantil pública, colegio público, centro
 ### 3:00 – 3:40 · Lo que viene (vuelve a **¿Dónde vivir?** → Getafe → bajar a **Lo que viene** → **Ver dónde podrían ir los nuevos centros →**)
 > "El plan urbanístico de Getafe prevé 25.388 viviendas, **pero casi todas ya están hechas**: según el catastro, **3.095 siguen sin construir**. Eso son **entre 5.000 y 7.000 personas más**. No es un aluvión: es un goteo. Lo importante es **dónde**."
 
-**Plano de solo lectura** (cualquier vecino lo ve, sin acceso de técnico):
-- **Colegio:** *"harían falta 3 nuevos, 2 ya hoy: Los Molinos y Buenavista."*
-- **Centro de día** *(aquí, despacio)*: *"harían falta **4 nuevos, los cuatro ya hoy**: Juan de la Cierva, El Bercial, Greco y Kelvinator. **¡Mi padre!** Llegamos antes que él."*
-- *(si da tiempo)* Escuela infantil y centro de salud: *"no hacen falta nuevos."*
 - **Ficha PDF** (un segundo): *"Me llevo FichaGetafe para enseñársela a mi marido."*
-- **Cualquier otro municipio** *(sin preparar; en ¿Dónde vivir? abrir uno cualquiera, por ejemplo Navalcarnero)*: *"Y esto no es solo Getafe. Es lo mismo para los 179 municipios de la Comunidad, con datos oficiales y calculado automáticamente. Abro uno al azar… y tiene su ficha completa."*
-- **Pestaña Datos abiertos** *(arriba, un segundo)*: *"Y todo lo que hemos elaborado está publicado y se puede descargar, con su diccionario."*
 
 > **Laura (a Carmen):** "Pero alguien tendrá que decidir dónde se ponen, ¿no?" · **Carmen:** "Ese alguien soy yo."
 

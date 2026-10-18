@@ -273,6 +273,9 @@ export default function PantallaTecnica({ datos, servicios, servicioInicial, zon
 
     <section className="border-b border-linea px-6 py-5">
       <h3 className="mb-2 font-semibold">Cuándo hace falta cada centro</h3>
+      {(esc.fijados.length > 0 || esc.excluidas.length > 0 || esc.nCentros !== 'auto') && (
+        <p className="mb-2 text-xs text-texto-2">Este calendario es el de la <b className="text-tinta">propuesta automática</b>, sin los cambios que has hecho tú en el mapa.</p>
+      )}
       {temporal.hitos.length ? (
         <>
           <ol className="relative ml-1 border-l-2 border-linea">

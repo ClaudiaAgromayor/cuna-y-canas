@@ -18,7 +18,12 @@ Es el **speech y la demo del inicio** de la presentación: una familia busca dó
 ## Personajes y atrezo
 - **Laura** (voz A): madre con una hija de 5 años, otro bebé en camino y unos padres que quieren vivir cerca. Habla como si estuviera en su casa, con el portátil en las rodillas. **Atrezo: un dibujo de Martina** (una casa, un cole al lado, un columpio y dos abuelos con bastón).
 - **Carmen** (voz B): técnica de planificación del **Ayuntamiento de Getafe** (en la web, "Acceso técnicos" → *Ayuntamiento de Getafe*). Seria, con humor seco. Vuelve a salir en la venta.
-- **Personajes que solo se nombran:** Martina (5 años, muy estricta con los columpios), el marido (trabaja en Madrid), el cuñado (siempre tiene opinión) y los padres, **Pilar y Paco**. Pilar: *"a una residencia, ni muerta; a un centro de día, a jugar al dominó, sí"*.
+- **Personajes que solo se nombran:** Martina (5 años, muy estricta con los columpios), el marido (trabaja en Madrid), el cuñado (siempre tiene opinión) y los padres, **Pilar y Paco**. Pilar quiere un sitio donde jugar al dominó con sus amigas (un **hogar de mayores**) y Paco, que anda regular, **un centro de día** por las mañanas. Ninguno quiere una residencia, todavía.
+
+**Tres palabras que conviene tener claras** (el jurado puede preguntar):
+- **Hogar o club de mayores:** sitio para estar con gente (dominó, cartas, charlas). No lleva cuidados.
+- **Centro de día:** atención durante el día, con cuidados y terapias, para quien lo necesita. Luego se vuelve a casa a dormir.
+- **Residencia:** donde se vive, con cuidados las 24 horas.
 
 ## Antes de empezar (preparar a las 10:20)
 1. Web abierta: https://objectstorage.eu-madrid-1.oraclecloud.com/n/axo19lrq7chl/b/cuna-y-canas/o/index.html
@@ -34,7 +39,7 @@ Es el **speech y la demo del inicio** de la presentación: una familia busca dó
 
 ### 0:00 – 0:30 · Gancho (Laura, con el dibujo en la mano)
 > "Esto lo ha dibujado mi hija Martina, cinco años. Es nuestra casa nueva: tiene un cole al lado, un columpio y aquí, con el bastón, los abuelos. *(pausa)* Solo tiene un problema: no sabemos dónde está esa casa."
-> "Somos mi marido, Martina, yo, el bebé que viene en septiembre —que ya tiene más ropa que yo— y mis padres, que quieren venirse cerca. Mi madre ha sido clara: a una residencia, ni muerta; a un centro de día, a jugar al dominó, sí."
+> "Somos mi marido, Martina, yo, el bebé que viene en septiembre —que ya tiene más ropa que yo— y mis padres, que quieren venirse cerca, pero con condiciones: mi madre quiere un hogar de mayores para jugar al dominó con sus amigas, y mi padre, que anda regular, un centro de día por las mañanas. Y los dos lo tienen claro: a una residencia, todavía no."
 
 ### 0:30 – 1:10 · Su situación (pestaña **¿Dónde vivir?**)
 | Qué pulsa | Qué dice | Lo que sale (verificado) |
@@ -44,7 +49,7 @@ Es el **speech y la demo del inicio** de la presentación: una familia busca dó
 | **"Trabajo en Madrid"** | "Mi marido: *'es que yo trabajo en Madrid'*. Vale. Aquí no premia vivir cerca, sino **llegar bien**: si hay Metro o tren, cuántos autobuses van directos y la zona del abono." | **Getafe y Tres Cantos, 82 %**; Alcalá, 81 % |
 
 ### 1:10 – 2:00 · Comparar (pulsa Getafe → *Comparar*, Alcalá → *Comparar*, Tres Cantos → *Comparar* → **Ver comparación**)
-> "Tres finalistas. Mi cuñado, que siempre opina, dice que Tres Cantos es de otro nivel. Y tiene razón: **30.280 € de renta por habitante, frente a 19.413 en Getafe**. Su razón, sí; mi cuenta corriente, no."
+> "Tres finalistas. Mi cuñado, que siempre opina, dice: *'Tres Cantos es muchísimo mejor'*. En renta tiene razón: **30.280 € por habitante, frente a 19.413 en Getafe**. Pero yo no busco el sitio más rico: busco el que tenga lo que necesita mi familia."
 
 | Dato (verificado) | Getafe | Alcalá | Tres Cantos |
 |---|---|---|---|
@@ -55,26 +60,26 @@ Es el **speech y la demo del inicio** de la presentación: una familia busca dó
 | Abono | **B1** | B3 | B2 |
 | Plazas de residencia por 100 mayores | 2,2 | 4,0 | **8,1** |
 
-> "Tres Cantos: 54.000 vecinos con cinco escuelas infantiles públicas y dos centros de salud. Alcalá: el hospital a dos kilómetros. Getafe: Metro 3, Metro 12 y dos Cercanías, abono B1… y, ojo, **2,2 plazas de residencia por cada 100 mayores**: la mitad que la media de la Comunidad. *(guiño al público)* Me lo apunto: mis padres, centro de día sí; residencia, ya veremos."
-> "Mi padre vota Metro, mi madre vota Alcalá por la Plaza de Cervantes, y Martina vota columpios. **Gana Getafe, dos a uno** (Martina se abstiene)."
+> "Tres Cantos: 54.000 vecinos con cinco escuelas infantiles públicas y dos centros de salud. Alcalá: el hospital a dos kilómetros. Getafe: Metro 3, Metro 12 y dos Cercanías, abono B1… y, ojo, **2,2 plazas de residencia por cada 100 mayores**: la mitad que la media de la Comunidad. *(guiño al público)* Me lo apunto: para mis padres, centro de día sí; residencia, más adelante."
+> "Elegimos **Getafe**: Metro y 21 autobuses a Madrid para mi marido, 15 escuelas infantiles públicas para el bebé y centros de día para mi padre. Tres Cantos tiene solo dos centros de salud para 54.000 vecinos, y Alcalá, solo 6 autobuses directos a Madrid."
 
 ### 2:00 – 3:00 · Getafe, barrio a barrio (**pulsa "Ver el mapa de Getafe"** → pestaña **Barrios**)
 Antes: marca lo que busca: **escuela infantil pública, colegio público, centro de salud, centro de día, hogar de mayores y parques**. (Ya sale sin nada marcado, así que se ve que lo elige ella.)
 
 | Qué pulsa | Qué dice | Lo que sale (verificado) |
 |---|---|---|
-| **El centro**, junto al Ayuntamiento (Plaza de la Constitución) | "Empiezo por el centro, que es lo que conozco." | **5 de 6** a menos de 10 min: 2 escuelas infantiles públicas, 6 colegios, centro de salud y centro de día. Falta el hogar de mayores: *"y mi padre sin dominó"* |
+| **El centro**, junto al Ayuntamiento (Plaza de la Constitución) | "Empiezo por el centro, que es lo que conozco." | **5 de 6** a menos de 10 min: 2 escuelas infantiles públicas, 6 colegios, centro de salud y centro de día. Solo falta el **hogar de mayores**: *"centro de día para mi padre, sí; para el dominó de mi madre, falta un hogar de mayores cerca"* |
 | **Los Molinos** (tarjeta del barrio) | "Y me enseñan uno nuevo, el de los anuncios: 11.473 vecinos, todo recién estrenado." | **2 de 6**: ni escuela infantil pública, ni centro de salud, ni centro de día. *"Muy bonito, muy nuevo… y sin servicios. Como mi primer piso."* |
 | **El Rosón** (en construcción) | "Y este se está construyendo todavía." | **5 de 6** hoy. 2.752 viviendas previstas: cuando esté completo, **entre 4.513 y 6.420 vecinos** |
 
-> "En El Rosón todavía no ha llegado todo el mundo. Es decir, **llegamos antes que los demás**. Dicen que cuando lleguen todos, el barrio se revaloriza. Cuna y Canas no predice precios: **predice colegios**. *(pausa)* Mi cuñado ya lo ha apuntado igualmente."
+> "En El Rosón todavía no ha llegado todo el mundo: **llegamos antes que los demás**, y ya tiene casi todo lo que buscamos. ¿Se va a revalorizar el barrio? No lo sé: Cuna y Canas no usa precios de pisos. Lo que sí sé es **qué va a hacer falta cuando llegue esa gente**: colegios, centros de salud…"
 
 ### 3:00 – 3:40 · Lo que viene (vuelve a **¿Dónde vivir?** → Getafe → bajar a **Lo que viene** → **Ver dónde podrían ir los nuevos centros →**)
 > "El plan urbanístico de Getafe prevé 25.388 viviendas, **pero casi todas ya están hechas**: según el catastro, **3.095 siguen sin construir**. Eso son **entre 5.000 y 7.000 personas más**. No es un aluvión: es un goteo. Lo importante es **dónde**."
 
 **Plano de solo lectura** (cualquier vecino lo ve, sin acceso de técnico):
 - **Colegio:** *"harían falta 3 nuevos, 2 ya hoy: Los Molinos y Buenavista."*
-- **Centro de día** *(aquí, despacio)*: *"harían falta **4 nuevos, los cuatro ya hoy**: Juan de la Cierva, El Bercial, Greco y Kelvinator. **¡Mis padres!** Llegamos antes que ellos."*
+- **Centro de día** *(aquí, despacio)*: *"harían falta **4 nuevos, los cuatro ya hoy**: Juan de la Cierva, El Bercial, Greco y Kelvinator. **¡Mi padre!** Llegamos antes que él."*
 - *(si da tiempo)* Escuela infantil y centro de salud: *"no hacen falta nuevos."*
 - **Ficha PDF** (un segundo): *"Me llevo FichaGetafe para enseñársela a mi marido."*
 
@@ -85,10 +90,10 @@ Antes: marca lo que busca: **escuela infantil pública, colegio público, centro
 
 | Qué pulsa | Qué dice | Lo que sale (verificado) |
 |---|---|---|
-| Servicio **Colegio** | Leer la frase de arriba. Señalar los círculos grises: *"cada uno es una sección censal con sus niños de 3 a 11 años, por el 85 % que va a un colegio: esa es la demanda."* | **3 centros nuevos**, 2 ya hoy; sobre parcelas públicas vacías |
+| Servicio **Colegio** | Leer la frase de arriba. Señalar los círculos grises: *"cada círculo es una zona de unos 2.000 vecinos; cuanto más grande, más niños en edad de cole viven allí. Esa es la demanda: dónde están los niños que necesitan plaza."* Si pulsa uno, la web enseña la cuenta: vecinos de la zona → niños de 3 a 11 años → los que van a un colegio público o concertado (el 85 %) = usuarios. | **3 centros nuevos**, 2 ya hoy; sobre parcelas públicas vacías |
 | Deslizador **Tiempo máximo a pie**: 15 → 5 → 10 → 25 | "¿Y si cambio lo que consideramos 'cerca'? A cinco minutos andando harían falta **8 colegios**; a diez, 5; a quince, 3… y si acepto **25 minutos, me basta con 1**. *(pausa)* Pero un niño de seis años no anda 25 minutos: **el tiempo a pie es una decisión política, no técnica**, y aquí se ve lo que cuesta cada decisión." | 5 min → 8 · 10 min → 5 · 15 min → 3 · 25 min → **1** |
 | Barra **Prueba tu idea** → **− Quitar un centro** → pulsa uno | "¿Y si solo hay presupuesto para dos? Lo quito y me dice **cuánta gente dejo sin atender**." | Aviso: *"Antes se atendía el X %; ahora, el Y %"* |
-| Servicio **Residencia de mayores** | "Y lo de los padres de Laura: Getafe tiene 2,2 plazas por cada 100 mayores; la media de la Comunidad, 4,3. **Faltan unas 770 plazas.**" | Titular: *Faltan unas 770 plazas* |
+| Servicio **Residencia de mayores** (en la lista de la izquierda) | "Y lo de los padres de Laura, aunque no la necesiten hoy: Getafe tiene 2,2 plazas de residencia por cada 100 mayores, y la media de la Comunidad es 4,3. **Faltan unas 780 plazas.** El Ayuntamiento tiene que planificarlo ya." | **Arriba a la derecha**, el titular *"Faltan unas 776 plazas"* y, justo debajo, la frase con el 2,2 y el 4,3 |
 
 > **Carmen:** "Laura elige con información. Yo planifico antes de que lleguen. **Los mismos datos, dos lecturas.**"
 
@@ -108,7 +113,7 @@ Al corregir el modelo se han movido estas cifras; el guion general y las diaposi
 - **Plazas de colegio:** **38.000 – 93.000**. **Centros de salud equivalentes:** **19 – 27**.
 - **Prueba del modelo:** **13 %** de error medio (dejando fuera el municipio entero) frente al **25 %** de la regla habitual, con 28 barrios de 17 municipios (antes: 19 % frente a 39 %, con 4 barrios de Getafe).
 - **Getafe:** 25.388 viviendas previstas, **3.095 sin construir**, entre **5.000 y 7.000 personas más**.
-- **Residencias en Getafe:** **faltan unas 770 plazas** (2,2 por cada 100 mayores; media de la Comunidad, 4,3), no "7 residencias nuevas".
+- **Residencias en Getafe:** **faltan unas 776 plazas** (2,2 por cada 100 mayores; media de la Comunidad, 4,3), no "7 residencias nuevas".
 
 ## Plan B de la historia
 - Si falla internet: **vídeo de respaldo** de la historia (4:30) y se narra encima.

@@ -144,7 +144,8 @@ export default function Mapa({ bbox, capas, marcadores = [], onClickCapa, onArra
     for (const x of marcadores) {
       let mk = marcas.current.get(x.id)
       const el = mk?.getElement() ?? document.createElement('div')
-      el.className = `marcador ${x.clase ?? ''}`
+      // se conservan las clases que MapLibre pone al marcador (maplibregl-marker...): sin ellas pierde su posición absoluta y los iconos se van apilando
+      el.className = [...Array.from(el.classList).filter((c) => c.startsWith('maplibregl-')), 'marcador', x.clase ?? ''].join(' ')
       el.style.background = x.color
       if (x.html) el.innerHTML = x.html
       else el.textContent = x.texto

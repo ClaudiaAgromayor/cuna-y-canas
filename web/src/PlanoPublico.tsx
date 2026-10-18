@@ -11,7 +11,7 @@ import { Icono } from './iconos'
 const SERVICIOS: ServicioId[] = ['colegio', 'escuela_infantil', 'centro_salud', 'centro_dia', 'residencia']
 const ANIO = 2035
 
-function escenario(s: Servicio, d: DatosMunicipio, llenado: number): Escenario {
+export function escenario(s: Servicio, d: DatosMunicipio, llenado: number): Escenario {
   const hv = d.demanda?.calibracion.parametros.hab_por_vivienda ?? [2, 2, 2]
   return { habPorVivienda: hv[1], habPorViviendaCentral: hv[1], llenado, tasaUso: s.tasa_uso[1], capacidad: s.capacidad[1],
     minutos: s.minutos_andando, supMinima: s.sup_min_m2, nCentros: 'auto', contarExistentes: true, fijados: [], excluidas: [],

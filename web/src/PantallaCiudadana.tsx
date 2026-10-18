@@ -3,7 +3,8 @@ import type { Feature, FeatureCollection, Geometry, Point, Polygon, Position } f
 import maplibregl from 'maplibre-gl'
 import Mapa, { fotoDelMapa, type CapaMapa, type Marcador } from './Mapa'
 import FichaBarrio from './FichaBarrio'
-import { circulo, metros, METROS_POR_MINUTO } from './algoritmo'
+import { calcular, circulo, existentesDe, metros, METROS_POR_MINUTO, type Propuesta } from './algoritmo'
+import { escenario } from './PlanoPublico'
 import type { AmbitoDemanda, DatosMunicipio, Servicio, ServicioId } from './tipos'
 import { Icono, iconoSvg } from './iconos'
 import { Aviso, capitalizar, dec, Estado, imprimirConNombre, Linea, n, nombreBarrio, type EstadoId, Leyenda } from './ui'
@@ -155,7 +156,10 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial, cat
   }
   const alPulsarIcono = (id: string) => {
     const x = resultado?.cerca.find((i) => i.id === id)
-    if (x) senalar(x, false)
+    if (x) { senalar(x, false); return }
+    const m = /^prop-(.+)-(\d+)$/.exec(id)
+    const p = m ? propuestasBarrio.get(m[1] as ServicioId)?.[Number(m[2])] : null
+    if (m && p) verPropuesta(p, servicios[m[1] as ServicioId])
   }
   // al elegir un sitio, el panel baja solo hasta la respuesta (antes quedaba debajo de los filtros)
   // (solo se desplaza el panel: scrollIntoView movía también la página y el mapa se iba hacia arriba)
@@ -228,9 +232,29 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial, cat
       const g = s.grupo.map((k) => (k === 'pob' ? a.poblacion_completo : a.grupos_completo![k])).filter(Boolean) as [number, number, number][]
       const lo = Math.round(g.reduce((t, x) => t + x[0], 0) * s.tasa_uso[0]), hi = Math.round(g.reduce((t, x) => t + x[2], 0) * s.tasa_uso[2])
       const abiertos = (resultado?.cerca ?? []).filter((x) => x.cat.servicio === sid && x.estado === 'abierto').length
-      return { s, lo, hi, abiertos }
+      return { sid, s, lo, hi, abiertos }
     })
   }, [resultado, catsEf, servicios])
+
+  // dónde podrían ir los centros nuevos que necesita el barrio: el mismo cálculo del plano público, limitado a este barrio
+  const propuestasBarrio = useMemo(() => {
+    const a = resultado?.amb
+    const out = new Map<ServicioId, Propuesta[]>()
+    if (!a) return out
+    const parcelas = datos.parcelas.features as unknown as Parameters<typeof calcular>[3]
+    for (const p of previsiones) {
+      if (p.hi <= 0) continue
+      const ex = existentesDe(p.s, { centros_educativos: datos.educativos, centros_sanitarios: datos.sanitarios, centros_sociales: datos.sociales }, p.s.capacidad[1])
+      const r = calcular(p.s, { ...escenario(p.s, datos, 1), zona: a.ambito }, datos.demandaPuntos.features, parcelas, ex, datos.paradas.features)
+      out.set(p.sid, r.propuestas)
+    }
+    return out
+  }, [resultado?.amb, previsiones, datos])
+  const lugarPropuesta = (p: Propuesta) =>
+    p.ambito && p.ambito !== 'Fuera de ámbitos' ? nombreBarrio(p.ambito) : p.paradaMasCercana ? `cerca de ${capitalizar(p.paradaMasCercana.nombre)}` : 'en la ciudad ya construida'
+  const verPropuesta = (p: Propuesta, servicio: Servicio) => senalar({ nombre: `Propuesta: centro nuevo en ${lugarPropuesta(p)}`, lon: p.lon, lat: p.lat,
+    d: lugar ? metros(lugar.lon, lugar.lat, p.lon, p.lat) : 0, cat: { texto: servicio.nombre },
+    detalle: `Parcela vacía de equipamiento${p.area_m2 ? ` (${n(p.area_m2)} m²)` : ''} · atendería a unas ${n(Math.round(p.captada))} personas` })
 
   /* ---------- acciones ---------- */
   const ambitoDe = (lon: number, lat: number) => {
@@ -308,8 +332,11 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial, cat
   const marcadores: Marcador[] = useMemo(() => {
     if (!lugar) return []
     const iconos: Marcador[] = (resultado?.cerca ?? []).slice(0, 60).map((x) => ({ id: x.id, lon: x.lon, lat: x.lat, texto: '', color: COLOR_MARCA[x.estado], html: iconoSvg(x.cat.icono), clase: 'pequeno', titulo: `${x.nombre} · ${x.cat.texto}` }))
-    return [...iconos, { id: 'yo', lon: lugar.lon, lat: lugar.lat, texto: '', color: '#de0029', html: iconoSvg('ubicacion'), titulo: lugar.texto }]
-  }, [lugar, resultado]) // eslint-disable-line react-hooks/exhaustive-deps
+    const nuevos: Marcador[] = []
+    propuestasBarrio.forEach((lista, sid) => lista.forEach((p, i) => nuevos.push({ id: `prop-${sid}-${i}`, lon: p.lon, lat: p.lat, texto: '', color: '#de0029',
+      html: iconoSvg(CATEGORIAS.find((c) => c.servicio === sid)?.icono ?? 'ubicacion'), clase: 'pequeno propuesta', titulo: `Propuesta: ${servicios[sid].nombre} nuevo en ${lugarPropuesta(p)}` })))
+    return [...iconos, ...nuevos, { id: 'yo', lon: lugar.lon, lat: lugar.lat, texto: '', color: '#de0029', html: iconoSvg('ubicacion'), titulo: lugar.texto }]
+  }, [lugar, resultado, propuestasBarrio]) // eslint-disable-line react-hooks/exhaustive-deps
   const centro = useMemo<[number, number] | null>(() => (lugar ? [lugar.lon, lugar.lat] : null), [lugar])
   const amb = resultado?.amb ?? null
 
@@ -323,7 +350,7 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial, cat
           }}
           onClickMapa={(lon, lat) => elegirPunto(lon, lat, 'Punto elegido en el mapa')} />
         <Leyenda>
-          {lugar ? [['#131313', 'Ya existe'], ['#8a8a8a', 'Reservado, sin hacer'], ['#de0029', 'Prevista'], ['#2b5c8a', 'Suelo disponible']].map(([c, t]) => (
+          {lugar ? [['#131313', 'Ya existe'], ['#8a8a8a', 'Reservado, sin hacer'], ['#de0029', 'Prevista'], ['#2b5c8a', 'Suelo disponible'], ['#f5b400', 'Propuesta de centro nuevo']].map(([c, t]) => (
             <div key={t} className="flex items-center gap-2 py-0.5"><span className="h-3 w-3 rounded-full" style={{ background: c }} />{t}</div>
           )) : (
             <div className="w-44">
@@ -478,7 +505,11 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial, cat
                 {previsiones.filter((p) => p.hi > 0).length > 0 && (
                   <div className="mt-3"><Aviso titulo="Lo que hará falta cuando esté completo">
                     <ul className="mt-1 grid gap-0.5">{previsiones.filter((p) => p.hi > 0).map((p) => (
-                      <li key={p.s.nombre}>{p.s.nombre}: {p.s.unidad === 'plazas' ? `entre ${n(p.lo)} y ${n(p.hi)} plazas` : `entre ${n(p.lo)} y ${n(p.hi)} habitantes que atender`} · hoy hay {p.abiertos} {p.abiertos === 1 ? "público" : "públicos"} a menos de {radioMin} min</li>))}</ul>
+                      <li key={p.s.nombre}>{p.s.nombre}: {p.s.unidad === 'plazas' ? `entre ${n(p.lo)} y ${n(p.hi)} plazas` : `entre ${n(p.lo)} y ${n(p.hi)} habitantes que atender`} · hoy hay {p.abiertos} {p.abiertos === 1 ? "público" : "públicos"} a menos de {radioMin} min
+                        {(() => { const l = propuestasBarrio.get(p.sid) ?? []; return (
+                          <div className="mt-0.5"><b>Dónde podría ir:</b>{' '}{l.length === 0 ? (p.s.escala === 'municipio' ? 'ninguno nuevo en este barrio: se cubre con los del conjunto del municipio.' : `ninguno nuevo: ya lo cubren los existentes a menos de ${p.s.minutos_andando} min.`) : l.map((q, i) => (
+                            <span key={i}>{i > 0 && ', '}<button type="button" title="Ver en el mapa" onClick={() => verPropuesta(q, p.s)} className="font-bold underline decoration-linea underline-offset-2 hover:text-rojo">{lugarPropuesta(q)}{q.area_m2 ? ` (${n(q.area_m2)} m²)` : ''}</button></span>))}</div>) })()}
+                      </li>))}</ul>
                     <div className="mt-1 text-xs">Estimación del modelo con su rango. No atribuye responsabilidades.</div>
                   </Aviso></div>
                 )}

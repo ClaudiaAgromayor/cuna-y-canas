@@ -37,6 +37,7 @@ input[type="range"]:focus-visible { outline: none; }
 .marcador svg { width: 16px; height: 16px; }
 .marcador.pequeno { width: 22px; height: 22px; }
 .marcador.pequeno svg { width: 13px; height: 13px; }
+.marcador.propuesta { border-color: #f5b400; outline: 2px solid #de0029; }
 .maplibregl-popup-content { font: 13px/1.45 var(--font-sans); border-radius: 2px; padding: 10px 12px; }
 .maplibregl-ctrl-group { border-radius: 2px !important; }
 

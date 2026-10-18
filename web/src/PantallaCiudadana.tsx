@@ -54,6 +54,7 @@ const FUENTE_URL: Record<Fuente, string> = {
   suelo: 'https://idem.comunidad.madrid',
 }
 const NOMBRE_FUENTE: Record<Fuente, string> = { educativos: 'Centros educativos', sanitarios: 'Registro sanitario', sociales: 'Registro de centros sociales', farmacias: 'Oficinas de farmacia', redes: 'Planeamiento (IDEM)', suelo: 'Suelo vacante 2026 (IDEM)' }
+const ETIQUETA_ESTADO: Record<string, string> = { abierto: 'Ya existe', plan: 'Reservado, sin hacer', prevista: 'Prevista', suelo: 'Suelo disponible', licitada: 'Licitada', adjudicada: 'Adjudicada', obras: 'En obras' }
 const ETIQUETA_ESTADO_BARRIO: Record<string, string> = { habitado: 'Habitado', en_desarrollo: 'En construcción', futuro: 'Por construir', sin_datos: 'Sin datos' }
 
 /* ---------- utilidades ---------- */
@@ -146,13 +147,18 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial, cat
   }
   const refResultados = useRef<HTMLDivElement>(null)
   // pulsar un nombre de la lista: el mapa va hasta él y lo señala
-  const senalar = (x: { nombre: string; lon: number; lat: number; d: number; cat: { texto: string } }) => {
+  // mover = false al pulsar un icono del mapa (ya se ve: solo se abre su ventanita)
+  const senalar = (x: { nombre: string; lon: number; lat: number; d: number; cat: { texto: string }; detalle?: string; estado?: EstadoId }, mover = true) => {
     const m = mapaRef.current
     if (!m) return
     document.querySelectorAll('.maplibregl-popup').forEach((e) => e.remove())
-    m.flyTo({ center: [x.lon, x.lat], zoom: Math.max(m.getZoom(), 16), duration: 700 })
-    new maplibregl.Popup({ maxWidth: '280px', closeButton: true }).setLngLat([x.lon, x.lat])
-      .setHTML(`<b>${x.nombre}</b><br><span style="color:#595959">${x.cat.texto} · a unos ${Math.max(1, Math.round(x.d / METROS_POR_MINUTO))} min a pie</span>`).addTo(m)
+    if (mover) m.flyTo({ center: [x.lon, x.lat], zoom: Math.max(m.getZoom(), 16), duration: 700 })
+    new maplibregl.Popup({ maxWidth: '300px', closeButton: true, offset: 16 }).setLngLat([x.lon, x.lat])
+      .setHTML(`<b>${x.nombre}</b><br><span style="color:#595959">${x.cat.texto} · a unos ${Math.max(1, Math.round(x.d / METROS_POR_MINUTO))} min a pie${x.estado ? ` · ${ETIQUETA_ESTADO[x.estado] ?? ''}` : ''}${x.detalle ? `<br>${x.detalle}` : ''}</span>`).addTo(m)
+  }
+  const alPulsarIcono = (id: string) => {
+    const x = resultado?.cerca.find((i) => i.id === id)
+    if (x) senalar(x, false)
   }
   // al elegir un sitio, el panel baja solo hasta la respuesta (antes quedaba debajo de los filtros)
   // (solo se desplaza el panel: scrollIntoView movía también la página y el mapa se iba hacia arriba)
@@ -313,7 +319,7 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial, cat
   return (
     <div className="flex h-full min-h-0 flex-col md:grid md:grid-cols-[minmax(340px,480px)_1fr]">
       <div className="relative order-1 h-[42vh] shrink-0 md:order-2 md:h-auto">
-        <Mapa bbox={datos.encuadre} capas={capas} marcadores={marcadores} centrarEn={centro} alCrear={(m) => { mapaRef.current = m }} alCerrarPopup={quitarLugar}
+        <Mapa bbox={datos.encuadre} capas={capas} marcadores={marcadores} centrarEn={centro} alCrear={(m) => { mapaRef.current = m }} alCerrarPopup={quitarLugar} onClickMarcador={alPulsarIcono}
           onClickCapa={(capa, p, ll) => {
             if (capa === 'b-ambitos') { const a = demanda.get(String(p.nombre)); if (a) elegirBarrio(a); else elegirPunto(ll[0], ll[1], 'Punto elegido en el mapa') }
             else if (capa !== 'b-items') elegirPunto(ll[0], ll[1], 'Punto elegido en el mapa')

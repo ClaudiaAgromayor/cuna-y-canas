@@ -114,6 +114,7 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial, cat
   const [recientes, setRecientes] = useState<string[]>(() => { try { return JSON.parse(localStorage.getItem('cyc_recientes') ?? '[]') } catch { return [] } })
   const mapaRef = useRef<maplibregl.Map | null>(null)
   const [plano, setPlano] = useState(false)
+  const [abiertas, setAbiertas] = useState<string[]>([]) // secciones de resultados desplegadas (por defecto, todas cerradas para que la lista no sea larguísima)
   const [sinConstruir, setSinConstruir] = useState<Map<string, { pct: number | null; m2: number }>>(new Map())
   useEffect(() => {
     fetch(`${import.meta.env.BASE_URL}${datos.indice.carpeta}/resumen_ambitos.json`).then((r) => r.json())
@@ -491,12 +492,16 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial, cat
 
             {resultado.porCat.map(({ c, items, masCercano }) => (
               <section key={c.id} className="border-b border-linea px-6 py-4">
-                <div className="mb-1.5 flex items-center gap-2.5">
+                {(() => { const abierta = abiertas.includes(c.id) || !items.length; return (
+                <button type="button" aria-expanded={abierta} disabled={!items.length}
+                  onClick={() => setAbiertas((a) => (a.includes(c.id) ? a.filter((x) => x !== c.id) : [...a, c.id]))}
+                  className={`flex w-full items-center gap-2.5 text-left ${items.length ? 'cursor-pointer' : 'cursor-default'} ${abierta ? 'mb-1.5' : ''}`}>
                   <Icono nombre={c.icono} className="h-5 w-5" /><h2 className="font-semibold">{c.texto}</h2>
-                  <span className="ml-auto text-xs text-texto-3">{items.length ? `${items.length} a menos de ${radioMin} min` : 'ninguno cerca'}</span>
-                </div>
+                  <span className="ml-auto shrink-0 whitespace-nowrap text-xs text-texto-3" title={items.length ? `${items.length} a menos de ${radioMin} min; el más cercano, a ${minutos(items[0].d)} min` : ''}>{items.length ? `${items.length} · a ${minutos(items[0].d)} min` : 'ninguno cerca'}</span>
+                  {items.length > 0 && <span aria-hidden className={`text-xs text-texto-3 transition-transform ${abierta ? 'rotate-180' : ''}`}>▾</span>}
+                </button>) })()}
                 {!items.length && masCercano && <p className="text-sm text-texto-2">El más cercano: <button type="button" title="Ver en el mapa" onClick={() => senalar(masCercano)} className="font-bold text-tinta underline decoration-linea underline-offset-2 hover:text-rojo">{masCercano.nombre}</button>, a unos {minutos(masCercano.d)} minutos a pie.</p>}
-                <ul>
+                {abiertas.includes(c.id) && <ul>
                   {items.slice(0, 4).map((x) => (
                     <li key={x.id} className="flex items-center gap-3 border-t border-gris-2 py-2 first:border-t-0">
                       <div className="min-w-0 flex-1">
@@ -506,8 +511,8 @@ export default function PantallaCiudadana({ datos, servicios, barrioInicial, cat
                       <div className="shrink-0 text-right"><div className="text-sm font-semibold tabular-nums">{minutos(x.d)} min</div><Estado estado={x.estado} /></div>
                     </li>
                   ))}
-                </ul>
-                {items.length > 4 && <div className="pt-1 text-xs text-texto-3">y {items.length - 4} más en el mapa</div>}
+                </ul>}
+                {abiertas.includes(c.id) && items.length > 4 && <div className="pt-1 text-xs text-texto-3">y {items.length - 4} más en el mapa</div>}
               </section>
             ))}
 

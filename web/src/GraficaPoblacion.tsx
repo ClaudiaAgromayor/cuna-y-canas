@@ -30,9 +30,10 @@ export default function GraficaPoblacion({ filas, destacados, anio, onAnio }: { 
   const cambio = valor(primero) ? (100 * (valor(ultimo) - valor(primero))) / valor(primero) : 0
   const nombre = destacados.length >= GRUPOS.length ? 'Toda la población' : GRUPOS.filter((g) => destacados.includes(g.id)).map((g) => g.texto).join(' y ')
 
-  const W = 300, H = 110, IZQ = 30, DER = 10, pie = 15
+  const W = 300, H = 110, DER = 10, pie = 15
   const st = paso(Math.max(...filas.map(valor)))
   const tope = Math.max(st, Math.ceil(Math.max(...filas.map(valor)) / st) * st)
+  const IZQ = Math.max(30, 7 + 5.4 * n(tope).length) // margen para las cifras del eje: "20.000" no cabía en 30
   const ancho = (W - IZQ - DER) / filas.length
   const y = (v: number) => H - (v / tope) * (H - 8)
   const maxGrupo = Math.max(...GRUPOS.map((g) => sel[g.id])) || 1
